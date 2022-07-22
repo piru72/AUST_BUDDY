@@ -1,5 +1,5 @@
 
-<img src="Logo/Asset 4.png" alt="Logo" width="900"/>
+<img src="Logo/transparent.png" alt="Logo" width="400"/>
 
 # INTRODUCTION
 
