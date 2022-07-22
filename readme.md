@@ -1,10 +1,3 @@
-# ABSTRACT
-
-The "UNI BUDDY" project is a Notes management application for storing and maintaining semester notes of different students. This mobile application will be built in Android Studio and will be developed in kotlin and the database will be managed by Firebase.<br>
-This software primarily focuses on maintaining, viewing, saving, and storing the notes of a student to make life easier. As well as some unique features such as user login and administrative access. After completing a signup form new users can sign in easily. For administrative permission, one must submit proper info and get permission from the super admin. One will be able to register using the university id and password. It has also a facility where a student will be getting updates on the official university notifications and will be able to calculate their CGPA. After logging into their account they can see the list of the semester, notes, routines, and GPA calculator. In addition, the student will be able to see the teacher list and scholarship criteria, and tuition fee from another section.<br>
-A user will be able to update his or her account information. Visit their profile search for specific notes, and question, and get an insight view about any course. An admin will update the links to information and barrier to the login criteria for better privacy of the student. An admin can update links remove students and do subtle changes to each section. Users can request or suggest the admin add more resources.<br>
-Overall, the primary goal of this project is to provide a hassle-free semester preparation for users as well as to save their time looking for notes and questions here and there. It will be a valuable asset while taking preparation for the final
-
 # INTRODUCTION
 
 > > ## 1.1 Overview <br>
