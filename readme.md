@@ -1,5 +1,5 @@
 
-![alt text](https://github.com/[piru72]/[Uni_buddy]/blob/[master]/Asset%204.png?raw=true)
+<img src="Logo/Asset 4.png" alt="Logo" width="900"/>
 
 # INTRODUCTION
 
