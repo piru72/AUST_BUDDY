@@ -1,3 +1,6 @@
+
+![alt text](https://github.com/[piru72]/[Uni_buddy]/blob/[6ad437fc382fbed448ab92603ea19d54f3155911]/Asset%204.png?raw=true)
+
 # INTRODUCTION
 
 > > ## 1.1 Overview <br>
