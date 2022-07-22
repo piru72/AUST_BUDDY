@@ -22,13 +22,13 @@ Overall, the primary goal of this project is to provide a hassle-free semester p
 
 > > ## 1.2.2 Benefits and Beneficiaries<br>
 > >
-> > Users are the main beneficiaries of this system. But all the people related to our Project area are also beneficiaries. Benefits are given below<br>
-> > 1.Add Notes/Members.<br>
+> > Users are the main beneficiaries of this system. But all the people related to our Project area are also beneficiaries. Benefits are given below<br><br>
+> > 1. Add Notes/Members.<br>
 > > Users can register an ID in this application. And for this, they need to give their name, e-mail, and phone number. Admin can add notes and before adding
 > > any new notes a unique id will be taken. In this way, every note will have its own identity which will help the user to find notes easily.<br><br>
-> > 2.Editing/deleting members or notes.<br>
+> > 2. Editing/deleting members or notes.<br>
 > > Only the Superadmin can edit or delete any member or note if any of that kind of situation arises.<br><br>
-> > 3.Settings and Links.<br>
+> > 3. Settings and Links.<br>
 > > Admin can change the links of the given notes and questions. Besides, the admin can see the status of the links.<br><br>
-> > 4.New Notes Notification.<br>
+> > 4. New Notes Notification.<br>
 > > The most interesting feature of this application is the new notes notification. If any user wants to add new notes or request new notes the admin will get a notification for that
