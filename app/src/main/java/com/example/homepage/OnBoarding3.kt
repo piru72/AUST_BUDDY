@@ -12,7 +12,7 @@ class OnBoarding3 : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.onboarding_3_button)
         nextButton.setOnClickListener{
-            val intent = Intent(this,HomePage::class.java)
+            val intent = Intent(this,MainHomePage::class.java)
             startActivity(intent)
         }
     }
