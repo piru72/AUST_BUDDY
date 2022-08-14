@@ -9,8 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notice Fragment"
-        android:textSize="26dp"
+        android:text="@string/notice_fragment"
+        android:textSize="26sp"
         android:layout_gravity="center"/>
 
 </FrameLayout>

@@ -31,4 +31,16 @@
     <string name="course">Course</string>
     <string name="notice">Notice</string>
     <string name="schedule">Schedule</string>
+    <string name="course_fragment">Course Fragment</string>
+    <string name="notice_fragment">Notice Fragment</string>
+    <string name="schedule_fragment">Schedule Fragment</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="log_out">Log Out</string>
+    <string name="invite_a_friend">Invite a friend</string>
+    <string name="settings">Settings</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="textview">TextView</string>
+    <string name="about_devs">About Devs</string>
+    <string name="user_name">User Name</string>
 </resources>

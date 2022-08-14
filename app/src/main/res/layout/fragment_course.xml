@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Course Fragment"
-        android:textSize="26dp"
+        android:text="@string/course_fragment"
+        android:textSize="26sp"
         android:layout_gravity="center"/>
 </FrameLayout>

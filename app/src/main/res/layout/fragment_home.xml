@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="@color/pure_white"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -71,9 +71,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
                     android:text="@string/teachers"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
                 <Button
@@ -82,9 +83,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
                     android:text="@string/clubs"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
                 <Button
@@ -93,9 +95,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
-                    android:text="@string/gradings" />
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/gradings"
+                    android:textColor="@color/primary_green" />
             </LinearLayout>
 
             <LinearLayout
@@ -109,19 +112,21 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
-                    android:text="@string/syllabus" />
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/syllabus"
+                    android:textColor="@color/primary_green" />
 
                 <Button
                     android:id="@+id/callander_button"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
                     android:layout_weight="1"
-                    android:text="@string/calander" />
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/calander"
+                    android:textColor="@color/primary_green" />
 
                 <Button
                     android:id="@+id/events_button"
@@ -129,9 +134,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
-                    android:text="@string/events" />
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/events"
+                    android:textColor="@color/primary_green" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,9 +151,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
                     android:text="@string/cgpa"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
                 <Button
@@ -156,9 +163,10 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
                     android:text="@string/material"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
                 <Button
@@ -167,14 +175,14 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
-                    android:text="@string/request" />
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/request"
+                    android:textColor="@color/primary_green" />
 
             </LinearLayout>
 
         </LinearLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
