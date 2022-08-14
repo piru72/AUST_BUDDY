@@ -25,7 +25,9 @@ class MainHomePage : AppCompatActivity() {
 
                 R.id.bot_nav_home -> replaceFragment(HomeFragment())
                 R.id.bot_nav_profile -> replaceFragment(ProfileFragment())
-                R.id.bot_nav_setting -> replaceFragment(SettingsFragment())
+                R.id.bot_nav_notice -> replaceFragment(NoticeFragment())
+                R.id.bot_nav_schedule -> replaceFragment(ScheduleFragment())
+                R.id.bot_nav_courses ->replaceFragment(CourseFragment())
 
                 else -> {
 

@@ -3,15 +3,179 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_green"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="26dp"
-        android:layout_gravity="center"/>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="102dp"
+            android:layout_height="51dp"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="337dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/podo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:srcCompat="@drawable/slider" />
+
+        <SearchView
+            android:layout_width="247dp"
+            android:layout_height="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.756" />
+
+        <LinearLayout
+            android:layout_width="375dp"
+            android:layout_height="295dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/teacher_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:text="@string/teachers"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/club_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:text="@string/clubs"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/grading_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="@string/gradings" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/syllabus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="@string/syllabus" />
+
+                <Button
+                    android:id="@+id/callander_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:text="@string/calander" />
+
+                <Button
+                    android:id="@+id/events_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="@string/events" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cgpa_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:text="@string/cgpa"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/material_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:text="@string/material"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/request_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:text="@string/request" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
