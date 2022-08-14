@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Uni Buddy</string>
+    <string name="todo">TODO</string>
+    <string name="next">Next</string>
+    <string name="onboard_1_para">Finding notes and exam questions can be pretty hectic sometimes. No more worries about those find your notes organized and top the exam.</string>
+    <string name="find_your_notes">FIND YOUR NOTES</string>
+    <string name="onboarding_2_para">No more waiting for the university to publish your result calculate your own CGPA at ease and pave your way to the success.</string>
+    <string name="calculate_cgpa">CALCULATE CGPA</string>
+
+    <string name="hodo">hodo</string>
+    <string name="nothing_is_perfect">NOTHING IS PERFECT</string>
+    <string name="onboarding_para_3">We know that nothing is perfect and we value that . Know how to take the perfect preparation ? Just request for anything to take the perfect preparation.</string>
+    <string name="get_started">Get Started</string>
+    <string name="finish">Finish</string>
+    <string name="get_started_welcome">GET STARTED</string>
+    <string name="clubs">Clubs</string>
+    <string name="request">Request</string>
+    <string name="material">Material</string>
+    <string name="events">Events</string>
+    <string name="cgpa">CGPA</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="calander">Calander</string>
+    <string name="gradings">Gradings</string>
+    <string name="podo">TODO</string>
+    <string name="teachers">Teachers</string>
+</resources>
