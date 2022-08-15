@@ -34,15 +34,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:contentDescription="@string/oppo"
-            app:layout_constraintEnd_toEndOf="@+id/textview_username"
+            app:layout_constraintEnd_toEndOf="@+id/textview_yet_TO_BE_DONE"
             app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintStart_toStartOf="@+id/textview_username"
+            app:layout_constraintStart_toStartOf="@+id/textview_yet_TO_BE_DONE"
             app:layout_constraintTop_toBottomOf="@+id/textview_profile"
             tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/textview_username"
+            android:id="@+id/textview_yet_TO_BE_DONE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="179dp"
@@ -68,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_username">
+            app:layout_constraintTop_toBottomOf="@+id/textview_yet_TO_BE_DONE">
 
             <Button
                 android:id="@+id/btn_edit_profile"
