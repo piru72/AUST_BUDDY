@@ -3,12 +3,14 @@ package com.example.homepage
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 
 class MainHomePage : AppCompatActivity() {
 
-     private lateinit var binding: ActivityMainHomePageBinding
+    private lateinit var binding: ActivityMainHomePageBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,29 +23,29 @@ class MainHomePage : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
 
-            when(it.itemId) {
+            when (it.itemId) {
 
                 R.id.bot_nav_home -> replaceFragment(HomeFragment())
                 R.id.bot_nav_profile -> replaceFragment(ProfileFragment())
                 R.id.bot_nav_notice -> replaceFragment(NoticeFragment())
                 R.id.bot_nav_schedule -> replaceFragment(ScheduleFragment())
-                R.id.bot_nav_courses ->replaceFragment(CourseFragment())
+                R.id.bot_nav_courses -> replaceFragment(CourseFragment())
 
                 else -> {
 
                 }
 
             }
-             true
+            true
 
         }
     }
-    private fun replaceFragment (fragment: Fragment)
-    {
+
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
 
-        fragmentTransaction.replace(R.id.frameLayout,fragment)
+        fragmentTransaction.replace(R.id.frameLayout, fragment)
         fragmentTransaction.commit()
 
     }
