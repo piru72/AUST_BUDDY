@@ -10,19 +10,21 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_home_page.xml" value="0.33" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_main_home_page.xml" value="0.25" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_on_boarding1.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_on_boarding2.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_on_boarding3.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_about_dev.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_c_g_p_a.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_calander.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_clubs.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_course.xml" value="0.18541666666666667" />
-        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_edit_profile.xml" value="0.1" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_edit_profile.xml" value="0.5" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_events.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_gradings.xml" value="0.3625" />
-        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_invite.xml" value="0.3484375" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_log_out.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_material.xml" value="0.3625" />
-        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_notice.xml" value="0.17135416666666667" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_notice.xml" value="0.2222222222222222" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_privacy.xml" value="0.3484375" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_request.xml" value="0.3625" />

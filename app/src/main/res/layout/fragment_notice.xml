@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="342dp"
             android:layout_marginBottom="341dp"
-            android:text="@string/button"
+            android:text="button Notice"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

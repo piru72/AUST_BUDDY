@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pure_white"
+    android:id="@+id/fragment_home"
     tools:context=".HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,18 +32,9 @@
             android:contentDescription="@string/podo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHEllo"
             tools:srcCompat="@drawable/slider" />
 
-        <SearchView
-            android:layout_width="247dp"
-            android:layout_height="39dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.756" />
 
         <LinearLayout
             android:layout_width="375dp"

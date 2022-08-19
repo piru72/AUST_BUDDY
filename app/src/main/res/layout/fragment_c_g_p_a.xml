@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/yet_to_be_done"
+            android:text="yet_to_be_done_cgpa"
             android:textColor="@color/black"
             android:textSize="34sp"
 

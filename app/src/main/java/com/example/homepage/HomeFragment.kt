@@ -10,14 +10,20 @@ import android.widget.Button
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 
 
-class HomeFragment : Fragment() {
+class HomeFragment : ReplaceFragment() {
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val v = inflater.inflate(R.layout.fragment_home, container, false)
+        val btnTeacher = v.findViewById<Button>(R.id.teacher_button)
+
+        btnTeacher.setOnClickListener {
+            replaceFragment(EditProfileFragment(), R.id.fragment_home)
+        }
+        return v
     }
 
 
