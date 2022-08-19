@@ -46,4 +46,7 @@
     <string name="oppo">TODO</string>
     <string name="yet_to_be_done">YET TO BE DONE</string>
     <string name="button">Button</string>
+    <string name="calculate_your_cgpa">Calculate Your CGPA</string>
+    <string name="name">Name</string>
+    <string name="calculate">Calculate</string>
 </resources>

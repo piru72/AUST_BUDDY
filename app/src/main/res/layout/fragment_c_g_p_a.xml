@@ -7,28 +7,31 @@
     android:background="@color/white"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/btn_calculate_cgpa"
+            android:layout_width="417dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="52dp"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
-            android:id="@+id/textview_yet_TO_BE_DONE"
+            android:id="@+id/textView_final_cgpa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="yet_to_be_done_cgpa"
-            android:textColor="@color/black"
-            android:textSize="34sp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-
+            android:layout_marginBottom="36dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_calculate_cgpa"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

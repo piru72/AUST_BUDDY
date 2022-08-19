@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(NoticeFragment())
+        replaceFragment(CGPAFragment())
 
 
 
