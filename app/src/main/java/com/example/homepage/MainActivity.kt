@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(HomeFragment())
+        replaceFragment(NoticeFragment())
+
 
 
         binding.bottomNavigationView.setOnItemSelectedListener {
