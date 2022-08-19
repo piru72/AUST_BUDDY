@@ -1,9 +1,7 @@
 package com.example.homepage
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 

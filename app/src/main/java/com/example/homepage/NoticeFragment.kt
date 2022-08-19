@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 
 
-class NoticeFragment : Fragment() {
+class NoticeFragment : ReplaceFragment()  {
 
 
     override fun onCreateView(
@@ -24,20 +24,7 @@ class NoticeFragment : Fragment() {
         button.setOnClickListener{
             replaceFragment(RequestFragment(),R.id.fragment_notice)
         }
-
         return v
     }
-
-    private fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
-        val fragmentManager = requireActivity().supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(xml_file_name, fragment)
-        fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
-
-
-
-    }
-
 
 }
