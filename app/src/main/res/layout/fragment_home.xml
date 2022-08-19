@@ -55,7 +55,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/teacher_button"
+                    android:id="@+id/btn_teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -67,7 +67,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <Button
-                    android:id="@+id/club_button"
+                    android:id="@+id/btn_club"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -79,7 +79,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <Button
-                    android:id="@+id/grading_button"
+                    android:id="@+id/btn_grading"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -96,7 +96,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/syllabus_button"
+                    android:id="@+id/btn_syllabus"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -107,7 +107,7 @@
                     android:textColor="@color/primary_green" />
 
                 <Button
-                    android:id="@+id/callander_button"
+                    android:id="@+id/btn_calender"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -118,7 +118,7 @@
                     android:textColor="@color/primary_green" />
 
                 <Button
-                    android:id="@+id/events_button"
+                    android:id="@+id/btn_events"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -135,7 +135,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/cgpa_button"
+                    android:id="@+id/btn_cgpa"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -147,7 +147,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <Button
-                    android:id="@+id/material_button"
+                    android:id="@+id/btn_material"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -159,7 +159,7 @@
                     tools:ignore="TextContrastCheck" />
 
                 <Button
-                    android:id="@+id/request_button"
+                    android:id="@+id/btn_request"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
