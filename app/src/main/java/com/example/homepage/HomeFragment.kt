@@ -17,6 +17,7 @@ class HomeFragment : ReplaceFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_home, container, false)
         val btnTeacher = v.findViewById<Button>(R.id.btn_teacher)
         val btnClub = v.findViewById<Button>(R.id.btn_club)

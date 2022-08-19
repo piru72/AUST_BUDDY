@@ -15,6 +15,7 @@ class MaterialFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        container?.removeAllViews()
         return inflater.inflate(R.layout.fragment_material, container, false)
     }
 

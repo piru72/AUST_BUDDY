@@ -16,6 +16,7 @@ class ProfileFragment : ReplaceFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_profile, container, false)
         val btnEditProfile = v.findViewById<Button>(R.id.btn_edit_profile)
         val btnPrivacy = v.findViewById<Button>(R.id.btn_privacy)

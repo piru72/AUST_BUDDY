@@ -15,6 +15,7 @@ class NoticeFragment : ReplaceFragment()  {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
         val button = v.findViewById<Button>(R.id.notice_button)
         button.setOnClickListener{

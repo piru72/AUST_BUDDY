@@ -14,7 +14,7 @@ class TeachersFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        container?.removeAllViews()
         return inflater.inflate(R.layout.fragment_teachers, container, false)
     }
 }
