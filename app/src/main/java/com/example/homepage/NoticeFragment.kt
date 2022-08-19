@@ -22,12 +22,6 @@ class NoticeFragment : Fragment() {
         val button = v.findViewById<Button>(R.id.notice_button)
 
         button.setOnClickListener{
-//            val fragment = RequestFragment()
-//            val fragmentManager = requireActivity().supportFragmentManager
-//            val fragmentTransaction = fragmentManager.beginTransaction()
-//            fragmentTransaction.replace(R.id.fragment_notice, fragment)
-//            fragmentTransaction.addToBackStack(null)
-//            fragmentTransaction.commit()
             replaceFragment(RequestFragment(),R.id.fragment_notice)
         }
 
