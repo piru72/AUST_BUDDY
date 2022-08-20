@@ -49,4 +49,37 @@
     <string name="calculate_your_cgpa">Calculate Your CGPA</string>
     <string name="name">Name</string>
     <string name="calculate">Calculate</string>
+
+    <string-array name="Credits">
+        <item>3.00</item>
+        <item>1.50</item>
+        <item>0.75</item>
+    </string-array>
+
+    <string-array name="Grades">
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>D</item>
+        <item>F</item>
+    </string-array>
+
+    <string-array name="Semesters">
+        <item>1st Year 1st Semester</item>
+        <item>1st Year 2nd Semester</item>
+        <item>2nd Year 1st Semester</item>
+        <item>2nd Year 2nd Semester</item>
+        <item>3rd Year 1st Semester</item>
+        <item>3rd Year 2nd Semester</item>
+        <item>4th Year 1st Semester</item>
+        <item>4th Year 2nd Semester</item>
+    </string-array>
+
+    <string name="select">Select Item</string>
+    <string name="autoCompleteTextView">AutoCompleteTextView</string>
 </resources>

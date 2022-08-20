@@ -5,33 +5,352 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ProfileFragment">
+    tools:context=".CGPAFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <LinearLayout
+            android:id="@+id/semester_pan"
+            android:layout_width="398dp"
+            android:layout_height="66dp"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.155">
+
+            <Spinner
+                android:id="@+id/semester_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:entries="@array/Semesters"
+                android:gravity="end"
+                android:layerType="hardware" />
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/primary_green"
+                android:text="@string/select"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="414dp"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/semester_pan">
+
+            <LinearLayout
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c1_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Spinner
+                    android:id="@+id/c1_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c2_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c2_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c3_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c3_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c4_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c4_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c5_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c5_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c6_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c6_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c7_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c7_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c8_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c8_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c9_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c9_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <Spinner
+                    android:id="@+id/c10_result_list"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:entries="@array/Grades"
+                    android:gravity="end" />
+
+                <Spinner
+                    android:id="@+id/c10_grade_list"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:entries="@array/Credits"
+                    android:gravity="end" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.738"
+            app:layout_constraintStart_toEndOf="@+id/result"
+            app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
+
         <Button
-            android:id="@+id/btn_calculate_cgpa"
-            android:layout_width="417dp"
-            android:layout_height="47dp"
-            android:layout_marginBottom="52dp"
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="84dp"
             android:text="@string/calculate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/textView_final_cgpa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_calculate_cgpa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </FrameLayout>
