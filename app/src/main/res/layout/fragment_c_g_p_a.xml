@@ -332,14 +332,6 @@
                 android:textColor="#00796B"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
-            <Button
-                android:id="@+id/btn_reset"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/reset"
-                android:textColor="#00796B" />
         </LinearLayout>
 
         <LinearLayout

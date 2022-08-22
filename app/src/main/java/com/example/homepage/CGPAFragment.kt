@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.homepage.CgpaFunctions
+import com.example.homepage.R
+import com.example.homepage.ReplaceFragment
 
-
-class CGPAFragment : ReplaceFragment() {
+class CGPAFragment : ReplaceFragment()  {
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -18,7 +20,7 @@ class CGPAFragment : ReplaceFragment() {
         container?.removeAllViews()
 
         val v = inflater.inflate(R.layout.fragment_c_g_p_a, container, false)
-
+        val cgFun = CgpaFunctions()
 
         //   All the layouts object
 
@@ -46,7 +48,7 @@ class CGPAFragment : ReplaceFragment() {
         val c10Credit = v.findViewById<Button>(R.id.c10_credit)
 
         val btnCalculate = v.findViewById<Button>(R.id.btn_calculate)
-        val btnReset= v.findViewById<Button>(R.id.btn_reset)
+
 
 
         // All the Spinners object
@@ -67,126 +69,63 @@ class CGPAFragment : ReplaceFragment() {
         val result = v.findViewById<TextView>(R.id.textview_result)
 
 
-        hideLayout(layoutResultList,layoutResult,layoutCalculate)
+        cgFun.hideLayout(layoutResultList,layoutResult,layoutCalculate)
+
+
+        btnCalculate.setOnClickListener{
+
+        }
+
 
         btnSelect.setOnClickListener {
 
 
-            showLayout(layoutCalculate,layoutResult,layoutResultList)
-            hideLayout(layoutInstruction)
+            cgFun.showLayout(layoutCalculate,layoutResult,layoutResultList)
+            cgFun.hideLayout(layoutInstruction)
 
-            set3Credit(c1Credit,c2Credit,c3Credit,c4Credit,c5Credit)
+            cgFun.set3Credit(c1Credit,c2Credit,c3Credit,c4Credit,c5Credit)
             when (semesterList.selectedItem.toString()) {
                 "3rd Year 2nd Semester" -> {
-                    showLayout(c9,c10)
-                    set75Credit(c6Credit,c7Credit,c8Credit)
-                    set75Credit(c9Credit,c10Credit)
+                    cgFun.showLayout(c9,c10)
+                    cgFun.set75Credit(c6Credit,c7Credit,c8Credit)
+                    cgFun.set75Credit(c9Credit,c10Credit)
 
                 }
                 "4th Year 1st Semester"-> {
-                    showLayout(c9,c10)
+                    cgFun.showLayout(c9,c10)
                     c6Credit.text = "3 Credit"
-                    set75Credit(c7Credit,c8Credit,c9Credit)
-                    set75Credit(c10Credit)
+                    cgFun.set75Credit(c7Credit,c8Credit,c9Credit)
+                    cgFun.set75Credit(c10Credit)
                 }
                 "4th Year 2nd Semester" -> {
-                    hideLayout(c9,c10)
-                    set75Credit(c6Credit,c7Credit,c8Credit)
+                    cgFun.hideLayout(c9,c10)
+                    cgFun.set75Credit(c6Credit,c7Credit,c8Credit)
                 }
 
                 else -> {
-                    showLayout(c9)
-                    hideLayout(c10)
+                    cgFun.showLayout(c9)
+                    cgFun.hideLayout(c10)
 
                     when(semesterList.selectedItem.toString() ){
                         "1st Year 1st Semester","1st Year 2nd Semester","2nd Year 1st Semester" ->{
-                            set15Credit(c6Credit,c7Credit,c8Credit)
-                            set75Credit(c9Credit)
+                            cgFun.set15Credit(c6Credit,c7Credit,c8Credit)
+                            cgFun.set75Credit(c9Credit)
 
                         }
                        "2nd Year 2nd Semester" -> {
-                           set15Credit(c6Credit,c7Credit)
-                           set75Credit(c8Credit,c9Credit)
+                           cgFun.set15Credit(c6Credit,c7Credit)
+                           cgFun.set75Credit(c8Credit,c9Credit)
                        }
                         "3rd Year 1st Semester" -> {
-                            set15Credit(c6Credit)
-                            set75Credit(c7Credit,c8Credit,c9Credit)
+                            cgFun.set15Credit(c6Credit)
+                            cgFun.set75Credit(c7Credit,c8Credit,c9Credit)
                         }
                     }
                 }
             }
         }
 
-
         return v
     }
-
-    private fun hideLayout(layout :LinearLayout) {
-        layout.visibility = View.GONE
-    }
-    private fun hideLayout(layout1 :LinearLayout, layout2 :LinearLayout) {
-        layout1.visibility = View.GONE
-        layout2.visibility = View.GONE
-    }
-    private fun hideLayout(layout1 :LinearLayout, layout2 :LinearLayout, layout3 :LinearLayout) {
-        layout1.visibility = View.GONE
-        layout2.visibility = View.GONE
-        layout3.visibility = View.GONE
-    }
-    private fun showLayout(layout :LinearLayout) {
-        layout.visibility = View.VISIBLE
-    }
-
-    private fun showLayout(layout1 :LinearLayout, layout2 :LinearLayout) {
-        layout1.visibility = View.VISIBLE
-        layout2.visibility = View.VISIBLE
-    }
-
-    private fun showLayout(layout1 :LinearLayout, layout2 :LinearLayout,layout3 :LinearLayout ) {
-        layout1.visibility = View.VISIBLE
-        layout2.visibility = View.VISIBLE
-        layout3.visibility = View.VISIBLE
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun set3Credit(c1Credit : Button, c2Credit : Button, c3Credit : Button, c4Credit : Button, c5Credit : Button) {
-
-        c1Credit.text = "3 Credit"
-        c2Credit.text = "3 Credit"
-        c3Credit.text = "3 Credit"
-        c4Credit.text = "3 Credit"
-        c5Credit.text = "3 Credit"
-    }
-    private fun set15Credit(c6Credit : Button, c7Credit : Button, c8Credit : Button) {
-
-        c6Credit.text = "1.5 Credit"
-        c7Credit.text = "1.5 Credit"
-        c8Credit.text = "1.5 Credit"
-    }
-    private fun set15Credit(c6Credit : Button, c7Credit : Button) {
-
-        c6Credit.text = "1.5 Credit"
-        c7Credit.text = "1.5 Credit"
-    }
-    private fun set15Credit(c6Credit : Button) {
-
-        c6Credit.text = "1.5 Credit"
-    }
-    private fun set75Credit(c9Credit : Button ) {
-
-        c9Credit.text = ".75 Credit"
-    }
-    private fun set75Credit( c8Credit : Button, c9Credit : Button) {
-
-        c8Credit.text = ".75 Credit"
-        c9Credit.text = ".75 Credit"
-    }
-
-    private fun set75Credit( c7Credit: Button,c8Credit : Button, c9Credit : Button) {
-        c7Credit.text = ".75 Credit"
-        c8Credit.text = ".75 Credit"
-        c9Credit.text = ".75 Credit"
-    }
-
 
 }
