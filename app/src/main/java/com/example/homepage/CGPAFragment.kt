@@ -1,5 +1,6 @@
 package com.example.homepage
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.*
 
 class CGPAFragment : ReplaceFragment() {
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -73,19 +75,44 @@ class CGPAFragment : ReplaceFragment() {
             showLayout(layoutCalculate,layoutResult,layoutResultList)
             hideLayout(layoutInstruction)
 
-
+            set3Credit(c1Credit,c2Credit,c3Credit,c4Credit,c5Credit)
             when (semesterList.selectedItem.toString()) {
-                "4th Year 1st Semester", "3rd Year 2nd Semester" -> {
+                "3rd Year 2nd Semester" -> {
                     showLayout(c9,c10)
+                    set75Credit(c6Credit,c7Credit,c8Credit)
+                    set75Credit(c9Credit,c10Credit)
+
+                }
+                "4th Year 1st Semester"-> {
+                    showLayout(c9,c10)
+                    c6Credit.text = "3 Credit"
+                    set75Credit(c7Credit,c8Credit,c9Credit)
+                    set75Credit(c10Credit)
                 }
                 "4th Year 2nd Semester" -> {
                     hideLayout(c9,c10)
+                    set75Credit(c6Credit,c7Credit,c8Credit)
                 }
+
                 else -> {
                     showLayout(c9)
                     hideLayout(c10)
 
+                    when(semesterList.selectedItem.toString() ){
+                        "1st Year 1st Semester","1st Year 2nd Semester","2nd Year 1st Semester" ->{
+                            set15Credit(c6Credit,c7Credit,c8Credit)
+                            set75Credit(c9Credit)
 
+                        }
+                       "2nd Year 2nd Semester" -> {
+                           set15Credit(c6Credit,c7Credit)
+                           set75Credit(c8Credit,c9Credit)
+                       }
+                        "3rd Year 1st Semester" -> {
+                            set15Credit(c6Credit)
+                            set75Credit(c7Credit,c8Credit,c9Credit)
+                        }
+                    }
                 }
             }
         }
@@ -119,6 +146,46 @@ class CGPAFragment : ReplaceFragment() {
         layout1.visibility = View.VISIBLE
         layout2.visibility = View.VISIBLE
         layout3.visibility = View.VISIBLE
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun set3Credit(c1Credit : Button, c2Credit : Button, c3Credit : Button, c4Credit : Button, c5Credit : Button) {
+
+        c1Credit.text = "3 Credit"
+        c2Credit.text = "3 Credit"
+        c3Credit.text = "3 Credit"
+        c4Credit.text = "3 Credit"
+        c5Credit.text = "3 Credit"
+    }
+    private fun set15Credit(c6Credit : Button, c7Credit : Button, c8Credit : Button) {
+
+        c6Credit.text = "1.5 Credit"
+        c7Credit.text = "1.5 Credit"
+        c8Credit.text = "1.5 Credit"
+    }
+    private fun set15Credit(c6Credit : Button, c7Credit : Button) {
+
+        c6Credit.text = "1.5 Credit"
+        c7Credit.text = "1.5 Credit"
+    }
+    private fun set15Credit(c6Credit : Button) {
+
+        c6Credit.text = "1.5 Credit"
+    }
+    private fun set75Credit(c9Credit : Button ) {
+
+        c9Credit.text = ".75 Credit"
+    }
+    private fun set75Credit( c8Credit : Button, c9Credit : Button) {
+
+        c8Credit.text = ".75 Credit"
+        c9Credit.text = ".75 Credit"
+    }
+
+    private fun set75Credit( c7Credit: Button,c8Credit : Button, c9Credit : Button) {
+        c7Credit.text = ".75 Credit"
+        c8Credit.text = ".75 Credit"
+        c9Credit.text = ".75 Credit"
     }
 
 
