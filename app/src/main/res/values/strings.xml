@@ -57,8 +57,8 @@
     </string-array>
 
     <string-array name="Grades">
-        <item>A+</item>
-        <item>A</item>
+        <item>A+  80% or above</item>
+        <item>A   75% or less than 80%</item>
         <item>A-</item>
         <item>B+</item>
         <item>B</item>
@@ -80,6 +80,9 @@
         <item>4th Year 2nd Semester</item>
     </string-array>
 
-    <string name="select">Select Item</string>
+    <string name="select">Select</string>
     <string name="autoCompleteTextView">AutoCompleteTextView</string>
+    <string name="reset">Reset</string>
+    <string name="credit">Credit</string>
+    <string name="please_select_your_semester_above">Please select your semester above</string>
 </resources>
