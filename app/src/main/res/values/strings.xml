@@ -58,15 +58,15 @@
 
     <string-array name="Grades">
         <item>A+  80% or above</item>
-        <item>A   75% or less than 80%</item>
-        <item>A-</item>
-        <item>B+</item>
-        <item>B</item>
-        <item>B-</item>
-        <item>C+</item>
-        <item>C</item>
-        <item>D</item>
-        <item>F</item>
+        <item>A   75% to less than 80%</item>
+        <item>A-  70% to less than 75%</item>
+        <item>B+  65% to less than 70%</item>
+        <item>B   60% to less than 65%</item>
+        <item>B-  55% to less than 60%</item>
+        <item>C+  50% to less than 55%</item>
+        <item>C   45% to less than 50%</item>
+        <item>D   40% to less than 45%</item>
+        <item>F   Less than 40%</item>
     </string-array>
 
     <string-array name="Semesters">
