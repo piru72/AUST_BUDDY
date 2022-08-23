@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.homepage.CgpaFunctions
-import com.example.homepage.R
-import com.example.homepage.ReplaceFragment
 
-class CGPAFragment : ReplaceFragment()  {
+class CGPAFragment : ReplaceFragment() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -50,7 +47,6 @@ class CGPAFragment : ReplaceFragment()  {
         val btnCalculate = v.findViewById<Button>(R.id.btn_calculate)
 
 
-
         // All the Spinners object
         val semesterList = v.findViewById<Spinner>(R.id.semester_list)
         val c1ResultList = v.findViewById<Spinner>(R.id.c1_result_list)
@@ -69,56 +65,165 @@ class CGPAFragment : ReplaceFragment()  {
         val result = v.findViewById<TextView>(R.id.textview_result)
 
 
-        cgFun.hideLayout(layoutResultList,layoutResult,layoutCalculate)
+        cgFun.hideLayout(layoutResultList, layoutResult, layoutCalculate)
 
 
-        btnCalculate.setOnClickListener{
+        btnCalculate.setOnClickListener {
+            val semester = semesterList.selectedItem.toString()
+            val semesterNumber = cgFun.getSemesterNumber(semester)
+
+
+            var isFailed = cgFun.checkFail(
+                c1ResultList.selectedItem.toString(),
+                c2ResultList.selectedItem.toString(),
+                c3ResultList.selectedItem.toString(),
+                c4ResultList.selectedItem.toString(),
+                c5ResultList.selectedItem.toString(),
+                c6ResultList.selectedItem.toString(),
+                c7ResultList.selectedItem.toString(),
+                c8ResultList.selectedItem.toString(),
+                c9ResultList.selectedItem.toString(),
+                c10ResultList.selectedItem.toString()
+            )
+            val theoryGpa = cgFun.getTheoryGpa(
+                c1ResultList.selectedItem.toString(),
+                c2ResultList.selectedItem.toString(),
+                c3ResultList.selectedItem.toString(),
+                c4ResultList.selectedItem.toString(),
+                c5ResultList.selectedItem.toString()
+            )
+            if (!isFailed) {
+                if (semesterNumber.toString() == "1" || semesterNumber.toString() == "2" || semesterNumber.toString() == "3") {
+
+                    var labGpa = cgFun.getLabGpa(
+                        c6ResultList.selectedItem.toString(),
+                        c7ResultList.selectedItem.toString(),
+                        c8ResultList.selectedItem.toString()
+                    )
+                    var sesGpa = cgFun.getSesGpa(c9ResultList.selectedItem.toString())
+                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 20.25
+                    result.text = calculated_cgpa.toString().take(5)
+
+
+                } else if (semesterNumber.toString() == "4") {
+
+                    var labGpa = cgFun.getLabGpa(
+                        c6ResultList.selectedItem.toString(),
+                        c7ResultList.selectedItem.toString()
+                    )
+                    var sesGpa = cgFun.getSesGpa(
+                        c8ResultList.selectedItem.toString(), c9ResultList.selectedItem.toString()
+                    )
+                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 19.5
+                    result.text = calculated_cgpa.toString().take(5)
+
+                } else if (semesterNumber.toString() == "5") {
+
+                    var labGpa = cgFun.getLabGpa(
+                        c6ResultList.selectedItem.toString(),
+                    )
+                    var sesGpa = cgFun.getSesGpa(
+                        c7ResultList.selectedItem.toString(),
+                        c8ResultList.selectedItem.toString(),
+                        c9ResultList.selectedItem.toString()
+                    )
+                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 18.75
+                    result.text = calculated_cgpa.toString().take(5)
+
+
+                } else if (semesterNumber.toString() == "6") {
+
+
+                    var sesGpa = cgFun.getSesGpa(
+                        c6ResultList.selectedItem.toString(),
+                        c7ResultList.selectedItem.toString(),
+                        c8ResultList.selectedItem.toString(),
+                        c9ResultList.selectedItem.toString(),
+                        c10ResultList.selectedItem.toString()
+                    )
+                    var calculatedCgpa = (theoryGpa + sesGpa) / 18.75
+                    result.text = calculatedCgpa.toString().take(5)
+
+
+                } else if (semesterNumber.toString() == "7") {
+
+
+                    val theoryGpa = cgFun.getTheoryGpa(
+                        c1ResultList.selectedItem.toString(),
+                        c2ResultList.selectedItem.toString(),
+                        c3ResultList.selectedItem.toString(),
+                        c4ResultList.selectedItem.toString(),
+                        c5ResultList.selectedItem.toString(),
+                        c6ResultList.selectedItem.toString()
+                    )
+
+                    var sesGpa = cgFun.getSesGpa(
+                        c7ResultList.selectedItem.toString(),
+                        c8ResultList.selectedItem.toString(),
+                        c9ResultList.selectedItem.toString(),
+                        c10ResultList.selectedItem.toString()
+                    )
+                    var calculated_cgpa = (theoryGpa + sesGpa) / 21
+                    result.text = calculated_cgpa.toString().take(5)
+
+                } else if (semesterNumber.toString() == "8") {
+
+                    var sesGpa = cgFun.getSesGpa(
+                        c6ResultList.selectedItem.toString(),
+                        c7ResultList.selectedItem.toString(),
+                        c8ResultList.selectedItem.toString()
+                    )
+                    var calculated_cgpa = (theoryGpa + sesGpa) / 17.25
+                    result.text = calculated_cgpa.toString().take(5)
+                }
+
+            } else
+                result.text = "FAILED"
+
 
         }
 
-
         btnSelect.setOnClickListener {
 
-
-            cgFun.showLayout(layoutCalculate,layoutResult,layoutResultList)
+            cgFun.showLayout(layoutCalculate, layoutResult, layoutResultList)
             cgFun.hideLayout(layoutInstruction)
 
-            cgFun.set3Credit(c1Credit,c2Credit,c3Credit,c4Credit,c5Credit)
+            cgFun.set3Credit(c1Credit, c2Credit, c3Credit, c4Credit, c5Credit)
             when (semesterList.selectedItem.toString()) {
                 "3rd Year 2nd Semester" -> {
-                    cgFun.showLayout(c9,c10)
-                    cgFun.set75Credit(c6Credit,c7Credit,c8Credit)
-                    cgFun.set75Credit(c9Credit,c10Credit)
+                    cgFun.showLayout(c9, c10)
+                    cgFun.set75Credit(c6Credit, c7Credit, c8Credit)
+                    cgFun.set75Credit(c9Credit, c10Credit)
 
                 }
-                "4th Year 1st Semester"-> {
-                    cgFun.showLayout(c9,c10)
+                "4th Year 1st Semester" -> {
+                    cgFun.showLayout(c9, c10)
                     c6Credit.text = "3 Credit"
-                    cgFun.set75Credit(c7Credit,c8Credit,c9Credit)
+                    cgFun.set75Credit(c7Credit, c8Credit, c9Credit)
                     cgFun.set75Credit(c10Credit)
                 }
                 "4th Year 2nd Semester" -> {
-                    cgFun.hideLayout(c9,c10)
-                    cgFun.set75Credit(c6Credit,c7Credit,c8Credit)
+                    cgFun.hideLayout(c9, c10)
+                    cgFun.set75Credit(c6Credit, c7Credit, c8Credit)
                 }
 
                 else -> {
                     cgFun.showLayout(c9)
                     cgFun.hideLayout(c10)
 
-                    when(semesterList.selectedItem.toString() ){
-                        "1st Year 1st Semester","1st Year 2nd Semester","2nd Year 1st Semester" ->{
-                            cgFun.set15Credit(c6Credit,c7Credit,c8Credit)
+                    when (semesterList.selectedItem.toString()) {
+                        "1st Year 1st Semester", "1st Year 2nd Semester", "2nd Year 1st Semester" -> {
+                            cgFun.set15Credit(c6Credit, c7Credit, c8Credit)
                             cgFun.set75Credit(c9Credit)
 
                         }
-                       "2nd Year 2nd Semester" -> {
-                           cgFun.set15Credit(c6Credit,c7Credit)
-                           cgFun.set75Credit(c8Credit,c9Credit)
-                       }
+                        "2nd Year 2nd Semester" -> {
+                            cgFun.set15Credit(c6Credit, c7Credit)
+                            cgFun.set75Credit(c8Credit, c9Credit)
+                        }
                         "3rd Year 1st Semester" -> {
                             cgFun.set15Credit(c6Credit)
-                            cgFun.set75Credit(c7Credit,c8Credit,c9Credit)
+                            cgFun.set75Credit(c7Credit, c8Credit, c9Credit)
                         }
                     }
                 }

@@ -34,11 +34,13 @@
                 android:layout_weight="3"
                 android:entries="@array/Semesters"
                 android:gravity="end"
+
                 android:layerType="hardware" />
 
             <Button
                 android:id="@+id/btn_select"
                 android:layout_width="193dp"
+                android:textSize="16sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:background="@color/primary_green"
@@ -52,7 +54,7 @@
             android:id="@+id/layout_result_list"
             android:layout_width="414dp"
             android:layout_height="500dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,10 +79,14 @@
 
                 <Button
                     android:id="@+id/c1_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
+                    android:background="@color/white"
                     android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp"
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
             </LinearLayout>
@@ -103,10 +109,14 @@
 
                 <Button
                     android:id="@+id/c2_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -128,10 +138,14 @@
 
                 <Button
                     android:id="@+id/c3_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -153,10 +167,14 @@
 
                 <Button
                     android:id="@+id/c4_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -178,10 +196,14 @@
 
                 <Button
                     android:id="@+id/c5_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -203,10 +225,14 @@
 
                 <Button
                     android:id="@+id/c6_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -228,10 +254,14 @@
 
                 <Button
                     android:id="@+id/c7_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -253,10 +283,14 @@
 
                 <Button
                     android:id="@+id/c8_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -278,10 +312,14 @@
 
                 <Button
                     android:id="@+id/c9_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -302,12 +340,16 @@
                     android:gravity="end" />
 
                 <Button
-
                     android:id="@+id/c10_credit"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
+
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="@string/credit" />
+                    android:background="@color/white"
+                    android:text="@string/credit"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -324,12 +366,15 @@
 
             <Button
                 android:id="@+id/btn_calculate"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/primary_green"
                 android:text="@string/calculate"
-                android:textColor="#00796B"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
         </LinearLayout>
@@ -339,18 +384,22 @@
             android:layout_width="353dp"
             android:layout_height="51dp"
             android:layout_marginBottom="16dp"
+            android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent">
 
+
             <TextView
                 android:id="@+id/textview_result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/textview" />
+                android:gravity="center"
+                android:textColor="@color/text_black"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -361,7 +410,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="664dp">
@@ -370,6 +419,7 @@
                 android:id="@+id/textview_instruction"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/please_select_your_semester_above"
                 android:textAlignment="center"
