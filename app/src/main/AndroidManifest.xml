@@ -20,13 +20,13 @@
             android:name=".HomePage"
             android:exported="false" />
         <activity
-            android:name=".OnBoarding3"
+            android:name=".onBoarding.OnBoarding3"
             android:exported="false" />
         <activity
-            android:name=".OnBoarding2"
+            android:name=".onBoarding.OnBoarding2"
             android:exported="false" />
         <activity
-            android:name=".OnBoarding1"
+            android:name=".onBoarding.OnBoarding1"
             android:exported="false" />
         <activity
             android:name=".OnBoarding_1"

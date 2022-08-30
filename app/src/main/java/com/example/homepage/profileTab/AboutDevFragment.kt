@@ -1,13 +1,14 @@
-package com.example.homepage
+package com.example.homepage.profileTab
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.homepage.R
 
 
-class InviteFragment : Fragment() {
+class AboutDevFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +17,7 @@ class InviteFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         container?.removeAllViews()
-        return inflater.inflate(R.layout.fragment_invite, container, false)
+        return inflater.inflate(R.layout.fragment_about_dev, container, false)
     }
 
 

@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.fragment.app.Fragment
 import com.example.homepage.databinding.ActivityMainHomePageBinding
+import com.example.homepage.onBoarding.OnBoarding1
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainHomePageBinding
@@ -20,13 +20,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
-
-
-
-
-
-
 
 }

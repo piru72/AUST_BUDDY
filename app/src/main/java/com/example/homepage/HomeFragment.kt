@@ -5,6 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.homepage.calculator.CGPAFragment
+import com.example.homepage.homeTab.*
+import com.example.homepage.superClass.ReplaceFragment
 
 
 class HomeFragment : ReplaceFragment() {

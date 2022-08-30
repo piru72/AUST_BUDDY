@@ -1,4 +1,4 @@
-package com.example.homepage
+package com.example.homepage.superClass
 
 import androidx.fragment.app.Fragment
 
@@ -13,7 +13,4 @@ open class ReplaceFragment : Fragment() {
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
-
-
-
 }

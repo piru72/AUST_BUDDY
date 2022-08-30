@@ -1,10 +1,9 @@
-package com.example.homepage
+package com.example.homepage.calculator
 
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.TextView
 
 class CgpaFunctions {
 
