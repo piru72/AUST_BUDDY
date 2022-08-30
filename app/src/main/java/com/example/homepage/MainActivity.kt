@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 //********************** For opening in the third onboarding page ************//
+
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_on_boarding3)
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.bot_nav_profile -> replaceFragment(ProfileFragment())
                 R.id.bot_nav_notice -> replaceFragment(NoticeFragment())
                 R.id.bot_nav_schedule -> replaceFragment(ScheduleFragment())
-                R.id.bot_nav_courses -> replaceFragment(CourseFragment())
+                R.id.bot_nav_courses -> replaceFragment(ViewCourses())
 
                 else -> {
 

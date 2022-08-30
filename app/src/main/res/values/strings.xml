@@ -85,4 +85,10 @@
     <string name="reset">Reset</string>
     <string name="credit">Credit</string>
     <string name="please_select_your_semester_above">Please select your semester above</string>
+
+
+    <string name="course_code">Course Code</string>
+    <string name="course_name">Course Name</string>
+    <string name="drive_link">Drive Link</string>
+    <string name="explore">Explore</string>
 </resources>
