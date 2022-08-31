@@ -91,4 +91,10 @@
     <string name="course_name">Course Name</string>
     <string name="drive_link">Drive Link</string>
     <string name="explore">Explore</string>
+    <string name="to">To:</string>
+    <string name="email_address">Email Address</string>
+    <string name="subject">Subject:</string>
+    <string name="message">Message:</string>
+    <string name="type_your_message_here">Type your message here...</string>
+    <string name="send">SEND</string>
 </resources>

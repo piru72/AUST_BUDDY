@@ -4,31 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/white"
     tools:context=".profileTab.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textview_yet_TO_BE_DONE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="yet_to_be_done_invite"
+            android:text="@string/to"
             android:textColor="@color/black"
-            android:textSize="34sp"
+            android:layout_margin="16dp"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
 
-            app:layout_constraintBottom_toBottomOf="parent"
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="@string/email_address"
+            android:minHeight="48dp" />
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subject"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="@string/subject"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:layout_marginHorizontal="16dp"
+            android:hint="@string/type_your_message_here"
+            android:lines="10"
+            android:gravity="start"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/sendBtn"
+            android:text="@string/send"
+            android:textSize="26sp"
+            android:layout_margin="26dp"/>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 </FrameLayout>
