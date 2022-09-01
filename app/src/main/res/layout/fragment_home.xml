@@ -51,9 +51,10 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="IUMS"
-                    android:textColor="@color/primary_green"
-                    tools:ignore="TextContrastCheck" />
+                    android:text="@string/iums"
+                    android:textColor="@color/text_black"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_club"
@@ -63,20 +64,22 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="AUST OJ"
-                    android:textColor="@color/primary_green"
-                    tools:ignore="TextContrastCheck" />
+                    android:text="@string/aust_oj"
+                    android:textColor="@color/text_black"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_grading"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="Teachers"
-                    android:textColor="@color/primary_green" />
+                    android:text="@string/teachers"
+                    android:textColor="@color/text_black" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,7 +96,8 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/syllabus"
-                    android:textColor="@color/primary_green" />
+                    android:textColor="@color/text_black"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_calender"
@@ -104,7 +108,8 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/calender"
-                    android:textColor="@color/primary_green" />
+                    android:textColor="@color/text_black"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_events"
@@ -115,7 +120,8 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/events"
-                    android:textColor="@color/primary_green" />
+                    android:textColor="@color/text_black"
+                    style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -132,8 +138,9 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/cgpa"
-                    android:textColor="@color/primary_green"
-                    tools:ignore="TextContrastCheck" />
+                    android:textColor="@color/text_black"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_material"
@@ -144,8 +151,9 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/gradings"
-                    android:textColor="@color/primary_green"
-                    tools:ignore="TextContrastCheck" />
+                    android:textColor="@color/text_black"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/btn_request"
@@ -156,7 +164,8 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/request"
-                    android:textColor="@color/primary_green" />
+                    android:textColor="@color/text_black"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </LinearLayout>
 

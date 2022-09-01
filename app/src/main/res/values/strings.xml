@@ -97,4 +97,6 @@
     <string name="message">Message:</string>
     <string name="type_your_message_here">Type your message here...</string>
     <string name="send">SEND</string>
+    <string name="iums">IUMS</string>
+    <string name="aust_oj">AUST OJ</string>
 </resources>
