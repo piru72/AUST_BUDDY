@@ -17,10 +17,7 @@ class RequestFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_notice, container, false)
-        val webSite = "https://www.aust.edu/academics/academic_calendar"
-        loadWebSite(webSite,v)
+        val v = inflater.inflate(R.layout.fragment_request, container, false)
         return v
     }
 
