@@ -2,10 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_home"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    tools:visibility="visible">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,29 +14,15 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="337dp"
-            android:layout_height="195dp"
-            android:contentDescription="@string/podo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.149"
-            tools:srcCompat="@drawable/slider" />
-
         <LinearLayout
             android:layout_width="375dp"
             android:layout_height="295dp"
-            android:layout_marginBottom="60dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,37 +32,34 @@
 
                 <Button
                     android:id="@+id/btn_teacher"
-                    android:layout_width="wrap_content"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="106dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/iums"
                     android:textColor="@color/text_black"
-                    tools:ignore="TextContrastCheck"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    tools:ignore="TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_club"
-                    android:layout_width="wrap_content"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="106dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/aust_oj"
                     android:textColor="@color/text_black"
-                    tools:ignore="TextContrastCheck"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    tools:ignore="TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_grading"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="106dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/teachers"
@@ -89,6 +73,7 @@
 
                 <Button
                     android:id="@+id/btn_syllabus"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -96,11 +81,11 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/syllabus"
-                    android:textColor="@color/text_black"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:textColor="@color/text_black" />
 
                 <Button
                     android:id="@+id/btn_calender"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -108,11 +93,11 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/calender"
-                    android:textColor="@color/text_black"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:textColor="@color/text_black" />
 
                 <Button
                     android:id="@+id/btn_events"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -120,8 +105,7 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/events"
-                    android:textColor="@color/text_black"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:textColor="@color/text_black" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,6 +115,7 @@
 
                 <Button
                     android:id="@+id/btn_cgpa"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -139,11 +124,11 @@
                     android:backgroundTint="@color/white"
                     android:text="@string/cgpa"
                     android:textColor="@color/text_black"
-                    tools:ignore="TextContrastCheck"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    tools:ignore="TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_material"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -152,11 +137,11 @@
                     android:backgroundTint="@color/white"
                     android:text="@string/gradings"
                     android:textColor="@color/text_black"
-                    tools:ignore="TextContrastCheck"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    tools:ignore="TextContrastCheck" />
 
                 <Button
                     android:id="@+id/btn_request"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -164,8 +149,7 @@
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
                     android:text="@string/request"
-                    android:textColor="@color/text_black"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:textColor="@color/text_black" />
 
             </LinearLayout>
 
