@@ -19,7 +19,7 @@ class ClubsFragment : ReplaceFragment() {
         // Inflate the layout for this fragment
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
-        val webSite = "https://www.aust.edu/academics/academic_calendar"
+        val webSite = "https://austoj.com/"
         loadWebSite(webSite,v)
         return v
     }

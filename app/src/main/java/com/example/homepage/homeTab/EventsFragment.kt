@@ -18,7 +18,7 @@ class EventsFragment : ReplaceFragment() {
     ): View? {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
-        val webSite = "https://www.aust.edu/academics/academic_calendar"
+        val webSite = "https://www.aust.edu/events"
         loadWebSite(webSite,v)
         return v
     }

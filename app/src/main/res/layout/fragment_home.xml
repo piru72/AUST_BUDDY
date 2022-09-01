@@ -62,7 +62,7 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="@string/teachers"
+                    android:text="IUMS"
                     android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
@@ -74,7 +74,7 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="@string/clubs"
+                    android:text="AUST OJ"
                     android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
@@ -86,7 +86,7 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="@string/gradings"
+                    android:text="Teachers"
                     android:textColor="@color/primary_green" />
             </LinearLayout>
 
@@ -154,7 +154,7 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/dialog_holo_light_frame"
                     android:backgroundTint="@color/white"
-                    android:text="@string/material"
+                    android:text="@string/gradings"
                     android:textColor="@color/primary_green"
                     tools:ignore="TextContrastCheck" />
 
