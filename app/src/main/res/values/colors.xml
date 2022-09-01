@@ -11,4 +11,5 @@
     <color name="pure_white">#FFFFFF</color>
 
     <color name="text_black">#3F3D56</color>
+    <color name="background_black">#222222</color>
 </resources>
