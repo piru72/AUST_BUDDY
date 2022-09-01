@@ -24,9 +24,7 @@
         <activity
             android:name=".MainHomePage"
             android:exported="false" />
-        <activity
-            android:name=".HomePage"
-            android:exported="false" />
+
         <activity
             android:name=".onBoarding.OnBoarding3"
             android:exported="false" />
@@ -36,12 +34,7 @@
         <activity
             android:name=".onBoarding.OnBoarding1"
             android:exported="false" />
-        <activity
-            android:name=".OnBoarding_1"
-            android:exported="false" />
-        <activity
-            android:name=".onboarding_1_activity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
