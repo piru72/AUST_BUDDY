@@ -33,16 +33,18 @@ class InviteFragment : ReplaceFragment() {
         sendBTn.setOnClickListener{
 
             val email = v.findViewById<TextView>(R.id.emailAddress)
-            val subject = v.findViewById<TextView>(R.id.subject)
-            val message = v.findViewById<TextView>(R.id.message)
+//            val subject = v.findViewById<TextView>(R.id.subject) // use these boxes in case of custom body and subject
+//            val message = v.findViewById<TextView>(R.id.message)
 
             val addresses = email.text.split(",".toRegex()).toTypedArray()
 
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, addresses)
-                putExtra(Intent.EXTRA_SUBJECT, subject.text.toString())
-                putExtra(Intent.EXTRA_TEXT, message.text.toString())
+                putExtra(Intent.EXTRA_SUBJECT, "HEY! CHECKOUT THIS AMAZING APP FOR AUSTIANS")
+                putExtra(Intent.EXTRA_TEXT, "CURRENTLY THEY ARE ON DEVELOPMENT PHASE CHECK OUT THEIR GIT REPOS FOR THE UPDATE . THEIR LINK IS " +
+                        "" +
+                        "link: https://github.com/piru72/Uni_buddy")
             }
             startActivity(intent)
         }
