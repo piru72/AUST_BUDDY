@@ -11,10 +11,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.example.homepage.R
+import com.example.homepage.superClass.ReplaceFragment
 import org.intellij.lang.annotations.RegExp
 
 
-class InviteFragment : Fragment() {
+class InviteFragment : ReplaceFragment() {
 
 
     override fun onCreateView(

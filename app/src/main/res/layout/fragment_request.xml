@@ -15,70 +15,43 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_width="404dp"
+            android:layout_height="406dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/to"
-                android:textColor="@color/black"
                 android:layout_margin="16dp"
-                android:textSize="26sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/emailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:hint="@string/email_address"
-                android:minHeight="48dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/subject"
-                android:textColor="@color/black"
-                android:layout_margin="16dp"
-                android:textSize="26sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/subject"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:hint="@string/subject"
-                android:minHeight="48dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/message"
                 android:textColor="@color/black"
-                android:layout_margin="16dp"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/message"
                 android:layout_marginHorizontal="16dp"
+                android:autofillHints=""
+                android:gravity="start"
                 android:hint="@string/type_your_message_here"
+                android:inputType="textLongMessage"
                 android:lines="10"
-                android:gravity="start"/>
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A" />
 
             <Button
+                android:id="@+id/sendBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:id="@+id/sendBtn"
+                android:layout_margin="26dp"
                 android:text="@string/send"
-                android:textSize="26sp"
-                android:layout_margin="26dp"/>
-
+                android:textSize="26sp" />
 
 
         </LinearLayout>
