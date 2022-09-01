@@ -12,29 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewHEllo"
-            android:layout_width="102dp"
-            android:layout_height="51dp"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.062"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.073" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="337dp"
             android:layout_height="195dp"
-            android:layout_marginTop="20dp"
             android:contentDescription="@string/podo"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewHEllo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.149"
             tools:srcCompat="@drawable/slider" />
-
 
         <LinearLayout
             android:layout_width="375dp"
