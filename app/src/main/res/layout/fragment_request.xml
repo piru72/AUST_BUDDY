@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#051130"
     tools:context=".profileTab.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -23,13 +23,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MENTION THE MATERIALS YOU NEED"
+                android:textColor="@color/pure_white"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="@string/message"
-                android:textColor="@color/black"
+                android:textColor="@color/pure_white"
                 android:textSize="26sp"
+
                 android:textStyle="bold" />
 
             <EditText
@@ -41,6 +55,7 @@
                 android:gravity="start"
                 android:hint="@string/type_your_message_here"
                 android:inputType="textLongMessage"
+                android:textColor="@color/pure_white"
                 android:lines="10"
                 android:minHeight="48dp"
                 android:textColorHint="#546E7A" />
@@ -50,7 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_margin="26dp"
-                android:text="@string/send"
+                android:text="REQUEST"
+                android:backgroundTint="@color/primary_green"
                 android:textSize="26sp" />
 
 

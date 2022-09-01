@@ -8,6 +8,7 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.1935" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1935" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-land/activity_home_page.xml" value="0.30687830687830686" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-v31/activity_sign_up.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-v31/fragment_profile.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_home_page.xml" value="0.33" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_main.xml" value="0.3614583333333333" />
@@ -16,6 +17,8 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_on_boarding2.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_on_boarding3.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_screen_splash.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_sign_in.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_sign_up.xml" value="0.3484375" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_signin.xml" value="0.3614583333333333" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_start_up.xml" value="0.3614583333333333" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_user_profile.xml" value="0.3625" />

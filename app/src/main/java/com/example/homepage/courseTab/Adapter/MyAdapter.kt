@@ -3,6 +3,7 @@ package com.example.homepage.courseTab.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
@@ -26,9 +27,10 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
         val currentitem = userList[position]
 
-        holder.firstName.text = currentitem.courseCode
-        holder.lastName.text = currentitem.courseName
-        holder.age.text = currentitem.driveLink
+        holder.courseCode.text = currentitem.courseCode
+        holder.courseName.text = currentitem.courseName
+
+        holder.exploreButton.text = currentitem.driveLink
 
     }
 
@@ -45,10 +47,14 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     }
 
     class  MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        // The values for user_item variable are created here and assigned above
+        val courseCode : TextView = itemView.findViewById(R.id.tvCourseCode)
+        val courseName : TextView = itemView.findViewById(R.id.tvCourseName)
+        val exploreButton : Button = itemView.findViewById(R.id.exploreButton)
 
-        val firstName : TextView = itemView.findViewById(R.id.tvCourseCode)
-        val lastName : TextView = itemView.findViewById(R.id.tvCourseName)
-        val age : TextView = itemView.findViewById(R.id.tvlink)
+    }
+
+    fun openDriveLink(view: View) {
 
     }
 

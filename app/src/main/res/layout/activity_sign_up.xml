@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/onboarding_1"
-    tools:context=".MainActivity">
+    android:background="@drawable/registration"
+    tools:context=".SignUpActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:id="@+id/email_signin"
-        android:layout_above="@id/password_signin"
+        android:id="@+id/email_signup"
+        android:layout_above="@id/password_signup"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/emailEt1"
+            android:id="@+id/emailEt"
             android:hint="Type your Email"
             android:inputType="textEmailAddress"
             />
@@ -26,46 +26,45 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/password_signin"
+        android:id="@+id/password_signup"
         app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/passwordEt1"
             android:hint="Type your Password"
-            android:inputType="textPassword"
-            />
-
-
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
 
-        android:id="@+id/signinBtn"
+        android:id="@+id/signupBtn"
         android:layout_width="369dp"
         android:layout_height="62dp"
-        android:layout_below="@id/password_signin"
+        android:layout_below="@id/password_signup"
         android:layout_marginTop="58dp"
-        android:text="Sign in"
+        android:text="Sign up"
         tools:ignore="InvalidId" />
 
     <TextView
 
         android:layout_width="362dp"
         android:layout_height="70dp"
-        android:id="@+id/text2"
+        android:id="@+id/text1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="49dp"
         android:padding="5dp"
-        android:text="   Don't have an account? Sign up"
+        android:text="   Already have an account? Sign in"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
+
 
 </RelativeLayout>
