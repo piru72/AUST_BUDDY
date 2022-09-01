@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.R
+import com.example.homepage.superClass.ReplaceFragment
 
 
-class MaterialFragment : Fragment() {
+class MaterialFragment : ReplaceFragment() {
 
 
     override fun onCreateView(
@@ -17,7 +18,10 @@ class MaterialFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         container?.removeAllViews()
-        return inflater.inflate(R.layout.fragment_material, container, false)
+        val v = inflater.inflate(R.layout.fragment_notice, container, false)
+        val webSite = "https://www.aust.edu/academics/academic_calendar"
+        loadWebSite(webSite,v)
+        return v
     }
 
 

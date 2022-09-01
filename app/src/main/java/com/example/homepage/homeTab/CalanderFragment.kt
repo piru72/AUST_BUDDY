@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.R
+import com.example.homepage.superClass.ReplaceFragment
 
-class CalanderFragment : Fragment() {
+class CalanderFragment : ReplaceFragment() {
 
 
     override fun onCreateView(
@@ -15,7 +16,10 @@ class CalanderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        return inflater.inflate(R.layout.fragment_calander, container, false)
+        val v = inflater.inflate(R.layout.fragment_notice, container, false)
+        val webSite = "https://www.aust.edu/academics/academic_calendar"
+        loadWebSite(webSite,v)
+        return v
     }
 
 }

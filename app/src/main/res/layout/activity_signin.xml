@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/onboarding_1"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/email_signin"
+        android:layout_above="@id/password_signin"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/emailEt1"
+            android:hint="Type your Email"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/password_signin"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/passwordEt1"
+            android:hint="Type your Password"
+            android:inputType="textPassword"
+            />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+
+        android:id="@+id/signinBtn"
+        android:layout_width="369dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/password_signin"
+        android:layout_marginTop="58dp"
+        android:text="Sign in"
+        tools:ignore="InvalidId" />
+
+    <TextView
+
+        android:layout_width="362dp"
+        android:layout_height="70dp"
+        android:id="@+id/text2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="49dp"
+        android:padding="5dp"
+        android:text="   Don't have an account? Sign up"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
