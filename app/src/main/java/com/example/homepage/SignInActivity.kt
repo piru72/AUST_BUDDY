@@ -11,6 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import java.util.*
+import kotlin.concurrent.schedule
+import kotlinx.coroutines.delay as delay1
 
 class SignInActivity : AppCompatActivity() {
 
@@ -20,10 +23,11 @@ class SignInActivity : AppCompatActivity() {
 
     var PREFS_NAME = "Hello"
 
+    var finalValue=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please wait")
@@ -32,41 +36,22 @@ class SignInActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-
-
         val signInButton = findViewById<Button>(R.id.signinBtn)
         val text2 = findViewById<TextView>(R.id.text2)
 
         signInButton.setOnClickListener {
 
-
             val email = findViewById<TextView>(R.id.emailEt1).text.toString()
             val password = findViewById<TextView>(R.id.passwordEt1).text.toString()
+
+            //** USER EMAIL AND PASSWORD IS VALIDATED IF THEY ARE IN THE RIGHT FORMAT OR NOT
             val situation = validateData(email, password)
 
-//            val intent = Intent(this, MainHomePage::class.java)
-//            startActivity(intent)
-
-
-            if (situation == "OK") {
-                //Toast.makeText(applicationContext, "EVERYTHING ALL RIGHT BUDDY SITUATION OK", Toast.LENGTH_SHORT).show()
-
-                // COMING TILL HERE WITH EASE
-
-                val situation1 = fireBaseSignin(email,password)
-                Toast.makeText(applicationContext, situation1 + " <<- FIREBASE RESPONSE", Toast.LENGTH_SHORT).show()
-                if (situation1 == "OK")
-                {
-
-                    Toast.makeText(applicationContext, "CALLING MAIN HOME PAGE", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainHomePage::class.java)
-                    startActivity(intent)
-                }
+            if (situation == "USER EMAIL PASS VERIFIED") {
+                fireBaseSignin(email,password)
             } else {
-                Toast.makeText(applicationContext, situation, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, situation, Toast.LENGTH_SHORT).show()
             }
-
-
         }
 
         text2.setOnClickListener {
@@ -76,10 +61,9 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-
     private fun validateData(emailf: String, passwordf: String): String {
 
-        var situation = "NOT POSSIBLE";
+        var situation = ""
 
         if (!Patterns.EMAIL_ADDRESS.matcher(emailf).matches())
             situation = "Invalid email format"
@@ -98,30 +82,36 @@ class SignInActivity : AppCompatActivity() {
         else if (passwordf.contains("@") || passwordf.contains("#") || passwordf.contains("%")
             || passwordf.contains("$") || passwordf.contains("*")
         )
-            situation = "OK"
+            situation = "USER EMAIL PASS VERIFIED"
         else
             situation = "Give a special character such as @,$,#.."
-
-
         return situation
 
     }
 
-    private fun fireBaseSignin(email :String , password: String): String {
+    private fun fireBaseSignin(email :String , password: String) {
          progressDialog.show()
-        var situationFirebase = ""
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
-            if(it.isSuccessful)
-            {
-                situationFirebase = verifyMail()
-                Toast.makeText(this,"RETURNING  SITUATION -->>>  " + situationFirebase, Toast.LENGTH_SHORT).show()
+            when {
+                it.isSuccessful -> {
+                    progressDialog.dismiss()
+                    finalValue = verifyMail()
+                    if (finalValue=="OK")
+                    {
+
+                        val intent = Intent(this, MainHomePage::class.java)
+                        startActivity(intent)
+
+                    }
+
+                }
+                else -> {
+                    progressDialog.dismiss()
+                }
             }
-            else
-                situationFirebase= "NOT OK"
         }
 
-        Toast.makeText(this,"BEFORE RETURN -->>>  " + situationFirebase, Toast.LENGTH_SHORT).show()
-        return  situationFirebase
+
     }
 
 
@@ -132,21 +122,13 @@ class SignInActivity : AppCompatActivity() {
         var situation = ""
         if(vEmail!!)
         {
-            var sharedPreferences = getSharedPreferences("PREFS_NAME",0)
-            sharedPreferences.edit()
-            sharedPreferences.edit().putBoolean("hasLoggedIn",true)
-            sharedPreferences.edit().commit()
-            println("$PREFS_NAME")
-            //startActivity(Intent(this@SigninActivity,UserProfile::class.java))
-            finish()
-            //Toast.makeText(this@SigninActivity,"Sign in successful with email $email", Toast.LENGTH_SHORT).show()
             situation ="OK"
         }
         else
         {
             Toast.makeText(this,"Please verify your email",Toast.LENGTH_SHORT).show()
-            firebaseAuth.signOut()
-            situation =" NOT OK BUDDY"
+            //firebaseAuth.signOut()
+            situation ="NOT OK"
         }
         return  situation
     }
