@@ -1,4 +1,4 @@
-package com.example.homepage.courseTab.adapter
+package com.example.homepage.courseTab.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.courseTab.model.User
+import com.example.homepage.courseTab.Model.User
 
 class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
