@@ -96,14 +96,11 @@ class SignInActivity : AppCompatActivity() {
                 it.isSuccessful -> {
                     progressDialog.dismiss()
                     finalValue = verifyMail()
-                    if (finalValue=="OK")
-                    {
-
-                        val intent = Intent(this, MainHomePage::class.java)
-                        startActivity(intent)
-
+                    when (finalValue) {
+                        "OK" -> {
+                            startActivity(Intent(this, MainHomePage::class.java))
+                        }
                     }
-
                 }
                 else -> {
                     progressDialog.dismiss()
