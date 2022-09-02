@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -55,4 +56,8 @@ dependencies {
 
     implementation "com.airbnb.android:lottie:5.2.0"
     implementation "com.github.sarnavakonar:TextWriter:v1.0"
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
+
+
+
 }

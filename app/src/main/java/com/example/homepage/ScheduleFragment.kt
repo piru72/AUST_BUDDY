@@ -1,21 +1,30 @@
 package com.example.homepage
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.*
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homepage.databinding.FragmentTodoBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
 class ScheduleFragment : Fragment() {
+
+
+
+    private var _binding: FragmentTodoBinding? = null
+    private val binding get() = _binding!!
+
+   // private lateinit var binding: DataBinding
+    private lateinit var database: DatabaseReference
+    private lateinit var taskReference: DatabaseReference
+    private lateinit var auth: FirebaseAuth
+    private lateinit var recycler: RecyclerView
+   // private var adapter: TaskAdapter?= null
 
 
     override fun onCreateView(
@@ -23,20 +32,20 @@ class ScheduleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_todo, container, false)
-        //initOnOffButton(v)
-        return v
+        _binding = FragmentTodoBinding.inflate(inflater, container, false)
+
+      //auth = Firebase.auth
+      // database = Firebase.database.reference
+       //val user = auth.currentUser!!.uid
+//        taskReference =  FirebaseDatabase.getInstance().getReference("user-tasks").child(user)
+//        //recycler = view.findViewById(R.id.task_list)
+
+
+        return binding.root
     }
 
 
 
-//    private lateinit var binding: DataBinding
-//    private lateinit var database: DatabaseReference
-//    private lateinit var taskReference: DatabaseReference
-//    private lateinit var auth: FirebaseAuth
-//    private lateinit var recycler: RecyclerView
-//    private var adapter: TaskAdapter?= null
 //
 //
 //    override fun onCreate(savedInstanceState: Bundle?) {
