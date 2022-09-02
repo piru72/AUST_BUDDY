@@ -36,8 +36,6 @@ class SignUpActivity : AppCompatActivity() {
         val text1 = findViewById<TextView>(R.id.text1)
         signUpButton.setOnClickListener {
 
-            //val intent = Intent(this, SignInActivity::class.java)
-            //startActivity(intent)
 
             email = findViewById<TextView>(R.id.emailEt).text.toString()
             password = findViewById<TextView>(R.id.passwordEt).text.toString()

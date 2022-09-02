@@ -44,7 +44,7 @@ class HomeFragment : ReplaceFragment() {
             replaceFragment(SyllabusFragment(), currentState)
         }
         btnCalender.setOnClickListener {
-            replaceFragment(CalanderFragment(), currentState)
+            replaceFragment(CalendarFragment(), currentState)
         }
         btnEvents.setOnClickListener {
             replaceFragment(EventsFragment(), currentState)

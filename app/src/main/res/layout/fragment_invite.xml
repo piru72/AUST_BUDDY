@@ -7,7 +7,7 @@
     android:background="#051130"
     tools:context=".profileTab.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,11 +1,10 @@
-package com.example.homepage.AlarmClock
+package com.example.homepage.alarmClock
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.homepage.R
@@ -25,15 +24,13 @@ class AlarmReceiver: BroadcastReceiver() {
 
     private fun createNotificationChannel(context: Context) {
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val notificationChannel = NotificationChannel(
-                NOTIFICATION_CHANNEL_ID,
-                "WAKE UP ALARM",
-                NotificationManager.IMPORTANCE_HIGH
-            )
+        val notificationChannel = NotificationChannel(
+            NOTIFICATION_CHANNEL_ID,
+            "WAKE UP ALARM",
+            NotificationManager.IMPORTANCE_HIGH
+        )
 
-            NotificationManagerCompat.from(context).createNotificationChannel(notificationChannel)
-        }
+        NotificationManagerCompat.from(context).createNotificationChannel(notificationChannel)
     }
 
 

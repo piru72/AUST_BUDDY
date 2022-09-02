@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import com.example.homepage.onBoarding.OnBoarding1
 
 class MainActivity : AppCompatActivity() {

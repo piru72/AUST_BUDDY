@@ -1,4 +1,4 @@
-package com.example.homepage.AlarmClock
+package com.example.homepage.alarmClock
 
 data class AlarmDisplayModel(
     val hour: Int,

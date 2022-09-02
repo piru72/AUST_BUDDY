@@ -3,8 +3,6 @@ package com.example.homepage
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
-import android.webkit.WebView
-import android.webkit.WebViewClient
 import com.example.homepage.superClass.ReplaceFragment
 
 

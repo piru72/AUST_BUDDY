@@ -3,8 +3,6 @@ package com.example.homepage.profileTab
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
-import org.intellij.lang.annotations.RegExp
+
 
 
 class InviteFragment : ReplaceFragment() {
@@ -28,7 +26,7 @@ class InviteFragment : ReplaceFragment() {
 
         val sendBTn = v.findViewById<Button>(R.id.sendBtn)
 
-        //TODO validate message box , subject box , email box make a toast
+
 
         sendBTn.setOnClickListener{
 
@@ -48,13 +46,7 @@ class InviteFragment : ReplaceFragment() {
             }
             startActivity(intent)
         }
-        fun isValidEmail(target :String): Boolean {
-            return if (TextUtils.isEmpty(target)) {
-                false;
-            } else {
-                android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
-            }
-        }
+
 
 
 

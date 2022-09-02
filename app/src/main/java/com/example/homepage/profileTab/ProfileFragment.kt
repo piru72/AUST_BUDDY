@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.homepage.LogOutFragment
 import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
 

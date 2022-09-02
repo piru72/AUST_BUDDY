@@ -1,4 +1,4 @@
-package com.example.homepage.courseTab.Adapter
+package com.example.homepage.courseTab.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.courseTab.Model.User
+import com.example.homepage.courseTab.model.User
 
 class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
@@ -25,12 +25,12 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val currentitem = userList[position]
+        val currentItem = userList[position]
 
-        holder.courseCode.text = currentitem.courseCode
-        holder.courseName.text = currentitem.courseName
+        holder.courseCode.text = currentItem.courseCode
+        holder.courseName.text = currentItem.courseName
 
-        holder.exploreButton.text = currentitem.driveLink
+        holder.exploreButton.text = currentItem.driveLink
 
     }
 
@@ -54,8 +54,6 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     }
 
-    fun openDriveLink(view: View) {
 
-    }
 
 }

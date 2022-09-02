@@ -26,7 +26,7 @@ class RequestFragment : ReplaceFragment() {
 
         val sendBTn = v.findViewById<Button>(R.id.sendBtn)
 
-        //TODO validate message box , subject box , email box make a toast
+
 
         sendBTn.setOnClickListener{
 

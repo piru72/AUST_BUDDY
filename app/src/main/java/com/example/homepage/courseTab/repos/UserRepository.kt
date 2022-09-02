@@ -1,7 +1,7 @@
-package com.example.homepage.courseTab.Repos
+package com.example.homepage.courseTab.repos
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.courseTab.Model.User
+import com.example.homepage.courseTab.model.User
 import com.google.firebase.database.*
 
 class UserRepository {
@@ -29,13 +29,13 @@ class UserRepository {
 
                 try {
 
-                    val _userList : List<User> = snapshot.children.map { dataSnapshot ->
+                    val courseList : List<User> = snapshot.children.map { dataSnapshot ->
 
                         dataSnapshot.getValue(User::class.java)!!
 
                     }
 
-                    userList.postValue(_userList)
+                    userList.postValue(courseList)
 
                 }catch (e : Exception){
 
@@ -45,7 +45,7 @@ class UserRepository {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
         })

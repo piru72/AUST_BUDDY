@@ -68,6 +68,7 @@ class CgpaFunctions {
         c7Credit.text = "1.5 Credit"
     }
 
+
     fun set15Credit(c6Credit: Button) {
 
         c6Credit.text = "1.5 Credit"

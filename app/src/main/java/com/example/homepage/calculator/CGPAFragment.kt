@@ -75,7 +75,7 @@ class CGPAFragment : ReplaceFragment() {
             val semesterNumber = cgFun.getSemesterNumber(semester)
 
 
-            var isFailed = cgFun.checkFail(
+            val isFailed = cgFun.checkFail(
                 c1ResultList.selectedItem.toString(),
                 c2ResultList.selectedItem.toString(),
                 c3ResultList.selectedItem.toString(),
@@ -97,53 +97,53 @@ class CGPAFragment : ReplaceFragment() {
             if (!isFailed) {
                 if (semesterNumber.toString() == "1" || semesterNumber.toString() == "2" || semesterNumber.toString() == "3") {
 
-                    var labGpa = cgFun.getLabGpa(
+                    val labGpa = cgFun.getLabGpa(
                         c6ResultList.selectedItem.toString(),
                         c7ResultList.selectedItem.toString(),
                         c8ResultList.selectedItem.toString()
                     )
-                    var sesGpa = cgFun.getSesGpa(c9ResultList.selectedItem.toString())
-                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 20.25
-                    result.text = calculated_cgpa.toString().take(5)
+                    val sesGpa = cgFun.getSesGpa(c9ResultList.selectedItem.toString())
+                    val calculatedCgpa = (theoryGpa + labGpa + sesGpa) / 20.25
+                    result.text = calculatedCgpa.toString().take(5)
 
 
                 } else if (semesterNumber.toString() == "4") {
 
-                    var labGpa = cgFun.getLabGpa(
+                    val labGpa = cgFun.getLabGpa(
                         c6ResultList.selectedItem.toString(),
                         c7ResultList.selectedItem.toString()
                     )
-                    var sesGpa = cgFun.getSesGpa(
+                    val sesGpa = cgFun.getSesGpa(
                         c8ResultList.selectedItem.toString(), c9ResultList.selectedItem.toString()
                     )
-                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 19.5
-                    result.text = calculated_cgpa.toString().take(5)
+                    val calculatedCgpa = (theoryGpa + labGpa + sesGpa) / 19.5
+                    result.text = calculatedCgpa.toString().take(5)
 
                 } else if (semesterNumber.toString() == "5") {
 
-                    var labGpa = cgFun.getLabGpa(
+                    val labGpa = cgFun.getLabGpa(
                         c6ResultList.selectedItem.toString(),
                     )
-                    var sesGpa = cgFun.getSesGpa(
+                    val sesGpa = cgFun.getSesGpa(
                         c7ResultList.selectedItem.toString(),
                         c8ResultList.selectedItem.toString(),
                         c9ResultList.selectedItem.toString()
                     )
-                    var calculated_cgpa = (theoryGpa + labGpa + sesGpa) / 18.75
-                    result.text = calculated_cgpa.toString().take(5)
+                    val calculatedCgpa = (theoryGpa + labGpa + sesGpa) / 18.75
+                    result.text = calculatedCgpa.toString().take(5)
 
 
                 } else if (semesterNumber.toString() == "6") {
 
 
-                    var sesGpa = cgFun.getSesGpa(
+                    val sesGpa = cgFun.getSesGpa(
                         c6ResultList.selectedItem.toString(),
                         c7ResultList.selectedItem.toString(),
                         c8ResultList.selectedItem.toString(),
                         c9ResultList.selectedItem.toString(),
                         c10ResultList.selectedItem.toString()
                     )
-                    var calculatedCgpa = (theoryGpa + sesGpa) / 18.75
+                    val calculatedCgpa = (theoryGpa + sesGpa) / 18.75
                     result.text = calculatedCgpa.toString().take(5)
 
 
@@ -159,24 +159,24 @@ class CGPAFragment : ReplaceFragment() {
                         c6ResultList.selectedItem.toString()
                     )
 
-                    var sesGpa = cgFun.getSesGpa(
+                    val sesGpa = cgFun.getSesGpa(
                         c7ResultList.selectedItem.toString(),
                         c8ResultList.selectedItem.toString(),
                         c9ResultList.selectedItem.toString(),
                         c10ResultList.selectedItem.toString()
                     )
-                    var calculated_cgpa = (theoryGpa + sesGpa) / 21
-                    result.text = calculated_cgpa.toString().take(5)
+                    val calculatedCgpa = (theoryGpa + sesGpa) / 21
+                    result.text = calculatedCgpa.toString().take(5)
 
                 } else if (semesterNumber.toString() == "8") {
 
-                    var sesGpa = cgFun.getSesGpa(
+                    val sesGpa = cgFun.getSesGpa(
                         c6ResultList.selectedItem.toString(),
                         c7ResultList.selectedItem.toString(),
                         c8ResultList.selectedItem.toString()
                     )
-                    var calculated_cgpa = (theoryGpa + sesGpa) / 17.25
-                    result.text = calculated_cgpa.toString().take(5)
+                    val calculatedCgpa = (theoryGpa + sesGpa) / 17.25
+                    result.text = calculatedCgpa.toString().take(5)
                 }
 
             } else

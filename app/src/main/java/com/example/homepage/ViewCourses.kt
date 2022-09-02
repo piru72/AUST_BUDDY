@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.courseTab.Adapter.MyAdapter
-import com.example.homepage.courseTab.Model.UserViewModel
+import com.example.homepage.courseTab.adapter.MyAdapter
+import com.example.homepage.courseTab.model.UserViewModel
 import androidx.lifecycle.Observer
 
-// TODO: Rename parameter arguments, choose names that match
+
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -27,7 +27,7 @@ private lateinit var userRecyclerView: RecyclerView
 lateinit var adapter: MyAdapter
 
 class ViewCourses : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -56,7 +56,7 @@ class ViewCourses : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment ViewCourses.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ViewCourses().apply {
