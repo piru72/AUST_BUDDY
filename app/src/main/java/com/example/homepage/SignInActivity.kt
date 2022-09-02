@@ -1,5 +1,6 @@
 package com.example.homepage
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,15 +15,20 @@ import com.google.firebase.auth.FirebaseUser
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var progressDialog: ProgressDialog
 
-    private  var email = ""
-    private  var password =""
-    private  var a = 0
+
     var PREFS_NAME = "Hello"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
+
+
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Please wait")
+        progressDialog.setMessage("Signing into your Account in few seconds...")
+        progressDialog.setCanceledOnTouchOutside(false)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -34,29 +40,31 @@ class SignInActivity : AppCompatActivity() {
         signInButton.setOnClickListener {
 
 
-            email = findViewById<TextView>(R.id.emailEt1).text.toString()
-            password = findViewById<TextView>(R.id.passwordEt1).text.toString()
+            val email = findViewById<TextView>(R.id.emailEt1).text.toString()
+            val password = findViewById<TextView>(R.id.passwordEt1).text.toString()
             val situation = validateData(email, password)
 
-            val intent = Intent(this, MainHomePage::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, MainHomePage::class.java)
+//            startActivity(intent)
 
 
-//            if (situation == "OK") {
-//                Toast.makeText(applicationContext, "EVERYTHING ALL RIGHT BUDDY SITUATION OK", Toast.LENGTH_SHORT).show()
-//                if (fireBaseSignin() == "OK")
-//                {
-//
-//                    Toast.makeText(applicationContext, "CALLING MAIN HOME PAGE", Toast.LENGTH_SHORT)
-//                    val intent = Intent(this, MainHomePage::class.java)
-//                    startActivity(intent)
-//                }
-//                else
-//                    Toast.makeText(applicationContext, "FAILED FIREBASE SIGN IN", Toast.LENGTH_SHORT).show()
-//
-//            } else {
-//                Toast.makeText(applicationContext, situation, Toast.LENGTH_SHORT).show()
-//            }
+            if (situation == "OK") {
+                //Toast.makeText(applicationContext, "EVERYTHING ALL RIGHT BUDDY SITUATION OK", Toast.LENGTH_SHORT).show()
+
+                // COMING TILL HERE WITH EASE
+
+                val situation1 = fireBaseSignin(email,password)
+                Toast.makeText(applicationContext, situation1 + " <<- FIREBASE RESPONSE", Toast.LENGTH_SHORT).show()
+                if (situation1 == "OK")
+                {
+
+                    Toast.makeText(applicationContext, "CALLING MAIN HOME PAGE", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainHomePage::class.java)
+                    startActivity(intent)
+                }
+            } else {
+                Toast.makeText(applicationContext, situation, Toast.LENGTH_SHORT).show()
+            }
 
 
         }
@@ -71,58 +79,49 @@ class SignInActivity : AppCompatActivity() {
 
     private fun validateData(emailf: String, passwordf: String): String {
 
-        email = emailf
-        password = passwordf
         var situation = "NOT POSSIBLE";
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        if (!Patterns.EMAIL_ADDRESS.matcher(emailf).matches())
             situation = "Invalid email format"
-        else if (email.length >= 35)
+        else if (emailf.length >= 35)
             situation = "Too long characters"
-        else if (email.contains("@gmail.com", ignoreCase = true) || email.contains(
+        else if (emailf.contains("@gmail.com", ignoreCase = true) || emailf.contains(
                 "@yahoo.com",
                 ignoreCase = true
             )
         )
             situation = "Provide your edu mail"
-        else if (TextUtils.isEmpty(password))
+        else if (TextUtils.isEmpty(passwordf))
             situation = "Enter a password"
-        else if (password.length <= 6)
+        else if (passwordf.length <= 6)
             situation = "Password is too short"
-        else if (password.contains("@") || password.contains("#") || password.contains("%")
-            || password.contains("$") || password.contains("*")
+        else if (passwordf.contains("@") || passwordf.contains("#") || passwordf.contains("%")
+            || passwordf.contains("$") || passwordf.contains("*")
         )
             situation = "OK"
-        else if (a != 1)
-            situation = "Give a special character such as @,$,#.."
         else
-            situation = "GOD KNOWS WHAT HAPPEND!"
+            situation = "Give a special character such as @,$,#.."
+
 
         return situation
 
     }
 
-    private fun fireBaseSignin(): String {
-        // progressDialog.show()
-        var situation = ""
+    private fun fireBaseSignin(email :String , password: String): String {
+         progressDialog.show()
+        var situationFirebase = ""
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
             if(it.isSuccessful)
             {
-
-                //  progressDialog.dismiss()
-                situation = verifyMail()
-
+                situationFirebase = verifyMail()
+                Toast.makeText(this,"RETURNING  SITUATION -->>>  " + situationFirebase, Toast.LENGTH_SHORT).show()
             }
             else
-            {
-                //progressDialog.dismiss()
-                Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
-                situation= "NOT OK"
-            }
+                situationFirebase= "NOT OK"
         }
 
-        return  situation
-
+        Toast.makeText(this,"BEFORE RETURN -->>>  " + situationFirebase, Toast.LENGTH_SHORT).show()
+        return  situationFirebase
     }
 
 
@@ -133,30 +132,22 @@ class SignInActivity : AppCompatActivity() {
         var situation = ""
         if(vEmail!!)
         {
-
-
             var sharedPreferences = getSharedPreferences("PREFS_NAME",0)
             sharedPreferences.edit()
             sharedPreferences.edit().putBoolean("hasLoggedIn",true)
             sharedPreferences.edit().commit()
-
             println("$PREFS_NAME")
             //startActivity(Intent(this@SigninActivity,UserProfile::class.java))
             finish()
             //Toast.makeText(this@SigninActivity,"Sign in successful with email $email", Toast.LENGTH_SHORT).show()
-
             situation ="OK"
-
-
         }
         else
         {
             Toast.makeText(this,"Please verify your email",Toast.LENGTH_SHORT).show()
             firebaseAuth.signOut()
-
             situation =" NOT OK BUDDY"
         }
-
         return  situation
     }
 }

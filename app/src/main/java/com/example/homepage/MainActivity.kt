@@ -10,16 +10,16 @@ class MainActivity : AppCompatActivity() {
 
 
     //********************** For opening in the first onboarding page ************//
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.welcome)
-
-        val nextButton = findViewById<Button>(R.id.get_started)
-        nextButton.setOnClickListener {
-            val intent = Intent(this, OnBoarding1::class.java)
-            startActivity(intent)
-        }
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.welcome)
+//
+//        val nextButton = findViewById<Button>(R.id.get_started)
+//        nextButton.setOnClickListener {
+//            val intent = Intent(this, OnBoarding1::class.java)
+//            startActivity(intent)
+//        }
+//    }
 
 //********************** For opening in the third onboarding page ************//
 
@@ -37,17 +37,17 @@ class MainActivity : AppCompatActivity() {
 
     //********************** For opening in the third onboarding to sign up page  page ************//
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_on_boarding3)
-//
-//        val nextButton = findViewById<Button>(R.id.onboarding_3_button)
-//        nextButton.setOnClickListener {
-//            val intent = Intent(this, SignUpActivity::class.java)
-//          startActivity(intent)
-//
-//        }
-//    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_on_boarding3)
+
+        val nextButton = findViewById<Button>(R.id.onboarding_3_button)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+          startActivity(intent)
+
+        }
+    }
 
 
     //********************** For opening directly in the main Home Page onboarding page ************//
