@@ -9,7 +9,9 @@
     <color name="primary_green">#6FCF97 </color>
     <color name="white">#E4F9FF</color>
     <color name="pure_white">#FFFFFF</color>
-
+    <color name="light_blue">#ddf3f5</color>
+    <color name="copy">#194775</color>
     <color name="text_black">#3F3D56</color>
     <color name="background_black">#222222</color>
+    <color name="dark_blue">#00b7c2</color>
 </resources>

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/rounded_edittext.xml" value="0.1935" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/rounded_list_item_view.xml" value="0.3045" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/rounded_select_image.xml" value="0.3045" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/search_view_bg.xml" value="0.3035" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/background_white_ring.xml" value="0.3035" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.1935" />
@@ -21,7 +24,9 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_sign_up.xml" value="0.3484375" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_signin.xml" value="0.3614583333333333" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_start_up.xml" value="0.3614583333333333" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_todo.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_user_profile.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/custompopup.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_about_dev.xml" value="0.22" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_c_g_p_a.xml" value="0.25" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_calander.xml" value="0.3625" />
@@ -43,7 +48,9 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_settings.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_syllabus.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_teachers.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_todo.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_view_courses.xml" value="0.1" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/list_item_view.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/user_item.xml" value="0.13796296296296295" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/welcome.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />

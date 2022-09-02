@@ -99,4 +99,6 @@
     <string name="send">SEND</string>
     <string name="iums">IUMS</string>
     <string name="aust_oj">AUST OJ</string>
+    <string name="add" />
+    <string name="close" />
 </resources>
