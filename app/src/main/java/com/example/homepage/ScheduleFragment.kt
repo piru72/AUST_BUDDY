@@ -44,11 +44,11 @@ class ScheduleFragment : Fragment() {
 
         recycler.layoutManager = LinearLayoutManager(context)
 
-        binding.floatingActionButton.setOnClickListener {
+//        binding.floatingActionButton.setOnClickListener {
 //
-            Toast.makeText(context,"this is toast message", Toast.LENGTH_SHORT).show()
-
-//            val rootLayout = layoutInflater.inflate(R.layout.custompopup, null)
+//            Toast.makeText(context,"this is toast message", Toast.LENGTH_SHORT).show()
+//
+//           val rootLayout = getLayoutInflater().inflate(R.layout.custom_popup, null)
 //
 //            val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
 //            val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
@@ -84,12 +84,10 @@ class ScheduleFragment : Fragment() {
 //
 //                popupWindow.dismiss()
 //            }
-
-        }// end of floating action
+//
+//        }// end of floating action
 
         return binding.root
     }
-
-
 
 }
