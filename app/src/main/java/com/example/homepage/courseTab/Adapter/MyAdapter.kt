@@ -29,7 +29,6 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
         holder.courseCode.text = currentItem.courseCode
         holder.courseName.text = currentItem.courseName
-
         holder.exploreButton.text = currentItem.driveLink
 
     }

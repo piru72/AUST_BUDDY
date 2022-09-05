@@ -1,12 +1,16 @@
 package com.example.homepage.profileTab
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.homepage.R
+import com.example.homepage.SignInActivity
 import com.example.homepage.superClass.ReplaceFragment
+import com.google.firebase.auth.FirebaseAuth
 
 
 class ProfileFragment : ReplaceFragment() {
@@ -41,7 +45,13 @@ class ProfileFragment : ReplaceFragment() {
             replaceFragment(AboutDevFragment(), R.id.fragment_profile)
         }
         btnLogOut.setOnClickListener {
-            replaceFragment(LogOutFragment(), R.id.fragment_profile)
+
+            // TODO GOING FROM FRAGMENT TO ACTIVITY
+            val i = Intent(activity, SignInActivity::class.java)
+            startActivity(i)
+            (activity as Activity?)!!.overridePendingTransition(0, 0)
+
+            FirebaseAuth.getInstance().signOut()
         }
 
         return v

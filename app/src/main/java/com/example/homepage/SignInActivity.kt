@@ -5,41 +5,48 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import com.example.homepage.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import java.util.*
-import kotlin.concurrent.schedule
-import kotlinx.coroutines.delay as delay1
 
 class SignInActivity : AppCompatActivity() {
 
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     private lateinit var progressDialog: ProgressDialog
+    private lateinit var database: DatabaseReference
+    private lateinit var binding: ActivitySignInBinding
 
 
     var PREFS_NAME = "Hello"
 
-    var finalValue=""
+    var finalValue = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
+
+        auth = Firebase.auth
+        database = Firebase.database.reference
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please wait")
         progressDialog.setMessage("Signing into your Account in few seconds...")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        firebaseAuth = FirebaseAuth.getInstance()
-
-        val signInButton = findViewById<Button>(R.id.signinBtn)
         val text2 = findViewById<TextView>(R.id.text2)
 
-        signInButton.setOnClickListener {
+        binding.signinBtn.setOnClickListener {
 
             val email = findViewById<TextView>(R.id.emailEt1).text.toString()
             val password = findViewById<TextView>(R.id.passwordEt1).text.toString()
@@ -48,7 +55,7 @@ class SignInActivity : AppCompatActivity() {
             val situation = validateData(email, password)
 
             if (situation == "USER EMAIL PASS VERIFIED") {
-                fireBaseSignin(email,password)
+                fireBaseSignin(email, password)
             } else {
                 Toast.makeText(this, situation, Toast.LENGTH_SHORT).show()
             }
@@ -59,6 +66,41 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        updateUI(currentUser)
+
+    }
+
+    private fun updateUI(currentUser: FirebaseUser?) {
+        if (currentUser != null) {
+            Log.i("LoginActivity", "Update UI Called")
+            val intent = Intent(this, MainHomePage::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun writeNewUser(userId: String, name: String, email: String?) {
+        val user = User(name, email)
+        database.child("users").child(userId).setValue(user)
+    }
+
+    private fun usernameFromEmail(email: String): String {
+        return if (email.contains("@")) {
+            email.split("@".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
+        } else {
+            email
+        }
+    }
+
+    private fun onAuthSuccess(user: FirebaseUser) {
+        val username = usernameFromEmail(user.email!!)
+        // Write new user
+        writeNewUser(user.uid, username, user.email)
     }
 
     private fun validateData(emailf: String, passwordf: String): String {
@@ -89,16 +131,18 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-    private fun fireBaseSignin(email :String , password: String) {
-         progressDialog.show()
-        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+    private fun fireBaseSignin(email: String, password: String) {
+        progressDialog.show()
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             when {
-                it.isSuccessful -> {
+                task.isSuccessful -> {
                     progressDialog.dismiss()
                     finalValue = verifyMail()
                     when (finalValue) {
                         "OK" -> {
-                            startActivity(Intent(this, MainHomePage::class.java))
+                            val user = auth.currentUser
+                            onAuthSuccess(task.result?.user!!)
+                            updateUI(user)
                         }
                     }
                 }
@@ -112,21 +156,18 @@ class SignInActivity : AppCompatActivity() {
     }
 
 
-    private fun verifyMail() :String {
+    private fun verifyMail(): String {
 
         val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
-        val vEmail:Boolean? = firebaseUser?.isEmailVerified
+        val vEmail: Boolean? = firebaseUser?.isEmailVerified
         var situation = ""
-        if(vEmail!!)
-        {
-            situation ="OK"
-        }
-        else
-        {
-            Toast.makeText(this,"Please verify your email",Toast.LENGTH_SHORT).show()
+        if (vEmail!!) {
+            situation = "OK"
+        } else {
+            Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show()
             //firebaseAuth.signOut()
-            situation ="NOT OK"
+            situation = "NOT OK"
         }
-        return  situation
+        return situation
     }
 }

@@ -14,17 +14,15 @@ import com.google.firebase.ktx.Firebase
 
 class ScheduleFragment : Fragment() {
 
-
-
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
 
-   // private lateinit var binding: DataBinding
+
     private lateinit var database: DatabaseReference
     private lateinit var taskReference: DatabaseReference
     private lateinit var auth: FirebaseAuth
     private lateinit var recycler: RecyclerView
-   // private var adapter: TaskAdapter?= null
+    //private var adapter: TaskAdapter? = null
 
 
     override fun onCreateView(
@@ -34,16 +32,16 @@ class ScheduleFragment : Fragment() {
 
         _binding = FragmentTodoBinding.inflate(inflater, container, false)
 
-      //auth = Firebase.auth
-      // database = Firebase.database.reference
-       //val user = auth.currentUser!!.uid
-//        taskReference =  FirebaseDatabase.getInstance().getReference("user-tasks").child(user)
-//        //recycler = view.findViewById(R.id.task_list)
+
+       auth = Firebase.auth
+       database = Firebase.database.reference
+        //val user = auth.currentUser!!.uid
+        //taskReference = FirebaseDatabase.getInstance().getReference("user-tasks").child(user)
+        recycler = binding.taskList
 
 
         return binding.root
     }
-
 
 
 //

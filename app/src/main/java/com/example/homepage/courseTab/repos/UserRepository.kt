@@ -6,7 +6,7 @@ import com.google.firebase.database.*
 
 class UserRepository {
 
-    private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("Users")
+    private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("Courses")
 
     @Volatile private var INSTANCE : UserRepository ?= null
 
