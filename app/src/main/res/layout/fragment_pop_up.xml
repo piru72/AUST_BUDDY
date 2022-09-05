@@ -8,9 +8,7 @@
     android:background="@drawable/rounded_list_item_view"
     android:orientation="vertical"
     android:padding="20dp"
-    android:layout_gravity="center_horizontal"
-    android:id="@+id/custom_popup"
-    >
+    android:layout_gravity="center_horizontal">
 
 
     <EditText
@@ -18,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:hint="@string/quiz_name"
+        android:hint="Quiz Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
@@ -30,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:hint="@string/quiz_syllabus"
+        android:hint="Quiz Syllabus"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
         android:textColor="@color/black"
@@ -42,26 +40,26 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/CloseButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_weight="1"
             android:background="@drawable/rounded_edittext"
-            android:text="Close"
             android:textColor="#4E342E"
-            style="?android:attr/buttonBarButtonStyle"
-            tools:ignore="HardcodedText" />
+            android:text="Close" />
 
         <Button
             android:id="@+id/AddButton"
             style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/rounded_edittext"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_edittext"
-            android:text="Add"
+            android:layout_weight="1"
             android:textColor="#4E342E"
-            tools:ignore="HardcodedText,TextContrastCheck" />
+            android:text="ADD" />
 
 
     </LinearLayout>

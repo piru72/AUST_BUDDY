@@ -47,7 +47,7 @@ class TodoActivity : AppCompatActivity() {
         //Floating action button start
         binding.floatingActionButton.setOnClickListener {
 
-            val rootLayout = layoutInflater.inflate(R.layout.custompopup, null)
+            val rootLayout = layoutInflater.inflate(R.layout.custom_popup, null)
 
             val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
             val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
