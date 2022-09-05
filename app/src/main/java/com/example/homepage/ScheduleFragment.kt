@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.Quiz.Tasks
+import com.example.homepage.databinding.FragmentScheduleBinding
 import com.example.homepage.databinding.FragmentTodoBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -24,7 +25,7 @@ import com.google.firebase.ktx.Firebase
 
 class ScheduleFragment : Fragment() {
 
-    private var _binding: FragmentTodoBinding? = null
+    private var _binding: FragmentScheduleBinding? = null
     private val binding get() = _binding!!
 
 
@@ -40,7 +41,7 @@ class ScheduleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentTodoBinding.inflate(inflater, container, false)
+        _binding = FragmentScheduleBinding.inflate(inflater, container, false)
 
 
         auth = Firebase.auth
@@ -56,6 +57,7 @@ class ScheduleFragment : Fragment() {
 
             val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
             val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
+            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
 
@@ -66,13 +68,13 @@ class ScheduleFragment : Fragment() {
             )
 
             popupWindow.update()
-            popupWindow.elevation = 10.5F
+            popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
                 binding.ToDoActivity, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
-                0 // Y offset
+                -500// Y offset
             )
 
             closeButton.setOnClickListener {
@@ -83,7 +85,9 @@ class ScheduleFragment : Fragment() {
 
                 val name = taskName.text.toString()
                 val description = taskDescription.text.toString()
-                writeNewTask(user, name, description)
+                val date = taskDate.text.toString()
+
+                writeNewTask(user, name, description,date)
 
                 popupWindow.dismiss()
             }
@@ -94,7 +98,7 @@ class ScheduleFragment : Fragment() {
         return binding.root
     }
 
-    private fun writeNewTask(userId: String, taskName: String, taskDescription: String) {
+    private fun writeNewTask(userId: String, taskName: String, taskDescription: String,taskDate: String) {
         // Create new post at /user-posts/$userid/$postid and at
         // /posts/$postid simultaneously
         val key = database.child("posts").push().key
@@ -103,7 +107,7 @@ class ScheduleFragment : Fragment() {
             return
         }
 
-        val newtask = Tasks(userId, taskName, taskDescription)
+        val newtask = Tasks(userId, taskName, taskDescription,taskDate)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
@@ -213,6 +217,7 @@ class ScheduleFragment : Fragment() {
         class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val taskName: TextView = itemView.findViewById(R.id.taskNameCard)
             val taskDescription: TextView = itemView.findViewById(R.id.taskDescriptionCard)
+            val taskdate: TextView = itemView.findViewById(R.id.taskDateCard)
             val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
         }
 
@@ -233,6 +238,7 @@ class ScheduleFragment : Fragment() {
 
             holder.taskName.text = currentTask.taskname
             holder.taskDescription.text = currentTask.taskdescription
+            holder.taskdate.text = currentTask.taskdate
 
             holder.deleteButton.setOnClickListener {
                 val value = taskReference.child(taskIds[position])

@@ -13,13 +13,7 @@
         android:background="@drawable/rounded_list_item_view">
 
 
-        <CheckBox
-            android:id="@+id/checkBoxItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:text="" />
+
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -36,7 +30,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/quiz_name"
-                android:textColor="@android:color/black"
+                android:textColor="@color/pure_white"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/taskDateCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Quiz Date"
+                android:textColor="@color/pure_white"
                 android:textSize="20sp" />
 
 
@@ -45,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/quiz_syllabus"
-                android:textColor="#546E7A"
+                android:textColor="@color/pure_white"
                 android:textSize="18sp">
 
             </TextView>
@@ -54,11 +56,11 @@
 
         <Button
             android:id="@+id/deleteButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:background="@drawable/rounded_select_image"
-            android:text="@string/a_dot"
+            android:text="Delete"
             android:textColor="#01579B"
             android:textStyle="bold"
             tools:ignore="TextContrastCheck" />

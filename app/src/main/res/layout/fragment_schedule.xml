@@ -1,72 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ScheduleFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_black"
-        tools:context=".MainActivity">
+        android:id="@+id/ToDoActivity"
+        android:padding="10dp">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginHorizontal="50dp"
-            android:background="@drawable/background_white_ring"
-            app:layout_constraintBottom_toTopOf="@id/onOffButton"
-            app:layout_constraintDimensionRatio="H,1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/timeTextView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="09:30"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toTopOf="@id/ampmTextView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-        <TextView
-            android:id="@+id/ampmTextView"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AM"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@id/onOffButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/timeTextView" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="TODO"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_input_add" />
 
-        <Button
-            android:id="@+id/onOffButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="on alarm"
-            app:layout_constraintBottom_toTopOf="@id/changeAlarmTimeButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/changeAlarmTimeButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Change Time"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+    </RelativeLayout>
+
+</layout>
