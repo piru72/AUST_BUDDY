@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-   // ********************** For opening in the third onboarding to sign up page  page ************//
+    // ********************** For opening in the third onboarding to sign up page  page ************//
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)

@@ -157,16 +157,19 @@ class CgpaFunctions {
 
         return totalPoint
     }
+
     fun getTheoryGpa(
         toString: String,
         toString1: String,
         toString2: String,
         toString3: String,
-        toString4: String,toString5: String
+        toString4: String, toString5: String
     ): Float {
 
         var totalPoint: Float =
-            findPoint(toString) + findPoint(toString1) + findPoint(toString2) + findPoint(toString3) + findPoint(toString4) + findPoint(toString5)
+            findPoint(toString) + findPoint(toString1) + findPoint(toString2) + findPoint(toString3) + findPoint(
+                toString4
+            ) + findPoint(toString5)
         totalPoint *= 3
 
         return totalPoint
@@ -223,18 +226,21 @@ class CgpaFunctions {
     ): Float {
 
         var totalPoint: Float =
-            findPoint(toString) + findPoint(toString1) + findPoint(toString2) + findPoint(toString3) + findPoint(toString4)
+            findPoint(toString) + findPoint(toString1) + findPoint(toString2) + findPoint(toString3) + findPoint(
+                toString4
+            )
         totalPoint *= .75f
 
         return totalPoint
     }
+
     fun getSesGpa(
         toString: String,
         toString1: String,
         toString2: String,
         toString3: String,
 
-    ): Float {
+        ): Float {
 
         var totalPoint: Float =
             findPoint(toString) + findPoint(toString1) + findPoint(toString2) + findPoint(toString3)

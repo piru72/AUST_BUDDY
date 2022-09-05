@@ -16,11 +16,9 @@ class NoticeFragment : ReplaceFragment() {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
         val webSite = "https://www.aust.edu/notice"
-        loadWebSite(webSite,v)
+        loadWebSite(webSite, v)
         return v
     }
-
-
 
 
 }

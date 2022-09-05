@@ -20,7 +20,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.user_item,
-            parent,false
+            parent, false
         )
         return MyViewHolder(itemView)
 
@@ -35,7 +35,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         holder.exploreButton.text = currentItem.driveLink
 
         // TODO setup the link in here
-        holder.exploreButton.setOnClickListener{
+        holder.exploreButton.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW, Uri.parse(currentItem.driveLink))
         }
 
@@ -45,7 +45,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         return userList.size
     }
 
-    fun updateUserList(userList : List<User>){
+    fun updateUserList(userList: List<User>) {
 
         this.userList.clear()
         this.userList.addAll(userList)
@@ -53,14 +53,13 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     }
 
-    class  MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // The values for user_item variable are created here and assigned above
-        val courseCode : TextView = itemView.findViewById(R.id.tvCourseCode)
-        val courseName : TextView = itemView.findViewById(R.id.tvCourseName)
-        val exploreButton : Button = itemView.findViewById(R.id.exploreButton)
+        val courseCode: TextView = itemView.findViewById(R.id.tvCourseCode)
+        val courseName: TextView = itemView.findViewById(R.id.tvCourseName)
+        val exploreButton: Button = itemView.findViewById(R.id.exploreButton)
 
     }
-
 
 
 }

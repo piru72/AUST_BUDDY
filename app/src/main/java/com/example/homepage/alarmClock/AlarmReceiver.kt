@@ -10,7 +10,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.example.homepage.R
 
 
-class AlarmReceiver: BroadcastReceiver() {
+class AlarmReceiver : BroadcastReceiver() {
 
     companion object {
         const val NOTIFICATION_ID = 100

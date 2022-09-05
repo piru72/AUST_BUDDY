@@ -6,12 +6,14 @@ import com.google.firebase.database.*
 
 class UserRepository {
 
-    private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("Courses")
+    private val databaseReference: DatabaseReference =
+        FirebaseDatabase.getInstance().getReference("Courses")
 
-    @Volatile private var INSTANCE : UserRepository ?= null
+    @Volatile
+    private var INSTANCE: UserRepository? = null
 
-    fun getInstance() : UserRepository{
-        return INSTANCE ?: synchronized(this){
+    fun getInstance(): UserRepository {
+        return INSTANCE ?: synchronized(this) {
 
             val instance = UserRepository()
             INSTANCE = instance
@@ -22,14 +24,14 @@ class UserRepository {
     }
 
 
-    fun loadUsers(userList : MutableLiveData<List<User>>){
+    fun loadUsers(userList: MutableLiveData<List<User>>) {
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 try {
 
-                    val courseList : List<User> = snapshot.children.map { dataSnapshot ->
+                    val courseList: List<User> = snapshot.children.map { dataSnapshot ->
 
                         dataSnapshot.getValue(User::class.java)!!
 
@@ -37,7 +39,7 @@ class UserRepository {
 
                     userList.postValue(courseList)
 
-                }catch (e : Exception){
+                } catch (e: Exception) {
 
                 }
 

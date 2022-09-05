@@ -15,7 +15,7 @@ class OnBoarding1 : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding1)
 
         val nextButton = findViewById<Button>(R.id.onboard_1_button)
-        nextButton.setOnClickListener{
+        nextButton.setOnClickListener {
             val intent = Intent(this, OnBoarding2::class.java)
             startActivity(intent)
         }

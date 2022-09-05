@@ -12,7 +12,6 @@ import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
 
 
-
 class InviteFragment : ReplaceFragment() {
 
 
@@ -28,7 +27,7 @@ class InviteFragment : ReplaceFragment() {
 
 
 
-        sendBTn.setOnClickListener{
+        sendBTn.setOnClickListener {
 
             val email = v.findViewById<TextView>(R.id.emailAddress)
 //            val subject = v.findViewById<TextView>(R.id.subject) // use these boxes in case of custom body and subject
@@ -40,9 +39,12 @@ class InviteFragment : ReplaceFragment() {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, addresses)
                 putExtra(Intent.EXTRA_SUBJECT, "HEY! CHECKOUT THIS AMAZING APP FOR AUSTIANS")
-                putExtra(Intent.EXTRA_TEXT, "CURRENTLY THEY ARE ON DEVELOPMENT PHASE CHECK OUT THEIR GIT REPOS FOR THE UPDATE . THEIR LINK IS " +
-                        "" +
-                        "link: https://github.com/piru72/Uni_buddy")
+                putExtra(
+                    Intent.EXTRA_TEXT,
+                    "CURRENTLY THEY ARE ON DEVELOPMENT PHASE CHECK OUT THEIR GIT REPOS FOR THE UPDATE . THEIR LINK IS " +
+                            "" +
+                            "link: https://github.com/piru72/Uni_buddy"
+                )
             }
             startActivity(intent)
         }

@@ -18,7 +18,7 @@ class TeachersFragment : ReplaceFragment() {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
         val webSite = "https://iums.aust.edu/ums-web/login/"
-        loadWebSite(webSite,v)
+        loadWebSite(webSite, v)
         return v
     }
 }

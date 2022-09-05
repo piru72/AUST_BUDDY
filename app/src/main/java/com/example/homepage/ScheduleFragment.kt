@@ -87,7 +87,7 @@ class ScheduleFragment : Fragment() {
                 val description = taskDescription.text.toString()
                 val date = taskDate.text.toString()
 
-                writeNewTask(user, name, description,date)
+                writeNewTask(user, name, description, date)
 
                 popupWindow.dismiss()
             }
@@ -98,7 +98,12 @@ class ScheduleFragment : Fragment() {
         return binding.root
     }
 
-    private fun writeNewTask(userId: String, taskName: String, taskDescription: String,taskDate: String) {
+    private fun writeNewTask(
+        userId: String,
+        taskName: String,
+        taskDescription: String,
+        taskDate: String
+    ) {
         // Create new post at /user-posts/$userid/$postid and at
         // /posts/$postid simultaneously
         val key = database.child("posts").push().key
@@ -107,7 +112,7 @@ class ScheduleFragment : Fragment() {
             return
         }
 
-        val newtask = Tasks(userId, taskName, taskDescription,taskDate)
+        val newtask = Tasks(userId, taskName, taskDescription, taskDate)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,

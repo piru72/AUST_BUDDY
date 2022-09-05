@@ -28,7 +28,7 @@ class RequestFragment : ReplaceFragment() {
 
 
 
-        sendBTn.setOnClickListener{
+        sendBTn.setOnClickListener {
 
             val email = "unibuddy890@gmail.com"
             val message = v.findViewById<TextView>(R.id.message)

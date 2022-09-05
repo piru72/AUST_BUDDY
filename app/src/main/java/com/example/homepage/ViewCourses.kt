@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ViewCourses.newInstance] factory method to
  * create an instance of this fragment.
  */
-private lateinit var viewModel : UserViewModel
+private lateinit var viewModel: UserViewModel
 private lateinit var userRecyclerView: RecyclerView
 lateinit var adapter: MyAdapter
 

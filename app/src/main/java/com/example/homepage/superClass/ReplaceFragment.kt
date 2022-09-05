@@ -20,7 +20,7 @@ open class ReplaceFragment : Fragment() {
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    fun loadWebSite(webSite : String, v : View){
+    fun loadWebSite(webSite: String, v: View) {
         val webView = v.findViewById<WebView>(R.id.mWebView)
         webView.webViewClient = WebViewClient()
         webView.canGoBack()

@@ -19,7 +19,7 @@ class ClubsFragment : ReplaceFragment() {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_notice, container, false)
         val webSite = "https://austoj.com/"
-        loadWebSite(webSite,v)
+        loadWebSite(webSite, v)
         return v
     }
 
