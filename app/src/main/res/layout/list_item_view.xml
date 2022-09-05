@@ -31,7 +31,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="@string/quiz_name"
                 android:textColor="@color/pure_white"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
             <TextView
                 android:id="@+id/taskDateCard"
                 android:layout_width="wrap_content"
@@ -56,11 +56,11 @@
 
         <Button
             android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
+            android:layout_width="98dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:background="@drawable/rounded_select_image"
-            android:text="Delete"
+            android:text="Done"
             android:textColor="#01579B"
             android:textStyle="bold"
             tools:ignore="TextContrastCheck" />
