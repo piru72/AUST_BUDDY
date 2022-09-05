@@ -23,30 +23,30 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="260dp"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:orientation="vertical"
-         >
+            android:orientation="vertical">
 
 
             <TextView
-                android:id="@+id/taskName"
+                android:id="@+id/taskNameCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="BUY Chips"
+                android:text="@string/quiz_name"
                 android:textColor="@android:color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
 
             <TextView
-                android:id="@+id/taskDescription"
+                android:id="@+id/taskDescriptionCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="From shop 23"
-                android:textSize="18dp">
+                android:text="@string/quiz_syllabus"
+                android:textColor="#546E7A"
+                android:textSize="18sp">
 
             </TextView>
 
@@ -58,30 +58,10 @@
             android:layout_height="48dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/rounded_select_image"
-            android:text="-"
-            android:textColor="@color/copy"
+            android:text="@string/a_dot"
+            android:textColor="#01579B"
             android:textStyle="bold"
-
-            />
-
-
-
-
-
-        <!--        <Button-->
-<!--            android:id="@+id/deleteTask"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/rounded_select_image"-->
-<!--            android:text="Delete"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textStyle="bold"-->
-<!--            />-->
-
-
-
-
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 

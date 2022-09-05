@@ -95,10 +95,13 @@
     <string name="email_address">Email Address</string>
     <string name="subject">Subject:</string>
     <string name="message">Message:</string>
-    <string name="type_your_message_here">Type your message here...</string>
+    <string name="type_your_message_here">Type your message here…</string>
     <string name="send">SEND</string>
     <string name="iums">IUMS</string>
     <string name="aust_oj">AUST OJ</string>
-    <string name="add" />
-    <string name="close" />
+    <string name="add" >Add </string>
+    <string name="close" >Close </string>
+    <string name="quiz_name">Quiz Name</string>
+    <string name="quiz_syllabus">Quiz Syllabus</string>
+    <string name="a_dot">.</string>
 </resources>

@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_list_item_view"
@@ -9,51 +10,60 @@
     android:padding="20dp"
     android:layout_gravity="center_horizontal"
     android:id="@+id/custom_popup"
-   >
+    >
 
 
     <EditText
         android:id="@+id/TaskNamePop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="@string/quiz_name"
         android:inputType="textPersonName"
-        android:hint="Task Name"
+        android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:layout_marginBottom="25dp"/>
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/TaskDescription"
+        android:id="@+id/TaskDescriptionPop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="@string/quiz_syllabus"
         android:inputType="textMultiLine"
-        android:hint="Task Description"
+        android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:layout_marginBottom="25dp"/>
+        android:autofillHints="" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/AddButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/add"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_edittext" />
-
         <Button
             android:id="@+id/CloseButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="@string/close"
             android:layout_marginStart="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_edittext" />
+            android:background="@drawable/rounded_edittext"
+            android:text="Close"
+            android:textColor="#4E342E"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/AddButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:text="Add"
+            android:textColor="#4E342E"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+
     </LinearLayout>
 
 
