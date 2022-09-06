@@ -9,23 +9,167 @@
     tools:context=".profileTab.ProfileFragment">
 
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/notice_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="342dp"
-            android:layout_marginBottom="341dp"
-            android:text="@string/button"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dev1Img"
+            android:layout_width="143dp"
+            android:layout_height="133dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20sp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/dev"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="415dp"
+            android:layout_height="288dp"
+            android:layout_margin="30sp"
+            android:orientation="vertical"
+            android:padding="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeProfilePhoto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userNameAnc"
+                    android:layout_width="120sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="User Name"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/userNameReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="User Name"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fullNameAnc"
+                    android:layout_width="120sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Full  Name"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/FullNameReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Full  Name"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/IdAnchor"
+                    android:layout_width="120sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Student ID"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/IdReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="ID"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sessionAnchor"
+                    android:layout_width="120sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Session"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/sessionReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Admission Session"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/departmentAnchor"
+                    android:layout_width="120sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Department"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/departmentReal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Department"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/changeProfilePhoto"
+            android:layout_width="263dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_list_item_view"
+            android:text="Change Profile Photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dev1Img"
+            app:layout_constraintVertical_bias="0.025" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
