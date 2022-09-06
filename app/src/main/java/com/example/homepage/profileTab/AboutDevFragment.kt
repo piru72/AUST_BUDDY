@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.example.homepage.R
+import com.example.homepage.WebView
 import com.example.homepage.databinding.FragmentAboutDevBinding
 import com.example.homepage.superClass.ReplaceFragment
 
@@ -29,6 +30,13 @@ class AboutDevFragment : ReplaceFragment() {
         val dev2Gmail = v.findViewById<Button>(R.id.dev2Fb)
         val dev3Gmail = v.findViewById<Button>(R.id.dev3Fb)
 
+        val dev1Git = v.findViewById<Button>(R.id.dev1Git)
+        val dev2Git = v.findViewById<Button>(R.id.dev2Git)
+        val dev3Git = v.findViewById<Button>(R.id.dev3Git)
+
+        val currentState = R.id.fragment_about_dev
+
+
         dev1Gmail.setOnClickListener {
             val email = "taralamia69@gmail.com"
             sendMail(email)
@@ -42,7 +50,15 @@ class AboutDevFragment : ReplaceFragment() {
             sendMail(email)
         }
 
-
+        dev1Git.setOnClickListener{
+            replaceFragment(WebView(),currentState)
+        }
+        dev2Git.setOnClickListener{
+            replaceFragment(WebView(),currentState)
+        }
+        dev3Git.setOnClickListener{
+            replaceFragment(WebView(),currentState)
+        }
 
 
         return v
