@@ -4,31 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/pure_white"
     tools:context=".profileTab.ProfileFragment">
 
 
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textview_yet_TO_BE_DONE"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="yet_to_be_done_privacy"
-            android:textColor="@color/black"
-            android:textSize="34sp"
+            android:layout_margin="10sp"
+            android:orientation="vertical">
 
-            app:layout_constraintBottom_toBottomOf="parent"
+            <TextView
+                android:id="@+id/textview_yet_TO_BE_DONE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/privacy_policy_description"
+                android:textColor="@color/black"
+                android:textSize="20sp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                />
+        </LinearLayout>
+    </ScrollView>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
