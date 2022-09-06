@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-
     tools:context=".profileTab.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +86,7 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
+                            android:text="Gmail" />
 
 
                     </LinearLayout>
@@ -160,7 +159,7 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
+                            android:text="Gmail" />
 
 
                     </LinearLayout>
@@ -233,7 +232,7 @@
                             android:layout_margin="2dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
+                            android:text="Gmail" />
 
 
                     </LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.homepage.superClass
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -29,6 +31,18 @@ open class ReplaceFragment : Fragment() {
             settings.javaScriptEnabled = true
             settings.safeBrowsingEnabled = true
         }
+
+    }
+
+    fun sendMail(email: String) {
+
+        val addresses = email.split(",".toRegex()).toTypedArray()
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, addresses)
+            putExtra(Intent.EXTRA_SUBJECT, "A LITTLE CHIT CHAT ABOUT UNIBUDDY APP")
+        }
+        startActivity(intent)
 
     }
 
