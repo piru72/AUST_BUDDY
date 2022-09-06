@@ -19,9 +19,7 @@ class EditProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_invite, container, false)
-
-
+        val v = inflater.inflate(R.layout.fragment_edit_profile, container, false)
         return v
     }
 
