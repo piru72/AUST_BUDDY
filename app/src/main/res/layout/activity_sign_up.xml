@@ -15,12 +15,11 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
             android:hint="Type your Email"
-            android:inputType="textEmailAddress"
-            />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,6 +49,7 @@
         android:layout_below="@id/password_signup"
         android:layout_marginTop="58dp"
         android:text="Sign up"
+        android:background="@drawable/rounded_list_item_view"
         tools:ignore="InvalidId" />
 
     <TextView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#051130"
+    android:background="@color/white"
     tools:context=".profileTab.ProfileFragment">
 
 
@@ -29,11 +29,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="MENTION THE MATERIALS YOU NEED"
-                android:textColor="@color/pure_white"
+                android:textColor="@color/text_black"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_margin="20dp"
+
                 />
 
             <TextView
@@ -41,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="@string/message"
-                android:textColor="@color/pure_white"
+                android:textColor="@color/text_black"
                 android:textSize="26sp"
 
                 android:textStyle="bold" />
