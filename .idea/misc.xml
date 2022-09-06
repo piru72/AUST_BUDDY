@@ -8,8 +8,10 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/rounded_select_image.xml" value="0.3045" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable-v24/search_view_bg.xml" value="0.3035" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/background_white_ring.xml" value="0.3035" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/circle.xml" value="0.227" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.1935" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1935" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/drawable/img1.xml" value="0.227" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-land/activity_home_page.xml" value="0.30687830687830686" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-v31/activity_sign_up.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout-v31/fragment_profile.xml" value="0.3625" />
@@ -28,7 +30,7 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/activity_user_profile.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/custom_popup.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/custompopup.xml" value="0.3625" />
-        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_about_dev.xml" value="0.22" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_about_dev.xml" value="0.33" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_c_g_p_a.xml" value="0.25" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_calander.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_clubs.xml" value="0.3625" />

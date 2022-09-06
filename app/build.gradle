@@ -70,7 +70,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.4.0'
 
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.7'
-
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 
