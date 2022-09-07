@@ -72,6 +72,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.7'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    /// For image view of glider
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
 
 
 
