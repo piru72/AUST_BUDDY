@@ -16,9 +16,7 @@ class TeachersFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_notice, container, false)
-        val webSite = "https://iums.aust.edu/ums-web/login/"
-        loadWebSite(webSite, v)
+        val v = inflater.inflate(R.layout.fragment_teachers, container, false)
         return v
     }
 }
