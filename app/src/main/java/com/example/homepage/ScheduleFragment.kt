@@ -43,7 +43,6 @@ class ScheduleFragment : Fragment() {
 
         _binding = FragmentScheduleBinding.inflate(inflater, container, false)
 
-
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
@@ -87,7 +86,12 @@ class ScheduleFragment : Fragment() {
                 val description = taskDescription.text.toString()
                 val date = taskDate.text.toString()
 
-                writeNewTask(user, name, description, date)
+                if(name == "" || description=="")
+                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
+                else
+                    writeNewTask(user, name, description, date)
+
+
 
                 popupWindow.dismiss()
             }

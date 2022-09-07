@@ -16,9 +16,8 @@ class EventsFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_notice, container, false)
-        val webSite = "https://www.aust.edu/events"
-        loadWebSite(webSite, v)
+        val v = inflater.inflate(R.layout.fragment_bus, container, false)
+
         return v
     }
 }

@@ -103,7 +103,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/rounded_select_image"
                     android:backgroundTint="@color/white"
-                    android:text="@string/events"
+                    android:text="Buses"
                     android:textColor="@color/text_black" />
             </LinearLayout>
 

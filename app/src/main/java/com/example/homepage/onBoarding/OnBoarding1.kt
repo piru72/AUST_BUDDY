@@ -20,12 +20,12 @@ class OnBoarding1 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        handler = Handler()
-        handler.postDelayed({
-            val intent = Intent(this, OnBoarding2::class.java)
-            startActivity(intent)
-            finish()
-        }, 3000)
+//        handler = Handler()
+//        handler.postDelayed({
+//            val intent = Intent(this, OnBoarding2::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, 3000)
     }
 
 

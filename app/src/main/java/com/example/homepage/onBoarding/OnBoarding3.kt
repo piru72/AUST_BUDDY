@@ -24,12 +24,12 @@ class OnBoarding3 : AppCompatActivity() {
         }
 
 
-        handler = Handler()
-        handler.postDelayed({
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 3000)
+//        handler = Handler()
+//        handler.postDelayed({
+//            val intent = Intent(this, SignInActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, 3000)
 
     }
 }

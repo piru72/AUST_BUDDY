@@ -1,16 +1,19 @@
 package com.example.homepage
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.courseTab.Adapter.MyAdapter
 import com.example.homepage.courseTab.Model.UserViewModel
 import androidx.lifecycle.Observer
+import kotlinx.android.synthetic.main.fragment_view_courses.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,7 +47,12 @@ class ViewCourses : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_courses, container, false)
+        val v = inflater.inflate(R.layout.fragment_view_courses, container, false)
+
+        return v
+
+
+
     }
 
     companion object {
