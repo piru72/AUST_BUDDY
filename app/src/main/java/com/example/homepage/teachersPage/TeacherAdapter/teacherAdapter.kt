@@ -1,4 +1,4 @@
-package com.example.homepage.teachersPage
+package com.example.homepage.teachersPage.TeacherAdapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +12,7 @@ import com.example.homepage.R
 import com.example.homepage.teachersPage.TeacherModel.teacherData
 
 @GlideModule
-class TeacherAdapter : RecyclerView.Adapter<TeacherAdapter.MyViewHolder>() {
+class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
     private val userList = ArrayList<teacherData>()
 

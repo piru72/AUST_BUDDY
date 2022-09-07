@@ -1,4 +1,4 @@
-package com.example.homepage.teachersPage.teacherRepo
+package com.example.homepage.teachersPage.TeacherRepo
 
 import androidx.lifecycle.MutableLiveData
 import com.example.homepage.teachersPage.TeacherModel.teacherData
