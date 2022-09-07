@@ -46,11 +46,11 @@ class GradingsFragment : Fragment() {
 
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
 
-//        viewModel.allUsers.observe(viewLifecycleOwner, Observer {
-//
-//            adapter.updateUserList(it)
-//
-//        })
+        viewModel.allUsers.observe(viewLifecycleOwner, Observer {
+
+            adapter.updateUserList(it)
+
+        })
 
     }
 
