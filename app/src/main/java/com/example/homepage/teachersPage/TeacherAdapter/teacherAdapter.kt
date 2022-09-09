@@ -31,9 +31,10 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         val currentitem = userList[position]
 
         holder.firstName.text = currentitem.name
-        //holder.lastName.text = currentitem.lastName
-        holder.age.text = currentitem.price
-        Glide.with(holder.itemView.context).load(currentitem.img).into(holder.oree)
+        holder.tdesignation.text = currentitem.designation
+        holder.tEmail.text=currentitem.email
+        holder.tPhone.text = currentitem.phone
+        Glide.with(holder.itemView.context).load(currentitem.img).into(holder.tImage)
     }
 
     override fun getItemCount(): Int {
@@ -52,8 +53,11 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
         val firstName : TextView = itemView.findViewById(R.id.tvfirstName)
         //val lastName : TextView = itemView.findViewById(R.id.tvlastName)
-        val age : TextView = itemView.findViewById(R.id.tvage)
-        val oree : ImageView = itemView.findViewById(R.id.images)
+        val tdesignation : TextView = itemView.findViewById(R.id.tvDesignation)
+
+        val tImage : ImageView = itemView.findViewById(R.id.images)
+        val tEmail : TextView = itemView.findViewById(R.id.tvEmail)
+        val tPhone: TextView = itemView.findViewById(R.id.tvPhone)
 
     }
 
