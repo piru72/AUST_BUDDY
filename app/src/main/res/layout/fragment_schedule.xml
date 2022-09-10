@@ -28,7 +28,8 @@
             android:text="Click the plus button to List your quizzes schedule"
             android:textColor="@color/text_black"
             android:textSize="30sp"
-            android:translationX="10sp" />
+            android:translationX="10sp"
+            android:visibility="gone"/>
 
 
 

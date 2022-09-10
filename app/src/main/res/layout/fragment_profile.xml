@@ -28,7 +28,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.08" />
+            app:layout_constraintVertical_bias="0.08"
+            android:visibility="gone"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/dev1Img"
@@ -44,7 +45,8 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_profile"
-            app:layout_constraintVertical_bias="0.47" />
+            app:layout_constraintVertical_bias="0.47"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/textview_yet_TO_BE_DONE"
@@ -53,23 +55,25 @@
             android:layout_marginStart="179dp"
             android:layout_marginEnd="174dp"
             android:fontFamily="sans-serif"
-            android:text="Parvez Ahammed"
+            android:text="USER NAME"
             android:textColor="@color/black"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout" />
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="367dp"
-            android:layout_height="397dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/textview_yet_TO_BE_DONE">
 
             <Button
@@ -86,7 +90,8 @@
                 android:text="@string/edit_profile"
                 android:textColor="@color/text_black"
                 tools:ignore="RtlSymmetry"
-                android:background="@drawable/rounded_list_item_view"/>
+                android:background="@drawable/rounded_list_item_view"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btn_privacy"
@@ -101,7 +106,8 @@
                 android:paddingStart="10dp"
                 android:text="@string/privacy_policy"
                 android:textColor="@color/text_black"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btn_settings"
@@ -116,7 +122,8 @@
                 android:paddingStart="10dp"
                 android:text="@string/settings"
                 android:textColor="@color/text_black"
-                tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btn_invite_friend"
