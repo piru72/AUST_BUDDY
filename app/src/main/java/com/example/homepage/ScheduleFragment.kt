@@ -52,6 +52,8 @@ class ScheduleFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(context)
 
         binding.floatingActionButton.setOnClickListener {
+
+            binding.informativeText.text=""
             val rootLayout = layoutInflater.inflate(R.layout.custom_popup, null)
 
             val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)

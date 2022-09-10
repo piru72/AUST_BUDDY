@@ -21,14 +21,14 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
+            android:id="@+id/informativeText"
             android:layout_width="364dp"
             android:layout_height="120dp"
+            android:gravity="center"
             android:text="Click the plus button to List your quizzes schedule"
             android:textColor="@color/text_black"
             android:textSize="30sp"
-            android:gravity="center"
-            android:translationX="10sp"
-            />
+            android:translationX="10sp" />
 
 
 
