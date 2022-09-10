@@ -61,13 +61,13 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/exploreButton"
                 android:layout_width="171dp"
-                android:layout_height="77dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@color/primary_green"
-                android:text="@string/explore"
-                android:linksClickable="true"
+                android:layout_margin="20dp"
                 android:autoLink="web"
-                android:layout_margin="20dp"/>
+                android:background="@color/primary_green"
+                android:linksClickable="true"
+                android:text="@string/explore" />
             <!--                android:onClick="openDriveLink"-->
 
 

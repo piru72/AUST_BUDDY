@@ -16,7 +16,21 @@
             android:id="@+id/task_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="120dp"
+            android:text="Click the plus button to List your quizzes schedule"
+            android:textColor="@color/text_black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:translationX="10sp"
+            />
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -30,8 +44,6 @@
             app:backgroundTint="@color/white"
             app:fabSize="normal"
             app:srcCompat="@android:drawable/ic_input_add" />
-
-
 
 
     </RelativeLayout>

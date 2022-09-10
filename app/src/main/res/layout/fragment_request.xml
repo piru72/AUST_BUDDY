@@ -56,7 +56,7 @@
                 android:gravity="start"
                 android:hint="@string/type_your_message_here"
                 android:inputType="textLongMessage"
-                android:textColor="@color/pure_white"
+                android:textColor="@color/text_black"
                 android:lines="10"
                 android:minHeight="48dp"
                 android:textColorHint="#546E7A" />
