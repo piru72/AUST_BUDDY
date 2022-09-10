@@ -29,7 +29,6 @@ class RequestFragment : ReplaceFragment() {
 
 
         sendBTn.setOnClickListener {
-
             val email = "unibuddy890@gmail.com"
             val message = v.findViewById<TextView>(R.id.message)
             val addresses = email.split(",".toRegex()).toTypedArray()
@@ -37,9 +36,10 @@ class RequestFragment : ReplaceFragment() {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, addresses)
                 putExtra(Intent.EXTRA_SUBJECT, "REQUESTING FOR NEW MATERIALS")
-                putExtra(Intent.EXTRA_TEXT, message.text.toString())
+                putExtra(Intent.EXTRA_TEXT,  message.text.toString())
             }
             startActivity(intent)
+            message.text =" "
         }
 
         return v
