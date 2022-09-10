@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.courseTab.Model.User
@@ -32,12 +33,15 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
         holder.courseCode.text = currentItem.courseCode
         holder.courseName.text = currentItem.courseName
-        holder.exploreButton.text = currentItem.driveLink
+        //holder.exploreButton.text = currentItem.driveLink
 
         // TODO setup the link in here
         holder.exploreButton.setOnClickListener {
+            val context = holder.itemView.context
             val i = Intent(Intent.ACTION_VIEW, Uri.parse(currentItem.driveLink))
+            context.startActivity(i)
         }
+
 
     }
 
