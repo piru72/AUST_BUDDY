@@ -6,25 +6,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SignInActivity">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/login"
-        android:padding="20dp">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="20sp">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/login"
+        />
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/password_signin"
-            android:layout_marginBottom="-20dp">
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEt1"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:hint="Type your Email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:layout_margin="20sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,8 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Type your Password"
-                android:inputType="textPassword" />
-
+                android:inputType="textPassword"
+                android:layout_margin="20sp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,19 +57,18 @@
             android:id="@+id/signinBtn"
             android:layout_width="369dp"
             android:layout_height="62dp"
-            android:layout_below="@id/password_signin"
             android:layout_marginTop="58dp"
-            android:text="Sign in"
             android:background="@drawable/rounded_list_item_view"
-            tools:ignore="InvalidId"
-            android:textSize="20sp"/>
+            android:text="Sign in"
+            android:textSize="20sp"
+            tools:ignore="InvalidId" />
 
         <TextView
 
             android:id="@+id/text2"
             android:layout_width="359dp"
             android:layout_height="65dp"
-            android:layout_alignParentBottom="true"
+
             android:layout_marginBottom="74dp"
             android:padding="5dp"
             android:text="   Don't have an account? Sign up"
@@ -72,6 +77,8 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-    </RelativeLayout>
+
+    </LinearLayout>
+
 
 </layout>
