@@ -32,19 +32,20 @@ class HomeFragment : ReplaceFragment() {
         val currentState = R.id.fragment_home
 
         btnTeacher.setOnClickListener {
-            replaceFragment(TeachersFragment(), currentState)
+            replaceFragment(WebView("https://iums.aust.edu/ums-web/login/"),currentState)
         }
         btnClub.setOnClickListener {
-            replaceFragment(ClubsFragment(), currentState)
+
+            replaceFragment(WebView("https://austoj.com/"),currentState)
         }
         btnGrading.setOnClickListener {
             replaceFragment(GradingsFragment(), currentState)
         }
         btnSyllabus.setOnClickListener {
-            replaceFragment(SyllabusFragment(), currentState)
+            replaceFragment(WebView("https://www.aust.edu/cse/syllabus#spring2020"),currentState)
         }
         btnCalender.setOnClickListener {
-            replaceFragment(CalendarFragment(), currentState)
+            replaceFragment(WebView("https://www.aust.edu/academics/academic_calendar"),currentState)
         }
         btnEvents.setOnClickListener {
             replaceFragment(EventsFragment(), currentState)
@@ -53,7 +54,7 @@ class HomeFragment : ReplaceFragment() {
             replaceFragment(CGPAFragment(), currentState)
         }
         btnMaterial.setOnClickListener {
-            replaceFragment(MaterialFragment(), currentState)
+            replaceFragment(WebView("https://www.aust.edu/academics/examincation_and_grading_system"),currentState)
         }
         btnRequest.setOnClickListener {
             replaceFragment(RequestFragment(), currentState)
