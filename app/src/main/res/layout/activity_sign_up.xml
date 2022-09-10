@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/registration"
+
     tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/registration"
+        android:layout_marginTop="20sp"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
