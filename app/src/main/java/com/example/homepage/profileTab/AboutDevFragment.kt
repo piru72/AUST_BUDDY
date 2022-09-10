@@ -1,17 +1,12 @@
 package com.example.homepage.profileTab
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import com.example.homepage.R
 import com.example.homepage.WebView
-import com.example.homepage.databinding.FragmentAboutDevBinding
 import com.example.homepage.superClass.ReplaceFragment
 
 
@@ -57,13 +52,13 @@ class AboutDevFragment : ReplaceFragment() {
         }
 
         dev1Git.setOnClickListener{
-            replaceFragment(WebView(),currentState)
+            replaceFragment(WebView("https://github.com/klutz-me"),currentState,)
         }
         dev2Git.setOnClickListener{
-            replaceFragment(WebView(),currentState)
+            replaceFragment(WebView("https://github.com/piru72"),currentState)
         }
         dev4Git.setOnClickListener{
-            replaceFragment(WebView(),currentState)
+            replaceFragment(WebView("https://github.com/klutz-me"),currentState)
         }
 
         return v

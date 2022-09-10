@@ -21,6 +21,15 @@ open class ReplaceFragment : Fragment() {
         fragmentTransaction.commit()
     }
 
+
+    fun replaceFragment(fragment: Fragment, xml_file_name: Int,message :String) {
+        val fragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(xml_file_name, fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
+    }
+
     @SuppressLint("SetJavaScriptEnabled")
     fun loadWebSite(webSite: String, v: View) {
         val webView = v.findViewById<WebView>(R.id.mWebView)
