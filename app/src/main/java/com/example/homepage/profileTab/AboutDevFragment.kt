@@ -52,7 +52,7 @@ class AboutDevFragment : ReplaceFragment() {
         }
 
         dev1Git.setOnClickListener{
-            replaceFragment(WebView("https://github.com/klutz-me"),currentState,)
+            replaceFragment(WebView("https://github.com/klutz-me"),currentState)
         }
         dev2Git.setOnClickListener{
             replaceFragment(WebView("https://github.com/piru72"),currentState)
