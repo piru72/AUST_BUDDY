@@ -29,10 +29,12 @@ class AboutDevFragment : ReplaceFragment() {
         val dev1Gmail = v.findViewById<Button>(R.id.dev1Fb)
         val dev2Gmail = v.findViewById<Button>(R.id.dev2Fb)
         val dev3Gmail = v.findViewById<Button>(R.id.dev3Fb)
+        val dev4Gmail = v.findViewById<Button>(R.id.dev4Fb)
 
         val dev1Git = v.findViewById<Button>(R.id.dev1Git)
         val dev2Git = v.findViewById<Button>(R.id.dev2Git)
-        val dev3Git = v.findViewById<Button>(R.id.dev3Git)
+        val dev4Git = v.findViewById<Button>(R.id.dev4Git)
+
 
         val currentState = R.id.fragment_about_dev
 
@@ -49,6 +51,10 @@ class AboutDevFragment : ReplaceFragment() {
             val email = "mirazzim38@gmail.com"
             sendMail(email)
         }
+        dev4Gmail.setOnClickListener {
+            val email = "sabbirahmedsalman2000@gmail.com"
+            sendMail(email)
+        }
 
         dev1Git.setOnClickListener{
             replaceFragment(WebView(),currentState)
@@ -56,10 +62,9 @@ class AboutDevFragment : ReplaceFragment() {
         dev2Git.setOnClickListener{
             replaceFragment(WebView(),currentState)
         }
-        dev3Git.setOnClickListener{
+        dev4Git.setOnClickListener{
             replaceFragment(WebView(),currentState)
         }
-
 
         return v
     }
