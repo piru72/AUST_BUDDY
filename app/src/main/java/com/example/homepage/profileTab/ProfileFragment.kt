@@ -27,6 +27,7 @@ class ProfileFragment : ReplaceFragment() {
         val btnInviteFriend = v.findViewById<Button>(R.id.btn_invite_friend)
         val btnAboutUs = v.findViewById<Button>(R.id.btn_about_us)
         val btnLogOut = v.findViewById<Button>(R.id.btn_log_out)
+        val btnBugReport = v.findViewById<Button>(R.id.btn_report_bug)
 
 
         btnEditProfile.setOnClickListener {
@@ -52,6 +53,9 @@ class ProfileFragment : ReplaceFragment() {
             (activity as Activity?)!!.overridePendingTransition(0, 0)
 
             FirebaseAuth.getInstance().signOut()
+        }
+        btnBugReport.setOnClickListener {
+            replaceFragment(BugReport(), R.id.fragment_profile)
         }
 
         return v
