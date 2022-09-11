@@ -24,12 +24,12 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/search_view_bg"
                 app:iconifiedByDefault="false"
-                app:queryHint="Search Courses ...">
+                app:queryHint=" Coming soon...">
 
             </androidx.appcompat.widget.SearchView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/anotherButton"
+                android:id="@+id/anotherFloatingButton"
                 android:layout_width="56dp"
                 android:layout_height="59dp"
                 android:layout_gravity="center"
