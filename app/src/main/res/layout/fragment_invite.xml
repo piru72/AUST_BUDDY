@@ -38,10 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="ENTER EMAILS"
+                android:text="ENTER EMAILS SEPARATED BY COMMA"
                 android:textColor="@color/white"
-
-                android:textSize="26sp"
+                android:textSize="21sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -58,11 +57,11 @@
 
             <Button
                 android:id="@+id/sendBtn"
+                android:background="@drawable/rounded_select_image"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_margin="26dp"
                 android:text="INVITE"
-
                 android:backgroundTint="@color/primary_green"
                 android:textSize="26sp" />
 
