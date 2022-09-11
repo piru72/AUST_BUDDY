@@ -54,7 +54,7 @@
                 android:textColorHint="#546E7A" />
 
             <Button
-                android:id="@+id/sendBtn"
+                android:id="@+id/bugReportBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_margin="26dp"
