@@ -33,6 +33,7 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/custompopup.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_about_dev.xml" value="0.33" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_bug__report.xml" value="0.3625" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_bug_report.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_bus.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_c_g_p_a.xml" value="0.25" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_calander.xml" value="0.3625" />
@@ -56,7 +57,7 @@
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_syllabus.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_teachers.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_todo.xml" value="0.3625" />
-        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_view_courses.xml" value="0.1" />
+        <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_view_courses.xml" value="0.5" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/fragment_web_view.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/list_item_view.xml" value="0.3625" />
         <entry key="..\:/Android_projects/Uni_buddy/app/src/main/res/layout/teachers_card.xml" value="0.33" />
