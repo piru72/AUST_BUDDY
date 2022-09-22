@@ -2,6 +2,7 @@ package com.example.homepage.profileTab
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -59,18 +60,12 @@ class ProfileFragment : ReplaceFragment() {
             FirebaseAuth.getInstance().signOut()
         }
         btnBugReport.setOnClickListener {
-//            replaceFragment(BugReport(), R.id.fragment_profile)
 
-            // TODO CREATE  A POP UP HERE TO RECEIVE THE EMAIL AND LATER ON SEND THE EMAIL TO THE CLIENT
+            val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
 
-//            binding.informativeText.text=""
-            val rootLayout = layoutInflater.inflate(R.layout.custom_popup, null)
-
-            val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
-            val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
-            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
+            val taskDescription = rootLayout.findViewById<EditText>(R.id.BugDescriptionPop)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
-            val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
+            val addButton = rootLayout.findViewById<Button>(R.id.sendButton)
 
             val popupWindow = PopupWindow(
                 rootLayout,
@@ -94,18 +89,25 @@ class ProfileFragment : ReplaceFragment() {
 
             addButton.setOnClickListener {
 
-                val name = taskName.text.toString()
-                val description = taskDescription.text.toString()
-                val date = taskDate.text.toString()
 
-                if(name == "" || description=="")
+                val description = taskDescription.text.toString()
+
+                if(description=="")
                     Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
                 else
+                {
                     Toast.makeText(context, "Everything ok ", Toast.LENGTH_SHORT).show()
-//                    writeNewTask(user, name, description, date)
+                    val email = "unibuddy890@gmail.com"
+                    val addresses = email.split(",".toRegex()).toTypedArray()
+                    val intent = Intent(Intent.ACTION_SENDTO).apply {
+                        data = Uri.parse("mailto:")
+                        putExtra(Intent.EXTRA_EMAIL, addresses)
+                        putExtra(Intent.EXTRA_SUBJECT, "FIX THE BUG OF UNIBUDDY")
+                        putExtra(Intent.EXTRA_TEXT,  description)
+                    }
+                    startActivity(intent)
 
-
-
+                }
                 popupWindow.dismiss()
             }
         }
