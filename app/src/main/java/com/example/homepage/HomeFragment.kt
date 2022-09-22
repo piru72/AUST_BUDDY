@@ -48,7 +48,7 @@ class HomeFragment : ReplaceFragment() {
             replaceFragment(WebView("https://www.aust.edu/academics/academic_calendar"),currentState)
         }
         btnEvents.setOnClickListener {
-            replaceFragment(EventsFragment(), currentState)
+            replaceFragment(BusFragment(), currentState)
         }
         btnCgpa.setOnClickListener {
             replaceFragment(CGPAFragment(), currentState)

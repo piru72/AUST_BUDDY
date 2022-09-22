@@ -8,7 +8,7 @@ import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
 
 
-class EventsFragment : ReplaceFragment() {
+class BusFragment : ReplaceFragment() {
 
 
     override fun onCreateView(
