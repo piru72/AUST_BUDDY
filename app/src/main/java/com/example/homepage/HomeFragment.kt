@@ -19,14 +19,14 @@ class HomeFragment : ReplaceFragment() {
     ): View? {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_home, container, false)
-        val btnTeacher = v.findViewById<Button>(R.id.btn_teacher)
-        val btnClub = v.findViewById<Button>(R.id.btn_club)
-        val btnGrading = v.findViewById<Button>(R.id.btn_grading)
+        val btnTeacher = v.findViewById<Button>(R.id.btn_iums)
+        val btnClub = v.findViewById<Button>(R.id.btn_aust_oj)
+        val btnGrading = v.findViewById<Button>(R.id.btn_teachers)
         val btnSyllabus = v.findViewById<Button>(R.id.btn_syllabus)
         val btnCalender = v.findViewById<Button>(R.id.btn_calender)
-        val btnEvents = v.findViewById<Button>(R.id.btn_events)
+        val btnEvents = v.findViewById<Button>(R.id.btn_buses)
         val btnCgpa = v.findViewById<Button>(R.id.btn_cgpa)
-        val btnMaterial = v.findViewById<Button>(R.id.btn_material)
+        val btnMaterial = v.findViewById<Button>(R.id.btn_gradings)
         val btnRequest = v.findViewById<Button>(R.id.btn_request)
 
         val currentState = R.id.fragment_home

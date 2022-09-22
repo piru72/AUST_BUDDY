@@ -31,12 +31,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        handler = Handler()
-//        handler.postDelayed({
-//            val intent = Intent(this, OnBoarding1::class.java)
-//            startActivity(intent)
-//            finish()
-//        }, 3000)
+
     }
     public override fun onStart() {
         super.onStart()
