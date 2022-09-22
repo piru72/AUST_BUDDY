@@ -15,7 +15,7 @@ class WebView(webLink: String) : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_notice, container, false)
+        val v = inflater.inflate(R.layout.fragment_web_view, container, false)
         loadWebSite(webSite, v)
         return v
     }

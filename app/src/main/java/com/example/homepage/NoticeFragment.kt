@@ -14,7 +14,7 @@ class NoticeFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_notice, container, false)
+        val v = inflater.inflate(R.layout.fragment_web_view, container, false)
         val webSite = "https://www.aust.edu/notice"
         loadWebSite(webSite, v)
         return v
