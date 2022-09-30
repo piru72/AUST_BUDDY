@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome)
-        auth = Firebase.auth
+//        auth = Firebase.auth
 
         val nextButton = findViewById<Button>(R.id.get_started)
         nextButton.setOnClickListener {
@@ -33,12 +33,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    public override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-
-    }
+//    public override fun onStart() {
+//        super.onStart()
+//        val currentUser = auth.currentUser
+//        updateUI(currentUser)
+//
+//    }
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Log.i("LoginActivity", "Update UI Called")
