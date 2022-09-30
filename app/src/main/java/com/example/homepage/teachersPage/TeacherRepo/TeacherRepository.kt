@@ -4,14 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import com.example.homepage.teachersPage.TeacherModel.teacherData
 import com.google.firebase.database.*
 
-class teacherRepository {
+class TeacherRepository {
     //TODO here the name is changed of the parent repo
     private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("teachers")
-    @Volatile private var INSTANCE : teacherRepository ?= null
-    fun getInstance() : teacherRepository {
+    @Volatile private var INSTANCE : TeacherRepository ?= null
+    fun getInstance() : TeacherRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = teacherRepository()
+            val instance = TeacherRepository()
             INSTANCE = instance
             instance
         }
@@ -32,7 +32,7 @@ class teacherRepository {
 
                     userList.postValue(_userList)
 
-                }catch (e : Exception){
+                }catch (_: Exception){
 
 
                 }

@@ -2,11 +2,15 @@ package com.example.homepage.profileTab
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import com.example.homepage.R
 import com.example.homepage.SignInActivity
 import com.example.homepage.superClass.ReplaceFragment
@@ -29,6 +33,7 @@ class ProfileFragment : ReplaceFragment() {
         val btnLogOut = v.findViewById<Button>(R.id.btn_log_out)
         val btnBugReport = v.findViewById<Button>(R.id.btn_report_bug)
 
+        val layoutMain = v.findViewById<ConstraintLayout>(R.id.profile_screen)
 
         btnEditProfile.setOnClickListener {
             replaceFragment(EditProfileFragment(), R.id.fragment_profile)
@@ -55,7 +60,56 @@ class ProfileFragment : ReplaceFragment() {
             FirebaseAuth.getInstance().signOut()
         }
         btnBugReport.setOnClickListener {
-            replaceFragment(BugReport(), R.id.fragment_profile)
+
+            val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
+
+            val taskDescription = rootLayout.findViewById<EditText>(R.id.BugDescriptionPop)
+            val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
+            val addButton = rootLayout.findViewById<Button>(R.id.sendButton)
+
+            val popupWindow = PopupWindow(
+                rootLayout,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, true
+            )
+
+            popupWindow.update()
+            popupWindow.elevation = 20.5F
+            popupWindow.showAtLocation(
+
+                layoutMain, // Location to display popup window
+                Gravity.CENTER, // Exact position of layout to display popup
+                0, // X offset
+                -500// Y offset
+            )
+
+            closeButton.setOnClickListener {
+                popupWindow.dismiss()
+            }
+
+            addButton.setOnClickListener {
+
+
+                val description = taskDescription.text.toString()
+
+                if(description=="")
+                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
+                else
+                {
+                    Toast.makeText(context, "Everything ok ", Toast.LENGTH_SHORT).show()
+                    val email = "unibuddy890@gmail.com"
+                    val addresses = email.split(",".toRegex()).toTypedArray()
+                    val intent = Intent(Intent.ACTION_SENDTO).apply {
+                        data = Uri.parse("mailto:")
+                        putExtra(Intent.EXTRA_EMAIL, addresses)
+                        putExtra(Intent.EXTRA_SUBJECT, "FIX THE BUG OF UNIBUDDY")
+                        putExtra(Intent.EXTRA_TEXT,  description)
+                    }
+                    startActivity(intent)
+
+                }
+                popupWindow.dismiss()
+            }
         }
 
         return v

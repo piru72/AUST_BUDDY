@@ -1,19 +1,19 @@
 package com.example.homepage
 
 import android.os.Bundle
-import android.view.Gravity
+
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.courseTab.Adapter.MyAdapter
 import com.example.homepage.courseTab.Model.UserViewModel
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_view_courses.*
+
 
 
 private lateinit var viewModel: UserViewModel
