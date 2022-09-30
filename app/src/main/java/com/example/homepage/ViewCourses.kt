@@ -26,10 +26,7 @@ class ViewCourses : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_view_courses, container, false)
-
-        return v
+        return inflater.inflate(R.layout.fragment_view_courses, container, false)
     }
 
 
@@ -44,7 +41,7 @@ class ViewCourses : Fragment() {
         adapter = MyAdapter()
         userRecyclerView.adapter = adapter
 
-        viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        viewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         viewModel.allUsers.observe(viewLifecycleOwner, Observer {
 

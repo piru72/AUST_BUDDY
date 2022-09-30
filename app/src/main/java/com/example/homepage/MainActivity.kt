@@ -20,19 +20,19 @@ class MainActivity : AppCompatActivity() {
 
     //********************** For opening in the first onboarding page ************//
     private lateinit var auth: FirebaseAuth
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.welcome)
-//        auth = Firebase.auth
-
-        val nextButton = findViewById<Button>(R.id.get_started)
-        nextButton.setOnClickListener {
-            val intent = Intent(this, OnBoarding1::class.java)
-            startActivity(intent)
-        }
-
-
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.welcome)
+////        auth = Firebase.auth
+//
+//        val nextButton = findViewById<Button>(R.id.get_started)
+//        nextButton.setOnClickListener {
+//            val intent = Intent(this, OnBoarding1::class.java)
+//            startActivity(intent)
+//        }
+//
+//
+//    }
 //    public override fun onStart() {
 //        super.onStart()
 //        val currentUser = auth.currentUser
@@ -64,17 +64,17 @@ class MainActivity : AppCompatActivity() {
 
     // ********************** For opening  sign In page  page ************//
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_on_boarding3)
-//
-//        val nextButton = findViewById<Button>(R.id.onboarding_3_button)
-//        nextButton.setOnClickListener {
-//            val intent = Intent(this, SignInActivity::class.java)
-//          startActivity(intent)
-//
-//        }
-//    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_on_boarding3)
+
+        val nextButton = findViewById<Button>(R.id.onboarding_3_button)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+          startActivity(intent)
+
+        }
+    }
 
 
 

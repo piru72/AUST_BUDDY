@@ -211,7 +211,7 @@ class ScheduleFragment : Fragment() {
                 override fun onCancelled(databaseError: DatabaseError) {
                     Log.w("GetData", "postComments:onCancelled", databaseError.toException())
                     Toast.makeText(
-                        context, "Failed to load comments.",
+                        context, "Database Error occurred here",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
