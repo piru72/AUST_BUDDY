@@ -161,12 +161,12 @@ class SignInActivity : AppCompatActivity() {
         val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
         val vEmail: Boolean? = firebaseUser?.isEmailVerified
         var situation = ""
-        if (vEmail!!) {
-            situation = "OK"
+        situation = if (vEmail!!) {
+            "OK"
         } else {
             Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show()
             //firebaseAuth.signOut()
-            situation = "NOT OK"
+            "NOT OK"
         }
         return situation
     }
