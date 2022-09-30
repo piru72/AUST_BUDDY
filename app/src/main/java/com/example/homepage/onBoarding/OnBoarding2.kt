@@ -36,18 +36,18 @@ class OnBoarding2 : AppCompatActivity() {
 //        }, 3000)
     }
 
-    public override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-
-    }
-    private fun updateUI(currentUser: FirebaseUser?) {
-        if (currentUser != null) {
-            Log.i("LoginActivity", "Update UI Called")
-            val intent = Intent(this, MainHomePage::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
+//    public override fun onStart() {
+//        super.onStart()
+//        val currentUser = auth.currentUser
+//        updateUI(currentUser)
+//
+//    }
+//    private fun updateUI(currentUser: FirebaseUser?) {
+//        if (currentUser != null) {
+//            Log.i("LoginActivity", "Update UI Called")
+//            val intent = Intent(this, MainHomePage::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+//    }
 }
