@@ -24,9 +24,12 @@ class BusFragment : ReplaceFragment() {
         val imageList = ArrayList<SlideModel>() // Create image list
 
 
-        imageList.add(SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years."))
-        imageList.add(SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct."))
-        imageList.add(SlideModel("https://bit.ly/3fLJf72", "And people do that."))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/jamuna.jpeg", "Jamuna"))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/karnafali.jpeg", "Karnafali"))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/kopotakkho.jpeg", "Kopotakkho"))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/meghna.jpeg", "Meghna"))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/padma.jpeg", "Padma"))
+        imageList.add(SlideModel("https://raw.githubusercontent.com/piru72/Uni_buddy/master/Bus_Schedule/surma.jpeg", "Surma"))
 
         val imageSlider = v.findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList)
