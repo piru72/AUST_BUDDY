@@ -19,26 +19,26 @@ class HomeFragment : ReplaceFragment() {
     ): View? {
         container?.removeAllViews()
         val v = inflater.inflate(R.layout.fragment_home, container, false)
-        val btnTeacher = v.findViewById<Button>(R.id.btn_iums)
-        val btnClub = v.findViewById<Button>(R.id.btn_aust_oj)
-        val btnGrading = v.findViewById<Button>(R.id.btn_teachers)
+        val btnIums = v.findViewById<Button>(R.id.btn_iums)
+        val btnAustOj = v.findViewById<Button>(R.id.btn_aust_oj)
+        val btnTeachers = v.findViewById<Button>(R.id.btn_teachers)
         val btnSyllabus = v.findViewById<Button>(R.id.btn_syllabus)
         val btnCalender = v.findViewById<Button>(R.id.btn_calender)
-        val btnEvents = v.findViewById<Button>(R.id.btn_buses)
+        val btnBus = v.findViewById<Button>(R.id.btn_buses)
         val btnCgpa = v.findViewById<Button>(R.id.btn_cgpa)
-        val btnMaterial = v.findViewById<Button>(R.id.btn_gradings)
+        val btnGradingSystem = v.findViewById<Button>(R.id.btn_gradings)
         val btnRequest = v.findViewById<Button>(R.id.btn_request)
 
         val currentState = R.id.fragment_home
 
-        btnTeacher.setOnClickListener {
+        btnIums.setOnClickListener {
             replaceFragment(WebView("https://iums.aust.edu/ums-web/login/"),currentState)
         }
-        btnClub.setOnClickListener {
+        btnAustOj.setOnClickListener {
 
             replaceFragment(WebView("https://austoj.com/"),currentState)
         }
-        btnGrading.setOnClickListener {
+        btnTeachers.setOnClickListener {
             replaceFragment(GradingsFragment(), currentState)
         }
         btnSyllabus.setOnClickListener {
@@ -47,13 +47,13 @@ class HomeFragment : ReplaceFragment() {
         btnCalender.setOnClickListener {
             replaceFragment(WebView("https://www.aust.edu/academics/academic_calendar"),currentState)
         }
-        btnEvents.setOnClickListener {
+        btnBus.setOnClickListener {
             replaceFragment(BusFragment(), currentState)
         }
         btnCgpa.setOnClickListener {
             replaceFragment(CGPAFragment(), currentState)
         }
-        btnMaterial.setOnClickListener {
+        btnGradingSystem.setOnClickListener {
             replaceFragment(WebView("https://www.aust.edu/academics/examincation_and_grading_system"),currentState)
         }
         btnRequest.setOnClickListener {

@@ -28,31 +28,28 @@ class GradingsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_teachers, container, false)
-
-
-        return v
+        return inflater.inflate(R.layout.fragment_teachers, container, false)
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        userRecyclerView = view.findViewById(R.id.teacher_list)
-       userRecyclerView.layoutManager = LinearLayoutManager(context)
-        userRecyclerView.setHasFixedSize(true)
-       adapter = teacherAdapter()
-       userRecyclerView.adapter = adapter
-
-        viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
-
-        viewModel.allUsers.observe(viewLifecycleOwner, Observer {
-
-            adapter.updateUserList(it)
-
-        })
-
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        userRecyclerView = view.findViewById(R.id.teacher_list)
+//       userRecyclerView.layoutManager = LinearLayoutManager(context)
+//        userRecyclerView.setHasFixedSize(true)
+//       adapter = teacherAdapter()
+//       userRecyclerView.adapter = adapter
+//
+//        viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
+//
+//        viewModel.allUsers.observe(viewLifecycleOwner, Observer {
+//
+//            adapter.updateUserList(it)
+//
+//        })
+//
+//    }
 
 
 
