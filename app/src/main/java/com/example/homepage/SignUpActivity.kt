@@ -42,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
             val situation = validateData(email, password)
 
             if (situation == "OK") {
-                Toast.makeText(applicationContext, "EVERYTHING ALL RIGHT", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL", Toast.LENGTH_SHORT)
                     .show()
                 fireBaseSignup()
                 val intent = Intent(this, SignInActivity::class.java)
