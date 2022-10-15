@@ -110,4 +110,5 @@
     <string name="teachers_email">Teachers Email</string>
     <string name="teachers_phone">Teachers Phone</string>
     <string name="teacher_image">Teacher Image</string>
+    <string name="share">Share</string>
 </resources>

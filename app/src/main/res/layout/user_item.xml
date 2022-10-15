@@ -60,14 +60,26 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/exploreButton"
-                android:layout_width="171dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="5dp"
                 android:autoLink="web"
                 android:background="@color/primary_green"
                 android:linksClickable="true"
                 android:text="@string/explore" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/shareButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="10dp"
+                android:autoLink="web"
+                android:background="@color/primary_green"
+                android:linksClickable="true"
+                android:text="@string/share" />
             <!--                android:onClick="openDriveLink"-->
 
 

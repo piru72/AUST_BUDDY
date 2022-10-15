@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.courseTab.Model.User
@@ -41,6 +40,14 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
             val i = Intent(Intent.ACTION_VIEW, Uri.parse(currentItem.driveLink))
             context.startActivity(i)
         }
+        holder.shareButton.setOnClickListener {
+
+            val context = holder.itemView.context
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, currentItem.driveLink)
+            context.startActivity(Intent.createChooser(intent, "Share"))
+        }
 
 
     }
@@ -62,6 +69,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         val courseCode: TextView = itemView.findViewById(R.id.tvCourseCode)
         val courseName: TextView = itemView.findViewById(R.id.tvCourseName)
         val exploreButton: Button = itemView.findViewById(R.id.exploreButton)
+        val shareButton: Button = itemView.findViewById(R.id.shareButton)
 
     }
 
