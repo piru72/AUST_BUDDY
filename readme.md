@@ -1,3 +1,6 @@
+
+
+
 <p align="center" width="100%">
 <img src="Logo/transparent.png" alt="Logo" width="200"/>
 </p>
@@ -20,6 +23,12 @@
 > > ## 1.2.2 Benefits and Beneficiaries<br>
 > >
 > > Users are the main beneficiaries of this system. But all the people related to our Project area are also beneficiaries. Benefits are given below<br><br>
+
+# HOW TO DOWNLOAD ?
+
+```
+Look at the right side . You will find Releases option  from there download the latest versin.
+```
 
 # Landing Pages
 
