@@ -18,10 +18,10 @@
         android:icon="@drawable/ic_baseline_access_time_24"
         android:title="@string/schedule" />
 
-    <item
-        android:id="@+id/bot_nav_notice"
-        android:icon="@drawable/ic_baseline_notifications_none_24"
-        android:title="@string/notice" />
+<!--    <item-->
+<!--        android:id="@+id/bot_nav_notice"-->
+<!--        android:icon="@drawable/ic_baseline_notifications_none_24"-->
+<!--        android:title="@string/notice" />-->
     <item
         android:id="@+id/bot_nav_profile"
         android:icon="@drawable/ic_baseline_person_24"
