@@ -28,6 +28,7 @@ class HomeFragment : ReplaceFragment() {
         val btnCgpa = v.findViewById<Button>(R.id.btn_cgpa)
         val btnGradingSystem = v.findViewById<Button>(R.id.btn_gradings)
         val btnRequest = v.findViewById<Button>(R.id.btn_request)
+        val btnNotice = v.findViewById<Button>(R.id.noticeButton)
 
         val currentState = R.id.fragment_home
 
@@ -58,6 +59,10 @@ class HomeFragment : ReplaceFragment() {
         }
         btnRequest.setOnClickListener {
             replaceFragment(RequestFragment(), currentState)
+        }
+
+        btnNotice.setOnClickListener{
+            replaceFragment(WebView("https://www.aust.edu/notice"),currentState)
         }
 
         return v

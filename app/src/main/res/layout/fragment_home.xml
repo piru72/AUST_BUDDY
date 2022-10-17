@@ -14,12 +14,14 @@
 
 
         <LinearLayout
-            android:layout_width="375dp"
-            android:layout_height="295dp"
+            android:id="@+id/linearLayout4"
+            android:layout_width="365dp"
+            android:layout_height="296dp"
+            android:layout_marginTop="32dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -39,6 +41,7 @@
                     android:backgroundTint="@color/white"
                     android:text="@string/iums"
                     android:textColor="@color/text_black"
+
                     tools:ignore="TextContrastCheck" />
 
                 <Button
@@ -153,6 +156,22 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/noticeButton"
+            android:layout_width="375dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/rounded_select_image"
+            android:text="@string/notice"
+            android:textColor="@color/text_black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            app:layout_constraintVertical_bias="0.536" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
