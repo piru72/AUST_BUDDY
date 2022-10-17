@@ -45,7 +45,11 @@ class ProfileFragment : ReplaceFragment() {
             replaceFragment(SettingsFragment(), R.id.fragment_profile)
         }
         btnInviteFriend.setOnClickListener {
-            replaceFragment(InviteFragment(), R.id.fragment_profile)
+//            replaceFragment(InviteFragment(), R.id.fragment_profile)
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type="text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT,"Check out this app from\nhttps://github.com/piru72/Uni_buddy")
+            context?.startActivity(Intent.createChooser(intent, "Share"))
         }
         btnAboutUs.setOnClickListener {
             replaceFragment(AboutDevFragment(), R.id.fragment_profile)
