@@ -21,6 +21,7 @@
             android:layout_margin="20sp"
             android:layout_marginTop="48dp"
             android:src="@drawable/dev"
+            android:visibility="gone"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,7 @@
 
                 <TextView
                     android:id="@+id/userNameReal"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
@@ -76,8 +77,8 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/FullNameReal"
-                    android:layout_width="match_parent"
+                    android:id="@+id/fullNameReal"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
@@ -100,7 +101,7 @@
 
                 <TextView
                     android:id="@+id/IdReal"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
@@ -123,7 +124,7 @@
 
                 <TextView
                     android:id="@+id/sessionReal"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
@@ -146,7 +147,7 @@
 
                 <TextView
                     android:id="@+id/departmentReal"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
@@ -163,6 +164,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_list_item_view"
             android:text="Change Profile Photo"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

@@ -11,11 +11,15 @@ import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.homepage.R
+import java.util.*
 
 
 open class ReplaceFragment : Fragment() {
 
-
+    private var currentEmail = ""
+    private var currentName = ""
+    private var currentId = ""
+    private var currentDept = ""
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -25,13 +29,7 @@ open class ReplaceFragment : Fragment() {
     }
 
 
-    fun replaceFragment(fragment: Fragment, xml_file_name: Int, message: String) {
-        val fragmentManager = requireActivity().supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(xml_file_name, fragment)
-        fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
-    }
+
 
     @SuppressLint("SetJavaScriptEnabled")
     fun loadWebSite(webSite: String, v: View) {
@@ -45,9 +43,7 @@ open class ReplaceFragment : Fragment() {
 
         if (!(connectivityManager.activeNetworkInfo != null && connectivityManager.activeNetworkInfo!!.isAvailable && connectivityManager.activeNetworkInfo!!.isConnected)) {
             Toast.makeText(context, "No Internet Connection!", Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
+        } else {
             webView.apply {
                 loadUrl(webSite)
                 settings.javaScriptEnabled = true
@@ -60,8 +56,6 @@ open class ReplaceFragment : Fragment() {
             }
 
         }
-
-
 
 
     }
@@ -77,6 +71,58 @@ open class ReplaceFragment : Fragment() {
         startActivity(intent)
 
     }
+
+    fun makeToast(email: String) {
+        Toast.makeText(context, email, Toast.LENGTH_SHORT).show()
+    }
+
+    fun setInformation(userEmail: String) {
+        currentEmail = userEmail
+        currentName = setUserName()
+        currentId =  setUserId()
+        currentDept =  setDepartment()
+
+    }
+
+    private fun setDepartment(): String {
+        var department = ""
+        if (currentEmail.contains("cse"))
+            department = getString(R.string.cse)
+        else if (currentEmail.contains("eee"))
+            department = getString(R.string.eee)
+        else if (currentEmail.contains("ce"))
+            department = getString(R.string.ce)
+        else if (currentEmail.contains("mpe"))
+            department = getString(R.string.mpe)
+        else if (currentEmail.contains("te"))
+            department = getString(R.string.te)
+        return department
+    }
+    private fun setUserName(): String {
+        return (currentEmail.split(".")[0]).replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.ROOT
+            ) else it.toString()
+        }
+    }
+
+    private fun setUserId(): String {
+        return (currentEmail.split(".")[2]).split("@")[0]
+    }
+
+    fun getDepartment(): String {
+        return currentDept
+    }
+    fun getUserName(): String {
+        return currentName
+    }
+    fun getUserId(): String {
+        return currentId
+    }
+    fun getUserEmail(): String {
+        return currentEmail
+    }
+
 
 
 }
