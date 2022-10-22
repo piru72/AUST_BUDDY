@@ -8,27 +8,12 @@
     tools:context=".profileTab.ProfileFragment">
 
 
-    <ScrollView
+
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textview_yet_TO_BE_DONE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="@string/privacy_policy_description"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-
-                />
-        </LinearLayout>
-    </ScrollView>
+        />
 
 </FrameLayout>

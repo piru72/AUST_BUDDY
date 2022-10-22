@@ -107,8 +107,8 @@
                 android:paddingStart="10dp"
                 android:text="@string/privacy_policy"
                 android:textColor="@color/text_black"
-                tools:ignore="RtlSymmetry"
-                android:visibility="gone"/>
+                android:visibility="visible"
+                tools:ignore="RtlSymmetry" />
 
             <Button
                 android:id="@+id/btn_settings"
