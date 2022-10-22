@@ -20,6 +20,7 @@ open class ReplaceFragment : Fragment() {
     private var currentName = ""
     private var currentId = ""
     private var currentDept = ""
+    private var currentSession = ""
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -81,7 +82,12 @@ open class ReplaceFragment : Fragment() {
         currentName = setUserName()
         currentId =  setUserId()
         currentDept =  setDepartment()
+        currentSession = setSession()
 
+    }
+
+    private fun setSession(): String{
+        return if (currentId[2].toString() == "1" ) "FALL" else "SPRING" + " " + currentId[0].toString() + currentId[1].toString()
     }
 
     private fun setDepartment(): String {
@@ -121,6 +127,9 @@ open class ReplaceFragment : Fragment() {
     }
     fun getUserEmail(): String {
         return currentEmail
+    }
+    fun getSession() : String {
+        return currentSession
     }
 
 
