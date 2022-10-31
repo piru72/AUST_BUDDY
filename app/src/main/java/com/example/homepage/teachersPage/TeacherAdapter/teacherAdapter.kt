@@ -1,8 +1,10 @@
 package com.example.homepage.teachersPage.TeacherAdapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +37,14 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         holder.tEmail.text=currentitem.email
         holder.tPhone.text = currentitem.phone
         Glide.with(holder.itemView.context).load(currentitem.img).into(holder.tImage)
+        holder.shareContactButton.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val teacherDetailsInfo = currentitem.name + "\n" +currentitem.designation + "\n" + currentitem.email + "\n" + currentitem.phone  + "\n\n"+ "N.B: Info taken from UniBuddy"
+            intent.putExtra(Intent.EXTRA_TEXT,teacherDetailsInfo )
+            context.startActivity(Intent.createChooser(intent, "Share"))
+        }
     }
 
     override fun getItemCount(): Int {
@@ -58,6 +68,7 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         val tImage : ImageView = itemView.findViewById(R.id.images)
         val tEmail : TextView = itemView.findViewById(R.id.tvEmail)
         val tPhone: TextView = itemView.findViewById(R.id.tvPhone)
+        val shareContactButton: Button = itemView.findViewById(R.id.btnShareContact)
 
     }
 
