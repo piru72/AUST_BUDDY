@@ -1,6 +1,7 @@
 package com.example.homepage.teachersPage.TeacherAdapter
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,6 +46,15 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
             intent.putExtra(Intent.EXTRA_TEXT,teacherDetailsInfo )
             context.startActivity(Intent.createChooser(intent, "Share"))
         }
+        holder.emailTeacherButton.setOnClickListener {
+            val context = holder.itemView.context
+            val email = currentitem.email
+            val addresses = email?.split(",".toRegex())?.toTypedArray()
+            val i = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"))
+            i.putExtra(Intent.EXTRA_EMAIL, addresses)
+            context.startActivity(i)
+
+        }
     }
 
     override fun getItemCount(): Int {
@@ -69,6 +79,8 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         val tEmail : TextView = itemView.findViewById(R.id.tvEmail)
         val tPhone: TextView = itemView.findViewById(R.id.tvPhone)
         val shareContactButton: Button = itemView.findViewById(R.id.btnShareContact)
+        val emailTeacherButton: Button = itemView.findViewById(R.id.btnEmailTeacher)
+        val callTeacherButton: Button = itemView.findViewById(R.id.btnCallTeacher)
 
     }
 
