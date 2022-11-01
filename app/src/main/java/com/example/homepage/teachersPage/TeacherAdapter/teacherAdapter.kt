@@ -35,14 +35,12 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
         holder.firstName.text = currentitem.name
         holder.tdesignation.text = currentitem.designation
-        holder.tEmail.text=currentitem.email
-        holder.tPhone.text = currentitem.phone
         Glide.with(holder.itemView.context).load(currentitem.img).into(holder.tImage)
         holder.shareContactButton.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            val teacherDetailsInfo = currentitem.name + "\n" +currentitem.designation + "\n" + currentitem.email + "\n" + currentitem.phone  + "\n\n"+ "N.B: Info taken from UniBuddy"
+            val teacherDetailsInfo = currentitem.name + "\n" +currentitem.designation + "\n" + currentitem.email + "\n" + currentitem.phone  + "\n\n"+ "@UniBuddy"
             intent.putExtra(Intent.EXTRA_TEXT,teacherDetailsInfo )
             context.startActivity(Intent.createChooser(intent, "Share"))
         }
@@ -81,8 +79,6 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         val tdesignation : TextView = itemView.findViewById(R.id.tvDesignation)
 
         val tImage : ImageView = itemView.findViewById(R.id.images)
-        val tEmail : TextView = itemView.findViewById(R.id.tvEmail)
-        val tPhone: TextView = itemView.findViewById(R.id.tvPhone)
         val shareContactButton: Button = itemView.findViewById(R.id.btnShareContact)
         val emailTeacherButton: Button = itemView.findViewById(R.id.btnEmailTeacher)
         val callTeacherButton: Button = itemView.findViewById(R.id.btnCallTeacher)

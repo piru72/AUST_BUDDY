@@ -25,36 +25,22 @@
 
             <TextView
                 android:id="@+id/tvfirstName"
-                android:layout_width="245dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/teacher_name"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textAlignment="center"/>
 
 
             <TextView
                 android:id="@+id/tvDesignation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/assistant_professor" />
+                android:text="@string/assistant_professor"
+                android:textAlignment="center"/>
 
-            <TextView
-                android:id="@+id/tvEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="email"
-                android:text="@string/teachers_email"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="phone"
-                android:text="@string/teachers_phone"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -95,10 +81,10 @@
             android:id="@+id/images"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:contentDescription="@string/teacher_image"
-            android:padding="10sp"
-            android:src="@mipmap/ic_launcher" />
+            android:padding="5sp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginEnd="10sp"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
