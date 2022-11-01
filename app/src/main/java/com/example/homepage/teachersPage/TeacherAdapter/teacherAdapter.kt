@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
@@ -31,22 +32,22 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val currentitem = userList[position]
+        val currentItem = userList[position]
+        val context = holder.itemView.context
 
-        holder.firstName.text = currentitem.name
-        holder.tdesignation.text = currentitem.designation
-        Glide.with(holder.itemView.context).load(currentitem.img).into(holder.tImage)
+        holder.firstName.text = currentItem.name
+        holder.designation.text = currentItem.designation
+        Glide.with(context).load(currentItem.img).into(holder.tImage)
         holder.shareContactButton.setOnClickListener {
-            val context = holder.itemView.context
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            val teacherDetailsInfo = currentitem.name + "\n" +currentitem.designation + "\n" + currentitem.email + "\n" + currentitem.phone  + "\n\n"+ "@UniBuddy"
+            val teacherDetailsInfo = currentItem.name + "\n" +currentItem.designation + "\n" + currentItem.email + "\n" + currentItem.phone  + "\n\n"+ "@UniBuddy"
             intent.putExtra(Intent.EXTRA_TEXT,teacherDetailsInfo )
             context.startActivity(Intent.createChooser(intent, "Share"))
         }
         holder.emailTeacherButton.setOnClickListener {
-            val context = holder.itemView.context
-            val email = currentitem.email
+
+            val email = currentItem.email
             val addresses = email?.split(",".toRegex())?.toTypedArray()
             val i = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"))
             i.putExtra(Intent.EXTRA_EMAIL, addresses)
@@ -54,9 +55,13 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
         }
         holder.callTeacherButton.setOnClickListener {
-            val context = holder.itemView.context
-            val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + currentitem.phone))
-            context.startActivity(i)
+
+            if (currentItem.phone.toString() == "Not Available")
+                Toast.makeText(context, currentItem.phone.toString(), Toast.LENGTH_SHORT).show()
+            else {
+                val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + currentItem.phone))
+                context.startActivity(i)
+            }
         }
     }
 
@@ -75,8 +80,7 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
     class  MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
         val firstName : TextView = itemView.findViewById(R.id.tvfirstName)
-        //val lastName : TextView = itemView.findViewById(R.id.tvlastName)
-        val tdesignation : TextView = itemView.findViewById(R.id.tvDesignation)
+        val designation : TextView = itemView.findViewById(R.id.tvDesignation)
 
         val tImage : ImageView = itemView.findViewById(R.id.images)
         val shareContactButton: Button = itemView.findViewById(R.id.btnShareContact)
