@@ -55,6 +55,11 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
             context.startActivity(i)
 
         }
+        holder.callTeacherButton.setOnClickListener {
+            val context = holder.itemView.context
+            val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + currentitem.phone))
+            context.startActivity(i)
+        }
     }
 
     override fun getItemCount(): Int {
