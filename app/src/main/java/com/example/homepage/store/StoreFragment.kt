@@ -92,7 +92,7 @@ class StoreFragment : ReplaceFragment() {
                 val email = userV?.email.toString()
                 setInformation(email)
                 val sellersDetailsWrite =
-                    getUserName() + " " + getUserEmail() + " " + getUserId() + " " + getSession() + " " + getDepartment()
+                    sellersContactNoWrite + " " + getUserName() + " " + getUserEmail() + " " + getUserId() + " " + getSession() + " " + getDepartment()
 
 
                 if (productNameWrite == "")
@@ -104,6 +104,7 @@ class StoreFragment : ReplaceFragment() {
                 else if (!validNumber(sellersContactNoWrite))
                     makeToast("Provide 11 digit valid phone number")
                 else {
+                    Toast.makeText(context, sellersContactNoWrite, Toast.LENGTH_SHORT).show()
                     addNewMaterial(
                         user,
                         productNameWrite,
@@ -255,9 +256,10 @@ class StoreFragment : ReplaceFragment() {
         }
 
         class MaterialViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val bookName: TextView = itemView.findViewById(R.id.bookNameCard)
-            val bookWriterName: TextView = itemView.findViewById(R.id.bookWriterNameCard)
-            val bookPrice: TextView = itemView.findViewById(R.id.bookPriceCard)
+            val productName: TextView = itemView.findViewById(R.id.productNameCard)
+            val productAuthorName: TextView = itemView.findViewById(R.id.productAuthorNameCard)
+            val productCategory: TextView = itemView.findViewById(R.id.productCategoryCard)
+            val bookPrice: TextView = itemView.findViewById(R.id.productPriceCard)
             val callSellerButton: Button = itemView.findViewById(R.id.callSellerButton)
             val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
         }
@@ -270,14 +272,19 @@ class StoreFragment : ReplaceFragment() {
 
         override fun onBindViewHolder(holder: MaterialViewHolder, position: Int) {
             val currentItem = materials[position]
-            holder.bookName.text = currentItem.productName
-            holder.bookWriterName.text = currentItem.productAuthor
-            holder.bookPrice.text = currentItem.productCategory
-
-            holder.callSellerButton.setOnClickListener {
-                val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "01836430305"))
-                context.startActivity(i)
+            holder.productName.text = currentItem.productName
+            holder.productAuthorName.text = currentItem.productAuthor
+            holder.bookPrice.text = currentItem.productPrice+ " BDT"
+            holder.productCategory.text = currentItem.productCategory
+            val  sellersContactNo= currentItem.sellersDetails?.split(" ")?.get(0)
+            holder.detailsButton.setOnClickListener {
+                    Toast.makeText(context, currentItem.sellersDetails, Toast.LENGTH_SHORT).show()
             }
+            holder.callSellerButton.setOnClickListener {
+                    val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$sellersContactNo"))
+                    context.startActivity(i)
+            }
+
         }
 
         override fun getItemCount(): Int = materials.size
