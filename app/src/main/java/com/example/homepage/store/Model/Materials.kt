@@ -2,16 +2,24 @@ package com.example.homepage.store.Model
 
 data class Materials(
     var userId: String? = "",
-    var bookName: String? = "",
-    var bookYear: String? = "",
-    var bookSemester: String? = ""
+    var productName: String? = "",
+    var productAuthor: String? = "",
+    var productCategory: String? = "",
+    var productPrice : String? = "",
+    var sellersContactNo : String? = "",
+    var sellersDetails : String? = ""
 ){
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "userId" to userId,
-            "bookName" to  bookName,
-            "bookYear" to bookYear,
-            "bookSemester" to bookSemester
+            "productName" to productName,
+            "productAuthor" to productAuthor,
+            "productCategory" to productCategory,
+            "productPrice" to productPrice,
+            "sellersContactNo " to sellersContactNo,
+            "sellersDetails" to sellersDetails
+
+
         )
     }
 }

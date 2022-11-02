@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/add_item_for_sell_popup"
+    android:id="@+id/popup_add_item_for_sell"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
@@ -10,38 +10,80 @@
 
 
     <EditText
-        android:id="@+id/BookNamePop"
+        android:id="@+id/productNamePop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Quiz Name"
+        android:hint="Book / Material Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
-        android:id="@+id/BookSemester"
+        android:id="@+id/productAuthorPop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Quiz Date"
-        android:inputType="date"
+        android:hint="Book / Material Writer"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/productCategoryPop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:autofillHints=""
+            android:hint="Category"
+            android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_weight=".50"/>
+
+
+
+        <EditText
+            android:id="@+id/productPricePop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:autofillHints=""
+            android:hint="Price"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_weight=".50"/>
+    </LinearLayout>
+
     <EditText
-        android:id="@+id/BookYear"
+        android:id="@+id/sellerContactNoPop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Quiz Syllabus"
-        android:inputType="textMultiLine"
+        android:hint="Sellers Contact No"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/productDetailsPop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:hint="Add some more details of product"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />

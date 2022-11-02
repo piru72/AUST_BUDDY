@@ -51,11 +51,13 @@ class StoreFragment : ReplaceFragment() {
 
 
         binding.floatingPostMaterialButton.setOnClickListener {
-            val rootLayout = layoutInflater.inflate(R.layout.add_item_for_sell_popup, null)
+            val rootLayout = layoutInflater.inflate(R.layout.popup_add_item_for_sell, null)
 
-            val bookName = rootLayout.findViewById<EditText>(R.id.BookNamePop)
-            val bookSemester = rootLayout.findViewById<EditText>(R.id.BookSemester)
-            val bookYear = rootLayout.findViewById<EditText>(R.id.BookYear)
+            val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
+            val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
+            val productCategory = rootLayout.findViewById<EditText>(R.id.productCategoryPop)
+            val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
+            val sellersContactNo = rootLayout.findViewById<EditText>(R.id.sellerContactNoPop)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
 
@@ -81,18 +83,22 @@ class StoreFragment : ReplaceFragment() {
 
             addButton.setOnClickListener {
 
-                val name = bookName.text.toString()
-                val semester = bookSemester.text.toString()
-                val year = bookYear.text.toString()
+                val productNameWrite = productName.text.toString()
+                val productAuthorWrite = productAuthor.text.toString()
+                val productCategoryWrite = productCategory.text.toString()
+                val productPriceWrite = productPrice.text.toString()
+                val sellersContactNoWrite = sellersContactNo.text.toString()
+                val sellersDetailsWrite = "Name  Email StudentId Admission Session Department"
 
-                if (name == "" || year == "" || semester == "")
+
+                if (productNameWrite == "" || sellersContactNoWrite == "" || productAuthorWrite == "" || productPriceWrite =="" || productCategoryWrite =="")
                     Toast.makeText(
                         context,
                         "Please fill up all  the information",
                         Toast.LENGTH_SHORT
                     ).show()
                 else
-                    addNewMaterial(user, name, year, semester)
+                    addNewMaterial(user, productNameWrite, productAuthorWrite,productCategoryWrite,productPriceWrite, sellersContactNoWrite,sellersDetailsWrite)
                 popupWindow.dismiss()
 
 
@@ -106,9 +112,12 @@ class StoreFragment : ReplaceFragment() {
 
     private fun addNewMaterial(
         userId: String,
-        bookName: String,
-        bookYear: String,
-        bookSemester: String
+        productName: String,
+        productAuthor: String,
+        productCategory: String,
+        productPrice : String ,
+        sellersContactNo : String,
+        sellersDetails : String
     ) {
         // Create new post at /user-posts/$userid/$postid and at
         // /posts/$postid simultaneously
@@ -118,7 +127,7 @@ class StoreFragment : ReplaceFragment() {
             Log.w("TodoActivity", "Couldn't get push key for posts")
             return
         }
-        val newMaterial = Materials(userId, bookName, bookYear, bookSemester)
+        val newMaterial = Materials(userId, productName, productAuthor, productCategory, productPrice,sellersContactNo  ,sellersDetails )
         val taskValues = newMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
@@ -238,9 +247,9 @@ class StoreFragment : ReplaceFragment() {
 
         override fun onBindViewHolder(holder: MaterialViewHolder, position: Int) {
             val currentItem = materials[position]
-            holder.bookName.text = currentItem.bookName
-            holder.bookWriterName.text = currentItem.bookSemester
-            holder.bookPrice.text = currentItem.bookYear
+            holder.bookName.text = currentItem.productName
+            holder.bookWriterName.text = currentItem.productAuthor
+            holder.bookPrice.text = currentItem.productCategory
 
             holder.callSellerButton .setOnClickListener {
                 val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "01836430305"))
