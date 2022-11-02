@@ -33,6 +33,7 @@ class StoreFragment : ReplaceFragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var recycler: RecyclerView
     private lateinit var adapter: MaterialAdapter
+    private val userV = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -88,18 +89,32 @@ class StoreFragment : ReplaceFragment() {
                 val productCategoryWrite = productCategory.text.toString()
                 val productPriceWrite = productPrice.text.toString()
                 val sellersContactNoWrite = sellersContactNo.text.toString()
-                val sellersDetailsWrite = "Name  Email StudentId Admission Session Department"
+                val email = userV?.email.toString()
+                setInformation(email)
+                val sellersDetailsWrite =
+                    getUserName() + " " + getUserEmail() + " " + getUserId() + " " + getSession() + " " + getDepartment()
 
 
-                if (productNameWrite == "" || sellersContactNoWrite == "" || productAuthorWrite == "" || productPriceWrite =="" || productCategoryWrite =="")
-                    Toast.makeText(
-                        context,
-                        "Please fill up all  the information",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                else
-                    addNewMaterial(user, productNameWrite, productAuthorWrite,productCategoryWrite,productPriceWrite, sellersContactNoWrite,sellersDetailsWrite)
-                popupWindow.dismiss()
+                if (productNameWrite == "")
+                    makeToast("Please fill up all Product Name")
+                else if (productCategoryWrite == "")
+                    makeToast("Please fill up Product Category")
+                else if (productPriceWrite == "")
+                    makeToast("Please fill up Product Price")
+                else if (!validNumber(sellersContactNoWrite))
+                    makeToast("Provide 11 digit valid phone number")
+                else {
+                    addNewMaterial(
+                        user,
+                        productNameWrite,
+                        productAuthorWrite,
+                        productCategoryWrite,
+                        productPriceWrite,
+                        sellersContactNoWrite,
+                        sellersDetailsWrite
+                    )
+                    popupWindow.dismiss()
+                }
 
 
             }
@@ -115,9 +130,9 @@ class StoreFragment : ReplaceFragment() {
         productName: String,
         productAuthor: String,
         productCategory: String,
-        productPrice : String ,
-        sellersContactNo : String,
-        sellersDetails : String
+        productPrice: String,
+        sellersContactNo: String,
+        sellersDetails: String
     ) {
         // Create new post at /user-posts/$userid/$postid and at
         // /posts/$postid simultaneously
@@ -127,7 +142,15 @@ class StoreFragment : ReplaceFragment() {
             Log.w("TodoActivity", "Couldn't get push key for posts")
             return
         }
-        val newMaterial = Materials(userId, productName, productAuthor, productCategory, productPrice,sellersContactNo  ,sellersDetails )
+        val newMaterial = Materials(
+            userId,
+            productName,
+            productAuthor,
+            productCategory,
+            productPrice,
+            sellersContactNo,
+            sellersDetails
+        )
         val taskValues = newMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
@@ -148,7 +171,7 @@ class StoreFragment : ReplaceFragment() {
     private class MaterialAdapter(
         private val context: Context,
         databaseReference: DatabaseReference
-    ) : RecyclerView.Adapter<MaterialAdapter.MaterialViewHolder>(){
+    ) : RecyclerView.Adapter<MaterialAdapter.MaterialViewHolder>() {
 
         private val childEventListener: ChildEventListener?
         private val materialIds = ArrayList<String>()
@@ -231,12 +254,12 @@ class StoreFragment : ReplaceFragment() {
             this.childEventListener = childEventListener
         }
 
-        class MaterialViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        class MaterialViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val bookName: TextView = itemView.findViewById(R.id.bookNameCard)
             val bookWriterName: TextView = itemView.findViewById(R.id.bookWriterNameCard)
             val bookPrice: TextView = itemView.findViewById(R.id.bookPriceCard)
-            val callSellerButton : Button = itemView.findViewById(R.id.callSellerButton)
-            val detailsButton : Button = itemView.findViewById(R.id.showDetailsButton)
+            val callSellerButton: Button = itemView.findViewById(R.id.callSellerButton)
+            val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MaterialViewHolder {
@@ -251,7 +274,7 @@ class StoreFragment : ReplaceFragment() {
             holder.bookWriterName.text = currentItem.productAuthor
             holder.bookPrice.text = currentItem.productCategory
 
-            holder.callSellerButton .setOnClickListener {
+            holder.callSellerButton.setOnClickListener {
                 val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "01836430305"))
                 context.startActivity(i)
             }

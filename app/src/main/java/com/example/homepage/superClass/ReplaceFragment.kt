@@ -73,8 +73,8 @@ open class ReplaceFragment : Fragment() {
 
     }
 
-    fun makeToast(email: String) {
-        Toast.makeText(context, email, Toast.LENGTH_SHORT).show()
+    fun makeToast(text: String) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
     }
 
     fun setInformation(userEmail: String) {
@@ -130,6 +130,11 @@ open class ReplaceFragment : Fragment() {
     }
     fun getSession() : String {
         return currentSession
+    }
+
+    fun validNumber(sellersContactNoWrite : String) : Boolean{
+
+        return sellersContactNoWrite.length == 11 && sellersContactNoWrite[0] == '0' && sellersContactNoWrite[1] == '1'
     }
 
 
