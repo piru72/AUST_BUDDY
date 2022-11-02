@@ -38,7 +38,7 @@ class PrivacyFragment : Fragment() {
                 return true
             }
         }
-        webViewPage.loadUrl("file:///android_asset/privacyPolicy.html")
+        webViewPage.loadUrl("file:///android_asset/privacypolicy.html")
     }
 
 
