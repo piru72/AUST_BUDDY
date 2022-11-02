@@ -1,6 +1,8 @@
 package com.example.homepage.store
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -221,10 +223,11 @@ class StoreFragment : ReplaceFragment() {
         }
 
         class MaterialViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-            val taskName: TextView = itemView.findViewById(R.id.taskNameCard)
-            val taskDescription: TextView = itemView.findViewById(R.id.taskDescriptionCard)
-            val taskdate: TextView = itemView.findViewById(R.id.taskDateCard)
-            val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
+            val bookName: TextView = itemView.findViewById(R.id.bookNameCard)
+            val bookWriterName: TextView = itemView.findViewById(R.id.bookWriterNameCard)
+            val bookPrice: TextView = itemView.findViewById(R.id.bookPriceCard)
+            val callSellerButton : Button = itemView.findViewById(R.id.callSellerButton)
+            val detailsButton : Button = itemView.findViewById(R.id.showDetailsButton)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MaterialViewHolder {
@@ -234,18 +237,14 @@ class StoreFragment : ReplaceFragment() {
         }
 
         override fun onBindViewHolder(holder: MaterialViewHolder, position: Int) {
-          val auth = Firebase.auth
-            val user = auth.currentUser!!.uid
-            val materialReference = FirebaseDatabase.getInstance().getReference("user-materials").child(user)
+            val currentItem = materials[position]
+            holder.bookName.text = currentItem.bookName
+            holder.bookWriterName.text = currentItem.bookSemester
+            holder.bookPrice.text = currentItem.bookYear
 
-            val currentTask = materials[position]
-
-            holder.taskName.text = currentTask.bookName
-            holder.taskDescription.text = currentTask.bookSemester
-            holder.taskdate.text = currentTask.bookYear
-            holder.deleteButton.setOnClickListener {
-                val value = materialReference.child(materialIds[position])
-                value.removeValue()
+            holder.callSellerButton .setOnClickListener {
+                val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "01836430305"))
+                context.startActivity(i)
             }
         }
 
