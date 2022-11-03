@@ -23,11 +23,12 @@ class AdminPanelFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)
         binding.btnAddCoursesAdmin.setOnClickListener{
-            makeToast("Working")
+
             replaceFragment(AddCourseFragment(), R.id.fragment_admin_panel)
         }
         binding.btnAddTeachersAdmin.setOnClickListener{
-            makeToast("Working")
+
+            replaceFragment(AddTeachersFragment(), R.id.fragment_admin_panel)
         }
         return binding.root
     }

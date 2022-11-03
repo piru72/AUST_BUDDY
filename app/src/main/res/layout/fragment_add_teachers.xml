@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".adminPanel.AddTeachersFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/registration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/teachersNameFormInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/teachersDesignationFormInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teachersName"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Provide Teachers Name"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/teachersDesignationFormInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teachersDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Provide Teachers Designation"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/teachersContactNoFormInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teachersDesignationFormInput"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teachersContactNoText"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Provide Teachers Contact No"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/teachersEmailFormInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teachersContactNoFormInput"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teachersEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="Provide Teachers Email"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+
+        android:id="@+id/addTeachersButtonForm"
+        android:layout_width="369dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/teachersEmailFormInput"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/rounded_list_item_view"
+        android:text="Add Course"
+        tools:ignore="InvalidId" />
+
+    <TextView
+
+        android:id="@+id/teachersDataInvalidError"
+        android:layout_width="362dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="49dp"
+        android:padding="5dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

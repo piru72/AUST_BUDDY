@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".adminPanel.AdminPanelFragment"
     android:id="@+id/fragment_admin_panel"
-    android:paddingTop="100dp">
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="100dp">
 
         <Button
             android:id="@+id/btn_add_courses_admin"
