@@ -1,22 +1,17 @@
 package com.example.homepage
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.widget.Button
-import androidx.fragment.app.Fragment
-import com.example.homepage.databinding.ActivityMainHomePageBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.onBoarding.OnBoarding1
-import com.example.homepage.profileTab.ProfileFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
-    lateinit var handler: Handler
 
     //********************** For opening in the first onboarding page ************//
     private lateinit var auth: FirebaseAuth

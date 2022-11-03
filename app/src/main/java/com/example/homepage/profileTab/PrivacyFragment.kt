@@ -1,12 +1,12 @@
 package com.example.homepage.profileTab
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.fragment.app.Fragment
 import com.example.homepage.R
 
 
@@ -31,6 +31,7 @@ class PrivacyFragment : Fragment() {
 
 
         webViewPage.webViewClient = object : WebViewClient() {
+            @Deprecated("Deprecated in Java")
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 if (url != null) {
                     view?.loadUrl(url)

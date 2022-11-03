@@ -1,12 +1,10 @@
 package com.example.homepage.adminPanel
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.R
-import com.example.homepage.databinding.FragmentAddCourseBinding
+import androidx.fragment.app.Fragment
 import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
@@ -14,12 +12,12 @@ import com.google.firebase.ktx.Firebase
 
 class AddTeachersFragment : Fragment() {
     private lateinit var _binding: FragmentAddTeachersBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
     private lateinit var database: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
         database = Firebase.database.reference

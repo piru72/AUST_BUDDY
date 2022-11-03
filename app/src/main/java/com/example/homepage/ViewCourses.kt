@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.courseTab.Adapter.MyAdapter
 import com.example.homepage.courseTab.Model.UserViewModel
-import androidx.lifecycle.Observer
 
 
 
@@ -43,11 +42,11 @@ class ViewCourses : Fragment() {
 
         viewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
-        viewModel.allUsers.observe(viewLifecycleOwner, Observer {
+        viewModel.allUsers.observe(viewLifecycleOwner) {
 
             adapter.updateUserList(it)
 
-        })
+        }
 
     }
 }

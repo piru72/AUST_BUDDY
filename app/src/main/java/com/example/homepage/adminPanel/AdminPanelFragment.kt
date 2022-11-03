@@ -1,14 +1,11 @@
 package com.example.homepage.adminPanel
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.R
-import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.databinding.FragmentAdminPanelBinding
-import com.example.homepage.profileTab.PrivacyFragment
 import com.example.homepage.superClass.ReplaceFragment
 
 
@@ -18,7 +15,7 @@ class AdminPanelFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         container?.removeAllViews()
         _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)

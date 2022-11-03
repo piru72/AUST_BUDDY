@@ -1,21 +1,15 @@
 package com.example.homepage.onBoarding
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.util.Log
 import android.widget.Button
-import com.example.homepage.MainHomePage
+import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class OnBoarding2 : AppCompatActivity() {
-    lateinit var handler: Handler
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,27 +21,6 @@ class OnBoarding2 : AppCompatActivity() {
             val intent = Intent(this, OnBoarding3::class.java)
             startActivity(intent)
         }
-//
-//        handler = Handler()
-//        handler.postDelayed({
-//            val intent = Intent(this, OnBoarding3::class.java)
-//            startActivity(intent)
-//            finish()
-//        }, 3000)
-    }
 
-//    public override fun onStart() {
-//        super.onStart()
-//        val currentUser = auth.currentUser
-//        updateUI(currentUser)
-//
-//    }
-//    private fun updateUI(currentUser: FirebaseUser?) {
-//        if (currentUser != null) {
-//            Log.i("LoginActivity", "Update UI Called")
-//            val intent = Intent(this, MainHomePage::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
+    }
 }

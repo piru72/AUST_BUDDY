@@ -1,15 +1,10 @@
 package com.example.homepage.adminPanel
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.Quiz.Tasks
-import com.example.homepage.R
 import com.example.homepage.databinding.FragmentAddCourseBinding
-import com.example.homepage.databinding.FragmentScheduleBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
@@ -18,12 +13,12 @@ import com.google.firebase.ktx.Firebase
 
 class AddCourseFragment : ReplaceFragment() {
     private lateinit var _binding:FragmentAddCourseBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
     private lateinit var database: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentAddCourseBinding.inflate(inflater, container, false)
         database = Firebase.database.reference

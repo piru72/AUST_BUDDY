@@ -1,6 +1,5 @@
 package com.example.homepage
 
-import com.example.homepage.R
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.Quiz.Tasks
 import com.example.homepage.databinding.FragmentScheduleBinding
-import com.example.homepage.databinding.FragmentTodoBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -39,7 +37,7 @@ class ScheduleFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentScheduleBinding.inflate(inflater, container, false)
 
@@ -200,8 +198,8 @@ class ScheduleFragment : Fragment() {
 
                     // A comment has changed position, use the key to determine if we are
                     // displaying this comment and if so move it.
-                    val movedComment = dataSnapshot.getValue<Tasks>()
-                    val commentKey = dataSnapshot.key
+                    dataSnapshot.getValue<Tasks>()
+                    dataSnapshot.key
 
                     //notifyItemMoved(movedComment,)
 
@@ -228,7 +226,7 @@ class ScheduleFragment : Fragment() {
         class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val taskName: TextView = itemView.findViewById(R.id.taskNameCard)
             val taskDescription: TextView = itemView.findViewById(R.id.taskDescriptionCard)
-            val taskdate: TextView = itemView.findViewById(R.id.taskDateCard)
+            val taskDate: TextView = itemView.findViewById(R.id.taskDateCard)
             val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
         }
 
@@ -249,7 +247,7 @@ class ScheduleFragment : Fragment() {
 
             holder.taskName.text = currentTask.taskname
             holder.taskDescription.text = currentTask.taskdescription
-            holder.taskdate.text = currentTask.taskdate
+            holder.taskDate.text = currentTask.taskdate
 
             holder.deleteButton.setOnClickListener {
                 val value = taskReference.child(taskIds[position])

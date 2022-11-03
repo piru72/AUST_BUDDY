@@ -12,17 +12,12 @@ import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.homepage.R
 import com.example.homepage.SignInActivity
-import com.example.homepage.databinding.FragmentProfileBinding
-import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.adminPanel.AddCourseFragment
 import com.example.homepage.adminPanel.AdminPanelFragment
+import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 
 
 class ProfileFragment : ReplaceFragment() {
-
-    private var _binding: FragmentProfileBinding? = null
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

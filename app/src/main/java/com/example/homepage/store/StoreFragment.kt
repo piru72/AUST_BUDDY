@@ -38,7 +38,7 @@ class StoreFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentStoreBinding.inflate(inflater, container, false)
 
         auth = Firebase.auth
@@ -232,8 +232,8 @@ class StoreFragment : ReplaceFragment() {
 
                     // A comment has changed position, use the key to determine if we are
                     // displaying this comment and if so move it.
-                    val movedComment = dataSnapshot.getValue<Materials>()
-                    val commentKey = dataSnapshot.key
+                    dataSnapshot.getValue<Materials>()
+                    dataSnapshot.key
 
                     //notifyItemMoved(movedComment,)
 
