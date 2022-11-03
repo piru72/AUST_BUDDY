@@ -15,6 +15,7 @@ import com.example.homepage.SignInActivity
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.adminPanel.AddCourseFragment
+import com.example.homepage.adminPanel.AdminPanelFragment
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -75,7 +76,7 @@ class ProfileFragment : ReplaceFragment() {
 
         btnAddTeacherCourse.setOnClickListener {
 
-            replaceFragment(AddCourseFragment(), R.id.fragment_profile)
+            replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
 //            val rootLayout = layoutInflater.inflate(R.layout.popup_password_for_add_teacher, null)
 //
 //            val passwordForAddTeacherCourse =

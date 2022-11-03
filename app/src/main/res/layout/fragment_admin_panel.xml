@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminPanel.AdminPanelFragment"
+    android:id="@+id/fragment_admin_panel"
+    android:paddingTop="100dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_add_courses_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="Add Courses"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_add_teachers_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="Add Teachers"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+
+</FrameLayout>
