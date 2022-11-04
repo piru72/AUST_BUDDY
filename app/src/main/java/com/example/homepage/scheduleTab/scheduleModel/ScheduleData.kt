@@ -1,6 +1,6 @@
-package com.example.homepage.Quiz
+package com.example.homepage.scheduleTab.scheduleModel
 
-data class Tasks(
+data class ScheduleData(
 
     var uid: String? = "",
     var taskname: String? = "",

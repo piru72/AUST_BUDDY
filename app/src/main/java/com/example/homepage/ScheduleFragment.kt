@@ -11,8 +11,8 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.Quiz.Tasks
 import com.example.homepage.databinding.FragmentScheduleBinding
+import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -116,7 +116,7 @@ class ScheduleFragment : Fragment() {
             return
         }
 
-        val newtask = Tasks(userId, taskName, taskDescription, taskDate)
+        val newtask = ScheduleData(userId, taskName, taskDescription, taskDate)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
@@ -141,7 +141,7 @@ class ScheduleFragment : Fragment() {
 
         private val childEventListener: ChildEventListener?
         private val taskIds = ArrayList<String>()
-        private val tasks = ArrayList<Tasks>()
+        private val tasks = ArrayList<ScheduleData>()
 
         init {
 
@@ -152,7 +152,7 @@ class ScheduleFragment : Fragment() {
                     Log.d("GetData", "onChildAdded:" + dataSnapshot.key!!)
 
                     // A new comment has been added, add it to the displayed list
-                    val taskreceived = dataSnapshot.getValue<Tasks>()
+                    val taskreceived = dataSnapshot.getValue<ScheduleData>()
 
                     // [START_EXCLUDE]
                     // Update RecyclerView
@@ -198,7 +198,7 @@ class ScheduleFragment : Fragment() {
 
                     // A comment has changed position, use the key to determine if we are
                     // displaying this comment and if so move it.
-                    dataSnapshot.getValue<Tasks>()
+                    dataSnapshot.getValue<ScheduleData>()
                     dataSnapshot.key
 
                     //notifyItemMoved(movedComment,)
