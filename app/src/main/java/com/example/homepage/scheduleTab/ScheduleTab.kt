@@ -20,8 +20,6 @@ class ScheduleTab : Fragment() {
 
     private var _binding: FragmentScheduleBinding? = null
     private val binding get() = _binding!!
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +39,9 @@ class ScheduleTab : Fragment() {
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[ScheduleViewModel::class.java]
 
-//        viewModel.allSchedules.observe(viewLifecycleOwner) {
-//            adapter!!.updateUserList(it)
-//        }
+        viewModel.allSchedules.observe(viewLifecycleOwner) {
+            adapter!!.updateUserList(it)
+        }
 
     }
 }
