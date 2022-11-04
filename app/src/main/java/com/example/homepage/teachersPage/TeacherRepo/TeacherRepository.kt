@@ -1,7 +1,7 @@
 package com.example.homepage.teachersPage.TeacherRepo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.teachersPage.TeacherModel.teacherData
+import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.*
 
 class TeacherRepository {
@@ -17,16 +17,16 @@ class TeacherRepository {
         }
     }
 
-    fun loadUsers(userList : MutableLiveData<List<teacherData>>){
+    fun loadUsers(userList : MutableLiveData<List<TeacherData>>){
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 try {
 
-                    val _userList : List<teacherData> = snapshot.children.map { dataSnapshot ->
+                    val _userList : List<TeacherData> = snapshot.children.map { dataSnapshot ->
 
-                        dataSnapshot.getValue(teacherData::class.java)!!
+                        dataSnapshot.getValue(TeacherData::class.java)!!
 
                     }
 

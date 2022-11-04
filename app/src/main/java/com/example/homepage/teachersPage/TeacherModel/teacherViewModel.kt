@@ -9,8 +9,8 @@ import com.example.homepage.teachersPage.TeacherRepo.TeacherRepository
 class teacherViewModel : ViewModel() {
 
     private val repository : TeacherRepository = TeacherRepository().getInstance()
-    private val _allUsers = MutableLiveData<List<teacherData>>()
-    val allUsers : LiveData<List<teacherData>> = _allUsers
+    private val _allUsers = MutableLiveData<List<TeacherData>>()
+    val allUsers : LiveData<List<TeacherData>> = _allUsers
 
 
     init {

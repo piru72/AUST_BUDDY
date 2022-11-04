@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
-import com.example.homepage.teachersPage.TeacherModel.teacherData
+import com.example.homepage.teachersPage.TeacherModel.TeacherData
 
 @GlideModule
 class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
-    private val userList = ArrayList<teacherData>()
+    private val userList = ArrayList<TeacherData>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -69,7 +69,7 @@ class teacherAdapter : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
         return userList.size
     }
 
-    fun updateUserList(userList : List<teacherData>){
+    fun updateUserList(userList : List<TeacherData>){
 
         this.userList.clear()
         this.userList.addAll(userList)
