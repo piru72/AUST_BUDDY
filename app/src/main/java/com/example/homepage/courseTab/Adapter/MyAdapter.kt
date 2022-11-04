@@ -9,12 +9,12 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.courseTab.Model.User
+import com.example.homepage.courseTab.Model.CourseData
 
 
 class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    private val userList = ArrayList<User>()
+    private val userList = ArrayList<CourseData>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -56,7 +56,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         return userList.size
     }
 
-    fun updateUserList(userList: List<User>) {
+    fun updateUserList(userList: List<CourseData>) {
 
         this.userList.clear()
         this.userList.addAll(userList)

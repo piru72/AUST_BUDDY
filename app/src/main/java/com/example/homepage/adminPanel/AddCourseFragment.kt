@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.database.DatabaseReference
@@ -34,7 +35,7 @@ class AddCourseFragment : ReplaceFragment() {
 
     private fun writeNewCourse(courseCode: String, courseName: String, courseDriveLink: String) {
 
-        val newCourse = Courses( courseCode, courseName, courseDriveLink)
+        val newCourse = CourseData( courseCode, courseName, courseDriveLink)
         val taskValues = newCourse.toMap()
         val childUpdates = hashMapOf<String, Any>(
         "/Courses/$courseCode" to taskValues
@@ -42,21 +43,6 @@ class AddCourseFragment : ReplaceFragment() {
         database.updateChildren(childUpdates)
     }
 
-    // Create new post at /user-posts/$userid/$postid and at
-    // /posts/$postid simultaneously
-//    val key = database.child("posts").push().key
-//    if (key == null) {
-//        Log.w("TodoActivity", "Couldn't get push key for posts")
-//        return
-//    }
-//
-//    val newtask = Tasks(userId, taskName, taskDescription, taskDate)
-//    val taskValues = newtask.toMap()
-//    val childUpdates = hashMapOf<String, Any>(
-//        //*   "/tasks/$key" to taskValues,
-//        "/user-tasks/$userId/$key" to taskValues
-//    )
-//
-//    database.updateChildren(childUpdates)
+
 
 }

@@ -8,8 +8,8 @@ import com.example.homepage.courseTab.repos.UserRepository
 class UserViewModel : ViewModel() {
 
     private val repository: UserRepository = UserRepository().getInstance()
-    private val _allUsers = MutableLiveData<List<User>>()
-    val allUsers: LiveData<List<User>> = _allUsers
+    private val _allUsers = MutableLiveData<List<CourseData>>()
+    val allUsers: LiveData<List<CourseData>> = _allUsers
 
 
     init {
