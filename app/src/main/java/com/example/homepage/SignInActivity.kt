@@ -47,7 +47,6 @@ class SignInActivity : AppCompatActivity() {
             val email = findViewById<TextView>(R.id.emailEt1).text.toString()
             val password = findViewById<TextView>(R.id.passwordEt1).text.toString()
 
-            //** USER EMAIL AND PASSWORD IS VALIDATED IF THEY ARE IN THE RIGHT FORMAT OR NOT
             val situation = validateData(email, password)
 
             if (situation == "USER EMAIL PASS VERIFIED") {
@@ -95,7 +94,6 @@ class SignInActivity : AppCompatActivity() {
 
     private fun onAuthSuccess(user: FirebaseUser) {
         val username = usernameFromEmail(user.email!!)
-        // Write new user
         writeNewUser(user.uid, username, user.email)
     }
 
@@ -160,7 +158,6 @@ class SignInActivity : AppCompatActivity() {
             "OK"
         } else {
             Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show()
-            //firebaseAuth.signOut()
             "NOT OK"
         }
         return situation
