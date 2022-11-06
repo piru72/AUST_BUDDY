@@ -3,6 +3,7 @@ package com.example.homepage
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.homepage.courseTab.ViewCourses
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 import com.example.homepage.profileTab.ProfileFragment
 import com.example.homepage.scheduleTab.SchedulesFragment
