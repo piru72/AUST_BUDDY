@@ -11,8 +11,9 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.homepage.R
-import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.adminPanel.AdminPanelFragment
+import com.example.homepage.loginSignup.SignInActivity
+import com.example.homepage.storeDashboard.StoreDashboardFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 
@@ -33,6 +34,7 @@ class ProfileFragment : ReplaceFragment() {
         val btnLogOut = v.findViewById<Button>(R.id.btn_log_out)
         val btnBugReport = v.findViewById<Button>(R.id.btn_report_bug)
         val btnAddTeacherCourse = v.findViewById<Button>(R.id.btn_add_teacher_course)
+        val btnStoreDashboard= v.findViewById<Button>(R.id.btn_store_dashboard)
 
         val layoutMain = v.findViewById<ConstraintLayout>(R.id.profile_screen)
 
@@ -112,7 +114,9 @@ class ProfileFragment : ReplaceFragment() {
 //            }
 
         }
-
+        btnStoreDashboard.setOnClickListener{
+            replaceFragment(StoreDashboardFragment(),R.id.fragment_profile)
+        }
         btnBugReport.setOnClickListener {
 
             val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
