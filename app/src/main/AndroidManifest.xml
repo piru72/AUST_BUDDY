@@ -19,7 +19,7 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".loginSignup.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".loginSignup.SignInActivity"
