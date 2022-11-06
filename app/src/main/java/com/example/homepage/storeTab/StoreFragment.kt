@@ -1,4 +1,4 @@
-package com.example.homepage.store
+package com.example.homepage.storeTab
 
 import android.content.Context
 import android.content.Intent
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentStoreBinding
-import com.example.homepage.store.Model.Materials
+import com.example.homepage.storeTab.Model.Materials
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

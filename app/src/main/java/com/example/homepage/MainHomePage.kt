@@ -7,7 +7,7 @@ import com.example.homepage.courseTab.ViewCourses
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 import com.example.homepage.profileTab.ProfileFragment
 import com.example.homepage.scheduleTab.SchedulesFragment
-import com.example.homepage.store.StoreFragment
+import com.example.homepage.storeTab.StoreFragment
 
 class MainHomePage : AppCompatActivity() {
 

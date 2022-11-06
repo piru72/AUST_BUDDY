@@ -1,4 +1,4 @@
-package com.example.homepage.store.Model
+package com.example.homepage.storeTab.Model
 
 data class Materials(
     var userId: String? = "",
