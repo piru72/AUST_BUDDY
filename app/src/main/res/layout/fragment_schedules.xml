@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ScheduleFragment">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scheduleTab.SchedulesFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +17,22 @@
             android:id="@+id/task_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/informativeText"
+            android:layout_width="364dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:text="Click the plus button to List your quizzes schedule"
+            android:textColor="@color/text_black"
+            android:textSize="30sp"
+            android:translationX="10sp"
+            android:visibility="gone"/>
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -27,12 +43,12 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:contentDescription="TODO"
+            app:backgroundTint="@color/white"
             app:fabSize="normal"
             app:srcCompat="@android:drawable/ic_input_add" />
 
 
-
-
     </RelativeLayout>
 
-</layout>
+
+</FrameLayout>

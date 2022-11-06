@@ -1,10 +1,11 @@
 package com.example.homepage
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 import com.example.homepage.profileTab.ProfileFragment
+import com.example.homepage.scheduleTab.SchedulesFragment
 import com.example.homepage.store.StoreFragment
 
 class MainHomePage : AppCompatActivity() {
@@ -27,7 +28,7 @@ class MainHomePage : AppCompatActivity() {
                 R.id.bot_nav_home -> replaceFragment(HomeFragment())
                 R.id.bot_nav_profile -> replaceFragment(ProfileFragment())
                 R.id.bot_nav_store -> replaceFragment(StoreFragment())
-                R.id.bot_nav_schedule -> replaceFragment(ScheduleFragment())
+                R.id.bot_nav_schedule -> replaceFragment(SchedulesFragment())
                 R.id.bot_nav_courses -> replaceFragment(ViewCourses())
 
                 else -> {
