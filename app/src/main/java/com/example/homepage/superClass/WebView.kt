@@ -1,10 +1,10 @@
-package com.example.homepage
+package com.example.homepage.superClass
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.R
 
 
 class WebView(webLink: String) : ReplaceFragment() {

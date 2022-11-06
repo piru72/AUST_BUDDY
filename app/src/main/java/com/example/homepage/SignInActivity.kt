@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.homepage.dataClass.UserData
 import com.example.homepage.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -80,7 +81,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun writeNewUser(userId: String, name: String, email: String?) {
-        val user = User(name, email)
+        val user = UserData(name, email)
         database.child("users").child(userId).setValue(user)
     }
 
