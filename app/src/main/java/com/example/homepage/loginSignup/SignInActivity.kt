@@ -1,4 +1,4 @@
-package com.example.homepage
+package com.example.homepage.loginSignup
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -10,6 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.homepage.MainHomePage
+import com.example.homepage.R
+import com.example.homepage.SignUpActivity
 import com.example.homepage.dataClass.UserData
 import com.example.homepage.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth

@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.homepage.R
-import com.example.homepage.SignInActivity
+import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.adminPanel.AdminPanelFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth

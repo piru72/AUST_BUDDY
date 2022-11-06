@@ -22,7 +22,7 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".loginSignup.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".MainHomePage"
