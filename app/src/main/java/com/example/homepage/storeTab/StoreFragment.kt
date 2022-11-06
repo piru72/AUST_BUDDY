@@ -1,8 +1,5 @@
 package com.example.homepage.storeTab
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -10,17 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentStoreBinding
+import com.example.homepage.storeTab.Adapter.StoreAdapter
 import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.storeTab.Model.StoreViewModel
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 
 
@@ -28,11 +27,13 @@ class StoreFragment : ReplaceFragment() {
     private var _binding: FragmentStoreBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var database: DatabaseReference
-    private lateinit var materialReference: DatabaseReference
-    private lateinit var auth: FirebaseAuth
+    private lateinit var viewModel: StoreViewModel
     private lateinit var recycler: RecyclerView
-    private lateinit var adapter: MaterialAdapter
+    private var adapter: StoreAdapter? = null
+    private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
+
+
     private val userV = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
@@ -40,16 +41,9 @@ class StoreFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentStoreBinding.inflate(inflater, container, false)
-
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
-        materialReference =
-            FirebaseDatabase.getInstance().getReference("user-materials").child(user)
-        recycler = binding.materialList
-
-        recycler.layoutManager = LinearLayoutManager(context)
-
 
         binding.floatingPostMaterialButton.setOnClickListener {
             val rootLayout = layoutInflater.inflate(R.layout.popup_add_item_for_sell, null)
@@ -72,10 +66,10 @@ class StoreFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.materialListActivity, // Location to display popup window
-                Gravity.CENTER, // Exact position of layout to display popup
-                0, // X offset
-                -500// Y offset
+                binding.materialListActivity,
+                Gravity.CENTER,
+                0,
+                -500
             )
 
             closeButton.setOnClickListener {
@@ -135,8 +129,6 @@ class StoreFragment : ReplaceFragment() {
         sellersContactNo: String,
         sellersDetails: String
     ) {
-        // Create new post at /user-posts/$userid/$postid and at
-        // /posts/$postid simultaneously
         val key = database.child("posts").push().key
 
         if (key == null) {
@@ -154,141 +146,26 @@ class StoreFragment : ReplaceFragment() {
         )
         val taskValues = newMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
-            //*   "/tasks/$key" to taskValues,
-            "/user-materials/$userId/$key" to taskValues
-//            "/user-materials/$key" to taskValues
+            "/user-materials/$userId/$key" to taskValues,
+            "/public-posts/$key" to taskValues
         )
         database.updateChildren(childUpdates)
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        adapter = context?.let { MaterialAdapter(it, materialReference) }!!
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recycler = binding.materialList
+        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.setHasFixedSize(true)
+        adapter = StoreAdapter()
         recycler.adapter = adapter
+        viewModel = ViewModelProvider(this)[StoreViewModel::class.java]
+        viewModel.allStore.observe(viewLifecycleOwner) {
+            adapter!!.updateStoreList(it)
+        }
+
     }
 
-
-    private class MaterialAdapter(
-        private val context: Context,
-        databaseReference: DatabaseReference
-    ) : RecyclerView.Adapter<MaterialAdapter.MaterialViewHolder>() {
-
-        private val childEventListener: ChildEventListener?
-        private val materialIds = ArrayList<String>()
-        private val materials = ArrayList<Materials>()
-
-        init {
-            // Create child event listener
-            // [START child_event_listener_recycler]
-            val childEventListener = object : ChildEventListener {
-                override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
-                    Log.d("GetData", "onChildAdded:" + dataSnapshot.key!!)
-
-                    // A new comment has been added, add it to the displayed list
-                    val taskreceived = dataSnapshot.getValue<Materials>()
-
-                    // [START_EXCLUDE]
-                    // Update RecyclerView
-                    materialIds.add(dataSnapshot.key!!)
-                    materials.add(taskreceived!!)
-                    notifyItemInserted(materials.size - 1)
-                    // [END_EXCLUDE]
-                }
-
-                override fun onChildChanged(
-                    dataSnapshot: DataSnapshot,
-                    previousChildName: String?
-                ) {
-                    Log.d("GetData", "onChildChanged: ${dataSnapshot.key}")
-
-
-                }
-
-                override fun onChildRemoved(dataSnapshot: DataSnapshot) {
-                    Log.d("GetData", "onChildRemoved:" + dataSnapshot.key!!)
-
-                    // A comment has changed, use the key to determine if we are displaying this
-                    // comment and if so remove it.
-                    val commentKey = dataSnapshot.key
-
-                    // [START_EXCLUDE]
-                    val commentIndex = materialIds.indexOf(commentKey)
-                    if (commentIndex > -1) {
-                        // Remove data from the list
-                        materialIds.removeAt(commentIndex)
-                        materials.removeAt(commentIndex)
-
-                        // Update the RecyclerView
-                        notifyItemRemoved(commentIndex)
-                    } else {
-                        Log.w("GetData", "onChildRemoved:unknown_child:" + commentKey!!)
-                    }
-                    // [END_EXCLUDE]
-                }
-
-                override fun onChildMoved(dataSnapshot: DataSnapshot, previousChildName: String?) {
-                    Log.d("GetData", "onChildMoved:" + dataSnapshot.key!!)
-
-                    // A comment has changed position, use the key to determine if we are
-                    // displaying this comment and if so move it.
-                    dataSnapshot.getValue<Materials>()
-                    dataSnapshot.key
-
-                    //notifyItemMoved(movedComment,)
-
-
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                    Log.w("GetData", "postComments:onCancelled", databaseError.toException())
-                    Toast.makeText(
-                        context, "Database Error occurred here",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-
-            }
-            databaseReference.addChildEventListener(childEventListener)
-            // [END child_event_listener_recycler]
-            // Store reference to listener so it can be removed on app stop
-            this.childEventListener = childEventListener
-        }
-
-        class MaterialViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val productName: TextView = itemView.findViewById(R.id.productNameCard)
-            val productAuthorName: TextView = itemView.findViewById(R.id.productAuthorNameCard)
-            val productCategory: TextView = itemView.findViewById(R.id.productCategoryCard)
-            val bookPrice: TextView = itemView.findViewById(R.id.productPriceCard)
-            val callSellerButton: Button = itemView.findViewById(R.id.callSellerButton)
-            val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
-        }
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MaterialViewHolder {
-            val inflater = LayoutInflater.from(context)
-            val view = inflater.inflate(R.layout.card_materials, parent, false)
-            return MaterialViewHolder(view)
-        }
-
-        override fun onBindViewHolder(holder: MaterialViewHolder, position: Int) {
-            val currentItem = materials[position]
-            holder.productName.text = currentItem.productName
-            holder.productAuthorName.text = currentItem.productAuthor
-            holder.bookPrice.text = currentItem.productPrice+ " BDT"
-            holder.productCategory.text = currentItem.productCategory
-            val  sellersContactNo= currentItem.sellersDetails?.split(" ")?.get(0)
-            holder.detailsButton.setOnClickListener {
-                    Toast.makeText(context, currentItem.sellersDetails, Toast.LENGTH_SHORT).show()
-            }
-            holder.callSellerButton.setOnClickListener {
-                    val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$sellersContactNo"))
-                    context.startActivity(i)
-            }
-
-        }
-
-        override fun getItemCount(): Int = materials.size
-
-    }
 
 }
