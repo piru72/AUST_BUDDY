@@ -121,4 +121,14 @@
     <string name="te">"Textile Engineering"</string>
 
 
+    <!--    LINKS FOR WEB SITES-->
+
+    <string name="universityStudentPortalLink">https://iums.aust.edu/ums-web/login/</string>
+    <string name="universityOjLink">https://austoj.com/</string>
+    <string name="universitySyllabusLink">https://www.aust.edu/cse/syllabus#spring2020</string>
+    <string name="universityAcademicCalenderLink">https://www.aust.edu/academics/academic_calendar</string>
+    <string name="universityGradingSystemLink">https://www.aust.edu/academics/examincation_and_grading_system</string>
+    <string name="universityNoticeLink">https://www.aust.edu/notice</string>
+
+
 </resources>
