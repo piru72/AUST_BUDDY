@@ -12,32 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchView"
-                android:layout_width="281dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/search_view_bg"
-                app:iconifiedByDefault="false"
-                app:queryHint=" Coming soon...">
-
-            </androidx.appcompat.widget.SearchView>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/anotherFloatingButton"
-                android:layout_width="56dp"
-                android:layout_height="59dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:contentDescription="TODO"
-                app:fabSize="normal"
-                app:srcCompat="@android:drawable/ic_input_add" />
-        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
