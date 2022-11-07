@@ -13,11 +13,12 @@ import com.example.homepage.courseTab.Model.UserViewModel
 import com.example.homepage.superClass.ReplaceFragment
 
 
-private lateinit var userRecyclerView: RecyclerView
-lateinit var adapter: MyAdapter
+
 
 class ViewCourses(path: String) : ReplaceFragment() {
     private var semesterSelected= path
+    private lateinit var userRecyclerView: RecyclerView
+    lateinit var adapter: MyAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +42,7 @@ class ViewCourses(path: String) : ReplaceFragment() {
         makeToast(semesterSelected)
         var viewModel: UserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
+        viewModel.initialize(semesterSelected)
         viewModel.allUsers.observe(viewLifecycleOwner) {
 
             adapter.updateUserList(it)

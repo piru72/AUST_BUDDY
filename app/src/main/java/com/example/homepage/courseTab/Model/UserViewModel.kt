@@ -7,15 +7,14 @@ import com.example.homepage.courseTab.repos.UserRepository
 
 class UserViewModel : ViewModel() {
 
-    private val repository: UserRepository = UserRepository("CSE/year3semester1").getInstance()
+    private lateinit var repository: UserRepository
     private val _allUsers = MutableLiveData<List<CourseData>>()
     val allUsers: LiveData<List<CourseData>> = _allUsers
 
 
-    init {
-
+    fun initialize(semesterSelected: String) {
+        repository = UserRepository(semesterSelected ).getInstance()
         repository.loadUsers(_allUsers)
-
     }
 
 }
