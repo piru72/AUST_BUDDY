@@ -80,6 +80,34 @@
         <item>4th Year 2nd Semester</item>
     </string-array>
 
+    <string-array name="departments">
+        <item>Department</item>
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>CE</item>
+        <item>ME</item>
+        <item>TE</item>
+        <item>IPE</item>
+        <item>BBA</item>
+        <item>Arch</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>Year</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+
+    </string-array>
+
+    <string-array name="semester12">
+        <item>Semester</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <string name="select">Select</string>
     <string name="autoCompleteTextView">AutoCompleteTextView</string>
     <string name="reset">Reset</string>

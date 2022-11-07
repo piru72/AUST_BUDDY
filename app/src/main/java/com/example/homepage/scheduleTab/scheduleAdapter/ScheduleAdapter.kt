@@ -39,8 +39,8 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewViewHol
         holder.taskDate.text = currentTask.taskdate
 
         holder.deleteButton.setOnClickListener {
-            val value = taskReference.child(taskIds[position])
-            value.removeValue()
+//            val value = taskReference.child(taskIds[position])
+//            value.removeValue()
         }
     }
 
