@@ -6,21 +6,146 @@
     android:id="@+id/fragment_department_semesterChooser"
     tools:context=".courseTab.DepartmentSemesterChooserFragment">
 
-    <Button
-        android:id="@+id/btn_31"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        android:background="@drawable/rounded_list_item_view"
-        android:drawableStart="@drawable/ic_baseline_edit_24"
-        android:drawableTint="@color/pure_white"
-        android:paddingStart="10dp"
-        android:text="3rd Year 1st Semester"
-        android:textColor="@color/text_black"
-        android:visibility="visible"
-        tools:ignore="RtlSymmetry" />
+        <Button
+            android:id="@+id/btn_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="1st Year 1st Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="1st Year 2nd Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="2nd Year 1st Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="2nd Year 2nd Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="3rd Year 1st Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="3rd Year 2nd Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="4th Year 1st Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+        <Button
+            android:id="@+id/btn_42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+
+            android:background="@drawable/rounded_list_item_view"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/pure_white"
+            android:paddingStart="10dp"
+            android:text="4th Year 2nd Semester"
+            android:textColor="@color/text_black"
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
 
 </FrameLayout>

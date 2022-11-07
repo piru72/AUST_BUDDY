@@ -39,7 +39,6 @@ class ViewCourses(path: String) : ReplaceFragment() {
         adapter = MyAdapter()
         userRecyclerView.adapter = adapter
 
-        makeToast(semesterSelected)
         var viewModel: UserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         viewModel.initialize(semesterSelected)

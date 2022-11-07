@@ -137,6 +137,13 @@ open class ReplaceFragment : Fragment() {
         return sellersContactNoWrite.length == 11 && sellersContactNoWrite[0] == '0' && sellersContactNoWrite[1] == '1'
     }
 
+    fun getDatabasePath(foundString: String): String {
+
+        var yearSemester= foundString.replace("[^\\d.]".toRegex(), "")
+
+        return   "year" + yearSemester[0] + "semester" + yearSemester[1]
+    }
+
 
 
 }
