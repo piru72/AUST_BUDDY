@@ -13,7 +13,7 @@ import com.google.firebase.ktx.Firebase
 
 
 class AddCourseFragment : ReplaceFragment() {
-    private lateinit var _binding:FragmentAddCourseBinding
+    private lateinit var _binding: FragmentAddCourseBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
     override fun onCreateView(
@@ -23,26 +23,42 @@ class AddCourseFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAddCourseBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
-        binding.addCourseButtonForm.setOnClickListener{
+        binding.addCourseButtonForm.setOnClickListener {
             val courseCode = binding.courseCode.text.toString()
-            val courseName= binding.courseName.text.toString()
+            val courseName = binding.courseName.text.toString()
             val courseDriveLink = binding.courseDriveLinkText.text.toString()
-            writeNewCourse(courseCode,courseName,courseDriveLink )
-
+            val department = binding.spinnerDepartmentList.selectedItem.toString()
+            val year = binding.spinnerYearList.selectedItem.toString()
+            val semester = binding.spinnerSemesterList.selectedItem.toString()
+            if (department != "Department" && year != "Year" && semester != "Semester" && courseCode != "" && courseName != "" && courseDriveLink != "")
+                writeNewCourse(
+                    courseCode,
+                    courseName,
+                    courseDriveLink,
+                    department,
+                    "year" + year + "semester" + semester
+                )
+            else
+                makeToast("Fill up all the fields")
         }
         return binding.root
     }
 
-    private fun writeNewCourse(courseCode: String, courseName: String, courseDriveLink: String) {
+    private fun writeNewCourse(
+        courseCode: String,
+        courseName: String,
+        courseDriveLink: String,
+        department: String,
+        yearSemester: String
+    ) {
 
-        val newCourse = CourseData( courseCode, courseName, courseDriveLink)
+        val newCourse = CourseData(courseCode, courseName, courseDriveLink)
         val taskValues = newCourse.toMap()
         val childUpdates = hashMapOf<String, Any>(
-        "/Courses/$courseCode" to taskValues
-    )
+            "/course-list/$department/$yearSemester/$courseCode" to taskValues
+        )
         database.updateChildren(childUpdates)
     }
-
 
 
 }
