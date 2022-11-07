@@ -4,10 +4,10 @@ import androidx.lifecycle.MutableLiveData
 import com.example.homepage.courseTab.Model.CourseData
 import com.google.firebase.database.*
 
-class UserRepository {
-
+class UserRepository(semesterSelected: String) {
+    private var semesterSelected = semesterSelected
     private val databaseReference: DatabaseReference =
-        FirebaseDatabase.getInstance().getReference("Courses")
+        FirebaseDatabase.getInstance().getReference("course-list/$semesterSelected")
 
     @Volatile
     private var INSTANCE: UserRepository? = null
@@ -15,7 +15,7 @@ class UserRepository {
     fun getInstance(): UserRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = UserRepository()
+            val instance = UserRepository(semesterSelected)
             INSTANCE = instance
             instance
         }

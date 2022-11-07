@@ -20,7 +20,10 @@ class DepartmentSemesterChooserFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentDepartmentSemesterChooserBinding.inflate(inflater, container, false)
         binding.btn31.setOnClickListener{
-            replaceFragment(ViewCourses(),  R.id.fragment_department_semesterChooser)
+            var foundString = binding.btn31.text.toString()
+            foundString = foundString.replace("[^\\d.]".toRegex(), "")
+            var path = "CSE/" +"year" + foundString[0]+"semester"+foundString[1]
+            replaceFragment(ViewCourses(path),  R.id.fragment_department_semesterChooser)
         }
         return binding.root
     }
