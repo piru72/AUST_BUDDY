@@ -1,46 +1,59 @@
 package com.example.homepage.homeTab
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import com.example.homepage.R
+import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.superClass.ReplaceFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class RequestFragment : ReplaceFragment() {
-
+    private lateinit var _binding: FragmentRequestBinding
+    private val binding get() = _binding
+    private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_request, container, false)
+        _binding = FragmentRequestBinding.inflate(inflater, container, false)
+        database = Firebase.database.reference
+        auth = Firebase.auth
+        val user = auth.currentUser!!.uid
+        binding.sendBtn.setOnClickListener {
 
-        val sendBTn = v.findViewById<Button>(R.id.sendBtn)
-
-
-
-        sendBTn.setOnClickListener {
-            val email = "unibuddy890@gmail.com"
-            val message = v.findViewById<TextView>(R.id.message)
-            val addresses = email.split(",".toRegex()).toTypedArray()
-            val intent = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:")
-                putExtra(Intent.EXTRA_EMAIL, addresses)
-                putExtra(Intent.EXTRA_SUBJECT, "REQUESTING FOR NEW MATERIALS")
-                putExtra(Intent.EXTRA_TEXT,  message.text.toString())
-            }
-            startActivity(intent)
-            message.text =" "
+            val message = binding.message.text.toString()
+            if (message != "")
+                writeNewRequest(user , message)
+            else
+                makeToast("Fill up all the fields")
         }
 
-        return v
+        return binding.root
+    }
+
+    private fun writeNewRequest(userId :String ,message: String) {
+
+        val key = database.child("posts").push().key
+        if (key == null) {
+            Log.w("TodoActivity", "Couldn't get push key for posts")
+            return
+        }
+        val requestMessage = mapOf("message" to message, "userId" to userId)
+        val childUpdates = hashMapOf<String, Any>(
+            "/material-request-list/$key" to requestMessage
+        )
+        database.updateChildren(childUpdates)
+
     }
 
 }
