@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
+import com.example.homepage.superClass.WebView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
@@ -36,16 +38,24 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
         val currentTask = tasks[position]
 
         holder.websiteLinkName.text = currentTask.websiteName
-        val websiteLinkClick = currentTask.websiteLink
+        val websiteLinkClick = currentTask.websiteLink.toString()
 
 
         holder.deleteButton.setOnClickListener {
 //            val value = taskReference.child(taskIds[position])
 //            value.removeValue()
         }
-        holder.websiteLinkButton.setOnClickListener{
+        holder.itemView.setOnClickListener(object :View.OnClickListener{
+            override fun onClick(v: View?) {
 
-        }
+               val activity = v!!.context as AppCompatActivity
+                val webFragment = WebView(websiteLinkClick)
+               activity.supportFragmentManager.beginTransaction().replace(R.id.favouriteWebPageMother,webFragment).addToBackStack(
+                   true.toString()
+               ).commit()
+            }
+
+        })
     }
 
     override fun getItemCount(): Int {
@@ -63,7 +73,6 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
     class FavouriteWebpageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val websiteLinkName: TextView = itemView.findViewById(R.id.websiteNameCard)
-        val websiteLinkButton: Button = itemView.findViewById(R.id.websiteLinkButton)
         val deleteButton: Button = itemView.findViewById(R.id.deleteWebsiteButton)
 
     }
