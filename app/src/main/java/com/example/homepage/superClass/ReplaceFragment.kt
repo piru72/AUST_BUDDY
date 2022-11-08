@@ -23,10 +23,7 @@ open class ReplaceFragment : Fragment() {
     private var currentSession = ""
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(xml_file_name, fragment)
-        fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
+        fragmentManager.beginTransaction().replace(xml_file_name, fragment).addToBackStack("tag").commit()
     }
 
 
