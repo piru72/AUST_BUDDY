@@ -9,9 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.homepage.R
 import com.example.homepage.adminPanel.AdminPanelFragment
+import com.example.homepage.databinding.FragmentProfileBinding
+import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
 import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.storeDashboard.StoreDashboardFragment
 import com.example.homepage.superClass.ReplaceFragment
@@ -20,35 +21,26 @@ import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : ReplaceFragment() {
 
+    private var _binding: FragmentProfileBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_profile, container, false)
-        val btnEditProfile = v.findViewById<Button>(R.id.btn_edit_profile)
-        val btnPrivacy = v.findViewById<Button>(R.id.btn_privacy)
-        val btnSettings = v.findViewById<Button>(R.id.btn_settings)
-        val btnInviteFriend = v.findViewById<Button>(R.id.btn_invite_friend)
-        val btnAboutUs = v.findViewById<Button>(R.id.btn_about_us)
-        val btnLogOut = v.findViewById<Button>(R.id.btn_log_out)
-        val btnBugReport = v.findViewById<Button>(R.id.btn_report_bug)
-        val btnAddTeacherCourse = v.findViewById<Button>(R.id.btn_add_teacher_course)
-        val btnStoreDashboard= v.findViewById<Button>(R.id.btn_store_dashboard)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        val layoutMain = v.findViewById<ConstraintLayout>(R.id.profile_screen)
 
-        btnEditProfile.setOnClickListener {
+        binding.btnEditProfile.setOnClickListener {
             replaceFragment(EditProfileFragment(), R.id.fragment_profile)
         }
-        btnPrivacy.setOnClickListener {
+        binding.btnPrivacy.setOnClickListener {
             replaceFragment(PrivacyFragment(), R.id.fragment_profile)
         }
-        btnSettings.setOnClickListener {
+        binding.btnSettings.setOnClickListener {
             replaceFragment(SettingsFragment(), R.id.fragment_profile)
         }
-        btnInviteFriend.setOnClickListener {
-//            replaceFragment(InviteFragment(), R.id.fragment_profile)
+        binding.btnInviteFriend.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
             intent.putExtra(
@@ -57,10 +49,10 @@ class ProfileFragment : ReplaceFragment() {
             )
             context?.startActivity(Intent.createChooser(intent, "Share"))
         }
-        btnAboutUs.setOnClickListener {
+        binding.btnAboutUs.setOnClickListener {
             replaceFragment(AboutDevFragment(), R.id.fragment_profile)
         }
-        btnLogOut.setOnClickListener {
+        binding.btnLogOut.setOnClickListener {
 
             // TODO GOING FROM FRAGMENT TO ACTIVITY
             val i = Intent(activity, SignInActivity::class.java)
@@ -71,7 +63,7 @@ class ProfileFragment : ReplaceFragment() {
         }
 
 
-        btnAddTeacherCourse.setOnClickListener {
+        binding.btnAddTeacherCourse.setOnClickListener {
 
 
             val debugModeOn = true
@@ -96,7 +88,7 @@ class ProfileFragment : ReplaceFragment() {
                 popupWindow.elevation = 20.5F
                 popupWindow.showAtLocation(
 
-                    layoutMain, // Location to display popup window
+                    binding.profileScreen, // Location to display popup window
                     Gravity.CENTER, // Exact position of layout to display popup
                     0, // X offset
                     -500// Y offset
@@ -124,10 +116,10 @@ class ProfileFragment : ReplaceFragment() {
 
 
         }
-        btnStoreDashboard.setOnClickListener{
+        binding.btnStoreDashboard.setOnClickListener{
             replaceFragment(StoreDashboardFragment(),R.id.fragment_profile)
         }
-        btnBugReport.setOnClickListener {
+        binding.btnReportBug.setOnClickListener {
 
             val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
 
@@ -145,7 +137,7 @@ class ProfileFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                layoutMain, // Location to display popup window
+                binding.profileScreen, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -183,7 +175,10 @@ class ProfileFragment : ReplaceFragment() {
             }
         }
 
-        return v
+        binding.btnFavouriteWebPage.setOnClickListener{
+            replaceFragment(FavouriteWebPageFragment(),R.id.fragment_profile)
+        }
+        return binding.root
     }
 
 
