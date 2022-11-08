@@ -8,8 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentFavouriteWebPageBinding
+import com.example.homepage.favouriteWebPage.Adapter.FavouriteWebAdapter
+import com.example.homepage.favouriteWebPage.Model.FavouriteWebViewModel
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -22,7 +27,10 @@ class FavouriteWebPageFragment : Fragment() {
    private  var _binding : FragmentFavouriteWebPageBinding? = null
    private  val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
+    private lateinit var viewModel: FavouriteWebViewModel
     private lateinit var database: DatabaseReference
+    private lateinit var recycler: RecyclerView
+    private var adapter: FavouriteWebAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -93,6 +101,21 @@ class FavouriteWebPageFragment : Fragment() {
             "/user-favouriteWebsites/$user/$key" to taskValues
         )
         database.updateChildren(childUpdates)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recycler = binding.webSiteList
+        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.setHasFixedSize(true)
+        adapter = FavouriteWebAdapter()
+        recycler.adapter = adapter
+        viewModel = ViewModelProvider(this)[FavouriteWebViewModel::class.java]
+
+        viewModel.allSchedules.observe(viewLifecycleOwner) {
+            adapter!!.updateWebPageList(it)
+        }
+
     }
 
 
