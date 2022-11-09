@@ -39,11 +39,12 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
 
         holder.websiteLinkName.text = currentTask.websiteName
         val websiteLinkClick = currentTask.websiteLink.toString()
+        val websiteID = currentTask.websiteID.toString()
 
 
         holder.deleteButton.setOnClickListener {
-//            val value = taskReference.child(taskIds[position])
-//            value.removeValue()
+            val value = taskReference.child(websiteID)
+            value.removeValue()
         }
         holder.itemView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {

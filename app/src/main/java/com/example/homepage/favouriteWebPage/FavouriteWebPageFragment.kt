@@ -95,7 +95,7 @@ class FavouriteWebPageFragment : Fragment() {
             return
         }
 
-        val newtask = FavouriteWebpageData(user, websiteName, websiteLink)
+        val newtask = FavouriteWebpageData(user, websiteName, websiteLink , key)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             "/user-favouriteWebsites/$user/$key" to taskValues
