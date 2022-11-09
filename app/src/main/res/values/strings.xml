@@ -157,6 +157,20 @@
     <string name="universityAcademicCalenderLink">https://www.aust.edu/academics/academic_calendar</string>
     <string name="universityGradingSystemLink">https://www.aust.edu/academics/examincation_and_grading_system</string>
     <string name="universityNoticeLink">https://www.aust.edu/notice</string>
+    <string name="add_some_more_details_of_product">Add some more details of product</string>
+    <string name="sellers_contact_no">Sellers Contact No</string>
+    <string name="price">Price</string>
+    <string name="category">Category</string>
+    <string name="book_material_writer">Book / Material Writer</string>
+    <string name="book_material_name">Book / Material Name</string>
+
+
+    <string-array name="bookCategoryList">
+        <item>Category</item>
+        <item>Academic</item>
+        <item>Notes</item>
+        <item>Others</item>
+    </string-array>
 
 
 </resources>

@@ -25,7 +25,7 @@ import com.google.firebase.ktx.Firebase
 
 class StoreDashboardFragment : ReplaceFragment() {
     private lateinit var _binding: FragmentStoreDashboardBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -37,7 +37,7 @@ class StoreDashboardFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentStoreDashboardBinding.inflate(inflater, container, false)
 
@@ -49,7 +49,7 @@ class StoreDashboardFragment : ReplaceFragment() {
 
             val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
             val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
-            val productCategory = rootLayout.findViewById<EditText>(R.id.productCategoryPop)
+            val productCategory = rootLayout.findViewById<Spinner>(R.id.bookCategoryList)
             val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
             val sellersContactNo = rootLayout.findViewById<EditText>(R.id.sellerContactNoPop)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
@@ -79,7 +79,7 @@ class StoreDashboardFragment : ReplaceFragment() {
 
                 val productNameWrite = productName.text.toString()
                 val productAuthorWrite = productAuthor.text.toString()
-                val productCategoryWrite = productCategory.text.toString()
+                val productCategoryWrite = productCategory.selectedItem.toString()
                 val productPriceWrite = productPrice.text.toString()
                 val sellersContactNoWrite = sellersContactNo.text.toString()
                 val email = userV?.email.toString()

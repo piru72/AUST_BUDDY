@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popup_add_item_for_sell"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -15,11 +16,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Book / Material Name"
+        android:hint="@string/book_material_name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="#0D47A1" />
 
     <EditText
         android:id="@+id/productAuthorPop"
@@ -27,42 +28,39 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Book / Material Writer"
+        android:hint="@string/book_material_writer"
+        android:inputType="textShortMessage"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="#0D47A1" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-        <EditText
-            android:id="@+id/productCategoryPop"
+
+
+
+        <Spinner
+            android:id="@+id/bookCategoryList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:autofillHints=""
-            android:hint="Category"
-            android:minHeight="48dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:layout_weight=".50"/>
-
-
+            android:entries="@array/bookCategoryList"
+            android:layerType="hardware" />
 
         <EditText
             android:id="@+id/productPricePop"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
+            android:layout_weight=".50"
             android:autofillHints=""
-            android:hint="Price"
+            android:hint="@string/price"
             android:inputType="date"
             android:minHeight="48dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:layout_weight=".50"/>
+            android:textColorHint="#0D47A1" />
     </LinearLayout>
 
     <EditText
@@ -71,11 +69,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Sellers Contact No"
+        android:hint="@string/sellers_contact_no"
         android:inputType="date"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="#0D47A1" />
 
     <EditText
         android:id="@+id/productDetailsPop"
@@ -83,10 +81,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
-        android:hint="Add some more details of product"
+        android:hint="@string/add_some_more_details_of_product"
+        android:inputType="textShortMessage"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="#0D47A1" />
 
 
     <LinearLayout
@@ -97,23 +96,26 @@
 
         <Button
             android:id="@+id/CloseButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="150dp"
+
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
             android:background="@drawable/rounded_edittext"
-            android:text="Close"
-            android:textColor="#4E342E" />
+            android:text="@string/close"
+            android:textColor="#2E7D32"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/AddButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
             android:background="@drawable/rounded_edittext"
-            android:text="ADD"
-            android:textColor="#4E342E" />
+            android:text="@string/add"
+            android:textColor="#2E7D32"
+            tools:ignore="TextContrastCheck" />
 
 
     </LinearLayout>
