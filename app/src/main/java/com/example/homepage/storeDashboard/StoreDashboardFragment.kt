@@ -33,6 +33,7 @@ class StoreDashboardFragment : ReplaceFragment() {
     private lateinit var recycler: RecyclerView
     private var adapter: StoreDashBoardAdapter? = null
     private lateinit var viewModel: StoreDashBoardViewModel
+    private lateinit var _inflater: LayoutInflater
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class StoreDashboardFragment : ReplaceFragment() {
     ): View {
         container?.removeAllViews()
         _binding = FragmentStoreDashboardBinding.inflate(inflater, container, false)
-
+        _inflater = inflater
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
@@ -51,6 +52,7 @@ class StoreDashboardFragment : ReplaceFragment() {
             val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
             val productCategory = rootLayout.findViewById<Spinner>(R.id.bookCategoryList)
             val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
+            val productDetails= rootLayout.findViewById<EditText>(R.id.productDetailsPop)
             val sellersContactNo = rootLayout.findViewById<EditText>(R.id.sellerContactNoPop)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
@@ -81,6 +83,7 @@ class StoreDashboardFragment : ReplaceFragment() {
                 val productAuthorWrite = productAuthor.text.toString()
                 val productCategoryWrite = productCategory.selectedItem.toString()
                 val productPriceWrite = productPrice.text.toString()
+                val productDetailsWrite = productDetails.text.toString()
                 val sellersContactNoWrite = sellersContactNo.text.toString()
                 val email = userV?.email.toString()
                 setInformation(email)
@@ -90,14 +93,14 @@ class StoreDashboardFragment : ReplaceFragment() {
 
                 if (productNameWrite == "")
                     makeToast("Please fill up all Product Name")
-                else if (productCategoryWrite == "")
+                else if (productCategoryWrite == "Category")
                     makeToast("Please fill up Product Category")
                 else if (productPriceWrite == "")
                     makeToast("Please fill up Product Price")
                 else if (!validNumber(sellersContactNoWrite))
                     makeToast("Provide 11 digit valid phone number")
                 else {
-                    Toast.makeText(context, sellersContactNoWrite, Toast.LENGTH_SHORT).show()
+
                     addNewMaterial(
                         user,
                         productNameWrite,
@@ -105,7 +108,8 @@ class StoreDashboardFragment : ReplaceFragment() {
                         productCategoryWrite,
                         productPriceWrite,
                         sellersContactNoWrite,
-                        sellersDetailsWrite
+                        sellersDetailsWrite,
+                        productDetailsWrite
                     )
                     popupWindow.dismiss()
                 }
@@ -125,7 +129,8 @@ class StoreDashboardFragment : ReplaceFragment() {
         productCategory: String,
         productPrice: String,
         sellersContactNo: String,
-        sellersDetails: String
+        sellersDetails: String,
+        productDetailsWrite: String
     ) {
         val key = database.child("posts").push().key
 
@@ -140,7 +145,9 @@ class StoreDashboardFragment : ReplaceFragment() {
             productCategory,
             productPrice,
             sellersContactNo,
-            sellersDetails
+            sellersDetails,
+            key,
+            productDetailsWrite
         )
         val taskValues = newMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
@@ -156,7 +163,7 @@ class StoreDashboardFragment : ReplaceFragment() {
         recycler = binding.postedItemList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = StoreDashBoardAdapter()
+        adapter = StoreDashBoardAdapter(_inflater)
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[StoreDashBoardViewModel::class.java]
         viewModel.allStore.observe(viewLifecycleOwner) {

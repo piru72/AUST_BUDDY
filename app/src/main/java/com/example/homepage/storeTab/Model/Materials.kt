@@ -5,10 +5,12 @@ data class Materials(
     var productName: String? = "",
     var productAuthor: String? = "",
     var productCategory: String? = "",
-    var productPrice : String? = "",
-    var sellersContactNo : String? = "",
-    var sellersDetails : String? = ""
-){
+    var productPrice: String? = "",
+    var sellersContactNo: String? = "",
+    var sellersDetails: String? = "",
+    val productId: String? = "",
+    val productDetails: String? = "",
+) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "userId" to userId,
@@ -17,7 +19,9 @@ data class Materials(
             "productCategory" to productCategory,
             "productPrice" to productPrice,
             "sellersContactNo " to sellersContactNo,
-            "sellersDetails" to sellersDetails
+            "sellersDetails" to sellersDetails,
+            "productId" to productId,
+            "productDetails" to productDetails
 
 
         )
