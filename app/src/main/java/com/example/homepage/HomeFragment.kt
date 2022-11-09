@@ -27,6 +27,7 @@ class HomeFragment : ReplaceFragment() {
 
         // Mahy baby start working on this fragment
         // asdafsdafsaf
+        //12313212332
 
         binding.btnIums.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universityStudentPortalLink)),currentState)
