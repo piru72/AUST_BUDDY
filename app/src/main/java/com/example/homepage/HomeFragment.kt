@@ -25,6 +25,8 @@ class HomeFragment : ReplaceFragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val currentState = R.id.fragment_home
 
+        // Mahy baby start working on this fragment
+
         binding.btnIums.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universityStudentPortalLink)),currentState)
         }
