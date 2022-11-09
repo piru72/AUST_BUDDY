@@ -25,9 +25,7 @@ class HomeFragment : ReplaceFragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val currentState = R.id.fragment_home
 
-        // Mahy baby start working on this fragment
-        // asdafsdafsaf
-        //12313212332
+       //i have started working
 
         binding.btnIums.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universityStudentPortalLink)),currentState)
@@ -66,3 +64,4 @@ class HomeFragment : ReplaceFragment() {
 
 }
 ////HELLOAFASD
+//aaaa
