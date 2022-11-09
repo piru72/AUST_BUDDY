@@ -21,11 +21,13 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 
 class FavouriteWebPageFragment : Fragment() {
-   private  var _binding : FragmentFavouriteWebPageBinding? = null
-   private  val binding get() = _binding!!
+    private var _binding: FragmentFavouriteWebPageBinding? = null
+    private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
     private lateinit var viewModel: FavouriteWebViewModel
     private lateinit var database: DatabaseReference
@@ -35,7 +37,7 @@ class FavouriteWebPageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentFavouriteWebPageBinding.inflate(inflater, container, false)
         auth = Firebase.auth
@@ -76,15 +78,37 @@ class FavouriteWebPageFragment : Fragment() {
                 val websiteName = websiteNameField.text.toString()
                 val websiteLink = websiteLinkField.text.toString()
 
-                if(websiteName == "" || websiteLink=="")
-                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
-                else
-                   addNewWebsite(user, websiteName, websiteLink)
-                popupWindow.dismiss()
+                if (websiteName == "" || websiteLink == "")
+                    Toast.makeText(
+                        context,
+                        "Please fill up all  the information",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                else if (!validWebsiteLink(websiteLink))
+                    Toast.makeText(context, "Enter a valid website Link", Toast.LENGTH_SHORT).show()
+                else {
+                    addNewWebsite(user, websiteName, websiteLink)
+                    popupWindow.dismiss()
+                }
+
             }
         }
-       
+
         return binding.root
+    }
+
+    private fun validWebsiteLink(url: String): Boolean {
+
+        val regex = ("((http|https)://)(www.)?"
+                + "[a-zA-Z0-9@:%._\\+~#?&//=]"
+                + "{2,256}\\.[a-z]"
+                + "{2,6}\\b([-a-zA-Z0-9@:%"
+                + "._\\+~#?&//=]*)")
+
+        val p: Pattern = Pattern.compile(regex)
+        val m: Matcher = p.matcher(url)
+        return m.matches()
+
     }
 
     private fun addNewWebsite(user: String, websiteName: String, websiteLink: String) {
@@ -95,7 +119,7 @@ class FavouriteWebPageFragment : Fragment() {
             return
         }
 
-        val newtask = FavouriteWebpageData(user, websiteName, websiteLink , key)
+        val newtask = FavouriteWebpageData(user, websiteName, websiteLink, key)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             "/user-favouriteWebsites/$user/$key" to taskValues
