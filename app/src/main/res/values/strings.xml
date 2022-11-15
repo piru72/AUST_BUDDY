@@ -163,6 +163,11 @@
     <string name="category">Category</string>
     <string name="book_material_writer">Book / Material Writer</string>
     <string name="book_material_name">Book / Material Name</string>
+    <string name="provide_course_code">Provide Course Code</string>
+    <string name="provide_course_name">Provide Course Name</string>
+    <string name="provide_drive_link">Provide Drive Link</string>
+    <string name="add_course">Add Course</string>
+    <string name="a_background_image">A background Image</string>
 
 
     <string-array name="bookCategoryList">

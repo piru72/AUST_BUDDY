@@ -30,7 +30,21 @@ class AddCourseFragment : ReplaceFragment() {
             val department = binding.spinnerDepartmentList.selectedItem.toString()
             val year = binding.spinnerYearList.selectedItem.toString()
             val semester = binding.spinnerSemesterList.selectedItem.toString()
-            if (department != "Department" && year != "Year" && semester != "Semester" && courseCode != "" && courseName != "" && courseDriveLink != "")
+            val selectYour = "Select your "
+
+            if (department == "Department")
+                makeToast(selectYour + department)
+            else if (year == "Year")
+                makeToast(selectYour + year)
+            else if (semester == "Semester")
+                makeToast(selectYour + semester)
+            else if (courseCode == "")
+                makeToast("$selectYour Course Code ")
+            else if (courseName == "")
+                makeToast("$selectYour Course Name")
+            else if (!validWebsiteLink(courseDriveLink))
+                makeToast("Provide an valid drive link. ")
+            else {
                 writeNewCourse(
                     courseCode,
                     courseName,
@@ -38,8 +52,14 @@ class AddCourseFragment : ReplaceFragment() {
                     department,
                     "year" + year + "semester" + semester
                 )
-            else
-                makeToast("Fill up all the fields")
+                binding.courseCode.setText("")
+                binding.courseDriveLinkText.setText("")
+                binding.courseName.setText("")
+
+            }
+
+
+
         }
         return binding.root
     }
@@ -53,9 +73,9 @@ class AddCourseFragment : ReplaceFragment() {
     ) {
 
         val newCourse = CourseData(courseCode, courseName, courseDriveLink)
-        val taskValues = newCourse.toMap()
+        val courseDetails = newCourse.toMap()
         val childUpdates = hashMapOf<String, Any>(
-            "/course-list/$department/$yearSemester/$courseCode" to taskValues
+            "/course-list/$department/$yearSemester/$courseCode" to courseDetails
         )
         database.updateChildren(childUpdates)
     }

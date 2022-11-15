@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.*
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 
 open class ReplaceFragment : Fragment() {
@@ -156,6 +158,20 @@ open class ReplaceFragment : Fragment() {
         auth = Firebase.auth
         database = Firebase.database.reference
         return auth.currentUser!!.uid
+
+    }
+
+    fun validWebsiteLink(url: String): Boolean {
+
+        val regex = ("((http|https)://)(www.)?"
+                + "[a-zA-Z0-9@:%._\\+~#?&//=]"
+                + "{2,256}\\.[a-z]"
+                + "{2,6}\\b([-a-zA-Z0-9@:%"
+                + "._\\+~#?&//=]*)")
+
+        val p: Pattern = Pattern.compile(regex)
+        val m: Matcher = p.matcher(url)
+        return m.matches()
 
     }
 

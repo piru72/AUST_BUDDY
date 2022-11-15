@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,16 +15,15 @@ import com.example.homepage.databinding.FragmentFavouriteWebPageBinding
 import com.example.homepage.favouriteWebPage.Adapter.FavouriteWebAdapter
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebViewModel
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
+import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 
-class FavouriteWebPageFragment : Fragment() {
+class FavouriteWebPageFragment : ReplaceFragment() {
     private var _binding: FragmentFavouriteWebPageBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
@@ -97,19 +95,7 @@ class FavouriteWebPageFragment : Fragment() {
         return binding.root
     }
 
-    private fun validWebsiteLink(url: String): Boolean {
 
-        val regex = ("((http|https)://)(www.)?"
-                + "[a-zA-Z0-9@:%._\\+~#?&//=]"
-                + "{2,256}\\.[a-z]"
-                + "{2,6}\\b([-a-zA-Z0-9@:%"
-                + "._\\+~#?&//=]*)")
-
-        val p: Pattern = Pattern.compile(regex)
-        val m: Matcher = p.matcher(url)
-        return m.matches()
-
-    }
 
     private fun addNewWebsite(user: String, websiteName: String, websiteLink: String) {
 

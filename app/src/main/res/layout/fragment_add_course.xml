@@ -12,7 +12,8 @@
         android:src="@drawable/registration"
         android:layout_marginTop="20sp"
         android:id="@+id/startingImage"
-        />
+        android:paddingBottom="20dp"
+        android:contentDescription="@string/a_background_image" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,17 +21,13 @@
         android:orientation="horizontal"
         android:id="@+id/spinnerPanDepartment"
         android:layout_below="@id/startingImage"
-        android:layout_margin="5dp"
-        >
+        android:layout_marginBottom="10dp">
 
         <Spinner
             android:id="@+id/spinnerDepartmentList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:entries="@array/departments"
-            android:gravity="end"
-            android:layerType="hardware" />
+            android:entries="@array/departments" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,25 +35,21 @@
         android:orientation="horizontal"
         android:id="@+id/spinnerPan"
         android:layout_below="@id/spinnerPanDepartment"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
         >
         <Spinner
             android:id="@+id/spinnerYearList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:entries="@array/years"
-            android:gravity="end"
-            android:layerType="hardware" />
+            android:layout_weight="1"
+            android:entries="@array/years" />
 
         <Spinner
             android:id="@+id/spinnerSemesterList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:entries="@array/semester12"
-            android:gravity="end"
-            android:layerType="hardware" />
+            android:layout_weight="1"
+            android:entries="@array/semester12" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,9 +61,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseCode"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:hint="Provide Course Code"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content"
+            android:hint="@string/provide_course_code"
+            android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,9 +80,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseName"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:hint="Provide Course Name"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content"
+            android:hint="@string/provide_course_name"
+            android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,9 +97,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseDriveLinkText"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:hint="Provide Course Name"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content"
+            android:hint="@string/provide_drive_link"
+            android:inputType= "textLongMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,26 +108,13 @@
     <Button
 
         android:id="@+id/addCourseButtonForm"
-        android:layout_width="369dp"
-        android:layout_height="62dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/diveLinkFormInput"
         android:layout_marginTop="58dp"
-        android:text="Add Course"
-        android:background="@drawable/rounded_list_item_view"
-        tools:ignore="InvalidId" />
+        android:text="@string/add_course"
+        android:background="@drawable/rounded_list_item_view" />
 
-    <TextView
 
-        android:layout_width="362dp"
-        android:layout_height="70dp"
-        android:id="@+id/linkOrCourseNameError"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="49dp"
-        android:padding="5dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
 
     </RelativeLayout>
