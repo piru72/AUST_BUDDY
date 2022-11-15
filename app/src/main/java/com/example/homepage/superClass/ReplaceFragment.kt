@@ -11,6 +11,11 @@ import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.homepage.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
 
@@ -21,6 +26,10 @@ open class ReplaceFragment : Fragment() {
     private var currentId = ""
     private var currentDept = ""
     private var currentSession = ""
+
+    private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
+
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
         fragmentManager.beginTransaction().replace(xml_file_name, fragment).addToBackStack("tag").commit()
@@ -141,6 +150,14 @@ open class ReplaceFragment : Fragment() {
         return   "year" + yearSemester[0] + "semester" + yearSemester[1]
     }
 
+
+    fun getCurrentUserId(): String {
+
+        auth = Firebase.auth
+        database = Firebase.database.reference
+        return auth.currentUser!!.uid
+
+    }
 
 
 }

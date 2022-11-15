@@ -60,60 +60,17 @@ class ProfileFragment : ReplaceFragment() {
             FirebaseAuth.getInstance().signOut()
         }
 
-
-        binding.btnAddTeacherCourse.setOnClickListener {
-
-
-            val debugModeOn = true
-            if (debugModeOn)
-            replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
-            else
-            {
-                val rootLayout = layoutInflater.inflate(R.layout.popup_password_for_add_teacher, null)
-
-                val passwordForAddTeacherCourse =
-                    rootLayout.findViewById<EditText>(R.id.passwordForAddTeacherPop)
-                val cancelButton = rootLayout.findViewById<Button>(R.id.cancelButtonPop)
-                val confirmButton = rootLayout.findViewById<Button>(R.id.confirmButtonPop)
-
-                val popupWindow = PopupWindow(
-                    rootLayout,
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT, true
-                )
-
-                popupWindow.update()
-                popupWindow.elevation = 20.5F
-                popupWindow.showAtLocation(
-
-                    binding.profileScreen, // Location to display popup window
-                    Gravity.CENTER, // Exact position of layout to display popup
-                    0, // X offset
-                    -500// Y offset
-                )
-                cancelButton.setOnClickListener {
-                    popupWindow.dismiss()
-                }
-                confirmButton.setOnClickListener{
-
-                    if (passwordForAddTeacherCourse.text.toString() == "ThisIsAdmin")
-                    {
-                        makeToast("Right password" + passwordForAddTeacherCourse.text.toString())
-                        popupWindow.dismiss()
-                        replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
-                    }
-                    else
-                        makeToast("Wrong password")
-
-
-                }
-
+        if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3") {
+            binding.btnAddTeacherCourse.visibility = View.VISIBLE
+            binding.btnAddTeacherCourse.setOnClickListener {
+                    replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
             }
+        } else
+            binding.btnAddTeacherCourse.visibility = View.INVISIBLE
 
 
 
 
-        }
 
         binding.btnReportBug.setOnClickListener {
 
