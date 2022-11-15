@@ -12,9 +12,7 @@ import android.widget.*
 import com.example.homepage.R
 import com.example.homepage.adminPanel.AdminPanelFragment
 import com.example.homepage.databinding.FragmentProfileBinding
-import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
 import com.example.homepage.loginSignup.SignInActivity
-import com.example.homepage.storeDashboard.StoreDashboardFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 
@@ -116,9 +114,7 @@ class ProfileFragment : ReplaceFragment() {
 
 
         }
-        binding.btnStoreDashboard.setOnClickListener{
-            replaceFragment(StoreDashboardFragment(),R.id.fragment_profile)
-        }
+
         binding.btnReportBug.setOnClickListener {
 
             val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
@@ -175,9 +171,7 @@ class ProfileFragment : ReplaceFragment() {
             }
         }
 
-        binding.btnFavouriteWebPage.setOnClickListener{
-            replaceFragment(FavouriteWebPageFragment(),R.id.fragment_profile)
-        }
+
         return binding.root
     }
 

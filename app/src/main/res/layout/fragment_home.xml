@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment"
-    android:background="@color/bk_colour">
+    android:background="@color/text_black"
+    android:padding="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rootConstrainLayout"
@@ -66,7 +67,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_aust_oj"
+                    android:id="@+id/btn_notice"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -91,8 +92,6 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
-
-
                             android:padding="20dp"
                             android:src="@drawable/oj"
                             app:tint="#fff" />
@@ -100,11 +99,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="AUST OJ"
+                            android:fontFamily="@font/lato_black"
+                            android:text="Notice"
                             android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_teachers"
@@ -335,7 +337,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_gradings"
+                    android:id="@+id/btn_store_dashboard"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -370,7 +372,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_black"
-                            android:text="GRADINGS"
+                            android:text="My store"
                             android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -422,20 +424,47 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/noticeButton"
-                    android:layout_width="350dp"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:background="@android:color/transparent"
-                    android:text="NOTICE"
-                    android:fontFamily="@font/lato_black"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    />
+                android:orientation="horizontal"><androidx.cardview.widget.CardView
+                android:id="@+id/btn_favourite_web_page"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
 
-            </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_color_50"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:src="@drawable/request"
+                        app:tint="#fff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_black"
+                        android:text="Favourite Links"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView></LinearLayout>
+
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
