@@ -14,4 +14,9 @@
     <color name="text_black">#01579B</color>
     <color name="background_black">#222222</color>
     <color name="dark_blue">#00b7c2</color>
+    <color name="background_color">#FBFBFD</color>
+    <color name="background_color_50">#B3FFFFFF</color>
+    <color name="text_color_header">#323232</color>
+    <color name="text_color_description">#616161</color>
+    <color name="bk_colour">#8ba785</color>
 </resources>
