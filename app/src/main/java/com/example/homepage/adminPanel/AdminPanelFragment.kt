@@ -5,6 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.R
+import com.example.homepage.adminPanel.bugReports.BugReportListFragment
+import com.example.homepage.adminPanel.courseRequest.CourseRequestListFragment
+import com.example.homepage.adminPanel.teacherRequest.AddTeacherListFragment
 import com.example.homepage.databinding.FragmentAdminPanelBinding
 import com.example.homepage.superClass.ReplaceFragment
 
@@ -26,6 +29,15 @@ class AdminPanelFragment : ReplaceFragment() {
         binding.btnAddTeachersAdmin.setOnClickListener{
 
             replaceFragment(AddTeachersFragment(), R.id.fragment_admin_panel)
+        }
+        binding.btnTeacherRequest.setOnClickListener{
+            replaceFragment(AddTeacherListFragment(),R.id.fragment_admin_panel)
+        }
+        binding.btnViewBugReports.setOnClickListener{
+            replaceFragment(BugReportListFragment(),R.id.fragment_admin_panel)
+        }
+        binding.btnViewCourseRequest.setOnClickListener{
+            replaceFragment(CourseRequestListFragment(),R.id.fragment_admin_panel)
         }
         return binding.root
     }
