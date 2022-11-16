@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.calculator.CGPAFragment
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
 import com.example.homepage.homeTab.BusFragment
 import com.example.homepage.homeTab.GradingsFragment
 import com.example.homepage.homeTab.RequestFragment
-import com.example.homepage.storeDashboard.StoreDashboardFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.superClass.WebView
 
@@ -32,7 +30,9 @@ class HomeFragment : ReplaceFragment() {
         binding.btnIums.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universityStudentPortalLink)),currentState)
         }
-
+        /*binding.btnAustOj.setOnClickListener {
+            replaceFragment(WebView(getString(R.string.universityOjLink)),currentState)
+        }*/
         binding.btnTeachers.setOnClickListener {
             replaceFragment(GradingsFragment(), currentState)
         }
@@ -48,17 +48,14 @@ class HomeFragment : ReplaceFragment() {
         binding.btnCgpa.setOnClickListener {
             replaceFragment(CGPAFragment(), currentState)
         }
-        binding.btnStoreDashboard.setOnClickListener{
-            replaceFragment(StoreDashboardFragment(),currentState)
-        }
+        /*binding.btnGradings.setOnClickListener {
+            replaceFragment(WebView(getString(R.string.universityGradingSystemLink)),currentState)
+        }*/
         binding.btnRequest.setOnClickListener {
             replaceFragment(RequestFragment(), currentState)
         }
-        binding.btnNotice.setOnClickListener{
+        binding.noticeButton.setOnClickListener{
             replaceFragment(WebView(getString(R.string.universityNoticeLink)),currentState)
-        }
-        binding.btnFavouriteWebPage.setOnClickListener{
-            replaceFragment(FavouriteWebPageFragment(),currentState)
         }
 
         return binding.root
