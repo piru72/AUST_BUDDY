@@ -176,6 +176,8 @@
     <string name="provide_teachers_designation">Provide Teachers Designation</string>
     <string name="provide_teachers_name">Provide Teachers Name</string>
     <string name="background_image">Background Image</string>
+    <string name="add_courses">Add Courses</string>
+    <string name="add_teachers">Add teachers</string>
 
 
     <string-array name="bookCategoryList">
