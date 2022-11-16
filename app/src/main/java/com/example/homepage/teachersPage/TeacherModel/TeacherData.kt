@@ -13,7 +13,8 @@ data class TeacherData(
             "name" to name,
             "designation" to phone,
             "phone" to designation,
-            "email" to email
+            "email" to email,
+            "img" to img
         )
     }
 }

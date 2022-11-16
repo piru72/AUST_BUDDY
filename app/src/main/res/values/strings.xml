@@ -168,6 +168,14 @@
     <string name="provide_drive_link">Provide Drive Link</string>
     <string name="add_course">Add Course</string>
     <string name="a_background_image">A background Image</string>
+    <string name="provide_teachers_email">Provide Teachers Email</string>
+    <string name="image_link">Image Link</string>
+    <string name="choose_from_phone">Choose From phone</string>
+    <string name="add_teacher">Add Teacher</string>
+    <string name="provide_teachers_contact_no">Provide Teachers Contact No</string>
+    <string name="provide_teachers_designation">Provide Teachers Designation</string>
+    <string name="provide_teachers_name">Provide Teachers Name</string>
+    <string name="background_image">Background Image</string>
 
 
     <string-array name="bookCategoryList">
