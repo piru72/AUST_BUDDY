@@ -57,7 +57,9 @@ class ProfileFragment : ReplaceFragment() {
             FirebaseAuth.getInstance().signOut()
         }
 
-        if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3") {
+        val debugMode = true
+
+        if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3" || debugMode) {
             binding.btnAddTeacherCourse.visibility = View.VISIBLE
             binding.btnAddTeacherCourse.setOnClickListener {
                 replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
