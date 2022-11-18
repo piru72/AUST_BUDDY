@@ -14,7 +14,6 @@ import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 
 
-
 class TeachersFragment(viewPath: String) : Fragment() {
     private val databaseViewPath = viewPath
     private lateinit var viewModel: teacherViewModel
@@ -34,10 +33,13 @@ class TeachersFragment(viewPath: String) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         userRecyclerView = view.findViewById(R.id.teacher_list)
-       userRecyclerView.layoutManager = LinearLayoutManager(context)
+        userRecyclerView.layoutManager = LinearLayoutManager(context)
         userRecyclerView.setHasFixedSize(true)
-       adapter = teacherAdapter()
-       userRecyclerView.adapter = adapter
+        var userType = "User"
+        if (databaseViewPath == "admin-teacher-request-list")
+            userType = "Admin"
+        adapter = teacherAdapter(userType)
+        userRecyclerView.adapter = adapter
 
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
         viewModel.initialize(databaseViewPath)
@@ -48,8 +50,6 @@ class TeachersFragment(viewPath: String) : Fragment() {
         }
 
     }
-
-
 
 
 }

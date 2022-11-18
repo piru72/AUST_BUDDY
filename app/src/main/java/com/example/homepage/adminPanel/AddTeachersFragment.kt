@@ -11,11 +11,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class AddTeachersFragment(pushPath: String) : ReplaceFragment() {
+class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
     private lateinit var _binding: FragmentAddTeachersBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
-    private val pushingPath = pushPath
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,7 +32,9 @@ class AddTeachersFragment(pushPath: String) : ReplaceFragment() {
             val teacherEmail = binding.teachersEmailText.text.toString()
             val teachersImageLink = binding.teachersImageLinkForm.text.toString()
 
-            if (teachersName == "")
+            if (teachersName.contains("."))
+                makeToast("Provide valid teachers name without . and only alphabets")
+            else if (teachersName == "")
                 makeToast("Provide teachers name")
             else if (teachersDesignation == "")
                 makeToast("Provide teachers designation")
