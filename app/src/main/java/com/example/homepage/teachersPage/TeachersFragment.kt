@@ -15,8 +15,8 @@ import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 
 
 
-class GradingsFragment : Fragment() {
-
+class TeachersFragment(viewPath: String) : Fragment() {
+    private val databaseViewPath = viewPath
     private lateinit var viewModel: teacherViewModel
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: teacherAdapter
@@ -40,7 +40,7 @@ class GradingsFragment : Fragment() {
        userRecyclerView.adapter = adapter
 
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
-
+        viewModel.initialize(databaseViewPath)
         viewModel.allUsers.observe(viewLifecycleOwner) {
 
             adapter.updateUserList(it)

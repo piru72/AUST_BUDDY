@@ -4,14 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.*
 
-class TeacherRepository {
-    //TODO here the name is changed of the parent repo
-    private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("teachers")
+class TeacherRepository(viewPath: String) {
+    private var databaseParentNode= viewPath
+    private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("$databaseParentNode")
     @Volatile private var INSTANCE : TeacherRepository ?= null
     fun getInstance() : TeacherRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = TeacherRepository()
+            val instance = TeacherRepository(databaseParentNode)
             INSTANCE = instance
             instance
         }

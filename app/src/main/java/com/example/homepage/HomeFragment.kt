@@ -10,7 +10,7 @@ import com.example.homepage.homeTab.BusFragment
 import com.example.homepage.homeTab.RequestFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.superClass.WebView
-import com.example.homepage.teachersPage.GradingsFragment
+import com.example.homepage.teachersPage.TeachersFragment
 
 
 class HomeFragment : ReplaceFragment() {
@@ -34,7 +34,7 @@ class HomeFragment : ReplaceFragment() {
             replaceFragment(WebView(getString(R.string.universityOjLink)),currentState)
         }*/
         binding.btnTeachers.setOnClickListener {
-            replaceFragment(GradingsFragment(), currentState)
+            replaceFragment(TeachersFragment("teachers"), currentState)
         }
         binding.btnSyllabus.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universitySyllabusLink)),currentState)
