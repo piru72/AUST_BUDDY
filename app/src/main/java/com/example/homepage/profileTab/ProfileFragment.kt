@@ -139,7 +139,7 @@ class ProfileFragment : ReplaceFragment() {
         }
 
         val newReport =
-            BugReportsData(userId, reportersDetails, reportDescription).toMap()
+            BugReportsData(userId, reportersDetails, reportDescription,key).toMap()
         val childReport = hashMapOf<String, Any>("/admin-bug-reports/$key" to newReport)
         database.updateChildren(childReport)
     }

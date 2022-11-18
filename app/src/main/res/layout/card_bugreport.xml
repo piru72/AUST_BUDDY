@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_list_item_view"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/bugReportDetailsCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/bug_report_details"
+            android:textColor="@color/pure_white"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp">
+
+
+
+            <Button
+                android:id="@+id/showReportersDetailsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_select_image"
+                android:layout_weight="1"
+                android:text="@string/details"
+                android:layout_margin="10sp"/>
+
+            <Button
+                android:id="@+id/deleteBugReportButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_select_image"
+                android:layout_weight="1"
+                android:text="@string/done"
+                android:layout_margin="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
+

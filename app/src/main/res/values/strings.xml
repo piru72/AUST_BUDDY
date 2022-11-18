@@ -178,6 +178,9 @@
     <string name="background_image">Background Image</string>
     <string name="add_courses">Add Courses</string>
     <string name="add_teachers">Add teachers</string>
+    <string name="details">Details</string>
+    <string name="done">Done</string>
+    <string name="bug_report_details">Bug Report Details</string>
 
 
     <string-array name="bookCategoryList">
