@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import com.example.homepage.calculator.CGPAFragment
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.homeTab.BusFragment
-import com.example.homepage.homeTab.GradingsFragment
 import com.example.homepage.homeTab.RequestFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.superClass.WebView
+import com.example.homepage.teachersPage.GradingsFragment
 
 
 class HomeFragment : ReplaceFragment() {

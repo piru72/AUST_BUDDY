@@ -1,4 +1,4 @@
-package com.example.homepage.homeTab
+package com.example.homepage.teachersPage
 
 
 import android.os.Bundle
@@ -13,13 +13,13 @@ import com.example.homepage.R
 import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 
-private lateinit var viewModel: teacherViewModel
-private lateinit var userRecyclerView: RecyclerView
-lateinit var adapter: teacherAdapter
+
 
 class GradingsFragment : Fragment() {
 
-
+    private lateinit var viewModel: teacherViewModel
+    private lateinit var userRecyclerView: RecyclerView
+    lateinit var adapter: teacherAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

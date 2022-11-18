@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import com.example.homepage.R
 import com.example.homepage.adminPanel.bugReports.BugReportListFragment
 import com.example.homepage.adminPanel.courseRequest.CourseRequestListFragment
-import com.example.homepage.adminPanel.teacherRequest.AddTeacherListFragment
 import com.example.homepage.databinding.FragmentAdminPanelBinding
 import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.teachersPage.GradingsFragment
 
 
 class AdminPanelFragment : ReplaceFragment() {
@@ -31,7 +31,7 @@ class AdminPanelFragment : ReplaceFragment() {
             replaceFragment(AddTeachersFragment("teachers"), R.id.fragment_admin_panel)
         }
         binding.btnTeacherRequest.setOnClickListener{
-            replaceFragment(AddTeacherListFragment(),R.id.fragment_admin_panel)
+            replaceFragment(GradingsFragment(),R.id.fragment_admin_panel)
         }
         binding.btnViewBugReports.setOnClickListener{
             replaceFragment(BugReportListFragment(),R.id.fragment_admin_panel)
