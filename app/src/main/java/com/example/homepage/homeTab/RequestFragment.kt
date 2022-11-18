@@ -2,9 +2,16 @@ package com.example.homepage.homeTab
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.PopupWindow
+import com.example.homepage.R
+import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -29,13 +36,50 @@ class RequestFragment : ReplaceFragment() {
         database = Firebase.database.reference
         auth = Firebase.auth
         val user = auth.currentUser!!.uid
-        binding.sendBtn.setOnClickListener {
 
-            val message = binding.message.text.toString()
-            if (message != "")
-                writeNewRequest(user , message)
-            else
-                makeToast("Fill up all the fields")
+
+        binding.btnReportBug.setOnClickListener {
+
+            val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
+
+            val taskDescription = rootLayout.findViewById<EditText>(R.id.BugDescriptionPop)
+            val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
+            val addButton = rootLayout.findViewById<Button>(R.id.sendButton)
+
+            val popupWindow = PopupWindow(
+                rootLayout,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, true
+            )
+
+            popupWindow.update()
+            popupWindow.elevation = 20.5F
+            popupWindow.showAtLocation(
+
+                binding.requestScreen,
+                Gravity.CENTER,
+                0,
+                -500
+            )
+
+            closeButton.setOnClickListener {
+                popupWindow.dismiss()
+            }
+
+            addButton.setOnClickListener {
+
+
+                val reportDescription = taskDescription.text.toString()
+
+                if (reportDescription == "")
+                    makeToast("Please fill up all  the information")
+                else {
+                    setInformation(FirebaseAuth.getInstance().currentUser?.email.toString())
+                    writeNewReport(getCurrentUserId(), getUserEmail(),reportDescription)
+                    popupWindow.dismiss()
+                }
+
+            }
         }
 
         return binding.root
@@ -54,6 +98,23 @@ class RequestFragment : ReplaceFragment() {
         )
         database.updateChildren(childUpdates)
 
+    }
+
+    private fun writeNewReport(
+        userId: String,
+        reportersDetails: String,
+        reportDescription: String
+    ) {
+        val database: DatabaseReference = Firebase.database.reference
+        val key = database.child("posts").push().key
+        if (key == null) {
+            Log.w("TodoActivity", "Couldn't get push key for posts")
+        }
+
+        val newReport =
+            BugReportsData(userId, reportersDetails, reportDescription,key).toMap()
+        val childReport = hashMapOf<String, Any>("/admin-bug-reports/$key" to newReport)
+        database.updateChildren(childReport)
     }
 
 }
