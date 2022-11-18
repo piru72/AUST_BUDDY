@@ -2,8 +2,8 @@ package com.example.homepage.profileTab
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +15,9 @@ import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class ProfileFragment : ReplaceFragment() {
@@ -24,7 +27,7 @@ class ProfileFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
@@ -63,7 +66,7 @@ class ProfileFragment : ReplaceFragment() {
         if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3") {
             binding.btnAddTeacherCourse.visibility = View.VISIBLE
             binding.btnAddTeacherCourse.setOnClickListener {
-                    replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
+                replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
             }
         } else
             binding.btnAddTeacherCourse.visibility = View.INVISIBLE
@@ -103,9 +106,9 @@ class ProfileFragment : ReplaceFragment() {
             addButton.setOnClickListener {
 
 
-                val description = taskDescription.text.toString()
+                val reportDescription = taskDescription.text.toString()
 
-                if (description == "")
+                if (reportDescription == "")
                     Toast.makeText(
                         context,
                         "Please fill up all  the information",
@@ -113,18 +116,28 @@ class ProfileFragment : ReplaceFragment() {
                     ).show()
                 else {
 
-                    val email = "unibuddy890@gmail.com"
-                    val addresses = email.split(",".toRegex()).toTypedArray()
-                    val intent = Intent(Intent.ACTION_SENDTO).apply {
-                        data = Uri.parse("mailto:")
-                        putExtra(Intent.EXTRA_EMAIL, addresses)
-                        putExtra(Intent.EXTRA_SUBJECT, "FIX THE BUG OF UNIBUDDY")
-                        putExtra(Intent.EXTRA_TEXT, description)
+                    val userId = getCurrentUserId()
+                    val email = FirebaseAuth.getInstance().currentUser?.email.toString()
+                    setInformation(email)
+                    val reportersDetails =
+                        getUserName() + " " + getUserEmail() + " " + getUserId() + " " + getSession() + " " + getDepartment()
+                    val database: DatabaseReference = Firebase.database.reference
+                    val key = database.child("posts").push().key
+                    if (key == null) {
+                        Log.w("TodoActivity", "Couldn't get push key for posts")
                     }
-                    startActivity(intent)
+
+                    val newReport = mapOf(
+                        "userId" to userId,
+                        "reportersDetails" to reportersDetails,
+                        "reportDetails" to reportDescription
+                    )
+                    val childReport = hashMapOf<String, Any>("/admin-bug-reports/$key" to newReport)
+                    database.updateChildren(childReport)
+                    popupWindow.dismiss()
 
                 }
-                popupWindow.dismiss()
+
             }
         }
 
