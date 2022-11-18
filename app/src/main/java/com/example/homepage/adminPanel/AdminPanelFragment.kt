@@ -24,11 +24,11 @@ class AdminPanelFragment : ReplaceFragment() {
         _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)
         binding.btnAddCoursesAdmin.setOnClickListener{
 
-            replaceFragment(AddCourseFragment(), R.id.fragment_admin_panel)
+            replaceFragment(AddCourseFragment("course-list"), R.id.fragment_admin_panel)
         }
         binding.btnAddTeachersAdmin.setOnClickListener{
 
-            replaceFragment(AddTeachersFragment(), R.id.fragment_admin_panel)
+            replaceFragment(AddTeachersFragment("teachers"), R.id.fragment_admin_panel)
         }
         binding.btnTeacherRequest.setOnClickListener{
             replaceFragment(AddTeacherListFragment(),R.id.fragment_admin_panel)

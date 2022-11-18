@@ -11,6 +11,8 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import com.example.homepage.R
+import com.example.homepage.adminPanel.AddCourseFragment
+import com.example.homepage.adminPanel.AddTeachersFragment
 import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.superClass.ReplaceFragment
@@ -36,6 +38,12 @@ class RequestFragment : ReplaceFragment() {
         database = Firebase.database.reference
         auth = Firebase.auth
         val user = auth.currentUser!!.uid
+        binding.btnRequestForCourse.setOnClickListener{
+            replaceFragment(AddCourseFragment("admin-course-request-list"),R.id.requestScreen)
+        }
+        binding.btnRequestForTeacher.setOnClickListener {
+            replaceFragment(AddTeachersFragment("admin-teacher-request-list"), R.id.requestScreen)
+        }
 
 
         binding.btnReportBug.setOnClickListener {
@@ -85,20 +93,7 @@ class RequestFragment : ReplaceFragment() {
         return binding.root
     }
 
-    private fun writeNewRequest(userId :String ,message: String) {
 
-        val key = database.child("posts").push().key
-        if (key == null) {
-            Log.w("TodoActivity", "Couldn't get push key for posts")
-            return
-        }
-        val requestMessage = mapOf("message" to message, "userId" to userId)
-        val childUpdates = hashMapOf<String, Any>(
-            "/material-request-list/$key" to requestMessage
-        )
-        database.updateChildren(childUpdates)
-
-    }
 
     private fun writeNewReport(
         userId: String,

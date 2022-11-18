@@ -11,10 +11,11 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class AddTeachersFragment : ReplaceFragment() {
+class AddTeachersFragment(pushPath: String) : ReplaceFragment() {
     private lateinit var _binding: FragmentAddTeachersBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
+    private val pushingPath = pushPath
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +23,8 @@ class AddTeachersFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
+        if (pushingPath == "admin-teacher-request-list")
+            binding.addTeachersButtonForm.text = "Request for adding teacher"
 
         binding.addTeachersButtonForm.setOnClickListener {
             val teachersName = binding.teachersName.text.toString()
@@ -85,7 +88,7 @@ class AddTeachersFragment : ReplaceFragment() {
         )
         val teachersInformation = newTeacher.toMap()
         val childUpdate = hashMapOf<String, Any>(
-            "/teachers/$teachersName" to teachersInformation
+            "/$pushingPath/$teachersName" to teachersInformation
         )
         database.updateChildren(childUpdate)
 

@@ -12,10 +12,11 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
-class AddCourseFragment : ReplaceFragment() {
+class AddCourseFragment(pushPath: String) : ReplaceFragment() {
     private lateinit var _binding: FragmentAddCourseBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
+    private var pushingPath = pushPath
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,6 +24,8 @@ class AddCourseFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAddCourseBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
+        if (pushingPath == "admin-course-request-list")
+            binding.addCourseButtonForm.text = "Request for adding course"
         binding.addCourseButtonForm.setOnClickListener {
             val courseCode = binding.courseCode.text.toString()
             val courseName = binding.courseName.text.toString()
@@ -75,7 +78,7 @@ class AddCourseFragment : ReplaceFragment() {
         val newCourse = CourseData(courseCode, courseName, courseDriveLink)
         val courseDetails = newCourse.toMap()
         val childUpdates = hashMapOf<String, Any>(
-            "/course-list/$department/$yearSemester/$courseCode" to courseDetails
+            "/$pushingPath/$department/$yearSemester/$courseCode" to courseDetails
         )
         database.updateChildren(childUpdates)
     }
