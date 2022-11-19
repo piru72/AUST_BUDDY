@@ -7,19 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.courseTab.Model.CourseData
+import com.google.firebase.database.FirebaseDatabase
 
 
-class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private var userType: String) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     private val userList = ArrayList<CourseData>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
-            R.layout.user_item,
+            R.layout.card_courses,
             parent, false
         )
         return MyViewHolder(itemView)
@@ -29,10 +31,31 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         val currentItem = userList[position]
+        val context = holder.itemView.context
 
         holder.courseCode.text = currentItem.courseCode
         holder.courseName.text = currentItem.courseName
         //holder.exploreButton.text = currentItem.driveLink
+
+        if (userType == "user")
+        {
+            holder.declineButton.visibility = View.INVISIBLE
+            holder.approveButton.visibility = View.INVISIBLE
+        }
+        else
+        {
+            val requestCourseReference =
+                FirebaseDatabase.getInstance().getReference("admin-course-request-list")
+            holder.declineButton.setOnClickListener {
+                currentItem.courseCode?.let { it1 -> requestCourseReference.child(it1).removeValue() }
+                Toast.makeText(context, "Course request has been declined", Toast.LENGTH_SHORT).show()
+            }
+            holder.approveButton.setOnClickListener {
+
+            }
+
+        }
+
 
         // TODO setup the link in here
         holder.exploreButton.setOnClickListener {
@@ -70,6 +93,8 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         val courseName: TextView = itemView.findViewById(R.id.tvCourseName)
         val exploreButton: Button = itemView.findViewById(R.id.exploreButton)
         val shareButton: Button = itemView.findViewById(R.id.shareButton)
+        val approveButton: Button = itemView.findViewById(R.id.courseApproveButton)
+        val declineButton: Button = itemView.findViewById(R.id.courseDeclineButton)
 
     }
 

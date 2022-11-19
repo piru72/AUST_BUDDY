@@ -33,7 +33,11 @@ class ViewCourses(path: String) : ReplaceFragment() {
         userRecyclerView = view.findViewById(R.id.recyclerView)
         userRecyclerView.layoutManager = LinearLayoutManager(context)
         userRecyclerView.setHasFixedSize(true)
-        adapter = MyAdapter()
+
+        adapter = if (semesterSelected == "admin-course-request-list")
+            MyAdapter("admin")
+        else
+            MyAdapter("user")
         userRecyclerView.adapter = adapter
 
         var viewModel: UserViewModel = ViewModelProvider(this)[UserViewModel::class.java]

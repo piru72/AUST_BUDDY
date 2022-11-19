@@ -186,6 +186,8 @@
     <string name="share_contact">Share Contact</string>
     <string name="email">Email</string>
     <string name="call">Call</string>
+    <string name="decline_course">Decline course</string>
+    <string name="approve_course">Approve Course</string>
 
 
     <string-array name="bookCategoryList">
