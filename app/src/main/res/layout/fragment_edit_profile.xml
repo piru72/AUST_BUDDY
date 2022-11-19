@@ -5,7 +5,7 @@
     android:id="@+id/fragment_edit_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bk_shape03"
     tools:context=".profileTab.ProfileFragment">
 
 
