@@ -83,10 +83,10 @@
     <LinearLayout
         android:id="@+id/teacherImageLink"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/teachersEmailFormInput"
         android:orientation="horizontal"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="5dp">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +107,10 @@
             android:layout_height="wrap_content"
             android:layout_weight=".5"
             android:background="@drawable/rounded_list_item_view"
-            android:text="@string/choose_from_phone" />
+            android:text="@string/choose_from_phone"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_light"
+            />
     </LinearLayout>
 
     <Button
@@ -118,7 +121,9 @@
         android:layout_below="@id/teacherImageLink"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_list_item_view"
-        android:text="@string/add_teacher" />
+        android:text="@string/add_teacher"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_light"/>
 
 
 </RelativeLayout>
