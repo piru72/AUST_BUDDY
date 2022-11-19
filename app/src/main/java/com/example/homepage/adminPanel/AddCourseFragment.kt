@@ -62,7 +62,6 @@ class AddCourseFragment(pushPath: String) : ReplaceFragment() {
             }
 
 
-
         }
         return binding.root
     }
@@ -74,13 +73,23 @@ class AddCourseFragment(pushPath: String) : ReplaceFragment() {
         department: String,
         yearSemester: String
     ) {
-
-        val newCourse = CourseData(courseCode, courseName, courseDriveLink)
+        val requestingPath = "$department $yearSemester $courseCode"
+        val newCourse = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
         val courseDetails = newCourse.toMap()
-        val childUpdates = hashMapOf<String, Any>(
-            "/$pushingPath/$department/$yearSemester/$courseCode" to courseDetails
-        )
-        database.updateChildren(childUpdates)
+        if (pushingPath == "admin-course-request-list") {
+            val childUpdateRequest = hashMapOf<String, Any>(
+                "/$pushingPath/$courseCode" to courseDetails
+            )
+            database.updateChildren(childUpdateRequest)
+        } else {
+            val childUpdateAdmin = hashMapOf<String, Any>(
+                "/$pushingPath/$department/$yearSemester/$courseCode" to courseDetails
+            )
+
+            database.updateChildren(childUpdateAdmin)
+        }
+
+
     }
 
 

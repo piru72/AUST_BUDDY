@@ -7,7 +7,7 @@ import com.google.firebase.database.*
 class UserRepository(semesterSelected: String) {
     private var semesterSelected = semesterSelected
     private val databaseReference: DatabaseReference =
-        FirebaseDatabase.getInstance().getReference("course-list/$semesterSelected")
+        FirebaseDatabase.getInstance().getReference(semesterSelected)
 
     @Volatile
     private var INSTANCE: UserRepository? = null

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.R
 import com.example.homepage.adminPanel.bugReports.BugReportListFragment
-import com.example.homepage.adminPanel.courseRequest.CourseRequestListFragment
+import com.example.homepage.courseTab.ViewCourses
 import com.example.homepage.databinding.FragmentAdminPanelBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeachersFragment
@@ -37,7 +37,7 @@ class AdminPanelFragment : ReplaceFragment() {
             replaceFragment(BugReportListFragment(),R.id.fragment_admin_panel)
         }
         binding.btnViewCourseRequest.setOnClickListener{
-            replaceFragment(CourseRequestListFragment(),R.id.fragment_admin_panel)
+            replaceFragment(ViewCourses("admin-course-request-list"),R.id.fragment_admin_panel)
         }
         return binding.root
     }

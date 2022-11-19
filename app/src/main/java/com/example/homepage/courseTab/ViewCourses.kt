@@ -13,10 +13,8 @@ import com.example.homepage.courseTab.Model.UserViewModel
 import com.example.homepage.superClass.ReplaceFragment
 
 
-
-
 class ViewCourses(path: String) : ReplaceFragment() {
-    private var semesterSelected= path
+    private var semesterSelected = path
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: MyAdapter
 
@@ -27,7 +25,6 @@ class ViewCourses(path: String) : ReplaceFragment() {
         container?.removeAllViews()
         return inflater.inflate(R.layout.fragment_view_courses, container, false)
     }
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,6 +38,8 @@ class ViewCourses(path: String) : ReplaceFragment() {
 
         var viewModel: UserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
+        if (semesterSelected != "admin-course-request-list")
+            semesterSelected = "course-list/$semesterSelected"
         viewModel.initialize(semesterSelected)
         viewModel.allUsers.observe(viewLifecycleOwner) {
 

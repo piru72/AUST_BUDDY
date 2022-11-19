@@ -13,7 +13,7 @@ class UserViewModel : ViewModel() {
 
 
     fun initialize(semesterSelected: String) {
-        repository = UserRepository(semesterSelected ).getInstance()
+        repository = UserRepository(semesterSelected).getInstance()
         repository.loadUsers(_allUsers)
     }
 
