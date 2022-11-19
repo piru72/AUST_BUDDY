@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bk_shape03"
     android:id="@+id/fragment_profile"
-    tools:context=".profileTab.ProfileFragment">
+    tools:context=".profileTab.ProfileFragment"
+    >
 
 
 
@@ -83,15 +84,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
 
-                android:background="@drawable/rounded_list_item_view"
+
                 android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="@color/pure_white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:paddingStart="10dp"
                 android:text="My Profile"
-                android:textColor="@color/text_black"
+                android:focusable="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:visibility="visible"
+                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <Button
@@ -100,13 +106,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="8dp"
+
                 android:drawableStart="@drawable/ic_baseline_privacy_tip_24"
-                android:drawableTint="@color/pure_white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:paddingStart="10dp"
                 android:text="@string/privacy_policy"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:elevation="10dp"
                 android:visibility="visible"
                 tools:ignore="RtlSymmetry" />
 
@@ -122,7 +133,8 @@
                 android:drawableTint="@color/pure_white"
                 android:paddingStart="10dp"
                 android:text="@string/settings"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 tools:ignore="RtlSymmetry"
                 android:visibility="gone"/>
 
@@ -132,13 +144,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="8dp"
+
                 android:drawableStart="@drawable/ic_baseline_insert_invitation_24"
-                android:drawableTint="@color/pure_white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:paddingStart="10dp"
+                android:focusable="true"
                 android:text="@string/invite_a_friend"
-                android:textColor="#0D47A1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <Button
@@ -153,7 +170,8 @@
                 android:drawableTint="@color/pure_white"
                 android:paddingStart="10dp"
                 android:text="@string/log_out"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:visibility="gone"
                 tools:ignore="RtlSymmetry" />
 
@@ -169,8 +187,10 @@
                 android:drawableTint="@color/pure_white"
                 android:paddingStart="10dp"
                 android:text="@string/about_devs"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:visibility="gone"
+                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
 
@@ -180,14 +200,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="8dp"
+
                 android:drawableStart="@drawable/ic_baseline_bug_report_24"
-                android:drawableTint="@color/pure_white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:paddingStart="10dp"
+                android:focusable="true"
                 android:text="Admin Dash Board"
-                android:textColor="@color/text_black"
-                tools:ignore="RtlSymmetry" />
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                tools:ignore="RtlSymmetry"
+                android:elevation="10dp"
+
+                />
 
 
 

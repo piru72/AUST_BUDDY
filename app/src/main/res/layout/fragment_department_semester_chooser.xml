@@ -22,7 +22,7 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="10dp"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-           android:drawableTint="#000"
+
             android:paddingStart="8dp"
             android:text="1st Year 1st Semester"
 
@@ -31,6 +31,7 @@
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
+            android:drawableTint="#000"
 
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
