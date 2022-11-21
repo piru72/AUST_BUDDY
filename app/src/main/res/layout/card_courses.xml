@@ -74,8 +74,8 @@
                     android:autoLink="web"
                     android:background="@color/background_color_50"
                     android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:fontFamily="@font/poppins_light"
                     android:linksClickable="true"
                     android:elevation="10dp"
                     android:text="@string/explore" />
