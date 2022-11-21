@@ -8,7 +8,7 @@
         android:layout_margin="5dp"
         android:background="@color/card_bk"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="8dp">
 
 
         <LinearLayout

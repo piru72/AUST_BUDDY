@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
 
     <LinearLayout
@@ -10,7 +11,7 @@
         android:layout_margin="10dp"
         android:padding="20dp"
         android:orientation="horizontal"
-        android:background="@drawable/rounded_list_item_view">
+        android:background="@color/card_bk">
 
 
 
@@ -30,15 +31,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/quiz_name"
-                android:textColor="@color/pure_white"
-                android:textSize="30sp" />
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="25sp" />
             <TextView
                 android:id="@+id/taskDateCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="Quiz Date"
-                android:textColor="@color/pure_white"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:textSize="20sp" />
 
 
@@ -47,7 +50,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/quiz_syllabus"
-                android:textColor="@color/pure_white"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:textSize="18sp">
 
             </TextView>
@@ -59,9 +63,13 @@
             android:layout_width="98dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/rounded_select_image"
+
             android:text="Done"
-            android:textColor="#01579B"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:textStyle="bold"
             tools:ignore="TextContrastCheck" />
 
