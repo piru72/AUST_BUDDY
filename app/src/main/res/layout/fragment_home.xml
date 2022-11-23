@@ -36,7 +36,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_iums"
+                    android:id="@+id/btn_syllabus"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -61,15 +61,17 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
+
+
                             android:padding="20dp"
-                            android:src="@drawable/iumsweb"
+                            android:src="@drawable/syllabus"
                             app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="IUMS"
+                            android:text="SYLLABUS"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -115,10 +117,8 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
-
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_teachers"
+                    android:id="@+id/btn_iums"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -143,17 +143,15 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
-
-
                             android:padding="20dp"
-                            android:src="@drawable/teacher"
+                            android:src="@drawable/iumsweb"
                             app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="TEACHERS"
+                            android:text="IUMS"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -166,48 +164,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_syllabus"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
-                            android:padding="20dp"
-                            android:src="@drawable/syllabus"
-                            app:tint="#000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="SYLLABUS"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
 
                 <androidx.cardview.widget.CardView
@@ -247,6 +203,49 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
                             android:text="CALENDER"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_cgpa"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_color_50"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="10dp"
+
+
+                            android:padding="20dp"
+                            android:src="@drawable/cgpa"
+                            app:tint="#000"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="CGPA"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -302,7 +301,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_cgpa"
+                    android:id="@+id/btn_teachers"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -330,15 +329,14 @@
 
 
                             android:padding="20dp"
-                            android:src="@drawable/cgpa"
-                            app:tint="#000"
-                            tools:ignore="ImageContrastCheck" />
+                            android:src="@drawable/teacher"
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="CGPA"
+                            android:text="TEACHERS"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -354,9 +352,11 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:visibility="gone"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    app:cardElevation="5dp"
+                    tools:visibility="gone">
 
 
                     <LinearLayout
