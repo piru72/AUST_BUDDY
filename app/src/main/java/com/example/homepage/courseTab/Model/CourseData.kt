@@ -4,15 +4,15 @@ class CourseData(
     var courseCode: String? = null,
     var courseName: String? = null,
     var driveLink: String? = null,
-    var requestingPath: String? = null
+    var coursePath: String? = null
 ){
     fun toMap(): Map<String, Any?> {
 
         return mapOf(
             "courseCode" to courseCode,
             "courseName" to courseName,
-            "courseDriveLink" to driveLink,
-            "coursePath" to requestingPath
+            "driveLink" to driveLink,
+            "coursePath" to coursePath
         )
     }
 }

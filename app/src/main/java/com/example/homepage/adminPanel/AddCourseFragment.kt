@@ -73,7 +73,7 @@ class AddCourseFragment(pushPath: String) : ReplaceFragment() {
         department: String,
         yearSemester: String
     ) {
-        val requestingPath = "$department $yearSemester $courseCode"
+        val requestingPath = "$department/$yearSemester/$courseCode"
         val newCourse = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
         val courseDetails = newCourse.toMap()
         if (pushingPath == "admin-course-request-list") {
