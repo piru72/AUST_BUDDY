@@ -113,6 +113,8 @@
         android:layout_below="@id/diveLinkFormInput"
         android:layout_marginTop="58dp"
         android:text="@string/add_course"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_list_item_view" />
 
 

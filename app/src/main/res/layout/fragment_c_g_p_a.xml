@@ -45,7 +45,7 @@
                 android:layout_weight="3"
                 android:background="@color/primary_green"
                 android:text="@string/select"
-                android:textColor="@color/text_black" />
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -83,9 +83,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp"
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -113,9 +116,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -142,9 +148,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -171,9 +180,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -200,9 +212,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -229,9 +244,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -258,9 +276,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -287,9 +308,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -316,9 +341,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -346,9 +374,12 @@
 
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="@string/credit"
-                    android:textColor="@color/text_black"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
+                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -372,7 +403,7 @@
                 android:layout_weight="1"
                 android:background="@color/primary_green"
                 android:text="@string/calculate"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
 
                 tools:ignore="DuplicateSpeakableTextCheck" />
@@ -423,7 +454,8 @@
                 android:layout_weight="1"
                 android:text="@string/please_select_your_semester_above"
                 android:textAlignment="center"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
                 android:textSize="30sp" />
         </LinearLayout>
 

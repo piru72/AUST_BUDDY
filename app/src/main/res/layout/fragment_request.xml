@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bk_shape03"
     android:id="@+id/requestScreen"
     tools:context=".profileTab.ProfileFragment">
 
@@ -33,13 +33,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="@color/pure_white"
+
                 android:paddingStart="10dp"
                 android:text="Request for course"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                android:focusable="true"
                 android:visibility="visible"/>
 
             <Button
@@ -48,13 +52,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="@color/pure_white"
+
                 android:paddingStart="10dp"
                 android:text="Request for teacher"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                android:focusable="true"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/btn_report_bug"
@@ -62,13 +70,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:layout_marginBottom="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@color/background_color_50"
+                android:drawableTint="#000"
                 android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="@color/pure_white"
+
                 android:paddingStart="10dp"
                 android:text="Report a bug / Request feature"
-                android:textColor="@color/text_black"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_light"
+                android:focusable="true"
                 android:visibility="visible"/>
 
 

@@ -62,7 +62,7 @@
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
                             android:padding="20dp"
-                            android:src="@drawable/iums"
+                            android:src="@drawable/iumsweb"
                             app:tint="#000" />
 
                         <TextView
@@ -439,7 +439,7 @@
                 android:id="@+id/btn_favourite_web_page"
                 android:layout_width="0dp"
                 android:layout_height="130dp"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
@@ -462,7 +462,7 @@
                         android:layout_height="80dp"
 
                         android:padding="20dp"
-                        android:src="@drawable/request"
+                        android:src="@drawable/favourite_links"
                         app:tint="#000" />
 
                     <TextView

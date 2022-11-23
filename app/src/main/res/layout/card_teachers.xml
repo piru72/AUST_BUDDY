@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="5dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    app:cardBackgroundColor="@color/card_bk"
+    app:cardElevation="6dp">
 
     <LinearLayout
 
@@ -31,6 +32,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
                 android:textAlignment="center"/>
 
 
@@ -39,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/assistant_professor"
+                android:fontFamily="@font/poppins_light"
                 android:textAlignment="center"/>
 
 
@@ -53,7 +56,10 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:text="@string/call"
-                    android:background="@color/primary_green"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_margin="4dp"/>
 
                 <Button
@@ -62,7 +68,10 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:text="@string/email"
-                    android:background="@color/primary_green"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_margin="4dp"/>
             </LinearLayout>
 
@@ -71,7 +80,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_margin="4dp"
-                android:background="@color/primary_green"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_light"
                 android:text="@string/share_contact" />
 
             <LinearLayout
@@ -86,7 +98,10 @@
                     android:layout_height="30dp"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:background="@color/primary_green"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/decline" />
 
                 <Button
@@ -95,7 +110,10 @@
                     android:layout_height="30dp"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:background="@color/primary_green"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/approve" />
             </LinearLayout>
 
