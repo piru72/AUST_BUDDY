@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.groupTab.Group.Model.GroupData
+import com.example.homepage.groupTab.groupNotices.GroupNoticesFragment
 
 class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHolder>() {
     private val groups = ArrayList<GroupData>()
@@ -23,6 +25,15 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
         val currentGroup = groups[position]
         holder.groupName.text = currentGroup.groupName.toString()
         holder.groupCreatorName.text = currentGroup.groupDetails.toString()
+
+        holder.itemView.setOnClickListener { v ->
+            val activity = v!!.context as AppCompatActivity
+            val webFragment = GroupNoticesFragment(currentGroup.groupId.toString())
+            activity.supportFragmentManager.beginTransaction()
+                .replace(R.id.userGroupFragment, webFragment).addToBackStack(
+                "tag"
+            ).commit()
+        }
     }
 
     override fun getItemCount(): Int {
