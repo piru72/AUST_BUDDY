@@ -5,7 +5,8 @@ data class GroupData(
     var universityId: String? = "",
     var groupName: String? = "",
     var groupDetails: String? = "",
-    var path: String? = ""
+    var path: String? = "",
+    val groupId: String
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
@@ -13,7 +14,8 @@ data class GroupData(
             "universityId" to universityId,
             "groupName" to groupName,
             "groupDetails" to groupDetails,
-            "path" to path
+            "path" to path,
+            "groupId" to groupId
         )
     }
 
