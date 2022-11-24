@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     tools:context=".groupTab.JoinGroupFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/registration"
+        android:layout_marginTop="20sp"
+        android:id="@+id/startingImage"
+        android:paddingBottom="20dp"
+        android:contentDescription="@string/a_background_image" />
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/groupIdFormInput"
+        android:layout_below="@id/startingImage"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/groupId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Provide Group Id"
+            android:inputType="textShortMessage" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+
+        android:id="@+id/joinGroupButtonForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupIdFormInput"
+        android:layout_marginTop="58dp"
+        android:text="Join Group"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_list_item_view" />
+
+
+
+</RelativeLayout>
