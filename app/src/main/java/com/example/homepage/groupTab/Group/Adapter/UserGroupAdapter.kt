@@ -22,6 +22,7 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
     override fun onBindViewHolder(holder: UserGroupViewHolder, position: Int) {
         val currentGroup = groups[position]
         holder.groupName.text = currentGroup.groupName.toString()
+        holder.groupCreatorName.text = currentGroup.groupDetails.toString()
     }
 
     override fun getItemCount(): Int {
