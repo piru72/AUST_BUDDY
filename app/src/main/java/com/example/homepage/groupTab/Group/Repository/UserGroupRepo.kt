@@ -12,44 +12,34 @@ class UserGroupRepo {
     val user = auth.currentUser!!.uid
     private val groupReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("user-groups").child(user)
-
-    @Volatile
     private var INSTANCE: UserGroupRepo? = null
 
     fun getInstance(): UserGroupRepo {
         return INSTANCE ?: synchronized(this) {
-
             val instance = UserGroupRepo()
             INSTANCE = instance
             instance
         }
-
     }
 
     fun loadUserGroups(allGroups: MutableLiveData<List<GroupData>>) {
 
         groupReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 try {
-
-                    val groupList : List<GroupData> = snapshot.children.map { dataSnapshot ->
-
+                    val groupList: List<GroupData> = snapshot.children.map { dataSnapshot ->
                         dataSnapshot.getValue(GroupData::class.java)!!
-
                     }
                     allGroups.postValue(groupList)
-
-                }catch (_: Exception){
+                }
+                catch (_: Exception) {
 
                 }
-
             }
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
 
         })
     }

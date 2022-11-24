@@ -27,7 +27,7 @@ class UserGroupsFragment : ReplaceFragment() {
     private val binding get() = _binding!!
     private lateinit var viewModel: UserGroupsViewModel
     private lateinit var recycler: RecyclerView
-    private var adapter: UserGroupAdapter? = null
+    private lateinit var adapter: UserGroupAdapter
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
@@ -58,7 +58,7 @@ class UserGroupsFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.ToDoActivity, // Location to display popup window
+                binding.userGroupFragment, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -86,13 +86,11 @@ class UserGroupsFragment : ReplaceFragment() {
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = UserGroupAdapter()
-
         recycler.adapter = adapter
-        makeToast(adapter!!.itemCount.toString())
         viewModel = ViewModelProvider(this)[UserGroupsViewModel::class.java]
 
         viewModel.allUserGroups.observe(viewLifecycleOwner) {
-            adapter!!.updateUserGroupList(it)
+            adapter.updateUserGroupList(it)
         }
 
     }

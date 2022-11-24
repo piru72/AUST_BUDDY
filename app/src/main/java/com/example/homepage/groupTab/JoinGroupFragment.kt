@@ -48,7 +48,7 @@ class JoinGroupFragment : ReplaceFragment() {
             FirebaseDatabase.getInstance().getReference("group-list/$rollOmittedUserId/$groupId")
 
         val toPath =
-            FirebaseDatabase.getInstance().getReference("user-groups/$groupId")
+            FirebaseDatabase.getInstance().getReference("user-groups/$userId/$groupId")
 
 
         moveGameRoom(fromPath, toPath)

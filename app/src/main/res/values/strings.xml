@@ -188,6 +188,7 @@
     <string name="call">Call</string>
     <string name="decline_course">Decline course</string>
     <string name="approve_course">Approve Course</string>
+    <string name="plus_button">plus button</string>
 
 
     <string-array name="bookCategoryList">
