@@ -1,4 +1,4 @@
-package com.example.homepage.scheduleTab.scheduleModel
+package com.example.homepage.groupTab.scheduleModel
 
 data class ScheduleData(
 

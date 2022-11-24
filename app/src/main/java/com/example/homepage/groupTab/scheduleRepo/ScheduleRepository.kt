@@ -1,7 +1,7 @@
-package com.example.homepage.scheduleTab.scheduleRepo
+package com.example.homepage.groupTab.scheduleRepo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
+import com.example.homepage.groupTab.scheduleModel.ScheduleData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase

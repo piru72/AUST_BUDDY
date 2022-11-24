@@ -1,28 +1,28 @@
-package com.example.homepage.scheduleTab
+package com.example.homepage.groupTab
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
-import androidx.fragment.app.Fragment
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentSchedulesBinding
-import com.example.homepage.scheduleTab.scheduleAdapter.ScheduleAdapter
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleViewModel
+import com.example.homepage.groupTab.scheduleAdapter.ScheduleAdapter
+import com.example.homepage.groupTab.scheduleModel.ScheduleViewModel
+import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class SchedulesFragment : Fragment() {
+class SchedulesFragment : ReplaceFragment() {
     private var _binding: FragmentSchedulesBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: ScheduleViewModel
@@ -43,13 +43,10 @@ class SchedulesFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
 
             binding.informativeText.text=""
-            val rootLayout = layoutInflater.inflate(R.layout.custom_popup, null)
+            val rootLayout = layoutInflater.inflate(R.layout.popup_create_join_class, null)
 
-            val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
-            val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
-            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
-            val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
-            val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
+            val joinButton = rootLayout.findViewById<Button>(R.id.joinButton)
+            val createButton = rootLayout.findViewById<Button>(R.id.createButton)
 
             val popupWindow = PopupWindow(
                 rootLayout,
@@ -67,53 +64,19 @@ class SchedulesFragment : Fragment() {
                 -500// Y offset
             )
 
-            closeButton.setOnClickListener {
-                popupWindow.dismiss()
+            joinButton.setOnClickListener {
+                replaceFragment(JoinGroupFragment(),R.id.fragment_group)
+            }
+            createButton.setOnClickListener {
+                replaceFragment(CreateGroupFragment(),R.id.fragment_group)
             }
 
-            addButton.setOnClickListener {
 
-                val name = taskName.text.toString()
-                val description = taskDescription.text.toString()
-                val date = taskDate.text.toString()
-
-                if(name == "" || description=="")
-                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
-                else
-                    writeNewTask(user, name, description, date)
-
-
-
-                popupWindow.dismiss()
-            }
 
         }
         return binding.root
     }
-    private fun writeNewTask(
-        userId: String,
-        taskName: String,
-        taskDescription: String,
-        taskDate: String
-    ) {
-        // Create new post at /user-posts/$userid/$postid and at
-        // /posts/$postid simultaneously
-        val key = database.child("posts").push().key
-        if (key == null) {
-            Log.w("TodoActivity", "Couldn't get push key for posts")
-            return
-        }
 
-        val newtask = ScheduleData(userId, taskName, taskDescription, taskDate)
-        val taskValues = newtask.toMap()
-        val childUpdates = hashMapOf<String, Any>(
-            //*   "/tasks/$key" to taskValues,
-            "/user-tasks/$userId/$key" to taskValues
-        )
-
-        database.updateChildren(childUpdates)
-
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

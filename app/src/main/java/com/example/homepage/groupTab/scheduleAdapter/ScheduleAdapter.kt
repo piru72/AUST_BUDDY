@@ -1,4 +1,4 @@
-package com.example.homepage.scheduleTab.scheduleAdapter
+package com.example.homepage.groupTab.scheduleAdapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
+import com.example.homepage.groupTab.scheduleModel.ScheduleData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase

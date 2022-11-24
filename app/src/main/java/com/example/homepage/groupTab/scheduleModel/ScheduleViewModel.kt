@@ -1,9 +1,9 @@
-package com.example.homepage.scheduleTab.scheduleModel
+package com.example.homepage.groupTab.scheduleModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.homepage.scheduleTab.scheduleRepo.ScheduleRepository
+import com.example.homepage.groupTab.scheduleRepo.ScheduleRepository
 
 class ScheduleViewModel : ViewModel(){
 

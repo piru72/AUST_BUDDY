@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scheduleTab.SchedulesFragment"
+    tools:context=".groupTab.SchedulesFragment"
+    android:id="@+id/fragment_group"
     android:background="@drawable/bk_shape03">
 
     <RelativeLayout

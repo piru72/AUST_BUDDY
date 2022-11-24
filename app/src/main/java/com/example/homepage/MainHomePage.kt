@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.homepage.courseTab.DepartmentSemesterChooserFragment
 import com.example.homepage.databinding.ActivityMainHomePageBinding
 import com.example.homepage.profileTab.ProfileFragment
-import com.example.homepage.scheduleTab.SchedulesFragment
+import com.example.homepage.groupTab.SchedulesFragment
 import com.example.homepage.storeTab.StoreFragment
 
 class MainHomePage : AppCompatActivity() {
