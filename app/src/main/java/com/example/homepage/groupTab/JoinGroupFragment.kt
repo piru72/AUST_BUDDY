@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import com.example.homepage.databinding.FragmentJoinGroupBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -43,13 +42,34 @@ class JoinGroupFragment : ReplaceFragment() {
         return binding.root
     }
 
-    private fun addNewGroup(userId: Any, rollOmittedUserId: String, groupId: String) {
-        val requestedGroupPath = "group-list/$rollOmittedUserId/$groupId"
+    private fun addNewGroup(userId: String, rollOmittedUserId: String, groupId: String) {
 
-        val pushingPath = "user-group/$userId/$groupId"
-        val requestedChild =
-            FirebaseDatabase.getInstance().getReference("group-list").child(rollOmittedUserId)
-                .child(groupId).get()
+        val fromPath =
+            FirebaseDatabase.getInstance().getReference("group-list/$rollOmittedUserId")
+
+        val toPath =
+            FirebaseDatabase.getInstance().getReference("user-groups/$userId")
+
+
+        moveGameRoom(fromPath, toPath)
+    }
+
+    private fun moveGameRoom(fromPath: DatabaseReference, toPath: DatabaseReference) {
+        fromPath.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                toPath.setValue(
+                    dataSnapshot.value
+                ) { firebaseError, _ ->
+                    if (firebaseError != null) {
+                        makeToast("Joining to group failed")
+                    } else {
+                        makeToast("Joining to group success")
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
     }
 
 
