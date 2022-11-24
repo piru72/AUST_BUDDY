@@ -15,16 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="600dp"
-        app:backgroundTint="@color/white"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:contentDescription="@string/plus_button" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/floatingActionButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="600dp"-->
+<!--        app:backgroundTint="@color/white"-->
+<!--        app:fabSize="normal"-->
+<!--        app:srcCompat="@android:drawable/ic_input_add"-->
+<!--        android:contentDescription="@string/plus_button" />-->
 
 
 
