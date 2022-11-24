@@ -74,7 +74,8 @@ class CreateGroupFragment : ReplaceFragment() {
         val newGroup = GroupData(userEmail, universityId, groupName, groupDetails, pushingPath,key)
         val groupDetailsChild = newGroup.toMap()
         val groupChild = hashMapOf<String, Any>(
-            "$pushingPath" to groupDetailsChild
+            "$pushingPath" to groupDetailsChild,
+            "user-groups/${getCurrentUserId()}/$key" to groupDetailsChild
         )
         database.updateChildren(groupChild)
     }

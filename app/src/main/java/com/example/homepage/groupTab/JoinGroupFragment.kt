@@ -45,10 +45,10 @@ class JoinGroupFragment : ReplaceFragment() {
     private fun addNewGroup(userId: String, rollOmittedUserId: String, groupId: String) {
 
         val fromPath =
-            FirebaseDatabase.getInstance().getReference("group-list/$rollOmittedUserId")
+            FirebaseDatabase.getInstance().getReference("group-list/$rollOmittedUserId/$groupId")
 
         val toPath =
-            FirebaseDatabase.getInstance().getReference("user-groups/$userId")
+            FirebaseDatabase.getInstance().getReference("user-groups/$groupId")
 
 
         moveGameRoom(fromPath, toPath)
