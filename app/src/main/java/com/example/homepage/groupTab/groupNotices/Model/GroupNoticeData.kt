@@ -5,16 +5,16 @@ data class GroupNoticeData(
     val taskName: String,
     val taskDescription: String,
     val taskDate: String,
-    val key: String?,
+    val path: String?,
     val groupId: String
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "userId" to userId,
             "taskName" to taskName,
-            "askDescription" to taskDescription,
+            "taskDescription" to taskDescription,
             "taskDate" to taskDate,
-            "key" to key,
+            "path" to path,
             "groupId" to groupId
         )
     }

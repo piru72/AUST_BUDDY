@@ -33,7 +33,7 @@ class GroupNoticesFragment(private var groupId: String ="") : ReplaceFragment() 
     ): View {
         container?.removeAllViews()
         _binding = FragmentGroupNoticesBinding.inflate(inflater, container, false)
-
+        makeToast(groupId)
         auth = Firebase.auth
         database = Firebase.database.reference
 //        binding.floatingActionButton.setOnClickListener {
