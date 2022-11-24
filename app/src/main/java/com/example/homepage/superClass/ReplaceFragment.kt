@@ -189,4 +189,8 @@ open class ReplaceFragment : Fragment() {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches()
     }
 
+    fun getRollOmittedUserId() : String {
+        return getUserId().dropLast(3)
+    }
+
 }

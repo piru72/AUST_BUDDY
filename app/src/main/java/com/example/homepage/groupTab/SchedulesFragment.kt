@@ -69,6 +69,7 @@ class SchedulesFragment : ReplaceFragment() {
             }
             createButton.setOnClickListener {
                 replaceFragment(CreateGroupFragment(),R.id.fragment_group)
+                popupWindow.dismiss()
             }
 
 
