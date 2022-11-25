@@ -2,30 +2,41 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GroupNoticeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/GroupNoticeFragment"
     tools:context=".groupTab.groupNotices.GroupNoticesFragment">
 
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/groupNoticeListRecycler"
+    <RelativeLayout
+        android:id="@+id/ToDoActivity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/floatingActionButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="600dp"-->
-<!--        app:backgroundTint="@color/white"-->
-<!--        app:fabSize="normal"-->
-<!--        app:srcCompat="@android:drawable/ic_input_add"-->
-<!--        android:contentDescription="@string/plus_button" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groupNoticeListRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
 
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="600dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/plus_button"
+            app:backgroundTint="@color/white"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </RelativeLayout>
 
 </FrameLayout>

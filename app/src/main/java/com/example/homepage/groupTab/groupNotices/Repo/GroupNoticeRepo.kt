@@ -10,7 +10,7 @@ class GroupNoticeRepo(private var groupId: String) {
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
 
-    private val groupNoticeReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("group-notices").child(groupId)
+    private val groupNoticeReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("groupNotice").child(user)
     @Volatile private var INSTANCE : GroupNoticeRepo ?= null
     fun getInstance(): GroupNoticeRepo {
         return INSTANCE ?: synchronized(this) {
