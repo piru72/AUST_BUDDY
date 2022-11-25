@@ -38,7 +38,7 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
     ): View? {
         container?.removeAllViews()
         _binding = FragmentSchedulesBinding.inflate(inflater, container, false)
-        makeToast(groupId)
+
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
