@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +15,7 @@ import com.example.homepage.databinding.FragmentSchedulesBinding
 import com.example.homepage.scheduleTab.scheduleAdapter.ScheduleAdapter
 import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
 import com.example.homepage.scheduleTab.scheduleModel.ScheduleViewModel
+import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -23,7 +23,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
-class SchedulesFragment : Fragment() {
+class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
     private var _binding: FragmentSchedulesBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: ScheduleViewModel
@@ -38,6 +38,7 @@ class SchedulesFragment : Fragment() {
     ): View? {
         container?.removeAllViews()
         _binding = FragmentSchedulesBinding.inflate(inflater, container, false)
+        makeToast(groupId)
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
@@ -105,11 +106,12 @@ class SchedulesFragment : Fragment() {
             return
         }
 
-        val newtask = ScheduleData(userId, taskName, taskDescription, taskDate)
+        val newtask = ScheduleData(userId, taskName, taskDescription, taskDate,key,groupId)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
-            "/user-tasks/$userId/$key" to taskValues
+            "/user-tasks/$userId/$key" to taskValues,
+            "/group-notice/$groupId/$key" to taskValues
         )
 
         database.updateChildren(childUpdates)
