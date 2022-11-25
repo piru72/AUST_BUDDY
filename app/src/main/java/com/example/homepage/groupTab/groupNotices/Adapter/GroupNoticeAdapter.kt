@@ -3,16 +3,14 @@ package com.example.homepage.groupTab.groupNotices.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.groupTab.groupNotices.Model.GroupNoticeData
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+
 
 class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.GroupNoticeViewHolder>() {
-    private val tasks = ArrayList<GroupNoticeData>()
+    private val notices = ArrayList<GroupNoticeData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupNoticeViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -24,35 +22,31 @@ class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.GroupNoticeVi
 
     override fun onBindViewHolder(holder: GroupNoticeViewHolder, position: Int) {
 
-        val auth = Firebase.auth
-        val user = auth.currentUser!!.uid
+        val currentNotice = notices[position]
 
-        val currentTask = tasks[position]
-
-        holder.taskName.text = currentTask.taskName
-        holder.taskDescription.text = currentTask.taskDescription
-        holder.taskDate.text = currentTask.taskDate
+        holder.noticeName.text = currentNotice.taskName
+        holder.noticeDescription.text = currentNotice.taskDescription
+        holder.noticeDate.text = currentNotice.taskDate
 
     }
 
     override fun getItemCount(): Int {
-        return tasks.size
+        return notices.size
     }
 
-    fun updateNotices(tasks: List<GroupNoticeData>) {
+    fun updateNotices(notices: List<GroupNoticeData>) {
 
-        this.tasks.clear()
-        this.tasks.addAll(tasks)
+        this.notices.clear()
+        this.notices.addAll(notices)
         notifyDataSetChanged()
 
     }
 
     class GroupNoticeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val taskName: TextView = itemView.findViewById(R.id.taskNameCard)
-        val taskDescription: TextView = itemView.findViewById(R.id.taskDescriptionCard)
-        val taskDate: TextView = itemView.findViewById(R.id.taskDateCard)
-        val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
+        val noticeName: TextView = itemView.findViewById(R.id.taskNameCardNotice)
+        val noticeDescription: TextView = itemView.findViewById(R.id.taskDescriptionCardNotice)
+        val noticeDate: TextView = itemView.findViewById(R.id.taskDateCardNotice)
 
     }
 

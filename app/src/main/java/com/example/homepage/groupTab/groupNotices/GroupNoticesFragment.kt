@@ -9,21 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentGroupNoticesBinding
 import com.example.homepage.groupTab.groupNotices.Adapter.GroupNoticeAdapter
-import com.example.homepage.groupTab.groupNotices.Model.GroupNoticeData
 import com.example.homepage.groupTab.groupNotices.Model.GroupNoticeViewModel
 import com.example.homepage.superClass.ReplaceFragment
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 
 class GroupNoticesFragment(private var groupId: String ="") : ReplaceFragment() {
     private var _binding: FragmentGroupNoticesBinding? = null
     private val binding get() = _binding!!
-    private lateinit var database: DatabaseReference
-    private lateinit var auth: FirebaseAuth
     private lateinit var recycler: RecyclerView
     private lateinit var adapter: GroupNoticeAdapter
     private lateinit var viewModel: GroupNoticeViewModel
@@ -34,8 +26,8 @@ class GroupNoticesFragment(private var groupId: String ="") : ReplaceFragment() 
         container?.removeAllViews()
         _binding = FragmentGroupNoticesBinding.inflate(inflater, container, false)
         makeToast(groupId)
-        auth = Firebase.auth
-        database = Firebase.database.reference
+//        auth = Firebase.auth
+//        database = Firebase.database.reference
 //        binding.floatingActionButton.setOnClickListener {
 //
 //
@@ -87,30 +79,30 @@ class GroupNoticesFragment(private var groupId: String ="") : ReplaceFragment() 
         return binding.root
     }
 
-    private fun writeNewTask(
-        userId: String,
-        taskName: String,
-        taskDescription: String,
-        taskDate: String
-    ) {
-        // Create new post at /user-posts/$userid/$postid and at
-        // /posts/$postid simultaneously
-        val key = database.child("posts").push().key
-
-
-        val newtask = GroupNoticeData(userId, taskName, taskDescription, taskDate,key,groupId)
-        val taskValues = newtask.toMap()
-        val childUpdates = hashMapOf<String, Any>(
-            "/group-notices/$groupId/$key" to taskValues
-        )
-
-        database.updateChildren(childUpdates)
-
-    }
+//    private fun writeNewTask(
+//        userId: String,
+//        taskName: String,
+//        taskDescription: String,
+//        taskDate: String
+//    ) {
+//        // Create new post at /user-posts/$userid/$postid and at
+//        // /posts/$postid simultaneously
+//        val key = database.child("posts").push().key
+//
+//
+//        val newtask = GroupNoticeData(userId, taskName, taskDescription, taskDate,key,groupId)
+//        val taskValues = newtask.toMap()
+//        val childUpdates = hashMapOf<String, Any>(
+//            "/group-notices/$groupId/$key" to taskValues
+//        )
+//
+//        database.updateChildren(childUpdates)
+//
+//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.groupNoticeListRecycle
+        recycler = binding.groupNoticeListRecycler
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = GroupNoticeAdapter()

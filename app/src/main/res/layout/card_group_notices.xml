@@ -1,77 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:padding="20dp"
+        android:background="@drawable/rounded_list_item_view"
         android:orientation="horizontal"
-        android:background="@color/card_bk">
+        android:padding="10dp">
 
 
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="194dp"
+        <TextView
+            android:id="@+id/taskNameCardNotice"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/taskNameCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="@string/quiz_name"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="25sp" />
-            <TextView
-                android:id="@+id/taskDateCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="Quiz Date"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="20sp" />
-
-
-            <TextView
-                android:id="@+id/taskDescriptionCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quiz_syllabus"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="18sp">
-
-            </TextView>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/deleteButton"
-            android:layout_width="98dp"
+            android:text="Website Name"
+            android:textColor="@color/pure_white"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/taskDescriptionCardNotice"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:text="Website Name"
+            android:textColor="@color/pure_white"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/taskDateCardNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website Name"
+            android:textColor="@color/pure_white"
+            android:textSize="25sp" />
 
-            android:text="Done"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
