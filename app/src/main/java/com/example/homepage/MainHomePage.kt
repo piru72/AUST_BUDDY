@@ -47,7 +47,7 @@ class MainHomePage : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
 
         fragmentTransaction.replace(R.id.frameLayout, fragment)
-        fragmentTransaction.commit()
+        fragmentTransaction.addToBackStack("tag").commit()
 
     }
 
