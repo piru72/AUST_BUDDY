@@ -42,6 +42,27 @@
                 android:text="Group Creator"
                 android:fontFamily="@font/poppins_light"
                 android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/userJoinedGroupId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group Id"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/userJoinedGroupsCreatorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group Createor"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_light"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 

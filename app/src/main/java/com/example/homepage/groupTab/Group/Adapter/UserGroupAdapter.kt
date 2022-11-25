@@ -24,15 +24,17 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
     override fun onBindViewHolder(holder: UserGroupViewHolder, position: Int) {
         val currentGroup = groups[position]
         holder.groupName.text = currentGroup.groupName.toString()
-        holder.groupCreatorName.text = currentGroup.groupDetails.toString()
+        holder.groupDetails.text = currentGroup.groupDetails.toString()
+        holder.groupCreatorName.text = currentGroup.universityId.toString()
+        holder.groupId.text = currentGroup.groupId.toString()
 
         holder.itemView.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
             val webFragment = GroupNoticesFragment()
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.userGroupFragment, webFragment).addToBackStack(
-                "tag"
-            ).commit()
+                    "tag"
+                ).commit()
         }
     }
 
@@ -48,8 +50,11 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
     }
 
 
-    class UserGroupViewHolder(itemView : View)  : RecyclerView.ViewHolder(itemView){
+    class UserGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val groupName: TextView = itemView.findViewById(R.id.userJoinedGroupName)
-        val groupCreatorName: TextView = itemView.findViewById(R.id.userJoinedGroupsCreator)
+        val groupDetails: TextView = itemView.findViewById(R.id.userJoinedGroupsCreator)
+        val groupCreatorName: TextView = itemView.findViewById(R.id.userJoinedGroupsCreatorName)
+        val groupId: TextView = itemView.findViewById(R.id.userJoinedGroupId)
+
     }
 }
