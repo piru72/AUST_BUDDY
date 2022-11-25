@@ -7,11 +7,12 @@ import com.example.homepage.scheduleTab.scheduleRepo.ScheduleRepository
 
 class ScheduleViewModel : ViewModel(){
 
-    private val repository : ScheduleRepository = ScheduleRepository().getInstance()
+    private lateinit var repository : ScheduleRepository
     private val _allSchedules = MutableLiveData<List<ScheduleData>>()
     val allSchedules : LiveData<List<ScheduleData>> = _allSchedules
 
-    init {
-        repository.loadSchedules(_allSchedules)
+    fun initialize(groupSelected: String) {
+        repository = ScheduleRepository(groupSelected).getInstance()
+        repository.loadSchedules(_allSchedules )
     }
 }

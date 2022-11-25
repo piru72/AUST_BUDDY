@@ -6,15 +6,16 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class ScheduleRepository {
+class ScheduleRepository(private var groupSelected: String) {
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
-    private val scheduleReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("user-tasks").child(user)
+
+    private val scheduleReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("group-notice").child(groupSelected)
     @Volatile private var INSTANCE : ScheduleRepository ?= null
     fun getInstance(): ScheduleRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = ScheduleRepository()
+            val instance = ScheduleRepository(groupSelected)
             INSTANCE = instance
             instance
         }

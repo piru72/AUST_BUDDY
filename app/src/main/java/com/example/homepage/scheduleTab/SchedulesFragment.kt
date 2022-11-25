@@ -127,6 +127,8 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[ScheduleViewModel::class.java]
 
+        viewModel.initialize(groupId)
+
         viewModel.allSchedules.observe(viewLifecycleOwner) {
             adapter!!.updateUserList(it)
         }
