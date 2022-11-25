@@ -29,7 +29,7 @@ class MainHomePage : AppCompatActivity() {
                 R.id.bot_nav_home -> replaceFragment(HomeFragment())
                 R.id.bot_nav_profile -> replaceFragment(ProfileFragment())
                 R.id.bot_nav_store -> replaceFragment(StoreFragment())
-                R.id.bot_nav_schedule -> replaceFragment(GroupNoticesFragment("-NHew8r"))
+                R.id.bot_nav_schedule -> replaceFragment(GroupNoticesFragment())
                 R.id.bot_nav_courses -> replaceFragment(DepartmentSemesterChooserFragment())
 
                 else -> {

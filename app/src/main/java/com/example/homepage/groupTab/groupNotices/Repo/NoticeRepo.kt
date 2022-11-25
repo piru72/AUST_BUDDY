@@ -6,24 +6,24 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class GroupNoticeRepo(private var groupId: String) {
+class NoticeRepo{
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
+    private val noticeReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("groupNotice").child(user)
+    @Volatile private var INSTANCE : NoticeRepo?= null
 
-    private val groupNoticeReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("groupNotice").child(user)
-    @Volatile private var INSTANCE : GroupNoticeRepo ?= null
-    fun getInstance(): GroupNoticeRepo {
+    fun getInstance(): NoticeRepo {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = GroupNoticeRepo(groupId)
+            val instance = NoticeRepo()
             INSTANCE = instance
             instance
         }
     }
 
-    fun loadNotices(allNotices: MutableLiveData<List<GroupNoticeData>>) {
+    fun loadNotices(allNoticeList: MutableLiveData<List<GroupNoticeData>>) {
 
-        groupNoticeReference.addValueEventListener(object : ValueEventListener {
+        noticeReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 try {
@@ -33,7 +33,7 @@ class GroupNoticeRepo(private var groupId: String) {
                         dataSnapshot.getValue(GroupNoticeData::class.java)!!
 
                     }
-                    allNotices.postValue(noticeList)
+                    allNoticeList.postValue(noticeList)
 
                 }catch (_: Exception){
 

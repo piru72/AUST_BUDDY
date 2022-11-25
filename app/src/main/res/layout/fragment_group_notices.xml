@@ -8,11 +8,6 @@
     tools:context=".groupTab.groupNotices.GroupNoticesFragment">
 
 
-    <RelativeLayout
-        android:id="@+id/ToDoActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/groupNoticeListRecycler"
@@ -23,20 +18,5 @@
         </androidx.recyclerview.widget.RecyclerView>
 
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="600dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:contentDescription="@string/plus_button"
-            app:backgroundTint="@color/white"
-            app:fabSize="normal"
-            app:srcCompat="@android:drawable/ic_input_add" />
-
-    </RelativeLayout>
 
 </FrameLayout>

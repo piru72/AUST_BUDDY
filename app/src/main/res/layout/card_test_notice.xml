@@ -2,21 +2,26 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@color/primary_green"
+        android:background="@drawable/rounded_list_item_view"
         android:orientation="horizontal"
         android:padding="10dp">
 
+
         <TextView
-            android:id="@+id/NoticeNameCard"
+            android:id="@+id/abcdefg_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notice Name"
+            android:text="Website Name"
             android:textColor="@color/pure_white"
             android:textSize="25sp" />
+
+
+
 
     </LinearLayout>
 

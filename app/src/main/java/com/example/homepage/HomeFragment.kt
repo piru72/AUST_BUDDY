@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.homepage.calculator.CGPAFragment
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
+import com.example.homepage.groupTab.groupNotices.GroupNoticesFragment
 import com.example.homepage.homeTab.BusFragment
 import com.example.homepage.homeTab.RequestFragment
 import com.example.homepage.storeDashboard.StoreDashboardFragment
@@ -60,7 +60,7 @@ class HomeFragment : ReplaceFragment() {
         }
 
         binding.btnFavouriteWebPage.setOnClickListener {
-            replaceFragment(FavouriteWebPageFragment(), currentState)
+            replaceFragment(GroupNoticesFragment(), currentState)
         }
 
 

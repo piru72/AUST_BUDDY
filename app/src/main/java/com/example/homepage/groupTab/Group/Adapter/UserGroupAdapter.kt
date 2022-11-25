@@ -28,7 +28,7 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
 
         holder.itemView.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
-            val webFragment = GroupNoticesFragment(currentGroup.groupId.toString())
+            val webFragment = GroupNoticesFragment()
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.userGroupFragment, webFragment).addToBackStack(
                 "tag"
