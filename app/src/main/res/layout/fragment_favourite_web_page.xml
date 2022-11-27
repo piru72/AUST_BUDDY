@@ -5,7 +5,8 @@
     android:id="@+id/favouriteWebPageMother"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".favouriteWebPage.FavouriteWebPageFragment">
+    tools:context=".favouriteWebPage.FavouriteWebPageFragment"
+    android:background="@drawable/bk_shape03">
 
     <RelativeLayout
         android:layout_width="match_parent"
