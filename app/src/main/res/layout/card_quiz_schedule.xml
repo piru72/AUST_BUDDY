@@ -59,6 +59,8 @@
 
         </LinearLayout>
 
+
+
         <Button
             android:id="@+id/deleteButton"
             android:layout_width="98dp"
@@ -67,6 +69,7 @@
 
             android:text="Done"
             android:textColor="@color/black"
+
             android:fontFamily="@font/poppins_light"
             android:background="@color/background_color_50"
             android:focusable="true"
