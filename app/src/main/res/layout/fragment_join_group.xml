@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
+    android:background="@drawable/bk_shape03"
     tools:context=".groupTab.JoinGroupFragment">
 
 
@@ -31,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Provide Group Id"
+            android:fontFamily="@font/poppins_light"
             android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,8 +48,10 @@
         android:layout_marginTop="58dp"
         android:text="Join Group"
         android:fontFamily="@font/poppins_light"
-        android:textColor="@color/white"
-        android:background="@drawable/rounded_list_item_view" />
+        android:textColor="@color/black"
+        android:background="@color/background_color_50"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 
 
 

@@ -5,7 +5,8 @@
     android:id="@+id/GroupNoticeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".groupTab.groupNotices.GroupNoticesFragment">
+    tools:context=".groupTab.groupNotices.GroupNoticesFragment"
+    android:background="@drawable/bk_shape03">
 
 
 
