@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/rounded_list_item_view"
+    android:background="@color/card_bk"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -20,8 +20,9 @@
         android:hint="Course Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/poppins_light"/>
 
     <EditText
         android:id="@+id/TaskDatePop"
@@ -32,8 +33,9 @@
         android:hint="Course Code"
         android:inputType="date"
         android:minHeight="48dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/poppins_light" />
 
 
     <EditText
@@ -45,8 +47,9 @@
         android:hint="Drive link"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/poppins_light" />
 
 
     <LinearLayout
@@ -61,9 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Close"
-            android:textColor="#4E342E" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light" />
 
         <Button
             android:id="@+id/AddButton"
@@ -71,9 +77,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="ADD"
-            android:textColor="#4E342E" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"/>
 
 
     </LinearLayout>
