@@ -57,7 +57,7 @@
                 android:id="@+id/userJoinedGroupsCreatorName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Group Createor"
+                android:text="Group Creator"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
