@@ -10,7 +10,9 @@
         android:layout_margin="5dp"
         android:background="@color/card_bk"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="15dp"
+
+        android:elevation="5dp">
 
 
         <LinearLayout
@@ -99,7 +101,7 @@
             <Button
                 android:id="@+id/callSellerButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="0.5"
                 android:background="@color/background_color_50"
                 android:focusable="true"
@@ -112,7 +114,7 @@
             <Button
                 android:id="@+id/showDetailsButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
