@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/rounded_list_item_view"
+    android:background="@color/card_bk"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -24,9 +24,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Join"
-            android:textColor="#4E342E" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            />
 
         <Button
             android:id="@+id/createButton"
@@ -34,9 +38,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Create"
-            android:textColor="#4E342E" />
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>

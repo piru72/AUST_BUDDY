@@ -19,7 +19,7 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewViewHol
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
-            R.layout.list_item_view,
+            R.layout.card_quiz_schedule,
             parent, false
         )
         return ScheduleViewViewHolder(itemView)

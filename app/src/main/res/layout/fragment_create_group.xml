@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    tools:context=".groupTab.CreateGroupFragment">
+    tools:context=".groupTab.CreateGroupFragment"
+    android:background="@drawable/bk_shape03">
 
 
     <ImageView
@@ -29,6 +30,7 @@
             android:id="@+id/groupName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
             android:hint="Provide Group Name"
             android:inputType="textShortMessage" />
 
@@ -48,6 +50,7 @@
             android:id="@+id/groupDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
             android:hint="Provide Group details"
             android:inputType="textShortMessage" />
 
@@ -63,8 +66,10 @@
         android:layout_marginTop="58dp"
         android:text="Create Group"
         android:fontFamily="@font/poppins_light"
-        android:textColor="@color/white"
-        android:background="@drawable/rounded_list_item_view" />
+        android:textColor="@color/black"
+        android:background="@color/background_color_50"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 
 
 

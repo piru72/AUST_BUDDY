@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bk_shape03"
     tools:context=".profileTab.ProfileFragment">
 
 
@@ -16,11 +16,12 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
-            android:fontFamily="@font/poppins_black"
+            android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:text="Change Password"
-            android:textColor="@color/text_black"
-            android:textSize="30sp"
+            android:textColor="@color/black"
+
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +44,7 @@
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
                 android:hint="Type your Password"
+                android:fontFamily="@font/poppins_light"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +56,7 @@
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
                 android:hint="Type your Password"
+                android:fontFamily="@font/poppins_light"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +67,7 @@
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
                 android:hint="Type your Password"
+                android:fontFamily="@font/poppins_light"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +77,11 @@
                 android:id="@+id/btnChange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_list_item_view"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:text="Change Password" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

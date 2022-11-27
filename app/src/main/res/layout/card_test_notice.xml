@@ -7,9 +7,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/rounded_list_item_view"
+        android:background="@color/card_bk"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:elevation="10dp">
 
 
         <TextView
@@ -17,8 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Website Name"
-            android:textColor="@color/pure_white"
-            android:textSize="25sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="20sp" />
 
 
 
