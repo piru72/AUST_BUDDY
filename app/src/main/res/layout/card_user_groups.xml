@@ -51,6 +51,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
+                android:textIsSelectable="true"
                 android:textAlignment="center"/>
 
             <TextView
