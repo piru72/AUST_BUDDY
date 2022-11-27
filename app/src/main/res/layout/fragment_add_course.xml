@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    tools:context=".adminPanel.AddCourseFragment">
+    tools:context=".adminPanel.AddCourseFragment"
+    android:background="@drawable/bk_shape03">
 
     <ImageView
         android:layout_width="match_parent"
@@ -63,7 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/provide_course_code"
-            android:inputType="textShortMessage" />
+            android:inputType="textShortMessage"
+            android:fontFamily="@font/poppins_light"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,12 +77,14 @@
         android:layout_width="match_parent"
         android:layout_below="@id/courseCodeFormInput"
         android:layout_height="wrap_content"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
             android:hint="@string/provide_course_name"
             android:inputType="textShortMessage" />
 
@@ -99,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/provide_drive_link"
+            android:fontFamily="@font/poppins_light"
             android:inputType= "textLongMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -114,8 +119,10 @@
         android:layout_marginTop="58dp"
         android:text="@string/add_course"
         android:fontFamily="@font/poppins_light"
-        android:textColor="@color/white"
-        android:background="@drawable/rounded_list_item_view" />
+        android:textColor="@color/black"
+        android:background="@color/background_color_50"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground" />
 
 
 
