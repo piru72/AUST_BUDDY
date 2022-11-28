@@ -110,7 +110,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
-            "/user-tasks/$userId/$key" to taskValues,
+//            "/user-tasks/$userId/$key" to taskValues,
             "/group-notice/$groupId/$key" to taskValues
         )
 

@@ -44,7 +44,7 @@
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/userJoinedGroupId"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Group Id"
                 android:textColor="@color/black"
@@ -64,6 +64,25 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
                 android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/adminControlLayout">
+
+                <Button
+                    android:id="@+id/btnLeaveGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Leave Group" />
+            </LinearLayout>
 
         </LinearLayout>
 
