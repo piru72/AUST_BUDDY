@@ -45,9 +45,9 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
         binding.floatingActionButton.setOnClickListener {
 
             binding.informativeText.text=""
-            val rootLayout = layoutInflater.inflate(R.layout.custom_popup, null)
+            val rootLayout = layoutInflater.inflate(R.layout.popup_add_notice, null)
 
-            val taskName = rootLayout.findViewById<EditText>(R.id.TaskNamePop)
+            val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
             val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
             val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)

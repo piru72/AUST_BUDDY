@@ -48,7 +48,7 @@ class RequestFragment : ReplaceFragment() {
 
         binding.btnReportBug.setOnClickListener {
 
-            val rootLayout = layoutInflater.inflate(R.layout.bug_report_popup, null)
+            val rootLayout = layoutInflater.inflate(R.layout.popup_bug_report, null)
 
             val taskDescription = rootLayout.findViewById<EditText>(R.id.BugDescriptionPop)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
