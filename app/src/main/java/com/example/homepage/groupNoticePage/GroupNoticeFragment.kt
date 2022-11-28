@@ -1,4 +1,4 @@
-package com.example.homepage.scheduleTab
+package com.example.homepage.groupNoticePage
 
 import android.os.Bundle
 import android.util.Log
@@ -11,10 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.databinding.FragmentSchedulesBinding
-import com.example.homepage.scheduleTab.scheduleAdapter.ScheduleAdapter
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleViewModel
+import com.example.homepage.databinding.FragmentGroupNoticeBinding
+import com.example.homepage.groupNoticePage.groupNoticeAdapter.GroupNoticeAdapter
+import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeViewModel
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -23,12 +23,12 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
-class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
-    private var _binding: FragmentSchedulesBinding? = null
+class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() {
+    private var _binding: FragmentGroupNoticeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: ScheduleViewModel
+    private lateinit var viewModel: GroupNoticeViewModel
     private lateinit var recycler: RecyclerView
-    private var adapter: ScheduleAdapter? = null
+    private var adapter: GroupNoticeAdapter? = null
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
@@ -37,7 +37,7 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        _binding = FragmentSchedulesBinding.inflate(inflater, container, false)
+        _binding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
 
         auth = Firebase.auth
         database = Firebase.database.reference
@@ -106,7 +106,7 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
             return
         }
 
-        val newtask = ScheduleData(userId, taskName, taskDescription, taskDate,key,groupId)
+        val newtask = GroupNoticeData(userId, taskName, taskDescription, taskDate,key,groupId)
         val taskValues = newtask.toMap()
         val childUpdates = hashMapOf<String, Any>(
             //*   "/tasks/$key" to taskValues,
@@ -123,9 +123,9 @@ class SchedulesFragment(private var groupId: String = "") : ReplaceFragment() {
         recycler = binding.taskList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = ScheduleAdapter()
+        adapter = GroupNoticeAdapter()
         recycler.adapter = adapter
-        viewModel = ViewModelProvider(this)[ScheduleViewModel::class.java]
+        viewModel = ViewModelProvider(this)[GroupNoticeViewModel::class.java]
 
         viewModel.initialize(groupId)
 

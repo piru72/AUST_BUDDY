@@ -1,36 +1,36 @@
-package com.example.homepage.scheduleTab.scheduleRepo
+package com.example.homepage.groupNoticePage.groupNoticeRepo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
+import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class ScheduleRepository(private var groupSelected: String) {
+class GroupNoticeRepository(private var groupSelected: String) {
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
 
     private val scheduleReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("group-notice").child(groupSelected)
-    @Volatile private var INSTANCE : ScheduleRepository ?= null
-    fun getInstance(): ScheduleRepository {
+    @Volatile private var INSTANCE : GroupNoticeRepository ?= null
+    fun getInstance(): GroupNoticeRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = ScheduleRepository(groupSelected)
+            val instance = GroupNoticeRepository(groupSelected)
             INSTANCE = instance
             instance
         }
     }
 
-    fun loadSchedules(allSchedules: MutableLiveData<List<ScheduleData>>) {
+    fun loadSchedules(allSchedules: MutableLiveData<List<GroupNoticeData>>) {
 
         scheduleReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 try {
 
-                    val scheduleList : List<ScheduleData> = snapshot.children.map { dataSnapshot ->
+                    val scheduleList : List<GroupNoticeData> = snapshot.children.map { dataSnapshot ->
 
-                        dataSnapshot.getValue(ScheduleData::class.java)!!
+                        dataSnapshot.getValue(GroupNoticeData::class.java)!!
 
                     }
                     allSchedules.postValue(scheduleList)

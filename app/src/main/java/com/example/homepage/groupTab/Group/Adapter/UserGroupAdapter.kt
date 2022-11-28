@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.groupTab.Group.Model.GroupData
-import com.example.homepage.scheduleTab.SchedulesFragment
+import com.example.homepage.groupNoticePage.GroupNoticeFragment
 
 class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHolder>() {
     private val groups = ArrayList<GroupData>()
@@ -30,7 +30,7 @@ class UserGroupAdapter : RecyclerView.Adapter<UserGroupAdapter.UserGroupViewHold
 
         holder.itemView.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
-            val webFragment = SchedulesFragment(currentGroup.groupId.toString())
+            val webFragment = GroupNoticeFragment(currentGroup.groupId.toString())
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.userGroupFragment, webFragment).addToBackStack(
                     "tag"

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scheduleTab.SchedulesFragment"
+    tools:context=".groupNoticePage.GroupNoticeFragment"
     android:background="@drawable/bk_shape03">
 
     <RelativeLayout

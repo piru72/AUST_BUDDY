@@ -1,6 +1,6 @@
-package com.example.homepage.scheduleTab.scheduleModel
+package com.example.homepage.groupNoticePage.groupNoticeModel
 
-data class ScheduleData(
+data class GroupNoticeData(
 
     var uid: String? = "",
     var taskname: String? = "",

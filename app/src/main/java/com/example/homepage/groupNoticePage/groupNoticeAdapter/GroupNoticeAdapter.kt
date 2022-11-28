@@ -1,4 +1,4 @@
-package com.example.homepage.scheduleTab.scheduleAdapter
+package com.example.homepage.groupNoticePage.groupNoticeAdapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,14 +7,14 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.scheduleTab.scheduleModel.ScheduleData
+import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 
-class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewViewHolder>() {
-    private val tasks = ArrayList<ScheduleData>()
+class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
+    private val tasks = ArrayList<GroupNoticeData>()
     private val taskIds = ArrayList<String>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewViewHolder {
@@ -48,7 +48,7 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewViewHol
         return tasks.size
     }
 
-    fun updateUserList(tasks: List<ScheduleData>) {
+    fun updateUserList(tasks: List<GroupNoticeData>) {
 
         this.tasks.clear()
         this.tasks.addAll(tasks)
