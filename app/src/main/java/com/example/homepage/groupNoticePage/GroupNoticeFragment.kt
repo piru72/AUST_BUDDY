@@ -36,7 +36,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
         _inflater = inflater
@@ -113,22 +113,23 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
             return
         }
         val newGroupNotice: Any
-        val childUpdates: Any
+        val pushingPath: String
 
         if (oldKey == "make-key") {
-            newGroupNotice = GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
-            val noticeValues = newGroupNotice.toMap()
-            childUpdates = hashMapOf<String, Any>(
-                "/group-notice/${this.groupId}/$newKey" to noticeValues
-            )
+            newGroupNotice =
+                GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
+            pushingPath = "/group-notice/${this.groupId}/$newKey"
+
         } else {
             newGroupNotice =
                 GroupNoticeData(userId, taskName, taskDescription, taskDate, oldKey, groupId)
-            val noticeValues = newGroupNotice.toMap()
-            childUpdates = hashMapOf<String, Any>(
-                "/group-notice/$groupId/$oldKey" to noticeValues
-            )
+            pushingPath = "/group-notice/$groupId/$oldKey"
         }
+        val noticeValues = newGroupNotice.toMap()
+
+        val childUpdates = hashMapOf<String, Any>(
+            pushingPath to noticeValues
+        )
 
         database.updateChildren(childUpdates)
 
