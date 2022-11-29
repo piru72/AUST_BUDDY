@@ -77,11 +77,12 @@ class teacherAdapter(private val userType: String) :
 
 
         holder.addToFavouriteButton.setOnClickListener {
-            val fromPath =
-                FirebaseDatabase.getInstance().getReference("teachers/${currentItem.name}")
 
             val pushKey = currentItem.email.toString()
-            val newPush = pushKey.replace(".", "")
+            val newPush = pushKey.replace(".", "-")
+
+            val fromPath =
+                FirebaseDatabase.getInstance().getReference("teachers/$newPush")
 
             val toPath =
                 FirebaseDatabase.getInstance().getReference("user-favouriteTeachers/$user/$newPush")
