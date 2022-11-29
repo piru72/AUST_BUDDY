@@ -50,6 +50,8 @@
     <string name="name">Name</string>
     <string name="calculate">Calculate</string>
 
+
+
     <string-array name="Credits">
         <item>3.00</item>
         <item>1.50</item>
