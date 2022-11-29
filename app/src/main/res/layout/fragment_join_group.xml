@@ -9,14 +9,40 @@
 
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:src="@drawable/registration"
-        android:layout_marginTop="20sp"
-        android:id="@+id/startingImage"
-        android:paddingBottom="20dp"
-        android:contentDescription="@string/a_background_image" />
+
+
+    <TextView
+
+        android:id="@+id/uppertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/black"
+        android:text="You're currently signed in as"/>
+
+    <TextView
+        android:id="@+id/studentId_Show"
+        android:layout_below="@+id/uppertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="STUDENT EMAIL"/>
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="15sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/studentId_Show"
+        android:text="Ask admin for the group id, then enter it here."/>
 
 
 
@@ -24,7 +50,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:id="@+id/groupIdFormInput"
-        android:layout_below="@id/startingImage"
+        android:layout_below="@id/sample_text"
+        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -37,6 +64,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupIdFormInput"
+        android:text="To sign in with a group id\n - Use an authorised account \n - Use a group id, with 5-7 letter and numbers \n
+- No space"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginBottom="0dp"/>
+
+
+
+
 
 
     <Button
@@ -44,9 +85,10 @@
         android:id="@+id/joinGroupButtonForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/groupIdFormInput"
-        android:layout_marginTop="58dp"
+
+        android:layout_marginTop="50dp"
         android:text="Join Group"
+        android:layout_below="@+id/rules"
         android:fontFamily="@font/poppins_light"
         android:textColor="@color/black"
         android:background="@color/background_color_50"
