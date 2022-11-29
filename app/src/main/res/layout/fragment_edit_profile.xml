@@ -116,13 +116,14 @@
 
                 <TextView
                     android:id="@+id/IdAnchor"
-                    android:layout_width="120sp"
+                    android:layout_width="130sp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
                     android:text="Student ID"
+                    android:drawableStart="@drawable/key_ic"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
@@ -182,12 +183,13 @@
 
                 <TextView
                     android:id="@+id/departmentAnchor"
-                    android:layout_width="120sp"
+                    android:layout_width="150sp"
                     android:layout_height="wrap_content"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
                     android:layout_margin="10sp"
+                    android:drawableStart="@drawable/dept_ic"
                     android:text="Department"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppins_light"
