@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:src="@drawable/registration"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="70sp"
         android:id="@+id/startingImage"
         android:paddingBottom="20dp"
         android:contentDescription="@string/a_background_image" />

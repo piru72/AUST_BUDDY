@@ -16,7 +16,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/dev1Img"
             android:layout_width="143dp"
-            android:layout_height="133dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="20sp"
             android:layout_marginTop="48dp"
@@ -31,7 +31,7 @@
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="415dp"
-            android:layout_height="288dp"
+            android:layout_height="350dp"
             android:layout_margin="30sp"
             android:orientation="vertical"
             android:padding="20sp"
@@ -47,10 +47,17 @@
 
                 <TextView
                     android:id="@+id/userNameAnc"
-                    android:layout_width="120sp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
+                    android:drawableStart="@drawable/person_ic"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:drawableTint="#000"
+                    android:fontFamily="@font/poppins_light"
                     android:text="User Name"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -60,6 +67,11 @@
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:text="User Name"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -74,6 +86,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:text="Email"
+                    android:drawableStart="@drawable/mail_ic"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
 
                 <TextView
@@ -83,6 +101,11 @@
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:text="Full  Name"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -96,7 +119,12 @@
                     android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:text="Student ID"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
 
                 <TextView
@@ -106,6 +134,11 @@
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:text="ID"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -120,6 +153,11 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:text="Session"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
 
                 <TextView
@@ -129,6 +167,11 @@
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:text="Admission Session"
+                    android:textColor="@color/black"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -141,8 +184,13 @@
                     android:id="@+id/departmentAnchor"
                     android:layout_width="120sp"
                     android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
                     android:layout_margin="10sp"
                     android:text="Department"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
 
                 <TextView
@@ -152,6 +200,11 @@
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:text="Department"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@color/background_color_50"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
