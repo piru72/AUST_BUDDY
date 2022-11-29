@@ -5,16 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 
 
-class TeachersFragment(viewPath: String) : Fragment() {
+class TeachersFragment(viewPath: String) : ReplaceFragment() {
     private val databaseViewPath = viewPath
     private lateinit var viewModel: teacherViewModel
     private lateinit var userRecyclerView: RecyclerView
@@ -42,7 +42,10 @@ class TeachersFragment(viewPath: String) : Fragment() {
         userRecyclerView.adapter = adapter
 
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
-        viewModel.initialize(databaseViewPath)
+        if (databaseViewPath == "user-favouriteTeachers")
+            viewModel.initialize(databaseViewPath+"/${getCurrentUserId()}")
+        else
+            viewModel.initialize(databaseViewPath)
         viewModel.allUsers.observe(viewLifecycleOwner) {
 
             adapter.updateUserList(it)

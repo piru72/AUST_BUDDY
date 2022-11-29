@@ -45,6 +45,7 @@ class teacherAdapter(private val userType: String) :
 
         val currentItem = userList[position]
         val context = holder.itemView.context
+        holder.firstName.text = currentItem.name
         holder.designation.text = currentItem.designation
         Glide.with(context).load(currentItem.img).into(holder.tImage)
         holder.shareContactButton.setOnClickListener {

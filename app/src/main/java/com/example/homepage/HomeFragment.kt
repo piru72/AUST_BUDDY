@@ -62,6 +62,9 @@ class HomeFragment : ReplaceFragment() {
         binding.btnFavouriteWebPage.setOnClickListener {
             replaceFragment(FavouriteWebPageFragment(), currentState)
         }
+        binding.btnFavouriteTeachers.setOnClickListener {
+            replaceFragment(TeachersFragment("user-favouriteTeachers"), currentState)
+        }
 
 
 
