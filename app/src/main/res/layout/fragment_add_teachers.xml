@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
+    android:background="@drawable/bk_shape03"
     tools:context=".adminPanel.AddTeachersFragment">
 
     <ImageView
@@ -101,16 +102,7 @@
                 android:hint="@string/image_link" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/addTeachersImageForm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:background="@drawable/rounded_list_item_view"
-            android:text="@string/choose_from_phone"
-            android:textColor="@color/white"
-            android:fontFamily="@font/poppins_light"
-            />
+
     </LinearLayout>
 
     <Button
