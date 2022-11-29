@@ -1,21 +1,23 @@
 package com.example.homepage.groupNoticePage.groupNoticeAdapter
 
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.groupNoticePage.GroupNoticeFragment
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 
-class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
+class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
     private val tasks = ArrayList<GroupNoticeData>()
     private val taskIds = ArrayList<String>()
+    private var _inflater: LayoutInflater = inflater
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -29,8 +31,7 @@ class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewV
 
         val auth = Firebase.auth
         val user = auth.currentUser!!.uid
-        val taskReference =
-            FirebaseDatabase.getInstance().getReference("user-tasks").child(user)
+        val context = holder.itemView.context
 
         val currentTask = tasks[position]
 
@@ -38,9 +39,73 @@ class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewV
         holder.taskDescription.text = currentTask.taskdescription
         holder.taskDate.text = currentTask.taskdate
 
+        if (user != currentTask.uid)
+        {
+            holder.deleteButton.visibility = View.INVISIBLE
+            holder.editButton.visibility = View.INVISIBLE
+        }
+
         holder.deleteButton.setOnClickListener {
-//            val value = taskReference.child(taskIds[position])
-//            value.removeValue()
+            val noticeReference =
+                FirebaseDatabase.getInstance().getReference("group-notice").child(currentTask.groupId.toString())
+            noticeReference.child(currentTask.path.toString()).removeValue()
+        }
+        holder.editButton.setOnClickListener {
+            val rootLayout = _inflater.inflate(R.layout.popup_add_notice, null)
+
+            val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
+            val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
+            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
+            val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
+            val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
+
+            taskName.setText(currentTask.taskname)
+            taskDescription.setText(currentTask.taskdescription)
+            taskDate.setText(currentTask.taskdate)
+
+            val popupWindow = PopupWindow(
+                rootLayout,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, true
+            )
+
+            popupWindow.update()
+            popupWindow.elevation = 20.5F
+            popupWindow.showAtLocation(
+
+                holder.editButton,
+                Gravity.CENTER,
+                0,
+                -500
+            )
+
+            closeButton.setOnClickListener {
+                popupWindow.dismiss()
+            }
+
+            addButton.setOnClickListener {
+
+                val name = taskName.text.toString()
+                val description = taskDescription.text.toString()
+                val date = taskDate.text.toString()
+
+                if(name == "" || description=="")
+                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
+                else
+                {
+                    val groupNoticeFragment = GroupNoticeFragment()
+                    groupNoticeFragment.writeNewTask(
+                        user,
+                        name,
+                        description,
+                        date,
+                        currentTask.path.toString(),
+                        currentTask.groupId.toString()
+                    )
+                }
+
+                popupWindow.dismiss()
+            }
         }
     }
 
@@ -61,7 +126,8 @@ class GroupNoticeAdapter : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewV
         val taskName: TextView = itemView.findViewById(R.id.taskNameCard)
         val taskDescription: TextView = itemView.findViewById(R.id.taskDescriptionCard)
         val taskDate: TextView = itemView.findViewById(R.id.taskDateCard)
-        val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
+        val deleteButton: Button = itemView.findViewById(R.id.btnDeleteSchedule)
+        val editButton: Button = itemView.findViewById(R.id.btnEditSchedule)
 
     }
 

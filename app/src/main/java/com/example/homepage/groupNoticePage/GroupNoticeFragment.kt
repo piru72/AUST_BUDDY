@@ -31,6 +31,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
     private var adapter: GroupNoticeAdapter? = null
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private lateinit var _inflater: LayoutInflater
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,13 +39,13 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
     ): View? {
         container?.removeAllViews()
         _binding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
-
+        _inflater = inflater
         auth = Firebase.auth
-        database = Firebase.database.reference
+
         val user = auth.currentUser!!.uid
         binding.floatingActionButton.setOnClickListener {
 
-            binding.informativeText.text=""
+            binding.informativeText.text = ""
             val rootLayout = layoutInflater.inflate(R.layout.popup_add_notice, null)
 
             val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
@@ -79,10 +80,14 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                 val description = taskDescription.text.toString()
                 val date = taskDate.text.toString()
 
-                if(name == "" || description=="")
-                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
+                if (name == "" || description == "")
+                    Toast.makeText(
+                        context,
+                        "Please fill up all  the information",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 else
-                    writeNewTask(user, name, description, date)
+                    writeNewTask(user, name, description, date, "make-key", groupId)
 
 
 
@@ -92,27 +97,38 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         }
         return binding.root
     }
-    private fun writeNewTask(
+
+    fun writeNewTask(
         userId: String,
         taskName: String,
         taskDescription: String,
-        taskDate: String
+        taskDate: String,
+        oldKey: String,
+        groupId: String
     ) {
-        // Create new post at /user-posts/$userid/$postid and at
-        // /posts/$postid simultaneously
-        val key = database.child("posts").push().key
-        if (key == null) {
+        database = Firebase.database.reference
+        val newKey = database.child("posts").push().key
+        if (newKey == null) {
             Log.w("TodoActivity", "Couldn't get push key for posts")
             return
         }
+        val newGroupNotice: Any
+        val childUpdates: Any
 
-        val newtask = GroupNoticeData(userId, taskName, taskDescription, taskDate,key,groupId)
-        val taskValues = newtask.toMap()
-        val childUpdates = hashMapOf<String, Any>(
-            //*   "/tasks/$key" to taskValues,
-//            "/user-tasks/$userId/$key" to taskValues,
-            "/group-notice/$groupId/$key" to taskValues
-        )
+        if (oldKey == "make-key") {
+            newGroupNotice = GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
+            val noticeValues = newGroupNotice.toMap()
+            childUpdates = hashMapOf<String, Any>(
+                "/group-notice/${this.groupId}/$newKey" to noticeValues
+            )
+        } else {
+            newGroupNotice =
+                GroupNoticeData(userId, taskName, taskDescription, taskDate, oldKey, groupId)
+            val noticeValues = newGroupNotice.toMap()
+            childUpdates = hashMapOf<String, Any>(
+                "/group-notice/$groupId/$oldKey" to noticeValues
+            )
+        }
 
         database.updateChildren(childUpdates)
 
@@ -123,7 +139,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         recycler = binding.taskList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = GroupNoticeAdapter()
+        adapter = GroupNoticeAdapter(_inflater)
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[GroupNoticeViewModel::class.java]
 
