@@ -75,6 +75,7 @@
 
                     android:background="@color/background_color_50"
                     android:focusable="true"
+                    android:layout_marginBottom="10dp"
 
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
