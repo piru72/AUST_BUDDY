@@ -10,19 +10,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
+import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 @GlideModule
-class teacherAdapter(private val userType: String) : RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
+class teacherAdapter(private val userType: String) :
+    RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
     private val userList = ArrayList<TeacherData>()
     private lateinit var database: DatabaseReference
-
-
+    private val supReplace = ReplaceFragment()
+    private val user = FirebaseAuth.getInstance().currentUser?.uid
+    private var selectedIds: List<Any> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         database = Firebase.database.reference
@@ -33,13 +36,15 @@ class teacherAdapter(private val userType: String) : RecyclerView.Adapter<teache
         return MyViewHolder(itemView)
 
     }
+    fun setSelectedIds(selectedIds: List<Any>) {
+        this.selectedIds = selectedIds
+        notifyDataSetChanged()
+    }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         val currentItem = userList[position]
         val context = holder.itemView.context
-
-        holder.firstName.text = currentItem.name
         holder.designation.text = currentItem.designation
         Glide.with(context).load(currentItem.img).into(holder.tImage)
         holder.shareContactButton.setOnClickListener {
@@ -69,6 +74,20 @@ class teacherAdapter(private val userType: String) : RecyclerView.Adapter<teache
             }
         }
 
+
+        holder.addToFavouriteButton.setOnClickListener {
+            val fromPath =
+                FirebaseDatabase.getInstance().getReference("teachers/${currentItem.name}")
+
+            val pushKey = currentItem.email.toString()
+            val newPush = pushKey.replace(".", "")
+
+            val toPath =
+                FirebaseDatabase.getInstance().getReference("user-favouriteTeachers/$user/$newPush")
+
+            moveTeacherDetails(fromPath, toPath)
+        }
+
         // This options are for admins only
         val requestTeacherReference =
             FirebaseDatabase.getInstance().getReference("admin-teacher-request-list")
@@ -92,11 +111,13 @@ class teacherAdapter(private val userType: String) : RecyclerView.Adapter<teache
                     }
                 }
                 currentItem.name?.let { it1 -> requestTeacherReference.child(it1).removeValue() }
-                Toast.makeText(context, "Teacher request has been approved", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Teacher request has been approved", Toast.LENGTH_SHORT)
+                    .show()
             }
             holder.declineTeacherButton.setOnClickListener {
                 currentItem.name?.let { it1 -> requestTeacherReference.child(it1).removeValue() }
-                Toast.makeText(context, "Teacher request has been declined", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Teacher request has been declined", Toast.LENGTH_SHORT)
+                    .show()
             }
         } else
             holder.adminControlLayout.visibility = View.INVISIBLE
@@ -145,11 +166,24 @@ class teacherAdapter(private val userType: String) : RecyclerView.Adapter<teache
         val shareContactButton: Button = itemView.findViewById(R.id.btnShareContact)
         val emailTeacherButton: Button = itemView.findViewById(R.id.btnEmailTeacher)
         val callTeacherButton: Button = itemView.findViewById(R.id.btnCallTeacher)
+        val addToFavouriteButton: Button = itemView.findViewById(R.id.btnFavouriteContact)
 
         val adminControlLayout: LinearLayout = itemView.findViewById(R.id.adminControlLayout)
         val approveTeacherButton: Button = itemView.findViewById(R.id.btnApproveTeacher)
         val declineTeacherButton: Button = itemView.findViewById(R.id.btnDeclineTeacher)
 
+    }
+
+    private fun moveTeacherDetails(fromPath: DatabaseReference, toPath: DatabaseReference) {
+        fromPath.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                toPath.setValue(
+                    dataSnapshot.value
+                )
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
     }
 
 }

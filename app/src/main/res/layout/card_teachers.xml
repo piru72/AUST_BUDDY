@@ -86,6 +86,17 @@
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/share_contact" />
 
+            <Button
+                android:id="@+id/btnFavouriteContact"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="4dp"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_light"
+                android:text="Add to favourite" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
