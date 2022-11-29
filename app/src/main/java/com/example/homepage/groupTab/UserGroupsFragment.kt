@@ -30,6 +30,7 @@ class UserGroupsFragment : ReplaceFragment() {
     private lateinit var adapter: UserGroupAdapter
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private lateinit var _inflater: LayoutInflater
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +41,7 @@ class UserGroupsFragment : ReplaceFragment() {
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
+        _inflater = inflater
         binding.floatingActionButton.setOnClickListener {
 
 
@@ -85,7 +87,7 @@ class UserGroupsFragment : ReplaceFragment() {
         recycler = binding.UserGroupListRecycle
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = UserGroupAdapter()
+        adapter = UserGroupAdapter(_inflater)
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[UserGroupsViewModel::class.java]
 
