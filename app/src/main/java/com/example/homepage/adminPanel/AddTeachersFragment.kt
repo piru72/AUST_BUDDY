@@ -21,7 +21,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
     ): View {
         container?.removeAllViews()
         _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
-        database = Firebase.database.reference
+
         if (pushingPath == "admin-teacher-request-list")
             binding.addTeachersButtonForm.text = "Request for adding teacher"
 
@@ -73,7 +73,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
         return binding.root
     }
 
-    private fun writeNewTeacher(
+     fun writeNewTeacher(
         teachersName: String,
         teachersDesignation: String,
         teachersContactNo: String,
@@ -87,9 +87,11 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
             teachersContactNo,
             teacherEmail
         )
+        val newPush = teacherEmail.replace(".", "-")
+         database = Firebase.database.reference
         val teachersInformation = newTeacher.toMap()
         val childUpdate = hashMapOf<String, Any>(
-            "/$pushingPath/$teachersName" to teachersInformation
+            "/$pushingPath/$newPush" to teachersInformation
         )
         database.updateChildren(childUpdate)
 
