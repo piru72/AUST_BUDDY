@@ -72,23 +72,39 @@ class teacherAdapter(private val userType: String) :
                 context.startActivity(i)
             }
         }
-        if (userType == "Admin")
-            holder.addToFavouriteButton.visibility = View.GONE
+        when (userType) {
+            "Admin" -> holder.addToFavouriteButton.visibility = View.GONE
+            "User-favourites" -> {
+                holder.addToFavouriteButton.text = "Remove from favourites"
+                holder.addToFavouriteButton.setOnClickListener {
 
+                    val pushKey = currentItem.email.toString()
+                    val newPush = pushKey.replace(".", "-")
+                    val teacherReference =
+                        FirebaseDatabase.getInstance()
+                            .getReference("user-favouriteTeachers/$user/$newPush")
+                    teacherReference.removeValue()
+                }
+            }
+            else -> {
+                holder.addToFavouriteButton.setOnClickListener {
 
-        holder.addToFavouriteButton.setOnClickListener {
+                    val pushKey = currentItem.email.toString()
+                    val newPush = pushKey.replace(".", "-")
 
-            val pushKey = currentItem.email.toString()
-            val newPush = pushKey.replace(".", "-")
+                    val fromPath =
+                        FirebaseDatabase.getInstance().getReference("teachers/$newPush")
 
-            val fromPath =
-                FirebaseDatabase.getInstance().getReference("teachers/$newPush")
+                    val toPath =
+                        FirebaseDatabase.getInstance()
+                            .getReference("user-favouriteTeachers/$user/$newPush")
 
-            val toPath =
-                FirebaseDatabase.getInstance().getReference("user-favouriteTeachers/$user/$newPush")
+                    moveTeacherDetails(fromPath, toPath)
+                }
 
-            moveTeacherDetails(fromPath, toPath)
+            }
         }
+
 
         // This options are for admins only
         val requestTeacherReference =
@@ -112,13 +128,13 @@ class teacherAdapter(private val userType: String) :
                         }
                     }
                 }
-                val teacherId= currentItem.email.toString().replace(".", "-")
+                val teacherId = currentItem.email.toString().replace(".", "-")
                 requestTeacherReference.child(teacherId).removeValue()
                 Toast.makeText(context, "Teacher request has been approved", Toast.LENGTH_SHORT)
                     .show()
             }
             holder.declineTeacherButton.setOnClickListener {
-                val teacherId= currentItem.email.toString().replace(".", "-")
+                val teacherId = currentItem.email.toString().replace(".", "-")
                 requestTeacherReference.child(teacherId).removeValue()
                 Toast.makeText(context, "Teacher request has been declined", Toast.LENGTH_SHORT)
                     .show()

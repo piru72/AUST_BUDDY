@@ -38,6 +38,8 @@ class TeachersFragment(viewPath: String) : ReplaceFragment() {
         var userType = "User"
         if (databaseViewPath == "admin-teacher-request-list")
             userType = "Admin"
+        else if (databaseViewPath == "user-favouriteTeachers")
+            userType = "User-favourites"
         adapter = teacherAdapter(userType)
         userRecyclerView.adapter = adapter
 
