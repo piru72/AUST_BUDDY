@@ -51,21 +51,18 @@ class AboutDevFragment : ReplaceFragment() {
             sendMail(email)
         }
 
-        dev1Git.setOnClickListener{
-            replaceFragment(WebView("https://github.com/taralamia"),currentState)
+        dev1Git.setOnClickListener {
+            replaceFragment(WebView("https://github.com/taralamia"), currentState)
         }
-        dev2Git.setOnClickListener{
-            replaceFragment(WebView("https://github.com/piru72"),currentState)
+        dev2Git.setOnClickListener {
+            replaceFragment(WebView("https://github.com/piru72"), currentState)
         }
-        dev4Git.setOnClickListener{
-            replaceFragment(WebView("https://github.com/klutz-me"),currentState)
+        dev4Git.setOnClickListener {
+            replaceFragment(WebView("https://github.com/klutz-me"), currentState)
         }
 
         return v
     }
-
-
-
 
 
 }

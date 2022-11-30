@@ -33,7 +33,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/assistant_professor"
                 android:fontFamily="@font/poppins_light"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
 
             <LinearLayout
@@ -60,7 +60,7 @@
                     android:background="@color/background_color_50"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="4dp"/>
+                    android:layout_margin="4dp" />
 
                 <Button
                     android:id="@+id/btnEmailTeacher"
@@ -72,7 +72,7 @@
                     android:background="@color/background_color_50"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="4dp"/>
+                    android:layout_margin="4dp" />
             </LinearLayout>
 
             <Button
@@ -138,7 +138,7 @@
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
             android:src="@mipmap/ic_launcher"
-            android:layout_marginEnd="10sp"/>
+            android:layout_marginEnd="10sp" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -11,8 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/bk_shape03"
-        >
+        android:background="@drawable/bk_shape03">
 
         <Button
             android:id="@+id/btn_11"
@@ -149,6 +148,7 @@
             android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
+
         <Button
             android:id="@+id/btn_42"
             android:layout_width="match_parent"

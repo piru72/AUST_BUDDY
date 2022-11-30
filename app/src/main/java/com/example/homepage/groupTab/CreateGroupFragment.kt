@@ -41,8 +41,7 @@ class CreateGroupFragment : ReplaceFragment() {
                 makeToast("Provide Group Name ")
             else if (groupDetails == "")
                 makeToast("Provide Group Details ")
-            else
-            {
+            else {
                 createNewGroup(email, getUserId(), getRollOmittedUserId(), groupName, groupDetails)
                 binding.groupName.setText("")
                 binding.groupDetails.setText("")
@@ -71,7 +70,7 @@ class CreateGroupFragment : ReplaceFragment() {
         key = key.dropLast(key.length - 7)
         val pushingPath = "group-list/$rollOmittedUserId/$key"
 
-        val newGroup = GroupData(userEmail, universityId, groupName, groupDetails, pushingPath,key)
+        val newGroup = GroupData(userEmail, universityId, groupName, groupDetails, pushingPath, key)
         val groupDetailsChild = newGroup.toMap()
         val groupChild = hashMapOf<String, Any>(
             "$pushingPath" to groupDetailsChild,

@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseAuth
 class SignUpActivity : AppCompatActivity() {
 
 
-
     private lateinit var firebaseAuth: FirebaseAuth
     private var email = ""
     private var password = ""
@@ -31,7 +30,11 @@ class SignUpActivity : AppCompatActivity() {
             password = findViewById<TextView>(R.id.passwordEt).text.toString()
             val situation = validateData(email, password)
             if (situation == "OK") {
-                Toast.makeText(applicationContext, "CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL", Toast.LENGTH_SHORT)
+                Toast.makeText(
+                    applicationContext,
+                    "CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL",
+                    Toast.LENGTH_SHORT
+                )
                     .show()
                 fireBaseSignup()
                 val intent = Intent(this, SignInActivity::class.java)

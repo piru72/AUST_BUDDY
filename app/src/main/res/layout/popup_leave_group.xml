@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:fontFamily="@font/poppins_light"
-            android:text="Sure you want to leave this group?"/>
+            android:text="Sure you want to leave this group?" />
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -41,8 +41,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Cancel"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
-            />
+            android:fontFamily="@font/poppins_light" />
 
         <Button
             android:id="@+id/leaveButton"

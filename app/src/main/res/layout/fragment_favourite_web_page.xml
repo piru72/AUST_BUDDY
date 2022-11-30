@@ -24,7 +24,6 @@
         </androidx.recyclerview.widget.RecyclerView>
 
 
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingAddWebsiteButton"
             android:layout_width="wrap_content"

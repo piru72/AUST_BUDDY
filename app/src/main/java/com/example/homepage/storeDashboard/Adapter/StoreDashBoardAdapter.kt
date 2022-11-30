@@ -94,11 +94,14 @@ class StoreDashBoardAdapter(inflater: LayoutInflater) :
 
             addButton.setOnClickListener {
                 if (productName.text.toString() == "")
-                    Toast.makeText(context, "Please fill up all Product Name", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Please fill up all Product Name", Toast.LENGTH_SHORT)
+                        .show()
                 else if (productCategory.selectedItem.toString() == "Category")
-                    Toast.makeText(context, "Please fill up Product Category", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Please fill up Product Category", Toast.LENGTH_SHORT)
+                        .show()
                 else if (productPrice.text.toString() == "")
-                    Toast.makeText(context, "Please fill up Product Price", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Please fill up Product Price", Toast.LENGTH_SHORT)
+                        .show()
                 else {
 
                     if (sellersContactNo != null) {
@@ -135,7 +138,7 @@ class StoreDashBoardAdapter(inflater: LayoutInflater) :
         key: String,
         productDetailsWrite: String,
 
-    ) {
+        ) {
         val updateMaterial = Materials(
             user,
             productName,

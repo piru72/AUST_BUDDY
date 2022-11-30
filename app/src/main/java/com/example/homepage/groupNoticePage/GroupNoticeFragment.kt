@@ -66,7 +66,10 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                 picker = context?.let { it1 ->
                     DatePickerDialog(
                         it1,
-                        { _, year, monthOfYear, dayOfMonth -> taskDate.text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year },
+                        { _, year, monthOfYear, dayOfMonth ->
+                            taskDate.text =
+                                dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year
+                        },
                         year,
                         month,
                         day
@@ -75,7 +78,6 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                 picker?.datePicker?.minDate = cldr.timeInMillis
                 picker!!.show()
             }
-
 
 
             val popupWindow = PopupWindow(

@@ -15,7 +15,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 
-
 class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWebpageViewHolder>() {
     private val tasks = ArrayList<FavouriteWebpageData>()
 
@@ -46,14 +45,15 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
             val value = taskReference.child(websiteID)
             value.removeValue()
         }
-        holder.itemView.setOnClickListener(object :View.OnClickListener{
+        holder.itemView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
-               val activity = v!!.context as AppCompatActivity
+                val activity = v!!.context as AppCompatActivity
                 val webFragment = WebView(websiteLinkClick)
-               activity.supportFragmentManager.beginTransaction().replace(R.id.favouriteWebPageMother,webFragment).addToBackStack(
-                   "tag"
-               ).commit()
+                activity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.favouriteWebPageMother, webFragment).addToBackStack(
+                    "tag"
+                ).commit()
             }
 
         })

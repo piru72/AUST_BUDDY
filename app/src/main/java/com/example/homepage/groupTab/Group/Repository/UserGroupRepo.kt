@@ -31,8 +31,7 @@ class UserGroupRepo {
                         dataSnapshot.getValue(GroupData::class.java)!!
                     }
                     allGroups.postValue(groupList)
-                }
-                catch (_: Exception) {
+                } catch (_: Exception) {
 
                 }
             }

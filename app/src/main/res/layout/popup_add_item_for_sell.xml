@@ -41,7 +41,6 @@
         android:orientation="horizontal">
 
 
-
         <Spinner
             android:id="@+id/bookCategoryList"
             android:layout_width="wrap_content"

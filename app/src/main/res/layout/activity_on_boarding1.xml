@@ -49,8 +49,7 @@
         android:id="@+id/barrier2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        />
+        app:barrierDirection="left" />
 
     <TextView
         android:id="@+id/onboard_1_para"

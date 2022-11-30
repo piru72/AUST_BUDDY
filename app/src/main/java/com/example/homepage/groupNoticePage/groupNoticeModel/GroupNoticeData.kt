@@ -6,8 +6,8 @@ data class GroupNoticeData(
     var taskname: String? = "",
     var taskdescription: String? = "",
     var taskdate: String? = "",
-    var path : String ? ="",
-    var groupId : String ? = ""
+    var path: String? = "",
+    var groupId: String? = ""
 
 ) {
     fun toMap(): Map<String, Any?> {

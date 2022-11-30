@@ -115,7 +115,7 @@
         android:background="@drawable/rounded_list_item_view"
         android:text="@string/add_teacher"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_light"/>
+        android:fontFamily="@font/poppins_light" />
 
 
 </RelativeLayout>

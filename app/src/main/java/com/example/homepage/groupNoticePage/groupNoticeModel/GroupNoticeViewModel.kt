@@ -5,14 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homepage.groupNoticePage.groupNoticeRepo.GroupNoticeRepository
 
-class GroupNoticeViewModel : ViewModel(){
+class GroupNoticeViewModel : ViewModel() {
 
-    private lateinit var repository : GroupNoticeRepository
+    private lateinit var repository: GroupNoticeRepository
     private val _allSchedules = MutableLiveData<List<GroupNoticeData>>()
-    val allSchedules : LiveData<List<GroupNoticeData>> = _allSchedules
+    val allSchedules: LiveData<List<GroupNoticeData>> = _allSchedules
 
     fun initialize(groupSelected: String) {
         repository = GroupNoticeRepository(groupSelected).getInstance()
-        repository.loadSchedules(_allSchedules )
+        repository.loadSchedules(_allSchedules)
     }
 }

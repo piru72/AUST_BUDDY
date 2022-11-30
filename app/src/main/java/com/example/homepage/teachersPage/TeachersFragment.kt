@@ -45,7 +45,7 @@ class TeachersFragment(viewPath: String) : ReplaceFragment() {
 
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
         if (databaseViewPath == "user-favouriteTeachers")
-            viewModel.initialize(databaseViewPath+"/${getCurrentUserId()}")
+            viewModel.initialize(databaseViewPath + "/${getCurrentUserId()}")
         else
             viewModel.initialize(databaseViewPath)
         viewModel.allUsers.observe(viewLifecycleOwner) {

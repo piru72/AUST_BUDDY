@@ -9,8 +9,6 @@
     tools:context=".profileTab.ProfileFragment">
 
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,7 +22,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center">
-
 
 
             <Button
@@ -44,7 +41,7 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
                 android:focusable="true"
-                android:visibility="visible"/>
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/btn_request_for_teacher"
@@ -63,7 +60,8 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
                 android:focusable="true"
-                android:visibility="visible"/>
+                android:visibility="visible" />
+
             <Button
                 android:id="@+id/btn_report_bug"
                 android:layout_width="match_parent"
@@ -81,7 +79,7 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
                 android:focusable="true"
-                android:visibility="visible"/>
+                android:visibility="visible" />
 
 
         </LinearLayout>

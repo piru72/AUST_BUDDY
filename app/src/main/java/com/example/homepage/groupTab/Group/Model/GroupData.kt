@@ -6,7 +6,7 @@ data class GroupData(
     var groupName: String? = "",
     var groupDetails: String? = "",
     var path: String? = "",
-    val groupId: String?= ""
+    val groupId: String? = ""
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(

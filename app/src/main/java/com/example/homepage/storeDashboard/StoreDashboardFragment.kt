@@ -52,7 +52,7 @@ class StoreDashboardFragment : ReplaceFragment() {
             val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
             val productCategory = rootLayout.findViewById<Spinner>(R.id.bookCategoryList)
             val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
-            val productDetails= rootLayout.findViewById<EditText>(R.id.productDetailsPop)
+            val productDetails = rootLayout.findViewById<EditText>(R.id.productDetailsPop)
             val sellersContactNo = rootLayout.findViewById<EditText>(R.id.sellerContactNoPop)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)

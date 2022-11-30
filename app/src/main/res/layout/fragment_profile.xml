@@ -6,10 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
     android:id="@+id/fragment_profile"
-    tools:context=".profileTab.ProfileFragment"
-    >
-
-
+    tools:context=".profileTab.ProfileFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +28,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.08"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/dev1Img"
@@ -48,7 +45,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_profile"
             app:layout_constraintVertical_bias="0.47"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/textview_yet_TO_BE_DONE"
@@ -64,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="@+id/linearLayout"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -136,7 +133,7 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
                 tools:ignore="RtlSymmetry"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn_invite_friend"
@@ -215,7 +212,6 @@
                 android:elevation="10dp"
 
                 />
-
 
 
         </LinearLayout>

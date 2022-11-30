@@ -8,12 +8,12 @@ import com.example.homepage.teachersPage.TeacherRepo.TeacherRepository
 
 class teacherViewModel : ViewModel() {
 
-    private lateinit var  repository : TeacherRepository
+    private lateinit var repository: TeacherRepository
     private val _allUsers = MutableLiveData<List<TeacherData>>()
-    val allUsers : LiveData<List<TeacherData>> = _allUsers
+    val allUsers: LiveData<List<TeacherData>> = _allUsers
 
 
-    fun initialize(viewPath :String) {
+    fun initialize(viewPath: String) {
         repository = TeacherRepository(viewPath).getInstance()
         repository.loadUsers(_allUsers)
 

@@ -9,8 +9,10 @@ import com.google.firebase.ktx.Firebase
 class FavouriteWebRepo {
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
-    private val websiteReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("user-favouriteWebsites").child(user)
-    @Volatile private var INSTANCE : FavouriteWebRepo ?= null
+    private val websiteReference: DatabaseReference =
+        FirebaseDatabase.getInstance().getReference("user-favouriteWebsites").child(user)
+    @Volatile
+    private var INSTANCE: FavouriteWebRepo? = null
 
     fun getInstance(): FavouriteWebRepo {
         return INSTANCE ?: synchronized(this) {
@@ -28,14 +30,15 @@ class FavouriteWebRepo {
 
                 try {
 
-                    val websiteList : List<FavouriteWebpageData> = snapshot.children.map { dataSnapshot ->
+                    val websiteList: List<FavouriteWebpageData> =
+                        snapshot.children.map { dataSnapshot ->
 
-                        dataSnapshot.getValue(FavouriteWebpageData::class.java)!!
+                            dataSnapshot.getValue(FavouriteWebpageData::class.java)!!
 
-                    }
+                        }
                     allWebsites.postValue(websiteList)
 
-                }catch (_: Exception){
+                } catch (_: Exception) {
 
                 }
 

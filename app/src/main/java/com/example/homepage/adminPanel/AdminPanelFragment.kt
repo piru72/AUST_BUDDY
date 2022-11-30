@@ -13,7 +13,7 @@ import com.example.homepage.teachersPage.TeachersFragment
 
 
 class AdminPanelFragment : ReplaceFragment() {
- private var  _binding: FragmentAdminPanelBinding? = null
+    private var _binding: FragmentAdminPanelBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,22 +22,25 @@ class AdminPanelFragment : ReplaceFragment() {
         // Inflate the layout for this fragment
         container?.removeAllViews()
         _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)
-        binding.btnAddCoursesAdmin.setOnClickListener{
+        binding.btnAddCoursesAdmin.setOnClickListener {
 
             replaceFragment(AddCourseFragment("course-list"), R.id.fragment_admin_panel)
         }
-        binding.btnAddTeachersAdmin.setOnClickListener{
+        binding.btnAddTeachersAdmin.setOnClickListener {
 
             replaceFragment(AddTeachersFragment("teachers"), R.id.fragment_admin_panel)
         }
-        binding.btnTeacherRequest.setOnClickListener{
-            replaceFragment(TeachersFragment("admin-teacher-request-list"),R.id.fragment_admin_panel)
+        binding.btnTeacherRequest.setOnClickListener {
+            replaceFragment(
+                TeachersFragment("admin-teacher-request-list"),
+                R.id.fragment_admin_panel
+            )
         }
-        binding.btnViewBugReports.setOnClickListener{
-            replaceFragment(BugReportListFragment(),R.id.fragment_admin_panel)
+        binding.btnViewBugReports.setOnClickListener {
+            replaceFragment(BugReportListFragment(), R.id.fragment_admin_panel)
         }
-        binding.btnViewCourseRequest.setOnClickListener{
-            replaceFragment(ViewCourses("admin-course-request-list"),R.id.fragment_admin_panel)
+        binding.btnViewCourseRequest.setOnClickListener {
+            replaceFragment(ViewCourses("admin-course-request-list"), R.id.fragment_admin_panel)
         }
         return binding.root
     }

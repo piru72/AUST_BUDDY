@@ -7,7 +7,7 @@ data class TeacherData(
     var phone: String? = null,
     var designation: String? = null,
     var email: String? = null
-){
+) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "name" to name,

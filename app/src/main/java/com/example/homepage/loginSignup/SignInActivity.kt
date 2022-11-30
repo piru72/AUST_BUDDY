@@ -118,7 +118,9 @@ class SignInActivity : AppCompatActivity() {
             situation = "Enter a password"
         else if (passwordFunction.length <= 6)
             situation = "Password is too short"
-        else if (passwordFunction.contains("@") || passwordFunction.contains("#") || passwordFunction.contains("%")
+        else if (passwordFunction.contains("@") || passwordFunction.contains("#") || passwordFunction.contains(
+                "%"
+            )
             || passwordFunction.contains("$") || passwordFunction.contains("*")
         )
             situation = "USER EMAIL PASS VERIFIED"

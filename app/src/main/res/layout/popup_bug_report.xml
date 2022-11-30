@@ -11,11 +11,6 @@
     android:padding="20dp">
 
 
-
-
-
-
-
     <EditText
         android:id="@+id/BugDescriptionPop"
         android:layout_width="match_parent"
@@ -27,7 +22,7 @@
         android:minHeight="48dp"
 
         android:textColorHint="@color/black"
-        android:fontFamily="@font/poppins_light"/>
+        android:fontFamily="@font/poppins_light" />
 
 
     <LinearLayout
@@ -47,7 +42,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Close"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/poppins_light" />
 
         <Button
             android:id="@+id/sendButton"
@@ -60,7 +55,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="SEND"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/poppins_light" />
 
 
     </LinearLayout>

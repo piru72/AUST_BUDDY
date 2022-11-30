@@ -8,9 +8,6 @@
     tools:context=".groupTab.JoinGroupFragment">
 
 
-
-
-
     <TextView
 
         android:id="@+id/uppertext"
@@ -22,7 +19,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="160dp"
         android:textColor="@color/black"
-        android:text="You're currently signed in as"/>
+        android:text="You're currently signed in as" />
 
     <TextView
         android:id="@+id/studentId_Show"
@@ -30,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="STUDENT EMAIL"/>
+        android:text="STUDENT EMAIL" />
 
     <TextView
         android:id="@+id/sample_text"
@@ -42,9 +39,7 @@
         android:layout_marginBottom="10dp"
         android:textColor="@color/black"
         android:layout_below="@id/studentId_Show"
-        android:text="Ask admin for the group id, then enter it here."/>
-
-
+        android:text="Ask admin for the group id, then enter it here." />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -73,11 +68,7 @@
 - No space"
         android:textStyle="bold"
         android:fontFamily="@font/poppins_light"
-        android:layout_marginBottom="0dp"/>
-
-
-
-
+        android:layout_marginBottom="0dp" />
 
 
     <Button
@@ -93,8 +84,7 @@
         android:textColor="@color/black"
         android:background="@color/background_color_50"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"/>
-
+        android:foreground="?android:attr/selectableItemBackground" />
 
 
 </RelativeLayout>

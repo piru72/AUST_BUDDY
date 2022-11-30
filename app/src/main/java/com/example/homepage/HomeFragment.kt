@@ -30,17 +30,20 @@ class HomeFragment : ReplaceFragment() {
 
 
         binding.btnIums.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universityStudentPortalLink)),currentState)
+            replaceFragment(WebView(getString(R.string.universityStudentPortalLink)), currentState)
         }
 
         binding.btnTeachers.setOnClickListener {
             replaceFragment(TeachersFragment("teachers"), currentState)
         }
         binding.btnSyllabus.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universitySyllabusLink)),currentState)
+            replaceFragment(WebView(getString(R.string.universitySyllabusLink)), currentState)
         }
         binding.btnCalender.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universityAcademicCalenderLink)),currentState)
+            replaceFragment(
+                WebView(getString(R.string.universityAcademicCalenderLink)),
+                currentState
+            )
         }
         binding.btnBuses.setOnClickListener {
             replaceFragment(BusFragment(), currentState)
@@ -52,8 +55,9 @@ class HomeFragment : ReplaceFragment() {
         binding.btnRequest.setOnClickListener {
             replaceFragment(RequestFragment(), currentState)
         }
-        binding.noticeButton.setOnClickListener{
-            replaceFragment(WebView(getString(R.string.universityNoticeLink)),currentState)}
+        binding.noticeButton.setOnClickListener {
+            replaceFragment(WebView(getString(R.string.universityNoticeLink)), currentState)
+        }
 
         binding.btnStoreDashboard.setOnClickListener {
             replaceFragment(StoreDashboardFragment(), currentState)

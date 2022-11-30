@@ -66,7 +66,7 @@
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
                         android:text="20200104128"
-                        android:paddingBottom="4sp"/>
+                        android:paddingBottom="4sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                         android:gravity="center"
                         android:text="Parvez Ahamed"
                         android:textSize="20sp"
-                        android:paddingBottom="4sp"/>
+                        android:paddingBottom="4sp" />
 
                     <TextView
                         android:id="@+id/dev2Id"
@@ -142,7 +142,7 @@
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
                         android:text="20200104129"
-                        android:paddingBottom="4sp"/>
+                        android:paddingBottom="4sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -217,7 +217,7 @@
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
                         android:text="20200104130"
-                        android:paddingBottom="4sp"/>
+                        android:paddingBottom="4sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

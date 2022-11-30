@@ -67,14 +67,13 @@ class UserGroupsFragment : ReplaceFragment() {
             )
 
             joinButton.setOnClickListener {
-                replaceFragment(JoinGroupFragment(),R.id.userGroupFragment)
+                replaceFragment(JoinGroupFragment(), R.id.userGroupFragment)
                 popupWindow.dismiss()
             }
             createButton.setOnClickListener {
-                replaceFragment(CreateGroupFragment(),R.id.userGroupFragment)
+                replaceFragment(CreateGroupFragment(), R.id.userGroupFragment)
                 popupWindow.dismiss()
             }
-
 
 
         }

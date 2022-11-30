@@ -12,27 +12,26 @@ class BugReportRepository {
     val user = auth.currentUser?.uid
     private val bugReportReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("admin-bug-reports")
-    private  var INSTANCE : BugReportRepository? = null
+    private var INSTANCE: BugReportRepository? = null
 
-    fun getInstance() : BugReportRepository{
-        return INSTANCE ?: synchronized(this){
+    fun getInstance(): BugReportRepository {
+        return INSTANCE ?: synchronized(this) {
             val instance = BugReportRepository()
             INSTANCE = instance
             instance
         }
     }
 
-    fun loadBugReports(allBugReports : MutableLiveData<List<BugReportsData>>)
-    {
-        bugReportReference.addValueEventListener(object : ValueEventListener{
+    fun loadBugReports(allBugReports: MutableLiveData<List<BugReportsData>>) {
+        bugReportReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 try {
-                    val bugReportList : List<BugReportsData> = snapshot.children.map { dataSnapshot ->
-                        dataSnapshot.getValue(BugReportsData::class.java)!!
-                    }
+                    val bugReportList: List<BugReportsData> =
+                        snapshot.children.map { dataSnapshot ->
+                            dataSnapshot.getValue(BugReportsData::class.java)!!
+                        }
                     allBugReports.postValue(bugReportList)
-                }
-                catch (_:Exception){
+                } catch (_: Exception) {
 
                 }
             }

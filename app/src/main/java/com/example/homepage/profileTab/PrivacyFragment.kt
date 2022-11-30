@@ -27,7 +27,7 @@ class PrivacyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        webViewPage  = view.findViewById(R.id.webView)
+        webViewPage = view.findViewById(R.id.webView)
 
 
         webViewPage.webViewClient = object : WebViewClient() {

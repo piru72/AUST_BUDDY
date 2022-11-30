@@ -32,7 +32,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
 
             <TextView
@@ -41,7 +41,8 @@
                 android:layout_height="wrap_content"
                 android:text="Group Creator"
                 android:fontFamily="@font/poppins_light"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
+
             <TextView
                 android:id="@+id/userJoinedGroupId"
                 android:layout_width="wrap_content"
@@ -52,7 +53,7 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
                 android:textIsSelectable="true"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/userJoinedGroupsCreatorName"
@@ -63,7 +64,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_light"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -96,7 +96,6 @@ class FavouriteWebPageFragment : ReplaceFragment() {
     }
 
 
-
     private fun addNewWebsite(user: String, websiteName: String, websiteLink: String) {
 
         val key = database.child("posts").push().key

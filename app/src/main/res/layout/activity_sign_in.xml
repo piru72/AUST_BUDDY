@@ -14,11 +14,11 @@
         android:orientation="vertical"
         android:layout_margin="20sp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:src="@drawable/login"
-        />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:src="@drawable/login" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_height="51dp"
                 android:hint="Type your Email"
                 android:inputType="textEmailAddress"
-                android:layout_margin="20sp"/>
+                android:layout_margin="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:hint="Type your Password"
                 android:inputType="textPassword"
-                android:layout_margin="20sp"/>
+                android:layout_margin="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

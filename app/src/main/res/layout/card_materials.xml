@@ -109,7 +109,7 @@
                 android:text="Call"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
-                android:layout_margin="5sp"/>
+                android:layout_margin="5sp" />
 
             <Button
                 android:id="@+id/showDetailsButton"
@@ -122,7 +122,7 @@
                 android:text="Details"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_light"
-                android:layout_margin="5sp"/>
+                android:layout_margin="5sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -18,16 +18,15 @@
             android:layout_marginBottom="5dp"
             android:text="@string/bug_report_details"
             android:inputType="textMultiLine"
-           android:textSize="30dp"
+            android:textSize="30dp"
             android:textColorHint="@color/black"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/poppins_light" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="10sp">
-
 
 
             <Button
@@ -41,7 +40,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="Close"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"/>
+                android:fontFamily="@font/poppins_light" />
 
             <Button
                 android:id="@+id/deleteBugReportButton"
@@ -54,7 +53,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="DONE"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"/>
+                android:fontFamily="@font/poppins_light" />
 
         </LinearLayout>
 

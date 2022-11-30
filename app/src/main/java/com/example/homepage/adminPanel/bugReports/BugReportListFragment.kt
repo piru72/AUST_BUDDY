@@ -48,7 +48,7 @@ class BugReportListFragment : Fragment() {
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[BugReportViewModel::class.java]
 
-        viewModel.allBugReport.observe(viewLifecycleOwner){
+        viewModel.allBugReport.observe(viewLifecycleOwner) {
             adapter!!.updateBugReportList(it)
         }
 

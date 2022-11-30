@@ -5,11 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homepage.favouriteWebPage.Repo.FavouriteWebRepo
 
-class FavouriteWebViewModel: ViewModel() {
+class FavouriteWebViewModel : ViewModel() {
 
-    private val repository : FavouriteWebRepo = FavouriteWebRepo().getInstance()
+    private val repository: FavouriteWebRepo = FavouriteWebRepo().getInstance()
     private val _allSchedules = MutableLiveData<List<FavouriteWebpageData>>()
-    val allSchedules : LiveData<List<FavouriteWebpageData>> = _allSchedules
+    val allSchedules: LiveData<List<FavouriteWebpageData>> = _allSchedules
 
     init {
         repository.loadWebsites(_allSchedules)

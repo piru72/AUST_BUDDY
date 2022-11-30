@@ -34,10 +34,9 @@ open class ReplaceFragment : Fragment() {
 
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
-        fragmentManager.beginTransaction().replace(xml_file_name, fragment).addToBackStack("tag").commit()
+        fragmentManager.beginTransaction().replace(xml_file_name, fragment).addToBackStack("tag")
+            .commit()
     }
-
-
 
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -88,14 +87,14 @@ open class ReplaceFragment : Fragment() {
     fun setInformation(userEmail: String) {
         currentEmail = userEmail
         currentName = setUserName()
-        currentId =  setUserId()
-        currentDept =  setDepartment()
+        currentId = setUserId()
+        currentDept = setDepartment()
         currentSession = setSession()
 
     }
 
-    private fun setSession(): String{
-        return if (currentId[2].toString() == "1" ) "FALL" else "SPRING" + " " + currentId[0].toString() + currentId[1].toString()
+    private fun setSession(): String {
+        return if (currentId[2].toString() == "1") "FALL" else "SPRING" + " " + currentId[0].toString() + currentId[1].toString()
     }
 
     private fun setDepartment(): String {
@@ -112,6 +111,7 @@ open class ReplaceFragment : Fragment() {
             department = getString(R.string.te)
         return department
     }
+
     private fun setUserName(): String {
         return (currentEmail.split(".")[0]).replaceFirstChar {
             if (it.isLowerCase()) it.titlecase(
@@ -127,29 +127,33 @@ open class ReplaceFragment : Fragment() {
     fun getDepartment(): String {
         return currentDept
     }
+
     fun getUserName(): String {
         return currentName
     }
+
     fun getUserId(): String {
         return currentId
     }
+
     fun getUserEmail(): String {
         return currentEmail
     }
-    fun getSession() : String {
+
+    fun getSession(): String {
         return currentSession
     }
 
-    fun validNumber(sellersContactNoWrite : String) : Boolean{
+    fun validNumber(sellersContactNoWrite: String): Boolean {
 
         return sellersContactNoWrite.length == 11 && sellersContactNoWrite[0] == '0' && sellersContactNoWrite[1] == '1'
     }
 
     fun getDatabasePath(foundString: String): String {
 
-        var yearSemester= foundString.replace("[^\\d.]".toRegex(), "")
+        var yearSemester = foundString.replace("[^\\d.]".toRegex(), "")
 
-        return   "year" + yearSemester[0] + "semester" + yearSemester[1]
+        return "year" + yearSemester[0] + "semester" + yearSemester[1]
     }
 
 
@@ -174,6 +178,7 @@ open class ReplaceFragment : Fragment() {
         return m.matches()
 
     }
+
     private val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                 "\\@" +
@@ -185,11 +190,11 @@ open class ReplaceFragment : Fragment() {
     )
 
 
-     fun validEmail(email: String): Boolean {
+    fun validEmail(email: String): Boolean {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches()
     }
 
-    fun getRollOmittedUserId() : String {
+    fun getRollOmittedUserId(): String {
         return getUserId().dropLast(3)
     }
 

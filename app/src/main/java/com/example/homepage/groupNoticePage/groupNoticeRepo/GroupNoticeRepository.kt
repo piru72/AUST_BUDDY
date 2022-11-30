@@ -10,8 +10,10 @@ class GroupNoticeRepository(private var groupSelected: String) {
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
 
-    private val scheduleReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("group-notice").child(groupSelected)
-    @Volatile private var INSTANCE : GroupNoticeRepository ?= null
+    private val scheduleReference: DatabaseReference =
+        FirebaseDatabase.getInstance().getReference("group-notice").child(groupSelected)
+    @Volatile
+    private var INSTANCE: GroupNoticeRepository? = null
     fun getInstance(): GroupNoticeRepository {
         return INSTANCE ?: synchronized(this) {
 
@@ -28,14 +30,15 @@ class GroupNoticeRepository(private var groupSelected: String) {
 
                 try {
 
-                    val scheduleList : List<GroupNoticeData> = snapshot.children.map { dataSnapshot ->
+                    val scheduleList: List<GroupNoticeData> =
+                        snapshot.children.map { dataSnapshot ->
 
-                        dataSnapshot.getValue(GroupNoticeData::class.java)!!
+                            dataSnapshot.getValue(GroupNoticeData::class.java)!!
 
-                    }
+                        }
                     allSchedules.postValue(scheduleList)
 
-                }catch (_: Exception){
+                } catch (_: Exception) {
 
                 }
 

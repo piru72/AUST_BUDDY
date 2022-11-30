@@ -18,6 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:iss_selected_dot="@drawable/default_selected_dot"
-        app:iss_unselected_dot="@drawable/default_unselected_dot"/>
+        app:iss_unselected_dot="@drawable/default_unselected_dot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

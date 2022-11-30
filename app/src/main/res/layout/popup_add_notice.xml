@@ -57,10 +57,10 @@
     </LinearLayout>
 
     <!--    <DatePicker-->
-<!--        android:id="@+id/datePicker1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:datePickerMode="calendar"/>-->
+    <!--        android:id="@+id/datePicker1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:datePickerMode="calendar"/>-->
 
 
     <EditText
@@ -74,7 +74,7 @@
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_light"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/black" />
 
 
     <LinearLayout

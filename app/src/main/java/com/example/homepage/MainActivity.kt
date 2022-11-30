@@ -27,12 +27,14 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
     public override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
 
     }
+
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Log.i("LoginActivity", "Update UI Called")

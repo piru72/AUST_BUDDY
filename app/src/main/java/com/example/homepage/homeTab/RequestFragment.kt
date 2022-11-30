@@ -38,8 +38,8 @@ class RequestFragment : ReplaceFragment() {
         database = Firebase.database.reference
         auth = Firebase.auth
         val user = auth.currentUser!!.uid
-        binding.btnRequestForCourse.setOnClickListener{
-            replaceFragment(AddCourseFragment("admin-course-request-list"),R.id.requestScreen)
+        binding.btnRequestForCourse.setOnClickListener {
+            replaceFragment(AddCourseFragment("admin-course-request-list"), R.id.requestScreen)
         }
         binding.btnRequestForTeacher.setOnClickListener {
             replaceFragment(AddTeachersFragment("admin-teacher-request-list"), R.id.requestScreen)
@@ -83,7 +83,7 @@ class RequestFragment : ReplaceFragment() {
                     makeToast("Please fill up all  the information")
                 else {
                     setInformation(FirebaseAuth.getInstance().currentUser?.email.toString())
-                    writeNewReport(getCurrentUserId(), getUserEmail(),reportDescription)
+                    writeNewReport(getCurrentUserId(), getUserEmail(), reportDescription)
                     popupWindow.dismiss()
                 }
 
@@ -92,7 +92,6 @@ class RequestFragment : ReplaceFragment() {
 
         return binding.root
     }
-
 
 
     private fun writeNewReport(
@@ -107,7 +106,7 @@ class RequestFragment : ReplaceFragment() {
         }
 
         val newReport =
-            BugReportsData(userId, reportersDetails, reportDescription,key).toMap()
+            BugReportsData(userId, reportersDetails, reportDescription, key).toMap()
         val childReport = hashMapOf<String, Any>("/admin-bug-reports/$key" to newReport)
         database.updateChildren(childReport)
     }

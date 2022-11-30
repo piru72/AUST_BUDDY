@@ -111,7 +111,7 @@ class UserGroupAdapter(inflater: LayoutInflater) :
         val groupDetails: TextView = itemView.findViewById(R.id.userJoinedGroupsCreator)
         val groupCreatorName: TextView = itemView.findViewById(R.id.userJoinedGroupsCreatorName)
         val groupId: TextView = itemView.findViewById(R.id.userJoinedGroupId)
-        val leaveGroup : Button = itemView.findViewById(R.id.btnLeaveGroup)
+        val leaveGroup: Button = itemView.findViewById(R.id.btnLeaveGroup)
 
     }
 }

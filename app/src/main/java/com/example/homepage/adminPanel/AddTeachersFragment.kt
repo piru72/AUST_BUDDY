@@ -45,7 +45,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
             else if (teachersImageLink == "")
                 makeToast("Provide teachers image link ")
             else {
-                if (!validNumber(teachersContactNo)&& teachersContactNo != "Not Available")
+                if (!validNumber(teachersContactNo) && teachersContactNo != "Not Available")
                     makeToast("Provide a valid contact no")
                 else if (!validEmail(teacherEmail))
                     makeToast("Provide a valid email")
@@ -56,7 +56,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
                         teachersName,
                         teachersDesignation,
                         teachersContactNo,
-                        teacherEmail,teachersImageLink
+                        teacherEmail, teachersImageLink
                     )
                     binding.teachersName.setText("")
                     binding.teachersDesignation.setText("")
@@ -73,7 +73,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
         return binding.root
     }
 
-     fun writeNewTeacher(
+    fun writeNewTeacher(
         teachersName: String,
         teachersDesignation: String,
         teachersContactNo: String,
@@ -88,23 +88,22 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
             teacherEmail
         )
         val newPush = teacherEmail.replace(".", "-")
-         database = Firebase.database.reference
+        database = Firebase.database.reference
         val teachersInformation = newTeacher.toMap()
-         val childUpdate = hashMapOf<String, Any>(
-             "/$pushingPath/$newPush" to teachersInformation
-         )
+        val childUpdate = hashMapOf<String, Any>(
+            "/$pushingPath/$newPush" to teachersInformation
+        )
 
-         if (pushingPath == "admin-teacher-request-list")
-         {
-             val pushKey = teacherEmail.toString()
-             val newPush = pushKey.replace(".", "-")
+        if (pushingPath == "admin-teacher-request-list") {
+            val pushKey = teacherEmail.toString()
+            val newPush = pushKey.replace(".", "-")
 
-             val childUpdate = hashMapOf<String, Any>(
-                 "user-favouriteTeachers/${getCurrentUserId()}/$newPush" to teachersInformation
-             )
-             database.updateChildren(childUpdate)
+            val childUpdate = hashMapOf<String, Any>(
+                "user-favouriteTeachers/${getCurrentUserId()}/$newPush" to teachersInformation
+            )
+            database.updateChildren(childUpdate)
 
-         }
+        }
 
         database.updateChildren(childUpdate)
 

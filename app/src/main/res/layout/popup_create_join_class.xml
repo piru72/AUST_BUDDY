@@ -11,7 +11,6 @@
     android:padding="20dp">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,8 +28,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Join"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
-            />
+            android:fontFamily="@font/poppins_light" />
 
         <Button
             android:id="@+id/createButton"
