@@ -90,9 +90,22 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
         val newPush = teacherEmail.replace(".", "-")
          database = Firebase.database.reference
         val teachersInformation = newTeacher.toMap()
-        val childUpdate = hashMapOf<String, Any>(
-            "/$pushingPath/$newPush" to teachersInformation
-        )
+         val childUpdate = hashMapOf<String, Any>(
+             "/$pushingPath/$newPush" to teachersInformation
+         )
+
+         if (pushingPath == "admin-teacher-request-list")
+         {
+             val pushKey = teacherEmail.toString()
+             val newPush = pushKey.replace(".", "-")
+
+             val childUpdate = hashMapOf<String, Any>(
+                 "user-favouriteTeachers/${getCurrentUserId()}/$newPush" to teachersInformation
+             )
+             database.updateChildren(childUpdate)
+
+         }
+
         database.updateChildren(childUpdate)
 
     }
