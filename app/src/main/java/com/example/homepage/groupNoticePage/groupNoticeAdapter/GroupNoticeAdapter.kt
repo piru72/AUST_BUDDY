@@ -1,5 +1,6 @@
 package com.example.homepage.groupNoticePage.groupNoticeAdapter
 
+import android.app.DatePickerDialog
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +13,14 @@ import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 
 class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
     private val tasks = ArrayList<GroupNoticeData>()
     private val taskIds = ArrayList<String>()
     private var _inflater: LayoutInflater = inflater
+    var picker: DatePickerDialog? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -55,13 +58,15 @@ class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupN
 
             val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
             val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
-            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
+            val taskDate = rootLayout.findViewById<TextView>(R.id.TaskDatePop)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
+            val chooseButton = rootLayout.findViewById<Button>(R.id.chooseButton)
+
 
             taskName.setText(currentTask.taskname)
             taskDescription.setText(currentTask.taskdescription)
-            taskDate.setText(currentTask.taskdate)
+            taskDate.text = currentTask.taskdate
 
             val popupWindow = PopupWindow(
                 rootLayout,
@@ -78,6 +83,22 @@ class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupN
                 0,
                 -500
             )
+            chooseButton.setOnClickListener {
+                val cldr: Calendar = Calendar.getInstance()
+                val day: Int = cldr.get(Calendar.DAY_OF_MONTH)
+                val month: Int = cldr.get(Calendar.MONTH)
+                val year: Int = cldr.get(Calendar.YEAR)
+                picker = context?.let { it1 ->
+                    DatePickerDialog(
+                        it1,
+                        { _, year, monthOfYear, dayOfMonth -> taskDate.text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year },
+                        year,
+                        month,
+                        day
+                    )
+                }
+                picker!!.show()
+            }
 
             closeButton.setOnClickListener {
                 popupWindow.dismiss()

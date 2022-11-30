@@ -24,18 +24,43 @@
         android:fontFamily="@font/poppins_light"
         android:textColorHint="@color/black" />
 
-    <EditText
-        android:id="@+id/TaskDatePop"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:autofillHints=""
-        android:hint="Quiz Date"
-        android:inputType="date"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/poppins_light"
-        android:textColorHint="@color/black" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TaskDatePop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="@font/poppins_light"
+            android:minHeight="48dp"
+            android:text="Choose Date"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18dp" />
+
+        <Button
+
+            android:id="@+id/chooseButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cardview_compat_inset_shadow"
+            android:layout_weight="1"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Choose"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!--    <DatePicker-->
+<!--        android:id="@+id/datePicker1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:datePickerMode="calendar"/>-->
 
 
     <EditText

@@ -1,5 +1,6 @@
 package com.example.homepage.groupNoticePage
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -21,6 +22,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 
 class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() {
@@ -32,6 +34,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
     private lateinit var _inflater: LayoutInflater
+    var picker: DatePickerDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,9 +53,31 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
 
             val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
             val taskDescription = rootLayout.findViewById<EditText>(R.id.TaskDescriptionPop)
-            val taskDate = rootLayout.findViewById<EditText>(R.id.TaskDatePop)
+            val taskDate = rootLayout.findViewById<TextView>(R.id.TaskDatePop)
+            val chooseButton = rootLayout.findViewById<Button>(R.id.chooseButton)
             val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
             val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
+
+            chooseButton.setOnClickListener {
+                val cldr: Calendar = Calendar.getInstance()
+                val day: Int = cldr.get(Calendar.DAY_OF_MONTH)
+                val month: Int = cldr.get(Calendar.MONTH)
+                val year: Int = cldr.get(Calendar.YEAR)
+                // date picker dialog
+                // date picker dialog
+                picker = context?.let { it1 ->
+                    DatePickerDialog(
+                        it1,
+                        { _, year, monthOfYear, dayOfMonth -> taskDate.text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year },
+                        year,
+                        month,
+                        day
+                    )
+                }
+                picker!!.show()
+            }
+
+
 
             val popupWindow = PopupWindow(
                 rootLayout,
