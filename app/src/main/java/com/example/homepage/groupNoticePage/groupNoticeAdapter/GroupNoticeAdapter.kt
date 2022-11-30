@@ -16,7 +16,8 @@ import com.google.firebase.ktx.Firebase
 import java.util.*
 
 
-class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
+class GroupNoticeAdapter(inflater: LayoutInflater) :
+    RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
     private val tasks = ArrayList<GroupNoticeData>()
     private val taskIds = ArrayList<String>()
     private var _inflater: LayoutInflater = inflater
@@ -42,15 +43,15 @@ class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupN
         holder.taskDescription.text = currentTask.taskdescription
         holder.taskDate.text = currentTask.taskdate
 
-        if (user != currentTask.uid)
-        {
+        if (user != currentTask.uid) {
             holder.deleteButton.visibility = View.INVISIBLE
             holder.editButton.visibility = View.INVISIBLE
         }
 
         holder.deleteButton.setOnClickListener {
             val noticeReference =
-                FirebaseDatabase.getInstance().getReference("group-notice").child(currentTask.groupId.toString())
+                FirebaseDatabase.getInstance().getReference("group-notice")
+                    .child(currentTask.groupId.toString())
             noticeReference.child(currentTask.path.toString()).removeValue()
         }
         holder.editButton.setOnClickListener {
@@ -91,12 +92,16 @@ class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupN
                 picker = context?.let { it1 ->
                     DatePickerDialog(
                         it1,
-                        { _, year, monthOfYear, dayOfMonth -> taskDate.text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year },
+                        { _, year, monthOfYear, dayOfMonth ->
+                            taskDate.text =
+                                dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year
+                        },
                         year,
                         month,
                         day
                     )
                 }
+                picker?.datePicker?.minDate = cldr.timeInMillis
                 picker!!.show()
             }
 
@@ -110,10 +115,13 @@ class GroupNoticeAdapter(inflater: LayoutInflater) : RecyclerView.Adapter<GroupN
                 val description = taskDescription.text.toString()
                 val date = taskDate.text.toString()
 
-                if(name == "" || description=="")
-                    Toast.makeText(context, "Please fill up all  the information", Toast.LENGTH_SHORT).show()
-                else
-                {
+                if (name == "" || description == "")
+                    Toast.makeText(
+                        context,
+                        "Please fill up all  the information",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                else {
                     val groupNoticeFragment = GroupNoticeFragment()
                     groupNoticeFragment.writeNewTask(
                         user,

@@ -63,8 +63,6 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                 val day: Int = cldr.get(Calendar.DAY_OF_MONTH)
                 val month: Int = cldr.get(Calendar.MONTH)
                 val year: Int = cldr.get(Calendar.YEAR)
-                // date picker dialog
-                // date picker dialog
                 picker = context?.let { it1 ->
                     DatePickerDialog(
                         it1,
@@ -74,6 +72,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                         day
                     )
                 }
+                picker?.datePicker?.minDate = cldr.timeInMillis
                 picker!!.show()
             }
 
