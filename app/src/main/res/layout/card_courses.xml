@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/card_bk"
     app:cardCornerRadius="8dp"
-    app:cardElevation="6dp"
-    app:cardBackgroundColor="@color/card_bk">
+    app:cardElevation="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,20 +101,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/courseDeclineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:fontFamily="@font/poppins_light"
                 android:layout_margin="5dp"
-                android:gravity="center"
-                android:focusable="true"
-                android:elevation="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/background_color_50"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
                 android:linksClickable="true"
                 android:text="@string/decline" />
 
@@ -123,14 +123,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:fontFamily="@font/poppins_light"
                 android:layout_margin="5dp"
                 android:layout_marginEnd="10dp"
                 android:autoLink="web"
+                android:background="@color/background_color_50"
                 android:elevation="10dp"
                 android:focusable="true"
+                android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:background="@color/background_color_50"
                 android:linksClickable="true"
                 android:text="@string/approve" />
 

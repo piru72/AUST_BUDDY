@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".storeTab.StoreFragment"
-    android:background="@drawable/bk_shape03">
+    android:background="@drawable/bk_shape03"
+    tools:context=".storeTab.StoreFragment">
 
     <RelativeLayout
+        android:id="@+id/materialListActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/materialListActivity"
         android:padding="10dp">
 
 

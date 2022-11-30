@@ -11,6 +11,7 @@ class FavouriteWebRepo {
     val user = auth.currentUser!!.uid
     private val websiteReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("user-favouriteWebsites").child(user)
+
     @Volatile
     private var INSTANCE: FavouriteWebRepo? = null
 

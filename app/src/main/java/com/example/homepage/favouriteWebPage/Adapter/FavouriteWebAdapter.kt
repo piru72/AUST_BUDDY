@@ -52,8 +52,8 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
                 val webFragment = WebView(websiteLinkClick)
                 activity.supportFragmentManager.beginTransaction()
                     .replace(R.id.favouriteWebPageMother, webFragment).addToBackStack(
-                    "tag"
-                ).commit()
+                        "tag"
+                    ).commit()
             }
 
         })

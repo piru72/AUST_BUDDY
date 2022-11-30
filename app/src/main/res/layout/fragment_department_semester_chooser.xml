@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_department_semesterChooser"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_department_semesterChooser"
     tools:context=".courseTab.DepartmentSemesterChooserFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:background="@drawable/bk_shape03"
         android:gravity="center"
-        android:background="@drawable/bk_shape03">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_11"
@@ -20,17 +20,17 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginBottom="10dp"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:background="@color/background_color_50"
 
+            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:drawableTint="#000"
+
+            android:focusable="true"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="8dp"
             android:text="1st Year 1st Semester"
-
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@color/background_color_50"
-            android:drawableTint="#000"
 
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
@@ -43,14 +43,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="1st Year 2nd Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -62,14 +62,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="2nd Year 1st Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -81,14 +81,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="2nd Year 2nd Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -100,14 +100,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="3rd Year 1st Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -119,14 +119,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="3rd Year 2nd Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -138,14 +138,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="4th Year 1st Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
@@ -157,14 +157,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginBottom="8dp"
 
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@color/background_color_50"
             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
             android:drawableTint="#000"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
             android:text="4th Year 2nd Semester"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>

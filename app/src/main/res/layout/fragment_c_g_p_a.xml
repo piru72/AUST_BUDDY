@@ -40,12 +40,12 @@
             <Button
                 android:id="@+id/btn_select"
                 android:layout_width="193dp"
-                android:textSize="16sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:background="@color/primary_green"
                 android:text="@string/select"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -83,12 +83,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp"
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -116,12 +116,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -148,12 +148,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -180,12 +180,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -212,12 +212,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -244,12 +244,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -276,12 +276,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -309,12 +309,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
 
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -341,12 +341,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -374,12 +374,12 @@
 
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/card_bk"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/credit"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
-                    android:focusable="true"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -452,10 +452,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppins_light"
                 android:text="@string/please_select_your_semester_above"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
                 android:textSize="30sp" />
         </LinearLayout>
 

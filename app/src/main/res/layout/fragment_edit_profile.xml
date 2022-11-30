@@ -50,12 +50,12 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
-                    android:drawableStart="@drawable/person_ic"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
+                    android:drawableStart="@drawable/person_ic"
                     android:drawableTint="#000"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="User Name"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -66,12 +66,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
-                    android:text="User Name"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="User Name"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -85,13 +85,13 @@
                     android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
-                    android:text="Email"
+                    android:background="@color/background_color_50"
                     android:drawableStart="@drawable/mail_ic"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@color/background_color_50"
-                    android:textColor="@color/black"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Email"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -100,12 +100,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
-                    android:text="Full  Name"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Full  Name"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -119,13 +119,13 @@
                     android:layout_width="130sp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:text="Student ID"
                     android:drawableStart="@drawable/key_ic"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Student ID"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -134,12 +134,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
-                    android:text="ID"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="ID"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -153,12 +153,12 @@
                     android:layout_width="120sp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
-                    android:text="Session"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Session"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -167,12 +167,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="Admission Session"
                     android:textColor="@color/black"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@color/background_color_50"
-                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -185,14 +185,14 @@
                     android:id="@+id/departmentAnchor"
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:background="@color/background_color_50"
                     android:layout_margin="10sp"
+                    android:background="@color/background_color_50"
                     android:drawableStart="@drawable/dept_ic"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:text="Department"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_light"
                     android:textSize="20sp" />
 
                 <TextView
@@ -201,12 +201,12 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
-                    android:text="Department"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:background="@color/background_color_50"
-                    android:textColor="@color/black"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_light"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Department"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
 

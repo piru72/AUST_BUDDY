@@ -3,26 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bk_shape03"
     android:padding="30dp"
-    tools:context=".groupTab.CreateGroupFragment"
-    android:background="@drawable/bk_shape03">
+    tools:context=".groupTab.CreateGroupFragment">
 
 
     <ImageView
+        android:id="@+id/startingImage"
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:src="@drawable/registration"
         android:layout_marginTop="80sp"
-        android:id="@+id/startingImage"
+        android:contentDescription="@string/a_background_image"
         android:paddingBottom="20dp"
-        android:contentDescription="@string/a_background_image" />
+        android:src="@drawable/registration" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/groupNameFormInput"
-        android:layout_below="@id/startingImage"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startingImage">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/groupName"
@@ -39,8 +39,8 @@
 
         android:id="@+id/groupDetailsFormInput"
         android:layout_width="match_parent"
-        android:layout_below="@id/groupNameFormInput"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupNameFormInput">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/groupDetails"
@@ -60,12 +60,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/groupDetailsFormInput"
         android:layout_marginTop="58dp"
-        android:text="Create Group"
-        android:fontFamily="@font/poppins_light"
-        android:textColor="@color/black"
         android:background="@color/background_color_50"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground" />
+        android:fontFamily="@font/poppins_light"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Create Group"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

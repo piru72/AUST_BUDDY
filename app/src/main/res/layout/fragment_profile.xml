@@ -2,17 +2,17 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    android:id="@+id/fragment_profile"
     tools:context=".profileTab.ProfileFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_screen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/profile_screen">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textview_profile"
@@ -23,12 +23,12 @@
             android:text="@string/profile"
             android:textColor="@color/black"
             android:textSize="34sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/textview_yet_TO_BE_DONE"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.08"
-            android:visibility="gone" />
+            app:layout_constraintVertical_bias="0.08" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/dev1Img"
@@ -37,6 +37,7 @@
             android:layout_gravity="center_vertical"
             android:layout_margin="20sp"
             android:src="@drawable/dev"
+            android:visibility="gone"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="4dp"
             app:layout_constraintBottom_toTopOf="@+id/textview_yet_TO_BE_DONE"
@@ -44,8 +45,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_profile"
-            app:layout_constraintVertical_bias="0.47"
-            android:visibility="gone" />
+            app:layout_constraintVertical_bias="0.47" />
 
         <TextView
             android:id="@+id/textview_yet_TO_BE_DONE"
@@ -57,22 +57,22 @@
             android:text="USER NAME"
             android:textColor="@color/black"
             android:textSize="34sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout"
-            android:visibility="gone" />
+            app:layout_constraintStart_toStartOf="@+id/linearLayout" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
+            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/textview_yet_TO_BE_DONE">
 
             <Button
@@ -84,17 +84,17 @@
                 android:layout_marginBottom="8dp"
 
 
-                android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/background_color_50"
+                android:drawableStart="@drawable/ic_baseline_edit_24"
                 android:drawableTint="#000"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="10dp"
                 android:text="My Profile"
-                android:focusable="true"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
                 android:visibility="visible"
-                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <Button
@@ -105,16 +105,16 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="8dp"
 
-                android:drawableStart="@drawable/ic_baseline_privacy_tip_24"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/background_color_50"
+                android:drawableStart="@drawable/ic_baseline_privacy_tip_24"
                 android:drawableTint="#000"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="10dp"
                 android:text="@string/privacy_policy"
                 android:textColor="@color/black"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:elevation="10dp"
                 android:visibility="visible"
                 tools:ignore="RtlSymmetry" />
 
@@ -128,12 +128,12 @@
                 android:background="@drawable/rounded_list_item_view"
                 android:drawableStart="@drawable/ic_baseline_settings_24"
                 android:drawableTint="@color/pure_white"
+                android:fontFamily="@font/poppins_light"
                 android:paddingStart="10dp"
                 android:text="@string/settings"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
-                tools:ignore="RtlSymmetry"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry" />
 
             <Button
                 android:id="@+id/btn_invite_friend"
@@ -143,16 +143,16 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="8dp"
 
-                android:drawableStart="@drawable/ic_baseline_insert_invitation_24"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/background_color_50"
+                android:drawableStart="@drawable/ic_baseline_insert_invitation_24"
                 android:drawableTint="#000"
-                android:paddingStart="10dp"
+                android:elevation="10dp"
                 android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="10dp"
                 android:text="@string/invite_a_friend"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
-                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
             <Button
@@ -165,10 +165,10 @@
                 android:background="@drawable/rounded_list_item_view"
                 android:drawableStart="@drawable/ic_baseline_exit_to_app_24"
                 android:drawableTint="@color/pure_white"
+                android:fontFamily="@font/poppins_light"
                 android:paddingStart="10dp"
                 android:text="@string/log_out"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
                 android:visibility="gone"
                 tools:ignore="RtlSymmetry" />
 
@@ -182,12 +182,12 @@
                 android:background="@drawable/rounded_list_item_view"
                 android:drawableStart="@drawable/ic_baseline_people_outline_24"
                 android:drawableTint="@color/pure_white"
+                android:elevation="10dp"
+                android:fontFamily="@font/poppins_light"
                 android:paddingStart="10dp"
                 android:text="@string/about_devs"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
                 android:visibility="gone"
-                android:elevation="10dp"
                 tools:ignore="RtlSymmetry" />
 
 
@@ -199,17 +199,17 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="8dp"
 
-                android:drawableStart="@drawable/ic_baseline_bug_report_24"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@color/background_color_50"
+                android:drawableStart="@drawable/ic_baseline_bug_report_24"
                 android:drawableTint="#000"
-                android:paddingStart="10dp"
+                android:elevation="10dp"
                 android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="10dp"
                 android:text="Admin Dash Board"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppins_light"
                 tools:ignore="RtlSymmetry"
-                android:elevation="10dp"
 
                 />
 

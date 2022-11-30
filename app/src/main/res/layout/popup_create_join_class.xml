@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popup_create_join_class"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -25,10 +23,10 @@
             android:layout_weight="1"
             android:background="@color/background_color_50"
             android:focusable="true"
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Join"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppins_light" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/createButton"
@@ -38,9 +36,9 @@
             android:layout_weight="1"
             android:background="@color/background_color_50"
             android:focusable="true"
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Create"
-            android:fontFamily="@font/poppins_light"
             android:textColor="@color/black" />
 
 

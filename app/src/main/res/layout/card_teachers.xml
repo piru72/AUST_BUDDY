@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardCornerRadius="8dp"
     app:cardBackgroundColor="@color/card_bk"
+    app:cardCornerRadius="8dp"
     app:cardElevation="6dp">
 
     <LinearLayout
@@ -28,20 +28,20 @@
                 android:id="@+id/tvfirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
                 android:text="@string/teacher_name"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/poppins_light"
-                android:textAlignment="center" />
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/tvDesignation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/assistant_professor"
                 android:fontFamily="@font/poppins_light"
+                android:text="@string/assistant_professor"
                 android:textAlignment="center" />
 
 
@@ -54,25 +54,25 @@
                     android:id="@+id/btnCallTeacher"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:text="@string/call"
-                    android:fontFamily="@font/poppins_light"
                     android:background="@color/background_color_50"
                     android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="4dp" />
+                    android:text="@string/call" />
 
                 <Button
                     android:id="@+id/btnEmailTeacher"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:text="@string/email"
-                    android:fontFamily="@font/poppins_light"
                     android:background="@color/background_color_50"
                     android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="4dp" />
+                    android:text="@string/email" />
             </LinearLayout>
 
             <Button
@@ -82,8 +82,8 @@
                 android:layout_margin="4dp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/share_contact" />
 
             <Button
@@ -93,15 +93,15 @@
                 android:layout_margin="4dp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:text="Add to favourite" />
 
             <LinearLayout
+                android:id="@+id/adminControlLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:id="@+id/adminControlLayout">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnDeclineTeacher"
@@ -109,9 +109,9 @@
                     android:layout_height="30dp"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins_light"
                     android:background="@color/background_color_50"
                     android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/decline" />
 
@@ -121,9 +121,9 @@
                     android:layout_height="30dp"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins_light"
                     android:background="@color/background_color_50"
                     android:focusable="true"
+                    android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:text="@string/approve" />
             </LinearLayout>
@@ -135,10 +135,10 @@
             android:id="@+id/images"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10sp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_marginEnd="10sp" />
+            android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

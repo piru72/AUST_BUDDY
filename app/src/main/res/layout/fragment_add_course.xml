@@ -3,26 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bk_shape03"
     android:padding="30dp"
-    tools:context=".adminPanel.AddCourseFragment"
-    android:background="@drawable/bk_shape03">
+    tools:context=".adminPanel.AddCourseFragment">
 
     <ImageView
+        android:id="@+id/startingImage"
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:src="@drawable/registration"
         android:layout_marginTop="50sp"
-        android:id="@+id/startingImage"
+        android:contentDescription="@string/a_background_image"
         android:paddingBottom="20dp"
-        android:contentDescription="@string/a_background_image" />
+        android:src="@drawable/registration" />
 
     <LinearLayout
+        android:id="@+id/spinnerPanDepartment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/spinnerPanDepartment"
         android:layout_below="@id/startingImage"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/spinnerDepartmentList"
@@ -32,12 +32,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/spinnerPan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/spinnerPan"
         android:layout_below="@id/spinnerPanDepartment"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/spinnerYearList"
@@ -55,18 +55,18 @@
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/courseCodeFormInput"
-        android:layout_below="@id/spinnerPan"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPan">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
             android:hint="@string/provide_course_code"
-            android:inputType="textShortMessage"
-            android:fontFamily="@font/poppins_light" />
+            android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,8 +75,8 @@
 
         android:id="@+id/courseNameFormInput"
         android:layout_width="match_parent"
-        android:layout_below="@id/courseCodeFormInput"
         android:layout_height="wrap_content"
+        android:layout_below="@id/courseCodeFormInput"
 
         >
 
@@ -102,8 +102,8 @@
             android:id="@+id/courseDriveLinkText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/provide_drive_link"
             android:fontFamily="@font/poppins_light"
+            android:hint="@string/provide_drive_link"
             android:inputType="textLongMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -116,12 +116,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/diveLinkFormInput"
         android:layout_marginTop="58dp"
-        android:text="@string/add_course"
-        android:fontFamily="@font/poppins_light"
-        android:textColor="@color/black"
         android:background="@color/background_color_50"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground" />
+        android:fontFamily="@font/poppins_light"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/add_course"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

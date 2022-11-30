@@ -2,11 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_admin_panel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminPanel.AdminPanelFragment"
-    android:id="@+id/fragment_admin_panel"
-    android:background="@drawable/bk_shape03">
+    android:background="@drawable/bk_shape03"
+    tools:context=".adminPanel.AdminPanelFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,10 +17,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_weight="3"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

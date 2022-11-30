@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
     android:background="@drawable/bk_shape03"
+    android:padding="30dp"
     tools:context=".groupTab.JoinGroupFragment">
 
 
@@ -13,19 +13,19 @@
         android:id="@+id/uppertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="160dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="You're currently signed in as"
         android:textColor="@color/black"
-        android:text="You're currently signed in as" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/studentId_Show"
-        android:layout_below="@+id/uppertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/uppertext"
         android:layout_marginBottom="15dp"
         android:text="STUDENT EMAIL" />
 
@@ -33,28 +33,28 @@
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:textSize="15sp"
+        android:layout_below="@id/studentId_Show"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Ask admin for the group id, then enter it here."
         android:textColor="@color/black"
-        android:layout_below="@id/studentId_Show"
-        android:text="Ask admin for the group id, then enter it here." />
+        android:textSize="15sp" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/groupIdFormInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/sample_text"
-        android:layout_marginBottom="20dp"
-        android:layout_height="wrap_content">
+        android:layout_marginBottom="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/groupId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Provide Group Id"
             android:fontFamily="@font/poppins_light"
+            android:hint="Provide Group Id"
             android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -64,11 +64,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/groupIdFormInput"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/poppins_light"
         android:text="To sign in with a group id\n - Use an authorised account \n - Use a group id, with 5-7 letter and numbers \n
 - No space"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_light"
-        android:layout_marginBottom="0dp" />
+        android:textStyle="bold" />
 
 
     <Button
@@ -77,14 +77,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="50dp"
-        android:text="Join Group"
         android:layout_below="@+id/rules"
-        android:fontFamily="@font/poppins_light"
-        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
         android:background="@color/background_color_50"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground" />
+        android:fontFamily="@font/poppins_light"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Join Group"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
     android:background="@drawable/bk_shape03"
+    android:padding="30dp"
     tools:context=".adminPanel.AddTeachersFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:layout_marginTop="20sp"
-        android:src="@drawable/registration"
-        android:contentDescription="@string/background_image" />
+        android:contentDescription="@string/background_image"
+        android:src="@drawable/registration" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/teachersNameFormInput"
@@ -86,8 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@id/teachersEmailFormInput"
-        android:orientation="horizontal"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -96,8 +96,8 @@
             android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
                 android:id="@+id/teachersImageLinkForm"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/image_link" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -113,9 +113,9 @@
         android:layout_below="@id/teacherImageLink"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_list_item_view"
+        android:fontFamily="@font/poppins_light"
         android:text="@string/add_teacher"
-        android:textColor="@color/white"
-        android:fontFamily="@font/poppins_light" />
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>

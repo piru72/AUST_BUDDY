@@ -12,6 +12,7 @@ class GroupNoticeRepository(private var groupSelected: String) {
 
     private val scheduleReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("group-notice").child(groupSelected)
+
     @Volatile
     private var INSTANCE: GroupNoticeRepository? = null
     fun getInstance(): GroupNoticeRepository {

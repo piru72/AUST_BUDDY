@@ -15,11 +15,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
         android:hint="Website name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_light"
         android:textColorHint="@color/black" />
 
     <EditText
@@ -28,10 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
         android:hint="Website Link"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_light"
         android:textColorHint="@color/black" />
 
 
@@ -47,9 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
-            android:fontFamily="@font/poppins_light"
             android:background="@color/background_color_50"
             android:focusable="true"
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Close"
             android:textColor="#4E342E" />
@@ -58,11 +58,11 @@
             android:id="@+id/websiteAddButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
             android:layout_margin="@dimen/cardview_compat_inset_shadow"
             android:layout_weight="1"
             android:background="@color/background_color_50"
             android:focusable="true"
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="ADD"
             android:textColor="#4E342E" />

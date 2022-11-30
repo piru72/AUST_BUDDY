@@ -10,9 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="20sp"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_margin="20sp">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
@@ -28,9 +28,9 @@
                 android:id="@+id/emailEt1"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
+                android:layout_margin="20sp"
                 android:hint="Type your Email"
-                android:inputType="textEmailAddress"
-                android:layout_margin="20sp" />
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,9 +46,9 @@
                 android:id="@+id/passwordEt1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="20sp"
                 android:hint="Type your Password"
-                android:inputType="textPassword"
-                android:layout_margin="20sp" />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

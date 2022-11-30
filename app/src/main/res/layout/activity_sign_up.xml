@@ -11,14 +11,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:src="@drawable/registration"
-        android:layout_marginTop="20sp" />
+        android:layout_marginTop="20sp"
+        android:src="@drawable/registration" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/email_signup"
-        android:layout_above="@id/password_signup"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/password_signup">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEt"
@@ -32,10 +32,10 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/password_signup"
-        app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        app:passwordToggleEnabled="true">
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -54,15 +54,15 @@
         android:layout_height="62dp"
         android:layout_below="@id/password_signup"
         android:layout_marginTop="58dp"
-        android:text="Sign up"
         android:background="@drawable/rounded_list_item_view"
+        android:text="Sign up"
         tools:ignore="InvalidId" />
 
     <TextView
 
+        android:id="@+id/text1"
         android:layout_width="362dp"
         android:layout_height="70dp"
-        android:id="@+id/text1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="49dp"
         android:padding="5dp"

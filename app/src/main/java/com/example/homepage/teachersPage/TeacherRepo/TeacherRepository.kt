@@ -8,6 +8,7 @@ class TeacherRepository(viewPath: String) {
     private var databaseParentNode = viewPath
     private val databaseReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("$databaseParentNode")
+
     @Volatile
     private var INSTANCE: TeacherRepository? = null
     fun getInstance(): TeacherRepository {

@@ -43,8 +43,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
-                android:hint="Type your Password"
                 android:fontFamily="@font/poppins_light"
+                android:hint="Type your Password"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
-                android:hint="Type your Password"
                 android:fontFamily="@font/poppins_light"
+                android:hint="Type your Password"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_margin="10sp"
-                android:hint="Type your Password"
                 android:fontFamily="@font/poppins_light"
+                android:hint="Type your Password"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,12 +78,12 @@
                 android:id="@+id/btnChange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:textColor="@color/black"
                 android:background="@color/background_color_50"
                 android:focusable="true"
+                android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Change Password" />
+                android:text="Change Password"
+                android:textColor="@color/black" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
