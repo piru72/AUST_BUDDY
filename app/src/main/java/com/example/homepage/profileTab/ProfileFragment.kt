@@ -49,7 +49,7 @@ class ProfileFragment : ReplaceFragment() {
         }
         binding.btnLogOut.setOnClickListener {
 
-            // TODO GOING FROM FRAGMENT TO ACTIVITY
+            //  GOING FROM FRAGMENT TO ACTIVITY
             val i = Intent(activity, SignInActivity::class.java)
             startActivity(i)
             (activity as Activity?)!!.overridePendingTransition(0, 0)

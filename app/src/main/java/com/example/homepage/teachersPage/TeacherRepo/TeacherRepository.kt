@@ -7,7 +7,7 @@ import com.google.firebase.database.*
 class TeacherRepository(viewPath: String) {
     private var databaseParentNode = viewPath
     private val databaseReference: DatabaseReference =
-        FirebaseDatabase.getInstance().getReference("$databaseParentNode")
+        FirebaseDatabase.getInstance().getReference(databaseParentNode)
 
     @Volatile
     private var INSTANCE: TeacherRepository? = null
@@ -44,7 +44,7 @@ class TeacherRepository(viewPath: String) {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
 

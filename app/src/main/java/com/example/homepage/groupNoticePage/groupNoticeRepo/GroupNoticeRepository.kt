@@ -46,7 +46,7 @@ class GroupNoticeRepository(private var groupSelected: String) {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
 
