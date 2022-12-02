@@ -3,15 +3,9 @@ package com.example.homepage.loginSignup
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
 import android.util.Log
-import android.util.Patterns
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import com.example.homepage.MainHomePage
-import com.example.homepage.R
 import com.example.homepage.dataClass.UserData
 import com.example.homepage.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -27,13 +21,15 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
     private lateinit var database: DatabaseReference
     private lateinit var binding: ActivitySignInBinding
+    private var helper = HelperSignInSignUp(this)
 
-
-    private var finalValue = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
+
+        binding = ActivitySignInBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         auth = Firebase.auth
         database = Firebase.database.reference
@@ -43,23 +39,23 @@ class SignInActivity : AppCompatActivity() {
         progressDialog.setMessage("Signing into your Account in few seconds...")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        val text2 = findViewById<TextView>(R.id.text2)
+
 
         binding.signinBtn.setOnClickListener {
 
-            val email = findViewById<TextView>(R.id.emailEt1).text.toString()
-            val password = findViewById<TextView>(R.id.passwordEt1).text.toString()
+            val email = binding.usersEmail.text.toString()
+            val password = binding.usersPassword.text.toString()
 
-            val situation = validateData(email, password)
+            val validityStatus = helper.validateEmailPasswordFormat(email, password, password)
 
-            if (situation == "USER EMAIL PASS VERIFIED") {
+            if (validityStatus == "Valid Data") {
                 fireBaseSignIn(email, password)
             } else {
-                Toast.makeText(this, situation, Toast.LENGTH_SHORT).show()
+                helper.makeToast(validityStatus)
             }
         }
 
-        text2.setOnClickListener {
+        binding.goToSignUpPage.setOnClickListener {
 
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
@@ -68,8 +64,9 @@ class SignInActivity : AppCompatActivity() {
 
     public override fun onStart() {
         super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
+
+        if (auth.currentUser?.isEmailVerified == true)
+            updateUI(auth.currentUser)
 
     }
 
@@ -100,35 +97,6 @@ class SignInActivity : AppCompatActivity() {
         writeNewUser(user.uid, username, user.email)
     }
 
-    private fun validateData(emailFunction: String, passwordFunction: String): String {
-
-        val situation: String
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(emailFunction).matches())
-            situation = "Invalid email format"
-        else if (emailFunction.length >= 35)
-            situation = "Too long characters"
-        else if (emailFunction.contains("@gmail.com", ignoreCase = true) || emailFunction.contains(
-                "@yahoo.com",
-                ignoreCase = true
-            )
-        )
-            situation = "Provide your edu mail"
-        else if (TextUtils.isEmpty(passwordFunction))
-            situation = "Enter a password"
-        else if (passwordFunction.length <= 6)
-            situation = "Password is too short"
-        else if (passwordFunction.contains("@") || passwordFunction.contains("#") || passwordFunction.contains(
-                "%"
-            )
-            || passwordFunction.contains("$") || passwordFunction.contains("*")
-        )
-            situation = "USER EMAIL PASS VERIFIED"
-        else
-            situation = "Give a special character such as @,$,#.."
-        return situation
-
-    }
 
     private fun fireBaseSignIn(email: String, password: String) {
         progressDialog.show()
@@ -136,16 +104,15 @@ class SignInActivity : AppCompatActivity() {
             when {
                 task.isSuccessful -> {
                     progressDialog.dismiss()
-                    finalValue = verifyMail()
-                    when (finalValue) {
-                        "OK" -> {
-                            val user = auth.currentUser
-                            onAuthSuccess(task.result?.user!!)
-                            updateUI(user)
-                        }
-                    }
+
+                    if (auth.currentUser?.isEmailVerified == true) {
+                        updateUI(auth.currentUser)
+                        onAuthSuccess(task.result?.user!!)
+                    } else
+                        helper.makeToast("Please verify your email")
                 }
                 else -> {
+                    helper.makeToast("Login unsuccessful wrong email or password")
                     progressDialog.dismiss()
                 }
             }
@@ -154,17 +121,4 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-
-    private fun verifyMail(): String {
-
-        val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
-        val vEmail: Boolean? = firebaseUser?.isEmailVerified
-        val situation: String = if (vEmail!!) {
-            "OK"
-        } else {
-            Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show()
-            "NOT OK"
-        }
-        return situation
-    }
 }

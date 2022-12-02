@@ -25,7 +25,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailEt1"
+                android:id="@+id/usersEmail"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_margin="20sp"
@@ -43,7 +43,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordEt1"
+                android:id="@+id/usersPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20sp"
@@ -65,7 +65,7 @@
 
         <TextView
 
-            android:id="@+id/text2"
+            android:id="@+id/goToSignUpPage"
             android:layout_width="359dp"
             android:layout_height="65dp"
 
