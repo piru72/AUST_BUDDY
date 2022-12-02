@@ -47,12 +47,31 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/password_signup_retype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/password_signup"
+        app:passwordToggleEnabled="true">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_retype_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Re Type your Password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
 
         android:id="@+id/signupBtn"
         android:layout_width="369dp"
         android:layout_height="62dp"
-        android:layout_below="@id/password_signup"
+        android:layout_below="@id/password_signup_retype"
         android:layout_marginTop="58dp"
         android:background="@drawable/rounded_list_item_view"
         android:text="Sign up"
@@ -60,7 +79,7 @@
 
     <TextView
 
-        android:id="@+id/text1"
+        android:id="@+id/go_to_sign_in_page"
         android:layout_width="362dp"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"

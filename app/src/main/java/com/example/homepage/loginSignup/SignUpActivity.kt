@@ -4,15 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.R
+import com.example.homepage.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivitySignUpBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
     private var email = ""
@@ -20,12 +20,13 @@ class SignUpActivity : AppCompatActivity() {
     private var a = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
 
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         firebaseAuth = FirebaseAuth.getInstance()
-        val signUpButton = findViewById<Button>(R.id.signupBtn)
-        val text1 = findViewById<TextView>(R.id.text1)
-        signUpButton.setOnClickListener {
+
+        binding.signupBtn.setOnClickListener {
             email = findViewById<TextView>(R.id.emailEt).text.toString()
             password = findViewById<TextView>(R.id.passwordEt).text.toString()
             val situation = validateData(email, password)
@@ -43,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, situation, Toast.LENGTH_SHORT).show()
             }
         }
-        text1.setOnClickListener {
+        binding.goToSignInPage.setOnClickListener {
 
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
