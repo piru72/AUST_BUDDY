@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     public override fun onStart() {
         super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
+        if (auth.currentUser?.isEmailVerified == true)
+            updateUI(auth.currentUser)
 
     }
 

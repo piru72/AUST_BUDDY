@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.homepage.R
 import com.example.homepage.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -15,9 +13,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
-    private var email = ""
-    private var password = ""
-    private var a = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,21 +23,23 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.signupBtn.setOnClickListener {
-            email = findViewById<TextView>(R.id.emailEt).text.toString()
-            password = findViewById<TextView>(R.id.passwordEt).text.toString()
-            val situation = validateData(email, password)
-            if (situation == "OK") {
-                Toast.makeText(
-                    applicationContext,
-                    "CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
-                fireBaseSignup()
-                val intent = Intent(this, SignInActivity::class.java)
-                startActivity(intent)
+
+            val email = binding.usersEmail.text.toString()
+            val password = binding.usersPasswordType.text.toString()
+            val passwordRetype = binding.usersPasswordRetype.text.toString()
+
+            val validityStatus = validateEmailPasswordFormat(email, password, passwordRetype)
+
+            if (validityStatus == "Valid Data") {
+
+                if (fireBaseSignup(email, password)) {
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
+                }
+
             } else {
-                Toast.makeText(applicationContext, situation, Toast.LENGTH_SHORT).show()
+                makeToast(validityStatus)
+                binding.usersPasswordRetype.setText("")
             }
         }
         binding.goToSignInPage.setOnClickListener {
@@ -52,65 +50,73 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    private fun validateData(emailFunction: String, passwordFunction: String): String {
-
-        email = emailFunction
-        password = passwordFunction
-        val situation: String
+    private fun validateEmailPasswordFormat(
+        email: String,
+        pass: String,
+        passRetype: String
+    ): String {
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-            situation = "Invalid email format"
+            return "Invalid email format"
         else if (email.length >= 35)
-            situation = "Too long characters"
-        else if (email.contains("@gmail.com", ignoreCase = true) || email.contains(
-                "@yahoo.com",
-                ignoreCase = true
+            return "Too long characters"
+        else if (!email.contains("@aust.edu"))
+            return "Provide your @aust.edu email"
+        else if (TextUtils.isEmpty(pass))
+            return "Enter a password"
+        else if (pass.length <= 6)
+            return "Password is too short"
+        else if (pass != passRetype)
+            return "Passwords didn't match retype passwords"
+        else if (pass.contains("@") || pass.contains("#") || pass.contains("%") || pass.contains("$") || pass.contains(
+                "*"
             )
         )
-            situation = "Provide your edu mail"
-        else if (TextUtils.isEmpty(password))
-            situation = "Enter a password"
-        else if (password.length <= 6)
-            situation = "Password is too short"
-        else if (password.contains("@") || password.contains("#") || password.contains("%")
-            || password.contains("$") || password.contains("*")
-        )
-            situation = "OK"
-        else if (a != 1)
-            situation = "Give a special character such as @,$,#.."
+            return "Valid Data"
         else
-            situation = "GOD KNOWS WHAT HAPPENED!"
-        return situation
+            return "Give a special character such as @,$,#.."
+
     }
 
 
-    private fun fireBaseSignup() {
-
+    private fun fireBaseSignup(email: String, password: String): Boolean {
+        var accountCreationStatus = false
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
-            if (it.isSuccessful) {
 
-                checkMail()
-                Toast.makeText(this, "Account created with email $email", Toast.LENGTH_SHORT).show()
+            accountCreationStatus = if (it.isSuccessful) {
+
+                sendVerificationMail()
+                makeToast("Account created with email $email")
+                true
 
             } else {
-                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                val exceptionMessage =
+                    it.exception.toString().substring(it.exception.toString().indexOf(":") + 1)
+                        .trim()
+                makeToast(exceptionMessage)
+                false
             }
         }
+
+        return accountCreationStatus
     }
 
-    private fun checkMail() {
+    private fun sendVerificationMail() {
 
         firebaseAuth.currentUser?.sendEmailVerification()?.addOnCompleteListener { task ->
 
             if (task.isSuccessful) {
-                Toast.makeText(
-                    this,
-                    "Verification mail has been sent on this email $email",
-                    Toast.LENGTH_SHORT
-                ).show()
+                makeToast("Verification mail has been sent on the email ")
+                makeToast("CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL")
             } else {
-                Toast.makeText(this, "Error Occurred", Toast.LENGTH_SHORT).show()
+
+                makeToast("Error Occurred")
             }
         }
     }
+
+    private fun makeToast(text: String) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    }
+
 }

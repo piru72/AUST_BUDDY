@@ -21,7 +21,7 @@
         android:layout_above="@id/password_signup">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEt"
+            android:id="@+id/users_email"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:hint="Type your Email"
@@ -39,7 +39,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordEt"
+            android:id="@+id/usersPasswordType"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Type your Password"
@@ -58,7 +58,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_retype_et"
+            android:id="@+id/usersPasswordRetype"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Re Type your Password"
