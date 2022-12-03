@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="20sp"
         android:gravity="center"
+        android:id="@+id/activity_sign_in"
         android:orientation="vertical">
 
         <ImageView
@@ -76,6 +77,13 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/goToForgotPasswrdFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:textSize="20dp"
+            android:text="Forgot Password ?" />
 
 
     </LinearLayout>

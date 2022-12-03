@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_settings"
     android:background="@drawable/bk_shape03"
     tools:context=".profileTab.ProfileFragment">
 
@@ -104,6 +105,15 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="Change Password"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/goToForgotPasswrdFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:textSize="20dp"
+                android:text="Forgot Password ?" />
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
