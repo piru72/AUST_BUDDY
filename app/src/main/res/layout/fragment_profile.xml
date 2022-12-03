@@ -54,7 +54,7 @@
             android:layout_marginStart="179dp"
             android:layout_marginEnd="174dp"
             android:fontFamily="sans-serif"
-            android:text="USER NAME"
+            android:text="@string/user_name"
             android:textColor="@color/black"
             android:textSize="34sp"
             android:visibility="gone"
@@ -92,7 +92,7 @@
                 android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="10dp"
-                android:text="My Profile"
+                android:text="@string/my_profile"
                 android:textColor="@color/black"
                 android:visibility="visible"
                 tools:ignore="RtlSymmetry" />
@@ -162,15 +162,14 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/rounded_list_item_view"
+                android:background="@color/background_color_50"
                 android:drawableStart="@drawable/ic_baseline_exit_to_app_24"
-                android:drawableTint="@color/pure_white"
+                android:drawableTint="@color/black"
                 android:fontFamily="@font/poppins_light"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="@string/log_out"
-                android:textColor="@color/black"
-                android:visibility="gone"
-                tools:ignore="RtlSymmetry" />
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/btn_about_us"
@@ -185,10 +184,10 @@
                 android:elevation="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="@string/about_devs"
                 android:textColor="@color/black"
-                android:visibility="gone"
-                tools:ignore="RtlSymmetry" />
+                android:visibility="gone" />
 
 
             <Button
@@ -207,11 +206,9 @@
                 android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="10dp"
-                android:text="Admin Dash Board"
-                android:textColor="@color/black"
-                tools:ignore="RtlSymmetry"
-
-                />
+                android:paddingEnd="10dp"
+                android:text="@string/admin_dash_board"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>

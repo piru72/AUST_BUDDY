@@ -50,11 +50,12 @@ class ProfileFragment : ReplaceFragment() {
         binding.btnLogOut.setOnClickListener {
 
             //  GOING FROM FRAGMENT TO ACTIVITY
+            FirebaseAuth.getInstance().signOut()
             val i = Intent(activity, SignInActivity::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(i)
             (activity as Activity?)!!.overridePendingTransition(0, 0)
 
-            FirebaseAuth.getInstance().signOut()
         }
 
         val debugMode = false
