@@ -13,15 +13,15 @@ import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
 import java.util.*
 
 
 class GroupNoticeAdapter(inflater: LayoutInflater) :
     RecyclerView.Adapter<GroupNoticeAdapter.ScheduleViewViewHolder>() {
     private val tasks = ArrayList<GroupNoticeData>()
-    private val taskIds = ArrayList<String>()
     private var _inflater: LayoutInflater = inflater
-    var picker: DatePickerDialog? = null
+    private var picker: DatePickerDialog? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -93,8 +93,8 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
                     DatePickerDialog(
                         it1,
                         { _, year, monthOfYear, dayOfMonth ->
-                            taskDate.text =
-                                dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year
+                            val dateFormat = "$dayOfMonth/${monthOfYear + 1}/$year"
+                            taskDate.text = dateFormat
                         },
                         year,
                         month,
@@ -142,10 +142,10 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         return tasks.size
     }
 
-    fun updateUserList(tasks: List<GroupNoticeData>) {
-
+    fun updateGroupNoticeList(notices: List<GroupNoticeData>) {
+        Collections.sort(notices, FirebaseDateComparator())
         this.tasks.clear()
-        this.tasks.addAll(tasks)
+        this.tasks.addAll(notices)
         notifyDataSetChanged()
 
     }
@@ -158,6 +158,18 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         val deleteButton: Button = itemView.findViewById(R.id.btnDeleteSchedule)
         val editButton: Button = itemView.findViewById(R.id.btnEditSchedule)
 
+    }
+
+    class FirebaseDateComparator : Comparator<GroupNoticeData?> {
+        override fun compare(p0: GroupNoticeData?, p1: GroupNoticeData?): Int {
+
+            val dateFormat = SimpleDateFormat("dd/MM/yyyy")
+
+            val firstDate: Date = dateFormat.parse(p0?.taskdate!!) as Date
+            val secondDate: Date = dateFormat.parse(p1?.taskdate!!) as Date
+
+            return firstDate.compareTo(secondDate)
+        }
     }
 
 }

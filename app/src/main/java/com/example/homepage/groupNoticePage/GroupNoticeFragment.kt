@@ -173,7 +173,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         viewModel.initialize(groupId)
 
         viewModel.allSchedules.observe(viewLifecycleOwner) {
-            adapter!!.updateUserList(it)
+            adapter!!.updateGroupNoticeList(it)
         }
 
     }
