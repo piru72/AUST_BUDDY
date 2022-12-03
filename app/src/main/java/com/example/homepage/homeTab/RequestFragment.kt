@@ -32,12 +32,12 @@ class RequestFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentRequestBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
         auth = Firebase.auth
-        val user = auth.currentUser!!.uid
+
         binding.btnRequestForCourse.setOnClickListener {
             replaceFragment(AddCourseFragment("admin-course-request-list"), R.id.requestScreen)
         }
@@ -85,6 +85,7 @@ class RequestFragment : ReplaceFragment() {
                     setInformation(FirebaseAuth.getInstance().currentUser?.email.toString())
                     writeNewReport(getCurrentUserId(), getUserEmail(), reportDescription)
                     popupWindow.dismiss()
+                    makeToast("Bug report sent to admins ")
                 }
 
             }
