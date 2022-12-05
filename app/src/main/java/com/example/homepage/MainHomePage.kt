@@ -32,10 +32,6 @@ class MainHomePage : AppCompatActivity() {
                 R.id.bot_nav_schedule -> replaceFragment(UserGroupsFragment())
                 R.id.bot_nav_courses -> replaceFragment(DepartmentSemesterChooserFragment())
 
-                else -> {
-
-                }
-
             }
             true
 
