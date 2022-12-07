@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -16,17 +14,15 @@ class EditProfileFragment : ReplaceFragment() {
 
     private val user = FirebaseAuth.getInstance().currentUser
 
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        container?.removeAllViews()
+        container?.removeAllViewsInLayout()
 
         val v = inflater.inflate(R.layout.fragment_edit_profile, container, false)
-        fusedLocationClient = context?.let { LocationServices.getFusedLocationProviderClient(it) }!!
+
         val email = user?.email.toString()
         setInformation(email)
 
@@ -45,5 +41,21 @@ class EditProfileFragment : ReplaceFragment() {
 
         return v
     }
+
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
+//            override fun handleOnBackPressed() {
+//                // in here you can do logic when backPress is clicked
+//                val manager: FragmentManager = requireActivity().supportFragmentManager
+//                if(manager.backStackEntryCount > 0 ) {
+//                    manager.popBackStack();//Pops one of the added fragments
+//                }
+//            }
+//        })
+//    }
+
+
 
 }
