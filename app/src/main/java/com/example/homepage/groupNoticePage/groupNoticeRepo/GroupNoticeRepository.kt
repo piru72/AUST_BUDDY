@@ -51,5 +51,7 @@ class GroupNoticeRepository(private var groupSelected: String) {
 
 
         })
+
+        scheduleReference.keepSynced(true)
     }
 }

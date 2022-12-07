@@ -41,5 +41,6 @@ class UserGroupRepo {
             }
 
         })
+        groupReference.keepSynced(true)
     }
 }

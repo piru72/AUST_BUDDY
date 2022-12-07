@@ -51,5 +51,6 @@ class FavouriteWebRepo {
 
 
         })
+        websiteReference.keepSynced(true)
     }
 }

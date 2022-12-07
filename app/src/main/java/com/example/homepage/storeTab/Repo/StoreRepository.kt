@@ -44,5 +44,7 @@ class StoreRepository {
 
 
         })
+
+        storeReference.keepSynced(true)
     }
 }

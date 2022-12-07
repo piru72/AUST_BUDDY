@@ -9,6 +9,7 @@ import com.example.homepage.onBoarding.OnBoarding1
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome)
         auth = Firebase.auth
+        enablePersistence()
 
         val nextButton = findViewById<Button>(R.id.get_started)
         nextButton.setOnClickListener {
@@ -42,6 +44,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+    private fun enablePersistence() {
+        // [START rtdb_enable_persistence]
+        Firebase.database.setPersistenceEnabled(true)
+        // [END rtdb_enable_persistence]
     }
 
 

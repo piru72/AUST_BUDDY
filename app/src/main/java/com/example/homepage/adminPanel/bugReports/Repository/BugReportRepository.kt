@@ -40,5 +40,6 @@ class BugReportRepository {
 
             }
         })
+        bugReportReference.keepSynced(true)
     }
 }

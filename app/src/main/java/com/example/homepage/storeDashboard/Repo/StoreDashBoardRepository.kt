@@ -45,5 +45,7 @@ class StoreDashBoardRepository {
 
 
         })
+
+        storeReference.keepSynced(true)
     }
 }

@@ -49,6 +49,7 @@ class TeacherRepository(viewPath: String) {
 
 
         })
+        databaseReference.keepSynced(true)
 
 
     }

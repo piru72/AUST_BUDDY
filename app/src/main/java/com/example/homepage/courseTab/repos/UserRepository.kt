@@ -51,6 +51,7 @@ class UserRepository(semesterSelected: String) {
             }
 
         })
+        databaseReference.keepSynced(true)
 
 
     }
