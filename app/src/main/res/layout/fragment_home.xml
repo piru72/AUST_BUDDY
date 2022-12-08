@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    android:padding="2dp"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,13 +63,15 @@
 
                             android:padding="20dp"
                             android:src="@drawable/syllabus"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/syllabus" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="SYLLABUS"
+                            android:text="@string/syllabus"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -104,13 +105,15 @@
                             android:layout_margin="10dp"
                             android:padding="20dp"
                             android:src="@drawable/oj"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/notice" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="Notice"
+                            android:text="@string/notice"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -144,13 +147,14 @@
                             android:layout_margin="10dp"
                             android:padding="20dp"
                             android:src="@drawable/iumsweb"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/iums" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="IUMS"
+                            android:text="@string/iums"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -195,13 +199,15 @@
 
                             android:padding="20dp"
                             android:src="@drawable/calendar"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/calender" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="CALENDER"
+                            android:text="@string/calender"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -238,13 +244,14 @@
                             android:padding="20dp"
                             android:src="@drawable/cgpa"
                             app:tint="#000"
-                            tools:ignore="ImageContrastCheck" />
+                            tools:ignore="ImageContrastCheck"
+                            android:contentDescription="@string/cgpa" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="CGPA"
+                            android:text="@string/cgpa"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -280,13 +287,14 @@
 
                             android:padding="20dp"
                             android:src="@drawable/bus"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/buses" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="BUSES"
+                            android:text="@string/buses"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -329,13 +337,15 @@
 
                             android:padding="20dp"
                             android:src="@drawable/teacher"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/teachers" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="TEACHERS"
+                            android:text="@string/teachers"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -374,13 +384,14 @@
 
                             android:padding="20dp"
                             android:src="@drawable/gradings"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/my_store" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="My store"
+                            android:text="@string/my_store"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -414,13 +425,14 @@
                             android:layout_margin="10dp"
                             android:padding="20dp"
                             android:src="@drawable/request"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/request" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="REQUEST"
+                            android:text="@string/request"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -462,13 +474,14 @@
 
                             android:padding="20dp"
                             android:src="@drawable/favourite_links"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/favourite_links" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="Favourite Links"
+                            android:text="@string/favourite_links"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -502,13 +515,15 @@
 
                             android:padding="20dp"
                             android:src="@drawable/teacher"
-                            app:tint="#000" />
+                            app:tint="#000"
+                            android:contentDescription="@string/favourite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="Fav Teachers"
+                            android:text="@string/favourite"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
