@@ -18,8 +18,14 @@
         tools:layout="@layout/fragment_department_semester_chooser" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_userGroups"
         android:name="com.example.homepage.groupTab.UserGroupsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_user_groups" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.homepage.profileTab.ProfileFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
