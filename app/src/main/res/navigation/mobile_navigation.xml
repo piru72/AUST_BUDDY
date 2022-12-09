@@ -14,18 +14,18 @@
     <fragment
         android:id="@+id/navigation_departmentSemesterChooser"
         android:name="com.example.homepage.courseTab.DepartmentSemesterChooserFragment"
-        android:label="@string/title_dashboard"
+        android:label="Choose Semester"
         tools:layout="@layout/fragment_department_semester_chooser" />
 
     <fragment
         android:id="@+id/navigation_userGroups"
         android:name="com.example.homepage.groupTab.UserGroupsFragment"
-        android:label="@string/title_notifications"
+        android:label="Joined Groups"
         tools:layout="@layout/fragment_user_groups" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.homepage.profileTab.ProfileFragment"
-        android:label="@string/title_notifications"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
