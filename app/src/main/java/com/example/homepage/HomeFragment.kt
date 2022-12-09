@@ -6,10 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
-import com.example.homepage.homeTab.BusFragment
-import com.example.homepage.homeTab.RequestFragment
-import com.example.homepage.storeDashboard.StoreDashboardFragment
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.superClass.WebView
 import com.example.homepage.teachersPage.TeachersFragment
@@ -22,7 +18,7 @@ class HomeFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val currentState = R.id.fragment_home
@@ -46,7 +42,8 @@ class HomeFragment : ReplaceFragment() {
             )
         }
         binding.btnBuses.setOnClickListener {
-            replaceFragment(BusFragment(), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
+            findNavController().navigate(action)
         }
         binding.btnCgpa.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToCGPAFragment()
@@ -54,18 +51,21 @@ class HomeFragment : ReplaceFragment() {
         }
 
         binding.btnRequest.setOnClickListener {
-            replaceFragment(RequestFragment(), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToRequestFragment()
+            findNavController().navigate(action)
         }
         binding.noticeButton.setOnClickListener {
             replaceFragment(WebView(getString(R.string.universityNoticeLink)), currentState)
         }
 
         binding.btnStoreDashboard.setOnClickListener {
-            replaceFragment(StoreDashboardFragment(), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToStoreDashboardFragment()
+            findNavController().navigate(action)
         }
 
         binding.btnFavouriteWebPage.setOnClickListener {
-            replaceFragment(FavouriteWebPageFragment(), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToFavouriteWebPageFragment()
+            findNavController().navigate(action)
         }
         binding.btnFavouriteTeachers.setOnClickListener {
             replaceFragment(TeachersFragment("user-favouriteTeachers"), currentState)

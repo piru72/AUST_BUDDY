@@ -15,6 +15,26 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/CGPAFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_busFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/busFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/requestFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_favouriteWebPageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/favouriteWebPageFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_storeDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/storeDashboardFragment" />
     </fragment>
 
     <fragment
@@ -39,4 +59,24 @@
         android:name="com.example.homepage.calculator.CGPAFragment"
         android:label="fragment_c_g_p_a"
         tools:layout="@layout/fragment_c_g_p_a" />
+    <fragment
+        android:id="@+id/busFragment"
+        android:name="com.example.homepage.homeTab.BusFragment"
+        android:label="fragment_bus_schedule"
+        tools:layout="@layout/fragment_bus_schedule" />
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.example.homepage.homeTab.RequestFragment"
+        android:label="fragment_request"
+        tools:layout="@layout/fragment_request" />
+    <fragment
+        android:id="@+id/favouriteWebPageFragment"
+        android:name="com.example.homepage.favouriteWebPage.FavouriteWebPageFragment"
+        android:label="fragment_favourite_web_page"
+        tools:layout="@layout/fragment_favourite_web_page" />
+    <fragment
+        android:id="@+id/storeDashboardFragment"
+        android:name="com.example.homepage.storeDashboard.StoreDashboardFragment"
+        android:label="fragment_store_dashboard"
+        tools:layout="@layout/fragment_store_dashboard" />
 </navigation>
