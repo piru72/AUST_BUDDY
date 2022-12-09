@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
-import com.example.homepage.superClass.WebView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
@@ -49,11 +48,11 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
             override fun onClick(v: View?) {
 
                 val activity = v!!.context as AppCompatActivity
-                val webFragment = WebView(websiteLinkClick)
-                activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.favouriteWebPageMother, webFragment).addToBackStack(
-                        "tag"
-                    ).commit()
+//                val webFragment = WebView(websiteLinkClick)
+//                activity.supportFragmentManager.beginTransaction()
+//                    .replace(R.id.favouriteWebPageMother, webFragment).addToBackStack(
+//                        "tag"
+//                    ).commit()
             }
 
         })

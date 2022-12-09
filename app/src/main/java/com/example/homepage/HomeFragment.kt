@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.superClass.WebView
 import com.example.homepage.teachersPage.TeachersFragment
 
 
@@ -21,25 +20,27 @@ class HomeFragment : ReplaceFragment() {
     ): View {
         container?.removeAllViews()
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val currentState = R.id.fragment_home
 
 
 
         binding.btnIums.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universityStudentPortalLink)), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityStudentPortalLink),"view")
+            findNavController().navigate(action)
         }
 
         binding.btnTeachers.setOnClickListener {
-            replaceFragment(TeachersFragment("teachers"), currentState)
+//            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("teachers","view")
+//            findNavController().navigate(action)
+
+            replaceFragment(TeachersFragment("teachers"),R.id.fragment_home)
         }
         binding.btnSyllabus.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universitySyllabusLink)), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universitySyllabusLink),"view")
+            findNavController().navigate(action)
         }
         binding.btnCalender.setOnClickListener {
-            replaceFragment(
-                WebView(getString(R.string.universityAcademicCalenderLink)),
-                currentState
-            )
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityAcademicCalenderLink),"view")
+            findNavController().navigate(action)
         }
         binding.btnBuses.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
@@ -55,7 +56,8 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
         binding.noticeButton.setOnClickListener {
-            replaceFragment(WebView(getString(R.string.universityNoticeLink)), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityNoticeLink),"view")
+            findNavController().navigate(action)
         }
 
         binding.btnStoreDashboard.setOnClickListener {
@@ -68,7 +70,10 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
         binding.btnFavouriteTeachers.setOnClickListener {
-            replaceFragment(TeachersFragment("user-favouriteTeachers"), currentState)
+//            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("user-favouriteTeachers","view")
+//            findNavController().navigate(action)
+
+            replaceFragment(TeachersFragment("user-favouriteTeachers"),R.id.fragment_home)
         }
 
 

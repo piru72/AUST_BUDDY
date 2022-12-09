@@ -4,19 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.example.homepage.R
 
 
-class WebView(webLink: String) : ReplaceFragment() {
+class WebView : ReplaceFragment() {
 
-    private val webSite = webLink
+    private val args: WebViewArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        val v = inflater.inflate(R.layout.fragment_web_view, container, false)
-        loadWebSite(webSite, v)
-        return v
+        val view = inflater.inflate(R.layout.fragment_web_view, container, false)
+        loadWebSite(args.websiteLink, view)
+        return view
     }
 }

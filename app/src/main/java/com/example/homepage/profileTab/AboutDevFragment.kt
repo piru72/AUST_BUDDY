@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.homepage.R
 import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.superClass.WebView
 
 
 class AboutDevFragment : ReplaceFragment() {
@@ -51,15 +50,15 @@ class AboutDevFragment : ReplaceFragment() {
             sendMail(email)
         }
 
-        dev1Git.setOnClickListener {
-            replaceFragment(WebView("https://github.com/taralamia"), currentState)
-        }
-        dev2Git.setOnClickListener {
-            replaceFragment(WebView("https://github.com/piru72"), currentState)
-        }
-        dev4Git.setOnClickListener {
-            replaceFragment(WebView("https://github.com/klutz-me"), currentState)
-        }
+//        dev1Git.setOnClickListener {
+//            replaceFragment(WebView("https://github.com/taralamia"), currentState)
+//        }
+//        dev2Git.setOnClickListener {
+//            replaceFragment(WebView("https://github.com/piru72"), currentState)
+//        }
+//        dev4Git.setOnClickListener {
+//            replaceFragment(WebView("https://github.com/klutz-me"), currentState)
+//        }
 
         return v
     }

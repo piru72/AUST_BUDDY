@@ -35,6 +35,16 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/storeDashboardFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_webView2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/webView2" />
+        <action
+            android:id="@+id/action_navigation_home_to_teachersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/teachersFragment" />
     </fragment>
 
     <fragment
@@ -79,4 +89,28 @@
         android:name="com.example.homepage.storeDashboard.StoreDashboardFragment"
         android:label="fragment_store_dashboard"
         tools:layout="@layout/fragment_store_dashboard" />
+    <fragment
+        android:id="@+id/webView2"
+        android:name="com.example.homepage.superClass.WebView"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="websiteLink"
+            app:argType="string" />
+        <argument
+            android:name="websiteView"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/teachersFragment"
+        android:name="com.example.homepage.teachersPage.TeachersFragment"
+        android:label="fragment_teachers"
+        tools:layout="@layout/fragment_teachers" >
+        <argument
+            android:name="reference"
+            app:argType="string" />
+        <argument
+            android:name="viewPath"
+            app:argType="string" />
+    </fragment>
 </navigation>
