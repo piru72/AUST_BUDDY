@@ -2,29 +2,61 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bot_nav_home"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/home" />
-
-
-    <item
-        android:id="@+id/bot_nav_courses"
-        android:icon="@drawable/ic_baseline_menu_book_24"
-        android:title="@string/course" />
-
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
 
     <item
-        android:id="@+id/bot_nav_schedule"
-        android:icon="@drawable/ic_baseline_access_time_24"
-        android:title="@string/schedule" />
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_dashboard" />
 
     <item
-        android:id="@+id/bot_nav_store"
-        android:icon="@drawable/ic_baseline_swap_vert_24"
-        android:title="Store"
-        android:visible="false" />
-    <item
-        android:id="@+id/bot_nav_profile"
-        android:icon="@drawable/ic_baseline_person_24"
-        android:title="@string/profile" />
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_notifications" />
+
 </menu>
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--<item-->
+<!--    android:id="@+id/bot_nav_home"-->
+<!--    android:icon="@drawable/ic_baseline_home_24"-->
+<!--    android:title="@string/home" />-->
+
+
+<!--<item-->
+<!--    android:id="@+id/bot_nav_courses"-->
+<!--    android:icon="@drawable/ic_baseline_menu_book_24"-->
+<!--    android:title="@string/course" />-->
+
+
+<!--<item-->
+<!--    android:id="@+id/bot_nav_schedule"-->
+<!--    android:icon="@drawable/ic_baseline_access_time_24"-->
+<!--    android:title="@string/schedule" />-->
+
+<!--<item-->
+<!--    android:id="@+id/bot_nav_store"-->
+<!--    android:icon="@drawable/ic_baseline_swap_vert_24"-->
+<!--    android:title="Store"-->
+<!--    android:visible="false" />-->
+<!--<item-->
+<!--    android:id="@+id/bot_nav_profile"-->
+<!--    android:icon="@drawable/ic_baseline_person_24"-->
+<!--    android:title="@string/profile" />-->
+<!--<item-->
+<!--    android:id="@+id/navigation_home"-->
+<!--    android:icon="@drawable/ic_home_black_24dp"-->
+<!--    android:title="@string/title_home" />-->
+<!--<item-->
+<!--    android:id="@+id/navigation_dashboard"-->
+<!--    android:icon="@drawable/ic_dashboard_black_24dp"-->
+<!--    android:title="@string/title_dashboard" />-->
+<!--<item-->
+<!--    android:id="@+id/navigation_notifications"-->
+<!--    android:icon="@drawable/ic_notifications_black_24dp"-->
+<!--    android:title="@string/title_notifications" />-->
+<!--</menu>-->

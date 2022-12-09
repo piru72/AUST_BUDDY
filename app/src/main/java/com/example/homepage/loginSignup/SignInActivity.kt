@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.homepage.MainHomePage
+import com.example.homepage.BaseActivity
 import com.example.homepage.R
 import com.example.homepage.dataClass.UserData
 import com.example.homepage.databinding.ActivitySignInBinding
@@ -79,7 +79,7 @@ class SignInActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Log.i("LoginActivity", "Update UI Called")
-            val intent = Intent(this, MainHomePage::class.java)
+            val intent = Intent(this, BaseActivity::class.java)
             startActivity(intent)
             finish()
         }
