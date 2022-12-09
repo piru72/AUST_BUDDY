@@ -1,17 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-   <!-- <style name="Theme.HomePage" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        &lt;!&ndash; Primary brand color. &ndash;&gt;
-        <item name="colorPrimary">@color/purple_200</item>
+<!--     Base application theme. -->
+   <style name="Theme.HomePage" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<!--         Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
-        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+        <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
-        &lt;!&ndash; Status bar color. &ndash;&gt;
+        <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <!-- Customize your theme here. -->
 
         <item name="android:navigationBarColor">@color/white</item>
     </style>-->
