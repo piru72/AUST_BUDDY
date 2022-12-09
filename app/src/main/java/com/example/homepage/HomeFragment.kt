@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.calculator.CGPAFragment
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.favouriteWebPage.FavouriteWebPageFragment
 import com.example.homepage.homeTab.BusFragment
@@ -49,7 +49,8 @@ class HomeFragment : ReplaceFragment() {
             replaceFragment(BusFragment(), currentState)
         }
         binding.btnCgpa.setOnClickListener {
-            replaceFragment(CGPAFragment(), currentState)
+            val action = HomeFragmentDirections.actionNavigationHomeToCGPAFragment()
+            findNavController().navigate(action)
         }
 
         binding.btnRequest.setOnClickListener {
