@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.R
-import com.example.homepage.adminPanel.AdminPanelFragment
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.superClass.ReplaceFragment
@@ -27,25 +26,29 @@ class ProfileFragment : ReplaceFragment() {
 
 
         binding.btnEditProfile.setOnClickListener {
-            replaceFragment(EditProfileFragment(), R.id.fragment_profile)
+            val action = ProfileFragmentDirections.actionNavigationProfileToEditProfileFragment2()
+            findNavController().navigate(action)
         }
         binding.btnPrivacy.setOnClickListener {
-            replaceFragment(PrivacyFragment(), R.id.fragment_profile)
+            val action = ProfileFragmentDirections.actionNavigationProfileToPrivacyFragment()
+            findNavController().navigate(action)
         }
         binding.btnSettings.setOnClickListener {
-            replaceFragment(SettingsFragment(), R.id.fragment_profile)
+            val action = ProfileFragmentDirections.actionNavigationProfileToSettingsFragment()
+            findNavController().navigate(action)
         }
         binding.btnInviteFriend.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
             intent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Check out this app from\nhttps://github.com/piru72/Uni_buddy"
+                "Download this app for AUSTIANS\nhttps://play.google.com/store/apps/details?id=com.freondevs.homepage"
             )
             context?.startActivity(Intent.createChooser(intent, "Share"))
         }
         binding.btnAboutUs.setOnClickListener {
-            replaceFragment(AboutDevFragment(), R.id.fragment_profile)
+            val action = ProfileFragmentDirections.actionNavigationProfileToAboutDevFragment()
+            findNavController().navigate(action)
         }
         binding.btnLogOut.setOnClickListener {
 
@@ -63,7 +66,8 @@ class ProfileFragment : ReplaceFragment() {
         if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3" || debugMode) {
             binding.btnAddTeacherCourse.visibility = View.VISIBLE
             binding.btnAddTeacherCourse.setOnClickListener {
-                replaceFragment(AdminPanelFragment(), R.id.fragment_profile)
+                val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
+                findNavController().navigate(action)
             }
         } else
             binding.btnAddTeacherCourse.visibility = View.INVISIBLE

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_settings"
     android:background="@drawable/bk_shape03"
-    tools:context=".profileTab.ProfileFragment">
+    tools:context=".profileTab.SettingsFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

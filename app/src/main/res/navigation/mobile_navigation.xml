@@ -63,7 +63,33 @@
         android:id="@+id/navigation_profile"
         android:name="com.example.homepage.profileTab.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_editProfileFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/editProfileFragment2" />
+        <action
+            android:id="@+id/action_navigation_profile_to_privacyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/privacyFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_adminPanelFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/adminPanelFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_aboutDevFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/aboutDevFragment" />
+    </fragment>
     <fragment
         android:id="@+id/CGPAFragment"
         android:name="com.example.homepage.calculator.CGPAFragment"
@@ -148,4 +174,29 @@
             android:name="view"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment2"
+        android:name="com.example.homepage.profileTab.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.homepage.profileTab.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.homepage.profileTab.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.homepage.adminPanel.AdminPanelFragment"
+        android:label="fragment_admin_panel"
+        tools:layout="@layout/fragment_admin_panel" />
+    <fragment
+        android:id="@+id/aboutDevFragment"
+        android:name="com.example.homepage.profileTab.AboutDevFragment"
+        android:label="fragment_about_dev"
+        tools:layout="@layout/fragment_about_dev" />
 </navigation>
