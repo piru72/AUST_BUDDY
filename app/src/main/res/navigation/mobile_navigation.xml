@@ -126,7 +126,13 @@
         android:id="@+id/favouriteWebPageFragment"
         android:name="com.example.homepage.favouriteWebPage.FavouriteWebPageFragment"
         android:label="fragment_favourite_web_page"
-        tools:layout="@layout/fragment_favourite_web_page" />
+        tools:layout="@layout/fragment_favourite_web_page" >
+        <action
+            android:id="@+id/action_favouriteWebPageFragment_to_webView2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/webView2" />
+    </fragment>
     <fragment
         android:id="@+id/storeDashboardFragment"
         android:name="com.example.homepage.storeDashboard.StoreDashboardFragment"

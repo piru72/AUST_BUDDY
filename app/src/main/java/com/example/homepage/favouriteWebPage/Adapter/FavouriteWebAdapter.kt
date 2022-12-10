@@ -5,9 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.favouriteWebPage.FavouriteWebPageFragmentDirections
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
@@ -44,18 +45,15 @@ class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebAdapter.FavouriteWe
             val value = taskReference.child(websiteID)
             value.removeValue()
         }
-        holder.itemView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-
-                val activity = v!!.context as AppCompatActivity
-//                val webFragment = WebView(websiteLinkClick)
-//                activity.supportFragmentManager.beginTransaction()
-//                    .replace(R.id.favouriteWebPageMother, webFragment).addToBackStack(
-//                        "tag"
-//                    ).commit()
-            }
-
-        })
+        holder.itemView.setOnClickListener { v ->
+            val action =
+                FavouriteWebPageFragmentDirections.actionFavouriteWebPageFragmentToWebView2(
+                    websiteLinkClick,
+                    "View"
+                )
+            val navController = Navigation.findNavController(v)
+            navController.navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
