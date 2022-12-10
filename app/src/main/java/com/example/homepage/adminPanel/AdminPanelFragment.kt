@@ -4,8 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.R
-import com.example.homepage.adminPanel.bugReports.BugReportListFragment
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentAdminPanelBinding
 import com.example.homepage.superClass.ReplaceFragment
 
@@ -21,24 +20,24 @@ class AdminPanelFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)
         binding.btnAddCoursesAdmin.setOnClickListener {
-
-//            replaceFragment(AddCourseFragment("course-list"), R.id.fragment_admin_panel)
+            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAddCourseFragment("course-list", "view")
+            findNavController().navigate(action)
         }
         binding.btnAddTeachersAdmin.setOnClickListener {
-
-            //replaceFragment(AddTeachersFragment("teachers"), R.id.fragment_admin_panel)
+            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAddTeachersFragment("teachers","view")
+            findNavController().navigate(action)
         }
         binding.btnTeacherRequest.setOnClickListener {
-//            replaceFragment(
-//                TeachersFragment("admin-teacher-request-list"),
-//                R.id.fragment_admin_panel
-//            )
+            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToTeachersFragment("admin-teacher-request-list","view")
+            findNavController().navigate(action)
         }
         binding.btnViewBugReports.setOnClickListener {
-            replaceFragment(BugReportListFragment(), R.id.fragment_admin_panel)
+            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToBugReportListFragment()
+            findNavController().navigate(action)
         }
         binding.btnViewCourseRequest.setOnClickListener {
-//            replaceFragment(ViewCourses("admin-course-request-list"), R.id.fragment_admin_panel)
+        val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToViewCourses2("admin-course-request-list","view")
+            findNavController().navigate(action)
         }
         return binding.root
     }
