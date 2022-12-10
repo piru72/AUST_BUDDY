@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
@@ -13,10 +14,11 @@ import com.example.homepage.courseTab.Model.UserViewModel
 import com.example.homepage.superClass.ReplaceFragment
 
 
-class ViewCourses(path: String) : ReplaceFragment() {
-    private var semesterSelected = path
+class ViewCourses : ReplaceFragment() {
+
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: MyAdapter
+    private val args: ViewCoursesArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,8 @@ class ViewCourses(path: String) : ReplaceFragment() {
         userRecyclerView = view.findViewById(R.id.recyclerView)
         userRecyclerView.layoutManager = LinearLayoutManager(context)
         userRecyclerView.setHasFixedSize(true)
+
+        var semesterSelected = args.reference
 
         adapter = if (semesterSelected == "admin-course-request-list")
             MyAdapter("admin")

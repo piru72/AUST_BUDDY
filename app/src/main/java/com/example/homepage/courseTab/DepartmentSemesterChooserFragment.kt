@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.R
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentDepartmentSemesterChooserBinding
 import com.example.homepage.superClass.ReplaceFragment
 
@@ -22,52 +22,73 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentDepartmentSemesterChooserBinding.inflate(inflater, container, false)
         binding.btn11.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn11.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn11.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn12.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn12.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn12.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn21.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn21.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn21.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn22.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn22.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn22.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn31.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn31.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn31.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn32.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn32.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn32.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn41.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn41.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn41.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         binding.btn42.setOnClickListener {
-            replaceFragment(
-                ViewCourses(selectedDepartment + getDatabasePath(binding.btn42.text.toString())),
-                R.id.fragment_department_semesterChooser
-            )
+
+            val action =
+                DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
+                    selectedDepartment + getDatabasePath(binding.btn42.text.toString()),
+                    "view"
+                )
+            findNavController().navigate(action)
         }
         return binding.root
     }

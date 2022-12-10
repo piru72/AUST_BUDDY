@@ -51,7 +51,13 @@
         android:id="@+id/navigation_departmentSemesterChooser"
         android:name="com.example.homepage.courseTab.DepartmentSemesterChooserFragment"
         android:label="Choose Semester"
-        tools:layout="@layout/fragment_department_semester_chooser" />
+        tools:layout="@layout/fragment_department_semester_chooser" >
+        <action
+            android:id="@+id/action_navigation_departmentSemesterChooser_to_viewCourses2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/viewCourses2" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_userGroups"
@@ -199,4 +205,16 @@
         android:name="com.example.homepage.profileTab.AboutDevFragment"
         android:label="fragment_about_dev"
         tools:layout="@layout/fragment_about_dev" />
+    <fragment
+        android:id="@+id/viewCourses2"
+        android:name="com.example.homepage.courseTab.ViewCourses"
+        android:label="fragment_view_courses"
+        tools:layout="@layout/fragment_view_courses" >
+        <argument
+            android:name="reference"
+            app:argType="string" />
+        <argument
+            android:name="view"
+            app:argType="string" />
+    </fragment>
 </navigation>
