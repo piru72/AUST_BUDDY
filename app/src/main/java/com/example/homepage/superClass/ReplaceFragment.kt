@@ -85,7 +85,11 @@ open class ReplaceFragment : Fragment() {
     }
 
     fun setInformation(userEmail: String) {
-        currentEmail = userEmail
+        var finalUserEmail = userEmail
+        if (finalUserEmail.length == 18) {
+            finalUserEmail = "Name.Department.$finalUserEmail"
+        }
+        currentEmail = finalUserEmail
         currentName = setUserName()
         currentId = setUserId()
         currentDept = setDepartment()
@@ -94,7 +98,7 @@ open class ReplaceFragment : Fragment() {
     }
 
     private fun setSession(): String {
-        return if (currentId[2].toString() == "1") "FALL" else "SPRING" + " " + currentId[0].toString() + currentId[1].toString()
+        return if (currentId[5].toString() == "1") "SPRING" + " " + currentId.dropLast(7) else "FALL" + " " + currentId.dropLast(7)
     }
 
     private fun setDepartment(): String {
@@ -109,6 +113,8 @@ open class ReplaceFragment : Fragment() {
             department = getString(R.string.mpe)
         else if (currentEmail.contains("te"))
             department = getString(R.string.te)
+        else
+            department = "Department"
         return department
     }
 
@@ -121,7 +127,11 @@ open class ReplaceFragment : Fragment() {
     }
 
     private fun setUserId(): String {
-        return (currentEmail.split(".")[2]).split("@")[0]
+        var studentId=  (currentEmail.split(".")[2]).split("@")[0]
+        return if (studentId.length == 9)
+            "20$studentId"
+        else
+            studentId
     }
 
     fun getDepartment(): String {
@@ -195,7 +205,7 @@ open class ReplaceFragment : Fragment() {
     }
 
     fun getRollOmittedUserId(): String {
-        return getUserId().dropLast(3)
+        return getUserId().dropLast(3).drop(2)
     }
 
 }

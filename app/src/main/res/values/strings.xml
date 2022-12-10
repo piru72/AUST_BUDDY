@@ -145,9 +145,9 @@
     <!--    Department names-->
     <string name="cse">Computer Science and Engineering</string>
     <string name="eee">Electrical and Electronic Engineering</string>
-    <string name="ce">"Civil Engineering</string>
-    <string name="mpe">"Mechanical and Production Engineering"</string>
-    <string name="te">"Textile Engineering"</string>
+    <string name="ce">Civil Engineering</string>
+    <string name="mpe">Mechanical and Production Engineering</string>
+    <string name="te">Textile Engineering</string>
 
 
     <!--    LINKS FOR WEB SITES-->
