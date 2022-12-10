@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.homepage.R
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentSettingsBinding
 import com.example.homepage.loginSignup.HelperSignInSignUp
 import com.example.homepage.loginSignup.SignInActivity
@@ -60,7 +60,8 @@ class SettingsFragment : ReplaceFragment() {
         }
 
         binding.goToForgotPasswrdFragment.setOnClickListener {
-            replaceFragment(ForgotPasswordFragment(), R.id.fragment_settings)
+            val action = SettingsFragmentDirections.actionSettingsFragmentToForgotPasswordFragment()
+            findNavController().navigate(action)
         }
         return binding.root
     }

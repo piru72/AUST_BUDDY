@@ -216,7 +216,13 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.homepage.profileTab.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_forgotPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/adminPanelFragment"
         android:name="com.example.homepage.adminPanel.AdminPanelFragment"
@@ -292,4 +298,9 @@
         android:name="com.example.homepage.groupTab.JoinGroupFragment"
         android:label="fragment_join_group"
         tools:layout="@layout/fragment_join_group" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.homepage.profileTab.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
 </navigation>
