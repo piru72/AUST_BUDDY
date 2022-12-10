@@ -63,7 +63,23 @@
         android:id="@+id/navigation_userGroups"
         android:name="com.example.homepage.groupTab.UserGroupsFragment"
         android:label="Joined Groups"
-        tools:layout="@layout/fragment_user_groups" />
+        tools:layout="@layout/fragment_user_groups" >
+        <action
+            android:id="@+id/action_navigation_userGroups_to_joinGroupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/joinGroupFragment" />
+        <action
+            android:id="@+id/action_navigation_userGroups_to_createGroupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_navigation_userGroups_to_groupNoticeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/groupNoticeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -254,4 +270,26 @@
         android:name="com.example.homepage.adminPanel.bugReports.BugReportListFragment"
         android:label="fragment_bug_report_list"
         tools:layout="@layout/fragment_bug_report_list" />
+    <fragment
+        android:id="@+id/groupNoticeFragment"
+        android:name="com.example.homepage.groupNoticePage.GroupNoticeFragment"
+        android:label="fragment_group_notice"
+        tools:layout="@layout/fragment_group_notice" >
+        <argument
+            android:name="reference"
+            app:argType="string" />
+        <argument
+            android:name="view"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.example.homepage.groupTab.CreateGroupFragment"
+        android:label="fragment_create_group"
+        tools:layout="@layout/fragment_create_group" />
+    <fragment
+        android:id="@+id/joinGroupFragment"
+        android:name="com.example.homepage.groupTab.JoinGroupFragment"
+        android:label="fragment_join_group"
+        tools:layout="@layout/fragment_join_group" />
 </navigation>

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
@@ -25,7 +26,7 @@ import com.google.firebase.ktx.Firebase
 import java.util.*
 
 
-class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() {
+class GroupNoticeFragment : ReplaceFragment() {
     private var _binding: FragmentGroupNoticeBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: GroupNoticeViewModel
@@ -35,6 +36,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
     private lateinit var auth: FirebaseAuth
     private lateinit var _inflater: LayoutInflater
     var picker: DatePickerDialog? = null
+    private val args : GroupNoticeFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +46,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         _binding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
         _inflater = inflater
         auth = Firebase.auth
+        val argGroupId = args.reference
 
         val user = auth.currentUser!!.uid
         binding.floatingActionButton.setOnClickListener {
@@ -113,7 +116,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
                         Toast.LENGTH_SHORT
                     ).show()
                 else
-                    writeNewTask(user, name, description, date, "make-key", groupId)
+                    writeNewTask(user, name, description, date, "make-key", argGroupId)
 
 
 
@@ -144,7 +147,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         if (oldKey == "make-key") {
             newGroupNotice =
                 GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
-            pushingPath = "/group-notice/${this.groupId}/$newKey"
+            pushingPath = "/group-notice/${args.reference}/$newKey"
 
         } else {
             newGroupNotice =
@@ -170,7 +173,7 @@ class GroupNoticeFragment(private var groupId: String = "") : ReplaceFragment() 
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[GroupNoticeViewModel::class.java]
 
-        viewModel.initialize(groupId)
+        viewModel.initialize(args.reference)
 
         viewModel.allSchedules.observe(viewLifecycleOwner) {
             adapter!!.updateGroupNoticeList(it)

@@ -8,11 +8,11 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.groupNoticePage.GroupNoticeFragment
 import com.example.homepage.groupTab.Group.Model.GroupData
+import com.example.homepage.groupTab.UserGroupsFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -43,12 +43,10 @@ class UserGroupAdapter(inflater: LayoutInflater) :
         holder.groupId.text = currentGroup.groupId.toString()
 
         holder.itemView.setOnClickListener { v ->
-            val activity = v!!.context as AppCompatActivity
-            val webFragment = GroupNoticeFragment(currentGroup.groupId.toString())
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.userGroupFragment, webFragment).addToBackStack(
-                    "tag"
-                ).commit()
+            val action =
+                UserGroupsFragmentDirections.actionNavigationUserGroupsToGroupNoticeFragment(currentGroup.groupId.toString(), "view")
+            val navController = Navigation.findNavController(v)
+            navController.navigate(action)
         }
         holder.leaveGroup.setOnClickListener {
 

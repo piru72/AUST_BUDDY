@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
@@ -35,12 +36,11 @@ class UserGroupsFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         container?.removeAllViews()
         _binding = FragmentUserGroupsBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
-        val user = auth.currentUser!!.uid
         _inflater = inflater
         binding.floatingActionButton.setOnClickListener {
 
@@ -67,11 +67,13 @@ class UserGroupsFragment : ReplaceFragment() {
             )
 
             joinButton.setOnClickListener {
-                replaceFragment(JoinGroupFragment(), R.id.userGroupFragment)
+                val action = UserGroupsFragmentDirections.actionNavigationUserGroupsToJoinGroupFragment()
+                findNavController().navigate(action)
                 popupWindow.dismiss()
             }
             createButton.setOnClickListener {
-                replaceFragment(CreateGroupFragment(), R.id.userGroupFragment)
+                val action = UserGroupsFragmentDirections.actionNavigationUserGroupsToCreateGroupFragment()
+                findNavController().navigate(action)
                 popupWindow.dismiss()
             }
 
