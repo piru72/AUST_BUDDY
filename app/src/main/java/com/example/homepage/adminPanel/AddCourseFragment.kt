@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.superClass.ReplaceFragment
@@ -12,16 +13,17 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
-class AddCourseFragment(pushPath: String) : ReplaceFragment() {
+class AddCourseFragment : ReplaceFragment() {
     private lateinit var _binding: FragmentAddCourseBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
-    private var pushingPath = pushPath
+    private val args: AddCourseFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
+        val pushingPath = args.reference
         _binding = FragmentAddCourseBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
         if (pushingPath == "admin-course-request-list")
@@ -73,6 +75,7 @@ class AddCourseFragment(pushPath: String) : ReplaceFragment() {
         department: String,
         yearSemester: String
     ) {
+        val pushingPath = args.reference
         val requestingPath = "$department/$yearSemester/$courseCode"
         val newCourse = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
         val courseDetails = newCourse.toMap()

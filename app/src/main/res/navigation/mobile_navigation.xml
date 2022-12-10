@@ -78,7 +78,18 @@
         android:id="@+id/requestFragment"
         android:name="com.example.homepage.homeTab.RequestFragment"
         android:label="fragment_request"
-        tools:layout="@layout/fragment_request" />
+        tools:layout="@layout/fragment_request" >
+        <action
+            android:id="@+id/action_requestFragment_to_addCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/addCourseFragment" />
+        <action
+            android:id="@+id/action_requestFragment_to_addTeachersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/addTeachersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favouriteWebPageFragment"
         android:name="com.example.homepage.favouriteWebPage.FavouriteWebPageFragment"
@@ -111,6 +122,30 @@
             app:argType="string" />
         <argument
             android:name="viewPath"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.homepage.adminPanel.AddCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" >
+        <argument
+            android:name="reference"
+            app:argType="string" />
+        <argument
+            android:name="view"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTeachersFragment"
+        android:name="com.example.homepage.adminPanel.AddTeachersFragment"
+        android:label="fragment_add_teachers"
+        tools:layout="@layout/fragment_add_teachers" >
+        <argument
+            android:name="reference"
+            app:argType="string" />
+        <argument
+            android:name="view"
             app:argType="string" />
     </fragment>
 </navigation>

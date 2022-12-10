@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
@@ -11,10 +12,12 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
+class AddTeachersFragment : ReplaceFragment() {
     private lateinit var _binding: FragmentAddTeachersBinding
     private val binding get() = _binding
     private lateinit var database: DatabaseReference
+
+    private val arg : AddCourseFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,7 +25,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
 
-        if (pushingPath == "admin-teacher-request-list")
+        if (arg.reference == "admin-teacher-request-list")
             binding.addTeachersButtonForm.text = "Request for adding teacher"
 
         binding.addTeachersButtonForm.setOnClickListener {
@@ -88,6 +91,7 @@ class AddTeachersFragment(private val pushingPath: String) : ReplaceFragment() {
             teacherEmail
         )
         val newPush = teacherEmail.replace(".", "-")
+        val pushingPath = arg.reference
         database = Firebase.database.reference
         val teachersInformation = newTeacher.toMap()
         val childUpdate = hashMapOf<String, Any>(

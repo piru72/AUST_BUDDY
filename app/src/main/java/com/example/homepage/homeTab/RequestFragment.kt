@@ -10,9 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
-import com.example.homepage.adminPanel.AddCourseFragment
-import com.example.homepage.adminPanel.AddTeachersFragment
 import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.superClass.ReplaceFragment
@@ -39,10 +38,12 @@ class RequestFragment : ReplaceFragment() {
         auth = Firebase.auth
 
         binding.btnRequestForCourse.setOnClickListener {
-            replaceFragment(AddCourseFragment("admin-course-request-list"), R.id.requestScreen)
+            val action = RequestFragmentDirections.actionRequestFragmentToAddCourseFragment("admin-course-request-list","view")
+            findNavController().navigate(action)
         }
         binding.btnRequestForTeacher.setOnClickListener {
-            replaceFragment(AddTeachersFragment("admin-teacher-request-list"), R.id.requestScreen)
+            val action = RequestFragmentDirections.actionRequestFragmentToAddTeachersFragment("admin-teacher-request-list","view")
+            findNavController().navigate(action)
         }
 
 
