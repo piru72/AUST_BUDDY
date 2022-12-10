@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
@@ -14,8 +15,9 @@ import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 
 
-class TeachersFragment(viewPath: String) : ReplaceFragment() {
-    private val databaseViewPath = viewPath
+class TeachersFragment : ReplaceFragment() {
+
+    private val args: TeachersFragmentArgs by navArgs()
     private lateinit var viewModel: teacherViewModel
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: teacherAdapter
@@ -31,7 +33,7 @@ class TeachersFragment(viewPath: String) : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val databaseViewPath = args.reference
         userRecyclerView = view.findViewById(R.id.teacher_list)
         userRecyclerView.layoutManager = LinearLayoutManager(context)
         userRecyclerView.setHasFixedSize(true)

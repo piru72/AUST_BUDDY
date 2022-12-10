@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.teachersPage.TeachersFragment
 
 
 class HomeFragment : ReplaceFragment() {
@@ -29,10 +28,9 @@ class HomeFragment : ReplaceFragment() {
         }
 
         binding.btnTeachers.setOnClickListener {
-//            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("teachers","view")
-//            findNavController().navigate(action)
+            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("teachers","view")
+            findNavController().navigate(action)
 
-            replaceFragment(TeachersFragment("teachers"),R.id.fragment_home)
         }
         binding.btnSyllabus.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universitySyllabusLink),"view")
@@ -70,10 +68,10 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
         binding.btnFavouriteTeachers.setOnClickListener {
-//            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("user-favouriteTeachers","view")
-//            findNavController().navigate(action)
+            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("user-favouriteTeachers","view")
+            findNavController().navigate(action)
 
-            replaceFragment(TeachersFragment("user-favouriteTeachers"),R.id.fragment_home)
+
         }
 
 

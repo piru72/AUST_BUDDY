@@ -9,7 +9,6 @@ import com.example.homepage.adminPanel.bugReports.BugReportListFragment
 import com.example.homepage.courseTab.ViewCourses
 import com.example.homepage.databinding.FragmentAdminPanelBinding
 import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.teachersPage.TeachersFragment
 
 
 class AdminPanelFragment : ReplaceFragment() {
@@ -31,10 +30,10 @@ class AdminPanelFragment : ReplaceFragment() {
             replaceFragment(AddTeachersFragment("teachers"), R.id.fragment_admin_panel)
         }
         binding.btnTeacherRequest.setOnClickListener {
-            replaceFragment(
-                TeachersFragment("admin-teacher-request-list"),
-                R.id.fragment_admin_panel
-            )
+//            replaceFragment(
+//                TeachersFragment("admin-teacher-request-list"),
+//                R.id.fragment_admin_panel
+//            )
         }
         binding.btnViewBugReports.setOnClickListener {
             replaceFragment(BugReportListFragment(), R.id.fragment_admin_panel)
