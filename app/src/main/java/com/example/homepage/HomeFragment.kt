@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.superClass.ReplaceFragment
 
 
-class HomeFragment : ReplaceFragment() {
+class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -70,8 +70,6 @@ class HomeFragment : ReplaceFragment() {
         binding.btnFavouriteTeachers.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("user-favouriteTeachers","view")
             findNavController().navigate(action)
-
-
         }
 
 
