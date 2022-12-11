@@ -20,6 +20,9 @@
             android:inputType="textMultiLine"
             android:text="@string/bug_report_details"
             android:textColorHint="@color/black"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:clickable="true"
             android:textSize="30dp" />
 
         <LinearLayout

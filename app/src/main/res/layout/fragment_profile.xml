@@ -189,7 +189,8 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="@string/about_devs"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:visibility="gone" />
 
 
             <Button

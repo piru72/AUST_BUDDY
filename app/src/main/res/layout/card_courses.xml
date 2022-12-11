@@ -74,7 +74,8 @@
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:linksClickable="true"
-                    android:text="@string/share" />
+                    android:text="@string/share"
+                    android:textColor="@color/black" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/exploreButton"
@@ -90,7 +91,8 @@
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:linksClickable="true"
-                    android:text="@string/explore" />
+                    android:text="@string/explore"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <!--                android:onClick="openDriveLink"-->

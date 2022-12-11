@@ -18,18 +18,18 @@
             android:layout_width="398dp"
             android:layout_height="66dp"
             android:orientation="horizontal"
+            android:padding="10dp"
             android:paddingStart="20dp"
-            android:paddingEnd="20dp"
 
+            android:paddingEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.155">
+            app:layout_constraintTop_toTopOf="parent">
 
             <Spinner
                 android:id="@+id/semester_list"
-                android:layout_width="match_parent"
+                android:layout_width="258dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:entries="@array/Semesters"
@@ -39,12 +39,12 @@
 
             <Button
                 android:id="@+id/btn_select"
-                android:layout_width="193dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:background="@color/primary_green"
                 android:text="@string/select"
-                android:textColor="@color/white"
+
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -448,14 +448,13 @@
 
             <TextView
                 android:id="@+id/textview_instruction"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/please_select_your_semester_above"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="30sp" />
         </LinearLayout>
 

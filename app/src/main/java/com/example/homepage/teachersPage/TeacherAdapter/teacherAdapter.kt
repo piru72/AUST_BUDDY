@@ -139,7 +139,7 @@ class teacherAdapter(private val userType: String) :
                     .show()
             }
         } else
-            holder.adminControlLayout.visibility = View.INVISIBLE
+            holder.adminControlLayout.visibility = View.GONE
     }
 
     override fun getItemCount(): Int {

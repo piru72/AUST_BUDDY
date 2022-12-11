@@ -12,16 +12,15 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center
-"
+        android:gravity="center"
+        android:padding="10dp"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="6dp"
-            android:layout_marginStart="16dp"
             android:gravity="center"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
@@ -42,90 +41,120 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/assistant_professor"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/black" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnCallTeacher"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@color/background_color_50"
+                    android:elevation="10dp"
                     android:focusable="true"
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/call" />
+                    android:linksClickable="true"
+                    android:text="@string/call"
+                    android:textColor="@color/black"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnEmailTeacher"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@color/background_color_50"
+                    android:elevation="10dp"
                     android:focusable="true"
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/email" />
+                    android:linksClickable="true"
+                    android:text="@string/email"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnShareContact"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_margin="4dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
                 android:background="@color/background_color_50"
+                android:elevation="10dp"
                 android:focusable="true"
                 android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="@string/share_contact" />
+                android:linksClickable="true"
+                android:text="@string/share_contact"
+                android:textColor="@color/black"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnFavouriteContact"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_margin="4dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
                 android:background="@color/background_color_50"
+                android:elevation="10dp"
                 android:focusable="true"
                 android:fontFamily="@font/poppins_light"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Add to favourite" />
+                android:linksClickable="true"
+                android:text="Add to favourite"
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:id="@+id/adminControlLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnDeclineTeacher"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@color/background_color_50"
+                    android:elevation="10dp"
                     android:focusable="true"
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/decline" />
+                    android:linksClickable="true"
+                    android:text="@string/decline"
+                    android:textColor="@color/black"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnApproveTeacher"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@color/background_color_50"
+                    android:elevation="10dp"
                     android:focusable="true"
                     android:fontFamily="@font/poppins_light"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/approve" />
+                    android:linksClickable="true"
+                    android:text="@string/approve"
+                    android:textColor="@color/black"/>
             </LinearLayout>
 
 
@@ -138,6 +167,7 @@
             android:layout_marginEnd="10sp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
+            android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
