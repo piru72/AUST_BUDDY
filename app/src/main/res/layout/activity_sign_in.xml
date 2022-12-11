@@ -8,11 +8,11 @@
 
 
     <LinearLayout
+        android:id="@+id/activity_sign_in"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20sp"
         android:gravity="center"
-        android:id="@+id/activity_sign_in"
         android:orientation="vertical">
 
         <ImageView
@@ -53,16 +53,28 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/goToForgotPasswrdFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="Forgot Password ?"
+            android:textAlignment="textEnd"
+            android:textSize="20dp" />
+
         <Button
 
             android:id="@+id/signinBtn"
-            android:layout_width="369dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="58dp"
-            android:background="@drawable/rounded_list_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Sign in"
             android:textSize="20sp"
-            tools:ignore="InvalidId" />
+            android:textColor="@color/black" />
 
         <TextView
 
@@ -74,16 +86,8 @@
             android:padding="5dp"
             android:text="   Don't have an account? Sign up"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
-        <TextView
-            android:id="@+id/goToForgotPasswrdFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="2dp"
-            android:textSize="20dp"
-            android:text="Forgot Password ?" />
 
 
     </LinearLayout>
