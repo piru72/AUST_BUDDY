@@ -14,8 +14,8 @@ android {
         applicationId "com.freondevs.homepage"
         minSdk 28
         targetSdk 32
-        versionCode 12
-        versionName "1.0"
+        versionCode 14
+        versionName "2.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -104,6 +104,10 @@ dependencies {
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // For implementing google sign in
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
 
 
 }
