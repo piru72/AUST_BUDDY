@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnTeachers.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("teachers","view")
+            val action = HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
             findNavController().navigate(action)
 
         }

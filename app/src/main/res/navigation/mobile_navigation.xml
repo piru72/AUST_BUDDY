@@ -45,6 +45,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/teachersFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_departmentChooserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/departmentChooserFragment" />
     </fragment>
 
     <fragment
@@ -303,4 +308,15 @@
         android:name="com.example.homepage.profileTab.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/departmentChooserFragment"
+        android:name="com.example.homepage.teachersPage.DepartmentChooserFragment"
+        android:label="fragment_department_chooser"
+        tools:layout="@layout/fragment_department_chooser" >
+        <action
+            android:id="@+id/action_departmentChooserFragment_to_teachersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/teachersFragment" />
+    </fragment>
 </navigation>
