@@ -51,6 +51,14 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
+        binding.btnIpe.setOnClickListener {
+            val action =
+                DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
+                    "teachers-list/ipe",
+                    "view"
+                )
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 
