@@ -59,6 +59,14 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
+        binding.btnAs.setOnClickListener {
+            val action =
+                DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
+                    "teachers-list/as",
+                    "view"
+                )
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 
