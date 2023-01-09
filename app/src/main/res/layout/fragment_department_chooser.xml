@@ -73,7 +73,7 @@
             tools:ignore="RtlSymmetry" />
 
         <Button
-            android:id="@+id/btn_mpe"
+            android:id="@+id/btn_me"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -86,7 +86,7 @@
             android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:paddingStart="10dp"
-            android:text="@string/mpe"
+            android:text="@string/me"
             android:textColor="@color/black"
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
