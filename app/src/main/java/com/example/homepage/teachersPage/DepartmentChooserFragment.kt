@@ -67,6 +67,14 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
+        binding.btnCe.setOnClickListener {
+            val action =
+                DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
+                    "teachers-list/ce",
+                    "view"
+                )
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 

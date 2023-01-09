@@ -54,7 +54,7 @@
             tools:ignore="RtlSymmetry" />
 
         <Button
-            android:id="@+id/btn_civil"
+            android:id="@+id/btn_ce"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
