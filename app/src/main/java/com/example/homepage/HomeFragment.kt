@@ -4,12 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentHomeBinding
+import com.example.homepage.superClass.ReplaceFragment
+import com.google.firebase.auth.FirebaseAuth
 
 
-class HomeFragment : Fragment() {
+class HomeFragment : ReplaceFragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -23,21 +24,49 @@ class HomeFragment : Fragment() {
 
 
         binding.btnIums.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityStudentPortalLink),"view")
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
+                getString(R.string.universityStudentPortalLink),
+                "view"
+            )
             findNavController().navigate(action)
         }
 
         binding.btnTeachers.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
+
+            // Getting the users email
+            val user = FirebaseAuth.getInstance().currentUser
+            val email = user?.email.toString()
+
+            // Getting the users department and making a database reference with it
+            setInformation(email)
+            val defaultDatabaseViewPath = "teachers-list/" + getShortDepartment()
+
+
+            // If users email contains a department the user will be automatically guided to his / her departments teacher list
+            val action = if (defaultDatabaseViewPath != getShortDepartment())
+                HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
+                    defaultDatabaseViewPath,
+                    "view"
+                )
+            else
+                HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
+
             findNavController().navigate(action)
+
 
         }
         binding.btnSyllabus.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universitySyllabusLink),"view")
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
+                getString(R.string.universitySyllabusLink),
+                "view"
+            )
             findNavController().navigate(action)
         }
         binding.btnCalender.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityAcademicCalenderLink),"view")
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
+                getString(R.string.universityAcademicCalenderLink),
+                "view"
+            )
             findNavController().navigate(action)
         }
         binding.btnBuses.setOnClickListener {
@@ -54,7 +83,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(action)
         }
         binding.noticeButton.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(getString(R.string.universityNoticeLink),"view")
+            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
+                getString(R.string.universityNoticeLink),
+                "view"
+            )
             findNavController().navigate(action)
         }
 
@@ -68,7 +100,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(action)
         }
         binding.btnFavouriteTeachers.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment("user-favouriteTeachers","view")
+            val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
+                "user-favouriteTeachers",
+                "view"
+            )
             findNavController().navigate(action)
         }
 

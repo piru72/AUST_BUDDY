@@ -125,6 +125,24 @@ open class ReplaceFragment : Fragment() {
         return department
     }
 
+     fun getShortDepartment(): String{
+        var department = ""
+        department = if (currentEmail.contains("cse"))
+            "cse"
+        else if (currentEmail.contains("eee"))
+            "eee"
+        else if (currentEmail.contains("ce"))
+            "ce"
+        else if (currentEmail.contains("me"))
+            "me"
+        else if (currentEmail.contains("te"))
+            "te"
+        else
+            "Department"
+        return department
+    }
+
+
     private fun setUserName(): String {
         return (currentEmail.split(".")[0]).replaceFirstChar {
             if (it.isLowerCase()) it.titlecase(
