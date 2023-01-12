@@ -53,6 +53,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
