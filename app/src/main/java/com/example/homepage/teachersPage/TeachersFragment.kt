@@ -4,12 +4,15 @@ package com.example.homepage.teachersPage
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.databinding.FragmentTeachersBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
@@ -22,14 +25,32 @@ class TeachersFragment : ReplaceFragment() {
     private lateinit var viewModel: teacherViewModel
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: teacherAdapter
+    private var _binding: FragmentTeachersBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment and removing all previous views
         container?.removeAllViews()
-        return inflater.inflate(R.layout.fragment_teachers, container, false)
+
+        _binding = FragmentTeachersBinding.inflate(inflater, container, false)
+
+        // If the user is navigating to this page from the home page only then this button will be visible
+        if (args.viewPath != "sourceHome")
+        {
+            binding.btnOther.visibility = GONE
+        }
+        else
+        {
+            binding.btnOther.setOnClickListener {
+                val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
+                findNavController().navigate(action)
+            }
+        }
+
+        return binding.root
     }
 
 

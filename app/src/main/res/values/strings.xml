@@ -212,6 +212,7 @@
     <string name="me">Mechanical Engineering</string>
     <string name="ipe">Industrial and Production Engineering</string>
     <string name="as">Arts and Sciences</string>
+    <string name="all_departments">All departments</string>
 
 
 </resources>

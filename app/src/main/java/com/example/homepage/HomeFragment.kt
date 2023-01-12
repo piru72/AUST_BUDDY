@@ -46,7 +46,7 @@ class HomeFragment : ReplaceFragment() {
             val action = if (defaultDatabaseViewPath != getShortDepartment())
                 HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
                     defaultDatabaseViewPath,
-                    "view"
+                    "sourceHome"
                 )
             else
                 HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()

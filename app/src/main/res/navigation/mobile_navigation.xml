@@ -182,6 +182,9 @@
         <argument
             android:name="viewPath"
             app:argType="string" />
+        <action
+            android:id="@+id/action_teachersFragment_to_departmentChooserFragment"
+            app:destination="@id/departmentChooserFragment" />
     </fragment>
     <fragment
         android:id="@+id/addCourseFragment"
