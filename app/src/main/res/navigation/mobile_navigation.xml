@@ -50,6 +50,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/departmentChooserFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_plazaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/plazaFragment" />
     </fragment>
 
     <fragment
@@ -322,4 +327,9 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/teachersFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/plazaFragment"
+        android:name="com.example.homepage.plaza.PlazaFragment"
+        android:label="fragment_plaza"
+        tools:layout="@layout/fragment_plaza" />
 </navigation>

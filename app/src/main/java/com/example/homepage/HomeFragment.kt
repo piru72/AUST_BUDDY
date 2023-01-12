@@ -28,6 +28,12 @@ class HomeFragment : ReplaceFragment() {
         // Getting the users department and making a database reference with it
         setInformation(email)
 
+        binding.btnPlaza.setOnClickListener{
+            val action = HomeFragmentDirections.actionNavigationHomeToPlazaFragment()
+            findNavController().navigate(action)
+        }
+
+
 
         binding.btnIums.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
@@ -114,7 +120,6 @@ class HomeFragment : ReplaceFragment() {
             )
             findNavController().navigate(action)
         }
-
 
 
         return binding.root
