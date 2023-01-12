@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentPlazaBinding
@@ -38,12 +39,17 @@ class PlazaFragment : Fragment() {
         _binding = FragmentPlazaBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
+
+        binding.btnPlazaDashboard.setOnClickListener {
+            val action = PlazaFragmentDirections.actionPlazaFragmentToPlazaDashBoardFragment()
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.materialList
+        recycler = binding.announcementList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = PlazaAdapter()

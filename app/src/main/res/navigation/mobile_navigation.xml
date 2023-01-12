@@ -331,5 +331,16 @@
         android:id="@+id/plazaFragment"
         android:name="com.example.homepage.plaza.PlazaFragment"
         android:label="fragment_plaza"
-        tools:layout="@layout/fragment_plaza" />
+        tools:layout="@layout/fragment_plaza" >
+        <action
+            android:id="@+id/action_plazaFragment_to_plazaDashBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/plazaDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plazaDashBoardFragment"
+        android:name="com.example.homepage.plazaDashboard.PlazaDashBoardFragment"
+        android:label="fragment_plaza_dash_board"
+        tools:layout="@layout/fragment_plaza_dash_board" />
 </navigation>

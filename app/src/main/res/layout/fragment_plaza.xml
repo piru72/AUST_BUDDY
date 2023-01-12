@@ -4,16 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bk_shape03"
     tools:context=".plaza.PlazaFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/material_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btn_plaza_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_color_50"
+
+            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:drawableTint="#000"
+            android:focusable="true"
+
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Dashboard"
+            android:textColor="@color/black"
+
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/announcement_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
 
 
 </FrameLayout>
