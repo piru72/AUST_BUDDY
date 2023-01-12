@@ -21,6 +21,12 @@ class HomeFragment : ReplaceFragment() {
         container?.removeAllViews()
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        // Getting the users email
+        val user = FirebaseAuth.getInstance().currentUser
+        val email = user?.email.toString()
+
+        // Getting the users department and making a database reference with it
+        setInformation(email)
 
 
         binding.btnIums.setOnClickListener {
@@ -33,12 +39,6 @@ class HomeFragment : ReplaceFragment() {
 
         binding.btnTeachers.setOnClickListener {
 
-            // Getting the users email
-            val user = FirebaseAuth.getInstance().currentUser
-            val email = user?.email.toString()
-
-            // Getting the users department and making a database reference with it
-            setInformation(email)
             val defaultDatabaseViewPath = "teachers-list/" + getShortDepartment()
 
 
@@ -74,8 +74,16 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
         binding.btnCgpa.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToCGPAFragment()
-            findNavController().navigate(action)
+
+            if (getShortDepartment() != "cse") {
+                makeToast("Under development")
+
+            } else {
+                val action = HomeFragmentDirections.actionNavigationHomeToCGPAFragment()
+                findNavController().navigate(action)
+
+            }
+
         }
 
         binding.btnRequest.setOnClickListener {
