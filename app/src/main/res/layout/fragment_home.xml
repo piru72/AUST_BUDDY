@@ -42,6 +42,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:visibility="gone"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="5dp">
@@ -61,16 +62,59 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/syllabus"
                             android:padding="20dp"
                             android:src="@drawable/syllabus"
-                            app:tint="#000"
-                            android:contentDescription="@string/syllabus" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
                             android:text="@string/syllabus"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_plaza"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_color_50"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="10dp"
+
+
+                            android:contentDescription="@string/syllabus"
+                            android:padding="20dp"
+                            android:src="@drawable/syllabus"
+                            app:tint="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/plaza"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -103,10 +147,10 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
+                            android:contentDescription="@string/notice"
                             android:padding="20dp"
                             android:src="@drawable/oj"
-                            app:tint="#000"
-                            android:contentDescription="@string/notice" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -145,10 +189,10 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_margin="10dp"
+                            android:contentDescription="@string/iums"
                             android:padding="20dp"
                             android:src="@drawable/iumsweb"
-                            app:tint="#000"
-                            android:contentDescription="@string/iums" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -197,10 +241,10 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/calender"
                             android:padding="20dp"
                             android:src="@drawable/calendar"
-                            app:tint="#000"
-                            android:contentDescription="@string/calender" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -241,11 +285,11 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/cgpa"
                             android:padding="20dp"
                             android:src="@drawable/cgpa"
                             app:tint="#000"
-                            tools:ignore="ImageContrastCheck"
-                            android:contentDescription="@string/cgpa" />
+                            tools:ignore="ImageContrastCheck" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -285,10 +329,10 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/buses"
                             android:padding="20dp"
                             android:src="@drawable/bus"
-                            app:tint="#000"
-                            android:contentDescription="@string/buses" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -335,10 +379,10 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/teachers"
                             android:padding="20dp"
                             android:src="@drawable/teacher"
-                            app:tint="#000"
-                            android:contentDescription="@string/teachers" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -382,10 +426,10 @@
                             android:layout_margin="10dp"
 
 
+                            android:contentDescription="@string/my_store"
                             android:padding="20dp"
                             android:src="@drawable/gradings"
-                            app:tint="#000"
-                            android:contentDescription="@string/my_store" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -397,11 +441,12 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_request"
+                    android:id="@+id/btn_favourite_teachers"
                     android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
@@ -422,17 +467,18 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_margin="10dp"
+
+                            android:contentDescription="@string/favourite"
                             android:padding="20dp"
-                            android:src="@drawable/request"
-                            app:tint="#000"
-                            android:contentDescription="@string/request" />
+                            android:src="@drawable/teacher"
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="@string/request"
+                            android:text="@string/favourite"
+                            android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -472,10 +518,10 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
 
+                            android:contentDescription="@string/favourite_links"
                             android:padding="20dp"
                             android:src="@drawable/favourite_links"
-                            app:tint="#000"
-                            android:contentDescription="@string/favourite_links" />
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -488,10 +534,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_favourite_teachers"
+                    android:id="@+id/btn_request"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
@@ -512,22 +558,22 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-
+                            android:layout_margin="10dp"
+                            android:contentDescription="@string/request"
                             android:padding="20dp"
-                            android:src="@drawable/teacher"
-                            app:tint="#000"
-                            android:contentDescription="@string/favourite" />
+                            android:src="@drawable/request"
+                            app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="@string/favourite"
-                            android:textAllCaps="true"
+                            android:text="@string/request"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
 
             </LinearLayout>
 
