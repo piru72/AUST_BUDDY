@@ -87,7 +87,14 @@ open class ReplaceFragment : Fragment() {
     fun setInformation(userEmail: String) {
         var finalUserEmail = userEmail
         if (finalUserEmail.length == 18) {
-            finalUserEmail = "Name.Department.$finalUserEmail"
+            finalUserEmail = if (finalUserEmail[5] == '4')
+                "Name.cse.$finalUserEmail"
+            else if (finalUserEmail[5] == '3')
+                "Name.ce.$finalUserEmail"
+            else if (finalUserEmail[5] == '5')
+                "Name.eee.$finalUserEmail"
+            else
+                "Name.Department.$finalUserEmail"
         }
         currentEmail = finalUserEmail
         currentName = setUserName()
@@ -103,18 +110,18 @@ open class ReplaceFragment : Fragment() {
 
     private fun setDepartment(): String {
         var department = ""
-        if (currentEmail.contains("cse"))
-            department = getString(R.string.cse)
+        department = if (currentEmail.contains("cse"))
+            getString(R.string.cse)
         else if (currentEmail.contains("eee"))
-            department = getString(R.string.eee)
+            getString(R.string.eee)
         else if (currentEmail.contains("ce"))
-            department = getString(R.string.ce)
+            getString(R.string.ce)
         else if (currentEmail.contains("mpe"))
-            department = getString(R.string.mpe)
+            getString(R.string.mpe)
         else if (currentEmail.contains("te"))
-            department = getString(R.string.te)
+            getString(R.string.te)
         else
-            department = "Department"
+            "Department"
         return department
     }
 
@@ -127,7 +134,7 @@ open class ReplaceFragment : Fragment() {
     }
 
     private fun setUserId(): String {
-        var studentId=  (currentEmail.split(".")[2]).split("@")[0]
+        val studentId=  (currentEmail.split(".")[2]).split("@")[0]
         return if (studentId.length == 9)
             "20$studentId"
         else
