@@ -1,6 +1,6 @@
 package com.example.homepage.plaza.Model
 
-data class Materials(
+data class Announcements(
     var userId: String? = "",
     var productName: String? = "",
     var productAuthor: String? = "",

@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentPlazaBinding
-import com.example.homepage.plaza.Adapter.StoreAdapter
-import com.example.homepage.plaza.Model.StoreViewModel
+import com.example.homepage.plaza.Adapter.PlazaAdapter
+import com.example.homepage.plaza.Model.PlazaViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -24,9 +24,9 @@ class PlazaFragment : Fragment() {
     private var _binding: FragmentPlazaBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: StoreViewModel
+    private lateinit var viewModel: PlazaViewModel
     private lateinit var recycler: RecyclerView
-    private var adapter: StoreAdapter? = null
+    private var adapter: PlazaAdapter? = null
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
@@ -46,9 +46,9 @@ class PlazaFragment : Fragment() {
         recycler = binding.materialList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = StoreAdapter()
+        adapter = PlazaAdapter()
         recycler.adapter = adapter
-        viewModel = ViewModelProvider(this)[StoreViewModel::class.java]
+        viewModel = ViewModelProvider(this)[PlazaViewModel::class.java]
         viewModel.allStore.observe(viewLifecycleOwner) {
             adapter!!.updateStoreList(it)
         }

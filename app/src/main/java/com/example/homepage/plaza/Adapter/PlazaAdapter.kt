@@ -10,11 +10,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.plaza.Model.Materials
+import com.example.homepage.plaza.Model.Announcements
 
-class StoreAdapter : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
+class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.StoreViewHolder>() {
     private val materialIds = ArrayList<String>()
-    private val materials = ArrayList<Materials>()
+    private val materials = ArrayList<Announcements>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
@@ -46,7 +46,7 @@ class StoreAdapter : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
         return materials.size
     }
 
-    fun updateStoreList(materials: List<Materials>) {
+    fun updateStoreList(materials: List<Announcements>) {
 
         this.materials.clear()
         this.materials.addAll(materials)
