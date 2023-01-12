@@ -18,7 +18,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 @GlideModule
-class teacherAdapter(private val userType: String) :
+class teacherAdapter(private val userType: String,private val databaseViewPath: String) :
     RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
     private val userList = ArrayList<TeacherData>()
@@ -92,7 +92,7 @@ class teacherAdapter(private val userType: String) :
                     val newPush = pushKey.replace(".", "-")
 
                     val fromPath =
-                        FirebaseDatabase.getInstance().getReference("teachers/$newPush")
+                        FirebaseDatabase.getInstance().getReference("$databaseViewPath/$newPush")
 
                     val toPath =
                         FirebaseDatabase.getInstance()
