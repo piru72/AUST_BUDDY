@@ -64,6 +64,9 @@
             android:id="@+id/courseCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:fontFamily="@font/poppins_light"
             android:hint="@string/provide_course_code"
             android:inputType="textShortMessage" />
@@ -84,6 +87,9 @@
             android:id="@+id/courseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:fontFamily="@font/poppins_light"
             android:hint="@string/provide_course_name"
             android:inputType="textShortMessage" />
@@ -102,6 +108,9 @@
             android:id="@+id/courseDriveLinkText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:fontFamily="@font/poppins_light"
             android:hint="@string/provide_drive_link"
             android:inputType="textLongMessage" />

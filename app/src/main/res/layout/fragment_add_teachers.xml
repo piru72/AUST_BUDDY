@@ -24,7 +24,11 @@
             android:id="@+id/teachersName"
             android:layout_width="match_parent"
             android:layout_height="53dp"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:hint="@string/provide_teachers_name"
+            android:fontFamily="@font/poppins_light"
             android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,6 +45,10 @@
             android:id="@+id/teachersDesignation"
             android:layout_width="match_parent"
             android:layout_height="53dp"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:hint="@string/provide_teachers_designation"
             android:inputType="textShortMessage" />
 
@@ -58,6 +66,10 @@
             android:id="@+id/teachersContactNoText"
             android:layout_width="match_parent"
             android:layout_height="53dp"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:hint="@string/provide_teachers_contact_no"
             android:inputType="textShortMessage" />
 
@@ -75,6 +87,10 @@
             android:id="@+id/teachersEmailText"
             android:layout_width="match_parent"
             android:layout_height="53dp"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
             android:hint="@string/provide_teachers_email"
             android:inputType="textEmailAddress" />
 
@@ -99,6 +115,10 @@
                 android:id="@+id/teachersImageLinkForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:hint="@string/image_link" />
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -29,6 +29,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:hint="Provide Group Name"
             android:inputType="textShortMessage" />
 
@@ -46,6 +49,9 @@
             android:id="@+id/groupDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background_color_50"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:fontFamily="@font/poppins_light"
             android:hint="Provide Group details"
             android:inputType="textShortMessage" />
