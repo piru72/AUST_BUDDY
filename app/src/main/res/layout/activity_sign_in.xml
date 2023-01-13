@@ -79,8 +79,9 @@
             android:layout_margin="20sp"
             android:background="@color/background_color_50"
             android:focusable="true"
-            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/poppins_light"
+
             android:text="Sign in"
 
             android:textSize="20sp"
