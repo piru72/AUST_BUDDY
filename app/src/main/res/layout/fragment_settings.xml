@@ -16,24 +16,24 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:text="Change Password"
             android:textColor="@color/black"
-
             android:textSize="25sp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.055" />
+            app:layout_constraintVertical_bias="0.065" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="30dp"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,11 @@
                     android:id="@+id/tvCurrentUserPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20sp"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:hint="Provide your current Password"
                     android:inputType="textPassword" />
 
@@ -70,7 +74,12 @@
                     android:id="@+id/tvNewUserPasswordType"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20sp"
+                    android:fontFamily="@font/poppins_light"
+
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_margin="10sp"
                     android:hint="Type your new Password"
                     android:inputType="textPassword" />
 
@@ -88,7 +97,11 @@
                     android:id="@+id/tvNewUserPasswordRetype"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:background="@color/background_color_50"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_margin="10sp"
                     android:hint="Retype your new Password"
                     android:inputType="textPassword" />
 
@@ -98,18 +111,19 @@
                 android:id="@+id/goToForgotPasswrdFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Forgot Password ?"
+                android:text="Forgot Password?"
+                android:fontFamily="@font/poppins_light"
                 android:textAlignment="textEnd"
-                android:textColor="@color/primary_green"
+                android:textColor="@color/black"
                 android:layout_marginRight="20dp"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
 
             <Button
                 android:id="@+id/btnChangePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20sp"
+                android:layout_margin="10sp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
                 android:fontFamily="@font/poppins_light"
