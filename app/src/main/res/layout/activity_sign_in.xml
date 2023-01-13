@@ -31,6 +31,10 @@
                 android:layout_height="51dp"
                 android:layout_margin="20sp"
                 android:hint="Type your Email"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_light"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -48,6 +52,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20sp"
+                android:background="@color/background_color_50"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_light"
                 android:hint="Type your Password"
                 android:inputType="textPassword" />
 
@@ -57,10 +65,11 @@
             android:id="@+id/goToForgotPasswrdFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:text="Forgot Password ?"
+            android:layout_margin="15sp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Forgot Password?"
             android:textAlignment="textEnd"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <Button
 
@@ -73,6 +82,7 @@
             android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Sign in"
+
             android:textSize="20sp"
             android:textColor="@color/black" />
 
@@ -86,6 +96,7 @@
             android:padding="5dp"
             android:text="   Don't have an account? Sign up"
             android:textAlignment="center"
+            android:fontFamily="@font/poppins_light"
             android:textSize="16sp"
             android:textStyle="bold" />
 
