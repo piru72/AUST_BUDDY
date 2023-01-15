@@ -51,7 +51,7 @@ class PlazaFragment : ReplaceFragment() {
 
         binding.floatingPostItemButton.setOnClickListener {
 
-            val bottomSheetFragment = BottomSheetFragment()
+            val bottomSheetFragment = DialogAddAnnouncement()
             bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
         }
 
