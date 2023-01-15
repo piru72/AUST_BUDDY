@@ -148,7 +148,8 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
             sellersContactNo,
             sellersDetails,
             key,
-            productDetailsWrite
+            productDetailsWrite,
+            "cute"
         )
         val taskValues = updateMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
@@ -163,7 +164,7 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
         return materials.size
     }
 
-    fun updateStoreList(materials: List<Announcements>) {
+    fun updateAnnouncementList(materials: List<Announcements>) {
 
         this.materials.clear()
         this.materials.addAll(materials)
