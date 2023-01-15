@@ -2,24 +2,35 @@ package com.example.homepage.plaza
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.homepage.R
+import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.superClass.Helper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class DialogAddAnnouncement : BottomSheetDialogFragment() {
 
-    private var _binding : DialogAddAnnouncement? = null
-    private val binding get() = _binding!!
+    private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
+    private val userV = FirebaseAuth.getInstance().currentUser
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.bottom_sheet_layout, container, false)
+        auth = Firebase.auth
+        database = Firebase.database.reference
 
         val categorySpinner = view.findViewById<Spinner>(R.id.topic_spinner_category)
         val topicSpinner = view.findViewById<Spinner>(R.id.topic_spinner_sub_category)
@@ -45,7 +56,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             Topic("Club Recruitment", R.drawable.ic_baseline_access_time_24),
             Topic("Workshop", R.drawable.ic_baseline_access_time_24)
         )
-        val officialTopicListAdapter  = createSpinnerAdapter(requireContext(), officialTopicList)
+        val officialTopicListAdapter = createSpinnerAdapter(requireContext(), officialTopicList)
         topicSpinner.adapter = officialTopicListAdapter
 
         val advertisementTopicList = arrayOf(
@@ -53,7 +64,8 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             Topic("Sale Post", R.drawable.ic_topic_1),
             Topic("Find Roommates", R.drawable.ic_baseline_access_time_24)
         )
-        val advertisementTopicListAdapter = createSpinnerAdapter(requireContext(), advertisementTopicList)
+        val advertisementTopicListAdapter =
+            createSpinnerAdapter(requireContext(), advertisementTopicList)
 
         val helpTopicList = arrayOf(
             Topic("Blood Donation", R.drawable.ic_topic_1),
@@ -77,7 +89,8 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                         topicSpinnerLayout.visibility = View.GONE
                     }
                     "Official" -> {
-                        topicSpinner.adapter = createSpinnerAdapter(requireContext(), officialTopicList)
+                        topicSpinner.adapter =
+                            createSpinnerAdapter(requireContext(), officialTopicList)
                         topicSpinnerLayout.visibility = View.VISIBLE
                     }
                     "Advertisement" -> {
@@ -101,16 +114,39 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
 
 
         postAnnouncementButton.setOnClickListener {
-            // get the selected topic from the spinner
-            val selectedTopic = categorySpinner.selectedItem.toString()
-            // show a toast message with the selected topic name
-            val selectedTo = topicSpinner.selectedItem.toString()
-            Toast.makeText(requireContext(), "Selected topic: $selectedTopic and sub is  $selectedTo", Toast.LENGTH_SHORT).show()
+            val selectedCategory = categorySpinner.selectedItem.toString()
+            val selectedTopic = topicSpinner.selectedItem.toString()
+            val contactNoGiven = contactNo.text.toString()
+            val announcementDetailsGiven = announcementDetails.text.toString()
+            val user = auth.currentUser!!.uid
+
+            val email = userV?.email.toString()
+            val help = Helper()
+            help.setInformation(email)
+            val sellersDetailsWrite =
+                contactNoGiven + " " + help.getUserName() + " " + help.getUserEmail() + " " + help.getUserId() + " " + help.getSession() + " " + help.getDepartment()
+            if (announcementDetailsGiven == "" || announcementDetailsGiven.length <= 25)
+                makeToast("Please fill with valid details")
+            else if (!help.validNumber(contactNoGiven))
+                makeToast("Provide 11 digit valid phone number")
+            else {
+
+                addNewMaterial(
+                    user,
+                    "Not Available",
+                    "Not Available",
+                    selectedCategory,
+                    "Not Available",
+                    contactNoGiven,
+                    sellersDetailsWrite,
+                    announcementDetailsGiven,
+                    selectedTopic
+                )
+                this.dismiss()
+
+            }
 
 
-            val contactNoPush = contactNo.text.toString()
-            val  announcementDetailsPush = announcementDetails.text.toString()
-            Toast.makeText(requireContext(), "Selected topic: $announcementDetailsPush and sub is  $contactNoPush ", Toast.LENGTH_SHORT).show()
         }
 
 
@@ -119,6 +155,47 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
 
 
         return view
+    }
+
+    fun makeToast(text: String) {
+        Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun addNewMaterial(
+        userId: String,
+        productName: String,
+        productAuthor: String,
+        productCategory: String,
+        productPrice: String,
+        sellersContactNo: String,
+        sellersDetails: String,
+        productDetailsWrite: String,
+        selectedTopic: String
+    ) {
+        val key = database.child("posts").push().key
+
+        if (key == null) {
+            Log.w("TodoActivity", "Couldn't get push key for posts")
+            return
+        }
+        val newMaterial = Materials(
+            userId,
+            productName,
+            productAuthor,
+            productCategory,
+            productPrice,
+            sellersContactNo,
+            sellersDetails,
+            key,
+            productDetailsWrite
+        )
+        val taskValues = newMaterial.toMap()
+        val childUpdates = hashMapOf<String, Any>(
+            "/user-posted-items/$userId/$key" to taskValues,
+            "/public-posts/$key" to taskValues
+        )
+        database.updateChildren(childUpdates)
+
     }
 }
 
