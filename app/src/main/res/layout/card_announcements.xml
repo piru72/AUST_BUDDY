@@ -20,7 +20,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="194dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="Book Name"
+                    android:text="Announcers Name"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
 
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="Book Writer Name"
+                    android:text="Topic"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight=".5"
                         android:fontFamily="@font/poppins_light"
-                        android:text="Category"
+                        android:text="Date"
                         android:textColor="@color/black"
                         android:textSize="18sp">
 
@@ -78,17 +78,18 @@
                         android:textSize="18sp" />
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/announcementDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Announcement Details"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/bookImage"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="10sp"
-                android:contentDescription="Book Image"
-                android:padding="5sp"
-                android:visibility="gone"
-                android:src="@drawable/ic_baseline_menu_book_24" />
 
         </LinearLayout>
 

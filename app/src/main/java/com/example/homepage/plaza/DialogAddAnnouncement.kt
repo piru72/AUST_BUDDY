@@ -1,6 +1,7 @@
 package com.example.homepage.plaza
 
 import android.content.Context
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 
 class DialogAddAnnouncement : BottomSheetDialogFragment() {
@@ -131,9 +133,12 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
 //                makeToast("Provide 11 digit valid phone number")
             else {
 
+                val formatter = SimpleDateFormat("yyyy-MM-dd")
+                val date = Date()
+                val currentDate = formatter.format(date)
                 addNewMaterial(
                     user,
-                    "Not Available",
+                    currentDate,
                     "Not Available",
                     selectedCategory,
                     "Not Available",
@@ -163,7 +168,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
 
     private fun addNewMaterial(
         userId: String,
-        productName: String,
+        currentDate: String,
         productAuthor: String,
         productCategory: String,
         productPrice: String,
@@ -180,7 +185,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         }
         val newMaterial = Announcements(
             userId,
-            productName,
+            currentDate,
             selectedTopic,
             selectedTopic,
             productPrice,

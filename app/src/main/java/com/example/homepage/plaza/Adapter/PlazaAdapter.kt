@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.plaza.DialogAddAnnouncement
 import com.example.homepage.plaza.Model.Announcements
 
 class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>() {
@@ -31,12 +32,15 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
         holder.announcersName.text = currentItem.sellersDetails?.split(" ")?.get(1)
 
         holder.announcementsTopic.text = currentItem.productAuthor
-        holder.announcementsDetails.text = currentItem.productDetails
+        holder.announcementDate.text = currentItem.productName
+        holder.announcementDetails.text = currentItem.productDetails
 
         val sellersContactNo = currentItem.sellersDetails?.split(" ")?.get(0)
 
-        holder.detailsButton.setOnClickListener {
-            Toast.makeText(context, currentItem.sellersDetails, Toast.LENGTH_SHORT).show()
+        holder.detailsButton.setOnClickListener { v ->
+            val activity = v!!.context as AppCompatActivity
+            val addAnnouncementBottomSheetFragment = DialogAddAnnouncement()
+            addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
         holder.callButton.setOnClickListener {
             val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$sellersContactNo"))
@@ -66,7 +70,8 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
     class AnnouncementViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val announcersName: TextView = itemView.findViewById(R.id.productNameCard)
         val announcementsTopic: TextView = itemView.findViewById(R.id.productAuthorNameCard)
-        val announcementsDetails: TextView = itemView.findViewById(R.id.productCategoryCard)
+        val announcementDate: TextView = itemView.findViewById(R.id.productCategoryCard)
+        val announcementDetails: TextView= itemView.findViewById(R.id.announcementDetails)
         val callButton: Button = itemView.findViewById(R.id.callSellerButton)
         val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
 
