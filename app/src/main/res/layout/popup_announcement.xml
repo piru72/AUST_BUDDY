@@ -9,6 +9,33 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/text_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Click here to open dropdown menu" />
+
+        <FrameLayout
+            android:id="@+id/dropdown_menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:elevation="5dp" >
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/productNamePop"
@@ -16,11 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/book_material_name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_light"
         android:textColorHint="@color/black" />
 
     <EditText
@@ -34,8 +61,7 @@
         android:inputType="textShortMessage"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/black"
-        />
+        android:textColorHint="@color/black" />
 
 
     <LinearLayout
@@ -64,8 +90,7 @@
             android:inputType="date"
             android:minHeight="48dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/black"
-            />
+            android:textColorHint="@color/black" />
     </LinearLayout>
 
     <EditText
@@ -74,13 +99,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/sellers_contact_no"
         android:inputType="date"
-        android:fontFamily="@font/poppins_light"
         android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/black"
-        />
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/productDetailsPop"
@@ -88,9 +112,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/add_some_more_details_of_product"
         android:inputType="textShortMessage"
-        android:fontFamily="@font/poppins_light"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/black" />
@@ -108,14 +132,14 @@
             android:layout_width="150dp"
 
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="1dp"
+            android:layout_weight="1"
 
             android:background="@color/background_color_50"
             android:focusable="true"
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/close"
-            android:fontFamily="@font/poppins_light"
 
             tools:ignore="TextContrastCheck" />
 
@@ -124,14 +148,14 @@
 
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/add"
-            android:fontFamily="@font/poppins_light"
             android:layout_margin="1dp"
-
+            android:layout_weight="1"
             android:background="@color/background_color_50"
             android:focusable="true"
+
+            android:fontFamily="@font/poppins_light"
             android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/add"
 
             tools:ignore="TextContrastCheck" />
 

@@ -46,7 +46,7 @@ class StoreDashboardFragment : ReplaceFragment() {
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
         binding.floatingPostItemButton.setOnClickListener {
-            val rootLayout = layoutInflater.inflate(R.layout.popup_add_item_for_sell, null)
+            val rootLayout = layoutInflater.inflate(R.layout.popup_announcement, null)
 
             val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
             val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)

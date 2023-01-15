@@ -57,7 +57,7 @@ class StoreDashBoardAdapter(inflater: LayoutInflater) :
         }
 
         holder.updateProductButton.setOnClickListener {
-            val rootLayout = _inflater.inflate(R.layout.popup_add_item_for_sell, null)
+            val rootLayout = _inflater.inflate(R.layout.popup_announcement, null)
             val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
             val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
             val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
