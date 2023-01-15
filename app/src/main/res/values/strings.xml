@@ -214,6 +214,9 @@
     <string name="as">Arts and Sciences</string>
     <string name="all_departments">All departments</string>
     <string name="plaza">Plaza</string>
+    <string name="contact_no">Contact no</string>
+    <string name="details_about_your_announcement">Details about your announcement</string>
+    <string name="select_category">Select Category</string>
 
 
 </resources>

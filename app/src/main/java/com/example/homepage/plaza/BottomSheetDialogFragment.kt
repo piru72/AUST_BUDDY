@@ -17,16 +17,32 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.bottom_sheet_layout, container, false)
 
-        val spinner = view.findViewById<Spinner>(R.id.topic_spinner)
 
-        val topics = arrayOf(
-            Topic("Topic 1", R.drawable.ic_topic_1),
-            Topic("Topic 2", R.drawable.ic_topic_1),
-            Topic("Topic 3", R.drawable.ic_baseline_access_time_24)
+        val categorySpinner = view.findViewById<Spinner>(R.id.topic_spinner_category)
+        val categoryList = arrayOf(
+            Topic("Official", R.drawable.ic_topic_1),
+            Topic("Advertisement", R.drawable.ic_topic_1),
+            Topic("Help", R.drawable.ic_baseline_access_time_24),
+            Topic("Others", R.drawable.ic_baseline_access_time_24)
         )
-        val adapter = TopicAdapter(requireContext(), topics)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = adapter
+        val categoryAdapter = TopicAdapter(requireContext(), categoryList)
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        categorySpinner.adapter = categoryAdapter
+
+        val topicSpinner = view.findViewById<Spinner>(R.id.topic_spinner_sub_category)
+
+        val officialTopicList = arrayOf(
+            Topic("Notice", R.drawable.ic_topic_1),
+            Topic("Seminar", R.drawable.ic_topic_1),
+            Topic("Job Opportunities", R.drawable.ic_baseline_access_time_24),
+            Topic("Club Recruitment", R.drawable.ic_baseline_access_time_24),
+            Topic("Workshop", R.drawable.ic_baseline_access_time_24),
+        )
+
+        val officialTopicAdapter = TopicAdapter(requireContext(), officialTopicList)
+
+        officialTopicAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        topicSpinner.adapter = officialTopicAdapter
 
         return view
     }
