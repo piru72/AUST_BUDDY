@@ -53,7 +53,7 @@ class PlazaFragment : ReplaceFragment() {
         recycler.adapter = adapter
         viewModel = ViewModelProvider(this)[PlazaViewModel::class.java]
         viewModel.allStore.observe(viewLifecycleOwner) {
-            adapter!!.updateAnnouncementsList(it)
+            adapter!!.updateStoreList(it)
         }
 
     }

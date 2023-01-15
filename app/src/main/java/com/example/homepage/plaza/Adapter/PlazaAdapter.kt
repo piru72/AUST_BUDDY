@@ -46,7 +46,7 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.StoreViewHolder>() {
         return materials.size
     }
 
-    fun updateAnnouncementsList(materials: List<Announcements>) {
+    fun updateStoreList(materials: List<Announcements>) {
 
         this.materials.clear()
         this.materials.addAll(materials)

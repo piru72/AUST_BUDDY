@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.homepage.R
-import com.example.homepage.plaza.Model.Announcements
+import com.example.homepage.storeTab.Model.Materials
 import com.example.homepage.superClass.Helper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -165,7 +165,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         userId: String,
         productName: String,
         productAuthor: String,
-        selectedCategory: String,
+        productCategory: String,
         productPrice: String,
         sellersContactNo: String,
         sellersDetails: String,
@@ -178,29 +178,23 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             Log.w("TodoActivity", "Couldn't get push key for posts")
             return
         }
-        val newAnnouncement = Announcements(
+        val newMaterial = Materials(
             userId,
             productName,
             productAuthor,
-            selectedCategory,
+            productCategory,
             productPrice,
             sellersContactNo,
             sellersDetails,
             key,
-            productDetailsWrite,
-            selectedTopic
+            productDetailsWrite
         )
-        val announcementValues = newAnnouncement.toMap()
-        val announcementUpdates = hashMapOf<String, Any>(
-            "/user-posted-items/$userId/$key" to announcementValues,
-            "/public-posts/$key" to announcementValues,
-            "public-announcements/all/$key" to announcementValues,
-            "public-announcements/$selectedCategory/$key" to announcementValues,
-            "/user-posted-announcements/$userId/$key" to announcementValues,
-
-
+        val taskValues = newMaterial.toMap()
+        val childUpdates = hashMapOf<String, Any>(
+            "/user-posted-items/$userId/$key" to taskValues,
+            "/public-posts/$key" to taskValues
         )
-        database.updateChildren(announcementUpdates)
+        database.updateChildren(childUpdates)
 
     }
 }

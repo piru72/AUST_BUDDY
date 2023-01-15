@@ -10,7 +10,6 @@ data class Announcements(
     var sellersDetails: String? = "",
     val productId: String? = "",
     val productDetails: String? = "",
-    val selectedTopic: String,
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
