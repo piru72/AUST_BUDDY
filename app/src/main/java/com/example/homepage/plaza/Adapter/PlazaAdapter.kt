@@ -12,19 +12,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.plaza.Model.Announcements
 
-class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.StoreViewHolder>() {
-    private val materialIds = ArrayList<String>()
-    private val materials = ArrayList<Announcements>()
+class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>() {
+    private val announcements = ArrayList<Announcements>()
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
+    // Attaching the layout that will hold the announcements and populate them in the recyclerview
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnnouncementViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.card_materials, parent, false)
-        return StoreViewHolder(view)
+        val view = inflater.inflate(R.layout.card_announcements ,parent, false)
+        return AnnouncementViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: StoreViewHolder, position: Int) {
-        val currentItem = materials[position]
+    // Attaching the data with the card
+    override fun onBindViewHolder(holder: AnnouncementViewHolder, position: Int) {
+        val currentItem = announcements[position]
         val context = holder.itemView.context
         holder.productName.text = currentItem.productName
         holder.productAuthorName.text = currentItem.productAuthor
@@ -42,19 +43,24 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.StoreViewHolder>() {
     }
 
 
+    // Total childs
     override fun getItemCount(): Int {
-        return materials.size
+        return announcements.size
     }
 
-    fun updateStoreList(materials: List<Announcements>) {
 
-        this.materials.clear()
-        this.materials.addAll(materials)
+    // Realtime update of the announcements
+    fun updateAnnouncementList(materials: List<Announcements>) {
+
+        this.announcements.clear()
+        this.announcements.addAll(materials)
         notifyDataSetChanged()
 
     }
 
-    class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    // Class to hold the items of the card
+    class AnnouncementViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val productName: TextView = itemView.findViewById(R.id.productNameCard)
         val productAuthorName: TextView = itemView.findViewById(R.id.productAuthorNameCard)
         val productCategory: TextView = itemView.findViewById(R.id.productCategoryCard)

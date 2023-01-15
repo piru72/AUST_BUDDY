@@ -31,14 +31,17 @@ class PlazaFragment : ReplaceFragment() {
     ): View {
         _binding = FragmentPlazaBinding.inflate(inflater, container, false)
 
+
+        // Moving to the personal dashboard upon clicking this button
         binding.btnPlazaDashboard.setOnClickListener {
             val action = PlazaFragmentDirections.actionPlazaFragmentToPlazaDashBoardFragment()
             findNavController().navigate(action)
         }
+        // Opening a dialog to add an announcement
         binding.floatingPostItemButton.setOnClickListener {
 
-            val bottomSheetFragment = DialogAddAnnouncement()
-            bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
+            val addAnnouncementBottomSheetFragment = DialogAddAnnouncement()
+            addAnnouncementBottomSheetFragment.show(parentFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
         return binding.root
     }
@@ -46,14 +49,20 @@ class PlazaFragment : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // attaching the recycler view
         recycler = binding.announcementList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
+
+        // Setting the adapter for the recycler
         adapter = PlazaAdapter()
         recycler.adapter = adapter
+
+        // Setting the view model provider with the database path
         viewModel = ViewModelProvider(this)[PlazaViewModel::class.java]
-        viewModel.allStore.observe(viewLifecycleOwner) {
-            adapter!!.updateStoreList(it)
+        viewModel.initialize("public-announcements/all")
+        viewModel.allAnnouncement.observe(viewLifecycleOwner) {
+            adapter!!.updateAnnouncementList(it)
         }
 
     }

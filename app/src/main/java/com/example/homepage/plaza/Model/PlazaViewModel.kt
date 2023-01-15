@@ -8,11 +8,14 @@ import com.example.homepage.plaza.Repo.PlazaRepository
 
 class PlazaViewModel : ViewModel() {
 
-    private val repository: PlazaRepository = PlazaRepository().getInstance()
-    private val _allStores = MutableLiveData<List<Announcements>>()
-    val allStore: LiveData<List<Announcements>> = _allStores
 
-    init {
-        repository.loadStore(_allStores)
+    private lateinit var  repository: PlazaRepository
+    private val _allAnnouncements = MutableLiveData<List<Announcements>>()
+    val allAnnouncement: LiveData<List<Announcements>> = _allAnnouncements
+
+    // initializing the repository with the given view path
+    fun initialize(viewPath: String) {
+        repository = PlazaRepository(viewPath).getInstance()
+        repository.loadStore(_allAnnouncements)
     }
 }

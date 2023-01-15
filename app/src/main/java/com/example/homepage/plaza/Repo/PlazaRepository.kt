@@ -6,33 +6,34 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class PlazaRepository {
+class PlazaRepository(viewPath: String) {
+    private var databaseParentNode = viewPath
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
-    private val storeReference: DatabaseReference =
-        FirebaseDatabase.getInstance().getReference("public-posts")
+    private val announcementReference: DatabaseReference =
+        FirebaseDatabase.getInstance().getReference(databaseParentNode)
 
     @Volatile
     private var INSTANCE: PlazaRepository? = null
     fun getInstance(): PlazaRepository {
         return INSTANCE ?: synchronized(this) {
 
-            val instance = PlazaRepository()
+            val instance = PlazaRepository(databaseParentNode)
             INSTANCE = instance
             instance
         }
     }
 
-    fun loadStore(allStoreList: MutableLiveData<List<Announcements>>) {
+    fun loadStore(allAnnouncementList: MutableLiveData<List<Announcements>>) {
 
-        storeReference.addValueEventListener(object : ValueEventListener {
+        announcementReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 try {
-                    val storeList: List<Announcements> = snapshot.children.map { dataSnapshot ->
+                    val announcementList: List<Announcements> = snapshot.children.map { dataSnapshot ->
                         dataSnapshot.getValue(Announcements::class.java)!!
 
                     }
-                    allStoreList.postValue(storeList)
+                    allAnnouncementList.postValue(announcementList)
                 } catch (_: Exception) {
 
                 }
@@ -45,6 +46,6 @@ class PlazaRepository {
 
         })
 
-        storeReference.keepSynced(true)
+        announcementReference.keepSynced(true)
     }
 }

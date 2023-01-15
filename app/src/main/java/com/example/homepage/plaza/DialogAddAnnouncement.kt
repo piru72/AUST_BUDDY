@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.homepage.R
-import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.plaza.Model.Announcements
 import com.example.homepage.superClass.Helper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -125,10 +125,10 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             help.setInformation(email)
             val sellersDetailsWrite =
                 contactNoGiven + " " + help.getUserName() + " " + help.getUserEmail() + " " + help.getUserId() + " " + help.getSession() + " " + help.getDepartment()
-            if (announcementDetailsGiven == "" || announcementDetailsGiven.length <= 25)
+            if (announcementDetailsGiven == "" || announcementDetailsGiven.length <= 2)
                 makeToast("Please fill with valid details")
-            else if (!help.validNumber(contactNoGiven))
-                makeToast("Provide 11 digit valid phone number")
+//            else if (!help.validNumber(contactNoGiven))
+//                makeToast("Provide 11 digit valid phone number")
             else {
 
                 addNewMaterial(
@@ -178,11 +178,11 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             Log.w("TodoActivity", "Couldn't get push key for posts")
             return
         }
-        val newMaterial = Materials(
+        val newMaterial = Announcements(
             userId,
             productName,
-            productAuthor,
-            productCategory,
+            selectedTopic,
+            selectedTopic,
             productPrice,
             sellersContactNo,
             sellersDetails,
@@ -192,7 +192,8 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         val taskValues = newMaterial.toMap()
         val childUpdates = hashMapOf<String, Any>(
             "/user-posted-items/$userId/$key" to taskValues,
-            "/public-posts/$key" to taskValues
+            "/public-announcements/all/$key" to taskValues,
+            "/public-announcements/$productCategory/$key" to taskValues
         )
         database.updateChildren(childUpdates)
 
