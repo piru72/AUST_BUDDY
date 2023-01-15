@@ -129,8 +129,8 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                 contactNoGiven + " " + help.getUserName() + " " + help.getUserEmail() + " " + help.getUserId() + " " + help.getSession() + " " + help.getDepartment()
             if (announcementDetailsGiven == "" || announcementDetailsGiven.length <= 2)
                 makeToast("Please fill with valid details")
-//            else if (!help.validNumber(contactNoGiven))
-//                makeToast("Provide 11 digit valid phone number")
+            else if (!help.validNumber(contactNoGiven))
+                makeToast("Provide 11 digit valid phone number")
             else {
 
                 val formatter = SimpleDateFormat("yyyy-MM-dd")

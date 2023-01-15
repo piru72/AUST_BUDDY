@@ -217,6 +217,12 @@
     <string name="contact_no">Contact no</string>
     <string name="details_about_your_announcement">Details about your announcement</string>
     <string name="select_category">Select Category</string>
+    <string name="official">Official</string>
+    <string name="help">Help</string>
+    <string name="all">All</string>
+    <string name="advertisement">Advertisement</string>
+    <string name="others">Others</string>
+    <string name="alla">all</string>
 
 
 </resources>

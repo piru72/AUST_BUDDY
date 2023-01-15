@@ -34,12 +34,63 @@
             android:visibility="visible"
             tools:ignore="RtlSymmetry" />
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_plaza_dashboard"
+           android:id="@+id/categories"
+            android:background="@color/background_color_50">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/categoryAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/alla" />
+
+                <Button
+                    android:id="@+id/categoryHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/help" />
+
+                <Button
+                    android:id="@+id/categoryOfficial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/official" />
+
+                <Button
+                    android:id="@+id/categoryAdvertisement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/advertisement" />
+
+                <Button
+                    android:id="@+id/categoryOthers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/others" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/announcement_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_plaza_dashboard"
+            android:layout_below="@id/categories"
             android:padding="10dp">
 
         </androidx.recyclerview.widget.RecyclerView>

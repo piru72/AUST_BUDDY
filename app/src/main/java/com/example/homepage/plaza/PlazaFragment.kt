@@ -1,9 +1,11 @@
 package com.example.homepage.plaza
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +25,7 @@ class PlazaFragment : ReplaceFragment() {
     private lateinit var viewModel: PlazaViewModel
     private lateinit var recycler: RecyclerView
     private var adapter: PlazaAdapter? = null
+    var buttons: List<Button>? = null
 
 
     override fun onCreateView(
@@ -37,6 +40,18 @@ class PlazaFragment : ReplaceFragment() {
             val action = PlazaFragmentDirections.actionPlazaFragmentToPlazaDashBoardFragment()
             findNavController().navigate(action)
         }
+
+        // Creating the list of buttons
+        buttons = ArrayList()
+        (binding.categoryAll as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (binding.categoryOfficial as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (binding.categoryAdvertisement as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (binding.categoryHelp as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (binding.categoryOthers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        for (button in buttons as ArrayList<Button>) {
+            button.setOnClickListener { changeButtonColor(button) }
+        }
+
         // Opening a dialog to add an announcement
         binding.floatingPostItemButton.setOnClickListener {
 
@@ -60,11 +75,29 @@ class PlazaFragment : ReplaceFragment() {
 
         // Setting the view model provider with the database path
         viewModel = ViewModelProvider(this)[PlazaViewModel::class.java]
-        viewModel.initialize("public-announcements/all")
+        setAnnouncementCategory("all")
+
+    }
+
+    private fun setAnnouncementCategory(category: String) {
+        viewModel.initialize("public-announcements/$category")
         viewModel.allAnnouncement.observe(viewLifecycleOwner) {
             adapter!!.updateAnnouncementList(it)
         }
+    }
 
+    private fun changeButtonColor(selectedButton: Button) {
+
+        val greenColor = Color.parseColor("#58d28b")
+        val whiteColor = Color.parseColor("#FFFFFF")
+        for (button in buttons!!) {
+            if (button === selectedButton) {
+                button.setBackgroundColor(greenColor)
+                setAnnouncementCategory(button.text.toString())
+            } else {
+                button.setBackgroundColor(whiteColor)
+            }
+        }
     }
 
 }
