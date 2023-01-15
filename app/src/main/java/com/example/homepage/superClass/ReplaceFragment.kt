@@ -16,7 +16,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -31,6 +30,7 @@ open class ReplaceFragment : Fragment() {
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private val helper = Helper()
 
     fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
@@ -85,79 +85,21 @@ open class ReplaceFragment : Fragment() {
     }
 
     fun setInformation(userEmail: String) {
-        var finalUserEmail = userEmail
-        if (finalUserEmail.length == 18) {
-            finalUserEmail = if (finalUserEmail[5] == '4')
-                "Name.cse.$finalUserEmail"
-            else if (finalUserEmail[5] == '3')
-                "Name.ce.$finalUserEmail"
-            else if (finalUserEmail[5] == '5')
-                "Name.eee.$finalUserEmail"
-            else
-                "Name.Department.$finalUserEmail"
-        }
-        currentEmail = finalUserEmail
-        currentName = setUserName()
-        currentId = setUserId()
-        currentDept = setDepartment()
-        currentSession = setSession()
+        helper.setInformation(userEmail)
+        currentEmail = helper.getUserEmail()
+        currentName = helper.setUserName()
+        currentId = helper.setUserId()
+        currentDept = helper.setDepartment()
+        currentSession = helper.setSession()
 
     }
 
-    private fun setSession(): String {
-        return if (currentId[5].toString() == "1") "SPRING" + " " + currentId.dropLast(7) else "FALL" + " " + currentId.dropLast(7)
-    }
-
-    private fun setDepartment(): String {
-        var department = ""
-        department = if (currentEmail.contains("cse"))
-            getString(R.string.cse)
-        else if (currentEmail.contains("eee"))
-            getString(R.string.eee)
-        else if (currentEmail.contains("ce"))
-            getString(R.string.ce)
-        else if (currentEmail.contains("mpe"))
-            getString(R.string.mpe)
-        else if (currentEmail.contains("te"))
-            getString(R.string.te)
-        else
-            "Department"
-        return department
-    }
 
      fun getShortDepartment(): String{
-        var department = ""
-        department = if (currentEmail.contains("cse"))
-            "cse"
-        else if (currentEmail.contains("eee"))
-            "eee"
-        else if (currentEmail.contains("ce"))
-            "ce"
-        else if (currentEmail.contains("me"))
-            "me"
-        else if (currentEmail.contains("te"))
-            "te"
-        else
-            "Department"
-        return department
+        return helper.getShortDepartment()
     }
 
 
-    private fun setUserName(): String {
-        return (currentEmail.split(".")[0]).replaceFirstChar {
-            if (it.isLowerCase()) it.titlecase(
-                Locale.ROOT
-            ) else it.toString()
-        }
-    }
-
-    private fun setUserId(): String {
-        val studentId=  (currentEmail.split(".")[2]).split("@")[0]
-        return if (studentId.length == 9)
-            "20$studentId"
-        else
-            studentId
-    }
 
     fun getDepartment(): String {
         return currentDept
@@ -186,7 +128,7 @@ open class ReplaceFragment : Fragment() {
 
     fun getDatabasePath(foundString: String): String {
 
-        var yearSemester = foundString.replace("[^\\d.]".toRegex(), "")
+        val yearSemester = foundString.replace("[^\\d.]".toRegex(), "")
 
         return "year" + yearSemester[0] + "semester" + yearSemester[1]
     }
