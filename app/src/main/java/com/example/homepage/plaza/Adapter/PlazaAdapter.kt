@@ -27,15 +27,18 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
     override fun onBindViewHolder(holder: AnnouncementViewHolder, position: Int) {
         val currentItem = announcements[position]
         val context = holder.itemView.context
-        holder.productName.text = currentItem.productName
-        holder.productAuthorName.text = currentItem.productAuthor
-        holder.bookPrice.text = currentItem.productPrice + " BDT"
-        holder.productCategory.text = currentItem.productCategory
+
+        holder.announcersName.text = currentItem.sellersDetails?.split(" ")?.get(1)
+
+        holder.announcementsTopic.text = currentItem.productAuthor
+        holder.announcementsDetails.text = currentItem.productDetails
+
         val sellersContactNo = currentItem.sellersDetails?.split(" ")?.get(0)
+
         holder.detailsButton.setOnClickListener {
             Toast.makeText(context, currentItem.sellersDetails, Toast.LENGTH_SHORT).show()
         }
-        holder.callSellerButton.setOnClickListener {
+        holder.callButton.setOnClickListener {
             val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$sellersContactNo"))
             context.startActivity(i)
         }
@@ -43,7 +46,7 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
     }
 
 
-    // Total childs
+    // Total child
     override fun getItemCount(): Int {
         return announcements.size
     }
@@ -61,11 +64,10 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
 
     // Class to hold the items of the card
     class AnnouncementViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val productName: TextView = itemView.findViewById(R.id.productNameCard)
-        val productAuthorName: TextView = itemView.findViewById(R.id.productAuthorNameCard)
-        val productCategory: TextView = itemView.findViewById(R.id.productCategoryCard)
-        val bookPrice: TextView = itemView.findViewById(R.id.productPriceCard)
-        val callSellerButton: Button = itemView.findViewById(R.id.callSellerButton)
+        val announcersName: TextView = itemView.findViewById(R.id.productNameCard)
+        val announcementsTopic: TextView = itemView.findViewById(R.id.productAuthorNameCard)
+        val announcementsDetails: TextView = itemView.findViewById(R.id.productCategoryCard)
+        val callButton: Button = itemView.findViewById(R.id.callSellerButton)
         val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
 
     }
