@@ -4,25 +4,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_height="175dp"
+        android:layout_margin="3dp"
         android:background="@color/card_bk"
         android:elevation="5dp"
         android:orientation="vertical"
 
-        android:padding="15dp">
+        android:padding="5dp">
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:padding="0dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+
+                android:layout_marginStart="3dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="vertical">
 
@@ -35,7 +38,7 @@
                     android:fontFamily="@font/poppins_light"
                     android:text="Announcers Name"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
@@ -45,7 +48,7 @@
                     android:fontFamily="@font/poppins_light"
                     android:text="Topic"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="19sp" />
 
 
                 <LinearLayout
@@ -61,7 +64,7 @@
                         android:fontFamily="@font/poppins_light"
                         android:text="Date"
                         android:textColor="@color/black"
-                        android:textSize="18sp">
+                        android:textSize="16sp">
 
                     </TextView>
 
@@ -96,13 +99,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5sp"
+            android:layout_marginTop="0sp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/callSellerButton"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:layout_margin="5sp"
                 android:layout_weight="0.5"
                 android:background="@color/background_color_50"
@@ -115,7 +118,7 @@
             <Button
                 android:id="@+id/showDetailsButton"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:layout_margin="5sp"
                 android:layout_weight="0.5"
                 android:background="@color/background_color_50"

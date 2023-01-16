@@ -15,6 +15,7 @@
         android:layout_height="5dp"
         android:background="@color/primary_green"
         android:layout_gravity="center"
+
         >
 
     </LinearLayout>
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="ANNOUNCEMENT"
+        android:fontFamily="@font/poppins_light"
         android:textAlignment="center"
         android:textSize="20sp" />
 
@@ -40,6 +42,8 @@
             android:id="@+id/textView_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
             android:text="@string/select_category" />
 
 
@@ -47,7 +51,8 @@
             android:id="@+id/topic_spinner_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
+
+
             android:popupBackground="@drawable/spinner_item_background"
             android:spinnerMode="dropdown" />
     </LinearLayout>
@@ -63,13 +68,15 @@
             android:id="@+id/textView_sub_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
             android:text="Select Topic" />
 
         <Spinner
             android:id="@+id/topic_spinner_sub_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
+
             android:popupBackground="@drawable/spinner_item_background"
             android:spinnerMode="dropdown" />
     </LinearLayout>
@@ -83,10 +90,12 @@
         android:autofillHints=""
         android:fontFamily="@font/poppins_light"
         android:hint="@string/contact_no"
-        android:inputType="date"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
         android:minHeight="48dp"
         android:padding="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
     <EditText
@@ -100,18 +109,24 @@
         android:inputType="textShortMessage"
         android:minHeight="48dp"
         android:padding="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="@color/black" />
+
 
 
     <Button
         android:id="@+id/AddButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/primary_green"
+        android:layout_gravity="center"
         android:fontFamily="@font/poppins_light"
         android:padding="10dp"
-        android:text="@string/add" />
+        android:background="@color/background_color_50"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="@color/black"
+
+        android:text="@string/add"/>
 
 
 </LinearLayout>

@@ -43,35 +43,35 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         val topicSpinnerLayout = view.findViewById<LinearLayout>(R.id.spinner_topic_layout)
 
         val categoryList = arrayOf(
-            Topic("Official", R.drawable.ic_topic_1),
-            Topic("Advertisement", R.drawable.ic_topic_1),
-            Topic("Help", R.drawable.ic_baseline_access_time_24),
-            Topic("Others", R.drawable.ic_baseline_access_time_24)
+            Topic("Official", R.drawable.cate_official),
+            Topic("Advertisement", R.drawable.cate_advertise),
+            Topic("Help", R.drawable.cate_help),
+            Topic("Others", R.drawable.cate_others)
         )
         categorySpinner.adapter = createSpinnerAdapter(requireContext(), categoryList)
 
 
         val officialTopicList = arrayOf(
-            Topic("Notice", R.drawable.ic_topic_1),
-            Topic("Seminar", R.drawable.ic_topic_1),
-            Topic("Job Opportunities", R.drawable.ic_baseline_access_time_24),
-            Topic("Club Recruitment", R.drawable.ic_baseline_access_time_24),
-            Topic("Workshop", R.drawable.ic_baseline_access_time_24)
+            Topic("Notice", R.drawable.cate_notice),
+            Topic("Seminar", R.drawable.seminar),
+            Topic("Job Opportunities", R.drawable.opportunity),
+            Topic("Club Recruitment", R.drawable.club_recru),
+            Topic("Workshop", R.drawable.workshop)
         )
         val officialTopicListAdapter = createSpinnerAdapter(requireContext(), officialTopicList)
         topicSpinner.adapter = officialTopicListAdapter
 
         val advertisementTopicList = arrayOf(
-            Topic("Giveaway", R.drawable.ic_topic_1),
-            Topic("Sale Post", R.drawable.ic_topic_1),
-            Topic("Find Roommates", R.drawable.ic_baseline_access_time_24)
+            Topic("Giveaway", R.drawable.giveway),
+            Topic("Sale Post", R.drawable.sale),
+            Topic("Find Roommates", R.drawable.roommate)
         )
         val advertisementTopicListAdapter =
             createSpinnerAdapter(requireContext(), advertisementTopicList)
 
         val helpTopicList = arrayOf(
-            Topic("Blood Donation", R.drawable.ic_topic_1),
-            Topic("Lost Item", R.drawable.ic_topic_1)
+            Topic("Blood Donation", R.drawable.blood_dona),
+            Topic("Lost Item", R.drawable.lostitem)
 
         )
         val helpTopicListAdapter = createSpinnerAdapter(requireContext(), helpTopicList)
