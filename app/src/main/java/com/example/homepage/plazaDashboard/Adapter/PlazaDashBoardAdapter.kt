@@ -16,27 +16,27 @@ import com.google.firebase.ktx.Firebase
 
 
 class PlazaDashBoardAdapter(inflater: LayoutInflater) :
-    RecyclerView.Adapter<PlazaDashBoardAdapter.StoreDashBoardViewHolder>() {
+    RecyclerView.Adapter<PlazaDashBoardAdapter.PlazaDashBoardViewHolder>() {
 
 
-    private val materials = ArrayList<Announcements>()
+    private val announcements = ArrayList<Announcements>()
     private var _inflater: LayoutInflater = inflater
     private lateinit var database: DatabaseReference
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreDashBoardViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlazaDashBoardViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.card_storedashboard, parent, false)
-        return StoreDashBoardViewHolder(view)
+        val view = inflater.inflate(R.layout.card_plaza_dashboard, parent, false)
+        return PlazaDashBoardViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: StoreDashBoardViewHolder, position: Int) {
-        val currentItem = materials[position]
+    override fun onBindViewHolder(holder: PlazaDashBoardViewHolder, position: Int) {
+        val currentItem = announcements[position]
         val context = holder.itemView.context
-        holder.productName.text = currentItem.productName
-        holder.productAuthorName.text = currentItem.productAuthor
-        holder.bookPrice.text = currentItem.productPrice + " BDT"
-        holder.productCategory.text = currentItem.productCategory
+        holder.announcersName.text = currentItem.sellersDetails?.split(" ")?.get(1)
+        holder.announcementsTopic.text = currentItem.productAuthor
+        holder.announcementDetails.text = currentItem.productDetails
+
         val auth = Firebase.auth
         val user = auth.currentUser!!.uid
         database = Firebase.database.reference
@@ -160,22 +160,22 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
     }
 
     override fun getItemCount(): Int {
-        return materials.size
+        return announcements.size
     }
 
-    fun updateStoreList(materials: List<Announcements>) {
+    fun updatePlazaDashboardList(materials: List<Announcements>) {
 
-        this.materials.clear()
-        this.materials.addAll(materials)
+        this.announcements.clear()
+        this.announcements.addAll(materials)
         notifyDataSetChanged()
 
     }
 
-    class StoreDashBoardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val productName: TextView = itemView.findViewById(R.id.productNameCard)
-        val productAuthorName: TextView = itemView.findViewById(R.id.productAuthorNameCard)
-        val productCategory: TextView = itemView.findViewById(R.id.productCategoryCard)
-        val bookPrice: TextView = itemView.findViewById(R.id.productPriceCard)
+    class PlazaDashBoardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val announcersName: TextView = itemView.findViewById(R.id.productNameCard)
+        val announcementsTopic: TextView = itemView.findViewById(R.id.productAuthorNameCard)
+        val announcementDetails: TextView= itemView.findViewById(R.id.announcementDetails)
         val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
         val deleteButton: Button = itemView.findViewById(R.id.deleteProductButton)
         val updateProductButton: Button = itemView.findViewById(R.id.updateProductButton)

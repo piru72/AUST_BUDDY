@@ -11,7 +11,7 @@ class PlazaDashBoardRepository {
 
     val auth = Firebase.auth
     val user = auth.currentUser!!.uid
-    private val storeReference: DatabaseReference =
+    private val announcersDashboardReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("user-posted-items").child(user)
 
     @Volatile
@@ -25,16 +25,16 @@ class PlazaDashBoardRepository {
         }
     }
 
-    fun loadStoreDashBoard(allStoreList: MutableLiveData<List<Announcements>>) {
+    fun loadPlazaDashBoard(allStoreList: MutableLiveData<List<Announcements>>) {
 
-        storeReference.addValueEventListener(object : ValueEventListener {
+        announcersDashboardReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 try {
-                    val storeList: List<Announcements> = snapshot.children.map { dataSnapshot ->
+                    val announcementList: List<Announcements> = snapshot.children.map { dataSnapshot ->
                         dataSnapshot.getValue(Announcements::class.java)!!
 
                     }
-                    allStoreList.postValue(storeList)
+                    allStoreList.postValue(announcementList)
                 } catch (_: Exception) {
 
                 }
@@ -47,6 +47,6 @@ class PlazaDashBoardRepository {
 
         })
 
-        storeReference.keepSynced(true)
+        announcersDashboardReference.keepSynced(true)
     }
 }

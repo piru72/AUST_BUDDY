@@ -10,10 +10,10 @@ import com.example.homepage.plazaDashboard.Repo.PlazaDashBoardRepository
 class PlazaDashBoardViewModel : ViewModel() {
 
     private val repository: PlazaDashBoardRepository = PlazaDashBoardRepository().getInstance()
-    private val _allStores = MutableLiveData<List<Announcements>>()
-    val allStore: LiveData<List<Announcements>> = _allStores
+    private val _allUserAnnouncements = MutableLiveData<List<Announcements>>()
+    val allUserAnnouncements: LiveData<List<Announcements>> = _allUserAnnouncements
 
     init {
-        repository.loadStoreDashBoard(_allStores)
+        repository.loadPlazaDashBoard(_allUserAnnouncements)
     }
 }

@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentPlazaDashBoardBinding
-import com.example.homepage.storeDashboard.Adapter.StoreDashBoardAdapter
-import com.example.homepage.storeDashboard.Model.StoreDashBoardViewModel
+import com.example.homepage.plazaDashboard.Adapter.PlazaDashBoardAdapter
+import com.example.homepage.plazaDashboard.Model.PlazaDashBoardViewModel
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -26,8 +26,8 @@ class PlazaDashBoardFragment : ReplaceFragment() {
     private lateinit var auth: FirebaseAuth
 
     private lateinit var recycler: RecyclerView
-    private var adapter: StoreDashBoardAdapter? = null
-    private lateinit var viewModel: StoreDashBoardViewModel
+    private var adapter: PlazaDashBoardAdapter? = null
+    private lateinit var viewModel: PlazaDashBoardViewModel
     private lateinit var _inflater: LayoutInflater
 
     override fun onCreateView(
@@ -51,11 +51,11 @@ class PlazaDashBoardFragment : ReplaceFragment() {
         recycler = binding.postedItemList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
-        adapter = StoreDashBoardAdapter(_inflater)
+        adapter = PlazaDashBoardAdapter(_inflater)
         recycler.adapter = adapter
-        viewModel = ViewModelProvider(this)[StoreDashBoardViewModel::class.java]
-        viewModel.allStore.observe(viewLifecycleOwner) {
-            adapter!!.updateStoreList(it)
+        viewModel = ViewModelProvider(this)[PlazaDashBoardViewModel::class.java]
+        viewModel.allUserAnnouncements.observe(viewLifecycleOwner) {
+            adapter!!.updatePlazaDashboardList(it)
         }
 
     }
