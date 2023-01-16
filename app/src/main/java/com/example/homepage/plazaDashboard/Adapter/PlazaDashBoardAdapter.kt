@@ -1,10 +1,10 @@
 package com.example.homepage.plazaDashboard.Adapter
 
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.plaza.Model.Announcements
@@ -56,74 +56,13 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
             publicPostReferenceCategory.child(productID).removeValue()
             publicPostReferenceAll.child(productID).removeValue()
         }
+        holder.updateProductButton.visibility =View.GONE
 
-        holder.updateProductButton.setOnClickListener {
-            val rootLayout = _inflater.inflate(R.layout.popup_announcement, null)
-            val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
-            val productAuthor = rootLayout.findViewById<EditText>(R.id.productAuthorPop)
-            val productPrice = rootLayout.findViewById<EditText>(R.id.productPricePop)
-            val sellersContactNo2 = rootLayout.findViewById<EditText>(R.id.sellerContactNoPop)
-            val addButton = rootLayout.findViewById<Button>(R.id.AddButton)
-            val closeButton = rootLayout.findViewById<Button>(R.id.CloseButton)
-            val productDescription = rootLayout.findViewById<EditText>(R.id.productDetailsPop)
-            val productCategory = rootLayout.findViewById<Spinner>(R.id.bookCategoryList)
-            productName.setText(currentItem.productName.toString())
-            productAuthor.setText(currentItem.productAuthor.toString())
-            productPrice.setText(currentItem.productPrice.toString())
-            productDescription.setText(currentItem.productDetails.toString())
-            addButton.text = "UPDATE"
-            sellersContactNo2.setText(sellersContactNo)
-
-
-            val popupWindow = PopupWindow(
-                rootLayout,
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT, true
-            )
-            popupWindow.update()
-            popupWindow.elevation = 20.5F
-            popupWindow.showAtLocation(
-
-                holder.updateProductButton,
-                Gravity.CENTER,
-                0,
-                -500
-            )
-            closeButton.setOnClickListener {
-                popupWindow.dismiss()
-            }
-
-            addButton.setOnClickListener {
-                if (productName.text.toString() == "")
-                    Toast.makeText(context, "Please fill up all Product Name", Toast.LENGTH_SHORT)
-                        .show()
-                else if (productCategory.selectedItem.toString() == "Category")
-                    Toast.makeText(context, "Please fill up Product Category", Toast.LENGTH_SHORT)
-                        .show()
-                else if (productPrice.text.toString() == "")
-                    Toast.makeText(context, "Please fill up Product Price", Toast.LENGTH_SHORT)
-                        .show()
-                else {
-
-                    if (sellersContactNo != null) {
-                        updateMaterial(
-                            user,
-                            productName.text.toString(),
-                            productAuthor.text.toString(),
-                            productCategory.selectedItem.toString(),
-                            productPrice.text.toString(),
-                            sellersContactNo,
-                            currentItem.sellersDetails.toString(),
-                            currentItem.productId.toString(),
-                            productDescription.text.toString()
-
-                        )
-                    }
-                    popupWindow.dismiss()
-                }
-            }
-
-        }
+//        holder.updateProductButton.setOnClickListener { v->
+//            val activity = v!!.context as AppCompatActivity
+//            val addAnnouncementBottomSheetFragment = DialogAddAnnouncement()
+//            addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
+//        }
 
 
     }
