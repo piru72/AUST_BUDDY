@@ -28,7 +28,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersEmail"
                 android:layout_width="match_parent"
-                android:layout_height="51dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="20sp"
                 android:hint="Type your Email"
                 android:textColor="@color/black"
@@ -51,7 +51,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="20sp"
                 android:background="@color/background_color_50"
                 android:focusable="true"

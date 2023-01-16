@@ -27,7 +27,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/users_email"
                 android:layout_width="match_parent"
-                android:layout_height="51dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="20sp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
@@ -49,7 +49,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordType"
                 android:layout_width="match_parent"
-                android:layout_height="51dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="20sp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
@@ -74,7 +74,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordRetype"
                 android:layout_width="match_parent"
-                android:layout_height="51dp"
+                android:layout_height="wrap_content"
                 android:background="@color/background_color_50"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
