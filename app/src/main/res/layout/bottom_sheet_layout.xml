@@ -113,12 +113,12 @@
 
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AddButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fontFamily="@font/poppins_light"
+        android:fontFamily="@font/poppins_black"
         android:padding="10dp"
         android:background="@color/background_color_50"
         android:focusable="true"
