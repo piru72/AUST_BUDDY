@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentCreateGroupBinding
 import com.example.homepage.groupTab.Group.Model.GroupData
 import com.example.homepage.superClass.ReplaceFragment
@@ -45,6 +46,8 @@ class CreateGroupFragment : ReplaceFragment() {
                 createNewGroup(email, getUserId(), getRollOmittedUserId(), groupName, groupDetails)
                 binding.groupName.setText("")
                 binding.groupDetails.setText("")
+                val action = CreateGroupFragmentDirections.actionCreateGroupFragmentToNavigationUserGroups()
+                findNavController().navigate(action)
             }
 
         }

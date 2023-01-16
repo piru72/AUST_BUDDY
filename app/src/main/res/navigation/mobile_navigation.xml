@@ -305,12 +305,24 @@
         android:id="@+id/createGroupFragment"
         android:name="com.example.homepage.groupTab.CreateGroupFragment"
         android:label="fragment_create_group"
-        tools:layout="@layout/fragment_create_group" />
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_navigation_userGroups"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/navigation_userGroups" />
+    </fragment>
     <fragment
         android:id="@+id/joinGroupFragment"
         android:name="com.example.homepage.groupTab.JoinGroupFragment"
         android:label="fragment_join_group"
-        tools:layout="@layout/fragment_join_group" />
+        tools:layout="@layout/fragment_join_group" >
+        <action
+            android:id="@+id/action_joinGroupFragment_to_navigation_userGroups"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/navigation_userGroups" />
+    </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.example.homepage.profileTab.ForgotPasswordFragment"

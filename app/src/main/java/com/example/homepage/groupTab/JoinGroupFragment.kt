@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentJoinGroupBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -36,6 +37,8 @@ class JoinGroupFragment : ReplaceFragment() {
             else {
                 addNewGroup(userId, getRollOmittedUserId(), groupId)
                 binding.groupId.setText("")
+                val action = JoinGroupFragmentDirections.actionJoinGroupFragmentToNavigationUserGroups()
+                findNavController().navigate(action)
             }
 
         }
