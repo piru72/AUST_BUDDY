@@ -17,6 +17,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.messaging.RemoteMessage
 import java.util.*
 
 
@@ -136,6 +138,17 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                 val formatter = SimpleDateFormat("yyyy-MM-dd")
                 val date = Date()
                 val currentDate = formatter.format(date)
+
+                val messaging = FirebaseMessaging.getInstance()
+                val message = RemoteMessage.Builder("1082440138378")
+                    .setMessageId("messageId")
+                    .addData("key", "value")
+                    .build()
+                messaging.send(message)
+
+                val messageData = message.data
+                Log.i("MainActivity", "Sending message with data: $messageData")
+
                 addNewMaterial(
                     user,
                     currentDate,
