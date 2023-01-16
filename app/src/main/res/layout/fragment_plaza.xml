@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/categories"
-            android:padding="10dp">
+            android:padding="4dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -105,7 +105,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:contentDescription="TODO"
-            app:backgroundTint="@color/white"
+            app:backgroundTint="@color/primary_green"
             app:fabSize="normal"
             app:srcCompat="@android:drawable/ic_input_add" />
 
