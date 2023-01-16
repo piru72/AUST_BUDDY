@@ -1,6 +1,8 @@
 package com.example.homepage.groupNoticePage
 
 import android.app.DatePickerDialog
+import android.content.DialogInterface
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -36,7 +38,7 @@ class GroupNoticeFragment : ReplaceFragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var _inflater: LayoutInflater
     var picker: DatePickerDialog? = null
-    private val args : GroupNoticeFragmentArgs by navArgs()
+    private val args: GroupNoticeFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -79,7 +81,10 @@ class GroupNoticeFragment : ReplaceFragment() {
                     )
                 }
                 picker?.datePicker?.minDate = cldr.timeInMillis
+                val myColor = Color.parseColor("#FF000000")
                 picker!!.show()
+                picker?.getButton(DialogInterface.BUTTON_POSITIVE)?.setTextColor(myColor)
+                picker?.getButton(DialogInterface.BUTTON_NEGATIVE)?.setTextColor(myColor)
             }
 
 
