@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/categories"
-            android:padding="4dp">
+            android:padding="5dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
