@@ -115,7 +115,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AddButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/poppins_black"

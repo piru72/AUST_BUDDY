@@ -127,7 +127,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             val email = userV?.email.toString()
             val help = Helper()
             help.setInformation(email)
-            val sellersDetailsWrite =
+            val announcersDetailsWrite =
                 contactNoGiven + " " + help.getUserName() + " " + help.getUserEmail() + " " + help.getUserId() + " " + help.getSession() + " " + help.getDepartment()
             if (announcementDetailsGiven == "" || announcementDetailsGiven.length <= 2)
                 makeToast("Please fill with valid details")
@@ -156,7 +156,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                     selectedCategory,
                     "Not Available",
                     contactNoGiven,
-                    sellersDetailsWrite,
+                    announcersDetailsWrite,
                     announcementDetailsGiven,
                     selectedTopic
                 )
@@ -183,7 +183,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         userId: String,
         currentDate: String,
         productAuthor: String,
-        productCategory: String,
+        selectedCategory: String,
         productPrice: String,
         sellersContactNo: String,
         sellersDetails: String,
@@ -200,7 +200,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             userId,
             currentDate,
             selectedTopic,
-            selectedTopic,
+            selectedCategory,
             productPrice,
             sellersContactNo,
             sellersDetails,
@@ -211,7 +211,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         val childUpdates = hashMapOf<String, Any>(
             "/user-posted-items/$userId/$key" to taskValues,
             "/public-announcements/all/$key" to taskValues,
-            "/public-announcements/$productCategory/$key" to taskValues
+            "/public-announcements/$selectedCategory/$key" to taskValues
         )
         database.updateChildren(childUpdates)
 

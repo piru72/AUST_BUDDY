@@ -72,18 +72,6 @@
             android:orientation="horizontal">
 
 
-            <Button
-                android:id="@+id/showDetailsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5sp"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Details"
-                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/deleteProductButton"

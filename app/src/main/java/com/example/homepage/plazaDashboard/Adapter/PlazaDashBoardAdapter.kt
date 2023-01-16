@@ -5,10 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.plaza.DialogViewDetails
 import com.example.homepage.plaza.Model.Announcements
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -46,18 +44,17 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
             FirebaseDatabase.getInstance().getReference("user-posted-items").child(user)
         val productID = currentItem.productId.toString()
 
-        val publicPostReference = FirebaseDatabase.getInstance().getReference("public-posts")
+        val announcementsCategory = currentItem.productCategory
+        val publicPostReferenceCategory = FirebaseDatabase.getInstance().getReference("public-announcements/$announcementsCategory")
+        val publicPostReferenceAll = FirebaseDatabase.getInstance().getReference("public-announcements/all")
 
         val sellersContactNo = currentItem.sellersDetails?.split(" ")?.get(0)
-        holder.detailsButton.setOnClickListener { v->
-            val activity = v!!.context as AppCompatActivity
-            val addAnnouncementBottomSheetFragment = DialogViewDetails()
-            addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
-        }
+
 
         holder.deleteButton.setOnClickListener {
             userProductReference.child(productID).removeValue()
-            publicPostReference.child(productID).removeValue()
+            publicPostReferenceCategory.child(productID).removeValue()
+            publicPostReferenceAll.child(productID).removeValue()
         }
 
         holder.updateProductButton.setOnClickListener {
@@ -180,7 +177,6 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
         val announcersName: TextView = itemView.findViewById(R.id.productNameCard)
         val announcementsTopic: TextView = itemView.findViewById(R.id.productAuthorNameCard)
         val announcementDetails: TextView= itemView.findViewById(R.id.announcementDetails)
-        val detailsButton: Button = itemView.findViewById(R.id.showDetailsButton)
         val deleteButton: Button = itemView.findViewById(R.id.deleteProductButton)
         val updateProductButton: Button = itemView.findViewById(R.id.updateProductButton)
 
