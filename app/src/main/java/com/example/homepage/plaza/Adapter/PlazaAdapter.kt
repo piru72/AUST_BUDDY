@@ -39,7 +39,7 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
 
         holder.detailsButton.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
-            val addAnnouncementBottomSheetFragment = DialogViewDetails()
+            val addAnnouncementBottomSheetFragment = DialogViewDetails(currentItem.sellersDetails)
             addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
         holder.callButton.setOnClickListener {

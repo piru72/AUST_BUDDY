@@ -34,97 +34,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        >
 
 
         <TextView
-            android:id="@+id/textView_category"
+            android:id="@+id/textView_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:textColor="@color/black"
-            android:text="@string/select_category" />
-
-
-        <Spinner
-            android:id="@+id/topic_spinner_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:popupBackground="@drawable/spinner_item_background"
-            android:spinnerMode="dropdown" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/spinner_topic_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
+            android:text="@string/name"
+            android:padding="10dp"/>
         <TextView
-            android:id="@+id/textView_sub_category"
+            android:id="@+id/textView_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:textColor="@color/black"
-            android:text="Select Topic" />
-
-        <Spinner
-            android:id="@+id/topic_spinner_sub_category"
+            android:text="Id"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/textView_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:popupBackground="@drawable/spinner_item_background"
-            android:spinnerMode="dropdown" />
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="email"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/textView_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="phone"
+            android:padding="10dp"/>
+
+
+
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/postersContactNo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:autofillHints=""
-        android:fontFamily="@font/poppins_light"
-        android:hint="@string/contact_no"
-        android:inputType="phone"
-        android:lines="1"
-        android:maxLength="11"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
 
-    <EditText
-        android:id="@+id/announcementDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:autofillHints=""
-        android:fontFamily="@font/poppins_light"
-        android:hint="@string/details_about_your_announcement"
-        android:inputType="textShortMessage"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
-
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/AddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/poppins_black"
-        android:padding="10dp"
-        android:background="@color/background_color_50"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:textColor="@color/black"
-
-        android:text="@string/add"/>
 
 
 </LinearLayout>
