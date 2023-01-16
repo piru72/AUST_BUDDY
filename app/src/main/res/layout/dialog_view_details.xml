@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_add_item_for_sell"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/card_bk"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:background="@color/primary_green"
+        android:layout_gravity="center"
+
+        >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Details"
+        android:fontFamily="@font/poppins_light"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/textView_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="@string/select_category" />
+
+
+        <Spinner
+            android:id="@+id/topic_spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:popupBackground="@drawable/spinner_item_background"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_topic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:text="Select Topic" />
+
+        <Spinner
+            android:id="@+id/topic_spinner_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:popupBackground="@drawable/spinner_item_background"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/postersContactNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
+        android:hint="@string/contact_no"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/announcementDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:fontFamily="@font/poppins_light"
+        android:hint="@string/details_about_your_announcement"
+        android:inputType="textShortMessage"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_black"
+        android:padding="10dp"
+        android:background="@color/background_color_50"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="@color/black"
+
+        android:text="@string/add"/>
+
+
+</LinearLayout>
+

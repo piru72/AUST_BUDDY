@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
+import com.example.homepage.plaza.DialogViewDetails
 import com.example.homepage.plaza.Model.Announcements
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -47,8 +49,10 @@ class PlazaDashBoardAdapter(inflater: LayoutInflater) :
         val publicPostReference = FirebaseDatabase.getInstance().getReference("public-posts")
 
         val sellersContactNo = currentItem.sellersDetails?.split(" ")?.get(0)
-        holder.detailsButton.setOnClickListener {
-            Toast.makeText(context, currentItem.sellersDetails, Toast.LENGTH_SHORT).show()
+        holder.detailsButton.setOnClickListener { v->
+            val activity = v!!.context as AppCompatActivity
+            val addAnnouncementBottomSheetFragment = DialogViewDetails()
+            addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
 
         holder.deleteButton.setOnClickListener {

@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.plaza.DialogAddAnnouncement
+import com.example.homepage.plaza.DialogViewDetails
 import com.example.homepage.plaza.Model.Announcements
 
 class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>() {
@@ -39,7 +39,7 @@ class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>()
 
         holder.detailsButton.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
-            val addAnnouncementBottomSheetFragment = DialogAddAnnouncement()
+            val addAnnouncementBottomSheetFragment = DialogViewDetails()
             addAnnouncementBottomSheetFragment.show(activity.supportFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
         holder.callButton.setOnClickListener {
