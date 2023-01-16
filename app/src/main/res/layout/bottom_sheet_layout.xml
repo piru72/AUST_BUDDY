@@ -51,8 +51,7 @@
             android:id="@+id/topic_spinner_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
+            android:background="@null"
             android:popupBackground="@drawable/spinner_item_background"
             android:spinnerMode="dropdown" />
     </LinearLayout>
@@ -76,7 +75,7 @@
             android:id="@+id/topic_spinner_sub_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:background="@null"
             android:popupBackground="@drawable/spinner_item_background"
             android:spinnerMode="dropdown" />
     </LinearLayout>
