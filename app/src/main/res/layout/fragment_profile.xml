@@ -188,9 +188,9 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:text="@string/about_devs"
+                android:text="About Us"
                 android:textColor="@color/black"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
 
             <Button

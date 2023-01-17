@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="151dp"
                 android:layout_margin="10sp"
-                android:background="@drawable/rounded_list_item_view"
+                android:background="@color/card_bk"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -68,31 +68,6 @@
                         android:paddingBottom="4sp"
                         android:text="20200104128" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/dev1Git"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
-
-                        <Button
-                            android:id="@+id/dev1Fb"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="Gmail" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -102,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="151dp"
                 android:layout_margin="10sp"
-                android:background="@drawable/rounded_list_item_view"
+                android:background="@color/card_bk"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -144,31 +119,6 @@
                         android:paddingBottom="4sp"
                         android:text="20200104129" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/dev2Git"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
-
-                        <Button
-                            android:id="@+id/dev2Fb"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="Gmail" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -178,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="151dp"
                 android:layout_margin="10sp"
-                android:background="@drawable/rounded_list_item_view"
+                android:background="@color/card_bk"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -188,7 +138,7 @@
                     android:layout_height="96dp"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="20sp"
-                    android:src="@drawable/miraz"
+                    android:src="@drawable/mahy"
                     app:civ_border_color="#FFFFFF"
                     app:civ_border_width="4dp" />
 
@@ -207,7 +157,7 @@
                         android:layout_gravity="center_horizontal"
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
-                        android:text="Mirazur Zim"
+                        android:text="Arman Hasan Mahy"
                         android:textSize="20sp" />
 
                     <TextView
@@ -217,99 +167,9 @@
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
                         android:paddingBottom="4sp"
-                        android:text="20200104130" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/dev3Fb"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="Gmail" />
+                        android:text="20200104110" />
 
 
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="151dp"
-                android:layout_margin="10sp"
-                android:background="@drawable/rounded_list_item_view"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/dev4Img"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="20sp"
-                    android:src="@drawable/sallu"
-                    app:civ_border_color="#FFFFFF"
-                    app:civ_border_width="4dp" />
-
-                <LinearLayout
-                    android:layout_width="203dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="20sp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/dev4Name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="Sabbir Ahmed"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/dev4Id"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:paddingBottom="4sp"
-                        android:text="20200104146" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/dev4Git"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="GitHub" />
-
-                        <Button
-                            android:id="@+id/dev4Fb"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_select_image"
-                            android:text="Gmail" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 

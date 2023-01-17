@@ -271,7 +271,13 @@
         android:id="@+id/aboutDevFragment"
         android:name="com.example.homepage.profileTab.AboutDevFragment"
         android:label="fragment_about_dev"
-        tools:layout="@layout/fragment_about_dev" />
+        tools:layout="@layout/fragment_about_dev" >
+        <action
+            android:id="@+id/action_aboutDevFragment_to_webView2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/webView2" />
+    </fragment>
     <fragment
         android:id="@+id/viewCourses2"
         android:name="com.example.homepage.courseTab.ViewCourses"
