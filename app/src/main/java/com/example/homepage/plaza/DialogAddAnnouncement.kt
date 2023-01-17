@@ -3,6 +3,7 @@ package com.example.homepage.plaza
 import android.content.Context
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
+import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -144,9 +145,14 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                     .setMessageId("messageId")
                     .addData("key", "value")
                     .build()
+                val messageData = message.data
                 messaging.send(message)
 
-                val messageData = message.data
+                if(Looper.myLooper() == Looper.getMainLooper()) {
+                    Log.i("MainActivity Looper", "Sending message with data: $messageData")
+                }
+
+
                 Log.i("MainActivity", "Sending message with data: $messageData")
 
                 addNewMaterial(

@@ -31,3 +31,11 @@ class CustomNotificationBuilder(context: Context, channelId: String) : Notificat
         return super.build()
     }
 }
+
+//class MyFirebaseInstanceIDService : FirebaseInstanceIdService() {
+//    override fun onTokenRefresh() {
+//        val currentThread = Thread.currentThread().name
+//        Log.d("Token Generation", "Thread: $currentThread")
+//        // ...
+//    }
+//}
