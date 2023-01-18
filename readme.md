@@ -9,12 +9,14 @@
 
 >  ## 1.1 Overview <br>
 > 
->  The "UNI BUDDY" project is a notes management application for storing and saving university notes. This software primarily focuses on the notes and questions a student needs to take proper preparation for their semester final as well as getting updates from the university.
+>  The "AUST BUDDY" project is a university assistant application for different students. This mobile application is built in Android Studio and is developed in kotlin and the database is managed by Firebase.  
 
 >  ## 1.2 Purpose<br>
 > 
->  Reliable documentation is always a must-needed thing for a well-structured project. The presence of documentation helps to keep track of all aspects of an application, and it improves the quality of a software product.
->  The main goal of this project is to provide a friendly environment for the students to maintain the preparation time of the semester in the best way possible while also human efforts. It can assist administrators in managing links or notes more effectively and efficiently.
+> This software primarily focuses on maintaining, viewing, saving, and storing the different things of a student to make life easier. As well as some unique features there are also basic features such as user login. After completing a signup form new users can sign in easily. One will be able to register using the university email only and password. It has a facility where a student will be getting different announcements like blood donation requests etc. 
+They can also find materials links, Aust website’s, teacher’s info, create groups, post quiz schedules in a group, get bus timings, calculate GPA, bookmark websites, post requests to admin for materials and teachers, create a favorite teacher list, and contact the teachers easily.
+Overall, the primary goal of this project is to provide a hassle-free semester for users as well as to save time looking for notes and questions here and there. It will be a valuable asset while taking preparation for the final.
+
 
 > > ## 1.2.1 Background Study<br>
 > >
@@ -23,6 +25,62 @@
 > > ## 1.2.2 Benefits and Beneficiaries<br>
 > >
 > > Users are the main beneficiaries of this system. But all the people related to our Project area are also beneficiaries. Benefits are given below<br><br>
+
+Implemented Features:
+
+•	Onboarding pages
+When the users will log in for the first time they will get the onboarding pages to get an idea about the app and its features. 
+
+•	Sign In and Sign up
+Users can register an ID in this application. At first, they need to register using their valid institutional mail and they need to verify their email to register, and later they need to sign in using those credentials.
+
+•	Announcement
+Users can make announcement about different things in feature called Plaza. There are some category’s and topic to select what about the announcement is. There are also contact feature added so that anyone can contact the announcer. User can search here for university seminars, club recruitment, workshop, find roommates, academic product sale, seeking for blood etc.
+
+•	Useful Webviews. 
+There are several web views on the homepage which a student might need in their regular life. They can use those features from the app. Added webviews are - 
+1. IUMS – Students can do their educational-related work from here.
+2. Calender- academic calender for every semester can be found here.
+3. Notice Board – Students can check the latest notice from AUST.
+
+•	CGPA calculator. 
+Student can calculate their CGPA by only entering their result on individual courses. Also, they can choose their semester which will reset the interface and bring their semester courses credits.
+
+•	Teacher Information
+Students can find techers information in this app. Teachers information are sorted in department wise. Teachers mail, contact number and image are added here. Students can also call teacher from the app. 
+
+There is another feature called favourite, where students can bookmark their favourite teachers. So that they find them easily. 
+
+•	 Check bus schedule
+Students can have all the information about university buses as bus names, routes, time schedule.
+
+•	Bookmark Option
+Students can bookmark their favourite websites, links in this feature. So that they can find them easily.
+
+•	Resource links
+Student can find their desired course resources from here. Course resources are mainly google drive links which contains lecture videos, notes, books, and previous semester questions. Resources are sorted in semester wise.
+
+•	Quiz Listing in Group
+Students can open groups here for their section and admin can schedule their quiz and quiz syllabus. Other students can join the same group through group id. They can also delete that quiz. The data are stored in the real-time database. A pop-up window will arise and take the inputs and save them into the real-time database.
+
+•	Profile
+Students can see their information in My Profile option. 
+Students can change their password in settings.
+Students can invite their friend to use this app via email. Multiple people can be invited at the same time by giving their emails separated by a comma. Also user can logout from the app.
+
+
+•	Request 
+Students can request for course, teacher and feature from the admins. The admin then can update the materials via google drive or via firebase. Students also can report bug in this option.
+
+•	Database
+Firebase's real-time database has been used to store data and an authentication feature is used to authenticate users. Also firebases email sending feature has been used to verify emails.
+All the references.
+
+•	Others
+This app also have dark mode to make it more user friendly.
+
+
+
 
 # HOW TO DOWNLOAD ?
 
