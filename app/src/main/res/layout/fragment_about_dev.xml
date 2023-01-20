@@ -73,7 +73,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
 
                         <ImageView
                             android:id="@+id/dev1gmail"
@@ -87,7 +88,9 @@
                             android:layout_width="48dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:src="@drawable/facebook2" />
+                            android:src="@drawable/facebook2"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
 
                         <ImageView
                             android:id="@+id/dev1github"
@@ -155,6 +158,7 @@
                         android:layout_margin="10sp"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:layout_gravity="center"
                         >
                         <ImageView
                             android:id="@+id/dev2gmail"
@@ -162,12 +166,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/gmail2"/>
+
                         <ImageView
                             android:id="@+id/dev2facebook"
                             android:layout_width="48dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:src="@drawable/facebook2"/>
+                            android:src="@drawable/facebook2"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
                         <ImageView
                             android:id="@+id/dev2github"
                             android:layout_width="48dp"
@@ -239,13 +246,17 @@
                             android:layout_width="48dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:src="@drawable/gmail2"/>
+                            android:src="@drawable/gmail2"
+                            android:layout_gravity="center"/>
+
                         <ImageView
                             android:id="@+id/dev3facebook"
                             android:layout_width="48dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:src="@drawable/facebook2"/>
+                            android:src="@drawable/facebook2"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
                         <ImageView
                             android:id="@+id/dev3github"
                             android:layout_width="48dp"
