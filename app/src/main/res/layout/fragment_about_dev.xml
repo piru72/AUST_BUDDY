@@ -291,7 +291,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/github"
+                android:src="@drawable/github2"
                 android:layout_margin="0dp"/>
             </LinearLayout>
 
