@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentDepartmentSemesterChooserBinding
 import com.example.homepage.superClass.ReplaceFragment
+import com.google.firebase.auth.FirebaseAuth
+import java.util.*
 
 
 class DepartmentSemesterChooserFragment() : ReplaceFragment() {
@@ -14,6 +16,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
     private val binding get() = _binding
 
     private var selectedDepartment = "CSE/"
+    private val userV = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,6 +24,10 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
     ): View? {
         container?.removeAllViews()
         _binding = FragmentDepartmentSemesterChooserBinding.inflate(inflater, container, false)
+        val email = userV?.email.toString()
+        setInformation(email)
+        selectedDepartment = getShortDepartment().uppercase(Locale.ROOT)
+        selectedDepartment +="/"
         binding.btn11.setOnClickListener {
 
             val action =
