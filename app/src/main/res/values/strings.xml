@@ -223,6 +223,7 @@
     <string name="advertisement">Advertisement</string>
     <string name="others">Others</string>
     <string name="alla">all</string>
+    <string name="default_notification_channel_id">default_channel</string>
 
 
 </resources>

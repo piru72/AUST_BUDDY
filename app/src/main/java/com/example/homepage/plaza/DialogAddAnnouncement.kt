@@ -12,6 +12,7 @@ import android.widget.*
 import com.example.homepage.R
 import com.example.homepage.plaza.Model.Announcements
 import com.example.homepage.superClass.Helper
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -116,6 +117,21 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             }
         }
 
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("TOKEN", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            //val msg = getString(R.string.msg_token_fmt, token)
+            Log.d("DEBUG", token)
+            Toast.makeText(requireContext(), token, Toast.LENGTH_SHORT).show()
+        })
+
 
 
         postAnnouncementButton.setOnClickListener {
@@ -124,6 +140,8 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             val contactNoGiven = contactNo.text.toString()
             val announcementDetailsGiven = announcementDetails.text.toString()
             val user = auth.currentUser!!.uid
+            Log.d("DEBUG", "cute message")
+            //f6NNBuN2R5i7wQcUYnBQ_B:APA91bEx5PsSyCpMi93SzUaKShFntW8Og0mF22mRGO54aa8Z4Bm11h0lgxPJQLwuLutkSzTHotOa2QFMp6sHQQKvamRlfBQd_q2OzB6W1yGG4N6t-UGNyzWqeHl4ourPwt5FNzk0LYPE
 
             val email = userV?.email.toString()
             val help = Helper()
