@@ -1,6 +1,5 @@
 package com.example.homepage.plaza
 
-import android.content.Context
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.os.Looper
@@ -12,6 +11,7 @@ import android.widget.*
 import com.example.homepage.R
 import com.example.homepage.plaza.Model.Announcements
 import com.example.homepage.superClass.Helper
+import com.example.homepage.superClass.spinner.SpinnerItem
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -47,38 +47,39 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         val topicSpinnerLayout = view.findViewById<LinearLayout>(R.id.spinner_topic_layout)
 
         val categoryList = arrayOf(
-            Topic("Official", R.drawable.cate_official),
-            Topic("Advertisement", R.drawable.cate_advertise),
-            Topic("Help", R.drawable.cate_help),
-            Topic("Others", R.drawable.cate_others)
+            SpinnerItem("Official", R.drawable.cate_official),
+            SpinnerItem("Advertisement", R.drawable.cate_advertise),
+            SpinnerItem("Help", R.drawable.cate_help),
+            SpinnerItem("Others", R.drawable.cate_others)
         )
-        categorySpinner.adapter = createSpinnerAdapter(requireContext(), categoryList)
+        val helper = Helper()
+        categorySpinner.adapter = helper.createSpinnerAdapter(requireContext(), categoryList)
 
 
         val officialTopicList = arrayOf(
-            Topic("Notice", R.drawable.cate_notice),
-            Topic("Seminar", R.drawable.seminar),
-            Topic("Job Opportunities", R.drawable.opportunity),
-            Topic("Club Recruitment", R.drawable.club_recru),
-            Topic("Workshop", R.drawable.workshop)
+            SpinnerItem("Notice", R.drawable.cate_notice),
+            SpinnerItem("Seminar", R.drawable.seminar),
+            SpinnerItem("Job Opportunities", R.drawable.opportunity),
+            SpinnerItem("Club Recruitment", R.drawable.club_recru),
+            SpinnerItem("Workshop", R.drawable.workshop)
         )
-        val officialTopicListAdapter = createSpinnerAdapter(requireContext(), officialTopicList)
+        val officialTopicListAdapter = helper.createSpinnerAdapter(requireContext(), officialTopicList)
         topicSpinner.adapter = officialTopicListAdapter
 
         val advertisementTopicList = arrayOf(
-            Topic("Giveaway", R.drawable.giveway),
-            Topic("Sale Post", R.drawable.sale),
-            Topic("Find Roommates", R.drawable.roommate)
+            SpinnerItem("Giveaway", R.drawable.giveway),
+            SpinnerItem("Sale Post", R.drawable.sale),
+            SpinnerItem("Find Roommates", R.drawable.roommate)
         )
         val advertisementTopicListAdapter =
-            createSpinnerAdapter(requireContext(), advertisementTopicList)
+            helper.createSpinnerAdapter(requireContext(), advertisementTopicList)
 
         val helpTopicList = arrayOf(
-            Topic("Blood Donation", R.drawable.blood_dona),
-            Topic("Lost Item", R.drawable.lostitem)
+            SpinnerItem("Blood Donation", R.drawable.blood_dona),
+            SpinnerItem("Lost Item", R.drawable.lostitem)
 
         )
-        val helpTopicListAdapter = createSpinnerAdapter(requireContext(), helpTopicList)
+        val helpTopicListAdapter = helper.createSpinnerAdapter(requireContext(), helpTopicList)
 
 
 
@@ -89,14 +90,14 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
                 position: Int,
                 id: Long
             ) {
-                val selectedTopic = categorySpinner.selectedItem as Topic
+                val selectedTopic = categorySpinner.selectedItem as SpinnerItem
                 when (selectedTopic.name) {
                     "Others" -> {
                         topicSpinnerLayout.visibility = View.GONE
                     }
                     "Official" -> {
                         topicSpinner.adapter =
-                            createSpinnerAdapter(requireContext(), officialTopicList)
+                            helper.createSpinnerAdapter(requireContext(), officialTopicList)
                         topicSpinnerLayout.visibility = View.VISIBLE
                     }
                     "Advertisement" -> {
@@ -129,7 +130,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
             // Log and toast
             //val msg = getString(R.string.msg_token_fmt, token)
             Log.d("DEBUG", token)
-            Toast.makeText(requireContext(), token, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(requireContext(), token, Toast.LENGTH_SHORT).show()
         })
 
 
@@ -242,40 +243,6 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
     }
 }
 
-fun createSpinnerAdapter(context: Context, categoryList: Array<Topic>): TopicAdapter {
-
-    val adapter = TopicAdapter(context, categoryList)
-    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-    return adapter
-
-}
-
-class TopicAdapter(context: Context, topics: Array<Topic>) :
-    ArrayAdapter<Topic>(context, R.layout.item_topic, topics) {
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view =
-            convertView ?: LayoutInflater.from(context).inflate(R.layout.item_topic, parent, false)
-        val topic = getItem(position)
-        if (topic != null) {
-            view.findViewById<TextView>(R.id.textView).text = topic.name
-        }
-        if (topic != null) {
-            view.findViewById<ImageView>(R.id.imageView).setImageResource(topic.icon)
-        }
-        return view
-    }
-
-    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
-        return getView(position, convertView, parent)
-    }
-}
-
-class Topic(val name: String, val icon: Int) {
-    override fun toString(): String {
-        return name
-    }
-}
 
 
 
