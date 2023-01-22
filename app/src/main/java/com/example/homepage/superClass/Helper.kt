@@ -1,5 +1,8 @@
 package com.example.homepage.superClass
 
+import android.content.Context
+import com.example.homepage.superClass.spinner.SpinnerAdapter
+import com.example.homepage.superClass.spinner.SpinnerItem
 import java.util.*
 
 
@@ -110,6 +113,16 @@ class Helper {
         return sellersContactNoWrite.length == 11 && sellersContactNoWrite[0] == '0' && sellersContactNoWrite[1] == '1'
     }
 
+    fun createSpinnerAdapter(
+        context: Context,
+        categoryList: Array<SpinnerItem>
+    ): SpinnerAdapter {
+
+        val adapter = SpinnerAdapter (context, categoryList)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        return adapter
+
+    }
 
 
 

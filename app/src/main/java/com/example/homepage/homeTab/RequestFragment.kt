@@ -91,6 +91,10 @@ class RequestFragment : ReplaceFragment() {
 
             }
         }
+        binding.btnBecomeAdmin.setOnClickListener {
+            val becomeAdminBottomSheetFragment = DialogBecomeAdmin()
+            becomeAdminBottomSheetFragment.show(parentFragmentManager, becomeAdminBottomSheetFragment.tag)
+        }
 
         return binding.root
     }
