@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import com.example.homepage.R
+import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.superClass.Helper
 import com.example.homepage.superClass.spinner.SpinnerItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -51,7 +52,7 @@ class DialogBecomeAdmin : BottomSheetDialogFragment() {
             SpinnerItem("1", R.drawable.cate_official),
             SpinnerItem("2", R.drawable.cate_official)
         )
-        semesterSpinner.adapter = helper.createSpinnerAdapter(requireContext(),semesterList)
+        semesterSpinner.adapter = helper.createSpinnerAdapter(requireContext(), semesterList)
 
         requestButton.setOnClickListener {
             val selectedYear = yearSpinner.selectedItem.toString()
@@ -60,12 +61,36 @@ class DialogBecomeAdmin : BottomSheetDialogFragment() {
             helper.setInformation(usersEmail)
             val department = helper.getShortDepartment()
 
-            makeToast("year"+selectedYear +"semester"+ selectedSemester + department +   usersEmail)
+
+
+            requestForNewAdmin(department, selectedYear, selectedSemester, usersEmail)
         }
 
         return view
     }
 
+    private fun requestForNewAdmin(
+        department: String,
+        selectedYear: String,
+        selectedSemester: String,
+        usersEmail: String
+    ) {
+
+        val newAdmin = Admin(
+            department, selectedYear, selectedSemester, usersEmail
+        )
+
+        val newPush = usersEmail.replace(".", "-")
+        database = Firebase.database.reference
+        val adminsInformation = newAdmin.toMap()
+
+        val childUpdate = hashMapOf<String, Any>(
+            "/admin-admin-request/$newPush" to adminsInformation
+        )
+
+        database.updateChildren(childUpdate)
+
+    }
 
     fun makeToast(text: String) {
         Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
