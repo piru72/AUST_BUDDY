@@ -39,6 +39,11 @@ class AdminPanelFragment : ReplaceFragment() {
         val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToViewCourses2("admin-course-request-list","view")
             findNavController().navigate(action)
         }
+
+        binding.btnViewAdminRequest.setOnClickListener {
+            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAdminRequestFragment3()
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 

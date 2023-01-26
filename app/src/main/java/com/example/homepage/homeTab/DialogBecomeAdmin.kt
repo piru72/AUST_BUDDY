@@ -64,6 +64,7 @@ class DialogBecomeAdmin : BottomSheetDialogFragment() {
 
 
             requestForNewAdmin(department, selectedYear, selectedSemester, usersEmail)
+            this.dismiss()
         }
 
         return view
