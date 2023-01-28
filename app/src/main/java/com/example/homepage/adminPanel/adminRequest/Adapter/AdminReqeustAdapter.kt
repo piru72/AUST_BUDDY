@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.superClass.FirebaseRealtimeDatabase
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
@@ -17,7 +19,7 @@ class AdminReqeustAdapter : RecyclerView.Adapter<AdminReqeustAdapter.AdminReques
 
     private val adminRequestList= ArrayList<Admin>()
     private lateinit var database: DatabaseReference
-
+    private val firebaseHelper = FirebaseRealtimeDatabase()
 
 
 
@@ -42,10 +44,25 @@ class AdminReqeustAdapter : RecyclerView.Adapter<AdminReqeustAdapter.AdminReques
     override fun onBindViewHolder(holder: AdminRequestViewHolder, position: Int) {
         val currentItem = adminRequestList[position]
         val context = holder.itemView.context
-        holder.departmentAdmin.text = "Department : " +currentItem.department
+        holder.departmentAdmin.text = buildString {
+        append("Department : ")
+        append(currentItem.department)
+    }
         holder.emailAdmin.text = currentItem.email
-        holder.yearAdmin.text = "Year : " +currentItem.year
-        holder.semesterAdmin.text = "Semester : " +currentItem.semester
+        holder.yearAdmin.text = buildString {
+        append("Year : ")
+        append(currentItem.year)
+    }
+        holder.semesterAdmin.text = buildString {
+        append("Semester : ")
+        append(currentItem.semester)
+    }
+
+        val currentAdminRequest = currentItem.email?.replace(".", "-")
+        holder.declineAdmin.setOnClickListener {
+            Toast.makeText(context, currentItem.email  + " Request is being removed. ", Toast.LENGTH_SHORT).show()
+            firebaseHelper.removeChild("admin-admin-request",currentAdminRequest.toString() )
+        }
     }
 
     override fun getItemCount(): Int {
