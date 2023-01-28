@@ -10,15 +10,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
+import com.example.homepage.superClass.FirebaseRealtimeDatabase
 import com.example.homepage.superClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 @GlideModule
-class teacherAdapter(private val userType: String,private val databaseViewPath: String) :
+class teacherAdapter(private val userType: String, private val databaseViewPath: String) :
     RecyclerView.Adapter<teacherAdapter.MyViewHolder>() {
 
     private val userList = ArrayList<TeacherData>()
@@ -26,6 +28,7 @@ class teacherAdapter(private val userType: String,private val databaseViewPath: 
     private val supReplace = ReplaceFragment()
     private val user = FirebaseAuth.getInstance().currentUser?.uid
     private var selectedIds: List<Any> = ArrayList()
+    private val firebaseHelper = FirebaseRealtimeDatabase()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         database = Firebase.database.reference
@@ -76,29 +79,22 @@ class teacherAdapter(private val userType: String,private val databaseViewPath: 
             "User-favourites" -> {
                 holder.addToFavouriteButton.text = "Remove from favourites"
                 holder.addToFavouriteButton.setOnClickListener {
-
-                    val pushKey = currentItem.email.toString()
-                    val newPush = pushKey.replace(".", "-")
-                    val teacherReference =
-                        FirebaseDatabase.getInstance()
-                            .getReference("user-favouriteTeachers/$user/$newPush")
-                    teacherReference.removeValue()
+                    Toast.makeText(context, "Removed from favourites", Toast.LENGTH_SHORT).show()
+                    val parentNode = "user-favouriteTeachers/$user/"
+                    val childNode = currentItem.email.toString().replace(".", "-")
+                    firebaseHelper.removeChild(parentNode, childNode)
                 }
             }
             else -> {
                 holder.addToFavouriteButton.setOnClickListener {
+                    Toast.makeText(context, "Added to favourites", Toast.LENGTH_SHORT).show()
 
-                    val pushKey = currentItem.email.toString()
-                    val newPush = pushKey.replace(".", "-")
 
-                    val fromPath =
-                        FirebaseDatabase.getInstance().getReference("$databaseViewPath/$newPush")
+                    val newPush = currentItem.email.toString().replace(".", "-")
 
-                    val toPath =
-                        FirebaseDatabase.getInstance()
-                            .getReference("user-favouriteTeachers/$user/$newPush")
-
-                    moveTeacherDetails(fromPath, toPath)
+                    val fromPath = "$databaseViewPath/$newPush"
+                    val toPath = "user-favouriteTeachers/$user/$newPush"
+                    firebaseHelper.moveChild(fromPath, toPath)
                 }
 
             }
@@ -172,16 +168,5 @@ class teacherAdapter(private val userType: String,private val databaseViewPath: 
 
     }
 
-    private fun moveTeacherDetails(fromPath: DatabaseReference, toPath: DatabaseReference) {
-        fromPath.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                toPath.setValue(
-                    dataSnapshot.value
-                )
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
-    }
 
 }
