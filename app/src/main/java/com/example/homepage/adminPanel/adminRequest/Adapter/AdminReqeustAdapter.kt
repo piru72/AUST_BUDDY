@@ -63,6 +63,16 @@ class AdminReqeustAdapter : RecyclerView.Adapter<AdminReqeustAdapter.AdminReques
             Toast.makeText(context, currentItem.email  + " Request is being removed. ", Toast.LENGTH_SHORT).show()
             firebaseHelper.removeChild("admin-admin-request",currentAdminRequest.toString() )
         }
+
+        holder.approveAdmin.setOnClickListener {
+
+            // Approving the request by moving them to the new list where each of them will have admin access
+            val fromPath = "admin-admin-request/$currentAdminRequest"
+            val toPath = "admin-list/$currentAdminRequest"
+
+            firebaseHelper.moveChild(fromPath, toPath)
+            firebaseHelper.removeChild("admin-admin-request",currentAdminRequest.toString() )
+        }
     }
 
     override fun getItemCount(): Int {
