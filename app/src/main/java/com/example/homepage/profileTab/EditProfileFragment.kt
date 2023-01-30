@@ -35,7 +35,7 @@ class EditProfileFragment : ReplaceFragment() {
         binding.userNameReal.text = getUserName()
 
         binding.btnUpdateSemester.setOnClickListener {
-            val becomeAdminBottomSheetFragment = DialogYearSemesterChooser()
+            val becomeAdminBottomSheetFragment = DialogYearSemesterChooser("UpdateSemester")
             becomeAdminBottomSheetFragment.show(parentFragmentManager, becomeAdminBottomSheetFragment.tag)
         }
 

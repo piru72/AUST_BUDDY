@@ -92,7 +92,7 @@ class RequestFragment : ReplaceFragment() {
             }
         }
         binding.btnBecomeAdmin.setOnClickListener {
-            val becomeAdminBottomSheetFragment = DialogYearSemesterChooser()
+            val becomeAdminBottomSheetFragment = DialogYearSemesterChooser("BecomeAdmin")
             becomeAdminBottomSheetFragment.show(parentFragmentManager, becomeAdminBottomSheetFragment.tag)
         }
 
