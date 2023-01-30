@@ -5,6 +5,8 @@
 <img src="Logo/transparent.png" alt="Logo" width="200"/>
 </p>
 
+[![wakatime](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/8410b035-ce5f-41a8-9053-63d08a86fe20.svg)](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/8410b035-ce5f-41a8-9053-63d08a86fe20)
+
 # INTRODUCTION
 
 >  ## 1.1 Overview <br>
