@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import com.example.homepage.R
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.superClass.Helper
 import com.example.homepage.superClass.spinner.SpinnerItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -18,7 +20,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class DialogYearSemesterChooser : BottomSheetDialogFragment() {
+class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDialogFragment() {
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -37,6 +39,14 @@ class DialogYearSemesterChooser : BottomSheetDialogFragment() {
         val yearSpinner = view.findViewById<Spinner>(R.id.spinner_year)
         val semesterSpinner = view.findViewById<Spinner>(R.id.spinner_semester)
         val requestButton = view.findViewById<Button>(R.id.btn_become_admin)
+        val title = view.findViewById<TextView>(R.id.textView_title_admin)
+
+
+        if (requestFor == "UpdateSemester")
+        {
+            requestButton.text = "Update Semester"
+            title.text = "Choose your semester"
+        }
 
         val yearList = arrayOf(
             SpinnerItem("1", R.drawable.cate_official),
@@ -60,14 +70,47 @@ class DialogYearSemesterChooser : BottomSheetDialogFragment() {
             val usersEmail = userV?.email.toString()
             helper.setInformation(usersEmail)
             val department = helper.getShortDepartment()
+            val userName = helper.getUserName()
+            val studentId = helper.getUserId()
+            val session = helper.getSession()
 
 
+            if (requestFor == "UpdateSemester")
+            {
+                val semester = "year" + selectedYear + "semester"+ selectedSemester
+                updateSemester(userName,usersEmail,studentId,session,department,semester)
+            }
+            else
+            {
+                requestForNewAdmin(department, selectedYear, selectedSemester, usersEmail)
+            }
 
-            requestForNewAdmin(department, selectedYear, selectedSemester, usersEmail)
             this.dismiss()
         }
 
         return view
+    }
+
+    private fun updateSemester(
+        userName: String,
+        userEmail: String,
+        studentId: String,
+        session: String,
+        department: String,
+        selectedSemester: String
+    ) {
+
+        val updatedUserInfo = UserAllData (userName,userEmail,studentId,session,department,selectedSemester)
+        val newPush = userEmail.replace(".", "-")
+        database = Firebase.database.reference
+        val userInformation = updatedUserInfo.toMap()
+
+        val childUpdate = hashMapOf<String, Any>(
+            "/user-details/$newPush" to userInformation
+        )
+
+        database.updateChildren(childUpdate)
+
     }
 
     private fun requestForNewAdmin(

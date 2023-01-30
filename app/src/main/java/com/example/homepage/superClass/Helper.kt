@@ -37,11 +37,11 @@ class Helper {
 
     }
 
-    private fun setSession(): String {
+     fun setSession(): String {
         return if (currentId[5].toString() == "1") "SPRING" + " " + currentId.dropLast(7) else "FALL" + " " + currentId.dropLast(7)
     }
 
-    private fun setDepartment(): String {
+    fun setDepartment(): String {
         return if (currentEmail.contains("cse"))
             "Computer Science and Engineering"
         else if (currentEmail.contains("eee"))
@@ -72,7 +72,7 @@ class Helper {
     }
 
 
-     private fun setUserName(): String {
+     fun setUserName(): String {
         return (currentEmail.split(".")[0]).replaceFirstChar {
             if (it.isLowerCase()) it.titlecase(
                 Locale.ROOT
@@ -80,7 +80,7 @@ class Helper {
         }
     }
 
-    private fun setUserId(): String {
+     fun setUserId(): String {
         val studentId=  (currentEmail.split(".")[2]).split("@")[0]
         return if (studentId.length == 9)
             "20$studentId"
