@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class DialogBecomeAdmin : BottomSheetDialogFragment() {
+class DialogYearSemesterChooser : BottomSheetDialogFragment() {
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth

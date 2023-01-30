@@ -4,14 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import com.example.homepage.R
+import com.example.homepage.databinding.FragmentEditProfileBinding
+import com.example.homepage.homeTab.DialogYearSemesterChooser
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 
 
 class EditProfileFragment : ReplaceFragment() {
 
+    private lateinit var _binding: FragmentEditProfileBinding
+    private val binding get() = _binding
     private val user = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
@@ -19,42 +21,29 @@ class EditProfileFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        container?.removeAllViewsInLayout()
+        container?.removeAllViews()
+        _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
 
-        val v = inflater.inflate(R.layout.fragment_edit_profile, container, false)
 
         val email = user?.email.toString()
         setInformation(email)
 
-        val userId = v.findViewById<TextView>(R.id.IdReal)
-        val userName = v.findViewById<TextView>(R.id.userNameReal)
-        val userFullName = v.findViewById<TextView>(R.id.fullNameReal)
-        val userDept = v.findViewById<TextView>(R.id.departmentReal)
-        val userSession = v.findViewById<TextView>(R.id.sessionReal)
+        binding.IdReal.text = getUserId()
+        binding.fullNameReal.text = getUserEmail()
+        binding.departmentReal.text = getDepartment()
+        binding.sessionReal.text = getSession()
+        binding.userNameReal.text = getUserName()
 
-        userId.text = getUserId()
-        userFullName.text = getUserEmail()
-        userDept.text = getDepartment()
-        userSession.text = getSession()
-        userName.text = getUserName()
+        binding.btnUpdateSemester.setOnClickListener {
+            val becomeAdminBottomSheetFragment = DialogYearSemesterChooser()
+            becomeAdminBottomSheetFragment.show(parentFragmentManager, becomeAdminBottomSheetFragment.tag)
+        }
 
 
-        return v
+        return binding.root
     }
 
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                // in here you can do logic when backPress is clicked
-//                val manager: FragmentManager = requireActivity().supportFragmentManager
-//                if(manager.backStackEntryCount > 0 ) {
-//                    manager.popBackStack();//Pops one of the added fragments
-//                }
-//            }
-//        })
-//    }
 
 
 
