@@ -107,14 +107,14 @@
 
                             android:contentDescription="@string/syllabus"
                             android:padding="20dp"
-                            android:src="@drawable/syllabus"
+                            android:src="@drawable/ic_baseline_menu_book_24"
                             app:tint="#000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="@string/plaza"
+                            android:text="@string/course"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />

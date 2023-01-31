@@ -7,9 +7,9 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_departmentSemesterChooser"
+        android:id="@+id/plazaFragment"
         android:icon="@drawable/ic_baseline_menu_book_24"
-        android:title="@string/course" />
+        android:title="@string/plaza" />
 
     <item
         android:id="@+id/navigation_userGroups"

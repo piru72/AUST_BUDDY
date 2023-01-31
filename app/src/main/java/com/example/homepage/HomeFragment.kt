@@ -5,9 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.getValue
+import java.util.*
 
 
 class HomeFragment : ReplaceFragment() {
@@ -27,10 +34,41 @@ class HomeFragment : ReplaceFragment() {
 
         // Getting the users department and making a database reference with it
         setInformation(email)
+        val selectedDepartment = getShortDepartment().uppercase(Locale.ROOT)
+        val modifiedEmail = email.replace('.', '-')
+        var userSemester = "Not given"
+        val path = "/user-details/$modifiedEmail"
+        val databaseReference = FirebaseDatabase.getInstance().getReference(path)
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                val post = dataSnapshot.getValue<UserAllData>()
+
+                if (post != null) {
+                    userSemester = post.userSemester.toString()
+                }
+            }
+            override fun onCancelled(databaseError: DatabaseError) {
+
+                makeToast("Error loading data")
+            }
+        }
+        databaseReference.addValueEventListener(postListener)
+
+
 
         binding.btnPlaza.setOnClickListener{
-            val action = HomeFragmentDirections.actionNavigationHomeToPlazaFragment()
-            findNavController().navigate(action)
+
+            if (userSemester == "Not given")
+            {
+                val action = HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
+                findNavController().navigate(action)
+            }
+            else
+            {
+                val action = HomeFragmentDirections.actionNavigationHomeToViewCourses2("$selectedDepartment/$userSemester","view")
+                findNavController().navigate(action)
+            }
         }
 
 

@@ -55,6 +55,16 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/plazaFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_viewCourses2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/viewCourses2" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_departmentSemesterChooser"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/navigation_departmentSemesterChooser" />
     </fragment>
 
     <fragment
