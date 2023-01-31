@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.courseTab.Adapter.MyAdapter
 import com.example.homepage.courseTab.Model.UserViewModel
+import com.example.homepage.databinding.FragmentViewCoursesBinding
 import com.example.homepage.superClass.ReplaceFragment
 
 
@@ -19,13 +21,27 @@ class ViewCourses : ReplaceFragment() {
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: MyAdapter
     private val args: ViewCoursesArgs by navArgs()
+    private var _binding: FragmentViewCoursesBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        return inflater.inflate(R.layout.fragment_view_courses, container, false)
+
+        _binding = FragmentViewCoursesBinding.inflate(inflater, container, false)
+
+
+        // Selecting the semester and navigating to all the semesters
+        binding.semesterReal.text = args.reference
+        binding.btnSemesterChooser.setOnClickListener {
+            val action = ViewCoursesDirections.actionViewCourses2ToNavigationDepartmentSemesterChooser2()
+            findNavController().navigate(action)
+
+        }
+        return binding.root
     }
 
 
@@ -37,6 +53,7 @@ class ViewCourses : ReplaceFragment() {
         userRecyclerView.setHasFixedSize(true)
 
         var semesterSelected = args.reference
+
 
         adapter = if (semesterSelected == "admin-course-request-list")
             MyAdapter("admin")

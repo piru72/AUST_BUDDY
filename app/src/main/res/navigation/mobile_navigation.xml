@@ -65,6 +65,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/navigation_departmentSemesterChooser" />
+        <action
+            android:id="@+id/action_navigation_home_to_editProfileFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/editProfileFragment2" />
     </fragment>
 
     <fragment
@@ -304,6 +309,11 @@
         <argument
             android:name="view"
             app:argType="string" />
+        <action
+            android:id="@+id/action_viewCourses2_to_navigation_departmentSemesterChooser2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/navigation_departmentSemesterChooser" />
     </fragment>
     <fragment
         android:id="@+id/bugReportListFragment"

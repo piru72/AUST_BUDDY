@@ -1,9 +1,13 @@
 package com.example.homepage
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
@@ -59,10 +63,43 @@ class HomeFragment : ReplaceFragment() {
 
         binding.btnPlaza.setOnClickListener{
 
+            // Providing warning if semester not given
             if (userSemester == "Not given")
             {
-                val action = HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
-                findNavController().navigate(action)
+
+                // POPUP to know the preference of the user
+                val rootLayout = layoutInflater.inflate(R.layout.popup_update_semester, null)
+
+                val laterButton = rootLayout.findViewById<Button>(R.id.btnUpdateLater)
+                val nowButton= rootLayout.findViewById<Button>(R.id.btnUpdateNow)
+
+                val popupWindow = PopupWindow(
+                    rootLayout,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT, true
+                )
+
+                popupWindow.update()
+                popupWindow.elevation = 20.5F
+                popupWindow.showAtLocation(
+
+                    binding.fragmentHome, // Location to display popup window
+                    Gravity.CENTER, // Exact position of layout to display popup
+                    0, // X offset
+                    -500// Y offset
+                )
+
+                laterButton.setOnClickListener {
+                    val action = HomeFragmentDirections.actionNavigationHomeToNavigationDepartmentSemesterChooser()
+                    findNavController().navigate(action)
+                    popupWindow.dismiss()
+                }
+                nowButton.setOnClickListener {
+                    val action = HomeFragmentDirections.actionNavigationHomeToEditProfileFragment2()
+                    findNavController().navigate(action)
+                    popupWindow.dismiss()
+
+                }
             }
             else
             {

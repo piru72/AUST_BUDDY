@@ -10,7 +10,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
+        <TextView
+            android:id="@+id/semesterReal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnSemesterChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/background_color_50"
+
+            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:drawableTint="#000"
+            android:focusable="true"
+
+            android:fontFamily="@font/poppins_light"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="View every semeseter"
+            android:textColor="@color/black"
+
+            android:visibility="visible"
+            tools:ignore="RtlSymmetry" />
 
 
         <androidx.recyclerview.widget.RecyclerView
