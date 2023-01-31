@@ -1,9 +1,7 @@
 package com.example.homepage.superClass
 
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import android.util.Log
+import com.google.firebase.database.*
 
 class FirebaseRealtimeDatabase {
     // Given parentNode and childNode this function will remove the child from the parent
@@ -25,6 +23,21 @@ class FirebaseRealtimeDatabase {
 
             override fun onCancelled(databaseError: DatabaseError) {}
         })
+    }
+
+    fun <T> fetchData(reference: DatabaseReference, dataClass: Class<T>): T? {
+        var data: T? = null
+        val listener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                data = dataSnapshot.getValue(dataClass)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.w("BUG", "loadData:onCancelled", databaseError.toException())
+            }
+        }
+        reference.addValueEventListener(listener)
+        return data
     }
 
 }
