@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+/OutputPDF
+AUST_ROUTINE_PROVIDER/OutputPDF
+AUST_ROUTINE_PROVIDER/Input
