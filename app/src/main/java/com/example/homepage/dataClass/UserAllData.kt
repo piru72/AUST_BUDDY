@@ -6,7 +6,9 @@ data class UserAllData(
     var userStudentId: String? = "",
     var userSession: String? = "",
     var userDepartment: String? = "",
-    var userSemester: String? = ""
+    var userSemester: String? = "",
+    var userSection: String? = ""
+
 ) {
 
 
@@ -18,7 +20,8 @@ data class UserAllData(
             "userStudentId" to userStudentId,
             "userSession" to userSession,
             "userDepartment" to userDepartment ,
-            "userSemester" to userSemester
+            "userSemester" to userSemester,
+            "userSection" to userSection
         )
     }
 }
