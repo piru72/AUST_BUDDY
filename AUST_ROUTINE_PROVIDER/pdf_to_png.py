@@ -18,3 +18,4 @@ for pdf_file in pdf_files:
 
     for i in range(len(images)):
         images[i].save('OutputImages/' + image_name + '.png', 'PNG')
+        print(image_name + '.png')
