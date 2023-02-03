@@ -1,9 +1,6 @@
 
 
 
-<p align="center" width="100%">
-<img src="Logo/transparent.png" alt="Logo" width="200"/>
-</p>
 
 [![wakatime](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/f4d39c7f-7a5a-4a17-a222-2745203323c9.svg)](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/f4d39c7f-7a5a-4a17-a222-2745203323c9)
 
