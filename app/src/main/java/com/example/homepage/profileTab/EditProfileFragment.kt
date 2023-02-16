@@ -68,7 +68,7 @@ class EditProfileFragment : ReplaceFragment() {
 
             override fun onCancelled(databaseError: DatabaseError) {
 
-                makeToast("Error loading data")
+                makeToast("Update your semester")
             }
         }
         databaseReference.addValueEventListener(postListener)

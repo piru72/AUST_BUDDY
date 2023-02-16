@@ -194,7 +194,7 @@
 
 
             <Button
-                android:id="@+id/btn_add_teacher_course"
+                android:id="@+id/btn_admin_panel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -211,7 +211,8 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="@string/admin_dash_board"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:visibility="invisible" />
 
 
         </LinearLayout>

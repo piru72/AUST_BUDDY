@@ -7,10 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.superClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.getValue
 
 
 class ProfileFragment : ReplaceFragment() {
@@ -23,6 +29,36 @@ class ProfileFragment : ReplaceFragment() {
     ): View {
         container?.removeAllViews()
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
+
+        // Getting the users email
+        val user = FirebaseAuth.getInstance().currentUser
+        val email = user?.email.toString()
+
+        // Getting the users department and making a database reference with it
+        setInformation(email)
+        val modifiedEmail = email.replace('.', '-')
+        var userEmail = "Not given"
+
+        val path = "/admin-list/$modifiedEmail"
+        val databaseReference = FirebaseDatabase.getInstance().getReference(path)
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                val post = dataSnapshot.getValue<Admin>()
+
+                if (post != null) {
+                    userEmail = post.email.toString()
+                    if (userEmail == email) {
+                        binding.btnAdminPanel.visibility = View.VISIBLE
+                    }
+                }
+            }
+            override fun onCancelled(databaseError: DatabaseError) {
+
+                makeToast("Error loading data")
+            }
+        }
+        databaseReference.addValueEventListener(postListener)
 
 
         binding.btnEditProfile.setOnClickListener {
@@ -61,20 +97,15 @@ class ProfileFragment : ReplaceFragment() {
 
         }
 
-        val debugMode = false
-
-        if (getCurrentUserId() == "TEQ09DxjCzfl913Wi7bZtER79iC3" || debugMode) {
-            binding.btnAddTeacherCourse.visibility = View.VISIBLE
-            binding.btnAddTeacherCourse.setOnClickListener {
-                val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
-                findNavController().navigate(action)
-            }
-        } else
-            binding.btnAddTeacherCourse.visibility = View.INVISIBLE
-
-
-
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnAdminPanel.setOnClickListener {
+            val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
+            findNavController().navigate(action)
+        }
     }
 
 
