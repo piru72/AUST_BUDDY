@@ -52,6 +52,7 @@ class HomeFragment : ReplaceFragment() {
                     userSemester = post.userSemester.toString()
                 }
             }
+
             override fun onCancelled(databaseError: DatabaseError) {
 
                 makeToast("Error loading data")
@@ -61,17 +62,16 @@ class HomeFragment : ReplaceFragment() {
 
 
 
-        binding.btnPlaza.setOnClickListener{
+        binding.btnPlaza.setOnClickListener {
 
             // Providing warning if semester not given
-            if (userSemester == "Not given")
-            {
+            if (userSemester == "Not given") {
 
                 // POPUP to know the preference of the user
                 val rootLayout = layoutInflater.inflate(R.layout.popup_update_semester, null)
 
                 val laterButton = rootLayout.findViewById<Button>(R.id.btnUpdateLater)
-                val nowButton= rootLayout.findViewById<Button>(R.id.btnUpdateNow)
+                val nowButton = rootLayout.findViewById<Button>(R.id.btnUpdateNow)
 
                 val popupWindow = PopupWindow(
                     rootLayout,
@@ -90,7 +90,8 @@ class HomeFragment : ReplaceFragment() {
                 )
 
                 laterButton.setOnClickListener {
-                    val action = HomeFragmentDirections.actionNavigationHomeToNavigationDepartmentSemesterChooser()
+                    val action =
+                        HomeFragmentDirections.actionNavigationHomeToNavigationDepartmentSemesterChooser()
                     findNavController().navigate(action)
                     popupWindow.dismiss()
                 }
@@ -100,10 +101,11 @@ class HomeFragment : ReplaceFragment() {
                     popupWindow.dismiss()
 
                 }
-            }
-            else
-            {
-                val action = HomeFragmentDirections.actionNavigationHomeToViewCourses2("$selectedDepartment/$userSemester","view")
+            } else {
+                val action = HomeFragmentDirections.actionNavigationHomeToViewCourses2(
+                    "$selectedDepartment/$userSemester",
+                    "view"
+                )
                 findNavController().navigate(action)
             }
         }
@@ -193,6 +195,10 @@ class HomeFragment : ReplaceFragment() {
                 "user-favouriteTeachers",
                 "view"
             )
+            findNavController().navigate(action)
+        }
+        binding.btnRoutine.setOnClickListener {
+            val action = HomeFragmentDirections.actionNavigationHomeToRoutineFragment()
             findNavController().navigate(action)
         }
 

@@ -70,6 +70,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/editProfileFragment2" />
+        <action
+            android:id="@+id/action_navigation_home_to_routineFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/routineFragment" />
     </fragment>
 
     <fragment
@@ -391,4 +396,9 @@
         android:name="com.example.homepage.adminPanel.adminRequest.AdminRequestFragment"
         android:label="fragment_admin_request"
         tools:layout="@layout/fragment_admin_request" />
+    <fragment
+        android:id="@+id/routineFragment"
+        android:name="com.example.homepage.homeTab.routine.RoutineFragment"
+        android:label="fragment_routine"
+        tools:layout="@layout/fragment_routine" />
 </navigation>
