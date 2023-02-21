@@ -24,7 +24,7 @@ class RoutineFragment : ReplaceFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentRoutineBinding.inflate(inflater, container, false)
         val context = activity
@@ -55,11 +55,11 @@ class RoutineFragment : ReplaceFragment() {
                     val postListener = object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                            val post = dataSnapshot.getValue<Routine>()
+                            val postRoutine = dataSnapshot.getValue<Routine>()
 
 
-                            if (post != null) {
-                                routineLink = post.image.toString()
+                            if (postRoutine != null) {
+                                routineLink = postRoutine.image.toString()
                                 if (context != null) {
                                     Glide.with(context).load(routineLink).into(binding.images)
                                 }
