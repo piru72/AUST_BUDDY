@@ -75,6 +75,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/routineFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_shortCutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/shortCutFragment" />
     </fragment>
 
     <fragment
@@ -401,4 +406,15 @@
         android:name="com.example.homepage.homeTab.routine.RoutineFragment"
         android:label="fragment_routine"
         tools:layout="@layout/fragment_routine" />
+    <fragment
+        android:id="@+id/shortCutFragment"
+        android:name="com.example.homepage.homeTab.ShortCutFragment"
+        android:label="fragment_short_cut"
+        tools:layout="@layout/fragment_short_cut" >
+        <action
+            android:id="@+id/action_shortCutFragment_to_webView2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/webView2" />
+    </fragment>
 </navigation>

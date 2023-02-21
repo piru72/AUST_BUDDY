@@ -112,28 +112,7 @@ class HomeFragment : ReplaceFragment() {
 
 
 
-        binding.btnIums.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
-                getString(R.string.universityStudentPortalLink),
-                "view"
-            )
-            findNavController().navigate(action)
-        }
 
-        binding.btnSyllabus.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
-                getString(R.string.universitySyllabusLink),
-                "view"
-            )
-            findNavController().navigate(action)
-        }
-        binding.btnCalender.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
-                getString(R.string.universityAcademicCalenderLink),
-                "view"
-            )
-            findNavController().navigate(action)
-        }
         binding.btnBuses.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
             findNavController().navigate(action)
@@ -153,13 +132,6 @@ class HomeFragment : ReplaceFragment() {
 
         binding.btnRequest.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToRequestFragment()
-            findNavController().navigate(action)
-        }
-        binding.noticeButton.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
-                getString(R.string.universityNoticeLink),
-                "view"
-            )
             findNavController().navigate(action)
         }
 
@@ -195,6 +167,12 @@ class HomeFragment : ReplaceFragment() {
         binding.btnRoutine.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToRoutineFragment()
             findNavController().navigate(action)
+        }
+
+        binding.btnShortCuts.setOnClickListener {
+            val action = HomeFragmentDirections.actionNavigationHomeToShortCutFragment()
+            findNavController().navigate(action)
+
         }
 
 
