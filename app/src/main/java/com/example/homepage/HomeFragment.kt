@@ -120,24 +120,6 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
 
-        binding.btnTeachers.setOnClickListener {
-
-            val defaultDatabaseViewPath = "teachers-list/" + getShortDepartment()
-
-
-            // If users email contains a department the user will be automatically guided to his / her departments teacher list
-            val action = if (defaultDatabaseViewPath != getShortDepartment())
-                HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
-                    defaultDatabaseViewPath,
-                    "sourceHome"
-                )
-            else
-                HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
-
-            findNavController().navigate(action)
-
-
-        }
         binding.btnSyllabus.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToWebView2(
                 getString(R.string.universitySyllabusLink),
@@ -196,6 +178,19 @@ class HomeFragment : ReplaceFragment() {
                 "view"
             )
             findNavController().navigate(action)
+            // TODO ADD TEACHERS OPTION TO HERE FOR OWN DEPARTMENT
+
+//            val defaultDatabaseViewPath = "teachers-list/" + getShortDepartment()
+//            // If users email contains a department the user will be automatically guided to his / her departments teacher list
+//            val action = if (defaultDatabaseViewPath != getShortDepartment())
+//                HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
+//                    defaultDatabaseViewPath,
+//                    "sourceHome"
+//                )
+//            else
+//                HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
+//
+//            findNavController().navigate(action)
         }
         binding.btnRoutine.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToRoutineFragment()

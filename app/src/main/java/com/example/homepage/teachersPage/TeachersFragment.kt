@@ -4,7 +4,6 @@ package com.example.homepage.teachersPage
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -38,16 +37,9 @@ class TeachersFragment : ReplaceFragment() {
         _binding = FragmentTeachersBinding.inflate(inflater, container, false)
 
         // If the user is navigating to this page from the home page only then this button will be visible
-        if (args.viewPath != "sourceHome")
-        {
-            binding.btnOther.visibility = GONE
-        }
-        else
-        {
-            binding.btnOther.setOnClickListener {
-                val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
-                findNavController().navigate(action)
-            }
+        binding.btnOther.setOnClickListener {
+            val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
+            findNavController().navigate(action)
         }
 
         return binding.root
