@@ -52,7 +52,7 @@ class teacherAdapter(private val userType: String, private val databaseViewPath:
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
             val teacherDetailsInfo =
-                currentItem.name + "\n" + currentItem.designation + "\n" + currentItem.email + "\n" + currentItem.phone + "\n\n" + "@UniBuddy"
+                currentItem.name + "\n" + currentItem.designation + "\n" + currentItem.email + "\n" + currentItem.phone + "\n\n" + "@AUST Buddy"
             intent.putExtra(Intent.EXTRA_TEXT, teacherDetailsInfo)
             context.startActivity(Intent.createChooser(intent, "Share"))
         }
