@@ -33,7 +33,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn11.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -41,7 +41,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn12.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -49,7 +49,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn21.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -57,7 +57,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn22.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -66,7 +66,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn31.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -75,7 +75,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn32.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -84,7 +84,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn41.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }
@@ -93,7 +93,7 @@ class DepartmentSemesterChooserFragment() : ReplaceFragment() {
             val action =
                 DepartmentSemesterChooserFragmentDirections.actionNavigationDepartmentSemesterChooserToViewCourses2(
                     selectedDepartment + getDatabasePath(binding.btn42.text.toString()),
-                    "view"
+                    "sourceSemesterChooser"
                 )
             findNavController().navigate(action)
         }

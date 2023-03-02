@@ -23,7 +23,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/cse",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -31,7 +31,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/eee",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -39,7 +39,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/te",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -47,7 +47,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/me",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -55,7 +55,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/ipe",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -63,7 +63,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/as",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }
@@ -71,7 +71,7 @@ class DepartmentChooserFragment : Fragment() {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/ce",
-                    "view"
+                    "sourceDepartmentChooser"
                 )
             findNavController().navigate(action)
         }

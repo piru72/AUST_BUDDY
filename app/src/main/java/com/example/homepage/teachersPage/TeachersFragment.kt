@@ -37,6 +37,9 @@ class TeachersFragment : ReplaceFragment() {
         _binding = FragmentTeachersBinding.inflate(inflater, container, false)
 
         // If the user is navigating to this page from the home page only then this button will be visible
+        if (args.viewPath == "sourceDepartmentChooser")
+            binding.btnOther.visibility = View.GONE
+
         binding.btnOther.setOnClickListener {
             val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
             findNavController().navigate(action)

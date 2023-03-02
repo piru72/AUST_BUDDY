@@ -33,6 +33,9 @@ class ViewCourses : ReplaceFragment() {
 
         _binding = FragmentViewCoursesBinding.inflate(inflater, container, false)
 
+        if (args.view == "sourceSemesterChooser")
+            binding.btnSemesterChooser.visibility = View.GONE
+
 
         // Selecting the semester and navigating to all the semesters
         binding.semesterReal.text = args.reference
