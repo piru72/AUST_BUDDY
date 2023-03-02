@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.272"
-        app:srcCompat="@drawable/logo_transparent" />
+        app:srcCompat="@drawable/icon_white" />
 
     <Button
         android:id="@+id/get_started"

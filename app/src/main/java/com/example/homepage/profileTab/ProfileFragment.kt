@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
@@ -23,14 +24,10 @@ class ProfileFragment : ReplaceFragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        container?.removeAllViews()
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        // Getting the users email
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
         val user = FirebaseAuth.getInstance().currentUser
         val email = user?.email.toString()
 
@@ -55,12 +52,29 @@ class ProfileFragment : ReplaceFragment() {
             }
             override fun onCancelled(databaseError: DatabaseError) {
 
-                makeToast("Error loading data")
+                Toast.makeText(context, "Error loading user data", Toast.LENGTH_SHORT).show()
             }
         }
         databaseReference.addValueEventListener(postListener)
+    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        container?.removeAllViews()
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
+        // Getting the users email
 
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnAdminPanel.setOnClickListener {
+            val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
+            findNavController().navigate(action)
+        }
         binding.btnEditProfile.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToEditProfileFragment2()
             findNavController().navigate(action)
@@ -95,16 +109,6 @@ class ProfileFragment : ReplaceFragment() {
             startActivity(i)
             (activity as Activity?)!!.overridePendingTransition(0, 0)
 
-        }
-
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.btnAdminPanel.setOnClickListener {
-            val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
-            findNavController().navigate(action)
         }
     }
 
