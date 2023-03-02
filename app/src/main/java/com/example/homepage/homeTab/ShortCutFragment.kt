@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentShortCutBinding
+import com.example.homepage.superClass.ReplaceFragment
+import com.google.firebase.auth.FirebaseAuth
 
 
-class ShortCutFragment : Fragment() {
+class ShortCutFragment : ReplaceFragment() {
     private var _binding: FragmentShortCutBinding? = null
     private val binding get() = _binding!!
 
@@ -44,6 +45,32 @@ class ShortCutFragment : Fragment() {
                 "view"
             )
             findNavController().navigate(action)
+        }
+
+
+        binding.btnFavouriteWebPage.setOnClickListener {
+            val action = ShortCutFragmentDirections.actionShortCutFragmentToFavouriteWebPageFragment()
+            findNavController().navigate(action)
+        }
+
+        // Getting the users email
+        val user = FirebaseAuth.getInstance().currentUser
+        val email = user?.email.toString()
+
+        // Getting the users department and making a database reference with it
+        setInformation(email)
+
+        binding.btnCgpa.setOnClickListener {
+
+            if (getShortDepartment() != "cse") {
+                makeToast("Under development")
+
+            } else {
+                val action = ShortCutFragmentDirections.actionShortCutFragmentToCGPAFragment()
+                findNavController().navigate(action)
+
+            }
+
         }
 
 

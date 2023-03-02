@@ -117,33 +117,18 @@ class HomeFragment : ReplaceFragment() {
             val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
             findNavController().navigate(action)
         }
-        binding.btnCgpa.setOnClickListener {
 
-            if (getShortDepartment() != "cse") {
-                makeToast("Under development")
-
-            } else {
-                val action = HomeFragmentDirections.actionNavigationHomeToCGPAFragment()
-                findNavController().navigate(action)
-
-            }
-
-        }
 
         binding.btnRequest.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToRequestFragment()
             findNavController().navigate(action)
         }
 
-        binding.btnStoreDashboard.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToStoreDashboardFragment()
-            findNavController().navigate(action)
-        }
+//        binding.btnStoreDashboard.setOnClickListener {
+//            val action = HomeFragmentDirections.actionNavigationHomeToStoreDashboardFragment()
+//            findNavController().navigate(action)
+//        }
 
-        binding.btnFavouriteWebPage.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToFavouriteWebPageFragment()
-            findNavController().navigate(action)
-        }
         binding.btnFavouriteTeachers.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
                 "user-favouriteTeachers",

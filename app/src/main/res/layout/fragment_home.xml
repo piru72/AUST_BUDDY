@@ -123,6 +123,8 @@
 
             </LinearLayout>
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,7 +132,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_cgpa"
+                    android:id="@+id/btn_favourite_teachers"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
@@ -159,7 +161,7 @@
 
                             android:contentDescription="@string/cgpa"
                             android:padding="20dp"
-                            android:src="@drawable/cgpa"
+                            android:src="@drawable/teacher"
                             app:tint="#000"
                             tools:ignore="ImageContrastCheck" />
 
@@ -167,11 +169,62 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="@string/cgpa"
+                            android:text="@string/teachers"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_shortCuts"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_color_50"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="10dp"
+
+
+                            android:contentDescription="@string/buses"
+                            android:padding="20dp"
+                            android:src="@drawable/favourite_links"
+                            app:tint="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Short Cut"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_buses"
@@ -216,198 +269,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_store_dashboard"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:visibility="gone"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp"
-                    tools:visibility="gone">
-
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
-                            android:contentDescription="@string/my_store"
-                            android:padding="20dp"
-                            android:src="@drawable/gradings"
-                            app:tint="#000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/my_store"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_favourite_teachers"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-
-                            android:contentDescription="@string/favourite_links"
-                            android:padding="20dp"
-                            android:src="@drawable/teacher"
-                            app:tint="#000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/teachers"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_shortCuts"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-
-                            android:contentDescription="@string/favourite_links"
-                            android:padding="20dp"
-                            android:src="@drawable/favourite_links"
-                            app:tint="#000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="Short Cut"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_favourite_web_page"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-
-                            android:contentDescription="@string/favourite_links"
-                            android:padding="20dp"
-                            android:src="@drawable/favourite_links"
-                            app:tint="#000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="Links"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_request"
                     android:layout_width="0dp"
@@ -448,7 +309,6 @@
                             android:textSize="18sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
 
             </LinearLayout>
 

@@ -11,11 +11,6 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_CGPAFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:destination="@id/CGPAFragment" />
-        <action
             android:id="@+id/action_navigation_home_to_busFragment"
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
@@ -25,11 +20,6 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/requestFragment" />
-        <action
-            android:id="@+id/action_navigation_home_to_favouriteWebPageFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:destination="@id/favouriteWebPageFragment" />
         <action
             android:id="@+id/action_navigation_home_to_storeDashboardFragment"
             app:enterAnim="@anim/slide_in_right"
@@ -416,5 +406,15 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/webView2" />
+        <action
+            android:id="@+id/action_shortCutFragment_to_CGPAFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/CGPAFragment" />
+        <action
+            android:id="@+id/action_shortCutFragment_to_favouriteWebPageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/favouriteWebPageFragment" />
     </fragment>
 </navigation>
