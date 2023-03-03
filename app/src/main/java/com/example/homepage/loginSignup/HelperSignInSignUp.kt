@@ -1,10 +1,8 @@
 package com.example.homepage.loginSignup
 
-import android.text.TextUtils
 import android.util.Patterns
 
 class HelperSignInSignUp {
-
 
 
     fun validateEmailPasswordFormat(
@@ -13,13 +11,21 @@ class HelperSignInSignUp {
         passRetype: String
     ): String {
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-            return "Invalid email format"
-        else if (email.length >= 50)
+        return if (validEmailAddress(email))
+            "Invalid email format"
+        else
+            emailPasswordValidation(email, pass, passRetype)
+
+
+    }
+
+    fun emailPasswordValidation(email: String, pass: String, passRetype: String): String {
+
+        if (email.length >= 50)
             return "Too long characters"
         else if (!email.contains("@aust.edu"))
             return "Provide your @aust.edu email"
-        else if (TextUtils.isEmpty(pass))
+        else if (pass == "")
             return "Enter a password"
         else if (pass.length <= 6)
             return "Password is too short"
@@ -32,12 +38,11 @@ class HelperSignInSignUp {
             return "Valid Data"
         else
             return "Give a special character such as @,$,#.."
-
     }
 
-    fun cuteValue () : String
-    {
-        return "Cute Value"
+
+    private fun validEmailAddress(email: String): Boolean {
+        return !Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
 }
