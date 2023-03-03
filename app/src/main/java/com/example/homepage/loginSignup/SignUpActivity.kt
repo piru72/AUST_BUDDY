@@ -2,6 +2,7 @@ package com.example.homepage.loginSignup
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -10,7 +11,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
-    private var helper = HelperSignInSignUp(this)
+    private var helper = HelperSignInSignUp()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
             } else {
-                helper.makeToast(validityStatus)
+                makeToast(validityStatus)
                 binding.usersPasswordRetype.setText("")
             }
         }
@@ -56,14 +57,14 @@ class SignUpActivity : AppCompatActivity() {
             accountCreationStatus = if (it.isSuccessful) {
 
                 sendVerificationMail()
-                helper.makeToast("Account created with email $email")
+                makeToast("Account created with email $email")
                 true
 
             } else {
                 val exceptionMessage =
                     it.exception.toString().substring(it.exception.toString().indexOf(":") + 1)
                         .trim()
-                helper.makeToast(exceptionMessage)
+                makeToast(exceptionMessage)
                 false
             }
         }
@@ -76,13 +77,17 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth.currentUser?.sendEmailVerification()?.addOnCompleteListener { task ->
 
             if (task.isSuccessful) {
-                helper.makeToast("Verification mail has been sent on the email ")
-                helper.makeToast("CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL")
+                makeToast("Verification mail has been sent on the email ")
+                makeToast("CHECK YOUR EMAILS SPAM BOX FOR VERIFICATION EMAIL")
             } else {
 
-                helper.makeToast("Error Occurred")
+                makeToast("Error Occurred")
             }
         }
+    }
+
+    fun  makeToast(text: String) {
+        Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
     }
 
 

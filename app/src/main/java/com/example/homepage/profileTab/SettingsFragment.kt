@@ -40,7 +40,7 @@ class SettingsFragment : ReplaceFragment() {
             val currentUserPassword = binding.tvCurrentUserPassword.text.toString()
             val newUserPassword = binding.tvNewUserPasswordType.text.toString()
             val newUserPasswordRetype = binding.tvNewUserPasswordRetype.text.toString()
-            val helper = this.context?.let { it1 -> HelperSignInSignUp(it1) }
+            val helper = this.context?.let {  HelperSignInSignUp() }
             val validStatus = helper?.validateEmailPasswordFormat(
                 currentUserEmail,
                 newUserPassword,

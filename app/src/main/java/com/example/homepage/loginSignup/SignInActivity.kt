@@ -4,6 +4,7 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.homepage.BaseActivity
@@ -24,7 +25,7 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
     private lateinit var database: DatabaseReference
     private lateinit var binding: ActivitySignInBinding
-    private var helper = HelperSignInSignUp(this)
+    private var helper = HelperSignInSignUp()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +55,7 @@ class SignInActivity : AppCompatActivity() {
             if (validityStatus == "Valid Data") {
                 fireBaseSignIn(email, password)
             } else {
-                helper.makeToast(validityStatus)
+                makeToast(validityStatus)
             }
         }
 
@@ -115,10 +116,10 @@ class SignInActivity : AppCompatActivity() {
                         updateUI(auth.currentUser)
                         onAuthSuccess(task.result?.user!!)
                     } else
-                        helper.makeToast("Please verify your email")
+                        makeToast("Please verify your email")
                 }
                 else -> {
-                    helper.makeToast("Login unsuccessful wrong email or password")
+                    makeToast("Login unsuccessful wrong email or password")
                     progressDialog.dismiss()
                 }
             }
@@ -133,6 +134,10 @@ class SignInActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.activity_sign_in, fragment)
         fragmentTransaction.addToBackStack("tag").commit()
 
+    }
+
+    fun  makeToast(text: String) {
+        Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
     }
 
 }

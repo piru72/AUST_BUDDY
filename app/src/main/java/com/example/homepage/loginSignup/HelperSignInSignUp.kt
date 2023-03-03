@@ -1,15 +1,11 @@
 package com.example.homepage.loginSignup
 
-import android.content.Context
 import android.text.TextUtils
 import android.util.Patterns
-import android.widget.Toast
 
-class HelperSignInSignUp(private val applicationContext : Context) {
+class HelperSignInSignUp {
 
-   fun  makeToast(text: String) {
-        Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
-    }
+
 
     fun validateEmailPasswordFormat(
         email: String,
@@ -38,4 +34,10 @@ class HelperSignInSignUp(private val applicationContext : Context) {
             return "Give a special character such as @,$,#.."
 
     }
+
+    fun cuteValue () : String
+    {
+        return "Cute Value"
+    }
+
 }
