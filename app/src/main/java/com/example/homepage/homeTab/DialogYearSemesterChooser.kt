@@ -16,8 +16,9 @@ import com.example.homepage.superClass.spinner.SpinnerItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 
 class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDialogFragment() {
@@ -34,6 +35,27 @@ class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDia
         val view = inflater.inflate(R.layout.dialog_become_admin, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
+        val usersEmail = userV?.email.toString()
+        val modifiedEmail = usersEmail.replace(".", "-")
+        var userSectionDb = "Not given"
+        val path = "/user-details/$modifiedEmail"
+        val databaseReference = FirebaseDatabase.getInstance().getReference(path)
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                val post = dataSnapshot.getValue<UserAllData>()
+
+                if (post != null) {
+                    userSectionDb = post.userSection.toString()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+
+                makeToast("Error loading data")
+            }
+        }
+        databaseReference.addValueEventListener(postListener)
 
 
         val yearSpinner = view.findViewById<Spinner>(R.id.spinner_year)
@@ -75,10 +97,13 @@ class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDia
             val session = helper.getSession()
 
 
+
+
+
             if (requestFor == "UpdateSemester")
             {
                 val semester = "year" + selectedYear + "semester"+ selectedSemester
-                updateSemester(userName,usersEmail,studentId,session,department,semester)
+                updateSemester(userName,usersEmail,studentId,session,department,semester,userSectionDb)
             }
             else
             {
@@ -97,10 +122,11 @@ class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDia
         studentId: String,
         session: String,
         department: String,
-        selectedSemester: String
+        selectedSemester: String,
+        userSectionDb: String
     ) {
 
-        val updatedUserInfo = UserAllData (userName,userEmail,studentId,session,department,selectedSemester)
+        val updatedUserInfo = UserAllData (userName,userEmail,studentId,session,department,selectedSemester,userSectionDb)
         val newPush = userEmail.replace(".", "-")
         database = Firebase.database.reference
         val userInformation = updatedUserInfo.toMap()

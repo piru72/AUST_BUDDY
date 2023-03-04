@@ -44,11 +44,18 @@ class EditProfileFragment : ReplaceFragment() {
 
 
         val email = user?.email.toString()
+
         val modifiedEmail = email.replace('.', '-')
         setInformation(email)
+        binding.IdReal.text = getUserId()
+        binding.fullEmailReal.text = email
+        binding.departmentReal.text = getDepartment()
+        binding.sessionReal.text = getSession()
+        binding.userNameReal.text = getUserName()
 
 
-        val path = "/user-details/$modifiedEmail"
+
+            val path = "/user-details/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -136,7 +143,7 @@ class EditProfileFragment : ReplaceFragment() {
                 }
                 else
                 {
-                    makeToast("Provide Valid semester!!")
+                    makeToast("Provide Valid section!!")
                 }
 
 

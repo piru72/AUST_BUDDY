@@ -217,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="A"
+                    android:text=""
                     android:textSize="20dp"
                     android:editable="true"/>
                 <Button
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Year 3 Semester 1"
+                    android:text=""
 
 
                     android:fontFamily="@font/poppins_light"

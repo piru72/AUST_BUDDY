@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
@@ -41,6 +42,7 @@ class HomeFragment : ReplaceFragment() {
         val selectedDepartment = getShortDepartment().uppercase(Locale.ROOT)
         val modifiedEmail = email.replace('.', '-')
         var userSemester = "Not given"
+        var userSection = "Not given"
         val path = "/user-details/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
         val postListener = object : ValueEventListener {
@@ -50,6 +52,7 @@ class HomeFragment : ReplaceFragment() {
 
                 if (post != null) {
                     userSemester = post.userSemester.toString()
+                    userSection = post.userSection.toString()
                 }
             }
 
@@ -150,8 +153,51 @@ class HomeFragment : ReplaceFragment() {
 //            findNavController().navigate(action)
         }
         binding.btnRoutine.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToRoutineFragment()
-            findNavController().navigate(action)
+
+            if (userSection == "Not given" || userSemester == "Not given" || userSection == "" || userSemester == "") {
+
+                // POPUP to know the preference of the user
+                val rootLayout = layoutInflater.inflate(R.layout.popup_update_semester, null)
+
+                val laterButton = rootLayout.findViewById<Button>(R.id.btnUpdateLater)
+                val nowButton = rootLayout.findViewById<Button>(R.id.btnUpdateNow)
+                val warningMessage = rootLayout.findViewById<TextView>(R.id.textViewWarningMessage)
+
+                if (userSemester == "Not given" || userSemester == "")
+                    warningMessage.text = "Semester Not found!!\n Provide semester please!"
+                else
+                    warningMessage.text = "Section Not found!!\n Provide section please!"
+
+
+                val popupWindow = PopupWindow(
+                    rootLayout,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT, true
+                )
+
+                popupWindow.update()
+                popupWindow.elevation = 20.5F
+                popupWindow.showAtLocation(
+
+                    binding.fragmentHome, // Location to display popup window
+                    Gravity.CENTER, // Exact position of layout to display popup
+                    0, // X offset
+                    -500// Y offset
+                )
+
+                laterButton.visibility = View.GONE
+                nowButton.setOnClickListener {
+                    val action = HomeFragmentDirections.actionNavigationHomeToEditProfileFragment2()
+                    findNavController().navigate(action)
+                    popupWindow.dismiss()
+
+                }
+            } else {
+                val action = HomeFragmentDirections.actionNavigationHomeToRoutineFragment()
+                findNavController().navigate(action)
+
+            }
+
         }
 
         binding.btnShortCuts.setOnClickListener {
