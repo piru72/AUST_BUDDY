@@ -7,6 +7,9 @@ import android.widget.LinearLayout
 
 class CgpaFunctions {
 
+    private final val credit3 = "3 Credit"
+    private final val credit75 = ".75 Credit"
+    private val credit15 = "1.5 Credit"
 
     // Functions needed for
     fun hideLayout(layout: LinearLayout) {
@@ -48,47 +51,47 @@ class CgpaFunctions {
         c5Credit: Button
     ) {
 
-        c1Credit.text = "3 Credit"
-        c2Credit.text = "3 Credit"
-        c3Credit.text = "3 Credit"
-        c4Credit.text = "3 Credit"
-        c5Credit.text = "3 Credit"
+        c1Credit.text = credit3
+        c2Credit.text = credit3
+        c3Credit.text = credit3
+        c4Credit.text = credit3
+        c5Credit.text = credit3
     }
 
     fun set15Credit(c6Credit: Button, c7Credit: Button, c8Credit: Button) {
 
-        c6Credit.text = "1.5 Credit"
-        c7Credit.text = "1.5 Credit"
-        c8Credit.text = "1.5 Credit"
+        c6Credit.text = credit15
+        c7Credit.text = credit15
+        c8Credit.text = credit15
     }
 
     fun set15Credit(c6Credit: Button, c7Credit: Button) {
 
-        c6Credit.text = "1.5 Credit"
-        c7Credit.text = "1.5 Credit"
+        c6Credit.text = credit15
+        c7Credit.text = credit15
     }
 
 
     fun set15Credit(c6Credit: Button) {
 
-        c6Credit.text = "1.5 Credit"
+        c6Credit.text = credit15
     }
 
     fun set75Credit(c9Credit: Button) {
 
-        c9Credit.text = ".75 Credit"
+        c9Credit.text = credit75
     }
 
     fun set75Credit(c8Credit: Button, c9Credit: Button) {
 
-        c8Credit.text = ".75 Credit"
-        c9Credit.text = ".75 Credit"
+        c8Credit.text = credit75
+        c9Credit.text = credit75
     }
 
     fun set75Credit(c7Credit: Button, c8Credit: Button, c9Credit: Button) {
-        c7Credit.text = ".75 Credit"
-        c8Credit.text = ".75 Credit"
-        c9Credit.text = ".75 Credit"
+        c7Credit.text = credit75
+        c8Credit.text = credit75
+        c9Credit.text = credit75
     }
 
     fun getSemesterNumber(semester: String): Any {
