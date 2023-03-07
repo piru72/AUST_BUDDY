@@ -4,6 +4,7 @@ plugins {
     id 'com.google.gms.google-services'
     id 'kotlin-parcelize'
     id("androidx.navigation.safeargs.kotlin")
+    id "org.sonarqube"
 
 }
 
@@ -42,6 +43,24 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'com.example.homepage'
+}
+sonarqube {
+    properties {
+        property "sonar.projectName", "***specify project name***"
+        property "sonar.projectKey", "***specify project name***"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.tests", ["src/test/java"]
+        property "sonar.test.inclusions", "**/*Test*/**"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.sources", "src/main/java"
+        property "sonar.login", "***specify local server username***"
+        property "sonar.password", "***specify local server password***"
+        property "sonar.exclusions", '**/*Test*/**,' +
+                '*.json,' +
+                '**/*test*/**,' +
+                '**/.gradle/**,' +
+                '**/R.class'
+    }
 }
 
 dependencies {
