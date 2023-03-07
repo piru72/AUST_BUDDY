@@ -14,58 +14,86 @@ import com.google.firebase.ktx.Firebase
 
 
 class AddCourseFragment : ReplaceFragment() {
-    private lateinit var _binding: FragmentAddCourseBinding
-    private val binding get() = _binding
-    private lateinit var database: DatabaseReference
+    private lateinit var fragmentBinding: FragmentAddCourseBinding
+    private val viewBinding get() = fragmentBinding
+    private lateinit var firebaseDatabase: DatabaseReference
     private val args: AddCourseFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
+
+        fragmentBinding = FragmentAddCourseBinding.inflate(inflater, container, false)
+
+        setupFirebaseDatabase()
+        setupAddCourseButton()
+
+        return viewBinding.root
+    }
+
+    private fun setupAddCourseButton() {
         val pushingPath = args.reference
-        _binding = FragmentAddCourseBinding.inflate(inflater, container, false)
-        database = Firebase.database.reference
-        if (pushingPath == "admin-course-request-list")
-            binding.addCourseButtonForm.text = "Request for adding course"
-        binding.addCourseButtonForm.setOnClickListener {
-            val courseCode = binding.courseCode.text.toString()
-            val courseName = binding.courseName.text.toString()
-            val courseDriveLink = binding.courseDriveLinkText.text.toString()
-            val department = binding.spinnerDepartmentList.selectedItem.toString()
-            val year = binding.spinnerYearList.selectedItem.toString()
-            val semester = binding.spinnerSemesterList.selectedItem.toString()
-            val selectYour = "Select your "
 
-            if (department == "Department")
-                makeToast(selectYour + department)
-            else if (year == "Year")
-                makeToast(selectYour + year)
-            else if (semester == "Semester")
-                makeToast(selectYour + semester)
-            else if (courseCode == "")
-                makeToast("$selectYour Course Code ")
-            else if (courseName == "")
-                makeToast("$selectYour Course Name")
-            else if (!validWebsiteLink(courseDriveLink))
-                makeToast("Provide an valid drive link. ")
-            else {
-                writeNewCourse(
-                    courseCode,
-                    courseName,
-                    courseDriveLink,
-                    department,
-                    "year" + year + "semester" + semester
-                )
-                binding.courseCode.setText("")
-                binding.courseDriveLinkText.setText("")
-                binding.courseName.setText("")
-
+        with(viewBinding.addCourseButtonForm)
+        {
+            if (pushingPath == "admin-course-request-list")
+                text = "Request for adding course"
+            setOnClickListener {
+                validateForm()
             }
 
-
         }
-        return binding.root
+    }
+
+    private fun setupFirebaseDatabase() {
+        firebaseDatabase = Firebase.database.reference
+    }
+
+
+    private fun validateForm() {
+
+        with(viewBinding) {
+            val courseCode = courseCode.text.toString()
+            val courseName = courseName.text.toString()
+            val courseDriveLink = courseDriveLinkText.text.toString()
+            val department = spinnerDepartmentList.selectedItem.toString()
+            val year = spinnerYearList.selectedItem.toString()
+            val semester = spinnerSemesterList.selectedItem.toString()
+            val selectYour = "Select your "
+
+            when {
+                department == "Department" -> makeToast("$selectYour $department")
+                year == "Year" -> makeToast("$selectYour $year")
+                semester == "Semester" -> makeToast("$selectYour $semester")
+                courseCode.isBlank() -> makeToast("$selectYour Course Code")
+                courseName.isBlank() -> makeToast("$selectYour  Course Name")
+                !validWebsiteLink(courseDriveLink) -> makeToast("Provide an valid drive link. ")
+                else -> {
+                    writeNewCourse(
+                        courseCode,
+                        courseName,
+                        courseDriveLink,
+                        department,
+                        "year" + year + "semester" + semester
+                    )
+                    makeToast("Request sent to Admins!")
+                    clearForm()
+
+                }
+            }
+        }
+
+    }
+
+    private fun clearForm() {
+
+        viewBinding.apply {
+            courseCode.setText("")
+            courseDriveLinkText.setText("")
+            courseName.setText("")
+        }
     }
 
     private fun writeNewCourse(
@@ -83,13 +111,13 @@ class AddCourseFragment : ReplaceFragment() {
             val childUpdateRequest = hashMapOf<String, Any>(
                 "/$pushingPath/$courseCode" to courseDetails
             )
-            database.updateChildren(childUpdateRequest)
+            firebaseDatabase.updateChildren(childUpdateRequest)
         } else {
             val childUpdateAdmin = hashMapOf<String, Any>(
                 "/$pushingPath/$department/$yearSemester/$courseCode" to courseDetails
             )
 
-            database.updateChildren(childUpdateAdmin)
+            firebaseDatabase.updateChildren(childUpdateAdmin)
         }
 
 
