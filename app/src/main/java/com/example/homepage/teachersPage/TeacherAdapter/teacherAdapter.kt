@@ -107,22 +107,6 @@ class teacherAdapter(private val userType: String, private val databaseViewPath:
         if (userType == "Admin") {
             holder.adminControlLayout.visibility = View.VISIBLE
             holder.approveTeacherButton.setOnClickListener {
-//                val addTeacherFragment = AddTeachersFragment("teachers")
-//
-//                currentItem.name?.let { it1 ->
-//                    currentItem.designation?.let { it2 ->
-//                        currentItem.phone?.let { it3 ->
-//                            currentItem.email?.let { it4 ->
-//                                currentItem.img?.let { it5 ->
-//                                    addTeacherFragment.writeNewTeacher(
-//                                        it1,
-//                                        it2, it3, it4, it5
-//                                    )
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
                 val teacherId = currentItem.email.toString().replace(".", "-")
                 requestTeacherReference.child(teacherId).removeValue()
                 Toast.makeText(context, "Teacher request has been approved", Toast.LENGTH_SHORT)
