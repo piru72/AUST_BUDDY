@@ -5,18 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import com.example.homepage.Firebase.FirebaseUtils
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.superClass.ReplaceFragment
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 
 class AddCourseFragment : ReplaceFragment() {
     private lateinit var fragmentBinding: FragmentAddCourseBinding
     private val viewBinding get() = fragmentBinding
-    private lateinit var firebaseDatabase: DatabaseReference
+    private var firebaseDatabase = FirebaseUtils.getDatabaseReference()
     private val args: AddCourseFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -27,7 +25,7 @@ class AddCourseFragment : ReplaceFragment() {
 
         fragmentBinding = FragmentAddCourseBinding.inflate(inflater, container, false)
 
-        setupFirebaseDatabase()
+
         setupAddCourseButton()
 
         return viewBinding.root
@@ -47,9 +45,7 @@ class AddCourseFragment : ReplaceFragment() {
         }
     }
 
-    private fun setupFirebaseDatabase() {
-        firebaseDatabase = Firebase.database.reference
-    }
+
 
 
     private fun validateForm() {
