@@ -10,41 +10,70 @@ import com.example.homepage.superClass.ReplaceFragment
 
 
 class AdminPanelFragment : ReplaceFragment() {
-    private var _binding: FragmentAdminPanelBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentAdminPanelBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        container?.removeAllViews()
-        _binding = FragmentAdminPanelBinding.inflate(inflater, container, false)
-        binding.btnAddCoursesAdmin.setOnClickListener {
-            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAddCourseFragment("course-list", "view")
-            findNavController().navigate(action)
-        }
-        binding.btnAddTeachersAdmin.setOnClickListener {
-            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAddTeachersFragment("teachers","view")
-            findNavController().navigate(action)
-        }
-        binding.btnTeacherRequest.setOnClickListener {
-            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToTeachersFragment("admin-teacher-request-list","view")
-            findNavController().navigate(action)
-        }
-        binding.btnViewBugReports.setOnClickListener {
-            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToBugReportListFragment()
-            findNavController().navigate(action)
-        }
-        binding.btnViewCourseRequest.setOnClickListener {
-        val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToViewCourses2("admin-course-request-list","view")
-            findNavController().navigate(action)
-        }
+        fragmentBinding = FragmentAdminPanelBinding.inflate(inflater, container, false)
 
-        binding.btnViewAdminRequest.setOnClickListener {
-            val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToAdminRequestFragment3()
-            findNavController().navigate(action)
+        setupButtons()
+
+        return viewBinding.root
+    }
+
+    private fun setupButtons() {
+
+        viewBinding.apply{
+
+            btnAddCoursesAdmin.setOnClickListener {
+                val action =
+                    AdminPanelFragmentDirections.actionAdminPanelFragmentToAddCourseFragment(
+                        "course-list",
+                        "view"
+                    )
+                findNavController().navigate(action)
+            }
+
+            btnAddTeachersAdmin.setOnClickListener {
+                val action =
+                    AdminPanelFragmentDirections.actionAdminPanelFragmentToAddTeachersFragment(
+                        "teachers",
+                        "view"
+                    )
+                findNavController().navigate(action)
+            }
+
+            btnTeacherRequest.setOnClickListener {
+                val action =
+                    AdminPanelFragmentDirections.actionAdminPanelFragmentToTeachersFragment(
+                        "admin-teacher-request-list",
+                        "view"
+                    )
+                findNavController().navigate(action)
+            }
+
+            btnViewBugReports.setOnClickListener {
+                val action =
+                    AdminPanelFragmentDirections.actionAdminPanelFragmentToBugReportListFragment()
+                findNavController().navigate(action)
+            }
+            btnViewCourseRequest.setOnClickListener {
+                val action = AdminPanelFragmentDirections.actionAdminPanelFragmentToViewCourses2(
+                    "admin-course-request-list",
+                    "view"
+                )
+                findNavController().navigate(action)
+            }
+
+            btnViewAdminRequest.setOnClickListener {
+                val action =
+                    AdminPanelFragmentDirections.actionAdminPanelFragmentToAdminRequestFragment3()
+                findNavController().navigate(action)
+            }
         }
-        return binding.root
     }
 
 }

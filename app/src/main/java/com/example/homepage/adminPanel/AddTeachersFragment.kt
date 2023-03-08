@@ -14,69 +14,86 @@ import com.google.firebase.ktx.Firebase
 
 class AddTeachersFragment : ReplaceFragment() {
     private lateinit var _binding: FragmentAddTeachersBinding
-    private val binding get() = _binding
+    private val viewBinding get() = _binding
     private lateinit var database: DatabaseReference
 
-    private val arg : AddCourseFragmentArgs by navArgs()
+    private val arg: AddCourseFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        container?.removeAllViews()
         _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
 
+        setupButtons()
+
+        return viewBinding.root
+    }
+
+    private fun setupButtons() {
         if (arg.reference == "admin-teacher-request-list")
-            binding.addTeachersButtonForm.text = "Request for adding teacher"
+            viewBinding.addTeachersButtonForm.text = "Request for adding teacher"
 
-        binding.addTeachersButtonForm.setOnClickListener {
-            val teachersName = binding.teachersName.text.toString()
-            val teachersDesignation = binding.teachersDesignation.text.toString()
-            val teachersContactNo = binding.teachersContactNoText.text.toString()
-            val teacherEmail = binding.teachersEmailText.text.toString()
-            val teachersImageLink = binding.teachersImageLinkForm.text.toString()
+        viewBinding.addTeachersButtonForm.setOnClickListener {
 
-            if (teachersName.contains("."))
-                makeToast("Provide valid teachers name without . and only alphabets")
-            else if (teachersName == "")
-                makeToast("Provide teachers name")
-            else if (teachersDesignation == "")
-                makeToast("Provide teachers designation")
-            else if (teachersContactNo == "")
-                makeToast("Provide teachers contact no or type Not Available")
-            else if (teacherEmail == "")
-                makeToast(" Provide teachers email or type Not Available")
-            else if (teachersImageLink == "")
-                makeToast("Provide teachers image link ")
-            else {
-                if (!validNumber(teachersContactNo) && teachersContactNo != "Not Available")
-                    makeToast("Provide a valid contact no")
-                else if (!validEmail(teacherEmail))
-                    makeToast("Provide a valid email")
-                else if (!validWebsiteLink(teachersImageLink))
-                    makeToast("Provide valid image link")
-                else {
+            validateForm()
+
+        }
+    }
+
+    private fun validateForm() {
+
+        viewBinding.apply {
+            val teachersName = teachersName.text.toString()
+            val teachersDesignation = teachersDesignation.text.toString()
+            val teachersContactNo = teachersContactNoText.text.toString()
+            val teacherEmail = teachersEmailText.text.toString()
+            val teachersImageLink = teachersImageLinkForm.text.toString()
+
+            when {
+
+                teachersName.contains(".") -> makeToast("Provide valid teachers name without . and only alphabets")
+                teachersName == "" -> makeToast("Provide teachers name")
+                teachersDesignation == "" -> makeToast("Provide teachers designation")
+                teachersContactNo == "" -> makeToast("Provide teachers contact no or type Not Available")
+                teacherEmail == "" -> makeToast(" Provide teachers email or type Not Available")
+                teachersImageLink == "" -> makeToast("Provide teachers image link ")
+                !validNumber(teachersContactNo) && teachersContactNo != "Not Available" -> makeToast(
+                    "Provide a valid contact no"
+                )
+                !validEmail(teacherEmail) -> makeToast("Provide a valid email")
+                !validWebsiteLink(teachersImageLink) -> makeToast("Provide valid image link")
+
+                else -> {
                     writeNewTeacher(
                         teachersName,
                         teachersDesignation,
                         teachersContactNo,
                         teacherEmail, teachersImageLink
                     )
-                    binding.teachersName.setText("")
-                    binding.teachersDesignation.setText("")
-                    binding.teachersContactNoText.setText("")
-                    binding.teachersEmailText.setText("")
-                    binding.teachersImageLinkForm.setText("")
+                    clearForm()
                     makeToast("Teachers data added successfully")
-                }
 
+                }
             }
 
 
         }
-        return binding.root
+
+
     }
 
-    fun writeNewTeacher(
+    private fun clearForm() {
+        viewBinding.apply {
+            teachersName.setText("")
+            teachersDesignation.setText("")
+            teachersContactNoText.setText("")
+            teachersEmailText.setText("")
+            teachersImageLinkForm.setText("")
+        }
+    }
+
+
+    private fun writeNewTeacher(
         teachersName: String,
         teachersDesignation: String,
         teachersContactNo: String,

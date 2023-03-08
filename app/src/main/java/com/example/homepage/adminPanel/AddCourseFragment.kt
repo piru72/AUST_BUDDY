@@ -26,12 +26,12 @@ class AddCourseFragment : ReplaceFragment() {
         fragmentBinding = FragmentAddCourseBinding.inflate(inflater, container, false)
 
 
-        setupAddCourseButton()
+        setupButtons()
 
         return viewBinding.root
     }
 
-    private fun setupAddCourseButton() {
+    private fun setupButtons() {
         val pushingPath = args.reference
 
         with(viewBinding.addCourseButtonForm)
@@ -50,7 +50,7 @@ class AddCourseFragment : ReplaceFragment() {
 
     private fun validateForm() {
 
-        with(viewBinding) {
+        viewBinding.apply{
             val courseCode = courseCode.text.toString()
             val courseName = courseName.text.toString()
             val courseDriveLink = courseDriveLinkText.text.toString()

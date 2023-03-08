@@ -17,8 +17,6 @@ Vapp/src/main/java/com/example/homepage/storeDashboard/Repo/StoreDashBoardReposi
 Uapp/src/main/java/com/example/homepage/courseTab/DepartmentSemesterChooserFragment.kt,8\0\801433f67cf36e4e4d472057a85972f81cdabf83
 r
 Bapp/src/main/java/com/example/homepage/storeTab/Model/Materials.kt,6\b\6bf540e423f57898c9b70df881bdf9c63506ae9c
-w
-Gapp/src/main/java/com/example/homepage/adminPanel/AdminPanelFragment.kt,b\4\b4efc64521864317d6af73948d56fcb30f82b29c
 k
 ;app/src/main/java/com/example/homepage/superClass/Helper.kt,0\d\0db04161f44e6b209840c577c8d99e108829583f
 u
@@ -173,3 +171,11 @@ Gapp/src/main/java/com/example/homepage/storeTab/Adapter/StoreAdapter.kt,f\f\ff
 Papp/src/main/java/com/example/homepage/teachersPage/DepartmentChooserFragment.kt,8\5\8563466052143e640a87b0ded2e745877864a70a
 w
 Gapp/src/main/java/com/example/homepage/storeTab/Repo/StoreRepository.kt,a\a\aa2ab8c500d3f9839c6c0c670aa2f82153582892
+x
+Happ/src/main/java/com/example/homepage/courseTab/repos/UserRepository.kt,4\b\4bd5e48d133355bb7ec6e91324708031a7412260
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+„
+Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
+†
+Vapp/src/main/java/com/example/homepage/storeDashboard/Adapter/StoreDashBoardAdapter.kt,5\4\5442361667c66ebd54da36de6fe28152e9629091
