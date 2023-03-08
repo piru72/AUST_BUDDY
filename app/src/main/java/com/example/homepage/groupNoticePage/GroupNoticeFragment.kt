@@ -29,8 +29,8 @@ import java.util.*
 
 
 class GroupNoticeFragment : ReplaceFragment() {
-    private var _binding: FragmentGroupNoticeBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentGroupNoticeBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private lateinit var viewModel: GroupNoticeViewModel
     private lateinit var recycler: RecyclerView
     private var adapter: GroupNoticeAdapter? = null
@@ -45,15 +45,15 @@ class GroupNoticeFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentGroupNoticeBinding.inflate(inflater, container, false)
         _inflater = inflater
         auth = Firebase.auth
         val argGroupId = args.reference
 
         val user = auth.currentUser!!.uid
-        binding.floatingActionButton.setOnClickListener {
+        viewBinding.floatingActionButton.setOnClickListener {
 
-            binding.informativeText.text = ""
+            viewBinding.informativeText.text = ""
             val rootLayout = layoutInflater.inflate(R.layout.popup_add_notice, null)
 
             val taskName = rootLayout.findViewById<EditText>(R.id.QuizNamePop)
@@ -98,7 +98,7 @@ class GroupNoticeFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.ToDoActivity, // Location to display popup window
+                viewBinding.ToDoActivity, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -129,7 +129,7 @@ class GroupNoticeFragment : ReplaceFragment() {
             }
 
         }
-        return binding.root
+        return viewBinding.root
     }
 
     fun writeNewTask(
@@ -171,7 +171,7 @@ class GroupNoticeFragment : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.taskList
+        recycler = viewBinding.taskList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = GroupNoticeAdapter(_inflater)

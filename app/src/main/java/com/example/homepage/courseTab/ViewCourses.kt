@@ -21,30 +21,36 @@ class ViewCourses : ReplaceFragment() {
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: MyAdapter
     private val args: ViewCoursesArgs by navArgs()
-    private var _binding: FragmentViewCoursesBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentViewCoursesBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        container?.removeAllViews()
+    ): View {
 
-        _binding = FragmentViewCoursesBinding.inflate(inflater, container, false)
 
+        fragmentBinding = FragmentViewCoursesBinding.inflate(inflater, container, false)
+
+        setupButtons()
+
+
+        return viewBinding.root
+    }
+
+    private fun setupButtons() {
         if (args.view == "sourceSemesterChooser")
-            binding.btnSemesterChooser.visibility = View.GONE
+            viewBinding.btnSemesterChooser.visibility = View.GONE
 
 
         // Selecting the semester and navigating to all the semesters
-        binding.semesterReal.text = args.reference
-        binding.btnSemesterChooser.setOnClickListener {
+        viewBinding.semesterReal.text = args.reference
+        viewBinding.btnSemesterChooser.setOnClickListener {
             val action = ViewCoursesDirections.actionViewCourses2ToNavigationDepartmentSemesterChooser2()
             findNavController().navigate(action)
 
         }
-        return binding.root
     }
 
 

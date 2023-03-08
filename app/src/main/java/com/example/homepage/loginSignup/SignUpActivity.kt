@@ -8,7 +8,7 @@ import com.example.homepage.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySignUpBinding
+    private lateinit var viewBinding: ActivitySignUpBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
     private var helper = HelperSignInSignUp()
@@ -16,16 +16,16 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        val view = binding.root
+        viewBinding = ActivitySignUpBinding.inflate(layoutInflater)
+        val view = viewBinding.root
         setContentView(view)
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.signupBtn.setOnClickListener {
+        viewBinding.signupBtn.setOnClickListener {
 
-            val email = binding.usersEmail.text.toString()
-            val password = binding.usersPasswordType.text.toString()
-            val passwordRetype = binding.usersPasswordRetype.text.toString()
+            val email = viewBinding.usersEmail.text.toString()
+            val password = viewBinding.usersPasswordType.text.toString()
+            val passwordRetype = viewBinding.usersPasswordRetype.text.toString()
 
             val validityStatus = helper.validateEmailPasswordFormat(email, password, passwordRetype)
 
@@ -38,10 +38,10 @@ class SignUpActivity : AppCompatActivity() {
 
             } else {
                 makeToast(validityStatus)
-                binding.usersPasswordRetype.setText("")
+                viewBinding.usersPasswordRetype.setText("")
             }
         }
-        binding.goToSignInPage.setOnClickListener {
+        viewBinding.goToSignInPage.setOnClickListener {
 
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)

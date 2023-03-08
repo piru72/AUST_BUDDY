@@ -11,8 +11,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 class ForgotPasswordFragment : ReplaceFragment() {
-    private var _binding: FragmentForgotPasswordBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentForgotPasswordBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,10 +21,10 @@ class ForgotPasswordFragment : ReplaceFragment() {
 
         container?.removeAllViews()
 
-        _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
 
-        binding.btnForgotPasswordSendMail.setOnClickListener {
-            val userEmail = binding.recoveryEmail.text.toString()
+        viewBinding.btnForgotPasswordSendMail.setOnClickListener {
+            val userEmail = viewBinding.recoveryEmail.text.toString()
 
             val validityStatus = validateEmail(userEmail)
 
@@ -41,7 +41,7 @@ class ForgotPasswordFragment : ReplaceFragment() {
                     }
 
                 }
-                binding.recoveryEmail.setText("")
+                viewBinding.recoveryEmail.setText("")
 
             } else {
                 makeToast(validityStatus)
@@ -49,7 +49,7 @@ class ForgotPasswordFragment : ReplaceFragment() {
 
 
         }
-        return binding.root
+        return viewBinding.root
     }
 
     private fun validateEmail(email: String): String {

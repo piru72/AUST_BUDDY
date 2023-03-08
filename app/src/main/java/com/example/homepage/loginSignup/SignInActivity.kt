@@ -24,15 +24,15 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var progressDialog: ProgressDialog
     private lateinit var database: DatabaseReference
-    private lateinit var binding: ActivitySignInBinding
+    private lateinit var viewBinding: ActivitySignInBinding
     private var helper = HelperSignInSignUp()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        val view = binding.root
+        viewBinding = ActivitySignInBinding.inflate(layoutInflater)
+        val view = viewBinding.root
         setContentView(view)
 
         auth = Firebase.auth
@@ -45,10 +45,10 @@ class SignInActivity : AppCompatActivity() {
 
 
 
-        binding.signinBtn.setOnClickListener {
+        viewBinding.signinBtn.setOnClickListener {
 
-            val email = binding.usersEmail.text.toString()
-            val password = binding.usersPassword.text.toString()
+            val email = viewBinding.usersEmail.text.toString()
+            val password = viewBinding.usersPassword.text.toString()
 
             val validityStatus = helper.validateEmailPasswordFormat(email, password, password)
 
@@ -59,12 +59,12 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
-        binding.goToSignUpPage.setOnClickListener {
+        viewBinding.goToSignUpPage.setOnClickListener {
 
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
-        binding.goToForgotPasswrdFragment.setOnClickListener {
+        viewBinding.goToForgotPasswrdFragment.setOnClickListener {
             replaceFragment(ForgotPasswordFragment())
         }
     }

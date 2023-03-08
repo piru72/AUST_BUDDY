@@ -18,15 +18,15 @@ import com.google.firebase.database.ktx.getValue
 
 
 class RoutineFragment : ReplaceFragment() {
-    private var _binding: FragmentRoutineBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentRoutineBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentRoutineBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentRoutineBinding.inflate(inflater, container, false)
         val context = activity
 
         val user = FirebaseAuth.getInstance().currentUser
@@ -61,7 +61,7 @@ class RoutineFragment : ReplaceFragment() {
                             if (postRoutine != null) {
                                 routineLink = postRoutine.image.toString()
                                 if (context != null) {
-                                    Glide.with(context).load(routineLink).into(binding.images)
+                                    Glide.with(context).load(routineLink).into(viewBinding.images)
                                 }
                             }
                             else
@@ -87,7 +87,7 @@ class RoutineFragment : ReplaceFragment() {
         databaseReferenceSemester.addValueEventListener(postListenerSemester)
 
 
-        return binding.root
+        return viewBinding.root
     }
 
 

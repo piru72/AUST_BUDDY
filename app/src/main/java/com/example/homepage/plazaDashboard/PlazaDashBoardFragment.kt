@@ -19,8 +19,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class PlazaDashBoardFragment : ReplaceFragment() {
-    private lateinit var _binding: FragmentPlazaDashBoardBinding
-    private val binding get() = _binding
+    private lateinit var fragmentBinding: FragmentPlazaDashBoardBinding
+    private val viewBinding get() = fragmentBinding
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -35,20 +35,20 @@ class PlazaDashBoardFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentPlazaDashBoardBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentPlazaDashBoardBinding.inflate(inflater, container, false)
         _inflater = inflater
         auth = Firebase.auth
         database = Firebase.database.reference
 
 
-        return binding.root
+        return viewBinding.root
     }
 
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.postedItemList
+        recycler = viewBinding.postedItemList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = PlazaDashBoardAdapter(_inflater)

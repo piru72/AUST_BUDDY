@@ -15,8 +15,8 @@ import com.google.firebase.ktx.Firebase
 
 class JoinGroupFragment : ReplaceFragment() {
 
-    private var _binding: FragmentJoinGroupBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentJoinGroupBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private val user = FirebaseAuth.getInstance().currentUser
     private lateinit var database: DatabaseReference
 
@@ -25,24 +25,24 @@ class JoinGroupFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        _binding = FragmentJoinGroupBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentJoinGroupBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
         val userId = getCurrentUserId()
         val email = user?.email.toString()
-        binding.joinGroupButtonForm.setOnClickListener {
-            val groupId = binding.groupId.text.toString()
+        viewBinding.joinGroupButtonForm.setOnClickListener {
+            val groupId = viewBinding.groupId.text.toString()
             setInformation(email)
             if (groupId == "")
                 makeToast("Provide group Id")
             else {
                 addNewGroup(userId, getRollOmittedUserId(), groupId)
-                binding.groupId.setText("")
+                viewBinding.groupId.setText("")
                 val action = JoinGroupFragmentDirections.actionJoinGroupFragmentToNavigationUserGroups()
                 findNavController().navigate(action)
             }
 
         }
-        return binding.root
+        return viewBinding.root
     }
 
     private fun addNewGroup(userId: String, rollOmittedUserId: String, groupId: String) {

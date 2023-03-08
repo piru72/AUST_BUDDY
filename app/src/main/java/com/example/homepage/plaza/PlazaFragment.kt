@@ -19,8 +19,8 @@ import com.example.homepage.superClass.ReplaceFragment
 class PlazaFragment : ReplaceFragment() {
 
 
-    private var _binding: FragmentPlazaBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentPlazaBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     private lateinit var viewModel: PlazaViewModel
     private lateinit var recycler: RecyclerView
@@ -32,40 +32,40 @@ class PlazaFragment : ReplaceFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPlazaBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentPlazaBinding.inflate(inflater, container, false)
 
 
         // Moving to the personal dashboard upon clicking this button
-        binding.btnPlazaDashboard.setOnClickListener {
+        viewBinding.btnPlazaDashboard.setOnClickListener {
             val action = PlazaFragmentDirections.actionPlazaFragmentToPlazaDashBoardFragment()
             findNavController().navigate(action)
         }
 
         // Creating the list of buttons
         buttons = ArrayList()
-        (binding.categoryAll as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
-        (binding.categoryOfficial as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
-        (binding.categoryAdvertisement as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
-        (binding.categoryHelp as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
-        (binding.categoryOthers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (viewBinding.categoryAll as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (viewBinding.categoryOfficial as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (viewBinding.categoryAdvertisement as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (viewBinding.categoryHelp as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        (viewBinding.categoryOthers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
         for (button in buttons as ArrayList<Button>) {
             button.setOnClickListener { changeButtonColor(button) }
         }
 
         // Opening a dialog to add an announcement
-        binding.floatingPostItemButton.setOnClickListener {
+        viewBinding.floatingPostItemButton.setOnClickListener {
 
             val addAnnouncementBottomSheetFragment = DialogAddAnnouncement()
             addAnnouncementBottomSheetFragment.show(parentFragmentManager, addAnnouncementBottomSheetFragment.tag)
         }
-        return binding.root
+        return viewBinding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // attaching the recycler view
-        recycler = binding.announcementList
+        recycler = viewBinding.announcementList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
 

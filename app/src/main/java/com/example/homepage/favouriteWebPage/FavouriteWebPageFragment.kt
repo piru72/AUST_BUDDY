@@ -24,8 +24,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class FavouriteWebPageFragment : ReplaceFragment() {
-    private var _binding: FragmentFavouriteWebPageBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentFavouriteWebPageBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private lateinit var auth: FirebaseAuth
     private lateinit var viewModel: FavouriteWebViewModel
     private lateinit var database: DatabaseReference
@@ -37,11 +37,11 @@ class FavouriteWebPageFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentFavouriteWebPageBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentFavouriteWebPageBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
-        binding.floatingAddWebsiteButton.setOnClickListener {
+        viewBinding.floatingAddWebsiteButton.setOnClickListener {
 
 
             val rootLayout = layoutInflater.inflate(R.layout.popup_add_webpage, null)
@@ -61,7 +61,7 @@ class FavouriteWebPageFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.ToDoActivity, // Location to display popup window
+                viewBinding.ToDoActivity, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -92,7 +92,7 @@ class FavouriteWebPageFragment : ReplaceFragment() {
             }
         }
 
-        return binding.root
+        return viewBinding.root
     }
 
 
@@ -114,7 +114,7 @@ class FavouriteWebPageFragment : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.webSiteList
+        recycler = viewBinding.webSiteList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = FavouriteWebAdapter()

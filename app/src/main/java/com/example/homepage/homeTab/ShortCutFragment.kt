@@ -12,17 +12,17 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 class ShortCutFragment : ReplaceFragment() {
-    private var _binding: FragmentShortCutBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentShortCutBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentShortCutBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentShortCutBinding.inflate(inflater, container, false)
 
-        binding.btnIums.setOnClickListener {
+        viewBinding.btnIums.setOnClickListener {
             val action = ShortCutFragmentDirections.actionShortCutFragmentToWebView2(
                 getString(R.string.universityStudentPortalLink),
                 "view"
@@ -31,7 +31,7 @@ class ShortCutFragment : ReplaceFragment() {
         }
 
 
-        binding.btnCalender.setOnClickListener {
+        viewBinding.btnCalender.setOnClickListener {
             val action = ShortCutFragmentDirections.actionShortCutFragmentToWebView2(
                 getString(R.string.universityAcademicCalenderLink),
                 "view"
@@ -39,7 +39,7 @@ class ShortCutFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
 
-        binding.noticeButton.setOnClickListener {
+        viewBinding.noticeButton.setOnClickListener {
             val action = ShortCutFragmentDirections.actionShortCutFragmentToWebView2(
                 getString(R.string.universityNoticeLink),
                 "view"
@@ -48,7 +48,7 @@ class ShortCutFragment : ReplaceFragment() {
         }
 
 
-        binding.btnFavouriteWebPage.setOnClickListener {
+        viewBinding.btnFavouriteWebPage.setOnClickListener {
             val action = ShortCutFragmentDirections.actionShortCutFragmentToFavouriteWebPageFragment()
             findNavController().navigate(action)
         }
@@ -60,7 +60,7 @@ class ShortCutFragment : ReplaceFragment() {
         // Getting the users department and making a database reference with it
         setInformation(email)
 
-        binding.btnCgpa.setOnClickListener {
+        viewBinding.btnCgpa.setOnClickListener {
 
             if (getShortDepartment() != "cse") {
                 makeToast("Under development")
@@ -74,7 +74,7 @@ class ShortCutFragment : ReplaceFragment() {
         }
 
 
-        return binding.root
+        return viewBinding.root
     }
 
 

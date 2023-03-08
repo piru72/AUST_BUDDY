@@ -9,15 +9,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BaseActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityBaseBinding
+    private lateinit var viewBinding: ActivityBaseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityBaseBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        viewBinding = ActivityBaseBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        val navView: BottomNavigationView = viewBinding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_base)
         // Passing each menu ID as a set of Ids because each

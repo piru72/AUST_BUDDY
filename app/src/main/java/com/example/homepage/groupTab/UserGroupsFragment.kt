@@ -24,8 +24,8 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class UserGroupsFragment : ReplaceFragment() {
-    private var _binding: FragmentUserGroupsBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentUserGroupsBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private lateinit var viewModel: UserGroupsViewModel
     private lateinit var recycler: RecyclerView
     private lateinit var adapter: UserGroupAdapter
@@ -38,11 +38,11 @@ class UserGroupsFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentUserGroupsBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentUserGroupsBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
         _inflater = inflater
-        binding.floatingActionButton.setOnClickListener {
+        viewBinding.floatingActionButton.setOnClickListener {
 
 
             val rootLayout = layoutInflater.inflate(R.layout.popup_create_join_class, null)
@@ -60,7 +60,7 @@ class UserGroupsFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.userGroupFragment, // Location to display popup window
+                viewBinding.userGroupFragment, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -79,13 +79,13 @@ class UserGroupsFragment : ReplaceFragment() {
 
 
         }
-        return binding.root
+        return viewBinding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.UserGroupListRecycle
+        recycler = viewBinding.UserGroupListRecycle
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = UserGroupAdapter(_inflater)

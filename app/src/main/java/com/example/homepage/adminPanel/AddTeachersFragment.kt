@@ -13,8 +13,8 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class AddTeachersFragment : ReplaceFragment() {
-    private lateinit var _binding: FragmentAddTeachersBinding
-    private val viewBinding get() = _binding
+    private lateinit var fragmentBinding: FragmentAddTeachersBinding
+    private val viewBinding get() = fragmentBinding
     private lateinit var database: DatabaseReference
 
     private val arg: AddCourseFragmentArgs by navArgs()
@@ -22,7 +22,7 @@ class AddTeachersFragment : ReplaceFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAddTeachersBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentAddTeachersBinding.inflate(inflater, container, false)
 
         setupButtons()
 

@@ -23,15 +23,15 @@ import java.util.*
 
 
 class HomeFragment : ReplaceFragment() {
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentHomeBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
         // Getting the users email
         val user = FirebaseAuth.getInstance().currentUser
@@ -65,7 +65,7 @@ class HomeFragment : ReplaceFragment() {
 
 
 
-        binding.btnPlaza.setOnClickListener {
+        viewBinding.btnPlaza.setOnClickListener {
 
             // Providing warning if semester not given
             if (userSemester == "Not given") {
@@ -86,7 +86,7 @@ class HomeFragment : ReplaceFragment() {
                 popupWindow.elevation = 20.5F
                 popupWindow.showAtLocation(
 
-                    binding.fragmentHome, // Location to display popup window
+                    viewBinding.fragmentHome, // Location to display popup window
                     Gravity.CENTER, // Exact position of layout to display popup
                     0, // X offset
                     -500// Y offset
@@ -116,23 +116,23 @@ class HomeFragment : ReplaceFragment() {
 
 
 
-        binding.btnBuses.setOnClickListener {
+        viewBinding.btnBuses.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
             findNavController().navigate(action)
         }
 
 
-        binding.btnRequest.setOnClickListener {
+        viewBinding.btnRequest.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToRequestFragment()
             findNavController().navigate(action)
         }
 
-//        binding.btnStoreDashboard.setOnClickListener {
+//        viewBinding.btnStoreDashboard.setOnClickListener {
 //            val action = HomeFragmentDirections.actionNavigationHomeToStoreDashboardFragment()
 //            findNavController().navigate(action)
 //        }
 
-        binding.btnFavouriteTeachers.setOnClickListener {
+        viewBinding.btnFavouriteTeachers.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
                 "user-favouriteTeachers",
                 "view"
@@ -152,7 +152,7 @@ class HomeFragment : ReplaceFragment() {
 //
 //            findNavController().navigate(action)
         }
-        binding.btnRoutine.setOnClickListener {
+        viewBinding.btnRoutine.setOnClickListener {
 
             if (userSection == "Not given" || userSemester == "Not given" || userSection == "" || userSemester == "") {
 
@@ -179,7 +179,7 @@ class HomeFragment : ReplaceFragment() {
                 popupWindow.elevation = 20.5F
                 popupWindow.showAtLocation(
 
-                    binding.fragmentHome, // Location to display popup window
+                    viewBinding.fragmentHome, // Location to display popup window
                     Gravity.CENTER, // Exact position of layout to display popup
                     0, // X offset
                     -500// Y offset
@@ -200,14 +200,14 @@ class HomeFragment : ReplaceFragment() {
 
         }
 
-        binding.btnShortCuts.setOnClickListener {
+        viewBinding.btnShortCuts.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToShortCutFragment()
             findNavController().navigate(action)
 
         }
 
 
-        return binding.root
+        return viewBinding.root
     }
 
 

@@ -23,8 +23,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class RequestFragment : ReplaceFragment() {
-    private lateinit var _binding: FragmentRequestBinding
-    private val binding get() = _binding
+    private lateinit var fragmentBinding: FragmentRequestBinding
+    private val viewBinding get() = fragmentBinding
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
@@ -33,21 +33,21 @@ class RequestFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentRequestBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentRequestBinding.inflate(inflater, container, false)
         database = Firebase.database.reference
         auth = Firebase.auth
 
-        binding.btnRequestForCourse.setOnClickListener {
+        viewBinding.btnRequestForCourse.setOnClickListener {
             val action = RequestFragmentDirections.actionRequestFragmentToAddCourseFragment("admin-course-request-list","view")
             findNavController().navigate(action)
         }
-        binding.btnRequestForTeacher.setOnClickListener {
+        viewBinding.btnRequestForTeacher.setOnClickListener {
             val action = RequestFragmentDirections.actionRequestFragmentToAddTeachersFragment("admin-teacher-request-list","view")
             findNavController().navigate(action)
         }
 
 
-        binding.btnReportBug.setOnClickListener {
+        viewBinding.btnReportBug.setOnClickListener {
 
             val rootLayout = layoutInflater.inflate(R.layout.popup_bug_report, null)
 
@@ -65,7 +65,7 @@ class RequestFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.requestScreen,
+                viewBinding.requestScreen,
                 Gravity.CENTER,
                 0,
                 -500
@@ -91,12 +91,12 @@ class RequestFragment : ReplaceFragment() {
 
             }
         }
-        binding.btnBecomeAdmin.setOnClickListener {
+        viewBinding.btnBecomeAdmin.setOnClickListener {
             val becomeAdminBottomSheetFragment = DialogYearSemesterChooser("BecomeAdmin")
             becomeAdminBottomSheetFragment.show(parentFragmentManager, becomeAdminBottomSheetFragment.tag)
         }
 
-        return binding.root
+        return viewBinding.root
     }
 
 

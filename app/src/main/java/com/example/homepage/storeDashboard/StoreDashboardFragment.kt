@@ -24,8 +24,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class StoreDashboardFragment : ReplaceFragment() {
-    private lateinit var _binding: FragmentStoreDashboardBinding
-    private val binding get() = _binding
+    private lateinit var fragmentBinding: FragmentStoreDashboardBinding
+    private val viewBinding get() = fragmentBinding
 
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -40,12 +40,12 @@ class StoreDashboardFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentStoreDashboardBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentStoreDashboardBinding.inflate(inflater, container, false)
         _inflater = inflater
         auth = Firebase.auth
         database = Firebase.database.reference
         val user = auth.currentUser!!.uid
-        binding.floatingPostItemButton.setOnClickListener {
+        viewBinding.floatingPostItemButton.setOnClickListener {
             val rootLayout = layoutInflater.inflate(R.layout.popup_announcement, null)
 
             val productName = rootLayout.findViewById<EditText>(R.id.productNamePop)
@@ -67,7 +67,7 @@ class StoreDashboardFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.postedItemsListLayout,
+                viewBinding.postedItemsListLayout,
                 Gravity.CENTER,
                 0,
                 -500
@@ -119,7 +119,7 @@ class StoreDashboardFragment : ReplaceFragment() {
 
 
         }
-        return binding.root
+        return viewBinding.root
     }
 
     private fun addNewMaterial(
@@ -160,7 +160,7 @@ class StoreDashboardFragment : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.postedItemList
+        recycler = viewBinding.postedItemList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = StoreDashBoardAdapter(_inflater)

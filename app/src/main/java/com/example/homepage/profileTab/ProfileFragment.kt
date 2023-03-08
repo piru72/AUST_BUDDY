@@ -22,8 +22,8 @@ import com.google.firebase.database.ktx.getValue
 
 class ProfileFragment : ReplaceFragment() {
 
-    private var _binding: FragmentProfileBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentProfileBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +46,7 @@ class ProfileFragment : ReplaceFragment() {
                 if (post != null) {
                     userEmail = post.email.toString()
                     if (userEmail == email) {
-                        binding.btnAdminPanel.visibility = View.VISIBLE
+                        viewBinding.btnAdminPanel.visibility = View.VISIBLE
                     }
                 }
             }
@@ -62,32 +62,32 @@ class ProfileFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentProfileBinding.inflate(inflater, container, false)
 
         // Getting the users email
 
-        return binding.root
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnAdminPanel.setOnClickListener {
+        viewBinding.btnAdminPanel.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
             findNavController().navigate(action)
         }
-        binding.btnEditProfile.setOnClickListener {
+        viewBinding.btnEditProfile.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToEditProfileFragment2()
             findNavController().navigate(action)
         }
-        binding.btnPrivacy.setOnClickListener {
+        viewBinding.btnPrivacy.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToPrivacyFragment()
             findNavController().navigate(action)
         }
-        binding.btnSettings.setOnClickListener {
+        viewBinding.btnSettings.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToSettingsFragment()
             findNavController().navigate(action)
         }
-        binding.btnInviteFriend.setOnClickListener {
+        viewBinding.btnInviteFriend.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
             intent.putExtra(
@@ -96,11 +96,11 @@ class ProfileFragment : ReplaceFragment() {
             )
             context?.startActivity(Intent.createChooser(intent, "Share"))
         }
-        binding.btnAboutUs.setOnClickListener {
+        viewBinding.btnAboutUs.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToAboutDevFragment()
             findNavController().navigate(action)
         }
-        binding.btnLogOut.setOnClickListener {
+        viewBinding.btnLogOut.setOnClickListener {
 
             //  GOING FROM FRAGMENT TO ACTIVITY
             FirebaseAuth.getInstance().signOut()

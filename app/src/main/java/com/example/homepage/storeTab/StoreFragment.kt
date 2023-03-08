@@ -19,8 +19,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class StoreFragment : ReplaceFragment() {
-    private var _binding: FragmentStoreBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentStoreBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     private lateinit var viewModel: StoreViewModel
     private lateinit var recycler: RecyclerView
@@ -33,15 +33,15 @@ class StoreFragment : ReplaceFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentStoreBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentStoreBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
-        return binding.root
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.materialList
+        recycler = viewBinding.materialList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = StoreAdapter()

@@ -19,8 +19,8 @@ import com.google.firebase.ktx.Firebase
 
 
 class BugReportListFragment : Fragment() {
-    private lateinit var _binding: FragmentBugReportListBinding
-    private val binding get() = _binding
+    private lateinit var fragmentBinding: FragmentBugReportListBinding
+    private val viewBinding get() = fragmentBinding
 
     private lateinit var viewModel: BugReportViewModel
     private lateinit var recycler: RecyclerView
@@ -33,15 +33,15 @@ class BugReportListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        _binding = FragmentBugReportListBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentBugReportListBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
-        return binding.root
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler = binding.bugReportList
+        recycler = viewBinding.bugReportList
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.setHasFixedSize(true)
         adapter = BugReportAdapter()

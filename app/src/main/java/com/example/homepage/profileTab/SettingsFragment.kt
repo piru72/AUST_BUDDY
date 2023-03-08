@@ -19,8 +19,8 @@ import com.google.firebase.auth.FirebaseUser
 
 class SettingsFragment : ReplaceFragment() {
 
-    private var _binding: FragmentSettingsBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentSettingsBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
 
 
@@ -30,16 +30,16 @@ class SettingsFragment : ReplaceFragment() {
     ): View {
 
         container?.removeAllViews()
-        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentSettingsBinding.inflate(inflater, container, false)
 
 
-        binding.btnChangePassword.setOnClickListener {
+        viewBinding.btnChangePassword.setOnClickListener {
 
             val user: FirebaseUser? = FirebaseAuth.getInstance().currentUser
             val currentUserEmail = user?.email.toString()
-            val currentUserPassword = binding.tvCurrentUserPassword.text.toString()
-            val newUserPassword = binding.tvNewUserPasswordType.text.toString()
-            val newUserPasswordRetype = binding.tvNewUserPasswordRetype.text.toString()
+            val currentUserPassword = viewBinding.tvCurrentUserPassword.text.toString()
+            val newUserPassword = viewBinding.tvNewUserPasswordType.text.toString()
+            val newUserPasswordRetype = viewBinding.tvNewUserPasswordRetype.text.toString()
             val helper = this.context?.let {  HelperSignInSignUp() }
             val validStatus = helper?.validateEmailPasswordFormat(
                 currentUserEmail,
@@ -53,17 +53,17 @@ class SettingsFragment : ReplaceFragment() {
                 if (validStatus != null) {
                     makeToast(validStatus)
                 }
-                binding.tvNewUserPasswordRetype.setText("")
+                viewBinding.tvNewUserPasswordRetype.setText("")
             }
 
 
         }
 
-        binding.goToForgotPasswrdFragment.setOnClickListener {
+        viewBinding.goToForgotPasswrdFragment.setOnClickListener {
             val action = SettingsFragmentDirections.actionSettingsFragmentToForgotPasswordFragment()
             findNavController().navigate(action)
         }
-        return binding.root
+        return viewBinding.root
     }
 
 // The method takes current users email (currentUserEmail), current users old password (oldUserPassword), new users password (newUserPassword) as parameter and change the user password to newUserPassword

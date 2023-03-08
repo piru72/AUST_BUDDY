@@ -17,8 +17,8 @@ import com.google.firebase.ktx.Firebase
 
 class CreateGroupFragment : ReplaceFragment() {
 
-    private var _binding: FragmentCreateGroupBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentCreateGroupBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private lateinit var auth: FirebaseAuth
     private val user = FirebaseAuth.getInstance().currentUser
     private lateinit var database: DatabaseReference
@@ -27,15 +27,15 @@ class CreateGroupFragment : ReplaceFragment() {
         savedInstanceState: Bundle?
     ): View? {
         container?.removeAllViews()
-        _binding = FragmentCreateGroupBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentCreateGroupBinding.inflate(inflater, container, false)
 
         database = Firebase.database.reference
 
 
-        binding.createGroupButtonForm.setOnClickListener {
+        viewBinding.createGroupButtonForm.setOnClickListener {
 
-            val groupName = binding.groupName.text.toString()
-            val groupDetails = binding.groupDetails.text.toString()
+            val groupName = viewBinding.groupName.text.toString()
+            val groupDetails = viewBinding.groupDetails.text.toString()
             val email = user?.email.toString()
             setInformation(email)
             if (groupName == "")
@@ -44,8 +44,8 @@ class CreateGroupFragment : ReplaceFragment() {
                 makeToast("Provide Group Details ")
             else {
                 createNewGroup(email, getUserId(), getRollOmittedUserId(), groupName, groupDetails)
-                binding.groupName.setText("")
-                binding.groupDetails.setText("")
+                viewBinding.groupName.setText("")
+                viewBinding.groupDetails.setText("")
                 val action = CreateGroupFragmentDirections.actionCreateGroupFragmentToNavigationUserGroups()
                 findNavController().navigate(action)
             }
@@ -53,7 +53,7 @@ class CreateGroupFragment : ReplaceFragment() {
         }
 
 
-        return binding.root
+        return viewBinding.root
     }
 
     private fun createNewGroup(

@@ -16,8 +16,8 @@ import com.example.homepage.databinding.FragmentAdminRequestBinding
 class AdminRequestFragment : Fragment() {
 
 
-    private var _binding: FragmentAdminRequestBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentAdminRequestBinding? = null
+    private val viewBinding get() = fragmentBinding!!
     private lateinit var adminRequestRecyclerView: RecyclerView
 
     lateinit var adapter: AdminReqeustAdapter
@@ -29,13 +29,13 @@ class AdminRequestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentAdminRequestBinding.inflate(inflater, container, false)
-        return binding.root
+        fragmentBinding = FragmentAdminRequestBinding.inflate(inflater, container, false)
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adminRequestRecyclerView = binding.recyclerView
+        adminRequestRecyclerView = viewBinding.recyclerView
         adminRequestRecyclerView.layoutManager = LinearLayoutManager(context)
         adminRequestRecyclerView.setHasFixedSize(true)
         adapter = AdminReqeustAdapter()

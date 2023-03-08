@@ -24,8 +24,8 @@ class TeachersFragment : ReplaceFragment() {
     private lateinit var viewModel: teacherViewModel
     private lateinit var userRecyclerView: RecyclerView
     lateinit var adapter: teacherAdapter
-    private var _binding: FragmentTeachersBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentTeachersBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,18 +34,18 @@ class TeachersFragment : ReplaceFragment() {
         // Inflate the layout for this fragment and removing all previous views
         container?.removeAllViews()
 
-        _binding = FragmentTeachersBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentTeachersBinding.inflate(inflater, container, false)
 
         // If the user is navigating to this page from the home page only then this button will be visible
         if (args.viewPath == "sourceDepartmentChooser")
-            binding.btnOther.visibility = View.GONE
+            viewBinding.btnOther.visibility = View.GONE
 
-        binding.btnOther.setOnClickListener {
+        viewBinding.btnOther.setOnClickListener {
             val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
             findNavController().navigate(action)
         }
 
-        return binding.root
+        return viewBinding.root
     }
 
 

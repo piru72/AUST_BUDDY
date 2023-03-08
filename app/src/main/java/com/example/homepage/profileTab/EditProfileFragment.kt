@@ -25,8 +25,8 @@ import com.google.firebase.ktx.Firebase
 
 class EditProfileFragment : ReplaceFragment() {
 
-    private lateinit var _binding: FragmentEditProfileBinding
-    private val binding get() = _binding
+    private lateinit var fragmentBinding: FragmentEditProfileBinding
+    private val viewBinding get() = fragmentBinding
     private val user = FirebaseAuth.getInstance().currentUser
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
@@ -38,7 +38,7 @@ class EditProfileFragment : ReplaceFragment() {
     ): View {
         // Inflate the layout for this fragment
         container?.removeAllViews()
-        _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
+        fragmentBinding = FragmentEditProfileBinding.inflate(inflater, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
 
@@ -47,11 +47,11 @@ class EditProfileFragment : ReplaceFragment() {
 
         val modifiedEmail = email.replace('.', '-')
         setInformation(email)
-        binding.IdReal.text = getUserId()
-        binding.fullEmailReal.text = email
-        binding.departmentReal.text = getDepartment()
-        binding.sessionReal.text = getSession()
-        binding.userNameReal.text = getUserName()
+        viewBinding.IdReal.text = getUserId()
+        viewBinding.fullEmailReal.text = email
+        viewBinding.departmentReal.text = getDepartment()
+        viewBinding.sessionReal.text = getSession()
+        viewBinding.userNameReal.text = getUserName()
 
 
 
@@ -62,13 +62,13 @@ class EditProfileFragment : ReplaceFragment() {
 
                 val post = dataSnapshot.getValue<UserAllData>()
                 if (post != null) {
-                    binding.IdReal.text = post.userStudentId
-                    binding.fullEmailReal.text = post.userEmail
-                    binding.departmentReal.text = getDepartment()
-                    binding.sessionReal.text = post.userSession
-                    binding.userNameReal.text = post.userName
-                    binding.semesterReal.text = post.userSemester
-                    binding.sectionReal.text = post.userSection
+                    viewBinding.IdReal.text = post.userStudentId
+                    viewBinding.fullEmailReal.text = post.userEmail
+                    viewBinding.departmentReal.text = getDepartment()
+                    viewBinding.sessionReal.text = post.userSession
+                    viewBinding.userNameReal.text = post.userName
+                    viewBinding.semesterReal.text = post.userSemester
+                    viewBinding.sectionReal.text = post.userSection
                 }
 
             }
@@ -90,21 +90,21 @@ class EditProfileFragment : ReplaceFragment() {
 //        }
 
 
-        binding.btnUpdateSemester.setOnClickListener {
+        viewBinding.btnUpdateSemester.setOnClickListener {
             val becomeAdminBottomSheetFragment = DialogYearSemesterChooser("UpdateSemester")
             becomeAdminBottomSheetFragment.show(
                 parentFragmentManager,
                 becomeAdminBottomSheetFragment.tag
             )
         }
-        binding.btnUpdateSection.setOnClickListener {
+        viewBinding.btnUpdateSection.setOnClickListener {
 
             val rootLayout = layoutInflater.inflate(R.layout.popup_update_section, null)
 
             val cancelButton = rootLayout.findViewById<Button>(R.id.btnCancel)
             val updateButton = rootLayout.findViewById<Button>(R.id.btnUpdateNow)
             val section = rootLayout.findViewById<EditText>(R.id.editTextSection)
-            section.text = binding.sectionReal.text as Editable?
+            section.text = viewBinding.sectionReal.text as Editable?
 
             val popupWindow = PopupWindow(
                 rootLayout,
@@ -116,7 +116,7 @@ class EditProfileFragment : ReplaceFragment() {
             popupWindow.elevation = 20.5F
             popupWindow.showAtLocation(
 
-                binding.fragmentEditProfile, // Location to display popup window
+                viewBinding.fragmentEditProfile, // Location to display popup window
                 Gravity.CENTER, // Exact position of layout to display popup
                 0, // X offset
                 -500// Y offset
@@ -127,12 +127,12 @@ class EditProfileFragment : ReplaceFragment() {
                 popupWindow.dismiss()
             }
             updateButton.setOnClickListener {
-                val userName = binding.userNameReal.text.toString()
-                val usersEmail = binding.fullEmailReal.text.toString()
-                val studentId = binding.IdReal.text.toString()
-                val session = binding.sessionReal.text.toString()
-                val department = binding.departmentReal.text.toString()
-                val semester = binding.semesterReal.text.toString()
+                val userName = viewBinding.userNameReal.text.toString()
+                val usersEmail = viewBinding.fullEmailReal.text.toString()
+                val studentId = viewBinding.IdReal.text.toString()
+                val session = viewBinding.sessionReal.text.toString()
+                val department = viewBinding.departmentReal.text.toString()
+                val semester = viewBinding.semesterReal.text.toString()
                 val sectionGiven = section.text.toString().uppercase()
 
                 if ( sectionGiven == "A" || sectionGiven =="B" || sectionGiven == "C")
@@ -156,7 +156,7 @@ class EditProfileFragment : ReplaceFragment() {
         }
 
 
-        return binding.root
+        return viewBinding.root
     }
 
     private fun updateSemester(

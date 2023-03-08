@@ -10,16 +10,16 @@ import com.example.homepage.databinding.FragmentDepartmentChooserBinding
 
 
 class DepartmentChooserFragment : Fragment() {
-    private var _binding: FragmentDepartmentChooserBinding? = null
-    private val binding get() = _binding!!
+    private var fragmentBinding: FragmentDepartmentChooserBinding? = null
+    private val viewBinding get() = fragmentBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         container?.removeAllViews()
-        _binding = FragmentDepartmentChooserBinding.inflate(inflater, container, false)
-        binding.btnCse.setOnClickListener {
+        fragmentBinding = FragmentDepartmentChooserBinding.inflate(inflater, container, false)
+        viewBinding.btnCse.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/cse",
@@ -27,7 +27,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnEee.setOnClickListener {
+        viewBinding.btnEee.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/eee",
@@ -35,7 +35,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnTe.setOnClickListener {
+        viewBinding.btnTe.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/te",
@@ -43,7 +43,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnMe.setOnClickListener {
+        viewBinding.btnMe.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/me",
@@ -51,7 +51,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnIpe.setOnClickListener {
+        viewBinding.btnIpe.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/ipe",
@@ -59,7 +59,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnAs.setOnClickListener {
+        viewBinding.btnAs.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/as",
@@ -67,7 +67,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        binding.btnCe.setOnClickListener {
+        viewBinding.btnCe.setOnClickListener {
             val action =
                 DepartmentChooserFragmentDirections.actionDepartmentChooserFragmentToTeachersFragment(
                     "teachers-list/ce",
@@ -75,7 +75,7 @@ class DepartmentChooserFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        return binding.root
+        return viewBinding.root
     }
 
 }
