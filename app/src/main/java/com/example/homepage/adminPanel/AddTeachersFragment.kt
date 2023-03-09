@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.superClass.ValidationHelper
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
@@ -48,21 +49,17 @@ class AddTeachersFragment : ReplaceFragment() {
             val teachersContactNo = teachersContactNoText.text.toString()
             val teacherEmail = teachersEmailText.text.toString()
             val teachersImageLink = teachersImageLinkForm.text.toString()
+            val validity = ValidationHelper()
+            val verdict = validity.validateTeacherForm(
+                teachersName,
+                teachersDesignation,
+                teachersContactNo,
+                teacherEmail,
+                teachersImageLink
+            )
 
             when {
-
-                teachersName.contains(".") -> makeToast("Provide valid teachers name without . and only alphabets")
-                teachersName == "" -> makeToast("Provide teachers name")
-                teachersDesignation == "" -> makeToast("Provide teachers designation")
-                teachersContactNo == "" -> makeToast("Provide teachers contact no or type Not Available")
-                teacherEmail == "" -> makeToast(" Provide teachers email or type Not Available")
-                teachersImageLink == "" -> makeToast("Provide teachers image link ")
-                !validNumber(teachersContactNo) && teachersContactNo != "Not Available" -> makeToast(
-                    "Provide a valid contact no"
-                )
-                !validEmail(teacherEmail) -> makeToast("Provide a valid email")
-                !validWebsiteLink(teachersImageLink) -> makeToast("Provide valid image link")
-
+                verdict != "Valid Data" -> makeToast(verdict)
                 else -> {
                     writeNewTeacher(
                         teachersName,
@@ -117,12 +114,12 @@ class AddTeachersFragment : ReplaceFragment() {
 
         if (pushingPath == "admin-teacher-request-list") {
             val pushKey = teacherEmail.toString()
-            val newPush = pushKey.replace(".", "-")
+            val newPush1 = pushKey.replace(".", "-")
 
-            val childUpdate = hashMapOf<String, Any>(
-                "user-favouriteTeachers/${getCurrentUserId()}/$newPush" to teachersInformation
+            val childUpdate1 = hashMapOf<String, Any>(
+                "user-favouriteTeachers/${getCurrentUserId()}/$newPush1" to teachersInformation
             )
-            database.updateChildren(childUpdate)
+            database.updateChildren(childUpdate1)
 
         }
 

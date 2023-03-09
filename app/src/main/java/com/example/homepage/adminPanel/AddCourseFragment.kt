@@ -9,6 +9,7 @@ import com.example.homepage.Firebase.FirebaseUtils
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.superClass.ValidationHelper
 
 
 class AddCourseFragment : ReplaceFragment() {
@@ -57,15 +58,12 @@ class AddCourseFragment : ReplaceFragment() {
             val department = spinnerDepartmentList.selectedItem.toString()
             val year = spinnerYearList.selectedItem.toString()
             val semester = spinnerSemesterList.selectedItem.toString()
-            val selectYour = "Select your "
+            val adminHelper = ValidationHelper()
+            val verdict = adminHelper.validateCourseForm(department ,year,semester,courseCode,courseName)
 
             when {
-                department == "Department" -> makeToast("$selectYour $department")
-                year == "Year" -> makeToast("$selectYour $year")
-                semester == "Semester" -> makeToast("$selectYour $semester")
-                courseCode.isBlank() -> makeToast("$selectYour Course Code")
-                courseName.isBlank() -> makeToast("$selectYour  Course Name")
-                !validWebsiteLink(courseDriveLink) -> makeToast("Provide an valid drive link. ")
+                verdict != "Valid Data" -> makeToast(verdict)
+                !adminHelper.validWebsiteLink(courseDriveLink) -> makeToast("Provide an valid drive link. ")
                 else -> {
                     writeNewCourse(
                         courseCode,
