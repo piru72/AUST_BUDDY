@@ -101,8 +101,6 @@ Vapp/src/main/java/com/example/homepage/favouriteWebPage/Adapter/FavouriteWebAda
 Tapp/src/main/java/com/example/homepage/adminPanel/bugReports/Model/BugReportsData.kt,9\3\938fd289ee88a2a79548eeb19db8b175a77c4bc7
 „
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherRepo/TeacherRepository.kt,5\e\5e0bc8765041194ad414f50dbd71df5dfee60fa2
-
-Oapp/src/main/java/com/example/homepage/teachersPage/TeacherModel/TeacherData.kt,c\e\ce5befac6ae871139b0167b5a044effcc1a7d03b
 …
 Uapp/src/main/java/com/example/homepage/favouriteWebPage/Model/FavouriteWebpageData.kt,c\0\c0c924bfd32cece3a3f8f45499721408eccf758b
 l

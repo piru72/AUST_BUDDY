@@ -6,12 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.homepage.databinding.FragmentAddTeachersBinding
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.helperClass.ValidationHelper
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 class AddTeachersFragment : ReplaceFragment() {
     private lateinit var fragmentBinding: FragmentAddTeachersBinding
@@ -44,28 +43,26 @@ class AddTeachersFragment : ReplaceFragment() {
     private fun validateForm() {
 
         viewBinding.apply {
-            val teachersName = teachersName.text.toString()
-            val teachersDesignation = teachersDesignation.text.toString()
-            val teachersContactNo = teachersContactNoText.text.toString()
-            val teacherEmail = teachersEmailText.text.toString()
-            val teachersImageLink = teachersImageLinkForm.text.toString()
+            val name = teachersName.text.toString()
+            val img = teachersImageLinkForm.text.toString()
+            val phone = teachersContactNoText.text.toString()
+            val designation = teachersDesignation.text.toString()
+            val email = teachersEmailText.text.toString()
+            val teacher = TeacherData(name, img, phone, designation, email)
+
+
             val validity = ValidationHelper()
-            val verdict = validity.validateTeacherForm(
-                teachersName,
-                teachersDesignation,
-                teachersContactNo,
-                teacherEmail,
-                teachersImageLink
-            )
+            val childUpdater = ChildUpdaterHelper()
+            val verdict = validity.validateTeacherForm(teacher)
+
 
             when {
                 verdict != "Valid Data" -> makeToast(verdict)
                 else -> {
-                    writeNewTeacher(
-                        teachersName,
-                        teachersDesignation,
-                        teachersContactNo,
-                        teacherEmail, teachersImageLink
+                    childUpdater.writeNewTeacher(
+                        teacher,
+                        arg.reference,
+                        getCurrentUserId()
                     )
                     clearForm()
                     makeToast("Teachers data added successfully")
@@ -89,42 +86,5 @@ class AddTeachersFragment : ReplaceFragment() {
         }
     }
 
-
-    private fun writeNewTeacher(
-        teachersName: String,
-        teachersDesignation: String,
-        teachersContactNo: String,
-        teacherEmail: String,
-        teachersImageLink: String
-    ) {
-        val newTeacher = TeacherData(
-            teachersName,
-            teachersImageLink,
-            teachersDesignation,
-            teachersContactNo,
-            teacherEmail
-        )
-        val newPush = teacherEmail.replace(".", "-")
-        val pushingPath = arg.reference
-        database = Firebase.database.reference
-        val teachersInformation = newTeacher.toMap()
-        val childUpdate = hashMapOf<String, Any>(
-            "/$pushingPath/$newPush" to teachersInformation
-        )
-
-        if (pushingPath == "admin-teacher-request-list") {
-            val pushKey = teacherEmail.toString()
-            val newPush1 = pushKey.replace(".", "-")
-
-            val childUpdate1 = hashMapOf<String, Any>(
-                "user-favouriteTeachers/${getCurrentUserId()}/$newPush1" to teachersInformation
-            )
-            database.updateChildren(childUpdate1)
-
-        }
-
-        database.updateChildren(childUpdate)
-
-    }
 
 }

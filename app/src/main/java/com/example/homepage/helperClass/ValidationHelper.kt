@@ -1,5 +1,6 @@
 package com.example.homepage.helperClass
 
+import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -27,25 +28,21 @@ class ValidationHelper {
     }
 
     fun validateTeacherForm(
-        teachersName: String,
-        teachersDesignation: String,
-        teachersContactNo: String,
-        teacherEmail: String,
-        teachersImageLink: String
+        teacher: TeacherData
     ): String {
 
         return when {
 
 
-            teachersName.contains(".") -> ("Provide valid teachers name without . and only alphabets")
-            teachersName == "" -> ("Provide teachers name")
-            teachersDesignation == "" -> ("Provide teachers designation")
-            teachersContactNo == "" -> ("Provide teachers contact no or type Not Available")
-            teacherEmail == "" -> (" Provide teachers email or type Not Available")
-            teachersImageLink == "" -> ("Provide teachers image link ")
-            !validNumber(teachersContactNo) && teachersContactNo != "Not Available" -> "Provide a valid contact no"
-            !validEmail(teacherEmail) -> ("Provide a valid email")
-            !validWebsiteLink(teachersImageLink) -> ("Provide valid image link")
+            teacher.name?.contains(".") == true -> ("Provide valid teachers name without . and only alphabets")
+            teacher.name == "" -> ("Provide teachers name")
+            teacher.designation == "" -> ("Provide teachers designation")
+            teacher.phone == "" -> ("Provide teachers contact no or type Not Available")
+            teacher.email == "" -> (" Provide teachers email or type Not Available")
+            teacher.img == "" -> ("Provide teachers image link ")
+            !teacher.phone?.let { validNumber(it) }!! && teacher.phone != "Not Available" -> "Provide a valid contact no"
+            !teacher.email?.let { validEmail(it) }!! -> ("Provide a valid email")
+            !teacher.img?.let { validWebsiteLink(it) }!! -> ("Provide valid image link")
 
             else -> {
                 "Valid Data"
