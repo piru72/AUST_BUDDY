@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.homepage.helperClass.Firebase.FirebaseUtils
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.helperClass.ValidationHelper
 
@@ -15,17 +15,14 @@ import com.example.homepage.helperClass.ValidationHelper
 class AddCourseFragment : ReplaceFragment() {
     private lateinit var fragmentBinding: FragmentAddCourseBinding
     private val viewBinding get() = fragmentBinding
-    private var firebaseDatabase = FirebaseUtils.getDatabaseReference()
+
     private val args: AddCourseFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        container?.removeAllViews()
-
         fragmentBinding = FragmentAddCourseBinding.inflate(inflater, container, false)
-
 
         setupButtons()
 
@@ -47,31 +44,27 @@ class AddCourseFragment : ReplaceFragment() {
     }
 
 
-
-
     private fun validateForm() {
 
-        viewBinding.apply{
+        viewBinding.apply {
             val courseCode = courseCode.text.toString()
             val courseName = courseName.text.toString()
             val courseDriveLink = courseDriveLinkText.text.toString()
             val department = spinnerDepartmentList.selectedItem.toString()
             val year = spinnerYearList.selectedItem.toString()
             val semester = spinnerSemesterList.selectedItem.toString()
+            val yearSemester = "year" + year + "semester" + semester
+            val requestingPath = "$department/$yearSemester/$courseCode"
+            val course = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
+
             val adminHelper = ValidationHelper()
-            val verdict = adminHelper.validateCourseForm(department ,year,semester,courseCode,courseName)
+            val childUpdater = ChildUpdaterHelper()
+            val verdict = adminHelper.validateCourseForm(department, year, semester, course)
 
             when {
                 verdict != "Valid Data" -> makeToast(verdict)
-                !adminHelper.validWebsiteLink(courseDriveLink) -> makeToast("Provide an valid drive link. ")
                 else -> {
-                    writeNewCourse(
-                        courseCode,
-                        courseName,
-                        courseDriveLink,
-                        department,
-                        "year" + year + "semester" + semester
-                    )
+                    childUpdater.writeNewCourse(course, args.reference)
                     makeToast("Request sent to Admins!")
                     clearForm()
 
@@ -88,33 +81,6 @@ class AddCourseFragment : ReplaceFragment() {
             courseDriveLinkText.setText("")
             courseName.setText("")
         }
-    }
-
-    private fun writeNewCourse(
-        courseCode: String,
-        courseName: String,
-        courseDriveLink: String,
-        department: String,
-        yearSemester: String
-    ) {
-        val pushingPath = args.reference
-        val requestingPath = "$department/$yearSemester/$courseCode"
-        val newCourse = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
-        val courseDetails = newCourse.toMap()
-        if (pushingPath == "admin-course-request-list") {
-            val childUpdateRequest = hashMapOf<String, Any>(
-                "/$pushingPath/$courseCode" to courseDetails
-            )
-            firebaseDatabase.updateChildren(childUpdateRequest)
-        } else {
-            val childUpdateAdmin = hashMapOf<String, Any>(
-                "/$pushingPath/$department/$yearSemester/$courseCode" to courseDetails
-            )
-
-            firebaseDatabase.updateChildren(childUpdateAdmin)
-        }
-
-
     }
 
 

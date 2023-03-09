@@ -1,5 +1,6 @@
 package com.example.homepage.helperClass
 
+import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -10,16 +11,16 @@ class ValidationHelper {
         department: String,
         year: String,
         semester: String,
-        courseCode: String,
-        courseName: String,
+        course: CourseData,
     ): String {
         val selectYour = "Select your "
         return when {
             department == "Department" -> ("$selectYour $department")
             year == "Year" -> ("$selectYour $year")
             semester == "Semester" -> ("$selectYour $semester")
-            courseCode.isBlank() -> ("$selectYour Course Code")
-            courseName.isBlank() -> ("$selectYour  Course Name")
+            course.courseCode?.isBlank() == true -> ("$selectYour Course Code")
+            course.courseName?.isBlank() == true -> ("$selectYour  Course Name")
+            course.driveLink?.let { validWebsiteLink(it) } == true -> ("Provide an valid drive link. ")
             else -> {
                 "Valid Data"
             }

@@ -10,14 +10,13 @@ import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.helperClass.ValidationHelper
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
-import com.google.firebase.database.DatabaseReference
 
 class AddTeachersFragment : ReplaceFragment() {
     private lateinit var fragmentBinding: FragmentAddTeachersBinding
     private val viewBinding get() = fragmentBinding
-    private lateinit var database: DatabaseReference
 
     private val arg: AddCourseFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

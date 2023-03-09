@@ -1,8 +1,6 @@
 
 {
 Kapp/src/test/java/com/example/homepage/loginSignup/EmailPasswordTestData.kt,8\1\81cc52ab5891162de0679b7eecbcabe2606efc04
-|
-Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 <
@@ -17,8 +15,6 @@ r
 Bapp/src/main/java/com/example/homepage/storeTab/Model/Materials.kt,6\b\6bf540e423f57898c9b70df881bdf9c63506ae9c
 k
 ;app/src/main/java/com/example/homepage/superClass/Helper.kt,0\d\0db04161f44e6b209840c577c8d99e108829583f
-t
-Dapp/src/main/java/com/example/homepage/courseTab/Model/CourseData.kt,4\1\41590e973ca87ae5cb9283ce73da3e38294b65da
 w
 Gapp/src/main/java/com/example/homepage/courseTab/Model/UserViewModel.kt,e\4\e4e27c4f2a882d1156d098601e49ed5b3dfb5dc4
 u
