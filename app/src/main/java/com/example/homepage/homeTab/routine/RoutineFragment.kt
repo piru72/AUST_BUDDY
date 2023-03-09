@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentRoutineBinding
 import com.example.homepage.homeTab.routine.model.Routine
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

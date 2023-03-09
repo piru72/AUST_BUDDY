@@ -1,4 +1,4 @@
-package com.example.homepage.superClass
+package com.example.homepage.helperClass
 
 import android.content.SharedPreferences
 

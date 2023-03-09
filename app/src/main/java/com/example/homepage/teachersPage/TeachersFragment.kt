@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentTeachersBinding
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.teachersPage.TeacherModel.teacherViewModel
 

@@ -11,8 +11,8 @@ import android.widget.Toast
 import com.example.homepage.R
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.dataClass.UserAllData
-import com.example.homepage.superClass.Helper
-import com.example.homepage.superClass.spinner.SpinnerItem
+import com.example.homepage.helperClass.Helper
+import com.example.homepage.helperClass.spinner.SpinnerItem
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

@@ -9,7 +9,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.homepage.R
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 
 
 class BusFragment : ReplaceFragment() {

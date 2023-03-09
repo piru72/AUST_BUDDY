@@ -19,7 +19,7 @@ import com.example.homepage.databinding.FragmentGroupNoticeBinding
 import com.example.homepage.groupNoticePage.groupNoticeAdapter.GroupNoticeAdapter
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeViewModel
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

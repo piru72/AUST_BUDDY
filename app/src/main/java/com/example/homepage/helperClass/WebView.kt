@@ -1,4 +1,4 @@
-package com.example.homepage.superClass
+package com.example.homepage.helperClass
 
 import android.os.Bundle
 import android.view.LayoutInflater

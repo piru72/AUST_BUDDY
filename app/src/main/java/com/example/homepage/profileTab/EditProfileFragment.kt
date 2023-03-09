@@ -14,7 +14,7 @@ import com.example.homepage.R
 import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentEditProfileBinding
 import com.example.homepage.homeTab.DialogYearSemesterChooser
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*

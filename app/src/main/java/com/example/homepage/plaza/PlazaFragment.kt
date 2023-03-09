@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentPlazaBinding
 import com.example.homepage.plaza.Adapter.PlazaAdapter
 import com.example.homepage.plaza.Model.PlazaViewModel
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 
 
 class PlazaFragment : ReplaceFragment() {

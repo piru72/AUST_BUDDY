@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
 import com.example.homepage.R
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 
 class CGPAFragment : ReplaceFragment() {
 

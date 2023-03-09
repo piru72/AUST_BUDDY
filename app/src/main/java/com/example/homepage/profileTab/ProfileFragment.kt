@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.loginSignup.SignInActivity
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

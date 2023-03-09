@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentStoreBinding
 import com.example.homepage.storeTab.Adapter.StoreAdapter
 import com.example.homepage.storeTab.Model.StoreViewModel
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

@@ -15,7 +15,7 @@ import com.example.homepage.databinding.FragmentFavouriteWebPageBinding
 import com.example.homepage.favouriteWebPage.Adapter.FavouriteWebAdapter
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebViewModel
 import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

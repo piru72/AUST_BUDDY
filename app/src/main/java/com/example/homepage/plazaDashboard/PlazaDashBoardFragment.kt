@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentPlazaDashBoardBinding
 import com.example.homepage.plazaDashboard.Adapter.PlazaDashBoardAdapter
 import com.example.homepage.plazaDashboard.Model.PlazaDashBoardViewModel
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

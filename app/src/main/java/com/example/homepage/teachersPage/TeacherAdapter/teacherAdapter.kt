@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
-import com.example.homepage.superClass.FirebaseRealtimeDatabase
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.FirebaseRealtimeDatabase
+import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference

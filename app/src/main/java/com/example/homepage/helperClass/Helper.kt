@@ -1,8 +1,8 @@
-package com.example.homepage.superClass
+package com.example.homepage.helperClass
 
 import android.content.Context
-import com.example.homepage.superClass.spinner.SpinnerAdapter
-import com.example.homepage.superClass.spinner.SpinnerItem
+import com.example.homepage.helperClass.spinner.SpinnerAdapter
+import com.example.homepage.helperClass.spinner.SpinnerItem
 import java.util.*
 
 

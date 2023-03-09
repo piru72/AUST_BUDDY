@@ -181,7 +181,7 @@
         tools:layout="@layout/fragment_store_dashboard" />
     <fragment
         android:id="@+id/webView2"
-        android:name="com.example.homepage.superClass.WebView"
+        android:name="com.example.homepage.helperClass.WebView"
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" >
         <argument

@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentSettingsBinding
 import com.example.homepage.loginSignup.HelperSignInSignUp
 import com.example.homepage.loginSignup.SignInActivity
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth

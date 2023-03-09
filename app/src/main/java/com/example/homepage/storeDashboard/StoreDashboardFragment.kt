@@ -15,7 +15,7 @@ import com.example.homepage.databinding.FragmentStoreDashboardBinding
 import com.example.homepage.storeDashboard.Adapter.StoreDashBoardAdapter
 import com.example.homepage.storeDashboard.Model.StoreDashBoardViewModel
 import com.example.homepage.storeTab.Model.Materials
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

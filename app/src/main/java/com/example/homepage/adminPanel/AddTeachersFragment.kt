@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.homepage.databinding.FragmentAddTeachersBinding
-import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.superClass.ValidationHelper
+import com.example.homepage.helperClass.ReplaceFragment
+import com.example.homepage.helperClass.ValidationHelper
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database

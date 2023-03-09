@@ -16,7 +16,7 @@ import com.example.homepage.R
 import com.example.homepage.databinding.FragmentUserGroupsBinding
 import com.example.homepage.groupTab.Group.Adapter.UserGroupAdapter
 import com.example.homepage.groupTab.Group.Model.UserGroupsViewModel
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

@@ -1,4 +1,4 @@
-package com.example.homepage.superClass
+package com.example.homepage.helperClass
 
 import android.annotation.SuppressLint
 import android.content.Context.CONNECTIVITY_SERVICE

@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.homepage.Firebase.FirebaseUtils
+import com.example.homepage.helperClass.Firebase.FirebaseUtils
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
-import com.example.homepage.superClass.ReplaceFragment
-import com.example.homepage.superClass.ValidationHelper
+import com.example.homepage.helperClass.ReplaceFragment
+import com.example.homepage.helperClass.ValidationHelper
 
 
 class AddCourseFragment : ReplaceFragment() {

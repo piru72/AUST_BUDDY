@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
 import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

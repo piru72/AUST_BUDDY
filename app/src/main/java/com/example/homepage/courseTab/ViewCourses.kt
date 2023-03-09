@@ -13,7 +13,7 @@ import com.example.homepage.R
 import com.example.homepage.courseTab.Adapter.MyAdapter
 import com.example.homepage.courseTab.Model.UserViewModel
 import com.example.homepage.databinding.FragmentViewCoursesBinding
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 
 
 class ViewCourses : ReplaceFragment() {

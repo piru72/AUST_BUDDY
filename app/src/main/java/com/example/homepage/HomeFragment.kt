@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.dataClass.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.superClass.ReplaceFragment
+import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
