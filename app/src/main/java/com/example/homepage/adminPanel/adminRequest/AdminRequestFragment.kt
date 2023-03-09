@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.adminPanel.adminRequest.Adapter.AdminReqeustAdapter
@@ -18,14 +18,15 @@ class AdminRequestFragment : Fragment() {
 
     private var fragmentBinding: FragmentAdminRequestBinding? = null
     private val viewBinding get() = fragmentBinding!!
-    private lateinit var adminRequestRecyclerView: RecyclerView
 
-    lateinit var adapter: AdminReqeustAdapter
-    private lateinit var viewModel: AdminRequestViewModel
+    private val adminRequestRecyclerView: RecyclerView by lazy { viewBinding.recyclerView }
+    private val adapter = AdminReqeustAdapter()
+    private val viewModel by viewModels<AdminRequestViewModel>()
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
@@ -35,15 +36,13 @@ class AdminRequestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adminRequestRecyclerView = viewBinding.recyclerView
+
         adminRequestRecyclerView.layoutManager = LinearLayoutManager(context)
         adminRequestRecyclerView.setHasFixedSize(true)
-        adapter = AdminReqeustAdapter()
         adminRequestRecyclerView.adapter = adapter
-        viewModel = ViewModelProvider(this)[AdminRequestViewModel::class.java]
 
-        viewModel.allAdminRequest.observe(viewLifecycleOwner) {
-            adapter.updateAdminRequestList(it)
+        viewModel.allAdminRequest.observe(viewLifecycleOwner) { adminRequest ->
+            adapter.updateAdminRequestList(adminRequest)
         }
 
     }

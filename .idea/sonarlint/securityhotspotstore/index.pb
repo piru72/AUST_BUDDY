@@ -121,7 +121,5 @@ t
 Dapp/src/main/java/com/example/homepage/loginSignup/SignUpActivity.kt,c\2\c2c8998b17d2a4ce4fb74d2d9db59c9fc0eacaff
 …
 Uapp/src/main/java/com/example/homepage/adminPanel/bugReports/BugReportListFragment.kt,0\5\05a20611eeec76bc48d82a5332b4639d523dcc04
-†
-Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
 €
 Papp/src/main/java/com/example/homepage/teachersPage/DepartmentChooserFragment.kt,8\5\8563466052143e640a87b0ded2e745877864a70a

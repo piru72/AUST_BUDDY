@@ -115,8 +115,6 @@ Vapp/src/main/java/com/example/homepage/storeDashboard/Adapter/StoreDashBoardAda
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherModel/teacherViewModel.kt,2\7\27f05fe90099342c620553ef94926455865d4fa9
 r
 Bapp/src/main/java/com/example/homepage/calculator/CgpaFunctions.kt,0\8\08ca36f5cd6a0e81fe1dabbe34ebc4a84a3e7190
-†
-Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
 €
 Papp/src/main/java/com/example/homepage/teachersPage/DepartmentChooserFragment.kt,8\5\8563466052143e640a87b0ded2e745877864a70a
 t
