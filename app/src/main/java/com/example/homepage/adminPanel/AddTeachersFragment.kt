@@ -42,13 +42,7 @@ class AddTeachersFragment : ReplaceFragment() {
     private fun validateForm() {
 
         viewBinding.apply {
-            val name = teachersName.text.toString()
-            val img = teachersImageLinkForm.text.toString()
-            val phone = teachersContactNoText.text.toString()
-            val designation = teachersDesignation.text.toString()
-            val email = teachersEmailText.text.toString()
-            val teacher = TeacherData(name, img, phone, designation, email)
-
+            val teacher = extractForm()
 
             val validity = ValidationHelper()
             val childUpdater = ChildUpdaterHelper()
@@ -73,6 +67,20 @@ class AddTeachersFragment : ReplaceFragment() {
         }
 
 
+    }
+
+    private fun extractForm(): TeacherData {
+        val teacher: TeacherData
+        viewBinding.apply {
+            val name = teachersName.text.toString()
+            val img = teachersImageLinkForm.text.toString()
+            val phone = teachersContactNoText.text.toString()
+            val designation = teachersDesignation.text.toString()
+            val email = teachersEmailText.text.toString()
+            teacher = TeacherData(name, img, phone, designation, email)
+        }
+
+        return teacher
     }
 
     private fun clearForm() {

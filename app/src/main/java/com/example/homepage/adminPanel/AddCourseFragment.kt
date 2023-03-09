@@ -47,15 +47,10 @@ class AddCourseFragment : ReplaceFragment() {
     private fun validateForm() {
 
         viewBinding.apply {
-            val courseCode = courseCode.text.toString()
-            val courseName = courseName.text.toString()
-            val courseDriveLink = courseDriveLinkText.text.toString()
             val department = spinnerDepartmentList.selectedItem.toString()
             val year = spinnerYearList.selectedItem.toString()
             val semester = spinnerSemesterList.selectedItem.toString()
-            val yearSemester = "year" + year + "semester" + semester
-            val requestingPath = "$department/$yearSemester/$courseCode"
-            val course = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
+            val course = extractForm()
 
             val adminHelper = ValidationHelper()
             val childUpdater = ChildUpdaterHelper()
@@ -73,6 +68,24 @@ class AddCourseFragment : ReplaceFragment() {
         }
 
     }
+
+    private fun extractForm(): CourseData {
+        val course: CourseData
+        viewBinding.apply {
+            val courseCode = courseCode.text.toString()
+            val courseName = courseName.text.toString()
+            val courseDriveLink = courseDriveLinkText.text.toString()
+            val department = spinnerDepartmentList.selectedItem.toString()
+            val year = spinnerYearList.selectedItem.toString()
+            val semester = spinnerSemesterList.selectedItem.toString()
+            val yearSemester = "year" + year + "semester" + semester
+            val requestingPath = "$department/$yearSemester/$courseCode"
+            course = CourseData(courseCode, courseName, courseDriveLink, requestingPath)
+        }
+
+        return course
+    }
+
 
     private fun clearForm() {
 
