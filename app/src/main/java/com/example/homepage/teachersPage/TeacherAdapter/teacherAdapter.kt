@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
-import com.example.homepage.helperClass.FirebaseRealtimeDatabase
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +28,7 @@ class teacherAdapter(private val userType: String, private val databaseViewPath:
     private val supReplace = ReplaceFragment()
     private val user = FirebaseAuth.getInstance().currentUser?.uid
     private var selectedIds: List<Any> = ArrayList()
-    private val firebaseHelper = FirebaseRealtimeDatabase()
+    private val firebaseHelper = ChildUpdaterHelper()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         database = Firebase.database.reference

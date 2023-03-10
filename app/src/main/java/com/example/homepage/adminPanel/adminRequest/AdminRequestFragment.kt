@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.adminPanel.adminRequest.Adapter.AdminReqeustAdapter
+import com.example.homepage.adminPanel.adminRequest.Adapter.AdminRequestAdapter
 import com.example.homepage.adminPanel.adminRequest.Model.AdminRequestViewModel
 import com.example.homepage.databinding.FragmentAdminRequestBinding
 
@@ -20,7 +20,7 @@ class AdminRequestFragment : Fragment() {
     private val viewBinding get() = fragmentBinding!!
 
     private val adminRequestRecyclerView: RecyclerView by lazy { viewBinding.recyclerView }
-    private val adapter = AdminReqeustAdapter()
+    private val adapter = AdminRequestAdapter()
     private val viewModel by viewModels<AdminRequestViewModel>()
 
 
