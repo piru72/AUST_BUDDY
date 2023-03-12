@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.groupNoticePage.GroupNoticeFragment
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.helperClass.CustomFormatters
+import com.example.homepage.helperClass.Firebase.FirebaseDateComparator
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
-import java.text.SimpleDateFormat
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -33,24 +33,6 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         return ScheduleViewViewHolder(itemView)
     }
 
-    private fun makeDateString(dateStr: String): String {
-        val parts = dateStr.split("/")
-        val day = parts[0]
-        var month = parts[1]
-        if (month.length == 1) {
-            month = "0$month"
-        }
-        val year = parts[2]
-
-        return "$day/$month/$year"
-    }
-
-    private fun formatDateString(dateStr: String): LocalDate {
-        val date = makeDateString(dateStr)
-        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-        return LocalDate.parse(date, formatter)
-    }
-
     override fun onBindViewHolder(holder: ScheduleViewViewHolder, position: Int) {
 
         val auth = Firebase.auth
@@ -64,9 +46,9 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         holder.taskDate.text = currentTask.taskdate
 
         val dateStr = currentTask.taskdate.toString()
-        val date = formatDateString(dateStr)
+        val date1 = CustomFormatters().formatDateString(dateStr)
 
-        if (date.isBefore(LocalDate.now())) {
+        if (date1.isBefore(LocalDate.now())) {
             val noticeReference = FirebaseDatabase.getInstance().getReference("group-notice")
                 .child(currentTask.groupId.toString())
             noticeReference.child(currentTask.path.toString()).removeValue()
@@ -142,7 +124,7 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
 
                 val name = taskName.text.toString()
                 val description = taskDescription.text.toString()
-                val date = taskDate.text.toString()
+                val date= taskDate.text.toString()
 
                 if (name == "" || description == "")
                     Toast.makeText(
@@ -189,16 +171,5 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
 
     }
 
-    class FirebaseDateComparator : Comparator<GroupNoticeData?> {
-        override fun compare(p0: GroupNoticeData?, p1: GroupNoticeData?): Int {
-
-            val dateFormat = SimpleDateFormat("dd/MM/yyyy")
-
-            val firstDate: Date = dateFormat.parse(p0?.taskdate!!) as Date
-            val secondDate: Date = dateFormat.parse(p1?.taskdate!!) as Date
-
-            return firstDate.compareTo(secondDate)
-        }
-    }
 
 }

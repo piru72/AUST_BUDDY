@@ -73,8 +73,6 @@ Xapp/src/main/java/com/example/homepage/adminPanel/bugReports/Model/BugReportVie
 Vapp/src/main/java/com/example/homepage/favouriteWebPage/Model/FavouriteWebViewModel.kt,1\9\191e6a32677e9877f8f2019b0d5b0c36797ad1a3
 Ä
 Papp/src/main/java/com/example/homepage/favouriteWebPage/Repo/FavouriteWebRepo.kt,2\c\2c986ff4ece51b8a9e43e66bce78650fd851deef
-è
-_app/src/main/java/com/example/homepage/groupNoticePage/groupNoticeAdapter/GroupNoticeAdapter.kt,7\3\73ffb99471efb7af746a30e9dacfa5153f1d498a
 Ü
 Vapp/src/main/java/com/example/homepage/favouriteWebPage/Adapter/FavouriteWebAdapter.kt,8\f\8f24525ebd28ee8d2144e2c3494b321777bfbc4d
 Ñ
@@ -143,8 +141,6 @@ Lapp/src/main/java/com/example/homepage/helperClass/spinner/SpinnerAdapter.kt,6
 Lapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseUtils.kt,5\9\5943cb0be4737544da941751c765edd880752bd4
 y
 Iapp/src/main/java/com/example/homepage/helperClass/spinner/SpinnerItem.kt,1\a\1a7ebffa6cd303aee50f9865cb28575ea8b3e0c9
-}
-Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,9\e\9ebadc75f7df40c49f8ea4b80908edc3892c8413
 q
 Aapp/src/main/java/com/example/homepage/calculator/CGPAFragment.kt,8\e\8e03e4f1d88f979e9e0b79e7c5834c1599ad4756
 u
