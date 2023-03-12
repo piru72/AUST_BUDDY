@@ -191,3 +191,13 @@ Fapp/src/main/java/com/example/homepage/helperClass/ValidationHelper.kt,1\0\106
 Mapp/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/Admin.kt,c\4\c423d53e6961b56cd81cf3e037bac70f361bbc86
 Ñ
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
+Å
+Qapp/src/main/java/com/example/homepage/helperClass/Firebase/ChildUpdaterHelper.kt,6\8\68556da4ed76955bb34b7ccdd6543bcda128e8b6
+Ü
+Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
+ç
+]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,2\e\2e6564aded0d05011c9c86baccb0e95a6dd78ba5
+ç
+]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,1\c\1ca3a616230c8c49f671ac4978fa64d62cbc937e
+}
+Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,9\e\9ebadc75f7df40c49f8ea4b80908edc3892c8413
