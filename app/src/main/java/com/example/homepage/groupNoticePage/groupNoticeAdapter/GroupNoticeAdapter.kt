@@ -14,6 +14,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -31,6 +33,24 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         return ScheduleViewViewHolder(itemView)
     }
 
+    private fun makeDateString(dateStr: String): String {
+        val parts = dateStr.split("/")
+        val day = parts[0]
+        var month = parts[1]
+        if (month.length == 1) {
+            month = "0$month"
+        }
+        val year = parts[2]
+
+        return "$day/$month/$year"
+    }
+
+    private fun formatDateString(dateStr: String): LocalDate {
+        val date = makeDateString(dateStr)
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        return LocalDate.parse(date, formatter)
+    }
+
     override fun onBindViewHolder(holder: ScheduleViewViewHolder, position: Int) {
 
         val auth = Firebase.auth
@@ -42,6 +62,15 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
         holder.taskName.text = currentTask.taskname
         holder.taskDescription.text = currentTask.taskdescription
         holder.taskDate.text = currentTask.taskdate
+
+        val dateStr = currentTask.taskdate.toString()
+        val date = formatDateString(dateStr)
+
+        if (date.isBefore(LocalDate.now())) {
+            val noticeReference = FirebaseDatabase.getInstance().getReference("group-notice")
+                .child(currentTask.groupId.toString())
+            noticeReference.child(currentTask.path.toString()).removeValue()
+        }
 
         if (user != currentTask.uid) {
             holder.deleteButton.visibility = View.INVISIBLE
