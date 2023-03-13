@@ -231,6 +231,10 @@
     <string name="short_cut">Short Cut</string>
     <string name="routine">Routine</string>
     <string name="about_us">About Us</string>
+    <string name="request_for_course">Request for course</string>
+    <string name="request_for_teacher">Request for teacher</string>
+    <string name="report_a_bug_request_feature">Report a bug / Request feature</string>
+    <string name="become_an_admin">Become an admin</string>
 
 
 </resources>

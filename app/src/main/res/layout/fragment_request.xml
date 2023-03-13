@@ -3,21 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/requestScreen"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".homeTab.RequestFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
 
         <LinearLayout
-            android:layout_width="404dp"
-            android:layout_height="406dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            style="@style/layoutMatchParentVertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,78 +19,23 @@
 
             <Button
                 android:id="@+id/btn_request_for_course"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/background_color_50"
-                android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="#000"
-                android:focusable="true"
-
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingStart="10dp"
-                android:text="Request for course"
-                android:textColor="@color/black"
-                android:visibility="visible" />
+                style="@style/buttonStylePage"
+                android:text="@string/request_for_course" />
 
             <Button
                 android:id="@+id/btn_request_for_teacher"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/background_color_50"
-                android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="#000"
-                android:focusable="true"
-
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingStart="10dp"
-                android:text="Request for teacher"
-                android:textColor="@color/black"
-                android:visibility="visible" />
+                style="@style/buttonStylePage"
+                android:text="@string/request_for_teacher" />
 
             <Button
                 android:id="@+id/btn_report_bug"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/background_color_50"
-                android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="#000"
-                android:focusable="true"
+                style="@style/buttonStylePage"
+                android:text="@string/report_a_bug_request_feature" />
 
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingStart="10dp"
-                android:text="Report a bug / Request feature"
-                android:textColor="@color/black"
-                android:visibility="visible" />
             <Button
                 android:id="@+id/btn_become_admin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/background_color_50"
-                android:drawableStart="@drawable/ic_baseline_edit_24"
-                android:drawableTint="#000"
-                android:focusable="true"
-
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingStart="10dp"
-                android:text="Become an admin"
-                android:textColor="@color/black"
-                android:visibility="visible" />
+                style="@style/buttonStylePage"
+                android:text="@string/become_an_admin" />
 
 
         </LinearLayout>
