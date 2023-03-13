@@ -235,6 +235,14 @@
     <string name="request_for_teacher">Request for teacher</string>
     <string name="report_a_bug_request_feature">Report a bug / Request feature</string>
     <string name="become_an_admin">Become an admin</string>
+    <string name="_1st_year_1st_semester">1st Year 1st Semester</string>
+    <string name="_1st_year_2nd_semester">1st Year 2nd Semester</string>
+    <string name="_2nd_year_1st_semester">2nd Year 1st Semester</string>
+    <string name="_2nd_year_2nd_semester">2nd Year 2nd Semester</string>
+    <string name="_3rd_year_1st_semester">3rd Year 1st Semester</string>
+    <string name="_3rd_year_2nd_semester">3rd Year 2nd Semester</string>
+    <string name="_4th_year_1st_semester">4th Year 1st Semester</string>
+    <string name="_4th_year_2nd_semester">4th Year 2nd Semester</string>
 
 
 </resources>

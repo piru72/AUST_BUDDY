@@ -2,171 +2,51 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_department_semesterChooser"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/backgroundMain"
     tools:context=".courseTab.DepartmentSemesterChooserFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bk_shape03"
-        android:gravity="center"
-        android:orientation="vertical">
+    <LinearLayout style="@style/layoutMatchParentVertical">
 
         <Button
             android:id="@+id/btn_11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/background_color_50"
-
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="8dp"
-            android:text="1st Year 1st Semester"
-            android:textColor="@color/black"
-
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_1st_year_1st_semester" />
 
         <Button
             android:id="@+id/btn_12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="1st Year 2nd Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_1st_year_2nd_semester" />
 
         <Button
             android:id="@+id/btn_21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="2nd Year 1st Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_2nd_year_1st_semester" />
 
         <Button
             android:id="@+id/btn_22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="2nd Year 2nd Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_2nd_year_2nd_semester" />
 
         <Button
             android:id="@+id/btn_31"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="3rd Year 1st Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_3rd_year_1st_semester" />
 
         <Button
             android:id="@+id/btn_32"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="3rd Year 2nd Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_3rd_year_2nd_semester" />
 
         <Button
             android:id="@+id/btn_41"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="4th Year 1st Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/_4th_year_1st_semester" />
 
         <Button
             android:id="@+id/btn_42"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
+            style="@style/buttonStylePage"
 
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="4th Year 2nd Semester"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            android:text="@string/_4th_year_2nd_semester" />
     </LinearLayout>
 
 </FrameLayout>
