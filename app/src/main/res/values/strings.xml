@@ -225,6 +225,7 @@
     <string name="alla">all</string>
     <string name="default_notification_channel_id">default_channel</string>
     <string name="warning_semester">Semester Not found!!\n Provide semester for faster access!</string>
+    <string name="links">Links</string>
 
 
 </resources>
