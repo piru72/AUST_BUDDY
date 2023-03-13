@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardQuizScheduleBinding
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.example.homepage.helperClass.CustomFormatters
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.Firebase.FirebaseDateComparator
 import com.example.homepage.helperClass.Firebase.FirebaseUtils
-import com.google.firebase.database.FirebaseDatabase
 import java.time.LocalDate
 import java.util.*
 
@@ -49,7 +49,6 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
     inner class ScheduleViewViewHolder(private val binding: CardQuizScheduleBinding) :
         RecyclerView.ViewHolder(binding.root), View.OnClickListener {
 
-
         val user = FirebaseUtils.getUserId()
 
         init {
@@ -68,8 +67,12 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
 
             if (date1.isBefore(LocalDate.now())) {
                 val childValue = noticeData.groupId.toString()
-                val noticeReference = FirebaseUtils.getReference("group-notice/$childValue")
-                noticeReference.child(noticeData.path.toString()).removeValue()
+
+                val parentNode = "group-notice/$childValue"
+                val childNode = noticeData.path.toString()
+
+                ChildUpdaterHelper().removeChild(parentNode, childNode)
+
             }
 
             if (user != noticeData.uid) {
@@ -83,14 +86,16 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
             val position = adapterPosition
 
             if (position != RecyclerView.NO_POSITION) {
-                val currentTask = tasks[position]
+                val noticeData = tasks[position]
 
                 when (view) {
                     binding.btnDeleteSchedule -> {
-                        val noticeReference =
-                            FirebaseDatabase.getInstance().getReference("group-notice")
-                                .child(currentTask.groupId.toString())
-                        noticeReference.child(currentTask.path.toString()).removeValue()
+                        val childValue = noticeData.groupId.toString()
+
+                        val parentNode = "group-notice/$childValue"
+                        val childNode = noticeData.path.toString()
+
+                        ChildUpdaterHelper().removeChild(parentNode, childNode)
                     }
 
 
@@ -98,7 +103,7 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
 
                         EditScheduleClickListener(
                             _inflater,
-                            currentTask,
+                            noticeData,
                             user
                         ).onClick(view)
                     }

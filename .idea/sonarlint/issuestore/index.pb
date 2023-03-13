@@ -127,8 +127,6 @@ x
 Happ/src/main/java/com/example/homepage/profileTab/EditProfileFragment.kt,f\9\f90bc2b209b334000a66c4bc4658cc39277f5a81
 É
 Sapp/src/main/java/com/example/homepage/favouriteWebPage/FavouriteWebPageFragment.kt,2\c\2ca178bcc58a6398453d494dcc3e3af9cb10720b
-|
-Lapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseUtils.kt,5\9\5943cb0be4737544da941751c765edd880752bd4
 {
 Kapp/src/main/java/com/example/homepage/profileTab/ForgotPasswordFragment.kt,7\7\77cc0da2cf0c23034d3bce143f662f40dbfdb3f6
 l
@@ -191,8 +189,6 @@ Fapp/src/main/java/com/example/homepage/helperClass/ValidationHelper.kt,1\0\106
 Mapp/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/Admin.kt,c\4\c423d53e6961b56cd81cf3e037bac70f361bbc86
 Ñ
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
-Å
-Qapp/src/main/java/com/example/homepage/helperClass/Firebase/ChildUpdaterHelper.kt,6\8\68556da4ed76955bb34b7ccdd6543bcda128e8b6
 Ü
 Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
 ç
@@ -201,3 +197,5 @@ Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFrag
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,1\c\1ca3a616230c8c49f671ac4978fa64d62cbc937e
 }
 Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,9\e\9ebadc75f7df40c49f8ea4b80908edc3892c8413
+Ö
+Uapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseDateComparator.kt,7\f\7f6dd606cfefbf076e60c0e6daa36b4790be3cc0
