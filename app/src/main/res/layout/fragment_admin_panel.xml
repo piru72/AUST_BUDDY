@@ -24,7 +24,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_add_courses_admin"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout style="@style/layoutOfCardViewImage">
@@ -42,7 +42,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_add_teachers_admin"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
@@ -67,7 +67,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_course_request"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
@@ -87,7 +87,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_teacher_request"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
@@ -112,7 +112,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_admin_request"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
@@ -131,7 +131,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_bug_reports"
-                    style="@style/cardViewStyleImage">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout

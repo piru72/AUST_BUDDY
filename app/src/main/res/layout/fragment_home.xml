@@ -3,310 +3,149 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_home"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_weight="3"
-            android:orientation="vertical"
+            style="@style/layoutImageButtonContainer"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_plaza"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/syllabus"
-                            android:padding="20dp"
-                            android:src="@drawable/ic_baseline_menu_book_24"
-                            app:tint="#000" />
+                            android:src="@drawable/ic_baseline_menu_book_24" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/course"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/course" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_routine"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
                         android:id="@+id/routineButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/notice"
-                            android:padding="20dp"
-                            android:src="@drawable/oj"
-                            app:tint="#000" />
+                            android:src="@drawable/oj" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="Routine"
-                            android:textAllCaps="true"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/routine" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
-
 
 
             </LinearLayout>
 
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_favourite_teachers"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
 
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/cgpa"
-                            android:padding="20dp"
-                            android:src="@drawable/teacher"
-                            app:tint="#000"
-                            tools:ignore="ImageContrastCheck" />
+                            android:src="@drawable/teacher" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/teachers"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/teachers" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_shortCuts"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
 
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/buses"
-                            android:padding="20dp"
-                            android:src="@drawable/favourite_links"
-                            app:tint="#000" />
+                            android:src="@drawable/favourite_links" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="Short Cut"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/short_cut" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_buses"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
 
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
-
-
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/buses"
-                            android:padding="20dp"
-                            android:src="@drawable/bus"
-                            app:tint="#000" />
+                            android:src="@drawable/bus" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/buses"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/buses" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_request"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImageContainer">
 
 
                     <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/background_color_50"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        style="@style/layoutOfCardViewImage">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="10dp"
+                            style="@style/imageViewButton"
                             android:contentDescription="@string/request"
-                            android:padding="20dp"
-                            android:src="@drawable/request"
-                            app:tint="#000" />
+                            android:src="@drawable/request" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="@string/request"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/request" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

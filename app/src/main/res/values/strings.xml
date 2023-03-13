@@ -228,6 +228,8 @@
     <string name="links">Links</string>
     <string name="admin_request">Admin request</string>
     <string name="bug_reports">Bug Reports</string>
+    <string name="short_cut">Short Cut</string>
+    <string name="routine">Routine</string>
 
 
 </resources>
