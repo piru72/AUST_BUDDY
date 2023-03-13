@@ -226,6 +226,8 @@
     <string name="default_notification_channel_id">default_channel</string>
     <string name="warning_semester">Semester Not found!!\n Provide semester for faster access!</string>
     <string name="links">Links</string>
+    <string name="admin_request">Admin request</string>
+    <string name="bug_reports">Bug Reports</string>
 
 
 </resources>

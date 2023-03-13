@@ -12,53 +12,37 @@
         style="@style/layoutMatchParent">
 
         <LinearLayout
-            style="@style/layoutWrapContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_weight="3"
-            android:orientation="vertical"
+            style="@style/layoutImageButtonContainer"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_add_courses_admin"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout style="@style/layoutOfCardViewImage">
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/add"
-                            app:tint="#000" />
+                            android:src="@drawable/add" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="@string/add_courses"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/add_courses" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_add_teachers_admin"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout
@@ -67,31 +51,23 @@
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/add"
-                            app:tint="#000" />
+                            android:src="@drawable/add" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="@string/add_teachers"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/add_teachers" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_course_request"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout
@@ -100,23 +76,18 @@
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/request"
-                            app:tint="#000" />
+                            android:src="@drawable/request" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="Course requests"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="Course requests" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_teacher_request"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout
@@ -125,31 +96,23 @@
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/request"
-                            app:tint="#000" />
+                            android:src="@drawable/request" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="Teacher request"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="Teacher request" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_admin_request"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout
@@ -158,22 +121,17 @@
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/bug_report"
-                            app:tint="#000" />
+                            android:src="@drawable/bug_report" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="Admin request"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/admin_request" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_view_bug_reports"
-                    style="@style/cardViewStyleImage"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    style="@style/cardViewStyleImage">
 
 
                     <LinearLayout
@@ -182,13 +140,11 @@
 
                         <ImageView
                             style="@style/imageViewButton"
-                            android:src="@drawable/bug_report"
-                            app:tint="#000" />
+                            android:src="@drawable/bug_report" />
 
                         <TextView
-                            style="@style/textViewWrapWrapPoppinsBlack"
-                            android:text="Bug Reports"
-                            android:textSize="18sp" />
+                            style="@style/textViewWrapWrapPoppinsBlack18"
+                            android:text="@string/bug_reports" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
