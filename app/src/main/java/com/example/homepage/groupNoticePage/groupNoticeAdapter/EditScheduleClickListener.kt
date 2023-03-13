@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import com.example.homepage.R
-import com.example.homepage.groupNoticePage.GroupNoticeFragment
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import java.util.*
 
 class EditScheduleClickListener(private val
@@ -88,8 +88,7 @@ class EditScheduleClickListener(private val
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val groupNoticeFragment = GroupNoticeFragment()
-                groupNoticeFragment.writeNewTask(
+                ChildUpdaterHelper().writeNewTask(
                     user,
                     name,
                     description,

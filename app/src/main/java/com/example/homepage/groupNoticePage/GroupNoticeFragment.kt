@@ -4,7 +4,6 @@ import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -17,13 +16,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentGroupNoticeBinding
 import com.example.homepage.groupNoticePage.groupNoticeAdapter.GroupNoticeAdapter
-import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeViewModel
+import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
@@ -121,7 +119,7 @@ class GroupNoticeFragment : ReplaceFragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                 else
-                    writeNewTask(user, name, description, date, "make-key", argGroupId)
+                    ChildUpdaterHelper().writeNewTask(user, name, description, date, "make-key", argGroupId)
 
 
 
@@ -132,42 +130,7 @@ class GroupNoticeFragment : ReplaceFragment() {
         return viewBinding.root
     }
 
-    fun writeNewTask(
-        userId: String,
-        taskName: String,
-        taskDescription: String,
-        taskDate: String,
-        oldKey: String,
-        groupId: String
-    ) {
-        database = Firebase.database.reference
-        val newKey = database.child("posts").push().key
-        if (newKey == null) {
-            Log.w("TodoActivity", "Couldn't get push key for posts")
-            return
-        }
-        val newGroupNotice: Any
-        val pushingPath: String
 
-        if (oldKey == "make-key") {
-            newGroupNotice =
-                GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
-            pushingPath = "/group-notice/${args.reference}/$newKey"
-
-        } else {
-            newGroupNotice =
-                GroupNoticeData(userId, taskName, taskDescription, taskDate, oldKey, groupId)
-            pushingPath = "/group-notice/$groupId/$oldKey"
-        }
-        val noticeValues = newGroupNotice.toMap()
-
-        val childUpdates = hashMapOf<String, Any>(
-            pushingPath to noticeValues
-        )
-
-        database.updateChildren(childUpdates)
-
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

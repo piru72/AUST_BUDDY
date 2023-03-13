@@ -195,7 +195,5 @@ Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFrag
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,2\e\2e6564aded0d05011c9c86baccb0e95a6dd78ba5
 ç
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,1\c\1ca3a616230c8c49f671ac4978fa64d62cbc937e
-}
-Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,9\e\9ebadc75f7df40c49f8ea4b80908edc3892c8413
 Ö
 Uapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseDateComparator.kt,7\f\7f6dd606cfefbf076e60c0e6daa36b4790be3cc0

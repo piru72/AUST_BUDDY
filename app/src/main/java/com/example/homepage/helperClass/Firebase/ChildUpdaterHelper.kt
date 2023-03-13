@@ -1,6 +1,8 @@
 package com.example.homepage.helperClass.Firebase
 
+import android.util.Log
 import com.example.homepage.courseTab.Model.CourseData
+import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -57,6 +59,44 @@ class ChildUpdaterHelper {
 
 
     }
+
+    fun writeNewTask(
+        userId: String,
+        taskName: String,
+        taskDescription: String,
+        taskDate: String,
+        oldKey: String,
+        groupId: String
+    ) {
+
+        val newKey = firebaseDatabase.child("posts").push().key
+        if (newKey == null) {
+            Log.w("TodoActivity", "Couldn't get push key for posts")
+            return
+        }
+        val newGroupNotice: Any
+        val pushingPath: String
+
+        if (oldKey == "make-key") {
+            newGroupNotice =
+                GroupNoticeData(userId, taskName, taskDescription, taskDate, newKey, groupId)
+            pushingPath = "/group-notice/$groupId/$newKey"
+
+        } else {
+            newGroupNotice =
+                GroupNoticeData(userId, taskName, taskDescription, taskDate, oldKey, groupId)
+            pushingPath = "/group-notice/$groupId/$oldKey"
+        }
+        val noticeValues = newGroupNotice.toMap()
+
+        val childUpdates = hashMapOf<String, Any>(
+            pushingPath to noticeValues
+        )
+
+        firebaseDatabase.updateChildren(childUpdates)
+
+    }
+
     // Given parentNode and childNode this function will remove the child from the parent
     fun removeChild(parentNode: String, childNode: String) {
         val parentReference = FirebaseDatabase.getInstance().getReference(parentNode)
@@ -65,7 +105,7 @@ class ChildUpdaterHelper {
 
     // Given Source and destination path this function will copy a node from one node to another
     fun moveChild(fromPath: String, toPath: String) {
-        val fromReference =  FirebaseDatabase.getInstance().getReference(fromPath)
+        val fromReference = FirebaseDatabase.getInstance().getReference(fromPath)
         val toReference = FirebaseDatabase.getInstance().getReference(toPath)
 
         fromReference.addListenerForSingleValueEvent(object : ValueEventListener {
