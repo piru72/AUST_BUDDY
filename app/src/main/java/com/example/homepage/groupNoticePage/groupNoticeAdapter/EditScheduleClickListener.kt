@@ -1,6 +1,8 @@
 package com.example.homepage.groupNoticePage.groupNoticeAdapter
 
 import android.app.DatePickerDialog
+import android.content.DialogInterface
+import android.graphics.Color
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +14,7 @@ import java.util.*
 
 class EditScheduleClickListener(private val
                                 _inflater: LayoutInflater,
-                                private val currentTask: GroupNoticeData,
-                                private val user: String
+                                private val currentTask: GroupNoticeData
 ) :
     View.OnClickListener {
     override fun onClick(view: View?) {
@@ -64,12 +65,16 @@ class EditScheduleClickListener(private val
                     month,
                     day
                 )
-            }
 
-            if (picker != null) {
-                picker.datePicker.minDate = cldr.timeInMillis
             }
-            picker?.show()
+            picker?.datePicker?.minDate = cldr.timeInMillis
+            val myColor = Color.parseColor("#FF000000")
+            picker!!.show()
+            picker.getButton(DialogInterface.BUTTON_POSITIVE)?.setTextColor(myColor)
+            picker.getButton(DialogInterface.BUTTON_NEGATIVE)?.setTextColor(myColor)
+
+            picker.datePicker.minDate = cldr.timeInMillis
+            picker.show()
         }
 
         closeButton.setOnClickListener {
@@ -89,7 +94,7 @@ class EditScheduleClickListener(private val
                 ).show()
             } else {
                 ChildUpdaterHelper().writeNewTask(
-                    user,
+                    currentTask.uid.toString(),
                     name,
                     description,
                     date,
