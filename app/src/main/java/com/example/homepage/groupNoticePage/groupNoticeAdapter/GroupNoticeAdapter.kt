@@ -103,8 +103,7 @@ class GroupNoticeAdapter(inflater: LayoutInflater) :
 
                         EditScheduleClickListener(
                             _inflater,
-                            noticeData,
-                            user
+                            noticeData
                         ).onClick(view)
                     }
 

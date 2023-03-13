@@ -177,10 +177,6 @@ Dapp/src/main/java/com/example/homepage/courseTab/Model/CourseData.kt,4\1\41590
 Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
 z
 Japp/src/test/java/com/example/homepage/helperClass/ValidationHelperTest.kt,2\a\2a56dbd16f37b993530b49ecae11251b1fd00bec
-w
-Gapp/src/main/java/com/example/homepage/adminPanel/AdminPanelFragment.kt,b\4\b4efc64521864317d6af73948d56fcb30f82b29c
-v
-Fapp/src/main/java/com/example/homepage/adminPanel/AddCourseFragment.kt,6\a\6add0688a48ef79bcd1e2d2994f953a22432e72e
 x
 Happ/src/main/java/com/example/homepage/adminPanel/AddTeachersFragment.kt,c\a\ca3bd1f854d97d7796ed7f268ae1b3c08bb26082
 v
