@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/add_web_page_popup"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/card_bk"
-    android:orientation="vertical"
-    android:padding="20dp">
+    style="@style/backgroundPopup">
 
 
     <EditText
@@ -35,37 +30,17 @@
         android:textColorHint="@color/black" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
         <Button
             android:id="@+id/websiteCloseButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="Close"
-            android:textColor="#4E342E" />
+            style="@style/buttonStylePopup"
+            android:text="@string/close" />
 
         <Button
             android:id="@+id/websiteAddButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="ADD"
-            android:textColor="#4E342E" />
+            style="@style/buttonStylePopup"
+            android:text="@string/add" />
 
 
     </LinearLayout>

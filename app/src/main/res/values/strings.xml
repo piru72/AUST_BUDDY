@@ -243,6 +243,17 @@
     <string name="_3rd_year_2nd_semester">3rd Year 2nd Semester</string>
     <string name="_4th_year_1st_semester">4th Year 1st Semester</string>
     <string name="_4th_year_2nd_semester">4th Year 2nd Semester</string>
+    <string name="later">Later</string>
+    <string name="update_now">Update Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="section">Section</string>
+    <string name="leave">Leave</string>
+    <string name="sure_you_want_to_leave_this_group">Sure you want to leave this group?</string>
+    <string name="create">Create</string>
+    <string name="join">Join</string>
+    <string name="details_about_the_bug_you_found_thanks">Details about the bug you found. Thanks</string>
+    <string name="choose">Choose</string>
+    <string name="choose_date">Choose Date</string>
 
 
 </resources>

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bug_report_popup"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/card_bk"
-    android:orientation="vertical"
-    android:padding="20dp">
+    style="@style/backgroundPopup">
 
 
     <EditText
@@ -16,44 +11,24 @@
         android:layout_marginBottom="25dp"
         android:autofillHints=""
         android:fontFamily="@font/poppins_light"
-        android:hint="Details about the bug you found. Thanks"
+        android:hint="@string/details_about_the_bug_you_found_thanks"
         android:inputType="textMultiLine"
 
         android:minHeight="48dp"
         android:textColorHint="@color/black" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
         <Button
             android:id="@+id/CloseButton"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="Close"
-            android:textColor="@color/black" />
+            style="@style/buttonStylePopup"
+            android:text="@string/close" />
 
         <Button
             android:id="@+id/sendButton"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="SEND"
-            android:textColor="@color/black" />
+            style="@style/buttonStylePopup"
+            android:text="@string/send" />
 
 
     </LinearLayout>

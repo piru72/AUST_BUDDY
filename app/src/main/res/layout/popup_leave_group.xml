@@ -1,58 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/popup_create_join_class"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/card_bk"
-    android:orientation="vertical"
-    android:padding="20dp">
+    style="@style/backgroundPopup">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center">
+    <LinearLayout style="@style/layoutMatchParent">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:text="Sure you want to leave this group?"
-            android:textSize="18sp" />
+            style="@style/textViewWrapWrapPoppinsBlackPopup"
+            android:text="@string/sure_you_want_to_leave_this_group" />
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
         <Button
             android:id="@+id/cancelButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="Cancel"
-            android:textColor="@color/black" />
+            style="@style/buttonStylePopup"
+            android:text="@string/cancel" />
 
         <Button
             android:id="@+id/leaveButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="Leave"
-            android:textColor="@color/black" />
+            style="@style/buttonStylePopup"
+            android:text="@string/leave" />
 
 
     </LinearLayout>
