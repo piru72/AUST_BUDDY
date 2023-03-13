@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonStyleBasic" parent="textViewWrapWrapPoppinsBlack">
+
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:autoLink">web</item>
+
+    </style>
+
+    <style name="textViewWrapWrapPoppinsBlack">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+</resources>

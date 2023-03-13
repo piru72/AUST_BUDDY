@@ -23,36 +23,17 @@
 
             <TextView
                 android:id="@+id/tvCourseName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins_light"
+                style="@style/textViewWrapWrapPoppinsBlack"
                 android:text="@string/course_name"
-                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvCourseCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
+                style="@style/textViewWrapWrapPoppinsBlack"
                 android:text="@string/course_code"
-                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/tvlink"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_gravity="center"-->
-            <!--                android:layout_marginStart="8dp"-->
-            <!--                android:text="@string/drive_link"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textSize="20sp" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,41 +42,14 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/shareButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="1dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_weight="1"
-                    android:autoLink="web"
-                    android:background="@color/background_color_50"
-                    android:elevation="10dp"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:linksClickable="true"
-                    android:text="@string/share"
-                    android:textColor="@color/black" />
+                    style="@style/buttonStyleBasic"
+                    android:text="@string/share" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/exploreButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:autoLink="web"
-                    android:background="@color/background_color_50"
-                    android:elevation="10dp"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:linksClickable="true"
-                    android:text="@string/explore"
-                    android:textColor="@color/black" />
+                    style="@style/buttonStyleBasic"
+                    android:text="@string/explore" />
             </LinearLayout>
-
-            <!--                android:onClick="openDriveLink"-->
 
 
         </LinearLayout>
