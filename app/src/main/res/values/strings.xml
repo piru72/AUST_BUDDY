@@ -254,6 +254,10 @@
     <string name="details_about_the_bug_you_found_thanks">Details about the bug you found. Thanks</string>
     <string name="choose">Choose</string>
     <string name="choose_date">Choose Date</string>
+    <string name="admin_email">Admin Email</string>
+    <string name="admin_semester">Admin Semester</string>
+    <string name="admin_year">Admin Year</string>
+    <string name="admin_department">Admin Department</string>
 
 
 </resources>

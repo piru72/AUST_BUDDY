@@ -11,98 +11,42 @@
         android:padding="20dp">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParent">
 
             <TextView
                 android:id="@+id/textView_Department_admin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:inputType="textMultiLine"
-                android:text="Admin Department"
-                android:textColorHint="@color/black"
-                android:textIsSelectable="true"
-                android:layout_weight="1"/>
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/admin_department" />
 
             <TextView
                 android:id="@+id/textView_year_admin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:inputType="textMultiLine"
-                android:text="Admin Year"
-                android:textColorHint="@color/black"
-                android:textIsSelectable="true"
-                android:layout_weight="1"/>
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/admin_year" />
 
             <TextView
                 android:id="@+id/textView_semester_admin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-
-                android:inputType="textMultiLine"
-                android:text="Admin Semester"
-                android:textColorHint="@color/black"
-                android:textIsSelectable="true"
-                android:layout_weight="1"/>
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/admin_semester" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView_email_admin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:inputType="textMultiLine"
-            android:text="Admin Email"
-            android:textColorHint="@color/black"
-            android:textIsSelectable="true" />
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:text="@string/admin_email" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10sp"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
 
             <Button
                 android:id="@+id/button_decline_admin"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Decline"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/decline" />
 
             <Button
                 android:id="@+id/button_approve_admin"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Approve"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/approve" />
 
         </LinearLayout>
 
