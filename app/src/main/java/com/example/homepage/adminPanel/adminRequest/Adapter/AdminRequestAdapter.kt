@@ -16,7 +16,7 @@ class AdminRequestAdapter : RecyclerView.Adapter<AdminRequestViewHolder>() {
         val binding =
             CardAdminRequestBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
-        return AdminRequestViewHolder(binding, itemList)
+        return AdminRequestViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: AdminRequestViewHolder, position: Int) {

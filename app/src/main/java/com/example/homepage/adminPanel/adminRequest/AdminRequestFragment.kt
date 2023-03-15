@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,24 +39,39 @@ class AdminRequestFragment : Fragment() {
         return viewBinding.root
     }
 
+
+    val adapter = AdminRequestAdapter()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         adminRequestRecyclerView.layoutManager = LinearLayoutManager(context)
         adminRequestRecyclerView.setHasFixedSize(true)
-        val adapter = AdminRequestAdapter()
 
-        val genericAdapter = GenericAdapter<Admin, AdminRequestViewHolder>(
-            AdminRequestViewHolder::class.java,
-            R.layout.card_admin_request
-        ) { holder, item ->
-            holder.bind(item)
-        }
-        adminRequestRecyclerView.adapter = adapter
 
-        viewModel.allAdminRequest.observe(viewLifecycleOwner) { adminRequest ->
-            adapter.updateAdminRequestList(adminRequest)
+
+
+        try {
+            val genericAdapter = GenericAdapter<Admin, AdminRequestViewHolder>(
+                AdminRequestViewHolder::class.java,
+                R.layout.card_admin_request
+            ) { holder, item ->
+                holder.bind(item)
+            }
+            adminRequestRecyclerView.adapter = adapter
+            viewModel.allAdminRequest.observe(viewLifecycleOwner) { adminRequest ->
+                adapter.updateAdminRequestList(adminRequest)
+                //genericAdapter.updateList(adminRequest)
+            }
+
+        } catch (exception: RuntimeException) {
+            Toast.makeText(
+                context,
+                "An error occurred while creating the adapter!",
+                Toast.LENGTH_SHORT
+            ).show()
         }
+
 
     }
 
