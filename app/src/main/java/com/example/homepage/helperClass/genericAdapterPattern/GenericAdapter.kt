@@ -1,4 +1,4 @@
-package com.example.homepage.adminPanel.adminRequest.Adapter
+package com.example.homepage.helperClass.genericAdapterPattern
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

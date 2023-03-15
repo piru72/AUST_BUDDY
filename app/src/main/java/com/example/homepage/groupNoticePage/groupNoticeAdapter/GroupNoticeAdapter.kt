@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardQuizScheduleBinding
-import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.Model.GroupNoticeData
 import com.example.homepage.helperClass.CustomFormatters
 import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.Firebase.FirebaseDateComparator

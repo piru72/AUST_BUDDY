@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.groupTab.Group.Model.GroupData
+import com.example.homepage.Model.GroupData
 import com.example.homepage.groupTab.UserGroupsFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

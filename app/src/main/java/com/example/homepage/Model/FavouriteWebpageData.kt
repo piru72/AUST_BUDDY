@@ -1,4 +1,4 @@
-package com.example.homepage.favouriteWebPage.Model
+package com.example.homepage.Model
 
 data class FavouriteWebpageData(
     var uid: String? = "",

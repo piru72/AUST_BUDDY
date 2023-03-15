@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentGroupNoticeBinding
 import com.example.homepage.groupNoticePage.groupNoticeAdapter.EditScheduleClickListener
 import com.example.homepage.groupNoticePage.groupNoticeAdapter.GroupNoticeAdapter
-import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.Model.GroupNoticeData
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeViewModel
 import com.example.homepage.helperClass.Firebase.FirebaseUtils
 import com.example.homepage.helperClass.ReplaceFragment

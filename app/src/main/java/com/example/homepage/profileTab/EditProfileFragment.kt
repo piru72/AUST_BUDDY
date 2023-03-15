@@ -11,7 +11,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import com.example.homepage.R
-import com.example.homepage.dataClass.UserAllData
+import com.example.homepage.Model.UserAllData
 import com.example.homepage.databinding.FragmentEditProfileBinding
 import com.example.homepage.homeTab.DialogYearSemesterChooser
 import com.example.homepage.helperClass.ReplaceFragment

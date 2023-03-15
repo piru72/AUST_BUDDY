@@ -1,4 +1,4 @@
-package com.example.homepage.homeTab.routine.model
+package com.example.homepage.Model
 
 data class Routine(
     var image: String ? ="",

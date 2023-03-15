@@ -1,7 +1,7 @@
 package com.example.homepage.teachersPage.TeacherRepo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.teachersPage.TeacherModel.TeacherData
+import com.example.homepage.Model.TeacherData
 import com.google.firebase.database.*
 
 class TeacherRepository(viewPath: String) {

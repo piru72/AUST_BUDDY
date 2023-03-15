@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.example.homepage.dataClass.UserAllData
+import com.example.homepage.Model.UserAllData
 import com.example.homepage.databinding.FragmentRoutineBinding
-import com.example.homepage.homeTab.routine.model.Routine
+import com.example.homepage.Model.Routine
 import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot

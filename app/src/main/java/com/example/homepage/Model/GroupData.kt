@@ -1,4 +1,4 @@
-package com.example.homepage.groupTab.Group.Model
+package com.example.homepage.Model
 
 data class GroupData(
     var userId: String? = "",

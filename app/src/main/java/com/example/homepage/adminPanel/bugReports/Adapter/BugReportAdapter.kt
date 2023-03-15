@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
+import com.example.homepage.Model.BugReportsData
 import com.google.firebase.database.FirebaseDatabase
 
 class BugReportAdapter : RecyclerView.Adapter<BugReportAdapter.BugReportViewHolder>() {

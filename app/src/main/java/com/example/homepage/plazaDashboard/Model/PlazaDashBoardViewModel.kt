@@ -3,7 +3,7 @@ package com.example.homepage.plazaDashboard.Model
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.homepage.plaza.Model.Announcements
+import com.example.homepage.Model.Announcements
 import com.example.homepage.plazaDashboard.Repo.PlazaDashBoardRepository
 
 

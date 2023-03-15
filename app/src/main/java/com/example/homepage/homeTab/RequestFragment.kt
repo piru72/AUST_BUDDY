@@ -12,7 +12,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
-import com.example.homepage.adminPanel.bugReports.Model.BugReportsData
+import com.example.homepage.Model.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth

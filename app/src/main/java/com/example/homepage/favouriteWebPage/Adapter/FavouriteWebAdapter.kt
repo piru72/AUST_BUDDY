@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.favouriteWebPage.FavouriteWebPageFragmentDirections
-import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
+import com.example.homepage.Model.FavouriteWebpageData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase

@@ -1,4 +1,4 @@
-package com.example.homepage.groupNoticePage.groupNoticeModel
+package com.example.homepage.Model
 
 data class GroupNoticeData(
 

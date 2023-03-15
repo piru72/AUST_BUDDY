@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.Model.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.loginSignup.SignInActivity
 import com.example.homepage.helperClass.ReplaceFragment

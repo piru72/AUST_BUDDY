@@ -1,7 +1,7 @@
 package com.example.homepage.helperClass
 
-import com.example.homepage.courseTab.Model.CourseData
-import com.example.homepage.teachersPage.TeacherModel.TeacherData
+import com.example.homepage.Model.CourseData
+import com.example.homepage.Model.TeacherData
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 

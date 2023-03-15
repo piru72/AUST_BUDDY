@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.plaza.DialogViewDetails
-import com.example.homepage.plaza.Model.Announcements
+import com.example.homepage.Model.Announcements
 
 class PlazaAdapter : RecyclerView.Adapter<PlazaAdapter.AnnouncementViewHolder>() {
     private val announcements = ArrayList<Announcements>()

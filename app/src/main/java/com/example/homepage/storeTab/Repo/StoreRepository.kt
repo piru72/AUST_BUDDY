@@ -1,7 +1,7 @@
 package com.example.homepage.storeTab.Repo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.Model.Materials
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase

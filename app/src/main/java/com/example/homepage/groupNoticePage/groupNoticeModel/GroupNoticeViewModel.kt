@@ -3,6 +3,7 @@ package com.example.homepage.groupNoticePage.groupNoticeModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.homepage.Model.GroupNoticeData
 import com.example.homepage.groupNoticePage.groupNoticeRepo.GroupNoticeRepository
 
 class GroupNoticeViewModel : ViewModel() {

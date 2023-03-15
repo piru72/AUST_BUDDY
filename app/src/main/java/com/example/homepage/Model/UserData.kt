@@ -1,4 +1,4 @@
-package com.example.homepage.dataClass
+package com.example.homepage.Model
 
 data class UserData(
     var username: String? = "",

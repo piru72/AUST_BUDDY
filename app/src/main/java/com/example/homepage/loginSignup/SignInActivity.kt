@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.homepage.BaseActivity
 import com.example.homepage.R
-import com.example.homepage.dataClass.UserData
+import com.example.homepage.Model.UserData
 import com.example.homepage.databinding.ActivitySignInBinding
 import com.example.homepage.profileTab.ForgotPasswordFragment
 import com.google.firebase.auth.FirebaseAuth

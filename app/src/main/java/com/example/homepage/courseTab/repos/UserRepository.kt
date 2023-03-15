@@ -1,7 +1,7 @@
 package com.example.homepage.courseTab.repos
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.courseTab.Model.CourseData
+import com.example.homepage.Model.CourseData
 import com.google.firebase.database.*
 
 class UserRepository(semesterSelected: String) {

@@ -12,7 +12,7 @@ import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.R
 import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
-import com.example.homepage.teachersPage.TeacherModel.TeacherData
+import com.example.homepage.Model.TeacherData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

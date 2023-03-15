@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
-import com.example.homepage.dataClass.UserAllData
+import com.example.homepage.Model.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.helperClass.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth

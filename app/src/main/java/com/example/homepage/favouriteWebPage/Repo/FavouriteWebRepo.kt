@@ -1,7 +1,7 @@
 package com.example.homepage.favouriteWebPage.Repo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.favouriteWebPage.Model.FavouriteWebpageData
+import com.example.homepage.Model.FavouriteWebpageData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase

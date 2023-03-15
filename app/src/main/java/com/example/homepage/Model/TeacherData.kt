@@ -1,4 +1,4 @@
-package com.example.homepage.teachersPage.TeacherModel
+package com.example.homepage.Model
 
 
 data class TeacherData(

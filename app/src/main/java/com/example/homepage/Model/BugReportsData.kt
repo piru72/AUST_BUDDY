@@ -1,4 +1,4 @@
-package com.example.homepage.adminPanel.bugReports.Model
+package com.example.homepage.Model
 
 data class BugReportsData(
     var userId: String? = "",

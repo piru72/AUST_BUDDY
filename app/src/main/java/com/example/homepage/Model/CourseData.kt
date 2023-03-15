@@ -1,4 +1,4 @@
-package com.example.homepage.courseTab.Model
+package com.example.homepage.Model
 
 class CourseData(
     var courseCode: String? = null,

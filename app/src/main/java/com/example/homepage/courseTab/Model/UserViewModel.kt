@@ -3,6 +3,7 @@ package com.example.homepage.courseTab.Model
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.homepage.Model.CourseData
 import com.example.homepage.courseTab.repos.UserRepository
 
 class UserViewModel : ViewModel() {

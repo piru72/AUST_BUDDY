@@ -3,7 +3,7 @@ package com.example.homepage.adminPanel.adminRequest.Adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.Model.Admin
 import com.example.homepage.databinding.CardAdminRequestBinding
 
 class AdminRequestAdapter : RecyclerView.Adapter<AdminRequestViewHolder>() {

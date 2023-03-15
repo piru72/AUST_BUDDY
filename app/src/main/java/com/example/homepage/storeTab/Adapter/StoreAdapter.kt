@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
-import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.Model.Materials
 
 class StoreAdapter : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
     private val materialIds = ArrayList<String>()

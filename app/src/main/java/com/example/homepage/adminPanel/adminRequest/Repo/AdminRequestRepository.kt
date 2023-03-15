@@ -1,7 +1,7 @@
 package com.example.homepage.adminPanel.adminRequest.Repo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.Model.Admin
 import com.google.firebase.database.*
 
 class AdminRequestRepository(database: FirebaseDatabase) {

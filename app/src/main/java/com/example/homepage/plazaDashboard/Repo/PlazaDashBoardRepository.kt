@@ -1,7 +1,7 @@
 package com.example.homepage.plazaDashboard.Repo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.plaza.Model.Announcements
+import com.example.homepage.Model.Announcements
 
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*

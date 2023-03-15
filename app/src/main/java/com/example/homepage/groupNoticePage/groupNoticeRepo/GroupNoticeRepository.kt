@@ -1,7 +1,7 @@
 package com.example.homepage.groupNoticePage.groupNoticeRepo
 
 import androidx.lifecycle.MutableLiveData
-import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.Model.GroupNoticeData
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase

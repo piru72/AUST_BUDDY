@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.adminPanel.adminRequest.Adapter.AdminRequestViewHolder
-import com.example.homepage.adminPanel.adminRequest.Adapter.GenericAdapter
-import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.helperClass.genericAdapterPattern.GenericAdapter
+import com.example.homepage.Model.Admin
 import com.example.homepage.adminPanel.adminRequest.Model.AdminRequestViewModel
 import com.example.homepage.databinding.CardAdminRequestBinding
 import com.example.homepage.databinding.FragmentAdminRequestBinding

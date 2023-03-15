@@ -1,6 +1,6 @@
 package com.example.homepage.helperClass.Firebase
 
-import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
+import com.example.homepage.Model.GroupNoticeData
 import java.text.SimpleDateFormat
 import java.util.*
 

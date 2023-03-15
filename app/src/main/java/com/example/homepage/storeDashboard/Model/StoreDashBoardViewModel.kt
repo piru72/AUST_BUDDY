@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homepage.storeDashboard.Repo.StoreDashBoardRepository
-import com.example.homepage.storeTab.Model.Materials
+import com.example.homepage.Model.Materials
 
 class StoreDashBoardViewModel : ViewModel() {
 

@@ -3,6 +3,7 @@ package com.example.homepage.adminPanel.bugReports.Model
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.homepage.Model.BugReportsData
 import com.example.homepage.adminPanel.bugReports.Repository.BugReportRepository
 
 class BugReportViewModel : ViewModel() {

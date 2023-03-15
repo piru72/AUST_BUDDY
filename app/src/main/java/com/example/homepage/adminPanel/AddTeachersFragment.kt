@@ -9,7 +9,7 @@ import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment
 import com.example.homepage.helperClass.ValidationHelper
-import com.example.homepage.teachersPage.TeacherModel.TeacherData
+import com.example.homepage.Model.TeacherData
 
 class AddTeachersFragment : ReplaceFragment() {
     private lateinit var fragmentBinding: FragmentAddTeachersBinding

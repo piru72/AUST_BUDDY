@@ -1,7 +1,7 @@
 package com.example.homepage.adminPanel.adminRequest.Adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.adminPanel.adminRequest.Model.Admin
+import com.example.homepage.Model.Admin
 import com.example.homepage.databinding.CardAdminRequestBinding
 import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ItemViewHelper

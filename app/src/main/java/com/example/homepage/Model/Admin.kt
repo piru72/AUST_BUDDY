@@ -1,4 +1,4 @@
-package com.example.homepage.adminPanel.adminRequest.Model
+package com.example.homepage.Model
 
 data class Admin(
     val department: String? = null,

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.homepage.courseTab.Model.CourseData
+import com.example.homepage.Model.CourseData
 import com.example.homepage.databinding.FragmentAddCourseBinding
 import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ReplaceFragment

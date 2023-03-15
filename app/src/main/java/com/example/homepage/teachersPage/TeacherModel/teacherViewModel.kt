@@ -3,6 +3,7 @@ package com.example.homepage.teachersPage.TeacherModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.homepage.Model.TeacherData
 import com.example.homepage.teachersPage.TeacherRepo.TeacherRepository
 
 

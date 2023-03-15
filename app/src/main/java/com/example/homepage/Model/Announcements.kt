@@ -1,4 +1,4 @@
-package com.example.homepage.plaza.Model
+package com.example.homepage.Model
 
 data class Announcements(
     var userId: String? = "",
