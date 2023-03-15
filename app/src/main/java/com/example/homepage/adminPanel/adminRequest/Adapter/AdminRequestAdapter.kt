@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.Model.Admin
 import com.example.homepage.databinding.CardAdminRequestBinding
+import com.example.homepage.recyclerViewHolder.AdminRequestViewHolder
 
 class AdminRequestAdapter : RecyclerView.Adapter<AdminRequestViewHolder>() {
 

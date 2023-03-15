@@ -1,4 +1,4 @@
-package com.example.homepage.adminPanel.adminRequest.Adapter
+package com.example.homepage.recyclerViewHolder
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.Model.Admin
