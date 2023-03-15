@@ -185,8 +185,6 @@ Fapp/src/main/java/com/example/homepage/helperClass/ValidationHelper.kt,1\0\106
 Mapp/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/Admin.kt,c\4\c423d53e6961b56cd81cf3e037bac70f361bbc86
 Ñ
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
-Ü
-Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
 ç
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,2\e\2e6564aded0d05011c9c86baccb0e95a6dd78ba5
 ç
