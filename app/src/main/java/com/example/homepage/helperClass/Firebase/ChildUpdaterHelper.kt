@@ -1,6 +1,7 @@
 package com.example.homepage.helperClass.Firebase
 
 import android.util.Log
+import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.courseTab.Model.CourseData
 import com.example.homepage.groupNoticePage.groupNoticeModel.GroupNoticeData
 import com.example.homepage.teachersPage.TeacherModel.TeacherData
@@ -94,6 +95,29 @@ class ChildUpdaterHelper {
         )
 
         firebaseDatabase.updateChildren(childUpdates)
+
+    }
+
+    fun removeAdminRequest(admin: Admin) {
+        val currentAdminRequest = admin.email?.replace(".", "-")
+
+        removeChild(
+            "admin-admin-request",
+            currentAdminRequest.toString()
+        )
+
+    }
+
+    fun approveAdminRequest(admin: Admin) {
+        val currentAdminRequest = admin.email?.replace(".", "-")
+        val fromPath = "admin-admin-request/$currentAdminRequest"
+        val toPath = "admin-list/$currentAdminRequest"
+
+        moveChild(fromPath, toPath)
+        removeChild(
+            "admin-admin-request",
+            currentAdminRequest.toString()
+        )
 
     }
 
