@@ -118,7 +118,8 @@ class HomeFragment : ReplaceFragment() {
 
         viewBinding.btnBuses.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
-            findNavController().navigate(action)
+            val action2 = HomeFragmentDirections.actionNavigationHomeToYoutubeFragment("97h0MN9W7Hc","reference")
+            findNavController().navigate(action2)
         }
 
 

@@ -70,6 +70,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/shortCutFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_youtubeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/youtubeFragment" />
     </fragment>
 
     <fragment
@@ -416,5 +421,19 @@
             app:enterAnim="@anim/slide_in_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/favouriteWebPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/youtubeFragment"
+        android:name="com.example.homepage.helperClass.YoutubeFragment"
+        android:label="fragment_youtube"
+        tools:layout="@layout/fragment_youtube" >
+        <argument
+            android:name="videoId"
+            app:argType="string"
+            android:defaultValue="videoId" />
+        <argument
+            android:name="reference"
+            app:argType="string"
+            android:defaultValue="reference" />
     </fragment>
 </navigation>
