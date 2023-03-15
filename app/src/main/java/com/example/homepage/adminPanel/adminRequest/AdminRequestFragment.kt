@@ -9,12 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.R
-import com.example.homepage.adminPanel.adminRequest.Adapter.AdminRequestAdapter
 import com.example.homepage.adminPanel.adminRequest.Adapter.AdminRequestViewHolder
 import com.example.homepage.adminPanel.adminRequest.Adapter.GenericAdapter
 import com.example.homepage.adminPanel.adminRequest.Model.Admin
 import com.example.homepage.adminPanel.adminRequest.Model.AdminRequestViewModel
+import com.example.homepage.databinding.CardAdminRequestBinding
 import com.example.homepage.databinding.FragmentAdminRequestBinding
 
 
@@ -40,7 +39,7 @@ class AdminRequestFragment : Fragment() {
     }
 
 
-    val adapter = AdminRequestAdapter()
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,16 +51,16 @@ class AdminRequestFragment : Fragment() {
 
 
         try {
-            val genericAdapter = GenericAdapter<Admin, AdminRequestViewHolder>(
+            val genericAdapter = GenericAdapter<Admin, AdminRequestViewHolder,CardAdminRequestBinding>(
                 AdminRequestViewHolder::class.java,
-                R.layout.card_admin_request
+                CardAdminRequestBinding::class.java
             ) { holder, item ->
                 holder.bind(item)
             }
-            adminRequestRecyclerView.adapter = adapter
+
+            adminRequestRecyclerView.adapter = genericAdapter
             viewModel.allAdminRequest.observe(viewLifecycleOwner) { adminRequest ->
-                adapter.updateAdminRequestList(adminRequest)
-                //genericAdapter.updateList(adminRequest)
+                genericAdapter.updateList(adminRequest)
             }
 
         } catch (exception: RuntimeException) {
