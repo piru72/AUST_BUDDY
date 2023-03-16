@@ -136,6 +136,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
+    //YOUTUBE VIDEOS
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+
 
 
 }
