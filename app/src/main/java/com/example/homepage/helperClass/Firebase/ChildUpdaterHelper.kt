@@ -144,4 +144,21 @@ class ChildUpdaterHelper {
             }
         })
     }
+
+    fun declineCourseRequest(courseData: CourseData) {
+        val parentNode = "admin-course-request-list"
+        val childNode = courseData.courseCode.toString()
+        removeChild(parentNode, childNode)
+    }
+
+    fun approveCourseRequest(courseData: CourseData) {
+        val parentNode = "admin-course-request-list"
+        val childNode = courseData.courseCode.toString()
+
+        val fromPath = "$parentNode/$childNode"
+        val toPath = "course-list/" + courseData.coursePath.toString()
+
+        moveChild(fromPath, toPath)
+        removeChild(parentNode, childNode)
+    }
 }

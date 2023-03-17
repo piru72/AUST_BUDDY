@@ -7,7 +7,7 @@ import com.example.homepage.helperClass.Firebase.ChildUpdaterHelper
 import com.example.homepage.helperClass.ItemViewHelper
 
 
-private val firebaseHelper = ChildUpdaterHelper()
+
 
 class AdminRequestViewHolder(
     private val binding: CardAdminRequestBinding
@@ -21,6 +21,7 @@ class AdminRequestViewHolder(
         binding.textViewSemesterAdmin.text = "Semester: ${admin.semester}"
         binding.textViewYearAdmin.text = "Year: ${admin.year}"
         val itemViewHelper = ItemViewHelper(itemView.context)
+        val firebaseHelper = ChildUpdaterHelper()
 
         binding.buttonDeclineAdmin.setOnClickListener {
 

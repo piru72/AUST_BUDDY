@@ -34,21 +34,15 @@ class CourseViewHolder(private val binding: CardCoursesBinding) :
         val firebaseHelper = ChildUpdaterHelper()
         val itemViewHelper = ItemViewHelper(itemView.context)
 
-        val parentNode = "admin-course-request-list"
-        val childNode = courseData.courseCode.toString()
-
         binding.courseDeclineButton.setOnClickListener {
 
-            firebaseHelper.removeChild(parentNode, childNode)
+            firebaseHelper.declineCourseRequest(courseData)
             itemViewHelper.makeToast("Course request has been declined")
 
         }
         binding.courseApproveButton.setOnClickListener {
-            val fromPath = "$parentNode/$childNode"
-            val toPath = "course-list/" + courseData.coursePath.toString()
 
-            firebaseHelper.moveChild(fromPath, toPath)
-            firebaseHelper.removeChild(parentNode, childNode)
+            firebaseHelper.approveCourseRequest(courseData)
             itemViewHelper.makeToast("Course request has been approved")
 
         }
