@@ -27,8 +27,6 @@ t
 Dapp/src/main/java/com/example/homepage/profileTab/PrivacyFragment.kt,3\4\34cdaab9035b3d10e0dd63bb462f6d63ad915a6d
 w
 Gapp/src/main/java/com/example/homepage/teachersPage/TeachersFragment.kt,7\5\7512af5f0a22d7df115b6788d6f1bf2d41adb72a
-o
-?app/src/main/java/com/example/homepage/courseTab/ViewCourses.kt,7\e\7e957dd65cfde7677289b007114f297b29f043d3
 Ö
 Uapp/src/main/java/com/example/homepage/courseTab/DepartmentSemesterChooserFragment.kt,8\0\801433f67cf36e4e4d472057a85972f81cdabf83
 l
@@ -175,8 +173,6 @@ i
 9app/src/main/java/com/example/homepage/Model/Materials.kt,e\8\e8c7fb5843f1a46fc38b88e17ebec88362472e53
 ç
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,1\c\1ca3a616230c8c49f671ac4978fa64d62cbc937e
-ç
-]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Adapter/AdminRequestAdapter.kt,9\8\98fa995c675fa76d145b723a301bf9539b6c7a50
 t
 Dapp/src/main/java/com/example/homepage/plaza/Model/PlazaViewModel.kt,8\8\88691921c789e3ca8dfeb1c627c5c5dfa4741622
 m
@@ -185,8 +181,6 @@ k
 ;app/src/main/java/com/example/homepage/Model/TeacherData.kt,5\a\5af84d0017d37d7fe2aafa97e721684cf381df9d
 g
 7app/src/main/java/com/example/homepage/Model/Routine.kt,1\6\166a7ac92047562a7ed6f5e8fb2ac06d8ca9198d
-É
-Sapp/src/main/java/com/example/homepage/recyclerViewHolder/AdminRequestViewHolder.kt,3\e\3ea34a044a10d99ababd07fd861a06a5418d244b
 Ü
 Vapp/src/main/java/com/example/homepage/adminPanel/adminRequest/AdminRequestFragment.kt,3\a\3adaee954929df93aea627da2690c1472991120d
 ç
