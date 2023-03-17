@@ -69,12 +69,8 @@ v
 Fapp/src/main/java/com/example/homepage/helperClass/CustomFormatters.kt,0\9\090d845df956e400df14974ba9151a2122584c13
 |
 Lapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseUtils.kt,5\9\5943cb0be4737544da941751c765edd880752bd4
-t
-Dapp/src/main/java/com/example/homepage/helperClass/ItemViewHelper.kt,5\1\51d28999cf5e1276f08a51cf54cf8a3fcc478a3c
 u
 Eapp/src/main/java/com/example/homepage/helperClass/ReplaceFragment.kt,b\1\b186efc1966424820373cddb6504a98727a1f8ea
-v
-Fapp/src/main/java/com/example/homepage/adminPanel/AddCourseFragment.kt,6\a\6add0688a48ef79bcd1e2d2994f953a22432e72e
 x
 Happ/src/main/java/com/example/homepage/adminPanel/AddTeachersFragment.kt,c\a\ca3bd1f854d97d7796ed7f268ae1b3c08bb26082
 e
@@ -87,10 +83,6 @@ n
 >app/src/main/java/com/example/homepage/Model/BugReportsData.kt,d\1\d15002c4df67b8047411d548fcdd0b0d6b4b08a7
 à
 Xapp/src/main/java/com/example/homepage/adminPanel/bugReports/Model/BugReportViewModel.kt,3\f\3f54540a2dd289673391d02eceec4491d91f2733
-Å
-Qapp/src/main/java/com/example/homepage/helperClass/Firebase/ChildUpdaterHelper.kt,6\8\68556da4ed76955bb34b7ccdd6543bcda128e8b6
-j
-:app/src/main/java/com/example/homepage/Model/CourseData.kt,5\a\5add2b23f61d6db9c8b332f1d5fff70ec4106442
 v
 Fapp/src/main/java/com/example/homepage/groupTab/CreateGroupFragment.kt,d\a\da0fd7aba206c4b2c1c3b631b94f648dc002b6ae
 u
@@ -127,8 +119,6 @@ Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,
 _app/src/main/java/com/example/homepage/groupNoticePage/groupNoticeRepo/GroupNoticeRepository.kt,b\8\b882ee447950d4913eddd3dcd0b431a0b4262d8e
 è
 _app/src/main/java/com/example/homepage/groupNoticePage/groupNoticeModel/GroupNoticeViewModel.kt,c\0\c0ef633aafd7adccff28766b3efd8f998e36967d
-u
-Eapp/src/main/java/com/example/homepage/courseTab/Adapter/MyAdapter.kt,f\7\f73d71222e3f18f980383cc37d7f5b048d53d0f0
 t
 Dapp/src/main/java/com/example/homepage/plaza/Adapter/PlazaAdapter.kt,f\9\f9b782680c0db957fc4a9b397d6c8e71ec3f2f1c
 Ü
@@ -181,8 +171,6 @@ x
 Happ/src/main/java/com/example/homepage/courseTab/repos/UserRepository.kt,4\b\4bd5e48d133355bb7ec6e91324708031a7412260
 w
 Gapp/src/main/java/com/example/homepage/courseTab/Model/UserViewModel.kt,e\4\e4e27c4f2a882d1156d098601e49ed5b3dfb5dc4
-v
-Fapp/src/main/java/com/example/homepage/helperClass/ValidationHelper.kt,1\0\1060f8e0d6bf8a64324d6ddaf2028c211af357ae
 i
 9app/src/main/java/com/example/homepage/Model/Materials.kt,e\8\e8c7fb5843f1a46fc38b88e17ebec88362472e53
 ç
