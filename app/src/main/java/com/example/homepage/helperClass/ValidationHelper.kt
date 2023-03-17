@@ -20,7 +20,7 @@ class ValidationHelper {
             semester == "Semester" -> ("$selectYour $semester")
             course.courseCode?.isBlank() == true -> ("$selectYour Course Code")
             course.courseName?.isBlank() == true -> ("$selectYour  Course Name")
-            course.driveLink?.let { validWebsiteLink(it) } == true -> ("Provide an valid drive link. ")
+            course.driveLink?.let { validWebsiteLink(it) } == false -> ("Provide an valid drive link. ")
             else -> {
                 "Valid Data"
             }
