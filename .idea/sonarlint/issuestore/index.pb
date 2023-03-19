@@ -99,14 +99,10 @@ Sapp/src/main/java/com/example/homepage/favouriteWebPage/FavouriteWebPageFragmen
 Papp/src/main/java/com/example/homepage/favouriteWebPage/Repo/FavouriteWebRepo.kt,2\c\2c986ff4ece51b8a9e43e66bce78650fd851deef
 Ü
 Vapp/src/main/java/com/example/homepage/favouriteWebPage/Model/FavouriteWebViewModel.kt,1\9\191e6a32677e9877f8f2019b0d5b0c36797ad1a3
-Ö
-Uapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseDateComparator.kt,7\f\7f6dd606cfefbf076e60c0e6daa36b4790be3cc0
 ä
 Zapp/src/main/java/com/example/homepage/helperClass/genericAdapterPattern/GenericAdapter.kt,5\e\5e91b6deef78a690007fb0724d3ef8b3c8f3287a
 i
 9app/src/main/java/com/example/homepage/Model/GroupData.kt,6\6\6693b7b3aa5ca35ee5cd0e2b25fe5529880f7fc2
-è
-_app/src/main/java/com/example/homepage/groupNoticePage/groupNoticeAdapter/GroupNoticeAdapter.kt,7\3\73ffb99471efb7af746a30e9dacfa5153f1d498a
 o
 ?app/src/main/java/com/example/homepage/Model/GroupNoticeData.kt,c\b\cb56b34af4ddfc7a8866906ae136544030ea9728
 }

@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.Model.YouTubeVideoData
 import com.example.homepage.databinding.CardYoutubeVideosBinding
+import com.example.homepage.helperClass.Firebase.FirebaseTitleComparator
 import com.example.homepage.recyclerViewHolder.YouTubeVideoViewHolder
+import java.util.*
 
 class YouTubeVideoAdapter : RecyclerView.Adapter<YouTubeVideoViewHolder>() {
 
@@ -29,10 +31,10 @@ class YouTubeVideoAdapter : RecyclerView.Adapter<YouTubeVideoViewHolder>() {
     }
 
 
-    fun updateVideoList(userList: List<YouTubeVideoData>) {
-
+    fun updateVideoList(newList: List<YouTubeVideoData>) {
+        Collections.sort(newList , FirebaseTitleComparator())
         this.itemList.clear()
-        this.itemList.addAll(userList)
+        this.itemList.addAll(newList)
         notifyDataSetChanged()
 
     }
