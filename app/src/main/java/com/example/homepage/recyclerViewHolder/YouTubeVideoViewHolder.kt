@@ -1,10 +1,11 @@
 package com.example.homepage.recyclerViewHolder
 
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.homepage.Model.YouTubeVideoData
+import com.example.homepage.courseTab.YouTubeVideo.YouTubeVideoFragmentDirections
 import com.example.homepage.databinding.CardYoutubeVideosBinding
-import com.example.homepage.helperClass.ItemViewHelper
 
 class YouTubeVideoViewHolder(private val binding: CardYoutubeVideosBinding) :
     RecyclerView.ViewHolder(binding.root) {
@@ -21,11 +22,14 @@ class YouTubeVideoViewHolder(private val binding: CardYoutubeVideosBinding) :
     }
 
     private fun setupButtonFunctionality(youTubeData: YouTubeVideoData) {
-        val itemViewHelper = ItemViewHelper(itemView.context)
-
-        binding.btnSeeVideo.setOnClickListener {
-            itemViewHelper.makeToast("Watching Video")
-
+        itemView.setOnClickListener { v ->
+            val videoId = youTubeData.videoId.toString()
+            val action = YouTubeVideoFragmentDirections.actionYouTubeVideoFragmentToYoutubeFragment(
+                videoId,
+                "reference"
+            )
+            val navController = Navigation.findNavController(v)
+            navController.navigate(action)
         }
     }
 }

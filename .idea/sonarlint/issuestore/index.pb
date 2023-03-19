@@ -154,8 +154,6 @@ Tapp/src/main/java/com/example/homepage/teachersPage/TeacherRepo/TeacherReposito
 Ñ
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherModel/teacherViewModel.kt,2\7\27f05fe90099342c620553ef94926455865d4fa9
 Å
-Qapp/src/main/java/com/example/homepage/groupTab/Group/Adapter/UserGroupAdapter.kt,7\0\70e2d16552ef20d7b811568aa46167e6a90e183e
-Å
 Qapp/src/main/java/com/example/homepage/groupTab/Group/Repository/UserGroupRepo.kt,e\7\e77612a758bd9884f6092c037cc2c1e1db4db909
 Ç
 Rapp/src/main/java/com/example/homepage/groupTab/Group/Model/UserGroupsViewModel.kt,4\c\4cc978ce8ef828ab6fa24322f9e74082b05039a6
@@ -197,14 +195,10 @@ k
 ;app/src/main/java/com/example/homepage/Model/UserAllData.kt,9\1\9120a2af287dd7f558fc79222f290162674ef94a
 Ñ
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
-}
-Mapp/src/main/java/com/example/homepage/recyclerViewHolder/CourseViewHolder.kt,6\f\6fc4d76a68262d920876a1b3f8da1020b25e1ad9
 p
 @app/src/main/java/com/example/homepage/Model/YouTubeVideoData.kt,c\c\ccd8b78fc62d52a82a130c75d983b74375a4a74d
 u
 Eapp/src/main/java/com/example/homepage/courseTab/Adapter/MyAdapter.kt,f\7\f73d71222e3f18f980383cc37d7f5b048d53d0f0
-É
-Sapp/src/main/java/com/example/homepage/recyclerViewHolder/YouTubeVideoViewHolder.kt,0\b\0b7d5fc43995e674244d90cc94b601d847008ce1
 ç
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,2\e\2e6564aded0d05011c9c86baccb0e95a6dd78ba5
 ç

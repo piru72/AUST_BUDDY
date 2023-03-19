@@ -21,21 +21,7 @@
                 android:id="@+id/title"
                 android:text="@string/video_title" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSeeVideo"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:elevation="10dp"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:linksClickable="true"
-                android:text="@string/watch_video"
-                android:textColor="@color/black"/>
+
 
 
         </LinearLayout>

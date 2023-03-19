@@ -445,5 +445,11 @@
         android:id="@+id/youTubeVideoFragment"
         android:name="com.example.homepage.courseTab.YouTubeVideo.YouTubeVideoFragment"
         android:label="fragment_you_tube_video"
-        tools:layout="@layout/fragment_you_tube_video" />
+        tools:layout="@layout/fragment_you_tube_video" >
+        <action
+            android:id="@+id/action_youTubeVideoFragment_to_youtubeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/youtubeFragment" />
+    </fragment>
 </navigation>
