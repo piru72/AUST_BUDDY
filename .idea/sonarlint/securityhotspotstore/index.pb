@@ -103,8 +103,6 @@ Zapp/src/main/java/com/example/homepage/helperClass/genericAdapterPattern/Generi
 Uapp/src/main/java/com/example/homepage/helperClass/Firebase/FirebaseDateComparator.kt,7\f\7f6dd606cfefbf076e60c0e6daa36b4790be3cc0
 e
 5app/src/main/java/com/example/homepage/Model/Admin.kt,a\f\af63b613b68cc9cfc3b17419c35f3a2fb654d02a
-k
-;app/src/main/java/com/example/homepage/Model/UserAllData.kt,9\1\9120a2af287dd7f558fc79222f290162674ef94a
 o
 ?app/src/main/java/com/example/homepage/Model/GroupNoticeData.kt,c\b\cb56b34af4ddfc7a8866906ae136544030ea9728
 é
@@ -149,8 +147,6 @@ Mapp/src/main/java/com/example/homepage/groupNoticePage/GroupNoticeFragment.kt,
 Tapp/src/main/java/com/example/homepage/teachersPage/TeacherRepo/TeacherRepository.kt,5\e\5e0bc8765041194ad414f50dbd71df5dfee60fa2
 É
 Sapp/src/main/java/com/example/homepage/favouriteWebPage/FavouriteWebPageFragment.kt,2\c\2ca178bcc58a6398453d494dcc3e3af9cb10720b
-Ñ
-Tapp/src/main/java/com/example/homepage/teachersPage/TeacherAdapter/teacherAdapter.kt,5\1\511dd02e8c46661aa1d9ce315d5359200358de86
 
 Oapp/src/main/java/com/example/homepage/storeDashboard/StoreDashboardFragment.kt,f\0\f0da378b6adf24e8bf0b95f91ebb35b475a32977
 Ñ
@@ -163,8 +159,6 @@ u
 Eapp/src/main/java/com/example/homepage/plaza/DialogAddAnnouncement.kt,6\c\6c4a0bc5c6ae5f7a7cea7e6898fe0d5c8ed23566
 Ü
 Vapp/src/main/java/com/example/homepage/storeDashboard/Adapter/StoreDashBoardAdapter.kt,5\4\5442361667c66ebd54da36de6fe28152e9629091
-h
-8app/src/main/java/com/example/homepage/Model/UserData.kt,2\0\209c38c495a227e3c0305fa19ef099f47fe211f7
 w
 Gapp/src/main/java/com/example/homepage/storeTab/Adapter/StoreAdapter.kt,f\f\ffbb8ae59f3a6c9cf0ff8369e67ecb1b8f3712dc
 w
@@ -193,3 +187,19 @@ f
 6app/src/main/java/com/example/homepage/BaseActivity.kt,4\c\4c69c15fe6787fc32667e3b7daf25d5ff39738e8
 m
 =app/src/main/java/com/example/homepage/helperClass/WebView.kt,9\a\9a78a53b805c9b1ca4df37fbbfef119be40a0f9e
+ç
+]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Adapter/AdminRequestAdapter.kt,9\8\98fa995c675fa76d145b723a301bf9539b6c7a50
+v
+Fapp/src/main/java/com/example/homepage/adminPanel/AddCourseFragment.kt,6\a\6add0688a48ef79bcd1e2d2994f953a22432e72e
+o
+?app/src/main/java/com/example/homepage/courseTab/ViewCourses.kt,7\e\7e957dd65cfde7677289b007114f297b29f043d3
+t
+Dapp/src/main/java/com/example/homepage/helperClass/ItemViewHelper.kt,5\1\51d28999cf5e1276f08a51cf54cf8a3fcc478a3c
+v
+Fapp/src/main/java/com/example/homepage/helperClass/ValidationHelper.kt,1\0\1060f8e0d6bf8a64324d6ddaf2028c211af357ae
+j
+:app/src/main/java/com/example/homepage/Model/CourseData.kt,5\a\5add2b23f61d6db9c8b332f1d5fff70ec4106442
+Å
+Qapp/src/main/java/com/example/homepage/helperClass/Firebase/ChildUpdaterHelper.kt,6\8\68556da4ed76955bb34b7ccdd6543bcda128e8b6
+É
+Sapp/src/main/java/com/example/homepage/recyclerViewHolder/AdminRequestViewHolder.kt,3\e\3ea34a044a10d99ababd07fd861a06a5418d244b

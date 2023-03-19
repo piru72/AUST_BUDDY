@@ -258,6 +258,8 @@
     <string name="admin_semester">Admin Semester</string>
     <string name="admin_year">Admin Year</string>
     <string name="admin_department">Admin Department</string>
+    <string name="watch_video">Watch Video</string>
+    <string name="video_title">Video Title</string>
 
 
 </resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/card_bk"
+
+    style="@style/backgroundPopup">
+
+    <LinearLayout
+        style="@style/layoutMatchWrapHorizontal">
+
+        <LinearLayout
+            style="@style/layoutWrapContent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewWrapWrapPoppinsBlack18"
+                android:id="@+id/title"
+                android:text="@string/video_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSeeVideo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/background_color_50"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:linksClickable="true"
+                android:text="@string/watch_video"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10sp"
+            android:contentDescription="@string/teacher_image"
+            android:padding="5sp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
