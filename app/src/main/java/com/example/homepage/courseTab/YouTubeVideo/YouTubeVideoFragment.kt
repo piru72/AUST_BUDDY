@@ -15,16 +15,15 @@ class YouTubeVideoFragment : Fragment() {
     private val viewBinding get() = fragmentBinding!!
 
 
-    private val recyclerView: RecyclerView by lazy { viewBinding.recyclerView }
-
+    private lateinit var recycler: RecyclerView
+    private val adapter: YouTubeVideoAdapter by lazy { YouTubeVideoAdapter() }
     private val viewModel by viewModels<YouTubeVideoViewModel>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
-
         fragmentBinding = FragmentYouTubeVideoBinding.inflate(inflater, container, false)
         return viewBinding.root
     }
@@ -32,20 +31,18 @@ class YouTubeVideoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.setHasFixedSize(true)
-
-        val adapter = YouTubeVideoAdapter()
-
-
-        recyclerView.adapter = adapter
-
+        setupRecyclerView()
 
         viewModel.liveData.observe(viewLifecycleOwner) {
-
             adapter.updateVideoList(it)
-
         }
+    }
+
+    private fun setupRecyclerView() {
+        recycler = viewBinding.recyclerView
+        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.setHasFixedSize(true)
+        recycler.adapter = adapter
     }
 
 

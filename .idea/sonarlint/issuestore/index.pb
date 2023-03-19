@@ -57,8 +57,6 @@ p
 @app/src/main/java/com/example/homepage/storeTab/StoreFragment.kt,0\7\07c17253b854ce46d6f04ce3da0bf578464b6dba
 w
 Gapp/src/main/java/com/example/homepage/teachersPage/TeachersFragment.kt,7\5\7512af5f0a22d7df115b6788d6f1bf2d41adb72a
-u
-Eapp/src/main/java/com/example/homepage/groupTab/UserGroupsFragment.kt,1\a\1a7e348ae99a3a21ccbf00f58ecb0bd6be1f0f4e
 z
 Japp/src/test/java/com/example/homepage/helperClass/ValidationHelperTest.kt,2\a\2a56dbd16f37b993530b49ecae11251b1fd00bec
 |
@@ -203,9 +201,3 @@ Eapp/src/main/java/com/example/homepage/courseTab/Adapter/MyAdapter.kt,f\7\f73d
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,2\e\2e6564aded0d05011c9c86baccb0e95a6dd78ba5
 ç
 ]app/src/main/java/com/example/homepage/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,1\c\1ca3a616230c8c49f671ac4978fa64d62cbc937e
-Ñ
-Tapp/src/main/java/com/example/homepage/courseTab/YouTubeVideo/YouTubeVideoAdapter.kt,b\1\b10be0e0520b4ac7730508f1fe86f7a13a39c19d
-Ü
-Vapp/src/main/java/com/example/homepage/courseTab/YouTubeVideo/YouTubeVideoViewModel.kt,1\0\10c2abdf7667346c145b687e38085478c52bc1b8
-á
-Wapp/src/main/java/com/example/homepage/courseTab/YouTubeVideo/YouTubeVideoRepository.kt,a\f\afaeccc095f64feb0c1e74a321d50cb4b9ad6787
