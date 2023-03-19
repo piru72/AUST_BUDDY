@@ -9,7 +9,8 @@
     style="@style/backgroundPopup">
 
     <LinearLayout
-        style="@style/layoutMatchWrapHorizontal">
+        android:layout_height="80dp"
+        android:layout_width="match_parent">
 
         <LinearLayout
             style="@style/layoutWrapContent"
