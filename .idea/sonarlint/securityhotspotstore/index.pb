@@ -57,8 +57,6 @@ m
 =app/src/main/java/com/example/homepage/plaza/PlazaFragment.kt,b\f\bf51a163acb701e81d98f8a0fb3db8099b983d4a
 t
 Dapp/src/main/java/com/example/homepage/groupTab/JoinGroupFragment.kt,4\d\4d12ce1f5200fe148b951828873a80ef61ee92f5
-|
-Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
 z
 Japp/src/test/java/com/example/homepage/helperClass/ValidationHelperTest.kt,2\a\2a56dbd16f37b993530b49ecae11251b1fd00bec
 v
@@ -197,10 +195,6 @@ o
 ?app/src/main/java/com/example/homepage/courseTab/ViewCourses.kt,7\e\7e957dd65cfde7677289b007114f297b29f043d3
 w
 Gapp/src/main/java/com/example/homepage/courseTab/Model/UserViewModel.kt,e\4\e4e27c4f2a882d1156d098601e49ed5b3dfb5dc4
-}
-Mapp/src/main/java/com/example/homepage/recyclerViewHolder/CourseViewHolder.kt,6\f\6fc4d76a68262d920876a1b3f8da1020b25e1ad9
-f
-6app/src/main/java/com/example/homepage/HomeFragment.kt,0\c\0c524e531db0064e6644a1b187fc800d19dca83f
 Å
 Qapp/src/main/java/com/example/homepage/groupTab/Group/Adapter/UserGroupAdapter.kt,7\0\70e2d16552ef20d7b811568aa46167e6a90e183e
 Ü
@@ -211,5 +205,3 @@ u
 Eapp/src/main/java/com/example/homepage/helperClass/YoutubeFragment.kt,9\a\9ae9d9e85ef688ce5bfc963c6a04225aa8099806
 u
 Eapp/src/main/java/com/example/homepage/groupTab/UserGroupsFragment.kt,1\a\1a7e348ae99a3a21ccbf00f58ecb0bd6be1f0f4e
-É
-Sapp/src/main/java/com/example/homepage/recyclerViewHolder/YouTubeVideoViewHolder.kt,0\b\0b7d5fc43995e674244d90cc94b601d847008ce1

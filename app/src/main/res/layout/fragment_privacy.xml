@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pure_white"
-    tools:context=".profileTab.PrivacyFragment">
+    tools:context=".features.profileTab.PrivacyFragment">
 
 
     <WebView

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
     android:padding="30dp"
-    tools:context=".adminPanel.AddTeachersFragment">
+    tools:context=".features.adminPanel.AddTeachersFragment">
 
     <ImageView
         android:layout_width="match_parent"

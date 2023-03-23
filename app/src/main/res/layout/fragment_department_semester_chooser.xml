@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_department_semesterChooser"
     style="@style/backgroundMain"
-    tools:context=".courseTab.DepartmentSemesterChooserFragment">
+    tools:context=".features.courseTab.DepartmentSemesterChooserFragment">
 
     <LinearLayout style="@style/layoutMatchParentVertical">
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_profile"
     style="@style/backgroundMain"
-    tools:context=".profileTab.ProfileFragment">
+    tools:context=".features.profileTab.ProfileFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

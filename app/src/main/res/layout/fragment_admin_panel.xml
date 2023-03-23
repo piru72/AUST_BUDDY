@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_admin_panel"
     style="@style/backgroundMain"
-    tools:context=".adminPanel.AdminPanelFragment">
+    tools:context=".features.adminPanel.AdminPanelFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

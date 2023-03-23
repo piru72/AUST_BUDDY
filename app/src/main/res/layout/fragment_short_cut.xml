@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/backgroundMain"
-    tools:context=".homeTab.ShortCutFragment">
+    tools:context=".features.homeTab.ShortCutFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">

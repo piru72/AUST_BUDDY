@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    tools:context=".groupTab.UserGroupsFragment">
+    tools:context=".features.groupTab.UserGroupsFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

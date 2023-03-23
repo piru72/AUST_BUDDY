@@ -59,8 +59,6 @@ w
 Gapp/src/main/java/com/example/homepage/teachersPage/TeachersFragment.kt,7\5\7512af5f0a22d7df115b6788d6f1bf2d41adb72a
 z
 Japp/src/test/java/com/example/homepage/helperClass/ValidationHelperTest.kt,2\a\2a56dbd16f37b993530b49ecae11251b1fd00bec
-|
-Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
 v
 Fapp/src/main/java/com/example/homepage/helperClass/CustomFormatters.kt,0\9\090d845df956e400df14974ba9151a2122584c13
 |
@@ -197,18 +195,12 @@ o
 ?app/src/main/java/com/example/homepage/courseTab/ViewCourses.kt,7\e\7e957dd65cfde7677289b007114f297b29f043d3
 w
 Gapp/src/main/java/com/example/homepage/courseTab/Model/UserViewModel.kt,e\4\e4e27c4f2a882d1156d098601e49ed5b3dfb5dc4
-}
-Mapp/src/main/java/com/example/homepage/recyclerViewHolder/CourseViewHolder.kt,6\f\6fc4d76a68262d920876a1b3f8da1020b25e1ad9
-f
-6app/src/main/java/com/example/homepage/HomeFragment.kt,0\c\0c524e531db0064e6644a1b187fc800d19dca83f
 u
 Eapp/src/main/java/com/example/homepage/helperClass/YoutubeFragment.kt,9\a\9ae9d9e85ef688ce5bfc963c6a04225aa8099806
 Å
 Qapp/src/main/java/com/example/homepage/groupTab/Group/Adapter/UserGroupAdapter.kt,7\0\70e2d16552ef20d7b811568aa46167e6a90e183e
 u
 Eapp/src/main/java/com/example/homepage/groupTab/UserGroupsFragment.kt,1\a\1a7e348ae99a3a21ccbf00f58ecb0bd6be1f0f4e
-É
-Sapp/src/main/java/com/example/homepage/recyclerViewHolder/YouTubeVideoViewHolder.kt,0\b\0b7d5fc43995e674244d90cc94b601d847008ce1
 Ü
 Vapp/src/main/java/com/example/homepage/courseTab/YouTubeVideo/YouTubeVideoViewModel.kt,1\0\10c2abdf7667346c145b687e38085478c52bc1b8
 á

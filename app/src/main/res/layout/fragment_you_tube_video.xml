@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".courseTab.YouTubeVideo.YouTubeVideoFragment">
+    tools:context=".features.courseTab.YouTubeVideo.YouTubeVideoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
