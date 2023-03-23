@@ -1,11 +1,12 @@
-package com.example.homepage
+package com.example.homepage.app
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.homepage.onBoarding.OnBoarding1
+import com.example.homepage.R
+import com.example.homepage.features.onBoarding.OnBoarding1
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth

@@ -1,4 +1,4 @@
-package com.example.homepage.helperClass.Firebase
+package com.example.homepage.database
 
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_home"
     style="@style/backgroundMain"
-    tools:context=".HomeFragment">
+    tools:context=".app.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
 

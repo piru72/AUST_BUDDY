@@ -1,7 +1,7 @@
-package com.example.homepage.helperClass.Firebase
+package com.example.homepage.database
 
-import com.example.homepage.Model.GroupNoticeData
-import com.example.homepage.Model.YouTubeVideoData
+import com.example.homepage.utils.models.GroupNoticeData
+import com.example.homepage.utils.models.YouTubeVideoData
 import java.text.SimpleDateFormat
 import java.util.*
 

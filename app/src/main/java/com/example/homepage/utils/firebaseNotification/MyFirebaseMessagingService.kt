@@ -1,4 +1,4 @@
-package com.example.homepage.firebaseNotification
+package com.example.homepage.utils.firebaseNotification
 
 import android.app.Notification
 import android.app.NotificationManager

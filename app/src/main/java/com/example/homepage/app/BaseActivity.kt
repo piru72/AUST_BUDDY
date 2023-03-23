@@ -1,9 +1,10 @@
-package com.example.homepage
+package com.example.homepage.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.homepage.R
 import com.example.homepage.databinding.ActivityBaseBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

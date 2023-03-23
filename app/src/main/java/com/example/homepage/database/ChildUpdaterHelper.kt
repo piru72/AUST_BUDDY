@@ -1,10 +1,10 @@
-package com.example.homepage.helperClass.Firebase
+package com.example.homepage.database
 
 import android.util.Log
-import com.example.homepage.Model.Admin
-import com.example.homepage.Model.CourseData
-import com.example.homepage.Model.GroupNoticeData
-import com.example.homepage.Model.TeacherData
+import com.example.homepage.utils.models.Admin
+import com.example.homepage.utils.models.CourseData
+import com.example.homepage.utils.models.GroupNoticeData
+import com.example.homepage.utils.models.TeacherData
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase

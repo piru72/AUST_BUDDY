@@ -1,4 +1,4 @@
-package com.example.homepage
+package com.example.homepage.app
 
 import android.os.Bundle
 import android.view.Gravity
@@ -10,9 +10,10 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
-import com.example.homepage.Model.UserAllData
+import com.example.homepage.R
+import com.example.homepage.utils.models.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
-import com.example.homepage.helperClass.ReplaceFragment
+import com.example.homepage.utils.helpers.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
