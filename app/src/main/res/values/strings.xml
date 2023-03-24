@@ -260,6 +260,7 @@
     <string name="admin_department">Admin Department</string>
     <string name="watch_video">Watch Video</string>
     <string name="video_title">Video Title</string>
+    <string name="add_to_favourite">Add to favourite</string>
 
 
 </resources>
