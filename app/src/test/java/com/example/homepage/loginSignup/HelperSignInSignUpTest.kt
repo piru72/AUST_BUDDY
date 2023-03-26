@@ -1,7 +1,7 @@
 package com.example.homepage.loginSignup
 
 
-import com.example.homepage.features.loginSignup.HelperSignInSignUp
+import com.example.homepage.utils.helpers.HelperSignInSignUp
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

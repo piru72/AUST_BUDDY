@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.R
-import com.example.homepage.features.loginSignup.SignInActivity
+import com.example.homepage.features.authentication.SignInActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

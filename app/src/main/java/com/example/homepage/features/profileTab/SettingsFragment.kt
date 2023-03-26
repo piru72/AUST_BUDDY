@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentSettingsBinding
-import com.example.homepage.features.loginSignup.HelperSignInSignUp
-import com.example.homepage.features.loginSignup.SignInActivity
+import com.example.homepage.utils.helpers.HelperSignInSignUp
+import com.example.homepage.features.authentication.SignInActivity
 import com.example.homepage.utils.helpers.ReplaceFragment
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider

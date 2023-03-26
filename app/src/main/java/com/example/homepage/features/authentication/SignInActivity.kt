@@ -1,4 +1,4 @@
-package com.example.homepage.features.loginSignup
+package com.example.homepage.features.authentication
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -7,11 +7,11 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.homepage.app.BaseActivity
 import com.example.homepage.R
-import com.example.homepage.utils.models.UserData
+import com.example.homepage.app.BaseActivity
 import com.example.homepage.databinding.ActivitySignInBinding
-import com.example.homepage.features.profileTab.ForgotPasswordFragment
+import com.example.homepage.utils.helpers.HelperSignInSignUp
+import com.example.homepage.utils.models.UserData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth

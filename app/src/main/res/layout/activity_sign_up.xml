@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="20dp"
 
-    tools:context=".features.loginSignup.SignUpActivity">
+    tools:context=".features.authentication.SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

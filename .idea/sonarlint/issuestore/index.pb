@@ -7,8 +7,6 @@ Kapp/src/test/java/com/example/homepage/loginSignup/EmailPasswordTestData.kt,8\
 Napp/src/main/java/com/example/homepage/features/profileTab/AboutDevFragment.kt,f\6\f6755fedbfb0d04ecea78f49ac6a3bd077c0fa38
 
 Oapp/src/main/java/com/example/homepage/features/adminPanel/AddCourseFragment.kt,b\3\b372d0aa88bfc61f15a21a03cf9c987874dcdfa8
-Å
-Qapp/src/main/java/com/example/homepage/features/adminPanel/AddTeachersFragment.kt,3\6\3613f4216ba9c4c54098d81d27cdd99c049d5053
 l
 <app/src/main/java/com/example/homepage/utils/models/Admin.kt,b\7\b706e86dbdddec898c72eaa4f5ca32785dae2884
 Ä
@@ -23,8 +21,6 @@ fapp/src/main/java/com/example/homepage/features/adminPanel/adminRequest/Repo/Ad
 Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/AdminRequestViewHolder.kt,b\1\b1520487ab52d5917a37a0a769175136b7a0d077
 ñ
 fapp/src/main/java/com/example/homepage/features/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,f\0\f07aed5c183cab69b1e593b321f40e46a2be6b10
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 t
 Dapp/src/main/java/com/example/homepage/utils/models/Announcements.kt,a\7\a79c8d4982572ed2fee21e5db0e8be718023e282
 ë
@@ -95,8 +91,6 @@ n
 >app/src/main/java/com/example/homepage/utils/helpers/Helper.kt,9\5\9557c96072e26505edc37d721b0f194b7e3b1252
 Å
 Qapp/src/main/java/com/example/homepage/features/loginSignup/HelperSignInSignUp.kt,8\1\8178dad9b01f335556ce511c232972d98d2f9372
-|
-Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
 v
 Fapp/src/main/java/com/example/homepage/utils/helpers/ItemViewHelper.kt,c\1\c1a584d765ba4e6315a1ea1d3cbef32ed9768c5a
 }
@@ -109,8 +103,6 @@ y
 Iapp/src/main/java/com/example/homepage/features/onBoarding/OnBoarding1.kt,6\0\602ad2e27ab87eedc377411f94c74d58b384d8c2
 y
 Iapp/src/main/java/com/example/homepage/features/onBoarding/OnBoarding2.kt,d\7\d7ed6a4170f81b535cdc1932a3ef1e3dc282e378
-y
-Iapp/src/main/java/com/example/homepage/features/onBoarding/OnBoarding3.kt,2\6\266bf3cff21e250dbff41366a5dce620141dba76
 }
 Mapp/src/main/java/com/example/homepage/features/plaza/Adapter/PlazaAdapter.kt,9\8\98aa74bffa18e5ad21a6807fcab90228525c7178
 è
@@ -129,18 +121,12 @@ Mapp/src/main/java/com/example/homepage/features/plaza/Repo/PlazaRepository.kt,
 Mapp/src/main/java/com/example/homepage/features/plaza/Model/PlazaViewModel.kt,b\a\ba3dad80ad519fd144206eddb8008c0df16a1da2
 }
 Mapp/src/main/java/com/example/homepage/features/profileTab/PrivacyFragment.kt,f\9\f9f9bd5dca1d6978f1ef29637e094182aa5b5d56
-}
-Mapp/src/main/java/com/example/homepage/features/profileTab/ProfileFragment.kt,5\6\56d39783f5c098659993c14589d152e3b25b34e7
-w
-Gapp/src/main/java/com/example/homepage/utils/helpers/ReplaceFragment.kt,8\8\88c177b71b276a08a56bd0a51c802b50cd12a8f2
 z
 Japp/src/main/java/com/example/homepage/features/homeTab/RequestFragment.kt,b\5\b52140b3ab9471b7663419c047be933e4292b833
 n
 >app/src/main/java/com/example/homepage/utils/models/Routine.kt,0\2\0207c03a43a45e40bb59557d423e22122a0c2695
 Ç
 Rapp/src/main/java/com/example/homepage/features/homeTab/routine/RoutineFragment.kt,6\6\66f2d115fc8c9bc834a452da6913eeab7c414bf0
-~
-Napp/src/main/java/com/example/homepage/features/profileTab/SettingsFragment.kt,0\6\06764295badb3ecfa65b4d3a75c634167b3a5706
 {
 Kapp/src/main/java/com/example/homepage/features/homeTab/ShortCutFragment.kt,b\c\bc68f250b267e65e2a52c371a948247ecd57d0a3
 }
@@ -213,8 +199,6 @@ y
 Iapp/src/main/java/com/example/homepage/database/FirebaseDateComparator.kt,2\5\256a71b48da97b62b378c53523beac2ceecfb529
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
-j
-:app/src/main/java/com/example/homepage/app/HomeFragment.kt,b\b\bb150b87f560210ad6784982a3efbee210d5c419
 j
 :app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 o

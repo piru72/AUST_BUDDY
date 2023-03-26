@@ -1,4 +1,4 @@
-package com.example.homepage.features.profileTab
+package com.example.homepage.features.authentication
 
 import android.os.Bundle
 import android.util.Patterns

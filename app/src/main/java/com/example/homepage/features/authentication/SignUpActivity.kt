@@ -1,10 +1,11 @@
-package com.example.homepage.features.loginSignup
+package com.example.homepage.features.authentication
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.homepage.databinding.ActivitySignUpBinding
+import com.example.homepage.utils.helpers.HelperSignInSignUp
 import com.google.firebase.auth.FirebaseAuth
 
 class SignUpActivity : AppCompatActivity() {

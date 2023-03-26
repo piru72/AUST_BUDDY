@@ -1,4 +1,4 @@
-package com.example.homepage.features.loginSignup
+package com.example.homepage.utils.helpers
 
 import android.util.Patterns
 

@@ -366,7 +366,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.homepage.features.profileTab.ForgotPasswordFragment"
+        android:name="com.example.homepage.features.authentication.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
     <fragment
