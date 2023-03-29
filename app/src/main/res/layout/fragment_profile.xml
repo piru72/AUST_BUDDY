@@ -11,63 +11,14 @@
         android:id="@+id/profile_screen"
         style="@style/layoutMatchParent">
 
-        <TextView
-            android:id="@+id/textview_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/profile"
-            android:textColor="@color/black"
-            android:textSize="34sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/textview_yet_TO_BE_DONE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.08" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dev1Img"
-            android:layout_width="128dp"
-            android:layout_height="118dp"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="20sp"
-            android:src="@drawable/dev"
-            android:visibility="gone"
-            app:civ_border_color="#FFFFFF"
-            app:civ_border_width="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/textview_yet_TO_BE_DONE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_profile"
-            app:layout_constraintVertical_bias="0.47" />
-
-        <TextView
-            android:id="@+id/textview_yet_TO_BE_DONE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="179dp"
-            android:layout_marginEnd="174dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/user_name"
-            android:textColor="@color/black"
-            android:textSize="34sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-            app:layout_constraintHorizontal_bias="0.531"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             style="@style/layoutMatchParentVertical"
-            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_yet_TO_BE_DONE">
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
                 android:id="@+id/btn_edit_profile"

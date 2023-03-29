@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
+    style="@style/layoutMatchParent"
     tools:context=".features.homeTab.routine.RoutineFragment">
 
     <LinearLayout
+        style="@style/layoutMatchWrapVertical"
         android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
         android:layout_gravity="center">
 
-            <ImageView
-                android:id="@+id/images"
-                android:contentDescription="Routine Image"
-                android:rotation="90"
-                android:layout_width="wrap_content"
-                android:layout_height="400dp"
-                android:scaleType="fitXY"
-                android:adjustViewBounds="true"
-                android:src="@drawable/routine"
-
-                />
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/routine_image"
+            android:rotation="90"
+            android:scaleType="fitXY"
+            android:src="@drawable/routine" />
 
     </LinearLayout>
 

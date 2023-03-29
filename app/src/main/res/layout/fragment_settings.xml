@@ -3,26 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_settings"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.profileTab.SettingsFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="center"
-            android:text="Change Password"
-            android:textColor="@color/black"
+            style="@style/textViewWrapWrapPoppinsBlack20"
+            android:text="@string/change_password"
             android:textSize="25sp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +21,7 @@
             app:layout_constraintVertical_bias="0.065" />
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
+            style="@style/layoutMatchWrapVertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,93 +31,54 @@
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_signin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                style="@style/layoutMatchWrapHorizontal"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvCurrentUserPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10sp"
-                    android:fontFamily="@font/poppins_light"
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:hint="Provide your current Password"
-                    android:inputType="textPassword" />
+                    style="@style/materialPasswordInput"
+                    android:hint="@string/provide_your_current_password" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_change_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                style="@style/layoutMatchWrapHorizontal"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordType"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/poppins_light"
-
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="10sp"
-                    android:hint="Type your new Password"
-                    android:inputType="textPassword" />
+                    style="@style/materialPasswordInput"
+                    android:hint="@string/type_your_new_password" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_change_retype"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                style="@style/layoutMatchWrapHorizontal"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordRetype"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/poppins_light"
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_margin="10sp"
-                    android:hint="Retype your new Password"
-                    android:inputType="textPassword" />
+                    style="@style/materialPasswordInput"
+                    android:hint="@string/retype_your_new_password" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/goToForgotPasswordFragment"
+                style="@style/textViewWrapWrapPoppinsBlack"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Forgot Password?"
-                android:fontFamily="@font/poppins_light"
-                android:textAlignment="textEnd"
-                android:textColor="@color/black"
-                android:layout_marginRight="20dp"
-                android:textSize="15dp" />
+                android:text="@string/forgot_password"
+                android:textAlignment="textEnd" />
 
 
             <Button
                 android:id="@+id/btnChangePassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Change Password"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePage"
+                android:text="@string/change_password" />
 
 
         </LinearLayout>

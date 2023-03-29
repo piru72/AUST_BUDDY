@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/backgroundMain"
     tools:context=".features.plazaTab.plazaDashboard.PlazaDashBoardFragment">
 
     <RelativeLayout
         android:id="@+id/postedItemsListLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
-
+        style="@style/layoutMatchParent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/posted_item_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
+            style="@style/layoutMatchParent">
 
         </androidx.recyclerview.widget.RecyclerView>
 

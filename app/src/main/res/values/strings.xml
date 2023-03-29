@@ -299,6 +299,10 @@
     <string name="item">Item</string>
     <string name="view_every_semester">View every semester</string>
     <string name="semester">Semester</string>
+    <string name="provide_your_current_password">Provide your current Password</string>
+    <string name="type_your_new_password">Type your new Password</string>
+    <string name="retype_your_new_password">Retype your new Password</string>
+    <string name="change_password">Change Password</string>
 
 
 </resources>
