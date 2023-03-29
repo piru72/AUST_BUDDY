@@ -2,22 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.commonPages.storeTab.StoreFragment">
 
     <RelativeLayout
         android:id="@+id/materialListActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/layoutMatchParent"
         android:padding="10dp">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/material_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/layoutWrapContent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
         </androidx.recyclerview.widget.RecyclerView>

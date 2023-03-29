@@ -2,38 +2,26 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.commonPages.storeDashboard.StoreDashboardFragment">
 
     <RelativeLayout
         android:id="@+id/postedItemsListLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        style="@style/layoutMatchParent">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/posted_item_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/layoutWrapContent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingPostItemButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="TODO"
-            app:backgroundTint="@color/white"
-            app:fabSize="normal"
-            app:srcCompat="@android:drawable/ic_input_add" />
+
+            style="@style/buttonStyleFloat"
+            android:contentDescription="@string/plus_button" />
 
 
     </RelativeLayout>

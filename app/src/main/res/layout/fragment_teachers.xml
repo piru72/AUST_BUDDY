@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.homeTab.teachersPage.TeachersFragment">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/layoutMatchParent"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_other"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@color/background_color_50"
-
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:focusable="true"
-
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/all_departments"
-            android:textColor="@color/black"
-
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:layout_marginTop="10dp"
+            android:text="@string/all_departments" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/teacher_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp" />
+            style="@style/layoutMatchWrap" />
     </LinearLayout>
 
 

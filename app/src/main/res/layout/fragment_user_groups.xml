@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/userGroupFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.groupTab.UserGroupsFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/UserGroupListRecycle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        style="@style/layoutMatchWrap" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <RelativeLayout style="@style/layoutMatchParent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-
-            android:contentDescription="@string/plus_button"
-            app:backgroundTint="@color/white"
-
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-
-            android:layout_margin="20dp"
-
-            app:srcCompat="@android:drawable/ic_input_add" />
+            style="@style/buttonStyleFloat"
+            android:contentDescription="@string/plus_button" />
     </RelativeLayout>
-
-
 
 
 </FrameLayout>

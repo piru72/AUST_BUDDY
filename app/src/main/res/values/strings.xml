@@ -297,6 +297,8 @@
     <string name="id">Id</string>
     <string name="website_link">Website Link</string>
     <string name="item">Item</string>
+    <string name="view_every_semester">View every semester</string>
+    <string name="semester">Semester</string>
 
 
 </resources>

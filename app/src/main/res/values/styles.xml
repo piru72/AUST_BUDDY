@@ -316,4 +316,18 @@
     </style>
 
 
+    <style name="buttonStyleFloat" parent="Widget.Design.FloatingActionButton">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:contentDescription">@string/plus_button</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="srcCompat">@android:drawable/ic_input_add</item>
+
+    </style>
+
+
 </resources>

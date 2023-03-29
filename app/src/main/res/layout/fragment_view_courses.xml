@@ -1,52 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.homeTab.courseTab.ViewCourses">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/layoutMatchParent"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/semesterReal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Semester"
-
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:fontFamily="@font/poppins_light"
-            android:textSize="20dp" />
+            style="@style/textViewWrapWrapPoppinsBlack20"
+            android:text="@string/semester" />
 
         <Button
             android:id="@+id/btnSemesterChooser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@color/background_color_50"
-
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:focusable="true"
-
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="View every semeseter"
-            android:textColor="@color/black"
-
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/view_every_semester" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/layoutMatchWrap" />
 
     </LinearLayout>
 
