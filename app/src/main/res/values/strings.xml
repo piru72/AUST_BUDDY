@@ -271,6 +271,8 @@
     <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
     <string name="sign_up">Sign up</string>
     <string name="re_type_your_password">Re Type your Password</string>
+    <string name="select_topic">Select Topic</string>
+    <string name="announcement">ANNOUNCEMENT</string>
 
 
 </resources>
