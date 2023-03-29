@@ -303,6 +303,27 @@
     <string name="type_your_new_password">Type your new Password</string>
     <string name="retype_your_new_password">Retype your new Password</string>
     <string name="change_password">Change Password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="you_re_currently_signed_in_as">You\'re currently signed in as</string>
+    <string name="student_email">STUDENT EMAIL</string>
+    <string name="provide_group_id">Provide Group Id</string>
+    <string name="to_sign_in_with_a_group_id_n_use_an_authorised_account_n_use_a_group_id_with_5_7_letter_and_numbers_n_no_space">To sign in with a group id\n - Use an authorised account \n - Use a group id, with 5-7 letter and numbers \n - No space</string>
+    <string name="join_group">Join Group</string>
+    <string name="ask_admin_for_the_group_id_then_enter_it_here">Ask admin for the group id, then enter it here.</string>
+    <string name="click_the_plus_button_to_list_your_quizzes_schedule">Click the plus button to List your quizzes schedule</string>
+    <string name="send_mail">Send mail</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="update_semester">Update Semester</string>
+    <string name="department">Department</string>
+    <string name="session">Session</string>
+    <string name="student_id">Student ID</string>
+    <string name="admission_session">Admission Session</string>
+    <string name="provide_group_name">Provide Group Name</string>
+    <string name="provide_group_details">Provide Group details</string>
+    <string name="create_group">Create Group</string>
+    <string name="icon">icon</string>
+    <string name="course_requests">Course requests</string>
+    <string name="teacher_request">Teacher request</string>
 
 
 </resources>

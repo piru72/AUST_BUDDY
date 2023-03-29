@@ -1,154 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/backgroundMain"
     tools:context=".features.homeTab.teachersPage.DepartmentChooserFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bk_shape03"
-        android:gravity="center"
-        android:orientation="vertical">
+    <LinearLayout style="@style/layoutMatchParentVertical">
 
         <Button
             android:id="@+id/btn_cse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/background_color_50"
-
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="8dp"
-            android:text="@string/cse"
-            android:textColor="@color/black"
-
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/cse" />
 
         <Button
             android:id="@+id/btn_eee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/eee"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/eee" />
 
         <Button
             android:id="@+id/btn_ce"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/ce"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/ce" />
 
         <Button
             android:id="@+id/btn_me"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/me"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/me" />
 
 
         <Button
             android:id="@+id/btn_Ipe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/ipe"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/ipe" />
 
         <Button
             android:id="@+id/btn_te"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/te"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            style="@style/buttonStylePage"
+            android:text="@string/te" />
 
         <Button
             android:id="@+id/btn_as"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="8dp"
-
-            android:background="@color/background_color_50"
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="10dp"
-            android:text="@string/as"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
-
+            style="@style/buttonStylePage"
+            android:text="@string/as" />
 
 
     </LinearLayout>

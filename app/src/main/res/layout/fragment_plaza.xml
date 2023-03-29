@@ -1,83 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.plazaTab.PlazaFragment">
 
 
     <RelativeLayout
         android:id="@+id/postedItemsListLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/layoutMatchParent"
         android:padding="10dp">
 
 
         <Button
             android:id="@+id/btn_plaza_dashboard"
+            style="@style/buttonStylePopup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@color/background_color_50"
-
-            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-            android:drawableTint="#000"
-            android:focusable="true"
-
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="Dashboard"
-            android:textColor="@color/black"
-
-            android:visibility="visible"
-            tools:ignore="RtlSymmetry" />
+            android:text="@string/dashboard" />
 
         <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/categories"
+            style="@style/layoutMatchWrap"
             android:layout_below="@+id/btn_plaza_dashboard"
-           android:id="@+id/categories"
             android:background="@color/background_color_50">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutWrapWrapHorizontal">
 
                 <Button
                     android:id="@+id/categoryAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/layoutWrapContent"
                     android:layout_margin="5dp"
                     android:text="@string/alla" />
 
                 <Button
                     android:id="@+id/categoryHelp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/layoutWrapContent"
                     android:layout_margin="5dp"
                     android:text="@string/help" />
 
                 <Button
                     android:id="@+id/categoryOfficial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/layoutWrapContent"
                     android:layout_margin="5dp"
                     android:text="@string/official" />
 
                 <Button
                     android:id="@+id/categoryAdvertisement"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/layoutWrapContent"
                     android:layout_margin="5dp"
                     android:text="@string/advertisement" />
 
                 <Button
                     android:id="@+id/categoryOthers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/layoutWrapContent"
                     android:layout_margin="5dp"
                     android:text="@string/others" />
 
@@ -85,11 +59,9 @@
         </HorizontalScrollView>
 
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/announcement_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/layoutMatchWrap"
             android:layout_below="@id/categories"
             android:padding="5dp">
 
@@ -98,21 +70,10 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingPostItemButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="TODO"
-            app:backgroundTint="@color/primary_green"
-            app:fabSize="normal"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            style="@style/buttonStyleFloat"
+            android:contentDescription="@string/plus_button" />
 
     </RelativeLayout>
-
-
-
 
 
 </FrameLayout>

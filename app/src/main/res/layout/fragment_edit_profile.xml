@@ -3,296 +3,139 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_edit_profile"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.profileTab.EditProfileFragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/dev1Img"
-            android:layout_width="143dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="20dp"
-            android:layout_marginTop="48dp"
-            android:src="@drawable/dev"
-            android:visibility="gone"
-            app:civ_border_color="#FFFFFF"
-            app:civ_border_width="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="415dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:orientation="vertical"
-            android:padding="20dp"
+            style="@style/layoutMatchWrapVertical"
+            android:padding="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/changeProfilePhoto">
+            app:layout_constraintStart_toStartOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/userNameAnc"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:drawableStart="@drawable/person_ic"
-
-                    android:drawableTint="#000"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="User Name"
-
-                    android:textSize="20dp" />
+                    android:text="@string/user_name"
+                    app:drawableStartCompat="@drawable/person_ic" />
 
                 <TextView
                     android:id="@+id/userNameReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="User Name"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:text="@string/user_name" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/fullNameAnc"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="Email"
-                    android:drawableStart="@drawable/mail_ic"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/email"
+                    app:drawableStartCompat="@drawable/mail_ic" />
 
                 <TextView
                     android:id="@+id/fullEmailReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="Email"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:text="@string/email" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/IdAnchor"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-
-                    android:text="Student ID"
-                    android:drawableStart="@drawable/key_ic"
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/student_id"
+                    app:drawableStartCompat="@drawable/key_ic" />
 
                 <TextView
                     android:id="@+id/IdReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="ID"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:text="@string/id" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/sessionAnchor"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="Session"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/session" />
 
                 <TextView
                     android:id="@+id/sessionReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-
-                    android:fontFamily="@font/poppins_light"
-
-                    android:text="Admission Session"
-
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:text="@string/admission_session" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/departmentAnchor"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-
-
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:drawableStart="@drawable/dept_ic"
-                    android:text="Department"
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/department"
+                    app:drawableStartCompat="@drawable/dept_ic" />
 
                 <TextView
                     android:id="@+id/departmentReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="Department"
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:text="@string/department" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/sectionLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/sectionAnchor"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-
-
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:drawableStart="@drawable/dept_ic"
-                    android:text="Section"
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/section"
+                    app:drawableStartCompat="@drawable/dept_ic" />
 
                 <TextView
                     android:id="@+id/sectionReal"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text=""
-                    android:textSize="20dp"
-                    android:editable="true"/>
+                    style="@style/textViewWrapWrapPoppinsBlack20" />
+
                 <Button
                     android:id="@+id/btn_update_section"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/buttonStylePopup"
                     android:background="@color/background_color_50"
                     android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-                    android:text="Update"
-                    android:textColor="@color/black"
-                    android:visibility="visible" />
+                    android:text="@string/update" />
 
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
                 <TextView
                     android:id="@+id/semesterAnchor"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-
-
+                    style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:drawableStart="@drawable/dept_ic"
-                    android:text="Semester"
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    android:text="@string/semester"
+                    app:drawableStartCompat="@drawable/dept_ic" />
 
                 <TextView
                     android:id="@+id/semesterReal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text=""
-
-
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="20dp" />
+                    style="@style/textViewWrapWrapPoppinsBlack20" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn_update_semester"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/background_color_50"
-                android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-                android:text="Update Semester"
-                android:textColor="@color/black"
-                android:visibility="visible" />
+                style="@style/buttonStylePage"
+                android:text="@string/update_semester" />
 
         </LinearLayout>
-
-
-
-
-        <Button
-            android:id="@+id/changeProfilePhoto"
-            android:layout_width="263dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_list_item_view"
-            android:text="Change Profile Photo"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dev1Img"
-            app:layout_constraintVertical_bias="0.025" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

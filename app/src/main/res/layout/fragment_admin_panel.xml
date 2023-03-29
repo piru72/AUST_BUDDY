@@ -31,6 +31,7 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/add" />
 
                         <TextView
@@ -51,6 +52,7 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/add" />
 
                         <TextView
@@ -76,11 +78,12 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/request" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
-                            android:text="Course requests" />
+                            android:text="@string/course_requests" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -96,11 +99,12 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/request" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
-                            android:text="Teacher request" />
+                            android:text="@string/teacher_request" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -121,6 +125,7 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/bug_report" />
 
                         <TextView
@@ -140,6 +145,7 @@
 
                         <ImageView
                             style="@style/imageViewButton"
+                            android:contentDescription="@string/icon"
                             android:src="@drawable/bug_report" />
 
                         <TextView

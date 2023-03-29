@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
-    android:padding="30dp"
+    style="@style/backgroundMain"
     tools:context=".features.groupTab.CreateGroupFragment">
 
 
@@ -20,19 +17,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/groupNameFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/layoutMatchWrap"
         android:layout_below="@id/startingImage">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/groupName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:hint="Provide Group Name"
+            style="@style/materialTextInput"
+            android:hint="@string/provide_group_name"
             android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,19 +32,13 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/groupDetailsFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/layoutMatchWrap"
         android:layout_below="@id/groupNameFormInput">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/groupDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="@font/poppins_light"
-            android:hint="Provide Group details"
+            style="@style/materialTextInput"
+            android:hint="@string/provide_group_details"
             android:inputType="textShortMessage" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -62,16 +47,9 @@
     <Button
 
         android:id="@+id/createGroupButtonForm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/buttonStylePage"
         android:layout_below="@id/groupDetailsFormInput"
-        android:layout_marginTop="58dp"
-        android:background="@color/background_color_50"
-        android:focusable="true"
-        android:fontFamily="@font/poppins_light"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:text="Create Group"
-        android:textColor="@color/black" />
+        android:text="@string/create_group" />
 
 
 </RelativeLayout>

@@ -15,13 +15,12 @@
         app:iss_delay="0"
         app:iss_period="1000"
         app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_text_align="CENTER"
         app:iss_title_background="@color/primary_green"
         app:iss_unselected_dot="@drawable/default_unselected_dot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:iss_text_align="CENTER"
-       />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

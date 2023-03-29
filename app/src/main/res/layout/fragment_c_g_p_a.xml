@@ -2,9 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     tools:context=".features.homeTab.calculator.CGPAFragment">
 
 
@@ -29,7 +27,7 @@
 
             <Spinner
                 android:id="@+id/semester_list"
-                android:layout_width="258dp"
+                android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
 
@@ -40,14 +38,8 @@
 
             <Button
                 android:id="@+id/btn_select"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:fontFamily="@font/poppins_light"
-                android:background="@color/primary_green"
-                android:text="@string/select"
-
-                android:textSize="16sp" />
+                style="@style/buttonStylePopup"
+                android:text="@string/select" />
 
         </LinearLayout>
 
@@ -64,326 +56,151 @@
 
             <LinearLayout
                 android:id="@+id/c1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c1_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end"
-
-                    tools:ignore="DuplicateSpeakableTextCheck" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c1_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c2_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c2_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c3"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c3_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c3_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c4"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c4_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c4_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c5"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c5_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c5_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c6"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c6_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c6_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c7"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c7_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c7_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c8"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c8_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c8_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c9"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c9_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c9_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/c10"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                style="@style/layoutCgpa">
 
                 <Spinner
                     android:id="@+id/c10_result_list"
-                    android:layout_width="92dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="3"
-                    android:entries="@array/Grades"
-                    android:gravity="end" />
+                    style="@style/spinnerModeGrades" />
 
                 <Button
                     android:id="@+id/c10_credit"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:background="@color/card_bk"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="@string/credit"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/credit" />
 
             </LinearLayout>
         </LinearLayout>
@@ -400,16 +217,8 @@
 
             <Button
                 android:id="@+id/btn_calculate"
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/primary_green"
-                android:text="@string/calculate"
-               android:fontFamily="@font/poppins_light"
-                android:textSize="20sp"
-
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                style="@style/buttonStylePage"
+                android:text="@string/calculate" />
 
         </LinearLayout>
 
@@ -428,37 +237,9 @@
 
             <TextView
                 android:id="@+id/textview_result"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="@color/text_black"
+                style="@style/textViewWrapWrapPoppinsBlack20"
                 android:textSize="30sp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_instruction"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="664dp">
-
-            <TextView
-                android:id="@+id/textview_instruction"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_light"
-                android:text="@string/please_select_your_semester_above"
-                android:textAlignment="center"
-                android:textSize="30sp" />
         </LinearLayout>
 
 
