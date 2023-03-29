@@ -1,101 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.onBoarding.authentication.SignInActivity">
 
-
     <LinearLayout
         android:id="@+id/activity_sign_in"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20sp"
-        android:gravity="center"
-        android:orientation="vertical">
+        style="@style/layoutMatchParentVertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
+            style="@style/onBoardingImage"
+            android:contentDescription="@string/on_boarding_image"
             android:src="@drawable/login" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/layoutMatchWrapHorizontal">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20sp"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:hint="Type your Email"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black" />
+                style="@style/materialEmailInput" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
 
             android:id="@+id/password_signin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            style="@style/layoutMatchWrapHorizontal"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20sp"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:hint="Type your Password"
-                android:inputType="textPassword"
-                android:textColor="@color/black" />
+                style="@style/materialPasswordInput" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/goToForgotPasswrdFragment"
+            android:id="@+id/goToForgotPasswordFragment"
+            style="@style/textViewWrapWrapPoppinsBlack"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15sp"
-            android:fontFamily="@font/poppins_light"
-            android:text="Forgot Password?"
-            android:textAlignment="textEnd"
-            android:textSize="15dp" />
+            android:text="@string/forgot_password"
+            android:textAlignment="textEnd" />
 
         <Button
-
             android:id="@+id/signinBtn"
             style="@style/onBoardingButton"
             android:text="@string/sign_in"
             android:textSize="20sp" />
 
         <TextView
-
             android:id="@+id/goToSignUpPage"
-            android:layout_width="359dp"
-            android:layout_height="65dp"
-
-            android:layout_marginBottom="74dp"
-            android:fontFamily="@font/poppins_light"
-            android:padding="5dp"
-            android:text="   Don't have an account? Sign up"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:text="@string/don_t_have_an_account_sign_up" />
 
     </LinearLayout>
-
 
 </layout>

@@ -242,7 +242,31 @@
 
     </style>
 
+    <style name="materialTextInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20sp</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
+
+    <style name="materialPasswordInput" parent="materialTextInput">
+
+        <item name="android:hint">@string/type_your_password</item>
+        <item name="android:inputType">textPassword</item>
+
+    </style>
+
+    <style name="materialEmailInput" parent="materialTextInput">
+
+        <item name="android:hint">@string/type_your_email</item>
+        <item name="android:inputType">textEmailAddress</item>
+
+    </style>
 
 
 </resources>

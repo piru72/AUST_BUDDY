@@ -264,6 +264,13 @@
     <string name="more_features">Other exciting things you can find \n1. Important link \n2. Bus Schedule \n3.Teachers details and create favourite list \n4. Save bookmark of favourite websites\n5. Create or join groups \n6. Post quiz schedule in group</string>
     <string name="sign_in">Sign in</string>
     <string name="on_boarding_image">On Boarding Image</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="type_your_password">Type your Password</string>
+    <string name="type_your_email">Type your Email</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="re_type_your_password">Re Type your Password</string>
 
 
 </resources>

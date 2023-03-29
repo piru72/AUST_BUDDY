@@ -64,7 +64,7 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
-        viewBinding.goToForgotPasswrdFragment.setOnClickListener {
+        viewBinding.goToForgotPasswordFragment.setOnClickListener {
             replaceFragment(ForgotPasswordFragment())
         }
     }
