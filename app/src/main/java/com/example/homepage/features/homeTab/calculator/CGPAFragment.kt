@@ -29,7 +29,7 @@ class CGPAFragment : ReplaceFragment() {
         val layoutResultList = v.findViewById<LinearLayout>(R.id.layout_result_list)
         val layoutCalculate = v.findViewById<LinearLayout>(R.id.layout_calculate)
         val layoutResult = v.findViewById<LinearLayout>(R.id.layout_result)
-        val layoutInstruction = v.findViewById<LinearLayout>(R.id.layout_instruction)
+
 
         val c10 = v.findViewById<LinearLayout>(R.id.c10)
         val c9 = v.findViewById<LinearLayout>(R.id.c9)
@@ -191,7 +191,6 @@ class CGPAFragment : ReplaceFragment() {
         btnSelect.setOnClickListener {
 
             cgFun.showLayout(layoutCalculate, layoutResult, layoutResultList)
-            cgFun.hideLayout(layoutInstruction)
 
             cgFun.set3Credit(c1Credit, c2Credit, c3Credit, c4Credit, c5Credit)
             when (semesterList.selectedItem.toString()) {

@@ -127,8 +127,6 @@ iapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReport
 rapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Repository/BugReportRepository.kt,d\6\d6fb7fc4cfd75182e256cd16b6bf4b0be820be67
 œ
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Model/BugReportViewModel.kt,1\d\1d8676e9eb3ff58e64a8224b436e3e6d6c3086dd
-‚
-Rapp/src/main/java/com/example/homepage/features/homeTab/calculator/CGPAFragment.kt,b\5\b577769e5ebe1131464b50a429bd3de205e053c2
 ƒ
 Sapp/src/main/java/com/example/homepage/features/homeTab/calculator/CgpaFunctions.kt,7\7\776e50242de067ed9d9815961ff96f213490d25c
 ‘

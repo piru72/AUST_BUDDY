@@ -1,136 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bk_shape03"
+    style="@style/backgroundMain"
     android:padding="30dp"
     tools:context=".features.profileTab.adminPanel.AddCourseFragment">
 
-    <ImageView
-        android:id="@+id/startingImage"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="50sp"
-        android:contentDescription="@string/a_background_image"
-        android:paddingBottom="20dp"
-        android:src="@drawable/registration" />
+    <LinearLayout style="@style/layoutMatchParentVertical">
 
-    <LinearLayout
-        android:id="@+id/spinnerPanDepartment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/startingImage"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/startingImage"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_marginTop="50sp"
+            android:contentDescription="@string/a_background_image"
+            android:paddingBottom="20dp"
+            android:src="@drawable/registration" />
+
 
         <Spinner
             android:id="@+id/spinnerDepartmentList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/layoutMatchWrap"
             android:entries="@array/departments" />
+
+
+        <LinearLayout
+            android:id="@+id/spinnerPan"
+            style="@style/layoutMatchWrapHorizontal"
+            android:layout_marginBottom="5dp">
+
+            <Spinner
+                android:id="@+id/spinnerYearList"
+                style="@style/layoutMatchWrap"
+                android:layout_weight="1"
+                android:entries="@array/years" />
+
+            <Spinner
+                android:id="@+id/spinnerSemesterList"
+                style="@style/layoutMatchWrap"
+                android:layout_weight="1"
+                android:entries="@array/semester12" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/courseCode"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_course_code"
+                android:inputType="textShortMessage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/courseName"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_course_name"
+                android:inputType="textShortMessage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/courseDriveLinkText"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_drive_link"
+                android:inputType="textLongMessage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+
+            android:id="@+id/addCourseButtonForm"
+            style="@style/buttonStylePage"
+            android:text="@string/add_course" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/spinnerPan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerPanDepartment"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/spinnerYearList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/years" />
-
-        <Spinner
-            android:id="@+id/spinnerSemesterList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/semester12" />
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/courseCodeFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerPan">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/courseCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="@font/poppins_light"
-            android:hint="@string/provide_course_code"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/courseNameFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/courseCodeFormInput"
-
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/courseName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="@font/poppins_light"
-            android:hint="@string/provide_course_name"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/diveLinkFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/courseNameFormInput"
-        android:layout_centerInParent="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/courseDriveLinkText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="@font/poppins_light"
-            android:hint="@string/provide_drive_link"
-            android:inputType="textLongMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <Button
-
-        android:id="@+id/addCourseButtonForm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/diveLinkFormInput"
-        android:layout_marginTop="58dp"
-        android:background="@color/background_color_50"
-        android:focusable="true"
-        android:fontFamily="@font/poppins_light"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:text="@string/add_course"
-        android:textColor="@color/black" />
-
-
-</RelativeLayout>
+</LinearLayout>

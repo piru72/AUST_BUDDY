@@ -1,141 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/backgroundMain"
-    android:padding="30dp"
+    android:padding="10sp"
     tools:context=".features.profileTab.adminPanel.AddTeachersFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="20sp"
-        android:contentDescription="@string/background_image"
-        android:src="@drawable/registration" />
+    <LinearLayout style="@style/layoutMatchParentVertical">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/teachersNameFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/teachersDesignationFormInput">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teachersName"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:hint="@string/provide_teachers_name"
-            android:fontFamily="@font/poppins_light"
-            android:inputType="textShortMessage" />
+            android:layout_height="200sp"
+            android:layout_marginTop="20sp"
+            android:contentDescription="@string/background_image"
+            android:src="@drawable/registration" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/teachersDesignationFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teachersDesignation"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:hint="@string/provide_teachers_designation"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/teachersContactNoFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/teachersDesignationFormInput"
-        android:layout_centerInParent="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teachersContactNoText"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:hint="@string/provide_teachers_contact_no"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/teachersEmailFormInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/teachersContactNoFormInput"
-        android:layout_centerInParent="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/teachersEmailText"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:hint="@string/provide_teachers_email"
-            android:inputType="textEmailAddress" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <LinearLayout
-        android:id="@+id/teacherImageLink"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/teachersEmailFormInput"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/teachersImageLinkForm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:hint="@string/image_link" />
+                android:id="@+id/teachersName"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_teachers_name"
+                android:inputType="textShortMessage" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
 
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teachersDesignation"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_teachers_designation" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teachersContactNoText"
+                style="@style/materialTextInput"
+                android:hint="@string/provide_teachers_contact_no"
+                android:inputType="textShortMessage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teachersEmailText"
+                style="@style/materialEmailInput"
+                android:hint="@string/provide_teachers_email" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teachersImageLinkForm"
+                style="@style/materialTextInput"
+                android:hint="@string/image_link" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+
+            android:id="@+id/addTeachersButtonForm"
+            style="@style/buttonStylePage"
+            android:text="@string/add_teacher" />
+
     </LinearLayout>
 
-    <Button
 
-        android:id="@+id/addTeachersButtonForm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/teacherImageLink"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_color_50"
-        android:focusable="true"
-        android:fontFamily="@font/poppins_light"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:text="@string/add_teacher"
-        android:textColor="@color/black"/>
-
-
-</RelativeLayout>
+</LinearLayout>

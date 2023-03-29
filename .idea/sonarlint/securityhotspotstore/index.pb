@@ -127,8 +127,6 @@ Yapp/src/main/java/com/example/homepage/features/homeTab/courseTab/repos/UserRep
 Vapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Adapter/MyAdapter.kt,d\d\dddf38455766e2d9d0390a20d5c433e7f7a3f347
 ƒ
 Sapp/src/main/java/com/example/homepage/features/homeTab/calculator/CgpaFunctions.kt,7\7\776e50242de067ed9d9815961ff96f213490d25c
-‚
-Rapp/src/main/java/com/example/homepage/features/homeTab/calculator/CGPAFragment.kt,b\5\b577769e5ebe1131464b50a429bd3de205e053c2
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,3\2\32e8ae3457dc333dbe61a7af6482d9c8a66a26f6
 ¡

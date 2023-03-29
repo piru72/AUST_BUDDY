@@ -324,6 +324,13 @@
     <string name="icon">icon</string>
     <string name="course_requests">Course requests</string>
     <string name="teacher_request">Teacher request</string>
+    <string name="_20200104128">20200104128</string>
+    <string name="tabassum_tara">Tabassum Tara</string>
+    <string name="parvez_ahammed">Parvez Ahammed</string>
+    <string name="_20200104129">20200104129</string>
+    <string name="arman_hasan_mahy">Arman Hasan Mahy</string>
+    <string name="_20200104110">20200104110</string>
+    <string name="project_github">Project Github</string>
 
 
 </resources>

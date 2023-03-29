@@ -9,14 +9,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:contentDescription="@string/plus_button"
         android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/textViewWrapWrapPoppinsBlack18"
         android:layout_margin="8dp"
-        android:text="@string/item"
-        android:textSize="18sp" />
+        android:text="@string/item" />
 
 </LinearLayout>
