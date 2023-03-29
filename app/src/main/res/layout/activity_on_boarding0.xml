@@ -8,7 +8,8 @@
         <ImageView
             android:id="@+id/imageView3"
             style="@style/onBoardingImage"
-            app:srcCompat="@drawable/icon_white" />
+            app:srcCompat="@drawable/icon_white"
+            android:contentDescription="@string/on_boarding_image"/>
 
         <Button
             android:id="@+id/get_started"

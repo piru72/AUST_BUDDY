@@ -8,8 +8,6 @@
         android:id="@+id/nav_view"
         style="@style/layoutMatchWrapHorizontal"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
         android:background="@color/primary_green"
         app:menu="@menu/bottom_nav_menu" />
 
