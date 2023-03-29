@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.databinding.FragmentSettingsBinding
 import com.example.homepage.utils.helpers.HelperSignInSignUp
-import com.example.homepage.features.authentication.SignInActivity
+import com.example.homepage.features.onBoarding.authentication.SignInActivity
 import com.example.homepage.utils.helpers.ReplaceFragment
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider

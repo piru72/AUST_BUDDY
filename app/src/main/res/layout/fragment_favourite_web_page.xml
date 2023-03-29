@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    tools:context=".features.favouriteWebPage.FavouriteWebPageFragment">
+    tools:context=".features.homeTab.favouriteWebPage.FavouriteWebPageFragment">
 
     <RelativeLayout
         android:id="@+id/ToDoActivity"

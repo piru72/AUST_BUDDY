@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    tools:context=".features.storeTab.StoreFragment">
+    tools:context=".features.commonPages.storeTab.StoreFragment">
 
     <RelativeLayout
         android:id="@+id/materialListActivity"

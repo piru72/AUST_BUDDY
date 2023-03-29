@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    tools:context=".features.groupNoticePage.GroupNoticeFragment">
+    tools:context=".features.groupTab.groupNoticePage.GroupNoticeFragment">
 
     <RelativeLayout
         android:id="@+id/ToDoActivity"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk_shape03"
-    tools:context=".features.teachersPage.TeachersFragment">
+    tools:context=".features.homeTab.teachersPage.TeachersFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

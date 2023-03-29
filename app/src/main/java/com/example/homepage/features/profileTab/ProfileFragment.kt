@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.utils.models.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
-import com.example.homepage.features.authentication.SignInActivity
+import com.example.homepage.features.onBoarding.authentication.SignInActivity
 import com.example.homepage.utils.helpers.ReplaceFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot

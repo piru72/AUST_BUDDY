@@ -32,10 +32,10 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".features.authentication.SignUpActivity"
+            android:name=".features.onBoarding.authentication.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".features.authentication.SignInActivity"
+            android:name=".features.onBoarding.authentication.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".features.onBoarding.OnBoarding3"

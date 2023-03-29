@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.homepage.utils.models.YouTubeVideoData
 import com.example.homepage.databinding.CardYoutubeVideosBinding
-import com.example.homepage.features.courseTab.YouTubeVideo.YouTubeVideoFragmentDirections
+import com.example.homepage.features.homeTab.courseTab.YouTubeVideo.YouTubeVideoFragmentDirections
 
 class YouTubeVideoViewHolder(private val binding: CardYoutubeVideosBinding) :
     RecyclerView.ViewHolder(binding.root) {

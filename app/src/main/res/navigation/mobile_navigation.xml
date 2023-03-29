@@ -84,7 +84,7 @@
 
     <fragment
         android:id="@+id/navigation_departmentSemesterChooser"
-        android:name="com.example.homepage.features.courseTab.DepartmentSemesterChooserFragment"
+        android:name="com.example.homepage.features.homeTab.courseTab.DepartmentSemesterChooserFragment"
         android:label="Choose Semester"
         tools:layout="@layout/fragment_department_semester_chooser" >
         <action
@@ -149,7 +149,7 @@
     </fragment>
     <fragment
         android:id="@+id/CGPAFragment"
-        android:name="com.example.homepage.features.calculator.CGPAFragment"
+        android:name="com.example.homepage.features.homeTab.calculator.CGPAFragment"
         android:label="fragment_c_g_p_a"
         tools:layout="@layout/fragment_c_g_p_a" />
     <fragment
@@ -175,7 +175,7 @@
     </fragment>
     <fragment
         android:id="@+id/favouriteWebPageFragment"
-        android:name="com.example.homepage.features.favouriteWebPage.FavouriteWebPageFragment"
+        android:name="com.example.homepage.features.homeTab.favouriteWebPage.FavouriteWebPageFragment"
         android:label="fragment_favourite_web_page"
         tools:layout="@layout/fragment_favourite_web_page" >
         <action
@@ -186,7 +186,7 @@
     </fragment>
     <fragment
         android:id="@+id/storeDashboardFragment"
-        android:name="com.example.homepage.features.storeDashboard.StoreDashboardFragment"
+        android:name="com.example.homepage.features.commonPages.storeDashboard.StoreDashboardFragment"
         android:label="fragment_store_dashboard"
         tools:layout="@layout/fragment_store_dashboard" />
     <fragment
@@ -203,7 +203,7 @@
     </fragment>
     <fragment
         android:id="@+id/teachersFragment"
-        android:name="com.example.homepage.features.teachersPage.TeachersFragment"
+        android:name="com.example.homepage.features.homeTab.teachersPage.TeachersFragment"
         android:label="fragment_teachers"
         tools:layout="@layout/fragment_teachers" >
         <argument
@@ -218,7 +218,7 @@
     </fragment>
     <fragment
         android:id="@+id/addCourseFragment"
-        android:name="com.example.homepage.features.adminPanel.AddCourseFragment"
+        android:name="com.example.homepage.features.profileTab.adminPanel.AddCourseFragment"
         android:label="fragment_add_course"
         tools:layout="@layout/fragment_add_course" >
         <argument
@@ -230,7 +230,7 @@
     </fragment>
     <fragment
         android:id="@+id/addTeachersFragment"
-        android:name="com.example.homepage.features.adminPanel.AddTeachersFragment"
+        android:name="com.example.homepage.features.profileTab.adminPanel.AddTeachersFragment"
         android:label="fragment_add_teachers"
         tools:layout="@layout/fragment_add_teachers" >
         <argument
@@ -263,7 +263,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminPanelFragment"
-        android:name="com.example.homepage.features.adminPanel.AdminPanelFragment"
+        android:name="com.example.homepage.features.profileTab.adminPanel.AdminPanelFragment"
         android:label="fragment_admin_panel"
         tools:layout="@layout/fragment_admin_panel" >
         <action
@@ -310,7 +310,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewCourses2"
-        android:name="com.example.homepage.features.courseTab.ViewCourses"
+        android:name="com.example.homepage.features.homeTab.courseTab.ViewCourses"
         android:label="fragment_view_courses"
         tools:layout="@layout/fragment_view_courses" >
         <argument
@@ -327,12 +327,12 @@
     </fragment>
     <fragment
         android:id="@+id/bugReportListFragment"
-        android:name="com.example.homepage.features.adminPanel.bugReports.BugReportListFragment"
+        android:name="com.example.homepage.features.profileTab.adminPanel.bugReports.BugReportListFragment"
         android:label="fragment_bug_report_list"
         tools:layout="@layout/fragment_bug_report_list" />
     <fragment
         android:id="@+id/groupNoticeFragment"
-        android:name="com.example.homepage.features.groupNoticePage.GroupNoticeFragment"
+        android:name="com.example.homepage.features.groupTab.groupNoticePage.GroupNoticeFragment"
         android:label="fragment_group_notice"
         tools:layout="@layout/fragment_group_notice" >
         <argument
@@ -366,12 +366,12 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.homepage.features.authentication.ForgotPasswordFragment"
+        android:name="com.example.homepage.features.onBoarding.authentication.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
     <fragment
         android:id="@+id/departmentChooserFragment"
-        android:name="com.example.homepage.features.teachersPage.DepartmentChooserFragment"
+        android:name="com.example.homepage.features.homeTab.teachersPage.DepartmentChooserFragment"
         android:label="fragment_department_chooser"
         tools:layout="@layout/fragment_department_chooser" >
         <action
@@ -382,7 +382,7 @@
     </fragment>
     <fragment
         android:id="@+id/plazaFragment"
-        android:name="com.example.homepage.features.plaza.PlazaFragment"
+        android:name="com.example.homepage.features.plazaTab.PlazaFragment"
         android:label="fragment_plaza"
         tools:layout="@layout/fragment_plaza" >
         <action
@@ -393,12 +393,12 @@
     </fragment>
     <fragment
         android:id="@+id/plazaDashBoardFragment"
-        android:name="com.example.homepage.features.plazaDashboard.PlazaDashBoardFragment"
+        android:name="com.example.homepage.features.plazaTab.plazaDashboard.PlazaDashBoardFragment"
         android:label="fragment_plaza_dash_board"
         tools:layout="@layout/fragment_plaza_dash_board" />
     <fragment
         android:id="@+id/adminRequestFragment3"
-        android:name="com.example.homepage.features.adminPanel.adminRequest.AdminRequestFragment"
+        android:name="com.example.homepage.features.profileTab.adminPanel.adminRequest.AdminRequestFragment"
         android:label="fragment_admin_request"
         tools:layout="@layout/fragment_admin_request" />
     <fragment
@@ -443,7 +443,7 @@
     </fragment>
     <fragment
         android:id="@+id/youTubeVideoFragment"
-        android:name="com.example.homepage.features.courseTab.YouTubeVideo.YouTubeVideoFragment"
+        android:name="com.example.homepage.features.homeTab.courseTab.YouTubeVideo.YouTubeVideoFragment"
         android:label="fragment_you_tube_video"
         tools:layout="@layout/fragment_you_tube_video" >
         <action

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.adminPanel.bugReports.BugReportListFragment">
+    tools:context=".features.profileTab.adminPanel.bugReports.BugReportListFragment">
 
     <RelativeLayout
         android:id="@+id/bug_report_layout"
