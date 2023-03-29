@@ -30,13 +30,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20sp"
-                android:hint="Type your Email"
-                android:textColor="@color/black"
                 android:background="@color/background_color_50"
                 android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:fontFamily="@font/poppins_light"
-                android:inputType="textEmailAddress" />
+                android:foreground="?android:attr/selectableItemBackground"
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,11 +55,11 @@
                 android:layout_margin="20sp"
                 android:background="@color/background_color_50"
                 android:focusable="true"
-                android:textColor="@color/black"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:fontFamily="@font/poppins_light"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:hint="Type your Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,18 +76,9 @@
         <Button
 
             android:id="@+id/signinBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="@font/poppins_light"
-
-            android:text="Sign in"
-
-            android:textSize="20sp"
-            android:textColor="@color/black" />
+            style="@style/onBoardingButton"
+            android:text="@string/sign_in"
+            android:textSize="20sp" />
 
         <TextView
 
@@ -96,10 +87,10 @@
             android:layout_height="65dp"
 
             android:layout_marginBottom="74dp"
+            android:fontFamily="@font/poppins_light"
             android:padding="5dp"
             android:text="   Don't have an account? Sign up"
             android:textAlignment="center"
-            android:fontFamily="@font/poppins_light"
             android:textSize="15sp"
             android:textStyle="bold" />
 

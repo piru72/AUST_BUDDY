@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.welcome)
+        setContentView(R.layout.activity_on_boarding0)
         auth = Firebase.auth
         enablePersistence()
 

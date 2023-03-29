@@ -6,19 +6,13 @@
     <LinearLayout style="@style/layoutOnBoardingMain">
 
         <ImageView
+            android:id="@+id/imageView3"
             style="@style/onBoardingImage"
-            app:srcCompat="@drawable/onboarding_3" />
-
-        <TextView
-            android:id="@+id/onboarding_3_para"
-            style="@style/textViewWrapWrapPoppinsBlack"
-            android:padding="20dp"
-            android:text="@string/more_features" />
+            app:srcCompat="@drawable/icon_white" />
 
         <Button
-            android:id="@+id/onboarding_3_button"
+            android:id="@+id/get_started"
             style="@style/onBoardingButton"
-            android:text="@string/finish" />
+            android:text="@string/get_started_welcome" />
     </LinearLayout>
-
 </LinearLayout>
