@@ -6,16 +6,10 @@
 
     <EditText
         android:id="@+id/QuizNamePop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        style="@style/normalTextInput"
         android:autofillHints=""
-        android:fontFamily="@font/poppins_light"
-        android:hint="Quiz Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:hint="@string/quiz_name"
+        android:inputType="textPersonName" />
 
     <LinearLayout
         style="@style/layoutMatchParent"
@@ -27,34 +21,18 @@
             android:text="@string/choose_date" />
 
         <Button
-
             android:id="@+id/chooseButton"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-            android:layout_weight="1"
-            android:background="@color/background_color_50"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_light"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/choose"
-
-            android:textColor="@color/black" />
+            style="@style/buttonStylePopup"
+            android:text="@string/choose" />
     </LinearLayout>
 
 
     <EditText
         android:id="@+id/TaskDescriptionPop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        style="@style/normalTextInput"
         android:autofillHints=""
-        android:fontFamily="@font/poppins_light"
-        android:hint="Quiz Syllabus"
-        android:inputType="textMultiLine"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:hint="@string/quiz_syllabus"
+        android:inputType="textMultiLine" />
 
 
     <LinearLayout style="@style/layoutMatchWrapHorizontal">

@@ -1,8 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/spinner_item_background">
+    android:background="@drawable/spinner_item_background"
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Item"
+        android:text="@string/item"
         android:textSize="18sp" />
 
 </LinearLayout>

@@ -55,6 +55,7 @@
     <EditText
         android:id="@+id/postersContactNo"
         style="@style/normalTextInput"
+        android:autofillHints="contactNo"
         android:hint="@string/contact_no"
         android:inputType="phone" />
 
@@ -62,6 +63,7 @@
     <EditText
         android:id="@+id/announcementDetails"
         style="@style/normalTextInput"
+        android:autofillHints="details"
         android:hint="@string/details_about_your_announcement"
         android:inputType="textShortMessage" />
 

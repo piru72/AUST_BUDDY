@@ -6,16 +6,9 @@
 
     <EditText
         android:id="@+id/BugDescriptionPop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        style="@style/normalTextInput"
         android:autofillHints=""
-        android:fontFamily="@font/poppins_light"
-        android:hint="@string/details_about_the_bug_you_found_thanks"
-        android:inputType="textMultiLine"
-
-        android:minHeight="48dp"
-        android:textColorHint="@color/black" />
+        android:hint="@string/details_about_the_bug_you_found_thanks" />
 
 
     <LinearLayout style="@style/layoutMatchWrapHorizontal">

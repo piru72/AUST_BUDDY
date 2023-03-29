@@ -295,6 +295,8 @@
     <string name="select_year">Select Year</string>
     <string name="phone">phone</string>
     <string name="id">Id</string>
+    <string name="website_link">Website Link</string>
+    <string name="item">Item</string>
 
 
 </resources>
