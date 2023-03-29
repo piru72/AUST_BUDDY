@@ -34,7 +34,7 @@ class DialogAddAnnouncement : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.bottom_sheet_layout, container, false)
+        val view = inflater.inflate(R.layout.bottom_sheet_add_announcement, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
 

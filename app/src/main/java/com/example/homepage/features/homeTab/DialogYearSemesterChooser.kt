@@ -32,7 +32,7 @@ class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDia
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.dialog_become_admin, container, false)
+        val view = inflater.inflate(R.layout.bottom_sheet_become_admin, container, false)
         auth = Firebase.auth
         database = Firebase.database.reference
         val usersEmail = userV?.email.toString()

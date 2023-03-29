@@ -290,6 +290,11 @@
     <string name="group_name">Group Name</string>
     <string name="website_name">Website Name</string>
     <string name="routine_image">Routine Image</string>
+    <string name="select_semester">Select Semester</string>
+    <string name="become_admin">Become Admin</string>
+    <string name="select_year">Select Year</string>
+    <string name="phone">phone</string>
+    <string name="id">Id</string>
 
 
 </resources>

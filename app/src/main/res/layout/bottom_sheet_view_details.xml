@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_add_item_for_sell"
+    style="@style/backgroundCard">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:background="@color/primary_green">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_title"
+        style="@style/textViewWrapWrapPoppinsBlack20"
+        android:padding="20sp"
+        android:text="@string/details" />
+
+    <LinearLayout style="@style/layoutWrapContentVertical">
+
+        <TextView
+            android:id="@+id/textView_name"
+            style="@style/textViewWrapWrapPoppinsBlack18"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/textView_id"
+            style="@style/textViewWrapWrapPoppinsBlack18"
+            android:text="@string/id" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            style="@style/textViewWrapWrapPoppinsBlack18"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/textView_phone"
+            style="@style/textViewWrapWrapPoppinsBlack18"
+            android:text="@string/phone" />
+    </LinearLayout>
+
+</LinearLayout>
+

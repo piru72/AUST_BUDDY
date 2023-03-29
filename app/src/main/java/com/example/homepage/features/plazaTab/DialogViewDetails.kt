@@ -16,7 +16,7 @@ class DialogViewDetails(private val sellersDetails: String?) : BottomSheetDialog
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.dialog_view_details, container, false)
+        val view = inflater.inflate(R.layout.bottom_sheet_view_details, container, false)
 
         val name = view.findViewById<TextView>(R.id.textView_name)
         val id = view.findViewById<TextView>(R.id.textView_id)
