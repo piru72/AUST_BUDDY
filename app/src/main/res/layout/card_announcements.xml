@@ -1,132 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_margin="3dp"
-        android:background="@color/card_bk"
-        android:elevation="5dp"
-        android:orientation="vertical"
-
-        android:padding="5dp">
-
+    <LinearLayout style="@style/backgroundCard">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            style="@style/layoutWrapWrapHorizontal"
             android:layout_margin="5dp"
             android:padding="0dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="vertical">
+                style="@style/layoutWrapContentVertical">
 
 
                 <TextView
                     android:id="@+id/productNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Announcers Name"
-                    android:textColor="@color/black"
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:text="@string/announcers_name"
                     android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Topic"
-                    android:textColor="@color/black"
-                    android:textSize="19sp" />
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:text="@string/topic" />
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/productCategoryCard"
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:text="@string/date">
 
-                    <TextView
-                        android:id="@+id/productCategoryCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".5"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Date"
-                        android:textColor="@color/black"
-                        android:textSize="16sp">
+                </TextView>
 
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/productPriceCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".5"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Price"
-                        android:visibility="gone"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/announcementDetails"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Announcement Details"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:text="@string/announcement_details" />
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0sp"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <Button
                 android:id="@+id/callSellerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_margin="5sp"
-                android:layout_weight="0.5"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Call"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/call" />
 
             <Button
                 android:id="@+id/showDetailsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_margin="5sp"
-                android:layout_weight="0.5"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Details"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/details" />
         </LinearLayout>
 
     </LinearLayout>

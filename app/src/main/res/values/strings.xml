@@ -273,6 +273,23 @@
     <string name="re_type_your_password">Re Type your Password</string>
     <string name="select_topic">Select Topic</string>
     <string name="announcement">ANNOUNCEMENT</string>
+    <string name="announcement_details">Announcement Details</string>
+    <string name="date">Date</string>
+    <string name="topic">Topic</string>
+    <string name="announcers_name">Announcers Name</string>
+    <string name="book_name">Book Name</string>
+    <string name="book_writer_name">Book Writer Name</string>
+    <string name="book_image">Book Image</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="edit">Edit</string>
+    <string name="quiz_date">Quiz Date</string>
+    <string name="group_id">Group Id</string>
+    <string name="group_creator">Group Creator</string>
+    <string name="leave_group">Leave Group</string>
+    <string name="group_name">Group Name</string>
+    <string name="website_name">Website Name</string>
+    <string name="routine_image">Routine Image</string>
 
 
 </resources>

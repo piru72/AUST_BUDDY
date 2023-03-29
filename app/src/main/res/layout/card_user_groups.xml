@@ -1,95 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    app:cardBackgroundColor="@color/card_bk"
-    app:cardCornerRadius="8dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-
         android:id="@+id/userGroupLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        style="@style/backgroundCard">
 
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="6dp"
-            android:layout_marginStart="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
+        <LinearLayout style="@style/layoutMatchParentVertical">
 
             <TextView
                 android:id="@+id/userJoinedGroupName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:text="Group Name"
-                android:textAlignment="center"
-                android:textColor="@color/black"
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/group_name"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/userJoinedGroupsCreator"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:text="Group Creator"
-                android:textColor="@color/black"
-                android:textAlignment="center" />
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/group_creator" />
 
             <TextView
                 android:id="@+id/userJoinedGroupId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:text="Group Id"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textIsSelectable="true"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/group_id" />
 
             <TextView
                 android:id="@+id/userJoinedGroupsCreatorName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_light"
-                android:text="Group Creator"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/group_creator" />
 
-            <LinearLayout
-                android:id="@+id/adminControlLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnLeaveGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Leave Group"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLeaveGroup"
+                style="@style/buttonStylePopup"
+                android:text="@string/leave_group" />
+
 
         </LinearLayout>
 
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</layout>

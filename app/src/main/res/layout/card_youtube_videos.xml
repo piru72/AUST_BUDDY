@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/backgroundCard">
 
-    android:layout_margin="5dp"
-    app:cardBackgroundColor="@color/card_bk"
-
-    style="@style/backgroundPopup">
-
-    <LinearLayout
-        android:layout_height="80dp"
-        android:layout_width="match_parent">
+    <LinearLayout style="@style/layoutMatchParentHorizontal">
 
         <LinearLayout
             style="@style/layoutWrapContent"
-            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
-                style="@style/textViewWrapWrapPoppinsBlack18"
                 android:id="@+id/title"
+                style="@style/textViewWrapWrapPoppinsBlack18"
                 android:text="@string/video_title" />
-
-
-
 
         </LinearLayout>
 
@@ -31,11 +19,11 @@
             android:id="@+id/thumbnail"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_marginEnd="10sp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
-            android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</LinearLayout>

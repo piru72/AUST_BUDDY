@@ -1,80 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <LinearLayout style="@style/backgroundCard">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@color/card_bk"
-        android:elevation="5dp"
-        android:orientation="vertical"
-
-        android:padding="15dp">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="194dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="vertical">
-
+                style="@style/layoutWrapContentVertical">
 
                 <TextView
                     android:id="@+id/productNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Book Name"
-                    android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:text="@string/book_name" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Book Writer Name"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:text="@string/book_writer_name" />
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/layoutMatchParentHorizontal">
 
                     <TextView
                         android:id="@+id/productCategoryCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".5"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Category"
-                        android:textColor="@color/black"
-                        android:textSize="18sp">
+                        style="@style/textViewWrapWrapPoppinsBlack"
+                        android:text="@string/category">
 
                     </TextView>
 
                     <TextView
                         android:id="@+id/productPriceCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".5"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Price"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        style="@style/textViewWrapWrapPoppinsBlack"
+                        android:text="@string/price" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -84,43 +41,23 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="10sp"
-                android:contentDescription="Book Image"
+                android:contentDescription="@string/book_image"
                 android:padding="5sp"
                 android:src="@drawable/ic_baseline_menu_book_24" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5sp"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <Button
                 android:id="@+id/callSellerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_margin="5sp"
-                android:layout_weight="0.5"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Call"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/call" />
 
             <Button
                 android:id="@+id/showDetailsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_margin="5sp"
-                android:layout_weight="0.5"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Details"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/details" />
         </LinearLayout>
 
     </LinearLayout>

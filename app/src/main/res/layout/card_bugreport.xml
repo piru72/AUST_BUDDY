@@ -1,62 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/card_bk"
-        android:orientation="vertical"
-        android:padding="20dp">
-
+    <LinearLayout style="@style/backgroundCard">
 
         <TextView
             android:id="@+id/bugReportDetailsCard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/poppins_light"
-            android:inputType="textMultiLine"
-            android:text="@string/bug_report_details"
-            android:textColorHint="@color/black"
-            android:textIsSelectable="true"
-            android:focusable="true"
-            android:clickable="true"
-            android:textSize="30dp" />
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:text="@string/bug_report_details" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10sp"
-            android:orientation="horizontal">
-
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <Button
                 android:id="@+id/showReportersDetailsButton"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="Close"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/close" />
 
             <Button
                 android:id="@+id/deleteBugReportButton"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                android:layout_weight="1"
-                android:background="@color/background_color_50"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_light"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:text="DONE"
-                android:textColor="@color/black" />
+                style="@style/buttonStylePopup"
+                android:text="@string/done" />
 
         </LinearLayout>
 

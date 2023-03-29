@@ -1,101 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <LinearLayout style="@style/backgroundCard">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@color/card_bk"
-        android:elevation="5dp"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="vertical">
-
+                style="@style/layoutMatchWrapVertical"
+                android:layout_width="200dp">
 
                 <TextView
                     android:id="@+id/taskNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/poppins_light"
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
                     android:text="@string/quiz_name"
-                    android:textColor="@color/black"
                     android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/taskDateCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Quiz Date"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:text="@string/quiz_date" />
 
 
                 <TextView
                     android:id="@+id/taskDescriptionCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_light"
+                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
                     android:text="@string/quiz_syllabus"
-                    android:textColor="@color/black"
                     android:textSize="18sp">
 
                 </TextView>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <LinearLayout style="@style/layoutMatchParentVertical">
 
                 <Button
                     android:id="@+id/btnDeleteSchedule"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Done"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/done" />
 
                 <Button
                     android:id="@+id/btnEditSchedule"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:background="@color/background_color_50"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_light"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:text="Edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
+                    style="@style/buttonStylePopup"
+                    android:text="@string/edit" />
             </LinearLayout>
 
         </LinearLayout>

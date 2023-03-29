@@ -38,9 +38,11 @@
     </style>
 
     <style name="layoutMatchWrapVertical" parent="layoutMatchWrap">
-
         <item name="android:orientation">vertical</item>
+    </style>
 
+    <style name="layoutWrapWrapHorizontal" parent="layoutWrapContent">
+        <item name="android:orientation">horizontal</item>
     </style>
 
     <style name="layoutMatchParentVertical" parent="layoutMatchParent">
@@ -77,8 +79,10 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="android:textColor">@color/black</item>
+    </style>
 
-
+    <style name="textViewWrapWrapPoppinsBlackGravityStart" parent="layoutWrapContent">
+        <item name="android:layout_gravity">start</item>
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack18" parent="layoutWrapContent">

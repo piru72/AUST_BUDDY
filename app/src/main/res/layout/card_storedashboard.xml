@@ -2,77 +2,41 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@color/card_bk"
-        android:orientation="vertical"
-        android:padding="8dp">
+    <LinearLayout style="@style/backgroundCard">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="195dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="vertical">
-
+                style="@style/layoutMatchParentVertical"
+                android:layout_width="195dp">
 
                 <TextView
                     android:id="@+id/productNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Book Name"
-                    android:textColor="@color/black"
+                    style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:text="@string/book_name"
                     android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="Book Writer Name"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:text="@string/book_writer_name" />
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/layoutMatchParentHorizontal">
 
                     <TextView
                         android:id="@+id/productCategoryCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".1"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Category"
-                        android:textColor="@color/black"
-                        android:textSize="15sp">
+                        style="@style/textViewWrapWrapPoppinsBlack18"
+                        android:text="@string/category">
 
                     </TextView>
 
                     <TextView
                         android:id="@+id/productPriceCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".1"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Price"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        style="@style/textViewWrapWrapPoppinsBlack18"
+                        android:text="@string/price" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -82,37 +46,28 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="10sp"
-                android:contentDescription="Book Image"
+                android:contentDescription="@string/book_image"
                 android:padding="5sp"
                 android:src="@drawable/ic_baseline_menu_book_24" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0sp"
-            android:orientation="horizontal">
-
+        <LinearLayout style="@style/layoutMatchParentHorizontal">
 
             <Button
                 android:id="@+id/showDetailsButton"
                 style="@style/exampleButtonChild"
-
-                android:text="Details" />
+                android:text="@string/details" />
 
             <Button
                 android:id="@+id/deleteProductButton"
                 style="@style/exampleButtonChild"
-
-                android:text="Delete" />
+                android:text="@string/delete" />
 
             <Button
                 android:id="@+id/updateProductButton"
-
                 style="@style/exampleButtonChild"
-
-                android:text="Update" />
+                android:text="@string/update" />
         </LinearLayout>
 
     </LinearLayout>
