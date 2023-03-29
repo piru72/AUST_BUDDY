@@ -87,8 +87,6 @@ u
 Eapp/src/main/java/com/example/homepage/database/ChildUpdaterHelper.kt,5\6\568fc5c0544a3bfd027871b72e775a206a32e5a8
 j
 :app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
 è

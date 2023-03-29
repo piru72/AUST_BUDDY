@@ -79,8 +79,6 @@ y
 Iapp/src/main/java/com/example/homepage/database/FirebaseDateComparator.kt,2\5\256a71b48da97b62b378c53523beac2ceecfb529
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 o
 ?app/src/main/java/com/example/homepage/utils/models/UserData.kt,b\f\bfc34b49be1999d448f87627c35835031bb7e050
 w
