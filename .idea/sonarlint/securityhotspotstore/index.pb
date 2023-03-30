@@ -73,12 +73,8 @@ Bapp/src/main/java/com/example/homepage/utils/models/TeacherData.kt,a\2\a2a1a00
 Kapp/src/main/java/com/example/homepage/utils/models/FavouriteWebpageData.kt,7\a\7a1d5c92c37783ef1455eb24d8710ed21b02e270
 y
 Iapp/src/main/java/com/example/homepage/database/FirebaseDateComparator.kt,2\5\256a71b48da97b62b378c53523beac2ceecfb529
-j
-:app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
 è
 _app/src/main/java/com/example/homepage/utils/firebaseNotification/MyFirebaseMessagingService.kt,4\5\45958b03364e5459cd9309a8f8909b752b4efd3d
-j
-:app/src/main/java/com/example/homepage/app/HomeFragment.kt,b\b\bb150b87f560210ad6784982a3efbee210d5c419
 w
 Gapp/src/main/java/com/example/homepage/utils/helpers/ReplaceFragment.kt,8\8\88c177b71b276a08a56bd0a51c802b50cd12a8f2
 |
@@ -181,8 +177,6 @@ aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/Department
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Adapter/StoreAdapter.kt,4\6\464aa3d8afbb9ad1dc71ff8a804dd5a7b2ba4996
 å
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Repo/StoreRepository.kt,3\6\366cc0be0d4b04f2cf34f3d1bbed2529d6c3cb63
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 ~
 Napp/src/main/java/com/example/homepage/features/profileTab/SettingsFragment.kt,0\6\06764295badb3ecfa65b4d3a75c634167b3a5706
 ã

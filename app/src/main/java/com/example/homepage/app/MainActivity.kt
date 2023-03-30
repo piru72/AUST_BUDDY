@@ -46,10 +46,9 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
+
     private fun enablePersistence() {
-        // [START rtdb_enable_persistence]
         Firebase.database.setPersistenceEnabled(true)
-        // [END rtdb_enable_persistence]
     }
 
 

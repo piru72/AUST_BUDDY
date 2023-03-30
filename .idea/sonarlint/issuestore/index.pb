@@ -61,8 +61,6 @@ o
 ?app/src/main/java/com/example/homepage/utils/helpers/WebView.kt,9\d\9d8b97ed2dbfcbdf2bd0c65288dd87e5956ead9c
 w
 Gapp/src/main/java/com/example/homepage/utils/helpers/YoutubeFragment.kt,d\e\de50a2b67ce5313312b9b049e304888209fecaa1
-j
-:app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
 y
 Iapp/src/main/java/com/example/homepage/database/FirebaseDateComparator.kt,2\5\256a71b48da97b62b378c53523beac2ceecfb529
 o
@@ -77,8 +75,6 @@ x
 Happ/src/main/java/com/example/homepage/utils/helpers/SharedPreference.kt,0\2\0208c53b281bf7ada4bd37b6ab7ff40ce54ee89c
 è
 _app/src/main/java/com/example/homepage/utils/firebaseNotification/MyFirebaseMessagingService.kt,4\5\45958b03364e5459cd9309a8f8909b752b4efd3d
-j
-:app/src/main/java/com/example/homepage/app/HomeFragment.kt,b\b\bb150b87f560210ad6784982a3efbee210d5c419
 w
 Gapp/src/main/java/com/example/homepage/utils/helpers/ReplaceFragment.kt,8\8\88c177b71b276a08a56bd0a51c802b50cd12a8f2
 z
@@ -181,8 +177,6 @@ happ/src/main/java/com/example/homepage/features/homeTab/courseTab/YouTubeVideo/
 Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/YouTubeVideoViewHolder.kt,c\3\c31d7facf2ce1470525515a8804e1649d9235133
 ó
 gapp/src/main/java/com/example/homepage/features/homeTab/courseTab/YouTubeVideo/YouTubeVideoViewModel.kt,1\4\14fa1ba44c28ec4c454b151f057dd39cea09a7d1
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 ~
 Napp/src/main/java/com/example/homepage/features/profileTab/SettingsFragment.kt,0\6\06764295badb3ecfa65b4d3a75c634167b3a5706
 ã

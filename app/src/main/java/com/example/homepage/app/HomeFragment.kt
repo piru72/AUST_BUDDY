@@ -11,9 +11,9 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
-import com.example.homepage.utils.models.UserAllData
 import com.example.homepage.databinding.FragmentHomeBinding
 import com.example.homepage.utils.helpers.ReplaceFragment
+import com.example.homepage.utils.models.UserAllData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -42,8 +42,8 @@ class HomeFragment : ReplaceFragment() {
         setInformation(email)
         val selectedDepartment = getShortDepartment().uppercase(Locale.ROOT)
         val modifiedEmail = email.replace('.', '-')
-        var userSemester = "Not given"
-        var userSection = "Not given"
+        var userSemester = getString(R.string.not_given)
+        var userSection = getString(R.string.not_given)
         val path = "/user-details/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
         val postListener = object : ValueEventListener {
@@ -69,7 +69,7 @@ class HomeFragment : ReplaceFragment() {
         viewBinding.btnPlaza.setOnClickListener {
 
             // Providing warning if semester not given
-            if (userSemester == "Not given") {
+            if (userSemester == getString(R.string.not_given)) {
 
                 // POPUP to know the preference of the user
                 val rootLayout = layoutInflater.inflate(R.layout.popup_update_semester, null)
@@ -118,8 +118,11 @@ class HomeFragment : ReplaceFragment() {
 
 
         viewBinding.btnBuses.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
-            val action2 = HomeFragmentDirections.actionNavigationHomeToYoutubeFragment("97h0MN9W7Hc","reference")
+//            val action = HomeFragmentDirections.actionNavigationHomeToBusFragment()
+//            val action2 = HomeFragmentDirections.actionNavigationHomeToYoutubeFragment(
+//                "97h0MN9W7Hc",
+//                "reference"
+//            )
             val action3 = HomeFragmentDirections.actionNavigationHomeToYouTubeVideoFragment()
             findNavController().navigate(action3)
         }
@@ -130,10 +133,7 @@ class HomeFragment : ReplaceFragment() {
             findNavController().navigate(action)
         }
 
-//        viewBinding.btnStoreDashboard.setOnClickListener {
-//            val action = HomeFragmentDirections.actionNavigationHomeToStoreDashboardFragment()
-//            findNavController().navigate(action)
-//        }
+
 
         viewBinding.btnFavouriteTeachers.setOnClickListener {
             val action = HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
@@ -141,23 +141,10 @@ class HomeFragment : ReplaceFragment() {
                 "view"
             )
             findNavController().navigate(action)
-            // TODO ADD TEACHERS OPTION TO HERE FOR OWN DEPARTMENT
-
-//            val defaultDatabaseViewPath = "teachers-list/" + getShortDepartment()
-//            // If users email contains a department the user will be automatically guided to his / her departments teacher list
-//            val action = if (defaultDatabaseViewPath != getShortDepartment())
-//                HomeFragmentDirections.actionNavigationHomeToTeachersFragment(
-//                    defaultDatabaseViewPath,
-//                    "sourceHome"
-//                )
-//            else
-//                HomeFragmentDirections.actionNavigationHomeToDepartmentChooserFragment()
-//
-//            findNavController().navigate(action)
         }
         viewBinding.btnRoutine.setOnClickListener {
 
-            if (userSection == "Not given" || userSemester == "Not given" || userSection == "" || userSemester == "") {
+            if (userSection == getString(R.string.not_given) || userSemester == getString(R.string.not_given) || userSection == "" || userSemester == "") {
 
                 // POPUP to know the preference of the user
                 val rootLayout = layoutInflater.inflate(R.layout.popup_update_semester, null)
@@ -167,9 +154,9 @@ class HomeFragment : ReplaceFragment() {
                 val warningMessage = rootLayout.findViewById<TextView>(R.id.textViewWarningMessage)
 
                 if (userSemester == "Not given" || userSemester == "")
-                    warningMessage.text = "Semester Not found!!\n Provide semester please!"
+                    warningMessage.text = getString(R.string.semester_not_found)
                 else
-                    warningMessage.text = "Section Not found!!\n Provide section please!"
+                    warningMessage.text =getString(R.string.section_not_found)
 
 
                 val popupWindow = PopupWindow(

@@ -332,5 +332,10 @@
     <string name="_20200104110">20200104110</string>
     <string name="project_github">Project Github</string>
 
+    <string name="semester_not_found">Semester Not found!!\n Provide semester please!</string>
+    <string name="section_not_found">Section Not found!!\n Provide section please!</string>
+    <string name="not_given">Not given</string>
+
+
 
 </resources>
