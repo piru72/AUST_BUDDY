@@ -1,4 +1,4 @@
-package com.example.homepage.features.homeTab.favouriteWebPage.Adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView

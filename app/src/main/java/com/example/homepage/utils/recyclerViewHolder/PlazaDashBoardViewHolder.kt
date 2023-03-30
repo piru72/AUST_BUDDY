@@ -1,4 +1,4 @@
-package com.example.homepage.features.plazaTab.plazaDashboard.Adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView

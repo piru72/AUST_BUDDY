@@ -1,4 +1,4 @@
-package com.example.homepage.features.plazaTab.Adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import android.content.Intent
 import android.net.Uri

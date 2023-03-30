@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardFavouriteWebpageBinding
 import com.example.homepage.utils.models.FavouriteWebpageData
+import com.example.homepage.utils.recyclerViewHolder.FavouriteWebpageViewHolder
 
 
 class FavouriteWebAdapter : RecyclerView.Adapter<FavouriteWebpageViewHolder>() {

@@ -1,21 +1,16 @@
-package com.example.homepage.features.profileTab.adminPanel.bugReports.Adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.R
 import com.example.homepage.databinding.CardBugreportBinding
 import com.example.homepage.utils.models.BugReportsData
 import com.google.firebase.database.FirebaseDatabase
 
 class BugReportViewHolder(private val binding : CardBugreportBinding) : RecyclerView.ViewHolder(binding.root) {
-    val bugReportDetails: TextView = itemView.findViewById(R.id.bugReportDetailsCard)
-    val bugReportersDetails: Button = itemView.findViewById(R.id.showReportersDetailsButton)
-    val doneBugReport: Button = itemView.findViewById(R.id.deleteBugReportButton)
+
 
 
     fun bind (bugReport: BugReportsData, context: Context){

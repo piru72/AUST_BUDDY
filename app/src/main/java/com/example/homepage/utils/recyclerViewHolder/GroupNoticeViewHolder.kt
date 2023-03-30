@@ -1,4 +1,4 @@
-package com.example.homepage.features.groupTab.groupNoticePage.adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.database.ChildUpdaterHelper
 import com.example.homepage.database.FirebaseUtils
 import com.example.homepage.databinding.CardQuizScheduleBinding
+import com.example.homepage.features.groupTab.groupNoticePage.adapter.EditScheduleClickListener
 import com.example.homepage.utils.helpers.CustomFormatters
 import com.example.homepage.utils.models.GroupNoticeData
 import java.time.LocalDate

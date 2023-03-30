@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.database.FirebaseDateComparator
 import com.example.homepage.databinding.CardQuizScheduleBinding
 import com.example.homepage.utils.models.GroupNoticeData
+import com.example.homepage.utils.recyclerViewHolder.GroupNoticeViewHolder
 import java.util.*
 
 

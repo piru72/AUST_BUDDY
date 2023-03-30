@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardBugreportBinding
 import com.example.homepage.utils.models.BugReportsData
+import com.example.homepage.utils.recyclerViewHolder.BugReportViewHolder
 
 class BugReportAdapter : RecyclerView.Adapter<BugReportViewHolder>() {
     private val _itemList = ArrayList<BugReportsData>()

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.annotation.GlideModule
 import com.example.homepage.databinding.CardTeachersBinding
 import com.example.homepage.utils.models.TeacherData
+import com.example.homepage.utils.recyclerViewHolder.TeacherViewHolder
 
 @GlideModule
 class teacherAdapter(private val userType: String, private val databaseViewPath: String) :

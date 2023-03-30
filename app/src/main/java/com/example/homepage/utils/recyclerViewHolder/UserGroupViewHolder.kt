@@ -1,4 +1,4 @@
-package com.example.homepage.features.groupTab.Group.Adapter
+package com.example.homepage.utils.recyclerViewHolder
 
 import android.view.Gravity
 import android.view.LayoutInflater

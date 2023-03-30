@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardAnnouncementsBinding
 import com.example.homepage.utils.models.Announcements
+import com.example.homepage.utils.recyclerViewHolder.AnnouncementViewHolder
 
 class PlazaAdapter : RecyclerView.Adapter<AnnouncementViewHolder>() {
     private val _itemList = ArrayList<Announcements>()

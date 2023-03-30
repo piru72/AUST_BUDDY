@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardPlazaDashboardBinding
 import com.example.homepage.utils.models.Announcements
+import com.example.homepage.utils.recyclerViewHolder.PlazaDashBoardViewHolder
 
 
 class PlazaDashBoardAdapter(inflater: LayoutInflater) :

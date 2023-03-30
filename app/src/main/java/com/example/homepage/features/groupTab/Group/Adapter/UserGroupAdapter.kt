@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.CardUserGroupsBinding
 import com.example.homepage.utils.models.GroupData
+import com.example.homepage.utils.recyclerViewHolder.UserGroupViewHolder
 
 class UserGroupAdapter(inflater: LayoutInflater) :
     RecyclerView.Adapter<UserGroupViewHolder>() {
