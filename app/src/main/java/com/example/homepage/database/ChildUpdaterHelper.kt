@@ -13,6 +13,11 @@ import com.google.firebase.database.ValueEventListener
 class ChildUpdaterHelper {
     private var firebaseDatabase = FirebaseUtils.getDatabaseReference()
 
+    companion object {
+        const val ADMIN_COURSE_REQUEST_LIST = "admin-course-request-list"
+    }
+
+
     fun writeNewTeacher(
         teacher: TeacherData,
         mainPushingPath: String,
@@ -45,7 +50,7 @@ class ChildUpdaterHelper {
         mainPushingPath: String
     ) {
         val courseDetails = course.toMap()
-        if (mainPushingPath == "admin-course-request-list") {
+        if (mainPushingPath == ADMIN_COURSE_REQUEST_LIST) {
             val childUpdateRequest = hashMapOf<String, Any>(
                 "/$mainPushingPath/${course.courseCode}" to courseDetails
             )
@@ -146,13 +151,13 @@ class ChildUpdaterHelper {
     }
 
     fun declineCourseRequest(courseData: CourseData) {
-        val parentNode = "admin-course-request-list"
+        val parentNode = ADMIN_COURSE_REQUEST_LIST
         val childNode = courseData.courseCode.toString()
         removeChild(parentNode, childNode)
     }
 
     fun approveCourseRequest(courseData: CourseData) {
-        val parentNode = "admin-course-request-list"
+        val parentNode = ADMIN_COURSE_REQUEST_LIST
         val childNode = courseData.courseCode.toString()
 
         val fromPath = "$parentNode/$childNode"

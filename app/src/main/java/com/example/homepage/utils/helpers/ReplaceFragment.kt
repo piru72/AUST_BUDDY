@@ -1,9 +1,9 @@
 package com.example.homepage.utils.helpers
 
-import android.annotation.SuppressLint
-import android.content.Context.CONNECTIVITY_SERVICE
+import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
 import android.view.View
 import android.webkit.WebView
@@ -32,14 +32,14 @@ open class ReplaceFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private val helper = Helper()
 
-    fun replaceFragment(fragment: Fragment, xml_file_name: Int) {
+
+    fun replaceFragment(fragment: Fragment, xmlFileName: Int) {
         val fragmentManager = requireActivity().supportFragmentManager
-        fragmentManager.beginTransaction().replace(xml_file_name, fragment).addToBackStack("tag")
+        fragmentManager.beginTransaction().replace(xmlFileName, fragment).addToBackStack("tag")
             .commit()
     }
 
 
-    @SuppressLint("SetJavaScriptEnabled")
     fun loadWebSite(webSite: String, v: View) {
 
 
@@ -47,14 +47,14 @@ open class ReplaceFragment : Fragment() {
         webView.webViewClient = WebViewClient()
 
         val connectivityManager =
-            context?.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
-
-        if (!(connectivityManager.activeNetworkInfo != null && connectivityManager.activeNetworkInfo!!.isAvailable && connectivityManager.activeNetworkInfo!!.isConnected)) {
+            context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(network)
+        if (networkCapabilities == null || !networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
             Toast.makeText(context, "No Internet Connection!", Toast.LENGTH_SHORT).show()
         } else {
             webView.apply {
                 loadUrl(webSite)
-                settings.javaScriptEnabled = true
                 settings.setSupportZoom(true)
                 settings.safeBrowsingEnabled = true
                 settings.allowFileAccess = true
@@ -95,10 +95,9 @@ open class ReplaceFragment : Fragment() {
     }
 
 
-     fun getShortDepartment(): String{
+    fun getShortDepartment(): String {
         return helper.getShortDepartment()
     }
-
 
 
     fun getDepartment(): String {
@@ -144,11 +143,11 @@ open class ReplaceFragment : Fragment() {
 
     fun validWebsiteLink(url: String): Boolean {
 
-        val regex = ("((http|https)://)(www.)?"
+        val regex = ("((http|https)://)(www\\.)?"
                 + "[a-zA-Z0-9@:%._\\+~#?&//=]"
                 + "{2,256}\\.[a-z]"
                 + "{2,6}\\b([-a-zA-Z0-9@:%"
-                + "._\\+~#?&//=]*)")
+                + ".\\+~#?&//=]*)")
 
         val p: Pattern = Pattern.compile(regex)
         val m: Matcher = p.matcher(url)
@@ -156,20 +155,6 @@ open class ReplaceFragment : Fragment() {
 
     }
 
-    private val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
-        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                "\\@" +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                "(" +
-                "\\." +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                ")+"
-    )
-
-
-    fun validEmail(email: String): Boolean {
-        return EMAIL_ADDRESS_PATTERN.matcher(email).matches()
-    }
 
     fun getRollOmittedUserId(): String {
         return getUserId().dropLast(3).drop(2)

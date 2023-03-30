@@ -7,6 +7,20 @@ import java.util.regex.Pattern
 
 class ValidationHelper {
 
+
+    companion object {
+        private val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
+            "[a-zA-Z0-9+._%\\-]{1,256}" +
+                    "@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+"
+        )
+
+    }
+
     fun validateCourseForm(
         department: String,
         year: String,
@@ -53,30 +67,22 @@ class ValidationHelper {
 
     fun validWebsiteLink(url: String): Boolean {
 
-        val regex = ("((http|https)://)(www.)?"
+        val regex = ("((http|https)://)(www\\.)?"
                 + "[a-zA-Z0-9@:%._\\+~#?&//=]"
                 + "{2,256}\\.[a-z]"
                 + "{2,6}\\b([-a-zA-Z0-9@:%"
-                + "._\\+~#?&//=]*)")
+                + ".\\+~#?&//=]*)")
 
         val p: Pattern = Pattern.compile(regex)
         val m: Matcher = p.matcher(url)
         return m.matches()
 
     }
-    private val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
-        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                "\\@" +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                "(" +
-                "\\." +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                ")+"
-    )
 
     private fun validEmail(email: String): Boolean {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches()
     }
+
     private fun validNumber(sellersContactNoWrite: String): Boolean {
 
         return sellersContactNoWrite.length == 11 && sellersContactNoWrite[0] == '0' && sellersContactNoWrite[1] == '1'

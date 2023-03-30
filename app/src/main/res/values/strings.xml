@@ -336,6 +336,8 @@
     <string name="section_not_found">Section Not found!!\n Provide section please!</string>
     <string name="not_given">Not given</string>
 
+    <string name="admin_course_request_list">admin-course-request-list</string>
+
 
 
 </resources>
