@@ -160,8 +160,6 @@ Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/YouTubeVideoVie
 ˜
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Model/PlazaDashBoardViewModel.kt,a\6\a631d063013557b8f91445b524e13287adebe36b
 œ
-lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Adapter/BugReportAdapter.kt,6\b\6b692c11515503e696927c21a385681acfec42c6
-œ
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Model/BugReportViewModel.kt,1\d\1d8676e9eb3ff58e64a8224b436e3e6d6c3086dd
 —
 gapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Model/FavouriteWebViewModel.kt,8\2\827eb2b2faccee9cddd4fea5ebf07d2367b4162f

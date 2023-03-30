@@ -107,8 +107,6 @@ qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequ
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,3\2\32e8ae3457dc333dbe61a7af6482d9c8a66a26f6
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-œ
-lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Adapter/BugReportAdapter.kt,6\b\6b692c11515503e696927c21a385681acfec42c6
 ™
 iapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/BugReportListFragment.kt,1\0\1031c598d2ff9dfb2dd02c1cc79988c3ac904b02
 ¢
