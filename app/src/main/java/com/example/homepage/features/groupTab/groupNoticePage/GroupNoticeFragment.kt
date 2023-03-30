@@ -9,10 +9,10 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.databinding.FragmentGroupNoticeBinding
-import com.example.homepage.features.groupTab.groupNoticePage.groupNoticeAdapter.EditScheduleClickListener
-import com.example.homepage.features.groupTab.groupNoticePage.groupNoticeAdapter.GroupNoticeAdapter
+import com.example.homepage.features.groupTab.groupNoticePage.adapter.EditScheduleClickListener
+import com.example.homepage.features.groupTab.groupNoticePage.adapter.GroupNoticeAdapter
 import com.example.homepage.utils.models.GroupNoticeData
-import com.example.homepage.features.groupTab.groupNoticePage.groupNoticeModel.GroupNoticeViewModel
+import com.example.homepage.features.groupTab.groupNoticePage.model.GroupNoticeViewModel
 import com.example.homepage.database.FirebaseUtils
 import com.example.homepage.utils.helpers.ReplaceFragment
 

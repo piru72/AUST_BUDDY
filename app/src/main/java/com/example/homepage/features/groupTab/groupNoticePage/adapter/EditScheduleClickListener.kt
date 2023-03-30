@@ -1,4 +1,4 @@
-package com.example.homepage.features.groupTab.groupNoticePage.groupNoticeAdapter
+package com.example.homepage.features.groupTab.groupNoticePage.adapter
 
 import android.app.DatePickerDialog
 import android.content.DialogInterface

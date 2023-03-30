@@ -1,10 +1,10 @@
-package com.example.homepage.features.groupTab.groupNoticePage.groupNoticeModel
+package com.example.homepage.features.groupTab.groupNoticePage.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homepage.utils.models.GroupNoticeData
-import com.example.homepage.features.groupTab.groupNoticePage.groupNoticeRepo.GroupNoticeRepository
+import com.example.homepage.features.groupTab.groupNoticePage.repository.GroupNoticeRepository
 
 class GroupNoticeViewModel : ViewModel() {
 

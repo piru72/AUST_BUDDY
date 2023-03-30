@@ -1,4 +1,4 @@
-package com.example.homepage.features.groupTab.Group.Repository
+package com.example.homepage.features.groupTab.Group.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.example.homepage.utils.models.GroupData

@@ -1,4 +1,4 @@
-package com.example.homepage.features.groupTab.groupNoticePage.groupNoticeRepo
+package com.example.homepage.features.groupTab.groupNoticePage.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.example.homepage.utils.models.GroupNoticeData
