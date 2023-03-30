@@ -13,8 +13,6 @@ v
 Fapp/src/main/java/com/example/homepage/features/homeTab/BusFragment.kt,5\1\51d420941fd358449f7c3fc37fbabdc3a0940689
 q
 Aapp/src/main/java/com/example/homepage/utils/models/CourseData.kt,5\e\5e6b8deb0995e1de12679b8d06e49661ddd7b7a7
-ƒ
-Sapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/CourseViewHolder.kt,f\b\fbc73bdd04eeb1d3dcffa0bb458c99644898d24b
 
 Oapp/src/main/java/com/example/homepage/features/groupTab/CreateGroupFragment.kt,8\6\86b9ef0f1acaa917125cc49794190a7a3f9cf209
 x
@@ -119,8 +117,6 @@ Sapp/src/main/java/com/example/homepage/features/homeTab/calculator/CgpaFunction
 aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/DepartmentChooserFragment.kt,5\9\593bf742d844e0b46aba57382f87ec5e2014eb5c
 –
 fapp/src/main/java/com/example/homepage/features/homeTab/courseTab/DepartmentSemesterChooserFragment.kt,f\3\f3c9628d36fa3ab8be67a7ef9a602282ab20720c
-—
-gapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Adapter/FavouriteWebAdapter.kt,b\9\b9a54831e9da043c8e9823fbb0ed2f58a0865c8c
 ”
 dapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/FavouriteWebPageFragment.kt,b\7\b75f75ae12aa55f7966eea499c15dcf8a6da3681
 ‘
@@ -129,8 +125,6 @@ aapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Repo/F
 gapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Model/FavouriteWebViewModel.kt,8\2\827eb2b2faccee9cddd4fea5ebf07d2367b4162f
 “
 capp/src/main/java/com/example/homepage/features/onBoarding/authentication/ForgotPasswordFragment.kt,5\f\5fb58977871fc2fa24fc5b35e7b9a71b1e2b8f27
-†
-Vapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Adapter/MyAdapter.kt,d\d\dddf38455766e2d9d0390a20d5c433e7f7a3f347
 y
 Iapp/src/main/java/com/example/homepage/features/onBoarding/OnBoarding3.kt,2\6\266bf3cff21e250dbff41366a5dce620141dba76
 ‘
@@ -165,8 +159,6 @@ Uapp/src/main/java/com/example/homepage/features/commonPages/storeTab/StoreFragm
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Repo/StoreRepository.kt,3\6\366cc0be0d4b04f2cf34f3d1bbed2529d6c3cb63
 Œ
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Model/StoreViewModel.kt,3\b\3b7aaeebddc18ac17292ade8aa3a56145e43049c
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherAdapter/teacherAdapter.kt,9\1\91d06514652c0ce3f298142f2deadcd297a9ea05
 •
 eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherRepo/TeacherRepository.kt,4\9\490d4a46587231727a4576c01ecf0a071a7c524b
 ˆ
