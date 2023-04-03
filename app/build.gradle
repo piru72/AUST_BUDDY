@@ -9,12 +9,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.freondevs.homepage"
         minSdk 28
-        targetSdk 32
+        targetSdk 33
         versionCode 16
         versionName "3.0.0"
 
@@ -65,80 +65,58 @@ sonarqube {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-database:20.1.0'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
-    implementation 'com.google.firebase:firebase-messaging:23.1.0'
-
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation "com.google.truth:truth:1.1.2"
-    androidTestImplementation "com.google.truth:truth:1.1.2"
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
-    implementation "com.airbnb.android:lottie:5.2.0"
-    implementation "com.github.sarnavakonar:TextWriter:v1.0"
-    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
-
-
-    implementation 'com.google.firebase:firebase-auth:21.1.0'
-    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
-    implementation 'com.android.support:support-annotations:28.0.0'
-    implementation 'androidx.annotation:annotation:1.5.0'
-
-    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-    /// For image view of glider
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
-
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10"
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 
+    // ui
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "com.airbnb.android:lottie:5.2.0"
+    implementation "com.github.sarnavakonar:TextWriter:v1.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'  ///For image sliders
+    implementation 'com.flaviofaria:kenburnsview:1.0.6'   // For latest images sliders
+    implementation 'com.github.bumptech.glide:glide:4.13.2'    // For image view of glider
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'     //YOUTUBE VIDEOS
 
-    ///For image sliders
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
-
-    // For latest images sliders
-    implementation 'com.flaviofaria:kenburnsview:1.0.6'
-
-
+    //androidx
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.annotation:annotation:1.6.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 
     def nav_version = "2.5.3"
 
-    // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
-    // Feature module Support
-    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
-
-    // Testing Navigation
-    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
-
-    // Jetpack Compose Integration
-    implementation "androidx.navigation:navigation-compose:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version" // Feature module Support
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"  // Testing Navigation
+    implementation "androidx.navigation:navigation-compose:$nav_version"  // Jetpack Compose Integration
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+    //firebase
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.2.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:21.2.0'
     // PUSH NOTIFICATION IMPLEMENTATION
-    // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:31.2.0')
-
-    // Add the dependencies for the Firebase Cloud Messaging and Analytics libraries
-    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')// Import the BoM for the Firebase platform
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
-    //YOUTUBE VIDEOS
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
 
-
+    // testing
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "com.google.truth:truth:1.1.2"
+    androidTestImplementation "com.google.truth:truth:1.1.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 }
