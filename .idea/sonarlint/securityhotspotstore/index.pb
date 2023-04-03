@@ -33,8 +33,6 @@ Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Model/StoreViewModel.kt,3\b\3b7aaeebddc18ac17292ade8aa3a56145e43049c
 ›
 kapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/Model/StoreDashBoardViewModel.kt,b\5\b56255a0c0b0dcab42852712aa7a41122ea9dd92
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 ›
 kapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/Repo/StoreDashBoardRepository.kt,6\0\608fce93eeb20ed918ba8bb264f8dc015c93400e
 –
@@ -145,12 +143,6 @@ fapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/model/
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Adapter/AdminRequestAdapter.kt,1\6\1642eec6e63e1d5aa3c062656852c3ddd9b3bd4c
 †
 Vapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Adapter/MyAdapter.kt,d\d\dddf38455766e2d9d0390a20d5c433e7f7a3f347
-j
-:app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
-j
-:app/src/main/java/com/example/homepage/app/HomeFragment.kt,b\b\bb150b87f560210ad6784982a3efbee210d5c419
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
 ~

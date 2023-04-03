@@ -41,8 +41,6 @@ japp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequ
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,7\b\7b22cd73b55fb2f27e150052abd11c3210e6537d
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,3\2\32e8ae3457dc333dbe61a7af6482d9c8a66a26f6
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 ™
 iapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/BugReportListFragment.kt,1\0\1031c598d2ff9dfb2dd02c1cc79988c3ac904b02
 ¢
@@ -145,12 +143,6 @@ Napp/src/main/java/com/example/homepage/features/groupTab/UserGroupsFragment.kt
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Adapter/AdminRequestAdapter.kt,1\6\1642eec6e63e1d5aa3c062656852c3ddd9b3bd4c
 †
 Vapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Adapter/MyAdapter.kt,d\d\dddf38455766e2d9d0390a20d5c433e7f7a3f347
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
-j
-:app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
-j
-:app/src/main/java/com/example/homepage/app/HomeFragment.kt,b\b\bb150b87f560210ad6784982a3efbee210d5c419
 ~
 Napp/src/main/java/com/example/homepage/utils/helpers/spinner/SpinnerAdapter.kt,7\c\7cab025d77aed582b82f7e15086e9df2bdaa55d2
 {

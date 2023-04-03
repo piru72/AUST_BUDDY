@@ -3,9 +3,8 @@ package com.example.homepage.app
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.homepage.R
+import com.example.homepage.databinding.ActivityMainBinding
 import com.example.homepage.features.onBoarding.OnBoarding1
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -15,15 +14,18 @@ import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var viewBinding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_boarding0)
+        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
+
         auth = Firebase.auth
         enablePersistence()
 
-        val nextButton = findViewById<Button>(R.id.get_started)
-        nextButton.setOnClickListener {
+        viewBinding.getStarted.setOnClickListener {
             val intent = Intent(this, OnBoarding1::class.java)
             startActivity(intent)
         }
@@ -50,6 +52,5 @@ class MainActivity : AppCompatActivity() {
     private fun enablePersistence() {
         Firebase.database.setPersistenceEnabled(true)
     }
-
 
 }
