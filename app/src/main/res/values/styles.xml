@@ -86,10 +86,10 @@
     </style>
 
     <style name="backgroundPopup">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:background">@color/card_bk</item>
+        <item name="android:background">@color/pure_white</item>
         <item name="android:orientation">vertical</item>
         <item name="android:padding">20dp</item>
     </style>
@@ -349,6 +349,16 @@
         <item name="android:backgroundTint">@color/white</item>
         <item name="srcCompat">@android:drawable/ic_input_add</item>
 
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
     </style>
 
 

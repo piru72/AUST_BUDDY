@@ -201,10 +201,6 @@ Papp/src/main/java/com/example/homepage/features/plazaTab/Adapter/PlazaAdapter.k
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Adapter/PlazaDashBoardAdapter.kt,9\e\9eda4feb7c7f8d9e2d4993047a9c32e08f39f47f
 ã
 [app/src/main/java/com/example/homepage/utils/recyclerViewHolder/PlazaDashBoardViewHolder.kt,c\5\c58498880d950b89be751c5f097ad458ec644974
-ï
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherAdapter/teacherAdapter.kt,9\1\91d06514652c0ce3f298142f2deadcd297a9ea05
-Ñ
-Tapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/TeacherViewHolder.kt,4\b\4b3bbace5acb735a81b6b0056312056549eb9637
 Ü
 Vapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/BugReportViewHolder.kt,2\a\2af39c286c653caceacf728cc313d66f570ada99
 â
@@ -229,3 +225,5 @@ qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequ
 Zapp/src/main/java/com/example/homepage/features/groupTab/Group/repository/UserGroupRepo.kt,5\d\5d4b390b049d342297c1f788381e69f38c16b798
 ç
 ]app/src/main/java/com/example/homepage/utils/recyclerViewHolder/FavouriteWebpageViewHolder.kt,c\6\c698a84e396b14d1336b4d3a3450b9096a4e627a
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164

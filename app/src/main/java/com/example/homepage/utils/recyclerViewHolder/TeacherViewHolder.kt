@@ -56,7 +56,7 @@ class TeacherViewHolder(private val binding: CardTeachersBinding) :
         when (userType) {
             "Admin" -> binding.btnFavouriteContact.visibility = View.GONE
             "User-favourites" -> {
-                binding.btnFavouriteContact.text = "Remove from favourites"
+
                 binding.btnFavouriteContact.setOnClickListener {
                     Toast.makeText(context, "Removed from favourites", Toast.LENGTH_SHORT).show()
 

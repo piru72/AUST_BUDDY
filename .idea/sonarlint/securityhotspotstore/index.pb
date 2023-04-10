@@ -191,8 +191,6 @@ Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/YouTubeVideoVie
 gapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Adapter/FavouriteWebAdapter.kt,b\9\b9a54831e9da043c8e9823fbb0ed2f58a0865c8c
 –
 fapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/adapter/GroupNoticeAdapter.kt,9\3\937b5d918997d88d3dec7236a19ea6e02c5bb174
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherAdapter/teacherAdapter.kt,9\1\91d06514652c0ce3f298142f2deadcd297a9ea05
 ˆ
 Xapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/GroupNoticeViewHolder.kt,b\8\b8b232e19ddece961550ed539809496ff48b8f18
 †
@@ -205,8 +203,6 @@ Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/AnnouncementVie
 Papp/src/main/java/com/example/homepage/features/plazaTab/Adapter/PlazaAdapter.kt,b\a\ba0401d1dfa2170a52d42f5b4248fd7e59650838
 ˜
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Adapter/PlazaDashBoardAdapter.kt,9\e\9eda4feb7c7f8d9e2d4993047a9c32e08f39f47f
-„
-Tapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/TeacherViewHolder.kt,4\b\4b3bbace5acb735a81b6b0056312056549eb9637
 œ
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Adapter/BugReportAdapter.kt,6\b\6b692c11515503e696927c21a385681acfec42c6
 •
@@ -229,3 +225,5 @@ Vapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/UserGroupViewHo
 ]app/src/main/java/com/example/homepage/utils/recyclerViewHolder/FavouriteWebpageViewHolder.kt,c\6\c698a84e396b14d1336b4d3a3450b9096a4e627a
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Model/AdminRequestViewModel.kt,3\2\32e8ae3457dc333dbe61a7af6482d9c8a66a26f6
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164

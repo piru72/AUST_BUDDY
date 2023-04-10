@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/backgroundCard">
+
 
     <LinearLayout
 
@@ -10,9 +12,10 @@
         <ImageView
             android:id="@+id/images"
             style="@style/cardViewStyleImageContainer"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
+
             android:src="@mipmap/ic_launcher" />
 
         <LinearLayout style="@style/layoutWrapWrapVertical">
@@ -31,49 +34,74 @@
 
             <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnCallTeacher"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/call" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnEmailTeacher"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/email" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/layoutMatchMatchHorizontal">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnShareContact"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/share_contact" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnFavouriteContact"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/add_to_favourite" />
 
             </LinearLayout>
 
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/adminControlLayout"
-                style="@style/layoutMatchMatchHorizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnDeclineTeacher"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/decline" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnApproveTeacher"
-                    style="@style/buttonStyleCard"
-                    android:text="@string/approve" />
-            </LinearLayout>
+
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup style="@style/layoutMatchMatchHorizontal">
+
+            <Button
+                android:id="@+id/btnCallTeacher"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:icon="@drawable/ic_baseline_call_24" />
+
+            <Button
+                android:id="@+id/btnEmailTeacher"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:icon="@drawable/ic_baseline_email_24" />
+
+            <Button
+                android:id="@+id/btnShareContact"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:icon="@drawable/ic_baseline_share_24" />
+
+            <Button
+                android:id="@+id/btnFavouriteContact"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:icon="@drawable/ic_baseline_favorite_24" />
+
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adminControlLayout"
+        style="@style/layoutMatchMatchHorizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeclineTeacher"
+            style="@style/buttonStyleCard"
+            android:text="@string/decline" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnApproveTeacher"
+            style="@style/buttonStyleCard"
+            android:text="@string/approve" />
     </LinearLayout>
 
 </LinearLayout>

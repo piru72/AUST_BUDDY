@@ -22,7 +22,7 @@
 
         <Button
             android:id="@+id/chooseButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/choose" />
     </LinearLayout>
 
