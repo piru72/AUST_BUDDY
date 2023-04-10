@@ -6,7 +6,7 @@
     tools:context=".features.homeTab.ShortCutFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchMatch">
 
 
         <LinearLayout

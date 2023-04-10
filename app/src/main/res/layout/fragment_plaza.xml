@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/postedItemsListLayout"
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:padding="10dp">
 
 
@@ -27,31 +27,31 @@
 
                 <Button
                     android:id="@+id/categoryAll"
-                    style="@style/layoutWrapContent"
+                    style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
                     android:text="@string/alla" />
 
                 <Button
                     android:id="@+id/categoryHelp"
-                    style="@style/layoutWrapContent"
+                    style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
                     android:text="@string/help" />
 
                 <Button
                     android:id="@+id/categoryOfficial"
-                    style="@style/layoutWrapContent"
+                    style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
                     android:text="@string/official" />
 
                 <Button
                     android:id="@+id/categoryAdvertisement"
-                    style="@style/layoutWrapContent"
+                    style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
                     android:text="@string/advertisement" />
 
                 <Button
                     android:id="@+id/categoryOthers"
-                    style="@style/layoutWrapContent"
+                    style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
                     android:text="@string/others" />
 

@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/backgroundCard">
 
-    <LinearLayout style="@style/layoutMatchParentHorizontal">
+    <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
         <LinearLayout
-            style="@style/layoutWrapContent"
+            style="@style/layoutWrapWrap"
             android:orientation="vertical">
 
             <TextView

@@ -15,7 +15,7 @@
             android:padding="5sp"
             android:src="@mipmap/ic_launcher" />
 
-        <LinearLayout style="@style/layoutWrapContentVertical">
+        <LinearLayout style="@style/layoutWrapWrapVertical">
 
             <TextView
                 android:id="@+id/tvfirstName"
@@ -29,7 +29,7 @@
                 style="@style/textViewWrapWrapPoppinsBlack18"
                 android:text="@string/assistant_professor" />
 
-            <LinearLayout style="@style/layoutMatchParentHorizontal">
+            <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnCallTeacher"
@@ -42,7 +42,7 @@
                     android:text="@string/email" />
             </LinearLayout>
 
-            <LinearLayout style="@style/layoutMatchParentHorizontal">
+            <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnShareContact"
@@ -59,7 +59,7 @@
 
             <LinearLayout
                 android:id="@+id/adminControlLayout"
-                style="@style/layoutMatchParentHorizontal">
+                style="@style/layoutMatchMatchHorizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnDeclineTeacher"

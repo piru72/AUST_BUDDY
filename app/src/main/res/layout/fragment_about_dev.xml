@@ -5,7 +5,7 @@
     style="@style/backgroundMain"
     tools:context=".features.profileTab.AboutDevFragment">
 
-    <LinearLayout style="@style/layoutWrapContentVertical">
+    <LinearLayout style="@style/layoutWrapWrapVertical">
 
         <LinearLayout style="@style/backgroundDev">
 

@@ -3,11 +3,11 @@
     android:id="@+id/popup_create_join_class"
     style="@style/backgroundPopup">
 
-    <LinearLayout style="@style/layoutMatchParentVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical">
 
         <TextView
             android:id="@+id/textViewWarningMessage"
-            style="@style/textViewWrapWrapPoppinsBlackPopup"
+            style="@style/textViewWrapWrapPoppinsBlack20"
             android:text="@string/warning_semester" />
 
         <LinearLayout style="@style/layoutMatchWrapHorizontal">

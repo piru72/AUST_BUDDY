@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:id="@+id/activity_sign_in"
-        style="@style/layoutMatchParentVertical">
+        style="@style/layoutMatchMatchVertical">
 
         <ImageView
             style="@style/onBoardingImage"

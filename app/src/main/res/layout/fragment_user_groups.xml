@@ -10,7 +10,7 @@
         android:id="@+id/UserGroupListRecycle"
         style="@style/layoutMatchWrap" />
 
-    <RelativeLayout style="@style/layoutMatchParent">
+    <RelativeLayout style="@style/layoutMatchMatch">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"

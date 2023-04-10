@@ -5,7 +5,7 @@
     android:padding="30dp"
     tools:context=".features.profileTab.adminPanel.AddCourseFragment">
 
-    <LinearLayout style="@style/layoutMatchParentVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical">
 
         <ImageView
             android:id="@+id/startingImage"

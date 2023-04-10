@@ -5,7 +5,7 @@
     tools:context=".features.homeTab.teachersPage.TeachersFragment">
 
     <LinearLayout
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:orientation="vertical">
 
         <Button

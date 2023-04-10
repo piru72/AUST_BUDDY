@@ -3,7 +3,7 @@
 
     <LinearLayout style="@style/backgroundCard">
 
-        <LinearLayout style="@style/layoutMatchParent">
+        <LinearLayout style="@style/layoutMatchMatch">
 
             <TextView
                 android:id="@+id/textView_Department_admin"

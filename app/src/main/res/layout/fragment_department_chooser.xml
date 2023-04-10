@@ -4,7 +4,7 @@
     style="@style/backgroundMain"
     tools:context=".features.homeTab.teachersPage.DepartmentChooserFragment">
 
-    <LinearLayout style="@style/layoutMatchParentVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical">
 
         <Button
             android:id="@+id/btn_cse"

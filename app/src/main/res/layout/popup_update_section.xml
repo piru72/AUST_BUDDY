@@ -4,7 +4,7 @@
     style="@style/backgroundPopup">
 
 
-    <LinearLayout style="@style/layoutMatchParentVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical">
 
         <EditText
             android:id="@+id/editTextSection"

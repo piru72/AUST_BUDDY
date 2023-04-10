@@ -18,7 +18,7 @@
         android:padding="20sp"
         android:text="@string/details" />
 
-    <LinearLayout style="@style/layoutWrapContentVertical">
+    <LinearLayout style="@style/layoutWrapWrapVertical">
 
         <TextView
             android:id="@+id/textView_name"

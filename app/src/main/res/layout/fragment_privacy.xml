@@ -7,6 +7,6 @@
 
     <WebView
         android:id="@+id/webView"
-        style="@style/layoutMatchParent" />
+        style="@style/layoutMatchMatch" />
 
 </FrameLayout>

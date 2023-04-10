@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rootConstrainLayout"
-        style="@style/layoutMatchParent">
+        style="@style/layoutMatchMatch">
 
         <LinearLayout
             style="@style/layoutImageButtonContainer"

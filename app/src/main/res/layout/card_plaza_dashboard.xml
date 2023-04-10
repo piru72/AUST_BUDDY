@@ -7,7 +7,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                style="@style/layoutWrapContentVertical">
+                style="@style/layoutWrapWrapVertical">
 
 
                 <TextView
@@ -32,7 +32,7 @@
         </LinearLayout>
 
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <Button
                 android:id="@+id/deleteProductButton"

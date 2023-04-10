@@ -16,7 +16,7 @@
             android:textStyle="bold" />
 
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/shareButton"
@@ -29,7 +29,7 @@
                 android:text="@string/explore" />
         </LinearLayout>
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/courseDeclineButton"

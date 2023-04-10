@@ -3,7 +3,7 @@
 
     <LinearLayout style="@style/backgroundCard">
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -32,16 +32,16 @@
 
             </LinearLayout>
 
-            <LinearLayout style="@style/layoutMatchParentVertical">
+            <LinearLayout style="@style/layoutMatchMatchVertical">
 
                 <Button
                     android:id="@+id/btnDeleteSchedule"
-                    style="@style/buttonStylePopup"
+                    style="@style/buttonStyleBasic"
                     android:text="@string/done" />
 
                 <Button
                     android:id="@+id/btnEditSchedule"
-                    style="@style/buttonStylePopup"
+                    style="@style/buttonStyleBasic"
                     android:text="@string/edit" />
             </LinearLayout>
 

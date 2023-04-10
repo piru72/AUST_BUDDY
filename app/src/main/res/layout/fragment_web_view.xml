@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layoutMatchParent"
+    style="@style/layoutMatchMatch"
     tools:context=".utils.helpers.WebView">
 
-    <LinearLayout style="@style/layoutMatchParent">
+    <LinearLayout style="@style/layoutMatchMatch">
 
         <WebView
             android:id="@+id/mWebView"
-            style="@style/layoutMatchParent" />
+            style="@style/layoutMatchMatch" />
     </LinearLayout>
 
 </FrameLayout>

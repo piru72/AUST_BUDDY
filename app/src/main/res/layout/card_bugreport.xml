@@ -8,7 +8,7 @@
             style="@style/textViewWrapWrapPoppinsBlack"
             android:text="@string/bug_report_details" />
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <Button
                 android:id="@+id/showReportersDetailsButton"

@@ -3,10 +3,10 @@
     android:id="@+id/popup_create_join_class"
     style="@style/backgroundPopup">
 
-    <LinearLayout style="@style/layoutMatchParent">
+    <LinearLayout style="@style/layoutMatchMatch">
 
         <TextView
-            style="@style/textViewWrapWrapPoppinsBlackPopup"
+            style="@style/textViewWrapWrapPoppinsBlack20"
             android:text="@string/sure_you_want_to_leave_this_group" />
     </LinearLayout>
 
@@ -15,12 +15,12 @@
 
         <Button
             android:id="@+id/cancelButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/cancel" />
 
         <Button
             android:id="@+id/leaveButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/leave" />
 
 

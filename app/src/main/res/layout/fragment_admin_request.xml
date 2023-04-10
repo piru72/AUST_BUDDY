@@ -5,7 +5,7 @@
     tools:context=".features.profileTab.adminPanel.adminRequest.AdminRequestFragment">
 
 
-    <LinearLayout style="@style/layoutMatchParentVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

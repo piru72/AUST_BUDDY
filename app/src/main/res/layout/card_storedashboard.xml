@@ -5,11 +5,11 @@
     <LinearLayout style="@style/backgroundCard">
 
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                style="@style/layoutMatchParentVertical"
+                style="@style/layoutMatchMatchVertical"
                 android:layout_width="195dp">
 
                 <TextView
@@ -24,7 +24,7 @@
                     android:text="@string/book_writer_name" />
 
 
-                <LinearLayout style="@style/layoutMatchParentHorizontal">
+                <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
                     <TextView
                         android:id="@+id/productCategoryCard"
@@ -52,21 +52,21 @@
 
         </LinearLayout>
 
-        <LinearLayout style="@style/layoutMatchParentHorizontal">
+        <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
             <Button
                 android:id="@+id/showDetailsButton"
-                style="@style/exampleButtonChild"
+                style="@style/buttonStyleCard"
                 android:text="@string/details" />
 
             <Button
                 android:id="@+id/deleteProductButton"
-                style="@style/exampleButtonChild"
+                style="@style/buttonStyleCard"
                 android:text="@string/delete" />
 
             <Button
                 android:id="@+id/updateProductButton"
-                style="@style/exampleButtonChild"
+                style="@style/buttonStyleCard"
                 android:text="@string/update" />
         </LinearLayout>
 

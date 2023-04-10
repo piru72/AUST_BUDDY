@@ -6,11 +6,11 @@
 
     <RelativeLayout
         android:id="@+id/postedItemsListLayout"
-        style="@style/layoutMatchParent">
+        style="@style/layoutMatchMatch">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/posted_item_list"
-            style="@style/layoutMatchParent">
+            style="@style/layoutMatchMatch">
 
         </androidx.recyclerview.widget.RecyclerView>
 

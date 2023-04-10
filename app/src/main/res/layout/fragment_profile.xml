@@ -9,12 +9,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_screen"
-        style="@style/layoutMatchParent">
+        style="@style/layoutMatchMatch">
 
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            style="@style/layoutMatchParentVertical"
+            style="@style/layoutMatchMatchVertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

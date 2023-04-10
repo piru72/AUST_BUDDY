@@ -6,7 +6,7 @@
 
 
     <LinearLayout
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 

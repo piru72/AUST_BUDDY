@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="layoutMatchParent">
+    <style name="layoutMatchMatch">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
 
     </style>
 
-    <style name="layoutWrapContent">
+    <style name="layoutWrapWrap">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -17,198 +17,72 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="layoutWrapContentVertical" parent="layoutWrapContent">
+    <style name="layoutMatchMatchVertical" parent="layoutMatchMatch">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="layoutMatchMatchHorizontal" parent="layoutMatchMatch">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="layoutWrapWrapVertical" parent="layoutWrapWrap">
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="layoutMatchWrapHorizontal">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="layoutWrapWrapHorizontal" parent="layoutWrapWrap">
         <item name="android:orientation">horizontal</item>
-
     </style>
 
-    <style name="spinnerModeDropDown" parent="layoutMatchWrap">
-
-        <item name="android:background">@null</item>
-        <item name="android:popupBackground">@drawable/spinner_item_background</item>
-        <item name="android:spinnerMode">dropdown</item>
-
+    <style name="layoutMatchWrapHorizontal" parent="layoutMatchWrap">
+        <item name="android:orientation">horizontal</item>
     </style>
 
     <style name="layoutMatchWrapVertical" parent="layoutMatchWrap">
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="layoutWrapWrapHorizontal" parent="layoutWrapContent">
-        <item name="android:orientation">horizontal</item>
-    </style>
 
-    <style name="layoutMatchParentVertical" parent="layoutMatchParent">
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">center</item>
-
-    </style>
-
-    <style name="layoutMatchParentHorizontal" parent="layoutMatchParent">
-        <item name="android:orientation">horizontal</item>
-        <item name="android:gravity">center</item>
-
-    </style>
-
-    <style name="layoutImageButtonContainer">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-
-        <item name="android:layout_marginStart">30dp</item>
-        <item name="android:layout_marginEnd">30dp</item>
-        <item name="android:layout_weight">3</item>
-        <item name="android:orientation">vertical</item>
-
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-
-
-    </style>
-
-
-    <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapContent">
+    <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapWrap">
         <item name="android:layout_gravity">center</item>
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="textViewWrapWrapPoppinsBlackGravityStart" parent="layoutWrapContent">
+    <style name="textViewWrapWrapPoppinsBlackGravityStart" parent="layoutWrapWrap">
         <item name="android:layout_gravity">start</item>
     </style>
 
-    <style name="textViewWrapWrapPoppinsBlack18" parent="layoutWrapContent">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:textColor">@color/black</item>
+    <style name="textViewWrapWrapPoppinsBlack18" parent="textViewWrapWrapPoppinsBlack">
         <item name="android:textSize">18sp</item>
-
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack20" parent="textViewWrapWrapPoppinsBlack18">
         <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">center</item>
-
-
     </style>
 
-    <style name="textViewWrapWrapPoppinsBlackPopup" parent="layoutWrapContent">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:gravity">center</item>
 
-
+    <style name="spinnerModeDropDown" parent="layoutMatchWrap">
+        <item name="android:background">@null</item>
+        <item name="android:popupBackground">@drawable/spinner_item_background</item>
+        <item name="android:spinnerMode">dropdown</item>
     </style>
 
-    <style name="buttonStyleBasic" parent="textViewWrapWrapPoppinsBlack">
 
-        <item name="android:layout_height">30dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_margin">3dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
-        <item name="android:focusable">true</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:linksClickable">true</item>
-        <item name="android:elevation">10dp</item>
-        <item name="android:autoLink">web</item>
-
-    </style>
-
-    <style name="backgroundMain" parent="layoutMatchParent">
-        <item name="android:background">@drawable/bk_shape03</item>
-    </style>
-
-    <style name="cardViewStyleImageContainer">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
-        <item name="android:focusable">true</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:linksClickable">true</item>
-        <item name="android:elevation">10dp</item>
-        <item name="android:autoLink">web</item>
-        <item name="android:clickable">true</item>
-        <item name="cardBackgroundColor">@android:color/transparent</item>
-        <item name="cardCornerRadius">10dp</item>
-        <item name="cardElevation">5dp</item>
-
-
-    </style>
-
-    <style name="layoutOfCardViewImage" parent="layoutMatchParent">
+    <style name="layoutOfCardViewImage" parent="layoutMatchMatch">
         <item name="android:background">@color/background_color_50</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="imageViewButton">
-        <item name="android:layout_width">80dp</item>
-        <item name="android:layout_height">80dp</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:padding">20dp</item>
-        <item name="tint">#000</item>
-    </style>
 
-    <style name="buttonStylePage" parent="layoutWrapContent">
-
-
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:background">@color/background_color_50</item>
-        <item name="android:drawableStart">@drawable/ic_baseline_edit_24</item>
-        <item name="android:drawableTint">#000</item>
-        <item name="android:elevation">10dp</item>
-        <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:visibility">visible</item>
-
-
-    </style>
-
-
-    <style name="buttonStylePopup">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
-        <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-
-    <style name="buttonStyleCard">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
-        <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:textColor">@color/black</item>
+    <style name="backgroundMain" parent="layoutMatchMatch">
+        <item name="android:background">@drawable/bk_shape03</item>
     </style>
 
     <style name="backgroundPopup">
@@ -232,25 +106,7 @@
     </style>
 
 
-    <style name="exampleButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">5sp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
-
-    </style>
-
-    <style name="exampleButtonChild" parent="exampleButton">
-        <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:textColor">@color/black</item>
-
-    </style>
-
-
-    <style name="layoutOnBoardingMain" parent="layoutMatchParentVertical">
+    <style name="layoutOnBoardingMain" parent="layoutMatchMatchVertical">
 
         <item name="layout_constraintBottom_toBottomOf">parent</item>
         <item name="layout_constraintEnd_toEndOf">parent</item>
@@ -316,19 +172,6 @@
     </style>
 
 
-    <style name="buttonStyleFloat" parent="Widget.Design.FloatingActionButton">
-
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentEnd">true</item>
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:layout_margin">20dp</item>
-        <item name="android:contentDescription">@string/plus_button</item>
-        <item name="android:backgroundTint">@color/white</item>
-        <item name="srcCompat">@android:drawable/ic_input_add</item>
-
-    </style>
-
     <style name="spinnerModeGrades">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -379,6 +222,133 @@
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+
+    <style name="layoutImageButtonContainer" parent="layoutMatchWrap">
+
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+
+
+    <style name="buttonStyleBasic" parent="textViewWrapWrapPoppinsBlack">
+
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:autoLink">web</item>
+    </style>
+
+
+    <style name="cardViewStyleImageContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:clickable">true</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">5dp</item>
+
+
+    </style>
+
+
+    <style name="imageViewButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">20dp</item>
+        <item name="tint">#000</item>
+    </style>
+
+
+    <style name="buttonStylePage" parent="layoutMatchWrap">
+
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:drawableStart">@drawable/ic_baseline_edit_24</item>
+        <item name="android:drawableTint">#000</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:visibility">visible</item>
+
+
+    </style>
+
+
+    <style name="buttonStylePopup">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="buttonStyleCard">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/background_color_50</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="buttonStyleMaterialOutlined" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name ="android:layout_margin">2sp</item>
+        <item name ="android:layout_weight">1</item>
+
+    </style>
+
+
+    <style name="buttonStyleFloat" parent="Widget.Design.FloatingActionButton">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:contentDescription">@string/plus_button</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="srcCompat">@android:drawable/ic_input_add</item>
+
     </style>
 
 

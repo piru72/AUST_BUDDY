@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/ToDoActivity"
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:padding="10dp">
 
 

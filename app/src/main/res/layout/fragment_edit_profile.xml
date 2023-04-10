@@ -6,7 +6,7 @@
     style="@style/backgroundMain"
     tools:context=".features.profileTab.EditProfileFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchParent">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/layoutMatchMatch">
 
         <LinearLayout
             android:id="@+id/linearLayout3"

@@ -12,12 +12,12 @@
         android:inputType="textPersonName" />
 
     <LinearLayout
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/TaskDatePop"
-            style="@style/textViewWrapWrapPoppinsBlackPopup"
+            style="@style/textViewWrapWrapPoppinsBlack20"
             android:text="@string/choose_date" />
 
         <Button

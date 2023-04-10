@@ -7,13 +7,13 @@
 
     <RelativeLayout
         android:id="@+id/materialListActivity"
-        style="@style/layoutMatchParent"
+        style="@style/layoutMatchMatch"
         android:padding="10dp">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/material_list"
-            style="@style/layoutWrapContent"
+            style="@style/layoutWrapWrap"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
         </androidx.recyclerview.widget.RecyclerView>
