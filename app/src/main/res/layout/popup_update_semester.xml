@@ -14,12 +14,12 @@
 
             <Button
                 android:id="@+id/btnUpdateLater"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStyleMaterialOutlined"
                 android:text="@string/later" />
 
             <Button
                 android:id="@+id/btnUpdateNow"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStyleMaterialOutlined"
                 android:text="@string/update_now" />
 
 

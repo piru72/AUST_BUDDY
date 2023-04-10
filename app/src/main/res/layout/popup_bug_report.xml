@@ -15,12 +15,12 @@
 
         <Button
             android:id="@+id/CloseButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/close" />
 
         <Button
             android:id="@+id/sendButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/send" />
 
 

@@ -39,12 +39,12 @@
 
         <Button
             android:id="@+id/CloseButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/close" />
 
         <Button
             android:id="@+id/AddButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/add" />
 
 

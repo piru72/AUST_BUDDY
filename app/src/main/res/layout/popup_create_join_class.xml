@@ -7,12 +7,12 @@
 
         <Button
             android:id="@+id/joinButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/join" />
 
         <Button
             android:id="@+id/createButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/create" />
 
     </LinearLayout>

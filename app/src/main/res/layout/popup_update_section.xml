@@ -17,12 +17,12 @@
 
             <Button
                 android:id="@+id/btnCancel"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStyleMaterialOutlined"
                 android:text="@string/cancel" />
 
             <Button
                 android:id="@+id/btnUpdateNow"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStyleMaterialOutlined"
                 android:text="@string/update_now" />
 
 

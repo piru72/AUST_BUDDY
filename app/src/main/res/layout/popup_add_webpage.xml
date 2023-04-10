@@ -22,12 +22,12 @@
 
         <Button
             android:id="@+id/websiteCloseButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/close" />
 
         <Button
             android:id="@+id/websiteAddButton"
-            style="@style/buttonStylePopup"
+            style="@style/buttonStyleMaterialOutlined"
             android:text="@string/add" />
 
 
