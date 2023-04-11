@@ -12,6 +12,8 @@
             android:id="@+id/btn_other"
             style="@style/buttonStylePage"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="0sp"
+            android:layout_marginLeft="0sp"
             android:text="@string/all_departments" />
 
         <androidx.recyclerview.widget.RecyclerView

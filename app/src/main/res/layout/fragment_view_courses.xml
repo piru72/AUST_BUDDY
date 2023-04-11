@@ -18,6 +18,8 @@
         <Button
             android:id="@+id/btnSemesterChooser"
             style="@style/buttonStylePage"
+            android:layout_marginRight="0sp"
+            android:layout_marginLeft="0sp"
             android:text="@string/view_every_semester" />
 
 
