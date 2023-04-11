@@ -337,7 +337,14 @@
     <string name="not_given">Not given</string>
 
     <string name="admin_course_request_list">admin-course-request-list</string>
-
+    <string name="shortCse">cse</string>
+    <string name="arch">Arch</string>
+    <string name="bba">BBA</string>
+    <string name="shortTe">TE</string>
+    <string name="shortIpe">IPE</string>
+    <string name="shortMe">ME</string>
+    <string name="shortCe">CE</string>
+    <string name="shortEee">EEE</string>
 
 
 </resources>

@@ -14,7 +14,80 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="0sp"
             android:layout_marginLeft="0sp"
-            android:text="@string/all_departments" />
+            android:text="@string/all_departments"
+            android:visibility="gone"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/categories"
+            android:layout_marginTop="10dp"
+            style="@style/layoutMatchWrap"
+            android:background="@color/background_color_50">
+
+            <LinearLayout style="@style/layoutWrapWrapHorizontal">
+
+                <Button
+                    android:id="@+id/buttonFavouriteTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/favourite" />
+
+                <Button
+                    android:id="@+id/buttonCseTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortCse" />
+
+                <Button
+                    android:id="@+id/buttonEeeTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortEee" />
+
+                <Button
+                    android:id="@+id/buttonCeTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortCe" />
+
+                <Button
+                    android:id="@+id/buttonMeTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortMe" />
+
+                <Button
+                    android:id="@+id/buttonIpeTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortIpe" />
+
+                <Button
+                    android:id="@+id/buttonTeTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortTe" />
+
+                <Button
+                    android:id="@+id/buttonASTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/as" />
+
+                <Button
+                    android:id="@+id/buttonArchTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/arch" />
+
+                <Button
+                    android:id="@+id/buttonBbaTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/bba" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/teacher_list"
