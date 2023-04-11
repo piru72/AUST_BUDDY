@@ -72,7 +72,7 @@
                     android:id="@+id/buttonASTeachers"
                     style="@style/layoutWrapWrap"
                     android:layout_margin="5dp"
-                    android:text="@string/as" />
+                    android:text="@string/shortAs" />
 
                 <Button
                     android:id="@+id/buttonArchTeachers"

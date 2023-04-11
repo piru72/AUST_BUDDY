@@ -45,8 +45,6 @@ rapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReport
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Model/BugReportViewModel.kt,1\d\1d8676e9eb3ff58e64a8224b436e3e6d6c3086dd
 ƒ
 Sapp/src/main/java/com/example/homepage/features/homeTab/calculator/CgpaFunctions.kt,7\7\776e50242de067ed9d9815961ff96f213490d25c
-‘
-aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/DepartmentChooserFragment.kt,5\9\593bf742d844e0b46aba57382f87ec5e2014eb5c
 –
 fapp/src/main/java/com/example/homepage/features/homeTab/courseTab/DepartmentSemesterChooserFragment.kt,f\3\f3c9628d36fa3ab8be67a7ef9a602282ab20720c
 ”
@@ -65,8 +63,6 @@ aapp/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/PlazaDa
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Repo/PlazaDashBoardRepository.kt,4\5\45aec00aab962774c46a90ef7e534d3a300e8f2a
 ˜
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Model/PlazaDashBoardViewModel.kt,a\6\a631d063013557b8f91445b524e13287adebe36b
-y
-Iapp/src/main/java/com/example/homepage/features/plazaTab/PlazaFragment.kt,e\d\ede40f463b52b5e8159e27ecac3fc562a22940c0
 €
 Papp/src/main/java/com/example/homepage/features/plazaTab/Repo/PlazaRepository.kt,b\f\bf0db52c29b189e950b707b8628b1165c345896e
 €
@@ -93,10 +89,6 @@ Uapp/src/main/java/com/example/homepage/features/commonPages/storeTab/StoreFragm
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Model/StoreViewModel.kt,3\b\3b7aaeebddc18ac17292ade8aa3a56145e43049c
 •
 eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherRepo/TeacherRepository.kt,4\9\490d4a46587231727a4576c01ecf0a071a7c524b
-ˆ
-Xapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeachersFragment.kt,7\8\78e0696f89973118bb112267a51efc1945661a47
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherModel/teacherViewModel.kt,b\d\bd5faadd90f770f3c657d3202ed80066696ced0a
 ‰
 Yapp/src/main/java/com/example/homepage/features/homeTab/courseTab/repos/UserRepository.kt,d\0\d0b1684333e95bcfeca1cb2561c789fa07b12c74
 ˆ

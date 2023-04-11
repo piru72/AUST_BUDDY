@@ -51,8 +51,6 @@ Yapp/src/main/java/com/example/homepage/features/homeTab/courseTab/repos/UserRep
 Sapp/src/main/java/com/example/homepage/features/homeTab/calculator/CgpaFunctions.kt,7\7\776e50242de067ed9d9815961ff96f213490d25c
 }
 Mapp/src/main/java/com/example/homepage/features/profileTab/ProfileFragment.kt,5\6\56d39783f5c098659993c14589d152e3b25b34e7
-y
-Iapp/src/main/java/com/example/homepage/features/plazaTab/PlazaFragment.kt,e\d\ede40f463b52b5e8159e27ecac3fc562a22940c0
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,7\b\7b22cd73b55fb2f27e150052abd11c3210e6537d
 €
@@ -61,8 +59,6 @@ y
 Iapp/src/main/java/com/example/homepage/features/onBoarding/OnBoarding3.kt,2\6\266bf3cff21e250dbff41366a5dce620141dba76
 €
 Papp/src/main/java/com/example/homepage/features/plazaTab/Repo/PlazaRepository.kt,b\f\bf0db52c29b189e950b707b8628b1165c345896e
-ˆ
-Xapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeachersFragment.kt,7\8\78e0696f89973118bb112267a51efc1945661a47
 €
 Papp/src/main/java/com/example/homepage/features/homeTab/courseTab/ViewCourses.kt,7\1\71b81c5602ff2b1d8ee20a45b8d70bfee230011c
 –
@@ -99,12 +95,8 @@ eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherRep
 dapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/FavouriteWebPageFragment.kt,b\7\b75f75ae12aa55f7966eea499c15dcf8a6da3681
 ”
 dapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/StoreDashboardFragment.kt,4\c\4c71556856940d71ade42ccb9b1bd28fb0e61fa1
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherModel/teacherViewModel.kt,b\d\bd5faadd90f770f3c657d3202ed80066696ced0a
 ›
 kapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/Adapter/StoreDashBoardAdapter.kt,f\f\ffc0e84e04566983e1bfd6f87c0a50c44f3270bd
-‘
-aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/DepartmentChooserFragment.kt,5\9\593bf742d844e0b46aba57382f87ec5e2014eb5c
 Œ
 \app/src/main/java/com/example/homepage/features/commonPages/storeTab/Adapter/StoreAdapter.kt,4\6\464aa3d8afbb9ad1dc71ff8a804dd5a7b2ba4996
 Œ
