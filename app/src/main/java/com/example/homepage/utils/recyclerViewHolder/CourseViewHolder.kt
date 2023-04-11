@@ -4,8 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homepage.databinding.CardCoursesBinding
 import com.example.homepage.database.ChildUpdaterHelper
+import com.example.homepage.databinding.CardCoursesBinding
 import com.example.homepage.utils.helpers.ItemViewHelper
 import com.example.homepage.utils.models.CourseData
 
@@ -14,6 +14,11 @@ class CourseViewHolder(private val binding: CardCoursesBinding) :
     fun bind(courseData: CourseData, userType: String) {
         binding.tvCourseCode.text = courseData.courseCode
         binding.tvCourseName.text = courseData.courseName
+
+        itemView.setOnClickListener{
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse(courseData.driveLink))
+            itemView.context.startActivity(i)
+        }
 
         setupButtonVisibility(userType)
         setupButtonFunctionality(courseData)

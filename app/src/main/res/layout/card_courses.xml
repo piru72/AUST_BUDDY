@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/backgroundCard">
 
-    <LinearLayout style="@style/layoutMatchWrapVertical">
+    <TextView
+        android:id="@+id/tvCourseName"
+        style="@style/textViewWrapWrapPoppinsBlack18"
+        android:text="@string/course_name" />
 
-        <TextView
-            android:id="@+id/tvCourseName"
-            style="@style/textViewWrapWrapPoppinsBlack18"
-            android:text="@string/course_name" />
+    <TextView
+        android:id="@+id/tvCourseCode"
+        style="@style/textViewWrapWrapPoppinsBlack18"
+        android:text="@string/course_code"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvCourseCode"
-            style="@style/textViewWrapWrapPoppinsBlack18"
-            android:text="@string/course_code"
-            android:textStyle="bold" />
+    <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/exploreButton"
+        style="@style/buttonStyleBasic"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:text="@string/explore" />
 
-        <LinearLayout style="@style/layoutMatchMatchHorizontal">
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            style="@style/layoutWrapWrap"
+            android:layout_gravity="end"
+            android:layout_weight=".1">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/shareButton"
-                style="@style/buttonStyleBasic"
-                android:text="@string/share" />
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/exploreButton"
-                style="@style/buttonStyleBasic"
-                android:text="@string/explore" />
-        </LinearLayout>
+                app:icon="@drawable/ic_baseline_share_24" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
 
-        <LinearLayout style="@style/layoutMatchMatchHorizontal">
+    </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/courseDeclineButton"
-                style="@style/buttonStyleBasic"
-                android:text="@string/decline" />
+    <LinearLayout style="@style/layoutMatchMatchHorizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/courseApproveButton"
-                style="@style/buttonStyleBasic"
-                android:text="@string/approve" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/courseDeclineButton"
+            style="@style/buttonStyleBasic"
+            android:text="@string/decline" />
 
-        </LinearLayout>
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/courseApproveButton"
+            style="@style/buttonStyleBasic"
+            android:text="@string/approve" />
 
     </LinearLayout>
 
