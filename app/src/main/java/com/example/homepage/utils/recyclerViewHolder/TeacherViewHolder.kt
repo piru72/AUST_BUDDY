@@ -68,7 +68,7 @@ class TeacherViewHolder(private val binding: CardTeachersBinding) :
             }
             else -> {
                 binding.btnFavouriteContact.setOnClickListener {
-                    Toast.makeText(context, "Added to favourites", Toast.LENGTH_SHORT).show()
+
 
 
                     val newPush = currentItem.email.toString().replace(".", "-")
@@ -76,6 +76,7 @@ class TeacherViewHolder(private val binding: CardTeachersBinding) :
                     val fromPath = "$databaseViewPath/$newPush"
                     val toPath = "user-favouriteTeachers/$user/$newPush"
                     firebaseHelper.moveChild(fromPath, toPath)
+                    Toast.makeText(context, "Added to favourites", Toast.LENGTH_SHORT).show()
                 }
 
             }

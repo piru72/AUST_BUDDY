@@ -29,7 +29,8 @@ class TeachersFragment : ReplaceFragment() {
     lateinit var adapter: teacherAdapter
     private var fragmentBinding: FragmentTeachersBinding? = null
     private val viewBinding get() = fragmentBinding!!
-    var buttons: List<Button>? = null
+    private var buttons: List<Button>? = null
+    private lateinit var databasePath :String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,10 +60,7 @@ class TeachersFragment : ReplaceFragment() {
             button.setOnClickListener { changeButtonColor(button) }
         }
 
-
-        // If the user is navigating to this page from the home page only then this button will be visible
-        if (args.viewPath == "sourceDepartmentChooser")
-            viewBinding.btnOther.visibility = View.GONE
+        databasePath = args.reference
 
         viewBinding.btnOther.setOnClickListener {
             val action = TeachersFragmentDirections.actionTeachersFragmentToDepartmentChooserFragment()
@@ -76,8 +74,7 @@ class TeachersFragment : ReplaceFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // The currently selected department
-        val databaseViewPath = args.reference
+
 
         // attaching the recycler view
         userRecyclerView = view.findViewById(R.id.teacher_list)
@@ -89,24 +86,20 @@ class TeachersFragment : ReplaceFragment() {
         // 2. Admin - The super admin viewing this from the dashboard
         // 3. User-favourites - The user/ admin is looking at his favourite list
 
-        var userType = "User"
-        if (databaseViewPath == "admin-teacher-request-list")
-            userType = "Admin"
-        else if (databaseViewPath == "user-favouriteTeachers")
-            userType = "User-favourites"
+
 
         // Initializing the adapter with the department and usertype
-        adapter = teacherAdapter(userType,databaseViewPath)
+        adapter = teacherAdapter("User","teachers")
         userRecyclerView.adapter = adapter
 
         // Initializing viewModel with appropriate database reference according to the databaseViewPath
         viewModel = ViewModelProvider(this)[teacherViewModel::class.java]
 
 
-        if (databaseViewPath == "user-favouriteTeachers")
-            setTeachersDepartment(databaseViewPath + "/${getCurrentUserId()}")
+        if (databasePath == "user-favouriteTeachers")
+            setTeachersDepartment(databasePath + "/${getCurrentUserId()}")
         else
-            setTeachersDepartment(databaseViewPath)
+            setTeachersDepartment(databasePath)
 
     }
 
