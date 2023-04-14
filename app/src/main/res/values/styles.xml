@@ -82,7 +82,7 @@
 
 
     <style name="backgroundMain" parent="layoutMatchMatch">
-        <item name="android:background">@drawable/bk_shape03</item>
+
     </style>
 
     <style name="backgroundPopup">
