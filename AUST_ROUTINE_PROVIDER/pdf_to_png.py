@@ -18,4 +18,7 @@ for pdf_file in pdf_files:
 
     for i in range(len(images)):
         images[i].save('OutputImages/' + image_name + '.png', 'PNG')
-        print(image_name + '.png')
+        image_name = (image_name + '.png')
+        # print(image_name)
+        print ("https://raw.githubusercontent.com/piru72/Uni_buddy/master/AUST_ROUTINE_PROVIDER/OutputImages/" + image_name)
+       

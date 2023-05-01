@@ -30,7 +30,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/syllabus"
-                            android:src="@drawable/ic_baseline_menu_book_24" />
+                            android:src="@drawable/books" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"

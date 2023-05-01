@@ -62,6 +62,21 @@ def file_saver(pages, routines, wanted_routine)
   end
 end
 
+# function to save all the routines
+
+def all_routines_saver(pages, routines)
+  i = 0
+  # iterating through the pages of the pdf
+  pages.each do |page|
+    pdf = CombinePDF.new
+    pdf << page
+
+    # saving the routine
+    pdf.save("#{routines[i]}.pdf")
+    i += 1
+  end
+end
+
 # Taking the user input to find the desired semester
 def user_input()
   puts "Year"
@@ -83,7 +98,7 @@ end
 def main()
 
   # Prepations to start finding the file
-  intput_file_name = "Input/CSE_Class_Routine_Spring2022.pdf"
+  intput_file_name = "Input/cse_class_routine.pdf"
   pages = CombinePDF.load(intput_file_name).pages
   pdf = PDF::Reader.new(intput_file_name)
 
@@ -93,10 +108,12 @@ def main()
   routines << "LAST PAGE"
 
   # desired routine
-  wanted_routine = user_input()
+  # wanted_routine = user_input()
 
-  # saving the wanted routine
-  file_saver(pages, routines, wanted_routine)
+  # saving the wanted routine if wanted by one only
+  # file_saver(pages, routines, wanted_routine)
+
+  all_routines_saver(pages, routines)
 end
 
 main()
