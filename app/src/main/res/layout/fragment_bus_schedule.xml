@@ -16,7 +16,7 @@
         app:iss_period="1000"
         app:iss_selected_dot="@drawable/default_selected_dot"
         app:iss_text_align="CENTER"
-        app:iss_title_background="@color/primary_green"
+        app:iss_title_background="@color/custom_green_primary"
         app:iss_unselected_dot="@drawable/default_unselected_dot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

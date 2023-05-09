@@ -183,8 +183,6 @@ happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Adapter
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Adapter/BugReportAdapter.kt,6\b\6b692c11515503e696927c21a385681acfec42c6
 •
 eapp/src/main/java/com/example/homepage/features/homeTab/courseTab/YouTubeVideo/YouTubeVideoAdapter.kt,3\4\3492be3f815f52f7d835743aec6e8cef2387200c
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 j
 :app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 ‹
@@ -219,8 +217,8 @@ Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/YouTubeVideoVie
 eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherModel/teacherViewModel.kt,b\d\bd5faadd90f770f3c657d3202ed80066696ced0a
 ‘
 aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/DepartmentChooserFragment.kt,5\9\593bf742d844e0b46aba57382f87ec5e2014eb5c
-{
-Kapp/src/test/java/com/example/homepage/loginSignup/EmailPasswordTestData.kt,8\1\81cc52ab5891162de0679b7eecbcabe2606efc04
+p
+@app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 „

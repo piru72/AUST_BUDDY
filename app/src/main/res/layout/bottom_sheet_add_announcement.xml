@@ -10,7 +10,7 @@
         android:layout_height="5dp"
         android:layout_gravity="center"
         android:layout_marginTop="10sp"
-        android:background="@color/primary_green">
+        android:background="@color/custom_green_primary">
 
     </LinearLayout>
 
