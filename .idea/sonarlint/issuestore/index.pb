@@ -223,3 +223,5 @@ p
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 „
 Tapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/TeacherViewHolder.kt,4\b\4b3bbace5acb735a81b6b0056312056549eb9637
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
