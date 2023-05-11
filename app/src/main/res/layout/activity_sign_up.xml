@@ -17,7 +17,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/users_email"
-                style="@style/materialEmailInput" />
+                style="@style/materialEmailInput"
+                android:minHeight="48dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -30,7 +31,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordType"
-                style="@style/materialPasswordInput" />
+                style="@style/materialPasswordInput"
+                android:minHeight="48dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,13 +45,15 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordRetype"
-                style="@style/materialPasswordInput" />
+                style="@style/materialPasswordInput"
+                android:minHeight="48dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/signupBtn"
-            style="@style/onBoardingButton"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:layout_width="match_parent"
             android:text="@string/sign_up"
             android:textSize="20sp" />
 

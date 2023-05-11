@@ -13,7 +13,7 @@
 
         <Button
             android:id="@+id/get_started"
-            style="@style/onBoardingButton"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
             android:text="@string/get_started_welcome" />
     </LinearLayout>
 </LinearLayout>

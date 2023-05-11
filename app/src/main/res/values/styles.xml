@@ -124,7 +124,7 @@
 
     </style>
 
-    <style name="onBoardingButton" parent="Widget.Material3.Button.ElevatedButton">
+    <style name="wrapWrapDarkElevatedButtonWithPadding" parent="Widget.Material3.Button.ElevatedButton">
 
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -132,13 +132,19 @@
         <item name="android:paddingStart">30sp</item>
         <item name="android:paddingEnd">30sp</item>
 
+    </style>
+
+    <style name="wrapWrapPrimaryElevatedButtonWithoutPadding" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="android:backgroundTint">@color/custom_green_primary</item>
+        <item name="android:paddingStart">0sp</item>
+        <item name="android:paddingEnd">0sp</item>
 
     </style>
 
     <style name="materialTextInput">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">20sp</item>
+
         <item name="android:background">@color/background_color_50</item>
         <item name="android:focusable">true</item>
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -286,14 +292,14 @@
     </style>
 
 
-    <style name="buttonStylePage" parent="layoutMatchWrap">
+    <style name="buttonStylePage" parent="wrapWrapPrimaryElevatedButtonWithoutPadding">
 
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:background">@color/background_color_50</item>
         <item name="android:drawableStart">@drawable/ic_baseline_edit_24</item>
-        <item name="android:drawableTint">#000</item>
         <item name="android:elevation">10dp</item>
         <item name="android:focusable">true</item>
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -301,8 +307,6 @@
         <item name="android:paddingStart">10dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:visibility">visible</item>
-
-
     </style>
 
 

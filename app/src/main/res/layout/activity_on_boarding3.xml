@@ -18,7 +18,7 @@
 
         <Button
             android:id="@+id/onboarding_3_button"
-            style="@style/onBoardingButton"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
             android:text="@string/get_in" />
     </LinearLayout>
 

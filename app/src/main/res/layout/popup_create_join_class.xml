@@ -3,16 +3,20 @@
     android:id="@+id/popup_create_join_class"
     style="@style/backgroundPopup">
 
-    <LinearLayout style="@style/layoutMatchWrapHorizontal">
+    <LinearLayout style="@style/layoutMatchWrapHorizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
 
         <Button
             android:id="@+id/joinButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:layout_weight="1"
             android:text="@string/join" />
 
         <Button
             android:id="@+id/createButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:layout_weight="1"
             android:text="@string/create" />
 
     </LinearLayout>
