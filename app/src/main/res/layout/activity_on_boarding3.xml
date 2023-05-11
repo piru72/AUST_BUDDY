@@ -19,7 +19,7 @@
         <Button
             android:id="@+id/onboarding_3_button"
             style="@style/onBoardingButton"
-            android:text="@string/finish" />
+            android:text="@string/get_in" />
     </LinearLayout>
 
 </LinearLayout>

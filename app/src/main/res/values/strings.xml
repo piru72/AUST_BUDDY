@@ -346,6 +346,8 @@
     <string name="shortCe">CE</string>
     <string name="shortEee">EEE</string>
     <string name="shortAs">as</string>
+    <string name="continue_string">Continue</string>
+    <string name="get_in">Get In</string>
 
 
 </resources>

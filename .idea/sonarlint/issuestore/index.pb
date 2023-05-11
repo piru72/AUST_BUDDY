@@ -219,9 +219,5 @@ eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherMod
 aapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/DepartmentChooserFragment.kt,5\9\593bf742d844e0b46aba57382f87ec5e2014eb5c
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 „
 Tapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/TeacherViewHolder.kt,4\b\4b3bbace5acb735a81b6b0056312056549eb9637
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e

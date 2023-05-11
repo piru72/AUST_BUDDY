@@ -124,8 +124,14 @@
 
     </style>
 
-    <style name="onBoardingButton" parent="buttonStylePage">
-        <item name="android:layout_margin">20sp</item>
+    <style name="onBoardingButton" parent="Widget.Material3.Button.ElevatedButton">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/custom_green_dark</item>
+        <item name="android:paddingStart">30sp</item>
+        <item name="android:paddingEnd">30sp</item>
+
 
     </style>
 

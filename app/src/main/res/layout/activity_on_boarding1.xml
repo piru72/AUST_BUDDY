@@ -25,8 +25,14 @@
 
         <Button
             android:id="@+id/onboard_1_button"
-            style="@style/onBoardingButton"
-            android:text="@string/next" />
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingStart="30sp"
+            android:paddingEnd="30sp"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:backgroundTint="@color/custom_green_dark"
+
+            android:text="@string/continue_string" />
     </LinearLayout>
 
 </LinearLayout>
