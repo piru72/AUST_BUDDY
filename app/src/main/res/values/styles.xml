@@ -49,7 +49,7 @@
 
     <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapWrap">
         <item name="android:layout_gravity">center</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
@@ -141,7 +141,7 @@
         <item name="android:backgroundTint">@color/custom_green_dark</item>
         <item name="android:paddingStart">30sp</item>
         <item name="android:paddingEnd">30sp</item>
-        <item name = "android:fontFamily"> @font/poppins_medium</item>
+        <item name = "android:fontFamily"> @font/open_sans</item>
 
     </style>
 
