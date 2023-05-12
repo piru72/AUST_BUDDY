@@ -7,18 +7,28 @@
 
         <ImageView
             style="@style/onBoardingImage"
-            app:srcCompat="@drawable/onboarding_3"
+            app:srcCompat="@drawable/other_onboarding3"
             android:contentDescription="@string/on_boarding_image"/>
+
+        <TextView
+            android:id="@+id/onboarding_3_title"
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:text="@string/other_features"
+            android:textSize="30sp"
+            android:textFontWeight="600"/>
 
         <TextView
             android:id="@+id/onboarding_3_para"
             style="@style/textViewWrapWrapPoppinsBlack"
             android:padding="20dp"
+            android:textAlignment="center"
             android:text="@string/more_features" />
 
         <Button
             android:id="@+id/onboarding_3_button"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:text="@string/get_in" />
     </LinearLayout>
 
