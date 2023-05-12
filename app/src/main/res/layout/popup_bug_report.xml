@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bug_report_popup"
-    style="@style/backgroundPopup">
+    style="@style/backgroundPopup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bug_report">
 
-    <EditText
-        android:id="@+id/BugDescriptionPop"
-        style="@style/normalTextInput"
-        android:autofillHints=""
-        android:hint="@string/details_about_the_bug_you_found_thanks" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/BugDescriptionPop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <LinearLayout style="@style/layoutMatchWrapHorizontal">

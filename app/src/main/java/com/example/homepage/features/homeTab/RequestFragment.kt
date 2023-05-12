@@ -12,9 +12,9 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
-import com.example.homepage.utils.models.BugReportsData
 import com.example.homepage.databinding.FragmentRequestBinding
 import com.example.homepage.utils.helpers.ReplaceFragment
+import com.example.homepage.utils.models.BugReportsData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -57,7 +57,7 @@ class RequestFragment : ReplaceFragment() {
 
             val popupWindow = PopupWindow(
                 rootLayout,
-                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT, true
             )
 

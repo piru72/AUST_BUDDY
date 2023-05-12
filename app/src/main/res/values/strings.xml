@@ -348,6 +348,8 @@
     <string name="shortAs">as</string>
     <string name="continue_string">Continue</string>
     <string name="get_in">Get In</string>
+    <string name="there_is_a_bug_in_login">There is a bug in login...</string>
+    <string name="bug_report">Bug Report</string>
 
 
 </resources>

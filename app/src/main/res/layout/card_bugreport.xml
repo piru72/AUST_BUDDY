@@ -12,12 +12,12 @@
 
             <Button
                 android:id="@+id/showReportersDetailsButton"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStylePopupLeft"
                 android:text="@string/close" />
 
             <Button
                 android:id="@+id/deleteBugReportButton"
-                style="@style/buttonStylePopup"
+                style="@style/buttonStylePopupLeft"
                 android:text="@string/done" />
 
         </LinearLayout>
