@@ -25,13 +25,16 @@
         <Button
             android:id="@+id/CloseButton"
             style="@style/buttonStyleWrapWrapText"
-            android:layout_weight="1"
+            android:layout_weight="6"
+            android:textAlignment="textStart"
+            android:paddingStart="30sp"
             android:text="@string/close" />
 
         <Button
-            android:id="@+id/sendButton"
-            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            style="@style/CustomButtonStyle"
             android:layout_weight="1"
+            android:id="@+id/sendButton"
+            android:backgroundTint = "@color/custom_green_primary"
             android:text="@string/send" />
 
 

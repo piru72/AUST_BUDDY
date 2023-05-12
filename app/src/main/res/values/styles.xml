@@ -124,6 +124,16 @@
 
     </style>
 
+    <style name="CustomButtonStyle" parent="@style/Widget.Material3.Button.ElevatedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/custom_green_dark</item>
+        <item name="android:paddingStart">30sp</item>
+        <item name="android:paddingEnd">30sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+
     <style name="wrapWrapDarkElevatedButtonWithPadding" parent="Widget.Material3.Button.ElevatedButton">
 
         <item name="android:layout_width">wrap_content</item>
