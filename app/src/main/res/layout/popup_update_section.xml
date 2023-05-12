@@ -17,12 +17,14 @@
 
             <Button
                 android:id="@+id/btnCancel"
-                style="@style/buttonStyleMaterialOutlined"
+                android:layout_weight="1"
+                style="@style/buttonStyleWrapWrapText"
                 android:text="@string/cancel" />
 
             <Button
                 android:id="@+id/btnUpdateNow"
-                style="@style/buttonStyleMaterialOutlined"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:layout_weight="1"
                 android:text="@string/update_now" />
 
 

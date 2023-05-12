@@ -22,12 +22,14 @@
 
         <Button
             android:id="@+id/websiteCloseButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/buttonStyleWrapWrapText"
+            android:layout_weight="1"
             android:text="@string/close" />
 
         <Button
             android:id="@+id/websiteAddButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:layout_weight="1"
             android:text="@string/add" />
 
 

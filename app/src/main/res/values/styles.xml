@@ -131,14 +131,32 @@
         <item name="android:backgroundTint">@color/custom_green_dark</item>
         <item name="android:paddingStart">30sp</item>
         <item name="android:paddingEnd">30sp</item>
+        <item name = "android:fontFamily"> @font/poppins_medium</item>
 
     </style>
 
-    <style name="wrapWrapPrimaryElevatedButtonWithoutPadding" parent="Widget.Material3.Button.ElevatedButton">
+    <style name="buttonStyleWrapWrapPrimaryElevatedNoPadding" parent="Widget.Material3.Button.ElevatedButton">
         <item name="android:backgroundTint">@color/custom_green_primary</item>
         <item name="android:paddingStart">0sp</item>
         <item name="android:paddingEnd">0sp</item>
 
+    </style>
+
+    <style name="buttonStyleWrapWrapText" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">0sp</item>
+        <item name="android:paddingEnd">0sp</item>
+        <item name = "android:textColor"> @color/custom_black</item>
+        <item name = "android:fontFamily"> @font/poppins_medium</item>
+    </style>
+
+    <style name="buttonStylePopupLeft" parent="buttonStyleWrapWrapPrimaryElevatedNoPadding">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name = "android:textColor"> @color/custom_black</item>
+        <item name = "android:fontFamily"> @font/poppins_medium</item>
+        <item name = "android:layout_weight"> 1 </item>
     </style>
 
     <style name="materialTextInput">
@@ -292,7 +310,7 @@
     </style>
 
 
-    <style name="buttonStylePage" parent="wrapWrapPrimaryElevatedButtonWithoutPadding">
+    <style name="buttonStylePage" parent="buttonStyleWrapWrapPrimaryElevatedNoPadding">
 
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

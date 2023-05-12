@@ -14,14 +14,18 @@
     <LinearLayout style="@style/layoutMatchWrapHorizontal">
 
         <Button
-            android:id="@+id/cancelButton"
-            style="@style/buttonStyleMaterialOutlined"
-            android:text="@string/cancel" />
+            android:id="@+id/leaveButton"
+            style="@style/buttonStyleWrapWrapText"
+            android:layout_weight="1"
+            android:text="@string/leave"
+            />
 
         <Button
-            android:id="@+id/leaveButton"
-            style="@style/buttonStyleMaterialOutlined"
-            android:text="@string/leave" />
+
+            android:id="@+id/cancelButton"
+            style="@style/buttonStylePopupLeft"
+            android:layout_weight="1"
+            android:text="@string/cancel"/>
 
 
     </LinearLayout>

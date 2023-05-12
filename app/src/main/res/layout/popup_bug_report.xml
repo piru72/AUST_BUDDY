@@ -15,12 +15,14 @@
 
         <Button
             android:id="@+id/CloseButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/buttonStyleWrapWrapText"
+            android:layout_weight="1"
             android:text="@string/close" />
 
         <Button
             android:id="@+id/sendButton"
-            style="@style/buttonStyleMaterialOutlined"
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:layout_weight="1"
             android:text="@string/send" />
 
 
