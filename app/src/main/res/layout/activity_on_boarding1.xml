@@ -23,10 +23,22 @@
             android:text="@string/onboard_1_para"
             android:textAlignment="center" />
 
+<!--        <Button-->
+<!--            android:id="@+id/onboard_1_button"-->
+<!--            style="@style/wrapWrapDarkElevatedButtonWithPadding"-->
+<!--            android:text="@string/continue_string" />-->
+
         <Button
-            android:id="@+id/onboard_1_button"
-            style="@style/wrapWrapDarkElevatedButtonWithPadding"
-            android:text="@string/continue_string" />
+            android:layout_width="150dp"
+            android:layout_height="44dp"
+            android:backgroundTint="@color/custom_green_dark"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:fontFamily=""
+            >
+
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

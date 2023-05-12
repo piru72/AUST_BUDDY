@@ -117,9 +117,9 @@
 
     <style name="onBoardingImage">
 
-        <item name="android:layout_width">413dp</item>
-        <item name="android:layout_height">382dp</item>
-        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">210dp</item>
+        <item name="android:layout_marginTop">-6dp</item>
         <item name="android:contentDescription">On Boarding Images</item>
 
     </style>
