@@ -14,7 +14,8 @@
             android:id="@+id/onboarding_3_title"
             style="@style/textViewWrapWrapPoppinsBlack"
             android:text="@string/calculate_cgpa"
-            android:textSize="34sp" />
+            android:textSize="30sp"
+            android:textFontWeight="600"/>
 
         <TextView
             android:id="@+id/onboarding_3_para"
@@ -26,6 +27,8 @@
         <Button
             android:id="@+id/onboarding_2_button"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:text="@string/continue_string" />
     </LinearLayout>
 
