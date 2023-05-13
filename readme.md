@@ -11,6 +11,7 @@
 <a target="_blank" href="https://github.com/piru72/AUST_BUDDY/stargazers"><img src="https://img.shields.io/github/stars/piru72/AUST_BUDDY" alt="stars"/></a>
 <a target="_blank" href="https://github.com/piru72/AUST_BUDDY/issues"><img src="https://img.shields.io/github/issues/piru72/AUST_BUDDY" alt="issues"/></a>
 
+## [Project Proposal](https://docs.google.com/document/d/12CXztwjrIJd7QOpV3nL1Zi-9QiyS5IiKwkkKdMAgng0/edit?usp=sharing)
 
 ## Contributors ✨
 
@@ -21,7 +22,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/piru2"><img src="https://avatars.githubusercontent.com/u/49322945?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/piru2"><img src="https://avatars.githubusercontent.com/u/63257806?v=4" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
+        <td align="center"><a href="https://github.com/piru2"><img src="https://avatars.githubusercontent.com/u/49322945?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
+      <td align="center"><a href="https://github.com/piru2"><img src="https://avatars.githubusercontent.com/u/49322945?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
     
     
   </tr>
