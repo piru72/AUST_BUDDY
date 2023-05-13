@@ -7,14 +7,15 @@
 
         <ImageView
             style="@style/onBoardingImage"
-            app:srcCompat="@drawable/onboarding_1"
-            android:contentDescription="@string/on_boarding_image"/>
+            android:contentDescription="@string/on_boarding_image"
+            app:srcCompat="@drawable/on_book" />
 
         <TextView
             android:id="@+id/on_boarding_1_title"
             style="@style/textViewWrapWrapPoppinsBlack"
             android:text="@string/find_your_notes"
-            android:textSize="34sp" />
+            android:textSize="30sp"
+            android:textFontWeight="600"/>
 
         <TextView
             android:id="@+id/onboard_1_para"
@@ -26,7 +27,22 @@
         <Button
             android:id="@+id/onboard_1_button"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
-            android:text="@string/continue_string" />
+            android:text="@string/continue_string"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:backgroundTint="@color/custom_green_dark"-->
+<!--            android:fontFamily="@font/open_sans"-->
+<!--            android:text="Continue"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </Button>-->
     </LinearLayout>
 
 </LinearLayout>

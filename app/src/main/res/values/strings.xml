@@ -3,9 +3,10 @@
     <string name="todo">TODO</string>
     <string name="next">Next</string>
     <string name="onboard_1_para">Finding notes and exam questions can be pretty hectic sometimes. No more worries about those find your notes organized and top the exam.</string>
-    <string name="find_your_notes">FIND YOUR NOTES</string>
+    <string name="find_your_notes">Find Your Notes</string>
     <string name="onboarding_2_para">No more waiting for the university to publish your result calculate your own CGPA at ease and pave your way to the success.</string>
-    <string name="calculate_cgpa">CALCULATE CGPA</string>
+    <string name="calculate_cgpa">Calculate CGPA</string>
+    <string name="other_features">Other Features</string>
 
     <string name="hodo">hodo</string>
     <string name="nothing_is_perfect">NOTHING IS PERFECT</string>
@@ -261,7 +262,8 @@
     <string name="watch_video">Watch Video</string>
     <string name="video_title">Video Title</string>
     <string name="add_to_favourite">Add to favourite</string>
-    <string name="more_features">Other exciting things you can find \n1. Important link \n2. Bus Schedule \n3.Teachers details and create favourite list \n4. Save bookmark of favourite websites\n5. Create or join groups \n6. Post quiz schedule in group</string>
+    <string name="more_features">Improve your learning journey with our application’s features. Stay organized with links, teacher details, and bus schedules, and collaborate with
+classmates in groups.</string>
     <string name="sign_in">Sign in</string>
     <string name="on_boarding_image">On Boarding Image</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
