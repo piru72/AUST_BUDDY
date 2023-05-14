@@ -14,7 +14,7 @@
             android:id="@+id/images"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:contentDescription="@string/routine_image"
             android:rotation="90"
             android:src="@drawable/routine" />
