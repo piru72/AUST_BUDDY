@@ -8,7 +8,7 @@
         <ImageView
             style="@style/onBoardingImage"
             android:contentDescription="@string/on_boarding_image"
-            app:srcCompat="@drawable/onboarding_1" />
+            app:srcCompat="@drawable/image_onboarding_1" />
 
         <TextView
             android:id="@+id/on_boarding_1_title"
