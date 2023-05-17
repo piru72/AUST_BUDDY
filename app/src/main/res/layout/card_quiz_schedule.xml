@@ -32,16 +32,16 @@
 
             </LinearLayout>
 
-            <LinearLayout style="@style/layoutMatchMatchVertical">
+            <LinearLayout style="@style/layoutMatchWrapVertical">
 
                 <Button
                     android:id="@+id/btnDeleteSchedule"
-                    style="@style/buttonStyleBasic"
+                    style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
                     android:text="@string/done" />
 
                 <Button
                     android:id="@+id/btnEditSchedule"
-                    style="@style/buttonStyleBasic"
+                    style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
                     android:text="@string/edit" />
             </LinearLayout>
 
