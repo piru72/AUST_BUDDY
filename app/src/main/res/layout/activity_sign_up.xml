@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.onBoarding.authentication.SignUpActivity">
 
-    <LinearLayout style="@style/layoutMatchMatchVertical"
+    <LinearLayout
+        style="@style/layoutMatchMatchVertical"
         android:padding="30sp">
 
         <ImageView
@@ -14,40 +15,35 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signup"
-            style="@style/layoutMatchWrapHorizontal">
+            style="@style/materialEmailInput">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/users_email"
-                style="@style/materialEmailInput"
-                android:minHeight="48dp" />
+                style="@style/layoutMatchWrap" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
 
             android:id="@+id/password_signup"
-            style="@style/layoutMatchWrapHorizontal"
-            app:passwordToggleEnabled="true">
+            style="@style/materialPasswordInput">
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordType"
-                style="@style/materialPasswordInput"
-                android:minHeight="48dp" />
+                style="@style/layoutMatchWrap" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
 
             android:id="@+id/password_signup_retype"
-            style="@style/layoutMatchWrapHorizontal"
-            app:passwordToggleEnabled="true">
+            style="@style/materialPasswordInput">
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordRetype"
-                style="@style/materialPasswordInput"
-                android:minHeight="48dp" />
+                style="@style/layoutMatchWrap" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

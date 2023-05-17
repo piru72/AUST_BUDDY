@@ -352,6 +352,8 @@ classmates in groups.</string>
     <string name="get_in">Get In</string>
     <string name="there_is_a_bug_in_login">There is a bug in login...</string>
     <string name="bug_report">Bug Report</string>
+    <string name="label" />
+    <string name="password">Password</string>
 
 
 </resources>

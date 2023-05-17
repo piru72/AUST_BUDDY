@@ -208,18 +208,27 @@
     </style>
 
 
-    <style name="materialPasswordInput" parent="materialTextInput">
+
+
+    <style name="materialTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeColor">@color/custom_green_primary</item>
+        <item name="errorEnabled">true</item>
+        <item name="hintTextColor">@color/custom_green_primary</item>
+    </style>
+
+    <style name="materialPasswordInput" parent="materialTextInputLayout">
 
         <item name="android:hint">@string/type_your_password</item>
         <item name="android:inputType">textPassword</item>
+        <item name="endIconMode">password_toggle</item>
 
     </style>
 
-    <style name="materialEmailInput" parent="materialTextInput">
-
+    <style name="materialEmailInput" parent="materialTextInputLayout">
         <item name="android:hint">@string/type_your_email</item>
         <item name="android:inputType">textEmailAddress</item>
-
     </style>
 
 
