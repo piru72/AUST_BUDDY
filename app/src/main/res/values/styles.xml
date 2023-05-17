@@ -145,6 +145,17 @@
 
     </style>
 
+    <style name="wrapWrapPrimaryElevatedButtonWithPadding" parent="Widget.Material3.Button.ElevatedButton">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/custom_green_primary</item>
+        <item name="android:paddingStart">30sp</item>
+        <item name="android:paddingEnd">30sp</item>
+        <item name = "android:fontFamily"> @font/open_sans</item>
+
+    </style>
+
     <style name="buttonStyleWrapWrapPrimaryElevatedNoPadding" parent="Widget.Material3.Button.ElevatedButton">
         <item name="android:backgroundTint">@color/custom_green_primary</item>
         <item name="android:paddingStart">0sp</item>

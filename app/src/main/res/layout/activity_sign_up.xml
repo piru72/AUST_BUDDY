@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.onBoarding.authentication.SignUpActivity">
 
-    <LinearLayout style="@style/layoutMatchMatchVertical">
+    <LinearLayout style="@style/layoutMatchMatchVertical"
+        android:padding="30sp">
 
         <ImageView
             style="@style/onBoardingImage"
@@ -52,7 +53,7 @@
 
         <Button
             android:id="@+id/signupBtn"
-            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
             android:layout_width="match_parent"
             android:text="@string/sign_up"
             android:textSize="20sp" />

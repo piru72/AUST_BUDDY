@@ -6,6 +6,7 @@
 
     <LinearLayout
         android:id="@+id/activity_sign_in"
+        android:padding="30sp"
         style="@style/layoutMatchMatchVertical">
 
         <ImageView
@@ -44,7 +45,7 @@
 
         <Button
             android:id="@+id/signinBtn"
-            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
             android:layout_width="match_parent"
             android:text="@string/sign_in"
             android:textSize="20sp" />
