@@ -14,7 +14,6 @@
         <ImageView
             style="@style/onBoardingImage"
             android:contentDescription="@string/on_boarding_image"
-            app:srcCompat="@drawable/on_book"
             />
 
         <TextView

@@ -21,14 +21,18 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/btn_edit_profile"
+                android:id="@+id/btnEditProfile"
                 style="@style/buttonStylePage"
-                android:text="@string/my_profile" />
+                android:text="@string/my_profile"
+                android:drawableLeft="@drawable/person"
+                android:drawableRight="@drawable/right_svg">
+            </Button>
 
             <Button
                 android:id="@+id/btn_privacy"
                 style="@style/buttonStylePage"
-                android:text="@string/privacy_policy" />
+                android:text="@string/privacy_policy"
+                />
 
             <Button
                 android:id="@+id/btn_settings"
