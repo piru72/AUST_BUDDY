@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/layoutMatchMatch"
-    android:background="@drawable/onboarding_vector"
-    android:layout_height="500dp"
-    >
-
-
+    style="@style/layoutMatchMatch">
 
     <LinearLayout style="@style/layoutOnBoardingMain">
-
 
         <ImageView
             style="@style/onBoardingImage"
             android:contentDescription="@string/on_boarding_image"
-            />
+            app:srcCompat="@drawable/image_onboarding_1" />
 
         <TextView
             android:id="@+id/on_boarding_1_title"
@@ -38,7 +32,17 @@
             android:textSize="18sp"
             />
 
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:backgroundTint="@color/custom_green_dark"-->
+<!--            android:fontFamily="@font/open_sans"-->
+<!--            android:text="Continue"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold">-->
 
+<!--        </Button>-->
     </LinearLayout>
 
 </LinearLayout>

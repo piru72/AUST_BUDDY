@@ -6,7 +6,8 @@
 
     <LinearLayout
         android:id="@+id/activity_sign_in"
-        style="@style/layoutMatchMatchVertical">
+        style="@style/layoutMatchMatchVertical"
+        android:padding="30sp">
 
         <ImageView
             style="@style/onBoardingImage"
@@ -15,23 +16,22 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_signin"
-            style="@style/layoutMatchWrapHorizontal">
+            style="@style/materialEmailInput">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersEmail"
-                style="@style/materialEmailInput" />
+                style="@style/layoutMatchWrap" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-
             android:id="@+id/password_signin"
-            style="@style/layoutMatchWrapHorizontal"
-            app:passwordToggleEnabled="true">
+            style="@style/materialPasswordInput">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
-                style="@style/materialPasswordInput" />
+                style="@style/layoutMatchWrap"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,11 +40,12 @@
             style="@style/textViewWrapWrapPoppinsBlack"
             android:layout_width="match_parent"
             android:text="@string/forgot_password"
+            android:textColor="@color/custom_green_primary"
             android:textAlignment="textEnd" />
 
         <Button
             android:id="@+id/signinBtn"
-            style="@style/wrapWrapDarkElevatedButtonWithPadding"
+            style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
             android:layout_width="match_parent"
             android:text="@string/sign_in"
             android:textSize="20sp" />
