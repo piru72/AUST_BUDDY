@@ -20,44 +20,52 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
             <Button
                 android:id="@+id/btnEditProfile"
                 style="@style/buttonStylePage"
                 android:text="@string/my_profile"
-                android:drawableLeft="@drawable/person"
-                android:drawableRight="@drawable/right_svg">
+                app:icon="@drawable/person">
             </Button>
+
+            <Button
+                android:id="@+id/btn_settings"
+                style="@style/buttonStylePage"
+                android:text="@string/settings"
+                app:icon="@drawable/settings"/>
+
+
+            <Button
+                android:id="@+id/btn_invite_friend"
+                style="@style/buttonStylePage"
+                android:text="@string/invite_a_friend"
+                app:icon="@drawable/invite"/>
 
             <Button
                 android:id="@+id/btn_privacy"
                 style="@style/buttonStylePage"
                 android:text="@string/privacy_policy"
+                app:icon="@drawable/policy"
                 />
-
-            <Button
-                android:id="@+id/btn_settings"
-                style="@style/buttonStylePage"
-                android:text="@string/settings" />
-
-            <Button
-                android:id="@+id/btn_invite_friend"
-                style="@style/buttonStylePage"
-                android:text="@string/invite_a_friend" />
-
-            <Button
-                android:id="@+id/btn_log_out"
-                style="@style/buttonStylePage"
-                android:text="@string/log_out" />
 
             <Button
                 android:id="@+id/btn_about_us"
                 style="@style/buttonStylePage"
-                android:text="@string/about_us" />
+                android:text="@string/about_us"
+                app:icon="@drawable/about_us"/>
 
+            <Button
+                android:id="@+id/btn_log_out"
+                style="@style/buttonStylePage"
+                app:icon="@drawable/logout"
+                android:textColor="@color/custom_red"
+                app:iconTint="@color/custom_red"
+                android:text="@string/log_out" />
 
             <Button
                 android:id="@+id/btn_admin_panel"
                 style="@style/buttonStylePage"
+                app:icon="@drawable/admin"
                 android:text="@string/admin_dash_board"
                 android:visibility="invisible" />
 
