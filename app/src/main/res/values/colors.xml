@@ -29,4 +29,7 @@
     <color name="custom_ash">#A7A7A7</color>
     <color name="custom_black">#121212</color>
 
+    <color name="black12">#121212</color>
+    <color name="profile_btn">#EDEDED</color>
+
 </resources>
