@@ -312,11 +312,10 @@
 
     <style name="cardViewStyleImageContainer">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_gravity">start</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
         <item name="android:focusable">true</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:linksClickable">true</item>

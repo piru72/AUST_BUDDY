@@ -30,6 +30,8 @@
     <color name="custom_black">#121212</color>
 
     <color name="black12">#121212</color>
+    <color name="off_white">#646464</color>
+    <color name="favorite_white">#D9D9D9</color>
     <color name="profile_btn">#EDEDED</color>
 
 </resources>
