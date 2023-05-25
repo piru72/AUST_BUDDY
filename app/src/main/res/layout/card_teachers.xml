@@ -1,107 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/pure_white"
     style="@style/backgroundCard">
 
 
     <LinearLayout
-
         style="@style/layoutMatchWrapHorizontal"
-        android:padding="10dp">
+        android:padding="0dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+
             android:id="@+id/images"
-            style="@style/cardViewStyleImageContainer"
-            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_width="110dp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
+            android:layout_gravity="center"
+            app:civ_border_width="2.5dp"
+            app:civ_border_color="@color/black12"
+            android:src="@drawable/testing_image"/>
 
-            android:src="@mipmap/ic_launcher" />
 
-        <LinearLayout style="@style/layoutWrapWrapVertical">
+        <LinearLayout style="@style/layoutWrapWrapVertical"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_1sdp">
 
             <TextView
-                android:id="@+id/tvfirstName"
                 style="@style/textViewWrapWrapPoppinsBlack"
+                android:id="@+id/tvfirstName"
                 android:text="@string/teacher_name"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/open_sans"
+                android:textSize="16sp"
+                android:textFontWeight="600"
+                android:layout_gravity="start"
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvDesignation"
                 style="@style/textViewWrapWrapPoppinsBlack18"
-                android:text="@string/assistant_professor" />
+                android:id="@+id/tvDesignation"
+                android:text="@string/assistant_professor"
+                android:fontFamily="@font/open_sans"
+                android:textSize="12sp"
+                android:textFontWeight="600"
+                android:layout_gravity="start"
+                android:textColor="@color/off_white"/>
 
-            <LinearLayout style="@style/layoutMatchMatchHorizontal">
+            <TextView
+                style="@style/textViewWrapWrapPoppinsBlack18"
+                android:text="CSE"
+                android:fontFamily="@font/open_sans"
+                android:textSize="12sp"
+                android:textFontWeight="600"
+                android:layout_gravity="start"
+                android:textColor="@color/off_white"/>
+
+
+            <LinearLayout
+                style="@style/layoutMatchWrapHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="?attr/materialIconButtonStyle"
+                    android:id="@+id/btnCallTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/call"
+                    android:paddingStart="-5dp"
+                    android:paddingEnd="10dp"
+                    app:iconTint="@color/custom_green_primary"/>
+
+                <Button
+                    style="?attr/materialIconButtonStyle"
+                    android:id="@+id/btnEmailTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/mail"
+                    app:iconTint="@color/custom_green_primary"/>
+
+                <Button
+                    style="?attr/materialIconButtonStyle"
+                    android:id="@+id/btnShareContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/share"
+                    app:iconTint="@color/custom_green_primary"/>
 
 
             </LinearLayout>
-
-            <com.google.android.material.button.MaterialButtonToggleGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-            </com.google.android.material.button.MaterialButtonToggleGroup>
-
-
-
         </LinearLayout>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <Button
+            style="?attr/materialIconButtonStyle"
+            android:id="@+id/btnFavouriteContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/favorite"
+            android:layout_gravity="end"
+            app:iconGravity="end"
+            app:iconTint="@color/favorite_white"
+            android:gravity="end" />
 
-        <com.google.android.material.button.MaterialButtonToggleGroup style="@style/layoutMatchMatchHorizontal">
-
-            <Button
-                android:id="@+id/btnCallTeacher"
-                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:icon="@drawable/ic_baseline_call_24" />
-
-            <Button
-                android:id="@+id/btnEmailTeacher"
-                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:icon="@drawable/ic_baseline_email_24" />
-
-            <Button
-                android:id="@+id/btnShareContact"
-                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:icon="@drawable/ic_baseline_share_24" />
-
-            <Button
-                android:id="@+id/btnFavouriteContact"
-                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:icon="@drawable/ic_baseline_favorite_24" />
-
-
-        </com.google.android.material.button.MaterialButtonToggleGroup>
 
     </LinearLayout>
 
+
     <LinearLayout
+
+
         android:id="@+id/adminControlLayout"
         style="@style/layoutMatchMatchHorizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
             android:id="@+id/btnDeclineTeacher"
-            style="@style/buttonStyleCard"
-            android:text="@string/decline" />
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingEnd="50sp"
+            android:paddingStart="50sp"
+            android:text="@string/decline"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
+            style="@style/wrapWrapDarkElevatedButtonWithPadding"
             android:id="@+id/btnApproveTeacher"
-            style="@style/buttonStyleCard"
-            android:text="@string/approve" />
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="40dp"
+            android:paddingEnd="50sp"
+            android:paddingStart="50sp"
+            android:text="@string/approve"/>
+
+
     </LinearLayout>
+
 
 </LinearLayout>
