@@ -8,10 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.homepage.utils.models.Admin
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.features.onBoarding.authentication.SignInActivity
+import com.example.homepage.network.cache.SharedPreference
 import com.example.homepage.utils.helpers.ReplaceFragment
+import com.example.homepage.utils.models.Admin
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -24,6 +25,8 @@ class ProfileFragment : ReplaceFragment() {
 
     private var fragmentBinding: FragmentProfileBinding? = null
     private val viewBinding get() = fragmentBinding!!
+
+    private var isAdmin = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,24 +41,35 @@ class ProfileFragment : ReplaceFragment() {
 
         val path = "/admin-list/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
-        val postListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val post = dataSnapshot.getValue<Admin>()
+        // Creating a shared Preference object to cache the data into the local storage and instead of doing a network call each time we are checking the
+        val sharePref = SharedPreference();
+        isAdmin = context?.let { sharePref.getAdminDetailsFromCache(it) }.toString()
 
-                if (post != null) {
-                    userEmail = post.email.toString()
-                    if (userEmail == email) {
-                        viewBinding.btnAdminPanel.visibility = View.VISIBLE
+        // if the sharedPreference doesn't have a value stored then we are
+        if (isAdmin == "")
+        {
+            //makeToast("Fetching from the network")
+            val postListener = object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                    val post = dataSnapshot.getValue<Admin>()
+
+                    if (post != null) {
+                        userEmail = post.email.toString()
+                        if (userEmail == email) {
+                            viewBinding.btnAdminPanel.visibility = View.VISIBLE
+                            context?.let { sharePref.saveAdminDetailsToCache(it,"true") }
+                        }
                     }
                 }
-            }
-            override fun onCancelled(databaseError: DatabaseError) {
+                override fun onCancelled(databaseError: DatabaseError) {
 
-                Toast.makeText(context, "Error loading user data", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error loading user data", Toast.LENGTH_SHORT).show()
+                }
             }
+            databaseReference.addValueEventListener(postListener)
         }
-        databaseReference.addValueEventListener(postListener)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -71,6 +85,9 @@ class ProfileFragment : ReplaceFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (isAdmin == "true")
+            viewBinding.btnAdminPanel.visibility = View.VISIBLE
         viewBinding.btnAdminPanel.setOnClickListener {
             val action = ProfileFragmentDirections.actionNavigationProfileToAdminPanelFragment()
             findNavController().navigate(action)

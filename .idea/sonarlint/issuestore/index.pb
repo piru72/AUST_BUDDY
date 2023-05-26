@@ -29,8 +29,6 @@ Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2
 Zapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddCourseFragment.kt,6\0\609e3d9b1bb2a6176adfffb3742e29e0245b2ba4
 Œ
 \app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddTeachersFragment.kt,4\a\4a1797232fdda795e9b52eb219cd9309fd403d60
-‹
-[app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AdminPanelFragment.kt,d\8\d8d30b1d110e425dd88e5182804f5b786ef3b911
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,7\b\7b22cd73b55fb2f27e150052abd11c3210e6537d
 ™
@@ -63,8 +61,6 @@ happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Model/P
 Papp/src/main/java/com/example/homepage/features/plazaTab/Repo/PlazaRepository.kt,b\f\bf0db52c29b189e950b707b8628b1165c345896e
 €
 Papp/src/main/java/com/example/homepage/features/plazaTab/Model/PlazaViewModel.kt,5\6\5623e7cca9c8c9cdab4e4a5b017c63969b5e0bad
-}
-Mapp/src/main/java/com/example/homepage/features/profileTab/ProfileFragment.kt,5\6\56d39783f5c098659993c14589d152e3b25b34e7
 ‹
 [app/src/main/java/com/example/homepage/features/onBoarding/authentication/SignUpActivity.kt,3\5\35cf6bc3054ead8148f573ec006f477fe393f350
 Œ
@@ -181,8 +177,6 @@ Papp/src/main/java/com/example/homepage/features/plazaTab/Adapter/PlazaAdapter.k
 happ/src/main/java/com/example/homepage/features/plazaTab/plazaDashboard/Adapter/PlazaDashBoardAdapter.kt,9\e\9eda4feb7c7f8d9e2d4993047a9c32e08f39f47f
 •
 eapp/src/main/java/com/example/homepage/features/homeTab/courseTab/YouTubeVideo/YouTubeVideoAdapter.kt,3\4\3492be3f815f52f7d835743aec6e8cef2387200c
-j
-:app/src/main/java/com/example/homepage/app/MainActivity.kt,b\0\b095b5e61e1581b45984cf18384963c482eb9ec5
 ~
 Napp/src/main/java/com/example/homepage/features/groupTab/UserGroupsFragment.kt,6\a\6acca6986c7fb10217a6c4a5d4f0a9128bee4bb0
 Š
@@ -221,11 +215,15 @@ p
 Tapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/TeacherViewHolder.kt,4\b\4b3bbace5acb735a81b6b0056312056549eb9637
 {
 Kapp/src/test/java/com/example/homepage/loginSignup/EmailPasswordTestData.kt,8\1\81cc52ab5891162de0679b7eecbcabe2606efc04
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 z
 Japp/src/main/java/com/example/homepage/features/homeTab/RequestFragment.kt,b\5\b52140b3ab9471b7663419c047be933e4292b833
+w
+G.idea/sonarlint/issuestore/b/5/b52140b3ab9471b7663419c047be933e4292b833,8\7\87faf9a2c0393dc20c22e981f9f671efad360ce0
+
+Q.idea/sonarlint/securityhotspotstore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164,9\b\9b9af03329b517cdd460b1ee115f2bb0ec341883
+w
+G.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164,3\1\31073cf3a12b082ef2fe0f9403916a4db3811c89
+
+Q.idea/sonarlint/securityhotspotstore/b/5/b52140b3ab9471b7663419c047be933e4292b833,a\6\a64a9320a3ccbf23962d1e7a5acbeda551a70308

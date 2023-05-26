@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.homepage.R
 import com.example.homepage.databinding.FragmentHomeBinding
+import com.example.homepage.network.cache.SharedPreference
 import com.example.homepage.utils.helpers.ReplaceFragment
 import com.example.homepage.utils.models.UserAllData
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +21,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
-import java.util.*
+import java.util.Locale
 
 
 class HomeFragment : ReplaceFragment() {
@@ -46,23 +47,48 @@ class HomeFragment : ReplaceFragment() {
         var userSection = getString(R.string.not_given)
         val path = "/user-details/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
-        val postListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
+        val sharePref = SharedPreference();
+        val cachedUserDetails = context?.let { sharePref.getUserDetailsFromCache(it) }
 
-                val post = dataSnapshot.getValue<UserAllData>()
+        userSemester = cachedUserDetails?.first.toString()
+        userSection = cachedUserDetails?.second.toString()
 
-                if (post != null) {
-                    userSemester = post.userSemester.toString()
-                    userSection = post.userSection.toString()
+
+        if (userSemester == ""  || userSection == "")
+        {
+            //makeToast("Data retrieved from the network")
+            val postListener = object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                    val post = dataSnapshot.getValue<UserAllData>()
+
+                    if (post != null) {
+                        userSemester = post.userSemester.toString()
+                        userSection = post.userSection.toString()
+                        context?.let { sharePref.saveUserDetailsToCache(it,userSemester, userSection) }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+
+                    makeToast("Error loading data")
                 }
             }
+            databaseReference.addValueEventListener(postListener)
 
-            override fun onCancelled(databaseError: DatabaseError) {
-
-                makeToast("Error loading data")
-            }
         }
-        databaseReference.addValueEventListener(postListener)
+        else
+        {
+            //makeToast("Data retrieved from the cache")
+        }
+
+
+
+
+
+
+
+
 
 
 
