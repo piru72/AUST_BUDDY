@@ -16,27 +16,36 @@
                 <TextView
                     android:id="@+id/productNameCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
-                    android:text="@string/announcers_name"
-                    android:textSize="22sp" />
+                    android:text="@string/announcement_details"
+                    android:textFontWeight="600"
+                    android:textSize="22sp"
+                    android:paddingBottom="2dp"
+                    android:fontFamily="@font/open_sans"/>
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:textFontWeight="600"
+                    android:textColor="@color/black12"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingBottom="2dp"
                     android:text="@string/topic" />
 
 
                 <TextView
                     android:id="@+id/productCategoryCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/black12"
+                    android:alpha="0.5"
+                    android:paddingBottom="2dp"
                     android:text="@string/date">
 
                 </TextView>
 
 
-                <TextView
-                    android:id="@+id/announcementDetails"
-                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
-                    android:text="@string/announcement_details" />
 
             </LinearLayout>
 
@@ -47,12 +56,21 @@
 
             <Button
                 android:id="@+id/callSellerButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="60sp"
+                android:paddingStart="60sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:text="@string/call" />
 
             <Button
                 android:id="@+id/showDetailsButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="50sp"
+                android:paddingStart="50sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
                 android:text="@string/details" />
         </LinearLayout>
 

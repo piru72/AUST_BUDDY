@@ -16,7 +16,7 @@ class AnnouncementViewHolder(private val binding: CardAnnouncementsBinding) : Re
         binding.productNameCard.text = announcement.sellersDetails?.split(" ")?.get(1)
         binding.productAuthorNameCard.text = announcement.productAuthor
         binding.productCategoryCard.text = announcement.productName
-        binding.announcementDetails.text = announcement.productDetails
+//        binding.announcementDetails.text = announcement.productDetails
 
         val sellersContactNo = announcement.sellersDetails?.split(" ")?.get(0)
 

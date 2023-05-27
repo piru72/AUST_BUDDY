@@ -7,23 +7,34 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                style="@style/layoutWrapWrapVertical">
+                style="@style/layoutWrapWrapVertical"
+                android:paddingBottom="10dp">
 
 
                 <TextView
                     android:id="@+id/productNameCard"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
                     android:text="@string/announcers_name" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:textFontWeight="600"
+                    android:textColor="@color/off_white"
                     android:text="@string/topic" />
 
 
                 <TextView
                     android:id="@+id/announcementDetails"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:textFontWeight="600"
+                    android:textColor="@color/off_white"
                     android:text="@string/announcement_details" />
 
             </LinearLayout>
@@ -36,12 +47,21 @@
 
             <Button
                 android:id="@+id/deleteProductButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="50sp"
+                android:paddingStart="50sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:text="@string/delete" />
 
             <Button
                 android:id="@+id/updateProductButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="50sp"
+                android:paddingStart="50sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
                 android:text="@string/update" />
         </LinearLayout>
 
