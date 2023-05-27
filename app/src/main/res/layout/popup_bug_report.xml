@@ -3,19 +3,21 @@
     android:id="@+id/bug_report_popup"
     style="@style/backgroundPopup"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_popup_white_rounded_background"
+    android:layout_margin="@dimen/_5sdp">
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/materialEmailInput"
         android:hint="@string/bug_report">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BugDescriptionPop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            style="@style/layoutMatchWrap"
+            android:minHeight="@dimen/_100sdp"
+           />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -26,15 +28,18 @@
             android:id="@+id/CloseButton"
             style="@style/buttonStyleWrapWrapText"
             android:layout_weight="6"
-            android:textAlignment="textStart"
             android:paddingStart="30sp"
-            android:text="@string/close" />
+            android:text="@string/close"
+
+            android:textAlignment="textStart" />
 
         <Button
-            style="@style/CustomButtonStyle"
-            android:layout_weight="1"
             android:id="@+id/sendButton"
-            android:backgroundTint = "@color/custom_green_primary"
+            style="@style/buttonStylePopupLeft"
+            android:layout_weight="1"
+
+            android:backgroundTint="@color/custom_green_primary"
+            android:textColor="@color/white"
             android:text="@string/send" />
 
 
