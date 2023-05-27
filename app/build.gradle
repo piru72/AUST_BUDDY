@@ -118,6 +118,9 @@ dependencies {
     // for responsive ui
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
 
+    //FOr caching
+    implementation 'com.github.crypticminds.ColdStorage:coldstoragecache:2.0.1'
+
 
     // testing
     testImplementation 'junit:junit:4.13.2'
