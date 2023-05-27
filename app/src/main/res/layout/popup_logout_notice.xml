@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_create_join_class"
+    style="@style/backgroundPopup"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:padding="40sp"
+    android:background="@drawable/custom_popup_white_rounded_background">
+
+    <LinearLayout style="@style/layoutMatchMatch">
+
+        <TextView
+            style="@style/textViewWrapWrapPoppinsBlack20"
+            android:text="@string/log_out_from_aust_buddy" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/layoutMatchWrapHorizontal"
+        android:layout_marginTop="6sp">
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="@style/buttonStyleWrapWrapText"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="@color/custom_green_primary"
+            />
+
+        <Button
+
+            android:id="@+id/logOutButton"
+            style="@style/buttonStylePopupLeft"
+            android:layout_weight="1"
+            android:text="@string/yes_log_out"
+            android:textColor="@color/white"
+            android:padding="5sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

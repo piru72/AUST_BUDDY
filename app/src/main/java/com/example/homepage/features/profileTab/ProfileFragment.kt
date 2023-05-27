@@ -3,11 +3,16 @@ package com.example.homepage.features.profileTab
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.homepage.R
 import com.example.homepage.databinding.FragmentProfileBinding
 import com.example.homepage.features.onBoarding.authentication.SignInActivity
 import com.example.homepage.network.cache.SharedPreference
@@ -119,12 +124,43 @@ class ProfileFragment : ReplaceFragment() {
         }
         viewBinding.btnLogOut.setOnClickListener {
 
-            //  GOING FROM FRAGMENT TO ACTIVITY
-            FirebaseAuth.getInstance().signOut()
-            val i = Intent(activity, SignInActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            startActivity(i)
-            (activity as Activity?)!!.overridePendingTransition(0, 0)
+
+            val rootLayout = layoutInflater.inflate(R.layout.popup_logout_notice, null)
+
+
+            val cancelButton = rootLayout.findViewById<Button>(R.id.cancelButton)
+            val logOutButton = rootLayout.findViewById<Button>(R.id.logOutButton)
+
+            val popupWindow = PopupWindow(
+                rootLayout,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, true
+            )
+
+            popupWindow.update()
+            popupWindow.elevation = 20.5F
+            popupWindow.showAtLocation(
+
+                viewBinding.fragmentProfile,
+                Gravity.CENTER,
+                0,
+                -500
+            )
+
+            cancelButton.setOnClickListener {
+                popupWindow.dismiss()
+            }
+
+            logOutButton.setOnClickListener {
+
+                //  GOING FROM FRAGMENT TO ACTIVITY
+                FirebaseAuth.getInstance().signOut()
+                val i = Intent(activity, SignInActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(i)
+                (activity as Activity?)!!.overridePendingTransition(0, 0)
+            }
+
 
         }
     }
