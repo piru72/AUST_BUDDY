@@ -168,6 +168,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">0sp</item>
         <item name="android:paddingEnd">0sp</item>
+        <item name = "android:textSize"> @dimen/_10sdp</item>
         <item name = "android:textColor"> @color/custom_black</item>
         <item name = "android:fontFamily"> @font/poppins_medium</item>
     </style>
@@ -176,6 +177,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name = "android:textColor"> @color/custom_black</item>
+        <item name = "android:textSize"> @dimen/_10sdp</item>
         <item name = "android:fontFamily"> @font/poppins_medium</item>
         <item name = "android:layout_weight"> 1 </item>
     </style>

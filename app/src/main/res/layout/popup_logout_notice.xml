@@ -3,8 +3,7 @@
     android:id="@+id/popup_create_join_class"
     style="@style/backgroundPopup"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:padding="40sp"
+    android:layout_width="match_parent"
     android:background="@drawable/custom_popup_white_rounded_background">
 
     <LinearLayout style="@style/layoutMatchMatch">
@@ -16,7 +15,7 @@
 
 
     <LinearLayout style="@style/layoutMatchWrapHorizontal"
-        android:layout_marginTop="6sp">
+        android:layout_marginTop="20sp">
 
         <Button
             android:id="@+id/cancelButton"
@@ -24,6 +23,7 @@
             android:layout_weight="1"
             android:text="@string/cancel"
             android:textColor="@color/custom_green_primary"
+            android:textSize="16sp"
             />
 
         <Button
@@ -33,7 +33,7 @@
             android:layout_weight="1"
             android:text="@string/yes_log_out"
             android:textColor="@color/white"
-            android:padding="5sp"/>
+            android:textSize="16sp"/>
 
 
     </LinearLayout>
