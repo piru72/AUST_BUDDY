@@ -354,6 +354,8 @@ classmates in groups.</string>
     <string name="bug_report">Bug Report</string>
     <string name="label" />
     <string name="password">Password</string>
+    <string name="yes_log_out">Yes, Log out</string>
+    <string name="log_out_from_aust_buddy">Log out from AUST Buddy?</string>
 
 
 </resources>
