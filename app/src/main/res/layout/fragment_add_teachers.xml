@@ -7,66 +7,82 @@
 
     <LinearLayout style="@style/layoutMatchMatchVertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:layout_marginTop="20sp"
-            android:contentDescription="@string/background_image"
-            android:src="@drawable/registration" />
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:text="@string/request_for_teacher"/>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialEmailInput"
+            android:hint="@string/name" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersName"
-                style="@style/materialTextInput"
-                android:hint="@string/provide_teachers_name"
-                android:inputType="textShortMessage" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textShortMessage"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialEmailInput"
+            android:hint="@string/designation" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersDesignation"
-                style="@style/materialTextInput"
-                android:hint="@string/provide_teachers_designation" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textShortMessage"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialEmailInput"
+            android:hint="@string/contact_no">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersContactNoText"
-                style="@style/materialTextInput"
-                android:hint="@string/provide_teachers_contact_no"
-                android:inputType="textShortMessage" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textShortMessage"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialEmailInput"
+            android:hint="@string/email" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersEmailText"
-                style="@style/materialEmailInput"
-                android:hint="@string/provide_teachers_email" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textShortMessage"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialEmailInput"
+            android:hint="@string/image_link"  >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersImageLinkForm"
-                style="@style/materialTextInput"
-                android:hint="@string/image_link" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textShortMessage"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-
             android:id="@+id/addTeachersButtonForm"
-            style="@style/buttonStylePage"
-            android:text="@string/add_teacher" />
+            style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
+            android:layout_width="match_parent"
+            android:text="@string/add_teacher"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
