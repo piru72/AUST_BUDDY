@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout style="@style/backgroundCard">
+    <LinearLayout style="@style/backgroundCard"
+        android:background="@drawable/custom_card_background_announcement">
 
         <LinearLayout style="@style/layoutWrapWrapHorizontal">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                style="@style/layoutWrapWrapVertical">
+                style="@style/layoutWrapWrapVertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="10dp">
 
 
                 <TextView
                     android:id="@+id/productNameCard"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:layout_gravity="start"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
                     android:text="@string/announcers_name" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:textFontWeight="600"
+                    android:alpha="0.5"
+                    android:textColor="@color/black12"
                     android:text="@string/topic" />
 
 
                 <TextView
                     android:id="@+id/announcementDetails"
                     style="@style/textViewWrapWrapPoppinsBlack18"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:textFontWeight="600"
+                    android:textColor="@color/black12"
+                    android:alpha="0.5"
                     android:text="@string/announcement_details" />
 
             </LinearLayout>
@@ -36,12 +53,21 @@
 
             <Button
                 android:id="@+id/deleteProductButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="@dimen/_35sdp"
+                android:paddingStart="@dimen/_35sdp"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:text="@string/delete" />
 
             <Button
                 android:id="@+id/updateProductButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="@dimen/_35sdp"
+                android:paddingStart="@dimen/_35sdp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_50sdp"
                 android:text="@string/update" />
         </LinearLayout>
 

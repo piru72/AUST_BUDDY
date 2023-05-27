@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout style="@style/backgroundCard">
+
+    <LinearLayout style="@style/backgroundCard"
+        android:background="@drawable/custom_card_background_announcement">
+
 
         <LinearLayout
             style="@style/layoutWrapWrapHorizontal"
@@ -10,36 +13,45 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 style="@style/layoutWrapWrapVertical">
 
 
                 <TextView
                     android:id="@+id/productNameCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingBottom="2dp"
                     android:text="@string/announcers_name"
-                    android:textSize="22sp" />
+                    android:textFontWeight="600"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:textFontWeight="600"
+                    android:textSize="12sp"
+                    android:textColor="@color/black12"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/open_sans"
+                    android:paddingBottom="2dp"
                     android:text="@string/topic" />
 
 
                 <TextView
                     android:id="@+id/productCategoryCard"
                     style="@style/textViewWrapWrapPoppinsBlackGravityStart"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/black12"
+                    android:alpha="0.5"
+                    android:textSize="12sp"
+                    android:paddingBottom="2dp"
                     android:text="@string/date">
-
                 </TextView>
 
-
-                <TextView
-                    android:id="@+id/announcementDetails"
-                    style="@style/textViewWrapWrapPoppinsBlackGravityStart"
-                    android:text="@string/announcement_details" />
-
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -47,16 +59,30 @@
 
             <Button
                 android:id="@+id/callSellerButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="@dimen/_45sdp"
+                android:paddingStart="@dimen/_45sdp"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 android:text="@string/call" />
 
             <Button
                 android:id="@+id/showDetailsButton"
-                style="@style/buttonStylePopup"
+                style="@style/wrapWrapDarkElevatedButtonWithPadding"
+                android:paddingEnd="@dimen/_35sdp"
+                android:paddingStart="@dimen/_35sdp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
                 android:text="@string/details" />
         </LinearLayout>
 
+
     </LinearLayout>
 
+
+
+
 </layout>
+
 
