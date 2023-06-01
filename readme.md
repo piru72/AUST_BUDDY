@@ -37,7 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 
 # INTRODUCTION
-> This is Salman speaking!!!!!!!!!!!!
+
 >  ## 1.1 Overview <br>
 > 
 >  The "AUST BUDDY" project is a university assistant application for different students. This mobile application is built in Android Studio and is developed in kotlin and the database is managed by Firebase.  
