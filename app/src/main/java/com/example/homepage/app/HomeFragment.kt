@@ -43,8 +43,8 @@ class HomeFragment : ReplaceFragment() {
         setInformation(email)
         val selectedDepartment = getShortDepartment().uppercase(Locale.ROOT)
         val modifiedEmail = email.replace('.', '-')
-        var userSemester = getString(R.string.not_given)
-        var userSection = getString(R.string.not_given)
+        var userSemester = "Not Given"
+        var userSection = "Not Given"
         val path = "/user-details/$modifiedEmail"
         val databaseReference = FirebaseDatabase.getInstance().getReference(path)
         val sharePref = SharedPreference();

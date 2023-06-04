@@ -9,14 +9,18 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import com.example.homepage.R
-import com.example.homepage.utils.models.Admin
-import com.example.homepage.utils.models.UserAllData
 import com.example.homepage.utils.helpers.Helper
 import com.example.homepage.utils.helpers.spinner.SpinnerItem
+import com.example.homepage.utils.models.Admin
+import com.example.homepage.utils.models.UserAllData
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
@@ -89,7 +93,6 @@ class DialogYearSemesterChooser(private val requestFor: String) : BottomSheetDia
         requestButton.setOnClickListener {
             val selectedYear = yearSpinner.selectedItem.toString()
             val selectedSemester = semesterSpinner.selectedItem.toString()
-            val usersEmail = userV?.email.toString()
             helper.setInformation(usersEmail)
             val department = helper.getShortDepartment()
             val userName = helper.getUserName()

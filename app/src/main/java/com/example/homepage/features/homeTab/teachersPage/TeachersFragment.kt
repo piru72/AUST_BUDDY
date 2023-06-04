@@ -17,7 +17,7 @@ import com.example.homepage.databinding.FragmentTeachersBinding
 import com.example.homepage.features.homeTab.teachersPage.TeacherAdapter.teacherAdapter
 import com.example.homepage.features.homeTab.teachersPage.TeacherModel.teacherViewModel
 import com.example.homepage.utils.helpers.ReplaceFragment
-import java.util.*
+import java.util.Locale
 
 
 class TeachersFragment : ReplaceFragment() {
@@ -55,6 +55,8 @@ class TeachersFragment : ReplaceFragment() {
         (viewBinding.buttonASTeachers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
         (viewBinding.buttonArchTeachers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
         (viewBinding.buttonBbaTeachers as Button?)?.let { (buttons as ArrayList<Button>).add(it) }
+        val greenColor = Color.parseColor("#58d28b")
+        viewBinding.buttonFavouriteTeachers.setBackgroundColor(greenColor)
 
         for (button in buttons as ArrayList<Button>) {
             button.setOnClickListener { changeButtonColor(button) }
