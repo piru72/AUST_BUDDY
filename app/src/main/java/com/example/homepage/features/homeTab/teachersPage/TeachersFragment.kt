@@ -92,6 +92,8 @@ class TeachersFragment : ReplaceFragment() {
 
         // Initializing the adapter with the department and usertype
         adapter = teacherAdapter("User-favourites","teachers")
+
+
         userRecyclerView.adapter = adapter
 
         // Initializing viewModel with appropriate database reference according to the databaseViewPath

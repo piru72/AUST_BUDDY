@@ -2,6 +2,7 @@ package com.example.homepage.utils.recyclerViewHolder
 
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -73,7 +74,9 @@ class TeacherViewHolder(private val binding: CardTeachersBinding) :
 
                     val newPush = currentItem.email.toString().replace(".", "-")
 
+
                     val fromPath = "$databaseViewPath/$newPush"
+                    Log.d("TeacherViewHolder", fromPath)
                     val toPath = "user-favouriteTeachers/$user/$newPush"
                     firebaseHelper.moveChild(fromPath, toPath)
                     Toast.makeText(context, "Added to favourites", Toast.LENGTH_SHORT).show()
