@@ -6,17 +6,18 @@
 
 
     <LinearLayout
-        style="@style/layoutMatchWrapHorizontal"
+        style="@style/layoutMatchMatchHorizontal"
         android:padding="0dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
 
             android:id="@+id/images"
+
             android:layout_height="110dp"
             android:layout_width="110dp"
             android:contentDescription="@string/teacher_image"
             android:padding="5sp"
-            android:layout_gravity="center"
+            android:layout_gravity=""
             app:civ_border_width="2.5dp"
             app:civ_border_color="@color/black12"
             android:src="@drawable/testing_image"/>
@@ -93,17 +94,18 @@
             </LinearLayout>
         </LinearLayout>
 
-
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
         <Button
-            style="?attr/materialIconButtonStyle"
             android:id="@+id/btnFavouriteContact"
+            style="?attr/materialIconButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:icon="@drawable/favorite"
             android:layout_gravity="end"
-            app:iconGravity="end"
-            app:iconTint="@color/favorite_white"
-            android:gravity="end" />
+            app:icon="@drawable/favorite"
+            app:iconTint="@color/favorite_white" />
 
 
     </LinearLayout>
