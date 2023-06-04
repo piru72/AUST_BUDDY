@@ -9,7 +9,7 @@ import com.example.homepage.utils.models.TeacherData
 import com.example.homepage.utils.recyclerViewHolder.TeacherViewHolder
 
 @GlideModule
-class teacherAdapter(private val userType: String, private val databaseViewPath: String) :
+class teacherAdapter(private var userType: String, private val databaseViewPath: String) :
     RecyclerView.Adapter<TeacherViewHolder>() {
 
     private val _itemList = ArrayList<TeacherData>()
@@ -40,6 +40,10 @@ class teacherAdapter(private val userType: String, private val databaseViewPath:
         this._itemList.addAll(userList)
         notifyDataSetChanged()
 
+    }
+    fun setUserType(userType: String) {
+        this.userType = userType
+        notifyDataSetChanged()
     }
 
 

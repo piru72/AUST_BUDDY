@@ -91,7 +91,7 @@ class TeachersFragment : ReplaceFragment() {
 
 
         // Initializing the adapter with the department and usertype
-        adapter = teacherAdapter("User","teachers")
+        adapter = teacherAdapter("User-favourites","teachers")
         userRecyclerView.adapter = adapter
 
         // Initializing viewModel with appropriate database reference according to the databaseViewPath
@@ -114,10 +114,17 @@ class TeachersFragment : ReplaceFragment() {
             if (button === selectedButton) {
                 button.setBackgroundColor(greenColor)
 
+                val userType = if (button.text.toString().lowercase(Locale.ROOT) == "favourite") {
+                    "User-favourites"
+                } else {
+                    "User"
+                }
+
                 if(button.text.toString().lowercase(Locale.ROOT) == "favourite")
                     setTeachersDepartment("user-favouriteTeachers" + "/${getCurrentUserId()}")
                 else
                     setTeachersDepartment("teachers-list/" + button.text.toString().lowercase(Locale.ROOT))
+                adapter.setUserType(userType)
             } else {
                 button.setBackgroundColor(whiteColor)
             }
@@ -126,6 +133,7 @@ class TeachersFragment : ReplaceFragment() {
 
     private fun setTeachersDepartment(path : String) {
         viewModel.initialize(path)
+
         // updating the teacher list
         viewModel.allUsers.observe(viewLifecycleOwner) {
             adapter.updateUserList(it)

@@ -79,8 +79,6 @@ gapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Model/
 aapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/Repo/FavouriteWebRepo.kt,b\f\bf5cf2fc2040b3f4dbe0d453b1a617592a62992c
 Š
 Zapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddCourseFragment.kt,6\0\609e3d9b1bb2a6176adfffb3742e29e0245b2ba4
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherRepo/TeacherRepository.kt,4\9\490d4a46587231727a4576c01ecf0a071a7c524b
 ”
 dapp/src/main/java/com/example/homepage/features/homeTab/favouriteWebPage/FavouriteWebPageFragment.kt,b\7\b75f75ae12aa55f7966eea499c15dcf8a6da3681
 ”
@@ -197,8 +195,6 @@ Xapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/GroupNoticeView
 Vapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/UserGroupViewHolder.kt,1\9\192ebe64811da1edf5ba6aa81399d758f01162fb
 ‰
 Yapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/YouTubeVideoViewHolder.kt,c\3\c31d7facf2ce1470525515a8804e1649d9235133
-•
-eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherModel/teacherViewModel.kt,b\d\bd5faadd90f770f3c657d3202ed80066696ced0a
 p
 @app/src/main/java/com/example/homepage/database/FirebaseUtils.kt,8\3\830d1af9d22ed0b7188fe79a4f74673460941e5e
 {
