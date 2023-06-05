@@ -1,5 +1,6 @@
 
 
+![WhatsApp Image 2023-06-06 at 00 30 00](https://github.com/piru72/AUST_BUDDY/assets/63257806/80730571-b83c-4544-9ee1-05f9697bb489)
 
 
 [![wakatime](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/f4d39c7f-7a5a-4a17-a222-2745203323c9.svg)](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/f4d39c7f-7a5a-4a17-a222-2745203323c9)
@@ -23,7 +24,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/piru72"><img src="https://avatars.githubusercontent.com/u/63257806?v=4" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
-        <td align="center"><a href="https://github.com/piru2"><img src="https://avatars.githubusercontent.com/u/49322945?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arman Mahy</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
+        <td align="center"><a href="https://github.com/arman-mahy"><img src="https://avatars.githubusercontent.com/u/77797657?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arman Mahy</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=arman-mahy" title="Code">💻</a> <a href="#ideas-arman-mahy title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/arman-mahy/AUST_BUDDY/issues?q=author%3A" title="Bug reports">🐛</a></td>
       <td align="center"><a href="https://github.com/klutz-me"><img src="https://avatars.githubusercontent.com/u/82176462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sabbir Ahmed Salman</b></sub></a><br /><a href="https://github.com/klutz-me/AUST_BUDDY/commits?author=klutz-me" title="Code">💻</a> <a href="#ideas-klutz-me title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/klutz-me/AUST_BUDDY/issues?q=author%3Aklutz-me" title="Bug reports">🐛</a></td>
     
     
