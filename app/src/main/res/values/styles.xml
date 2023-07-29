@@ -424,6 +424,7 @@
         <item name="android:paddingRight">12dp</item>
         <item name="android:minWidth">48dp</item>
         <item name="android:minHeight">48dp</item>
+        <item name="strokeColor">@color/custom_green_light</item>
     </style>
 
 

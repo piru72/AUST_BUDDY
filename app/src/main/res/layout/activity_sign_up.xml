@@ -52,12 +52,38 @@
             style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
             android:layout_width="match_parent"
             android:text="@string/sign_up"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/go_to_sign_in_page"
-            style="@style/textViewWrapWrapPoppinsBlack"
-            android:text="@string/already_have_an_account_sign_in" />
+<!--        <TextView-->
+<!--            android:id="@+id/go_to_sign_in_page"-->
+<!--            style="@style/textViewWrapWrapPoppinsBlack"-->
+<!--            android:text="@string/already_have_an_account_sign_in" />-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/custom_ash" />
+
+            <TextView
+                android:id="@+id/go_to_sign_in_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login Here"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/custom_green_primary" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

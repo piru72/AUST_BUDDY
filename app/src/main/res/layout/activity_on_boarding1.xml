@@ -8,19 +8,21 @@
         <ImageView
             style="@style/onBoardingImage"
             android:contentDescription="@string/on_boarding_image"
+            android:layout_marginBottom="@dimen/_10sdp"
             app:srcCompat="@drawable/image_onboarding_1" />
 
         <TextView
             android:id="@+id/on_boarding_1_title"
             style="@style/textViewWrapWrapPoppinsBlack"
             android:text="@string/find_your_notes"
-            android:textSize="30sp"
+            android:textSize="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_5sdp"
             android:textFontWeight="600"/>
 
         <TextView
             android:id="@+id/onboard_1_para"
             style="@style/textViewWrapWrapPoppinsBlack"
-            android:padding="20dp"
+            android:paddingBottom="@dimen/_10sdp"
             android:text="@string/onboard_1_para"
             android:textAlignment="center" />
 
@@ -32,17 +34,6 @@
             android:textSize="18sp"
             />
 
-<!--        <Button-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="48dp"-->
-<!--            android:backgroundTint="@color/custom_green_dark"-->
-<!--            android:fontFamily="@font/open_sans"-->
-<!--            android:text="Continue"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold">-->
-
-<!--        </Button>-->
     </LinearLayout>
 
 </LinearLayout>
