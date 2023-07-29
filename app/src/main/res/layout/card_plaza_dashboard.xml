@@ -9,7 +9,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 style="@style/layoutWrapWrapVertical"
-                android:paddingBottom="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_13sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingEnd="0dp">
 
