@@ -4,52 +4,69 @@
     style="@style/backgroundMain"
     tools:context=".features.groupTab.CreateGroupFragment">
 
+    <LinearLayout style="@style/layoutOnBoardingMain">
 
-    <ImageView
-        android:id="@+id/startingImage"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="80sp"
-        android:contentDescription="@string/a_background_image"
-        android:paddingBottom="20dp"
-        android:src="@drawable/registration" />
+        <ImageView
+            android:id="@+id/startingImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="80sp"
+            android:contentDescription="@string/a_background_image"
+            android:paddingBottom="20dp"
+            android:src="@drawable/create_group" />
+        <TextView
+            android:id="@+id/sample_text"
+            style="@style/textViewWrapWrapPoppinsBlack"
+            android:layout_gravity="start"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:text="@string/create_group_text" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/groupNameFormInput"
+            style="@style/materialTextInputLayout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_below="@id/startingImage">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/groupNameFormInput"
-        style="@style/layoutMatchWrap"
-        android:layout_below="@id/startingImage">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/groupName"
+                style="@style/layoutMatchWrap"
+                android:hint="@string/provide_group_name"
+                android:inputType="textShortMessage" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/groupName"
-            style="@style/materialTextInput"
-            android:hint="@string/provide_group_name"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/groupDetailsFormInput"
-        style="@style/layoutMatchWrap"
-        android:layout_below="@id/groupNameFormInput">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/groupDetails"
-            style="@style/materialTextInput"
-            android:hint="@string/provide_group_details"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <Button
+        <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/createGroupButtonForm"
-        style="@style/buttonStylePage"
-        android:layout_below="@id/groupDetailsFormInput"
-        android:text="@string/create_group" />
+            android:id="@+id/groupDetailsFormInput"
+            style="@style/materialTextInputLayout"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_below="@id/groupNameFormInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/groupDetails"
+                style="@style/layoutMatchWrap"
+                android:hint="@string/provide_group_details"
+                android:inputType="textShortMessage" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+
+            android:id="@+id/createGroupButtonForm"
+            style="@style/buttonStylePage"
+            android:textAlignment="center"
+            android:backgroundTint="@color/custom_green_primary"
+            android:textColor="@color/white"
+            android:layout_below="@id/groupDetailsFormInput"
+            android:text="@string/create_group" />
+
+    </LinearLayout>
+
+
 
 
 </RelativeLayout>

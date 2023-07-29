@@ -312,6 +312,7 @@ classmates in groups.</string>
     <string name="to_sign_in_with_a_group_id_n_use_an_authorised_account_n_use_a_group_id_with_5_7_letter_and_numbers_n_no_space">To sign in with a group id\n - Use an authorised account \n - Use a group id, with 5-7 letter and numbers \n - No space</string>
     <string name="join_group">Join Group</string>
     <string name="ask_admin_for_the_group_id_then_enter_it_here">Ask admin for the group id, then enter it here.</string>
+    <string name="create_group_text">Lead the way! Create a group today</string>
     <string name="click_the_plus_button_to_list_your_quizzes_schedule">Click the plus button to List your quizzes schedule</string>
     <string name="send_mail">Send mail</string>
     <string name="change_profile_photo">Change Profile Photo</string>

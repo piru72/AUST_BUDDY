@@ -5,12 +5,13 @@
         <LinearLayout style="@style/layoutOnBoardingMain">
 
             <ImageView
-                style="@style/onBoardingImage"
+                android:id="@+id/startingImage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:contentDescription="@string/on_boarding_image"
-                app:srcCompat="@drawable/join_group" />
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginTop="80sp"
+                android:contentDescription="@string/a_background_image"
+                android:paddingBottom="20dp"
+                android:src="@drawable/join_group2" />
 
 
             <TextView
