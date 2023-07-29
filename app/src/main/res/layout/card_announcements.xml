@@ -25,6 +25,7 @@
                     android:paddingBottom="2dp"
                     android:text="@string/announcers_name"
                     android:textFontWeight="600"
+                    android:layout_gravity="center"
                     android:textSize="18sp" />
 
                 <TextView
@@ -36,6 +37,7 @@
                     android:alpha="0.5"
                     android:fontFamily="@font/open_sans"
                     android:paddingBottom="2dp"
+                    android:layout_gravity="center"
                     android:text="@string/topic" />
 
 
@@ -48,6 +50,7 @@
                     android:alpha="0.5"
                     android:textSize="12sp"
                     android:paddingBottom="2dp"
+                    android:layout_gravity="center"
                     android:text="@string/date">
                 </TextView>
 
@@ -73,7 +76,7 @@
                 android:paddingStart="@dimen/_35sdp"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="@dimen/_25sdp"
                 android:text="@string/details" />
         </LinearLayout>
 
