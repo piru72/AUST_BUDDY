@@ -1,57 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    style="@style/backgroundMain"
-    android:padding="30dp"
-    tools:context=".features.groupTab.JoinGroupFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layoutMatchMatch">
 
-    <TextView
-        android:id="@+id/upperText"
-        style="@style/textViewWrapWrapPoppinsBlack20"
-        android:text="@string/you_re_currently_signed_in_as"
-        android:textStyle="bold" />
+        <LinearLayout style="@style/layoutOnBoardingMain">
 
-    <TextView
-        android:id="@+id/studentId_Show"
-        style="@style/textViewWrapWrapPoppinsBlack"
-        android:layout_below="@+id/upperText"
-        android:text="@string/student_email" />
-
-    <TextView
-        android:id="@+id/sample_text"
-        style="@style/textViewWrapWrapPoppinsBlack"
-        android:layout_below="@id/studentId_Show"
-        android:text="@string/ask_admin_for_the_group_id_then_enter_it_here" />
+            <ImageView
+                style="@style/onBoardingImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:contentDescription="@string/on_boarding_image"
+                app:srcCompat="@drawable/join_group" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/groupIdFormInput"
-        style="@style/layoutMatchWrapHorizontal"
-        android:layout_below="@id/sample_text"
-        android:layout_marginBottom="20dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/groupId"
-            style="@style/materialTextInput"
-            android:fontFamily="@font/poppins_light"
-            android:hint="@string/provide_group_id"
-            android:inputType="textShortMessage" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/rules"
-        style="@style/textViewWrapWrapPoppinsBlack"
-        android:layout_below="@id/groupIdFormInput"
-        android:text="@string/to_sign_in_with_a_group_id_n_use_an_authorised_account_n_use_a_group_id_with_5_7_letter_and_numbers_n_no_space" />
-
-    <Button
-
-        android:id="@+id/joinGroupButtonForm"
-        style="@style/buttonStylePopup"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/rules"
-        android:text="@string/join_group" />
+            <TextView
+                android:id="@+id/sample_text"
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:text="@string/ask_admin_for_the_group_id_then_enter_it_here" />
 
 
-</RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/groupIdFormInput"
+                style="@style/materialTextInputLayout"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/groupId"
+                    android:hint="@string/provide_group_id"
+                    style="@style/layoutMatchWrap" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/rules"
+                android:paddingBottom="@dimen/_15sdp"
+                style="@style/textViewWrapWrapPoppinsBlack"
+                android:layout_below="@id/groupIdFormInput"
+                android:text="@string/to_sign_in_with_a_group_id_n_use_an_authorised_account_n_use_a_group_id_with_5_7_letter_and_numbers_n_no_space" />
+
+            <Button
+                android:id="@+id/joinGroupButtonForm"
+                style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rules"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:textFontWeight="600"
+                android:textSize="20sp"
+                android:text="@string/join_group" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
