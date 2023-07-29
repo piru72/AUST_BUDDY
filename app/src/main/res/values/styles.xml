@@ -31,10 +31,12 @@
 
     <style name="layoutWrapWrapVertical" parent="layoutWrapWrap">
         <item name="android:orientation">vertical</item>
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="layoutWrapWrapHorizontal" parent="layoutWrapWrap">
+        <item name="android:layout_gravity">center</item>
         <item name="android:orientation">horizontal</item>
     </style>
 
@@ -49,6 +51,7 @@
 
     <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapWrap">
         <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">@color/black12</item>
     </style>
@@ -65,7 +68,8 @@
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack20" parent="textViewWrapWrapPoppinsBlack18">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textFontWeight">600</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -258,7 +262,7 @@
 
     <style name="backgroundDev">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_height">125dp</item>
         <item name="android:layout_margin">5sp</item>
         <item name="android:background">@drawable/dev_shape</item>
         <item name="android:gravity">center</item>
@@ -266,8 +270,8 @@
     </style>
 
     <style name="imageViewCircular">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_margin">15sp</item>
         <item name="civ_border_color">#FFFFFF</item>
@@ -277,17 +281,18 @@
 
     <style name="layoutDevDetails">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">20sp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:orientation">vertical</item>
+
     </style>
 
     <style name="imageViewDevSocialIcon">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_width">@dimen/_28sdp</item>
+        <item name="android:layout_height">@dimen/_28sdp</item>
+        <item name="android:layout_marginStart">@dimen/_8sdp</item>
     </style>
 
 

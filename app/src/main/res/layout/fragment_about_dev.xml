@@ -5,7 +5,9 @@
     style="@style/backgroundMain"
     tools:context=".features.profileTab.AboutDevFragment">
 
-    <LinearLayout style="@style/layoutWrapWrapVertical">
+    <LinearLayout style="@style/layoutWrapWrapVertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/_18sdp">
 
         <LinearLayout style="@style/backgroundDev">
 
@@ -18,8 +20,11 @@
 
                 <TextView
                     android:id="@+id/dev1Name"
-                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:textSize="@dimen/_14sdp"
+                    android:textFontWeight="600"
                     android:text="@string/tabassum_tara" />
+
 
                 <TextView
                     android:id="@+id/dev1Id"
@@ -67,7 +72,9 @@
 
                 <TextView
                     android:id="@+id/dev2Name"
-                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:textSize="@dimen/_14sdp"
+                    android:textFontWeight="600"
                     android:text="@string/parvez_ahammed" />
 
                 <TextView
@@ -116,7 +123,9 @@
 
                 <TextView
                     android:id="@+id/dev3Name"
-                    style="@style/textViewWrapWrapPoppinsBlack20"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:textSize="@dimen/_14sdp"
+                    android:textFontWeight="600"
                     android:text="@string/arman_hasan_mahy" />
 
                 <TextView
@@ -149,26 +158,81 @@
 
                 </LinearLayout>
 
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/backgroundDev">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dev4Img"
+                style="@style/imageViewCircular"
+                android:src="@drawable/salman"/>
+
+            <LinearLayout style="@style/layoutDevDetails">
+
+                <TextView
+                    android:id="@+id/dev4Name"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:textSize="@dimen/_14sdp"
+                    android:textFontWeight="600"
+                    android:text="@string/sabbir_ahmed" />
+
+                <TextView
+                    android:id="@+id/dev4Id"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:text="@string/_20200104146" />
+
+                <LinearLayout
+                    style="@style/layoutWrapWrapHorizontal"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/dev4gmail"
+                        style="@style/imageViewDevSocialIcon"
+                        android:contentDescription="@string/icon"
+                        android:src="@drawable/gmail2" />
+
+                    <ImageView
+                        android:id="@+id/dev4facebook"
+                        style="@style/imageViewDevSocialIcon"
+                        android:contentDescription="@string/icon"
+                        android:src="@drawable/facebook2"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/dev4github"
+                        style="@style/imageViewDevSocialIcon"
+                        android:contentDescription="@string/icon"
+                        android:src="@drawable/github2" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
+
         <LinearLayout
             style="@style/backgroundDev"
             android:baselineAligned="false">
 
-            <LinearLayout style="@style/layoutDevDetails">
+            <LinearLayout style="@style/layoutDevDetails"
+                android:gravity="center">
 
                 <TextView
-                    style="@style/textViewWrapWrapPoppinsBlack18"
-                    android:fontFamily="@font/poppins_black"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:textFontWeight="600"
+                    android:paddingBottom="@dimen/_10sdp"
                     android:text="@string/project_github" />
 
                 <ImageView
                     android:id="@+id/project_git"
                     style="@style/imageViewDevSocialIcon"
                     android:contentDescription="@string/icon"
+                    android:layout_gravity="center"
                     android:src="@drawable/github2" />
             </LinearLayout>
 
