@@ -22,12 +22,12 @@
                     android:id="@+id/userNameAnc"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/user_name"
-                    app:drawableStartCompat="@drawable/person_ic" />
+                    android:text="@string/user_name" />
 
                 <TextView
                     android:id="@+id/userNameReal"
                     style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:textFontWeight="100"
                     android:text="@string/user_name" />
             </LinearLayout>
 
@@ -37,12 +37,12 @@
                     android:id="@+id/fullNameAnc"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/email"
-                    app:drawableStartCompat="@drawable/mail_ic" />
+                    android:text="@string/email" />
 
                 <TextView
                     android:id="@+id/fullEmailReal"
                     style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:textFontWeight="100"
                     android:text="@string/email" />
             </LinearLayout>
 
@@ -52,12 +52,12 @@
                     android:id="@+id/IdAnchor"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/student_id"
-                    app:drawableStartCompat="@drawable/key_ic" />
+                    android:text="@string/student_id" />
 
                 <TextView
                     android:id="@+id/IdReal"
                     style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:textFontWeight="100"
                     android:text="@string/id" />
             </LinearLayout>
 
@@ -72,6 +72,7 @@
                 <TextView
                     android:id="@+id/sessionReal"
                     style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:textFontWeight="100"
                     android:text="@string/admission_session" />
             </LinearLayout>
 
@@ -81,12 +82,12 @@
                     android:id="@+id/departmentAnchor"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/department"
-                    app:drawableStartCompat="@drawable/dept_ic" />
+                    android:text="@string/department" />
 
                 <TextView
                     android:id="@+id/departmentReal"
                     style="@style/textViewWrapWrapPoppinsBlack20"
+                    android:textFontWeight="100"
                     android:text="@string/department" />
             </LinearLayout>
 
@@ -99,17 +100,18 @@
                     android:id="@+id/sectionAnchor"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/section"
-                    app:drawableStartCompat="@drawable/dept_ic" />
+                    android:text="@string/section" />
 
                 <TextView
                     android:id="@+id/sectionReal"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:textFontWeight="600"
                     style="@style/textViewWrapWrapPoppinsBlack20" />
 
                 <Button
                     android:id="@+id/btn_update_section"
                     style="@style/buttonStylePopup"
-                    android:background="@color/background_color_50"
+                    android:backgroundTint="@color/custom_green_light"
                     android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
                     android:text="@string/update" />
 
@@ -122,17 +124,20 @@
                     android:id="@+id/semesterAnchor"
                     style="@style/textViewWrapWrapPoppinsBlack20"
                     android:layout_margin="10dp"
-                    android:text="@string/semester"
-                    app:drawableStartCompat="@drawable/dept_ic" />
+                    android:text="@string/semester" />
 
                 <TextView
                     android:id="@+id/semesterReal"
+                    android:textFontWeight="100"
                     style="@style/textViewWrapWrapPoppinsBlack20" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn_update_semester"
-                style="@style/buttonStylePage"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
                 android:text="@string/update_semester" />
 
         </LinearLayout>

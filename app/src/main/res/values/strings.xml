@@ -43,7 +43,7 @@
     <string name="help_and_support">Help and Support</string>
     <string name="textview">TextView</string>
     <string name="about_devs">About Devs</string>
-    <string name="user_name">User Name</string>
+    <string name="user_name">User Name: </string>
     <string name="oppo">TODO</string>
     <string name="yet_to_be_done">YET TO BE DONE</string>
     <string name="button">Button</string>
@@ -186,7 +186,7 @@
     <string name="approve">Approve</string>
     <string name="decline">Decline</string>
     <string name="share_contact">Share Contact</string>
-    <string name="email">Email</string>
+    <string name="email">Email: </string>
     <string name="call">Call</string>
     <string name="decline_course">Decline course</string>
     <string name="approve_course">Approve Course</string>
@@ -247,7 +247,7 @@
     <string name="later">Later</string>
     <string name="update_now">Update Now</string>
     <string name="cancel">Cancel</string>
-    <string name="section">Section</string>
+    <string name="section">Section: </string>
     <string name="leave">Leave</string>
     <string name="sure_you_want_to_leave_this_group">Sure you want to leave this group?</string>
     <string name="create">Create</string>
@@ -300,7 +300,7 @@ classmates in groups.</string>
     <string name="website_link">Website Link</string>
     <string name="item">Item</string>
     <string name="view_every_semester">View every semester</string>
-    <string name="semester">Semester</string>
+    <string name="semester">Semester: </string>
     <string name="provide_your_current_password">Provide your current Password</string>
     <string name="type_your_new_password">Type your new Password</string>
     <string name="retype_your_new_password">Retype your new Password</string>
@@ -317,9 +317,9 @@ classmates in groups.</string>
     <string name="send_mail">Send mail</string>
     <string name="change_profile_photo">Change Profile Photo</string>
     <string name="update_semester">Update Semester</string>
-    <string name="department">Department</string>
-    <string name="session">Session</string>
-    <string name="student_id">Student ID</string>
+    <string name="department">Department: </string>
+    <string name="session">Session: </string>
+    <string name="student_id">Student ID: </string>
     <string name="admission_session">Admission Session</string>
     <string name="provide_group_name">Provide Group Name</string>
     <string name="provide_group_details">Provide Group details</string>
