@@ -304,7 +304,7 @@ classmates in groups.</string>
     <string name="provide_your_current_password">Provide your current Password</string>
     <string name="type_your_new_password">Type your new Password</string>
     <string name="retype_your_new_password">Retype your new Password</string>
-    <string name="change_password">Change Password</string>
+    <string name="change_password">Update Password</string>
     <string name="dashboard">Dashboard</string>
     <string name="you_re_currently_signed_in_as">You\'re currently signed in as</string>
     <string name="student_email">STUDENT EMAIL</string>
