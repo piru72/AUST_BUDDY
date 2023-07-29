@@ -9,24 +9,24 @@
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 style="@style/layoutWrapWrapVertical"
-                android:paddingStart="16dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="10dp">
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="0dp">
 
 
                 <TextView
                     android:id="@+id/productNameCard"
-                    style="@style/textViewWrapWrapPoppinsBlack18"
-                    android:layout_gravity="start"
+                    style="@style/textViewWrapWrapPoppinsBlack"
+                    android:layout_gravity="center"
                     android:textFontWeight="600"
                     android:textSize="18sp"
                     android:text="@string/announcers_name" />
 
                 <TextView
                     android:id="@+id/productAuthorNameCard"
-                    style="@style/textViewWrapWrapPoppinsBlack18"
+                    style="@style/textViewWrapWrapPoppinsBlack"
                     android:textSize="12sp"
-                    android:layout_gravity="start"
+                    android:layout_gravity="center"
                     android:textFontWeight="600"
                     android:alpha="0.5"
                     android:textColor="@color/black12"
@@ -35,9 +35,9 @@
 
                 <TextView
                     android:id="@+id/announcementDetails"
-                    style="@style/textViewWrapWrapPoppinsBlack18"
+                    style="@style/textViewWrapWrapPoppinsBlack"
                     android:textSize="12sp"
-                    android:layout_gravity="start"
+                    android:layout_gravity="center"
                     android:textFontWeight="600"
                     android:textColor="@color/black12"
                     android:alpha="0.5"
@@ -67,7 +67,7 @@
                 android:paddingStart="@dimen/_35sdp"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_25sdp"
                 android:text="@string/update" />
         </LinearLayout>
 
