@@ -30,7 +30,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/syllabus"
-                            android:src="@drawable/books" />
+                            android:src="@drawable/course" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -50,7 +50,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/notice"
-                            android:src="@drawable/oj" />
+                            android:src="@drawable/routine_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -77,7 +77,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/cgpa"
-                            android:src="@drawable/teacher" />
+                            android:src="@drawable/teacher_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -97,7 +97,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/buses"
-                            android:src="@drawable/favourite_links" />
+                            android:src="@drawable/shortcut" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -122,7 +122,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/buses"
-                            android:src="@drawable/bus" />
+                            android:src="@drawable/bus_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -141,7 +141,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/request"
-                            android:src="@drawable/request" />
+                            android:src="@drawable/request_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"

@@ -58,7 +58,10 @@
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack18" parent="textViewWrapWrapPoppinsBlack">
-        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:paddingBottom">@dimen/_15sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack20" parent="textViewWrapWrapPoppinsBlack18">
@@ -75,7 +78,7 @@
 
 
     <style name="layoutOfCardViewImage" parent="layoutMatchMatch">
-        <item name="android:background">@color/background_color_50</item>
+        <item name="android:background">@color/custom_green_light</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
     </style>
@@ -290,8 +293,8 @@
 
     <style name="layoutImageButtonContainer" parent="layoutMatchWrap">
 
-        <item name="android:layout_marginStart">30dp</item>
-        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
         <item name="android:layout_weight">3</item>
         <item name="android:orientation">vertical</item>
 
@@ -315,7 +318,7 @@
 
     <style name="cardViewStyleImageContainer">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_height">140dp</item>
         <item name="android:layout_gravity">start</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:layout_weight">1</item>
@@ -337,7 +340,7 @@
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">10dp</item>
         <item name="tint">#000</item>
     </style>
 

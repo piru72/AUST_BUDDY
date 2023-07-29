@@ -30,7 +30,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/notice"
-                            android:src="@drawable/oj" />
+                            android:src="@drawable/notice_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -50,7 +50,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/iums"
-                            android:src="@drawable/iumsweb" />
+                            android:src="@drawable/iums" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -76,7 +76,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/calender"
-                            android:src="@drawable/calendar" />
+                            android:src="@drawable/calender" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -100,7 +100,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/cgpa"
-                            android:src="@drawable/cgpa" />
+                            android:src="@drawable/cgpa_new" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
@@ -121,7 +121,7 @@
                         <ImageView
                             style="@style/imageViewButton"
                             android:contentDescription="@string/calender"
-                            android:src="@drawable/favourite_links" />
+                            android:src="@drawable/links" />
 
                         <TextView
                             style="@style/textViewWrapWrapPoppinsBlack18"
