@@ -13,13 +13,15 @@
         <TextView
             android:id="@+id/semesterReal"
             style="@style/textViewWrapWrapPoppinsBlack20"
+            android:textFontWeight="600"
             android:text="@string/semester" />
 
         <Button
             android:id="@+id/btnSemesterChooser"
             style="@style/buttonStylePage"
-            android:layout_marginRight="0sp"
-            android:layout_marginLeft="0sp"
+            android:textFontWeight="300"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:text="@string/view_every_semester" />
 
 

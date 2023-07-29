@@ -26,12 +26,12 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_signin"
-            style="@style/materialPasswordInput">
+            style="@style/materialPasswordInput"
+            android:layout_height="65dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
-                style="@style/layoutMatchWrap"
-                />
+                style="@style/layoutMatchWrap" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,6 +41,8 @@
             android:layout_width="match_parent"
             android:text="@string/forgot_password"
             android:textColor="@color/custom_green_primary"
+            android:textStyle="bold"
+            android:paddingBottom="@dimen/_5sdp"
             android:textAlignment="textEnd" />
 
         <Button
@@ -48,12 +50,41 @@
             style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
             android:layout_width="match_parent"
             android:text="@string/sign_in"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/goToSignUpPage"
-            style="@style/textViewWrapWrapPoppinsBlack"
-            android:text="@string/don_t_have_an_account_sign_up" />
+<!--        <TextView-->
+<!--            android:id="@+id/goToSignUpPage"-->
+<!--            style="@style/textViewWrapWrapPoppinsBlack"-->
+<!--            android:text= "@string/don_t_have_an_account_sign_up" />-->
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have account? "
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/custom_ash" />
+
+            <TextView
+                android:id="@+id/goToSignUpPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register Here"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                android:textColor="@color/custom_green_primary" />
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

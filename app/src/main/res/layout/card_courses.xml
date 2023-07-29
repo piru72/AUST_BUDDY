@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/custom_card_background_announcement"
     style="@style/backgroundCard">
 
     <TextView
         android:id="@+id/tvCourseName"
         style="@style/textViewWrapWrapPoppinsBlack18"
-        android:text="@string/course_name" />
+        android:text="@string/course_name"
+        android:textFontWeight="600"
+        android:textSize="@dimen/_14sdp"/>
 
     <TextView
         android:id="@+id/tvCourseCode"
         style="@style/textViewWrapWrapPoppinsBlack18"
         android:text="@string/course_code"
-        android:textStyle="bold" />
+        android:textColor="@color/custom_ash"
+        android:textSize="@dimen/_13sdp"
+        android:textFontWeight="600"/>
 
     <LinearLayout style="@style/layoutMatchMatchHorizontal"
         android:layout_gravity="center"
+        android:paddingTop="@dimen/_5sdp"
         android:gravity="center">
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -27,7 +33,9 @@
                 style="@style/Widget.App.Button.OutlinedButton.IconOnly"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:icon="@drawable/ic_add_to_drive" />
+                android:paddingLeft="@dimen/_90sdp"
+                app:iconTint="@color/custom_green_primary"
+                app:icon="@drawable/drive" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -40,8 +48,9 @@
                 style="@style/Widget.App.Button.OutlinedButton.IconOnly"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-
-                app:icon="@drawable/ic_baseline_share_24" />
+                android:paddingRight="@dimen/_90sdp"
+                app:iconTint="@color/custom_green_primary"
+                app:icon="@drawable/share" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
     </LinearLayout>
