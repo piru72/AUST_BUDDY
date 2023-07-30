@@ -14,19 +14,21 @@
             android:layout_marginTop="50sp"
             android:contentDescription="@string/a_background_image"
             android:paddingBottom="20dp"
-            android:src="@drawable/registration" />
+            android:src="@drawable/add_course" />
 
 
         <Spinner
             android:id="@+id/spinnerDepartmentList"
             style="@style/layoutMatchWrap"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:entries="@array/departments" />
 
 
         <LinearLayout
             android:id="@+id/spinnerPan"
             style="@style/layoutMatchWrapHorizontal"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <Spinner
                 android:id="@+id/spinnerYearList"
@@ -41,32 +43,35 @@
                 android:entries="@array/semester12" />
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/courseCode"
-                style="@style/materialTextInput"
+                style="@style/layoutMatchWrap"
                 android:hint="@string/provide_course_code"
                 android:inputType="textShortMessage" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/courseName"
-                style="@style/materialTextInput"
+                style="@style/layoutMatchWrap"
                 android:hint="@string/provide_course_name"
                 android:inputType="textShortMessage" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/layoutMatchWrapHorizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/materialTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/courseDriveLinkText"
-                style="@style/materialTextInput"
+                style="@style/layoutMatchWrap"
                 android:hint="@string/provide_drive_link"
                 android:inputType="textLongMessage" />
 
@@ -74,9 +79,10 @@
 
 
         <Button
-
             android:id="@+id/addCourseButtonForm"
-            style="@style/buttonStylePage"
+            style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
+            android:textFontWeight="600"
+            android:textSize="20sp"
             android:text="@string/add_course" />
 
     </LinearLayout>

@@ -43,7 +43,7 @@
     <string name="help_and_support">Help and Support</string>
     <string name="textview">TextView</string>
     <string name="about_devs">About Devs</string>
-    <string name="user_name">User Name</string>
+    <string name="user_name">User Name: </string>
     <string name="oppo">TODO</string>
     <string name="yet_to_be_done">YET TO BE DONE</string>
     <string name="button">Button</string>
@@ -186,14 +186,14 @@
     <string name="approve">Approve</string>
     <string name="decline">Decline</string>
     <string name="share_contact">Share Contact</string>
-    <string name="email">Email</string>
+    <string name="email">Email: </string>
     <string name="call">Call</string>
     <string name="decline_course">Decline course</string>
     <string name="approve_course">Approve Course</string>
     <string name="plus_button">plus button</string>
     <string name="my_profile">My Profile</string>
     <string name="admin_dash_board">Admin Dash Board</string>
-    <string name="buses">BUSES</string>
+    <string name="buses">Buses</string>
     <string name="my_store">My store</string>
     <string name="favourite">Favourite</string>
     <string name="favourite_links">Favourite Links</string>
@@ -247,7 +247,7 @@
     <string name="later">Later</string>
     <string name="update_now">Update Now</string>
     <string name="cancel">Cancel</string>
-    <string name="section">Section</string>
+    <string name="section">Section: </string>
     <string name="leave">Leave</string>
     <string name="sure_you_want_to_leave_this_group">Sure you want to leave this group?</string>
     <string name="create">Create</string>
@@ -300,11 +300,11 @@ classmates in groups.</string>
     <string name="website_link">Website Link</string>
     <string name="item">Item</string>
     <string name="view_every_semester">View every semester</string>
-    <string name="semester">Semester</string>
+    <string name="semester">Semester: </string>
     <string name="provide_your_current_password">Provide your current Password</string>
     <string name="type_your_new_password">Type your new Password</string>
     <string name="retype_your_new_password">Retype your new Password</string>
-    <string name="change_password">Change Password</string>
+    <string name="change_password">Update Password</string>
     <string name="dashboard">Dashboard</string>
     <string name="you_re_currently_signed_in_as">You\'re currently signed in as</string>
     <string name="student_email">STUDENT EMAIL</string>
@@ -312,13 +312,14 @@ classmates in groups.</string>
     <string name="to_sign_in_with_a_group_id_n_use_an_authorised_account_n_use_a_group_id_with_5_7_letter_and_numbers_n_no_space">To sign in with a group id\n - Use an authorised account \n - Use a group id, with 5-7 letter and numbers \n - No space</string>
     <string name="join_group">Join Group</string>
     <string name="ask_admin_for_the_group_id_then_enter_it_here">Ask admin for the group id, then enter it here.</string>
+    <string name="create_group_text">Lead the way! Create a group today</string>
     <string name="click_the_plus_button_to_list_your_quizzes_schedule">Click the plus button to List your quizzes schedule</string>
     <string name="send_mail">Send mail</string>
     <string name="change_profile_photo">Change Profile Photo</string>
     <string name="update_semester">Update Semester</string>
-    <string name="department">Department</string>
-    <string name="session">Session</string>
-    <string name="student_id">Student ID</string>
+    <string name="department">Department: </string>
+    <string name="session">Session: </string>
+    <string name="student_id">Student ID: </string>
     <string name="admission_session">Admission Session</string>
     <string name="provide_group_name">Provide Group Name</string>
     <string name="provide_group_details">Provide Group details</string>
@@ -332,6 +333,8 @@ classmates in groups.</string>
     <string name="_20200104129">20200104129</string>
     <string name="arman_hasan_mahy">Arman Hasan Mahy</string>
     <string name="_20200104110">20200104110</string>
+    <string name="sabbir_ahmed">Sabbir Ahmed Salman</string>
+    <string name="_20200104146">20200104146</string>
     <string name="project_github">Project Github</string>
 
     <string name="semester_not_found">Semester Not found!!\n Provide semester please!</string>

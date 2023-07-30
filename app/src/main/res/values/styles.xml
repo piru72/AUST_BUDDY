@@ -31,10 +31,12 @@
 
     <style name="layoutWrapWrapVertical" parent="layoutWrapWrap">
         <item name="android:orientation">vertical</item>
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="layoutWrapWrapHorizontal" parent="layoutWrapWrap">
+        <item name="android:layout_gravity">center</item>
         <item name="android:orientation">horizontal</item>
     </style>
 
@@ -49,6 +51,7 @@
 
     <style name="textViewWrapWrapPoppinsBlack" parent="layoutWrapWrap">
         <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:textColor">@color/black12</item>
     </style>
@@ -58,11 +61,15 @@
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack18" parent="textViewWrapWrapPoppinsBlack">
-        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:paddingBottom">@dimen/_15sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
     </style>
 
     <style name="textViewWrapWrapPoppinsBlack20" parent="textViewWrapWrapPoppinsBlack18">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textFontWeight">600</item>
         <item name="android:textAlignment">center</item>
     </style>
 
@@ -75,7 +82,7 @@
 
 
     <style name="layoutOfCardViewImage" parent="layoutMatchMatch">
-        <item name="android:background">@color/background_color_50</item>
+        <item name="android:background">@color/custom_green_light</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
     </style>
@@ -238,7 +245,7 @@
     <style name="spinnerModeGrades">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_weight">3</item>
+        <item name="android:layout_weight">7</item>
         <item name="android:entries">@array/Grades</item>
         <item name="android:gravity">end</item>
     </style>
@@ -248,6 +255,7 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingStart">20dp</item>
+        <item name="fontFamily">@font/open_sans</item>
         <item name="android:paddingEnd">20dp</item>
 
     </style>
@@ -255,7 +263,7 @@
 
     <style name="backgroundDev">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_height">125dp</item>
         <item name="android:layout_margin">5sp</item>
         <item name="android:background">@drawable/dev_shape</item>
         <item name="android:gravity">center</item>
@@ -263,8 +271,8 @@
     </style>
 
     <style name="imageViewCircular">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_margin">15sp</item>
         <item name="civ_border_color">#FFFFFF</item>
@@ -274,24 +282,25 @@
 
     <style name="layoutDevDetails">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">20sp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:orientation">vertical</item>
+
     </style>
 
     <style name="imageViewDevSocialIcon">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_width">@dimen/_28sdp</item>
+        <item name="android:layout_height">@dimen/_28sdp</item>
+        <item name="android:layout_marginStart">@dimen/_8sdp</item>
     </style>
 
 
     <style name="layoutImageButtonContainer" parent="layoutMatchWrap">
 
-        <item name="android:layout_marginStart">30dp</item>
-        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
         <item name="android:layout_weight">3</item>
         <item name="android:orientation">vertical</item>
 
@@ -315,7 +324,7 @@
 
     <style name="cardViewStyleImageContainer">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_height">140dp</item>
         <item name="android:layout_gravity">start</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:layout_weight">1</item>
@@ -337,7 +346,7 @@
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">10dp</item>
         <item name="tint">#000</item>
     </style>
 
@@ -369,10 +378,10 @@
         <item name="android:layout_width">150dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">@dimen/cardview_compat_inset_shadow</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/background_color_50</item>
+        <item name="android:layout_weight">0</item>
+
         <item name="android:focusable">true</item>
-        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:fontFamily">@font/open_sans</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:textColor">@color/black</item>
     </style>

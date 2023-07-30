@@ -30,16 +30,17 @@
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-
                 android:entries="@array/Semesters"
                 android:gravity="end"
-
                 android:layerType="hardware" />
 
             <Button
                 android:id="@+id/btn_select"
                 style="@style/buttonStylePopup"
-                android:text="@string/select" />
+                app:backgroundTint="@color/custom_green_primary"
+                android:text="@string/select"
+                android:textColor="@color/white"
+                android:textFontWeight="600"/>
 
         </LinearLayout>
 
@@ -218,7 +219,10 @@
             <Button
                 android:id="@+id/btn_calculate"
                 style="@style/buttonStylePage"
-                android:text="@string/calculate" />
+                android:backgroundTint="@color/custom_green_primary"
+                android:text="@string/calculate"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
 
         </LinearLayout>
 

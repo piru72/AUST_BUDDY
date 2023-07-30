@@ -27,17 +27,21 @@
             android:text="@string/admin_email" />
 
 
-        <LinearLayout style="@style/layoutMatchWrapHorizontal">
+        <LinearLayout style="@style/layoutMatchWrapHorizontal"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center">
 
 
             <Button
                 android:id="@+id/button_decline_admin"
                 style="@style/buttonStylePopup"
+                android:backgroundTint="@color/custom_green_primary"
                 android:text="@string/decline" />
 
             <Button
                 android:id="@+id/button_approve_admin"
                 style="@style/buttonStylePopup"
+                android:backgroundTint="@color/custom_green_primary"
                 android:text="@string/approve" />
 
         </LinearLayout>

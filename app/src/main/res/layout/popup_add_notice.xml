@@ -23,7 +23,7 @@
         <Button
             android:id="@+id/chooseButton"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
-            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_100sdp"
             android:text="@string/choose" />
     </LinearLayout>
 

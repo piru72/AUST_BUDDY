@@ -25,45 +25,50 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_signin"
-                style="@style/layoutMatchWrapHorizontal"
+                style="@style/materialPasswordInput"
+                android:hint="@string/provide_your_current_password"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvCurrentUserPassword"
-                    style="@style/materialPasswordInput"
-                    android:hint="@string/provide_your_current_password" />
+                    style="@style/layoutMatchWrap"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_change_type"
-                style="@style/layoutMatchWrapHorizontal"
+                style="@style/materialPasswordInput"
+                android:hint="@string/type_your_new_password"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordType"
-                    style="@style/materialPasswordInput"
-                    android:hint="@string/type_your_new_password" />
+                    style="@style/layoutMatchWrap"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
 
                 android:id="@+id/password_change_retype"
-                style="@style/layoutMatchWrapHorizontal"
+                style="@style/materialPasswordInput"
+                android:layout_height="63dp"
+                android:hint="@string/retype_your_new_password"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordRetype"
-                    style="@style/materialPasswordInput"
-                    android:hint="@string/retype_your_new_password" />
+                    style="@style/layoutMatchWrap" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,13 +76,19 @@
                 android:id="@+id/goToForgotPasswordFragment"
                 style="@style/textViewWrapWrapPoppinsBlack"
                 android:layout_width="match_parent"
+                android:textColor="@color/custom_green_primary"
+                android:textStyle="bold"
                 android:text="@string/forgot_password"
                 android:textAlignment="textEnd" />
 
 
             <Button
                 android:id="@+id/btnChangePassword"
-                style="@style/buttonStylePage"
+                android:textFontWeight="600"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                style="@style/wrapWrapPrimaryElevatedButtonWithPadding"
                 android:text="@string/change_password" />
 
 
