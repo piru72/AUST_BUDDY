@@ -25,7 +25,21 @@
             android:background="@color/background_color_50">
 
             <LinearLayout style="@style/layoutWrapWrapHorizontal">
-
+                <Button
+                    android:id="@+id/buttonArchTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/arch" />
+                <Button
+                    android:id="@+id/buttonBbaTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/bba" />
+                <Button
+                    android:id="@+id/buttonASTeachers"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/shortAs" />
                 <Button
                     android:id="@+id/buttonFavouriteTeachers"
                     style="@style/layoutWrapWrap"
@@ -68,23 +82,11 @@
                     android:layout_margin="5dp"
                     android:text="@string/shortTe" />
 
-                <Button
-                    android:id="@+id/buttonASTeachers"
-                    style="@style/layoutWrapWrap"
-                    android:layout_margin="5dp"
-                    android:text="@string/shortAs" />
 
-                <Button
-                    android:id="@+id/buttonArchTeachers"
-                    style="@style/layoutWrapWrap"
-                    android:layout_margin="5dp"
-                    android:text="@string/arch" />
 
-                <Button
-                    android:id="@+id/buttonBbaTeachers"
-                    style="@style/layoutWrapWrap"
-                    android:layout_margin="5dp"
-                    android:text="@string/bba" />
+
+
+
 
             </LinearLayout>
         </HorizontalScrollView>
