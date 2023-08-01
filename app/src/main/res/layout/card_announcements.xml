@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <LinearLayout style="@style/backgroundCard"
@@ -72,12 +73,14 @@
             <Button
                 android:id="@+id/showDetailsButton"
                 style="@style/wrapWrapDarkElevatedButtonWithPadding"
-                android:paddingEnd="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_25sdp"
                 android:paddingStart="@dimen/_35sdp"
+                android:paddingEnd="@dimen/_35sdp"
+                android:text="@string/details"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:layout_marginStart="@dimen/_25sdp"
-                android:text="@string/details" />
+                android:visibility="gone"
+                tools:visibility="gone" />
         </LinearLayout>
 
 
