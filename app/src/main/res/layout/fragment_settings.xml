@@ -40,6 +40,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvCurrentUserPassword"
                     style="@style/layoutMatchWrap"
+                    android:autofillHints=""
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -54,6 +57,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordType"
                     style="@style/layoutMatchWrap"
+                    android:autofillHints=""
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -68,6 +74,9 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvNewUserPasswordRetype"
+                    android:autofillHints=""
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no"
                     style="@style/layoutMatchWrap" />
 
             </com.google.android.material.textfield.TextInputLayout>
