@@ -97,8 +97,6 @@ Mapp/src/main/java/com/example/homepage/features/plazaTab/DialogViewDetails.kt,
 Qapp/src/main/java/com/example/homepage/features/plazaTab/DialogAddAnnouncement.kt,9\4\9469ed8c2d751bb381e165e86a5926c6c9baf260
 Ç
 Rapp/src/main/java/com/example/homepage/features/homeTab/calculator/CGPAFragment.kt,b\5\b577769e5ebe1131464b50a429bd3de205e053c2
-ù
-mapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/adapter/EditScheduleClickListener.kt,4\d\4d7960fc3cb5045e11e02e6adbb2df12b75bf202
 ú
 lapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/repository/GroupNoticeRepository.kt,2\c\2cf2cab59cdbcc74c483d995840e47d28a890b04
 ñ
@@ -155,8 +153,6 @@ Vapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/BugReportViewHo
 Sapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/CourseViewHolder.kt,f\b\fbc73bdd04eeb1d3dcffa0bb458c99644898d24b
 ç
 ]app/src/main/java/com/example/homepage/utils/recyclerViewHolder/FavouriteWebpageViewHolder.kt,c\6\c698a84e396b14d1336b4d3a3450b9096a4e627a
-à
-Xapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/GroupNoticeViewHolder.kt,b\8\b8b232e19ddece961550ed539809496ff48b8f18
 Ü
 Vapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/UserGroupViewHolder.kt,1\9\192ebe64811da1edf5ba6aa81399d758f01162fb
 â

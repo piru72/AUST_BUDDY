@@ -9,7 +9,7 @@
         style="@style/normalTextInput"
         android:autofillHints=""
         android:hint="@string/quiz_name"
-        android:inputType="textPersonName" />
+        android:inputType="text" />
 
     <LinearLayout
         style="@style/layoutMatchMatch"

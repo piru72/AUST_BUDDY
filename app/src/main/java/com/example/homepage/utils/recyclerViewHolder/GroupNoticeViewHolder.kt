@@ -50,14 +50,8 @@ class GroupNoticeViewHolder(private val binding: CardQuizScheduleBinding) :
             ChildUpdaterHelper().removeChild(parentNode, childNode)
         }
 
-
-        binding.btnEditSchedule.setOnClickListener {
-
-            EditScheduleClickListener(
-                _inflater,
-                noticeData
-            )
-        }
+        val editScheduleClickListener = EditScheduleClickListener(_inflater, noticeData)
+        binding.btnEditSchedule.setOnClickListener(editScheduleClickListener)
 
 
     }
