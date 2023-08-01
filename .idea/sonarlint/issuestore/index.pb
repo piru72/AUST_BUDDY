@@ -25,8 +25,6 @@ v
 Fapp/src/test/java/com/example/homepage/helpers/ValidationHelperTest.kt,7\e\7e03ccac44fe615d697afe6bf46e36349b972699
 |
 Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
-Š
-Zapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddCourseFragment.kt,6\0\609e3d9b1bb2a6176adfffb3742e29e0245b2ba4
 Œ
 \app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddTeachersFragment.kt,4\a\4a1797232fdda795e9b52eb219cd9309fd403d60
 ¡
@@ -79,8 +77,6 @@ Uapp/src/main/java/com/example/homepage/features/commonPages/storeTab/StoreFragm
 Yapp/src/main/java/com/example/homepage/features/homeTab/courseTab/repos/UserRepository.kt,d\0\d0b1684333e95bcfeca1cb2561c789fa07b12c74
 ˆ
 Xapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Model/UserViewModel.kt,2\9\292655c58bcd160c66e72f62dbe0039f92916d37
-€
-Papp/src/main/java/com/example/homepage/features/homeTab/courseTab/ViewCourses.kt,7\1\71b81c5602ff2b1d8ee20a45b8d70bfee230011c
 –
 fapp/src/main/java/com/example/homepage/features/homeTab/courseTab/YouTubeVideo/YouTubeVideoFragment.kt,4\9\4924c326cb9317b541e232e0445fda2fd784acfb
 ˜
@@ -123,8 +119,6 @@ w
 Gapp/src/main/java/com/example/homepage/utils/helpers/YoutubeFragment.kt,d\e\de50a2b67ce5313312b9b049e304888209fecaa1
 o
 ?app/src/main/java/com/example/homepage/utils/helpers/WebView.kt,9\d\9d8b97ed2dbfcbdf2bd0c65288dd87e5956ead9c
-x
-Happ/src/main/java/com/example/homepage/utils/helpers/ValidationHelper.kt,6\e\6e6a6506b7939115ec46ff7512ffcd0f56e97fb3
 œ
 lapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/bugReports/Adapter/BugReportAdapter.kt,6\b\6b692c11515503e696927c21a385681acfec42c6
 —
@@ -169,8 +163,6 @@ j
 	readme.md,2\7\275d783e298228506068436512433d343feb52aa
 ‹
 [app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AdminPanelFragment.kt,d\8\d8d30b1d110e425dd88e5182804f5b786ef3b911
-z
-Japp/src/main/java/com/example/homepage/features/homeTab/RequestFragment.kt,b\5\b52140b3ab9471b7663419c047be933e4292b833
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 „

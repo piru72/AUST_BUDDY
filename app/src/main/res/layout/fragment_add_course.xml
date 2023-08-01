@@ -11,7 +11,7 @@
             android:id="@+id/startingImage"
             android:layout_width="match_parent"
             android:layout_height="200sp"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="5sp"
             android:contentDescription="@string/a_background_image"
             android:paddingBottom="20dp"
             android:src="@drawable/add_course" />
@@ -67,13 +67,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/materialTextInputLayout">
+            style="@style/materialTextInputLayout"
+            android:hint="@string/provide_drive_link">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/courseDriveLinkText"
                 style="@style/layoutMatchWrap"
-                android:hint="@string/provide_drive_link"
-                android:inputType="textLongMessage" />
+                android:minHeight="@dimen/_90sdp"
+              />
 
         </com.google.android.material.textfield.TextInputLayout>
 
