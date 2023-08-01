@@ -73,7 +73,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/teachersImageLinkForm"
                 style="@style/layoutMatchWrap"
-                android:inputType="textShortMessage"/>
+                android:inputType="textShortMessage"
+                android:visibility="gone"
+                tools:visibility="gone" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

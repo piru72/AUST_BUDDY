@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.example.homepage.database.ChildUpdaterHelper
+import com.example.homepage.databinding.FragmentAddTeachersBinding
 import com.example.homepage.utils.helpers.ReplaceFragment
 import com.example.homepage.utils.helpers.ValidationHelper
 import com.example.homepage.utils.models.TeacherData
@@ -73,7 +73,7 @@ class AddTeachersFragment : ReplaceFragment() {
         val teacher: TeacherData
         viewBinding.apply {
             val name = teachersName.text.toString()
-            val img = teachersImageLinkForm.text.toString()
+            val img = "https://w7.pngwing.com/pngs/184/113/png-transparent-user-profile-computer-icons-profile-heroes-black-silhouette-thumbnail.png"
             val phone = teachersContactNoText.text.toString()
             val designation = teachersDesignation.text.toString()
             val email = teachersEmailText.text.toString()

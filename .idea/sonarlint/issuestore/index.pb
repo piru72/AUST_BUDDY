@@ -25,8 +25,6 @@ v
 Fapp/src/test/java/com/example/homepage/helpers/ValidationHelperTest.kt,7\e\7e03ccac44fe615d697afe6bf46e36349b972699
 |
 Lapp/src/test/java/com/example/homepage/loginSignup/HelperSignInSignUpTest.kt,2\2\22a5fe0c8f0c796973775b3dd215ff1f255c0870
-Œ
-\app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddTeachersFragment.kt,4\a\4a1797232fdda795e9b52eb219cd9309fd403d60
 ¡
 qapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/adminRequest/Repo/AdminRequestRepository.kt,7\b\7b22cd73b55fb2f27e150052abd11c3210e6537d
 ¢

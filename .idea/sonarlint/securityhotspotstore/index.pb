@@ -33,8 +33,6 @@ kapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/Mode
 kapp/src/main/java/com/example/homepage/features/commonPages/storeDashboard/Repo/StoreDashBoardRepository.kt,6\0\608fce93eeb20ed918ba8bb264f8dc015c93400e
 –
 fapp/src/main/java/com/example/homepage/features/homeTab/courseTab/DepartmentSemesterChooserFragment.kt,f\3\f3c9628d36fa3ab8be67a7ef9a602282ab20720c
-Œ
-\app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddTeachersFragment.kt,4\a\4a1797232fdda795e9b52eb219cd9309fd403d60
 ˆ
 Xapp/src/main/java/com/example/homepage/features/homeTab/courseTab/Model/UserViewModel.kt,2\9\292655c58bcd160c66e72f62dbe0039f92916d37
 ‰
