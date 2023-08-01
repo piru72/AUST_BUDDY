@@ -7,8 +7,10 @@ class CustomFormatters {
 
     private fun makeDateString(dateStr: String): String {
         val parts = dateStr.split("/")
-        val day = parts[0]
+        var day = parts[0]
         var month = parts[1]
+        if (day.length == 1)
+                day = "0$day"
         if (month.length == 1) {
             month = "0$month"
         }
