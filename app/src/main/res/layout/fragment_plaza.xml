@@ -24,7 +24,16 @@
             android:background="@color/background_color_50">
 
             <LinearLayout style="@style/layoutWrapWrapHorizontal">
-
+                <Button
+                    android:id="@+id/categoryOthers1"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/others" />
+                <Button
+                    android:id="@+id/categoryOthers2"
+                    style="@style/layoutWrapWrap"
+                    android:layout_margin="5dp"
+                    android:text="@string/others" />
                 <Button
                     android:id="@+id/categoryAll"
                     style="@style/layoutWrapWrap"

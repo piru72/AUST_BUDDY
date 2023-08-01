@@ -201,8 +201,6 @@ w
 Gapp/src/main/java/com/example/homepage/utils/models/YouTubeVideoData.kt,d\a\da0d9de3c403d5c5af724644fbd61d33b09d3944
 j
 :app/src/main/java/com/example/homepage/app/BaseActivity.kt,6\6\66edce811493e7c2eee1e4e474f5a1f3f0c7c53a
-à
-Xapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeachersFragment.kt,7\8\78e0696f89973118bb112267a51efc1945661a47
 ï
 eapp/src/main/java/com/example/homepage/features/homeTab/teachersPage/TeacherModel/teacherViewModel.kt,b\d\bd5faadd90f770f3c657d3202ed80066696ced0a
 Å
