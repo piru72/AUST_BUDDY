@@ -31,7 +31,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPassword"
-                style="@style/layoutMatchWrap" />
+                style="@style/layoutMatchWrap"
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

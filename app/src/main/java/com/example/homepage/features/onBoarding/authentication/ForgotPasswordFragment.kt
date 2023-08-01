@@ -1,5 +1,7 @@
 package com.example.homepage.features.onBoarding.authentication
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
@@ -36,6 +38,10 @@ class ForgotPasswordFragment : ReplaceFragment() {
                 mAuth.sendPasswordResetEmail(userEmail).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         makeToast("Password reset mail sent")
+                        val i = Intent(activity, SignInActivity::class.java)
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        startActivity(i)
+                        (activity as Activity?)!!.overridePendingTransition(0, 0)
                     } else {
                         makeToast("Unsuccessful attempt ")
                     }

@@ -31,7 +31,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordType"
-                style="@style/layoutMatchWrap" />
+                style="@style/layoutMatchWrap"
+               android:autofillHints=""
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,7 +45,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usersPasswordRetype"
-                style="@style/layoutMatchWrap" />
+                style="@style/layoutMatchWrap"
+                android:autofillHints=""
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
