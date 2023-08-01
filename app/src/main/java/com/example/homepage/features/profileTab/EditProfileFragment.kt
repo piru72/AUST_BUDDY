@@ -1,7 +1,6 @@
 package com.example.homepage.features.profileTab
 
 import android.os.Bundle
-import android.text.Editable
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -11,13 +10,17 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import com.example.homepage.R
-import com.example.homepage.utils.models.UserAllData
 import com.example.homepage.databinding.FragmentEditProfileBinding
 import com.example.homepage.features.homeTab.DialogYearSemesterChooser
 import com.example.homepage.utils.helpers.ReplaceFragment
+import com.example.homepage.utils.models.UserAllData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
@@ -104,7 +107,7 @@ class EditProfileFragment : ReplaceFragment() {
             val cancelButton = rootLayout.findViewById<Button>(R.id.btnCancel)
             val updateButton = rootLayout.findViewById<Button>(R.id.btnUpdateNow)
             val section = rootLayout.findViewById<EditText>(R.id.editTextSection)
-            section.text = viewBinding.sectionReal.text as Editable?
+            section.setText(viewBinding.sectionReal.text)
 
             val popupWindow = PopupWindow(
                 rootLayout,
