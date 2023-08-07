@@ -10,13 +10,16 @@
         <Button
             android:id="@+id/joinButton"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
-            android:layout_weight="1"
+            android:textStyle="bold"
             android:text="@string/join" />
 
         <Button
             android:id="@+id/createButton"
+            android:textStyle="bold"
             style="@style/wrapWrapDarkElevatedButtonWithPadding"
-            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
             android:text="@string/create" />
 
     </LinearLayout>
