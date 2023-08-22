@@ -56,7 +56,7 @@ class HomeFragment : ReplaceFragment() {
 
         if (userSemester == ""  || userSection == "")
         {
-            //makeToast("Data retrieved from the network")
+            makeToast("Data retrieved from the network")
             val postListener = object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
