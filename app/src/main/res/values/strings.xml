@@ -2,9 +2,9 @@
     <string name="app_name">AUST BUDDY</string>
     <string name="todo">TODO</string>
     <string name="next">Next</string>
-    <string name="onboard_1_para">Finding notes and exam questions can be pretty hectic sometimes. No more worries about those find your notes organized and top the exam.</string>
+    <string name="onboard_1_para">Finding notes and exam questions can be pretty \n hectic sometimes. No more worries about those \n find your notes organized and top the exam.</string>
     <string name="find_your_notes">Find Your Notes</string>
-    <string name="onboarding_2_para">No more waiting for the university to publish your result calculate your own CGPA at ease and pave your way to the success.</string>
+    <string name="onboarding_2_para">No more waiting for the university to publish your \n result calculate your own CGPA at ease and \n pave your way to the success.</string>
     <string name="calculate_cgpa">Calculate CGPA</string>
     <string name="other_features">Other Features</string>
 
@@ -262,8 +262,7 @@
     <string name="watch_video">Watch Video</string>
     <string name="video_title">Video Title</string>
     <string name="add_to_favourite">Add to favourite</string>
-    <string name="more_features">Improve your learning journey with our application’s features. Stay organized with links, teacher details, and bus schedules, and collaborate with
-classmates in groups.</string>
+    <string name="more_features">Improve your learning journey with our application’s \n features. Stay organized with links, teacher details, \n and bus schedules, and collaborate with \n classmates in groups.</string>
     <string name="sign_in">Sign in</string>
     <string name="on_boarding_image">On Boarding Image</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
@@ -328,7 +327,7 @@ classmates in groups.</string>
     <string name="course_requests">Course requests</string>
     <string name="teacher_request">Teacher request</string>
     <string name="_20200104128">20200104128</string>
-    <string name="tabassum_tara">Tabassum Tara</string>
+    <string name="tabassum_tara">Tabassum Tara Lamia</string>
     <string name="parvez_ahammed">Parvez Ahammed</string>
     <string name="_20200104129">20200104129</string>
     <string name="arman_hasan_mahy">Arman Hasan Mahy</string>
@@ -342,7 +341,7 @@ classmates in groups.</string>
     <string name="not_given">Not given</string>
 
     <string name="admin_course_request_list">admin-course-request-list</string>
-    <string name="shortCse">cse</string>
+    <string name="shortCse">CSE</string>
     <string name="arch">Arch</string>
     <string name="bba">BBA</string>
     <string name="shortTe">TE</string>
