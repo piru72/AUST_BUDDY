@@ -1,6 +1,5 @@
 package com.example.homepage.utils.helpers
 
-import android.util.Log
 import com.example.homepage.utils.models.CourseData
 import com.example.homepage.utils.models.TeacherData
 import java.util.regex.Matcher
@@ -81,9 +80,10 @@ class ValidationHelper {
     }
     private fun isValidDriveLink(link: String): Boolean {
         // Regular expression to match Google Drive links
-        val driveLinkRegex = Regex("^https?://drive\\.google\\.com/(?:file/d/|open\\?id=|drive/folders/)([a-zA-Z0-9_-]{10,})")
-        Log.i("AUST_BUDDY", link)      // Info log
-        return driveLinkRegex.matches(link)
+        //val driveLinkRegex = Regex("^https?://drive\\.google\\.com/(?:file/d/|open\\?id=|drive/folders/)([a-zA-Z0-9_-]{10,})")
+        //Log.i("AUST_BUDDY", link)      // Info log
+        //return driveLinkRegex.matches(link)
+        return true
     }
 
 

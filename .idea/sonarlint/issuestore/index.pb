@@ -307,14 +307,8 @@ G.idea/sonarlint/issuestore/5/e/5e6b8deb0995e1de12679b8d06e49661ddd7b7a7,9\5\95
 Xapp/src/main/java/com/example/homepage/utils/recyclerViewHolder/GroupNoticeViewHolder.kt,b\8\b8b232e19ddece961550ed539809496ff48b8f18
 ñ
 fapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/adapter/GroupNoticeAdapter.kt,9\3\937b5d918997d88d3dec7236a19ea6e02c5bb174
-z
-Japp/src/main/java/com/example/homepage/features/homeTab/RequestFragment.kt,b\5\b52140b3ab9471b7663419c047be933e4292b833
 Ä
 Papp/src/main/java/com/example/homepage/features/homeTab/courseTab/ViewCourses.kt,7\1\71b81c5602ff2b1d8ee20a45b8d70bfee230011c
-x
-Happ/src/main/java/com/example/homepage/utils/helpers/ValidationHelper.kt,6\e\6e6a6506b7939115ec46ff7512ffcd0f56e97fb3
-ä
-Zapp/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddCourseFragment.kt,6\0\609e3d9b1bb2a6176adfffb3742e29e0245b2ba4
 å
 \app/src/main/java/com/example/homepage/features/profileTab/adminPanel/AddTeachersFragment.kt,4\a\4a1797232fdda795e9b52eb219cd9309fd403d60
 è
@@ -323,3 +317,7 @@ _app/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/GroupN
 mapp/src/main/java/com/example/homepage/features/groupTab/groupNoticePage/adapter/EditScheduleClickListener.kt,4\d\4d7960fc3cb5045e11e02e6adbb2df12b75bf202
 Å
 Qapp/src/main/java/com/example/homepage/features/profileTab/EditProfileFragment.kt,c\a\cae6fc1a0aafc96459b6ebcc72d83547cfe441a4
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
