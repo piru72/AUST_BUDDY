@@ -11,16 +11,34 @@
 <a target="_blank" href="https://github.com/piru72/AUST_BUDDY/stargazers"><img src="https://img.shields.io/github/stars/piru72/AUST_BUDDY" alt="stars"/></a>
 <a target="_blank" href="https://github.com/piru72/AUST_BUDDY/issues"><img src="https://img.shields.io/github/issues/piru72/AUST_BUDDY" alt="issues"/></a>
 
+# AUST BUDDY
 
-## [UI](https://www.behance.net/gallery/170334575/UI-Case-Study-AUST-Buddy)
+### Features
+
+## Installaton
+
+## Use the application
+
+```
+Look at the right side . You will find Releases option  from there download the latest versin.
+```
+
+## Resources
+
+### [UI](https://www.behance.net/gallery/170334575/UI-Case-Study-AUST-Buddy)
+
+## Contributint guidelines
+
+## License
+
+## Contributors
+
+
 
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://github.com/piru72"><img src="https://avatars.githubusercontent.com/u/63257806?v=4" width="100px;" alt=""/><br /><sub><b>Parvez Ahammed</b></sub></a><br /><a href="https://github.com/piru72/AUST_BUDDY/commits?author=piru72" title="Code">💻</a> <a href="#ideas-piru72 title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/piru72/AUST_BUDDY/issues?q=author%3Apiru72" title="Bug reports">🐛</a></td>
@@ -31,21 +49,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
 </table>
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 
 
 
 
-# HOW TO DOWNLOAD ?
 
-```
-Look at the right side . You will find Releases option  from there download the latest versin.
-```
 
+
+# Screenshots
 # Landing Pages
 
 <p align= "center">
